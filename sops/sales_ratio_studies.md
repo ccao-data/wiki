@@ -1,8 +1,8 @@
 ---
-title: Sales Ratio Studies
-description: Standard Operating Procedures and Policies for CCAO Sales Ratio Studies
+title: SOP on Sales Ratio Studies
+description: Standard Operating Procedures and policies for CCAO sales ratio studies
 published: true
-date: 2020-04-08T20:53:31.607Z
+date: 2020-04-08T20:58:27.426Z
 tags: sop, policy
 ---
 
@@ -104,11 +104,9 @@ The following statistics must be included in any sales ratio study:
 * Population size (i.e., number of properties to which the sales ratio study is intended to generalize). 
 
 **Measures of Variance.**
-
 Each statistic in 1.4 must be reported with an accompanying measure of statistical precision. Where mathematic definitions of a statistic’s standard deviation does not exist, standard deviations should be obtained via bootstrapping.
 
 ### Data Publication.
-
 The Chief Data Officer shall make all necessary data and code for replication available to the public free of charge. This should include, but is not limited to: the universe of sales available to the CCAO for the sales ratio study, indicators for which sales were excluded, reasons for their exclusion, code to perform the necessary calculations for the sales ratio study, and a report of the results of the study.
 
 # Standards for High Quality Assessment
@@ -127,15 +125,12 @@ Assessments within a strata are considered ‘high quality’ if they fall withi
 |Sales Chasing (E.4)   | $\le$ 5%  |
 
 **Standards Met.**
-
 Statistics that fall within the target ranges as defined in 2.1 may be said to have ‘met the standard for high quality assessment.'
 
 **Standards Statistically Met.**
-
 Statistics that fall outside the target ranges as defined in 2.1, but whose 95% confidence interval contains part of the range defined in 2.1 may be said to have ‘statistically met the standard for high quality assessment.'
 
 **Differentiation Between Standards Met and Standards Statistically Met.**
-
 The Chief Communications Officer shall at all times make clear the distinction between statistics that meet 2.1.1 and statistics that meet 2.1.2.
 
 # Sample Selection
@@ -172,19 +167,19 @@ Statistics should not be reported on a strata with fewer than 30 observations.
 The physical and legal characteristics of each property used in the ratio study must be the same when appraised for tax purposes and when sold. 
 
 ### Timing and Sales Sample Selection
-#### Multi-Parcel Sales.
+**Multi-Parcel Sales.**
 
 Deeds transacted on multiple PINs are excluded from the sales sample.
 
-#### Foreclosures and Bank Sales. 
+**Foreclosures and Bank Sales.**
 
 Foreclosure and Real Estate Owned sales may be excluded from the sales samples.
 
-#### Selective Appraisal.
+**Selective Appraisal.**
 
 Properties are appraised on the first day of the re-assessment year. Assessments are calculated and produced over the course of the assessment year. Where sales chasing occurs, it can only occur for properties with a sale prior to the date the assessed value of a property was certified. Sales ratios calculated using sales following the certification date will exhibit much less bias from sales chasing than sales ratios calculated using sales prior to the certification date. 
 
-#### Matching Assessment Years to Sale Years for Ratio Studies. 
+**Matching Assessment Years to Sale Years for Ratio Studies.** 
 
 This section follows 9.2, p 33, of the IAAO Standard on Ratio Studies. In order to minimize the influence of sales chasing on reported statistics, sales used in calculating statistic for years prior to the year prior to the current assessment year should utilize sales following the date of assessment. For A sale will be included in the study for prior years if the transaction date is between the first day of the year in which the property was re-assessed, and the same day in the following calendar year. 
 
@@ -230,6 +225,6 @@ Sales with amounts less than $10,000 are excluded from sales ratio studies.
 
 The top and bottom 5% of sales in terms of sales ratios are excluded from sales ratio studies.
 
-<font size="5"> **Forms** </font> 
+## Forms
 
 There are no forms associated with this policy.
