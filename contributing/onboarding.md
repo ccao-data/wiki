@@ -2,7 +2,7 @@
 title: Onboarding
 description: Getting setup to contribute to the Data Science department
 published: true
-date: 2020-04-08T21:29:47.013Z
+date: 2020-04-08T21:34:55.410Z
 tags: required, data
 ---
 
