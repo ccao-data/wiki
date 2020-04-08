@@ -2,19 +2,21 @@
 title: Sales Ratio Studies
 description: Standard Operating Procedures and Policies for CCAO Sales Ratio Studies
 published: true
-date: 2020-04-08T20:44:57.496Z
+date: 2020-04-08T20:48:17.001Z
 tags: sop, policy
 ---
 
-<font size="5"> **Purpose** </font> 
+# Overview
+
+### Purpose
 
 This policy governs the calculation and reporting of sales ratio study statistics for residential property. Sales ratio studies are one of the few ways the Assessor can measure the 'quality' of the assessment. This policy is designed to ensure that sales ratio statistics truthfully and accurately reflect the overall quality of assessment.
 
-<font size="5"> **Employees Affected** </font> 
+### Employees Affected
 
 Senior Data Scientists, the Chief Data Officer, the Chief Communications Officer.
 
-<font size="5"> **Related Information** </font> 
+### Related Information
 
 This policy references the [IAAO Standard on Ratio Studies](https://www.iaao.org/media/standards/Standard_on_Ratio_Studies.pdf). The Cook County Assessor’s Office does not have a residential sales validation unit, and therefore cannot adhere to the [IAAO Standard on Verification and Adjustment of Sales](https://www.iaao.org/media/standards/Verification_Adjustment_of_Sales.pdf). The Cook County Assessor’s Office recognizes that there exists an institutional bias to self-report favorable sales ratio statistics. This policy is constructed in such a way as to minimize the impact of that bias on self-reported sales ratio statistics.
 
@@ -109,7 +111,7 @@ Each statistic in 1.4 must be reported with an accompanying measure of statistic
 
 The Chief Data Officer shall make all necessary data and code for replication available to the public free of charge. This should include, but is not limited to: the universe of sales available to the CCAO for the sales ratio study, indicators for which sales were excluded, reasons for their exclusion, code to perform the necessary calculations for the sales ratio study, and a report of the results of the study.
 
-# Standards for high Quality Assessment
+# Standards for High Quality Assessment
 
 ## Target Ranges. 
 
