@@ -2,7 +2,7 @@
 title: Sales Ratio Studies
 description: Standard Operating Procedures and Policies for CCAO Sales Ratio Studies
 published: true
-date: 2020-04-08T20:48:17.001Z
+date: 2020-04-08T20:53:31.607Z
 tags: sop, policy
 ---
 
@@ -20,7 +20,7 @@ Senior Data Scientists, the Chief Data Officer, the Chief Communications Officer
 
 This policy references the [IAAO Standard on Ratio Studies](https://www.iaao.org/media/standards/Standard_on_Ratio_Studies.pdf). The Cook County Assessor’s Office does not have a residential sales validation unit, and therefore cannot adhere to the [IAAO Standard on Verification and Adjustment of Sales](https://www.iaao.org/media/standards/Verification_Adjustment_of_Sales.pdf). The Cook County Assessor’s Office recognizes that there exists an institutional bias to self-report favorable sales ratio statistics. This policy is constructed in such a way as to minimize the impact of that bias on self-reported sales ratio statistics.
 
-<font size="5"> **Definitions** </font> 
+### Definitions
 
 **Fair Cash Value (FCV):** “The amount for which a property can be sold in the due course of business and trade, not under duress, between a willing buyer and a willing seller.” (35 ILCS 200/1-50)
 
@@ -79,19 +79,19 @@ The recovered coefficient $\beta_1$ is the PRB statistic.
 
 
 # Reporting Requirements
-## Annual Report. 
+### Annual Report
 
 The Chief Communications Officer shall publish an annual report within four months of the Assessor certifying all assessments in the County. This report shall contain the results of a sales ratio study of residential properties in the County. The Chief Data Officer and Senior Data Scientists shall provide the necessary statistics for this publication, according to this policy. 
 
-## Township Reporting. 
+### Township Reporting. 
 
 The Chief Data Officer shall produce sales ratio studies for each township within one month after each stage in the assessment process: initial values are sent to taxpayer, assessments are certified by the assessor, and assessments are certified by the Board of Review.  The Chief Communications Officer shall publish limited sales ratio studies for public consumption after each aforementioned stages as well.
 
-## Other Reporting. 
+### Other Reporting. 
 
 The Chief Data Officer shall produce sales ratio studies as requested by the Cook County Assessor.
 
-## Required Statistics. 
+### Required Statistics. 
 
 The following statistics must be included in any sales ratio study:
 
@@ -103,17 +103,17 @@ The following statistics must be included in any sales ratio study:
 * Sample size (i.e., number of properties with sales being used in the sales ratio study)
 * Population size (i.e., number of properties to which the sales ratio study is intended to generalize). 
 
-### Measures of Variance. 
+**Measures of Variance.**
 
 Each statistic in 1.4 must be reported with an accompanying measure of statistical precision. Where mathematic definitions of a statistic’s standard deviation does not exist, standard deviations should be obtained via bootstrapping.
 
-## Data Publication.
+### Data Publication.
 
 The Chief Data Officer shall make all necessary data and code for replication available to the public free of charge. This should include, but is not limited to: the universe of sales available to the CCAO for the sales ratio study, indicators for which sales were excluded, reasons for their exclusion, code to perform the necessary calculations for the sales ratio study, and a report of the results of the study.
 
 # Standards for High Quality Assessment
 
-## Target Ranges. 
+### Target Ranges. 
 
 Assessments within a strata are considered ‘high quality’ if they fall within the defined ranges below. 
 
@@ -126,21 +126,21 @@ Assessments within a strata are considered ‘high quality’ if they fall withi
 |Median Assessment Ratio   |  .095 - 1.05 |
 |Sales Chasing (E.4)   | $\le$ 5%  |
 
-### Standards Met.
+**Standards Met.**
 
 Statistics that fall within the target ranges as defined in 2.1 may be said to have ‘met the standard for high quality assessment.'
 
-### Standards Statistically Met.
+**Standards Statistically Met.**
 
 Statistics that fall outside the target ranges as defined in 2.1, but whose 95% confidence interval contains part of the range defined in 2.1 may be said to have ‘statistically met the standard for high quality assessment.'
 
-### Differentiation Between Standards Met and Standards Statistically Met.
+**Differentiation Between Standards Met and Standards Statistically Met.**
 
 The Chief Communications Officer shall at all times make clear the distinction between statistics that meet 2.1.1 and statistics that meet 2.1.2.
 
 # Sample Selection
 
-## Reporting Groups
+### Reporting Groups
 
 Residential Properties are grouped into four groups according to minor property assessment class:
 
@@ -149,19 +149,19 @@ Residential Properties are grouped into four groups according to minor property 
 * Residential Condominiums: 299.
 * Vacant Land: 200, 201, 241.
 
-### Exclusion of Special Properties. 
+**Exclusion of Special Properties.**
 
 Some residential properties classified as ‘Single-Family’ by 2.1 are valued by the ‘Special Properties’ division of the Valuations Department. These are excluded from the sales ratio study. 
 
-## Stratification
+### Stratification
 
 Properties may be stratified according to geography, sale price, assessed value, physical characteristics, and other attributes. 
 
-### Maximum Variance of Strata Statistic.
+**Maximum Variance of Strata Statistic.**
 
 Stratification should not be so granular as to produce unduly large standard errors.
 
-### Minimum Observations within Strata. 
+**Minimum Observations within Strata.**
 
 Statistics should not be reported on a strata with fewer than 30 observations.
 
