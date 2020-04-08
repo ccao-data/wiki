@@ -2,7 +2,7 @@
 title: SOP on Sales Ratio Studies
 description: Standard Operating Procedures and policies for CCAO sales ratio studies
 published: true
-date: 2020-04-08T21:10:49.337Z
+date: 2020-04-08T21:12:17.360Z
 tags: sop, policy
 ---
 
@@ -197,7 +197,7 @@ $$
 For example, sales ratios reported during the 2019 re-assessment for assessments in 2018 and 2019 should use sales in 2017 and 2018 respectively in their denominators.
 
 
-## Sales Selection. 
+# Sales Selection. 
 
 ### Data Source. 
 
