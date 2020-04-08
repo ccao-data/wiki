@@ -2,8 +2,8 @@
 title: SOP on Sales Ratio Studies
 description: Standard Operating Procedures and policies for CCAO sales ratio studies
 published: true
-date: 2020-04-08T20:58:28.701Z
-tags: 
+date: 2020-04-08T21:07:38.354Z
+tags: sop, policy
 ---
 
 # Overview
@@ -79,6 +79,7 @@ The recovered coefficient $\beta_1$ is the PRB statistic.
 
 
 # Reporting Requirements
+
 ### Annual Report
 
 The Chief Communications Officer shall publish an annual report within four months of the Assessor certifying all assessments in the County. This report shall contain the results of a sales ratio study of residential properties in the County. The Chief Data Officer and Senior Data Scientists shall provide the necessary statistics for this publication, according to this policy. 
@@ -109,6 +110,7 @@ Each statistic in 1.4 must be reported with an accompanying measure of statistic
 ### Data Publication.
 The Chief Data Officer shall make all necessary data and code for replication available to the public free of charge. This should include, but is not limited to: the universe of sales available to the CCAO for the sales ratio study, indicators for which sales were excluded, reasons for their exclusion, code to perform the necessary calculations for the sales ratio study, and a report of the results of the study.
 
+
 # Standards for High Quality Assessment
 
 ### Target Ranges. 
@@ -133,6 +135,7 @@ Statistics that fall outside the target ranges as defined in 2.1, but whose 95% 
 **Differentiation Between Standards Met and Standards Statistically Met.**
 The Chief Communications Officer shall at all times make clear the distinction between statistics that meet 2.1.1 and statistics that meet 2.1.2.
 
+
 # Sample Selection
 
 ### Reporting Groups
@@ -145,7 +148,6 @@ Residential Properties are grouped into four groups according to minor property 
 * Vacant Land: 200, 201, 241.
 
 **Exclusion of Special Properties.**
-
 Some residential properties classified as ‘Single-Family’ by 2.1 are valued by the ‘Special Properties’ division of the Valuations Department. These are excluded from the sales ratio study. 
 
 ### Stratification
@@ -153,12 +155,11 @@ Some residential properties classified as ‘Single-Family’ by 2.1 are valued 
 Properties may be stratified according to geography, sale price, assessed value, physical characteristics, and other attributes. 
 
 **Maximum Variance of Strata Statistic.**
-
 Stratification should not be so granular as to produce unduly large standard errors.
 
 **Minimum Observations within Strata.**
-
 Statistics should not be reported on a strata with fewer than 30 observations.
+
 
 ## Matching Appraisal Data and Market Data
 
@@ -167,20 +168,17 @@ Statistics should not be reported on a strata with fewer than 30 observations.
 The physical and legal characteristics of each property used in the ratio study must be the same when appraised for tax purposes and when sold. 
 
 ### Timing and Sales Sample Selection
-**Multi-Parcel Sales.**
 
+**Multi-Parcel Sales.**
 Deeds transacted on multiple PINs are excluded from the sales sample.
 
 **Foreclosures and Bank Sales.**
-
 Foreclosure and Real Estate Owned sales may be excluded from the sales samples.
 
 **Selective Appraisal.**
-
 Properties are appraised on the first day of the re-assessment year. Assessments are calculated and produced over the course of the assessment year. Where sales chasing occurs, it can only occur for properties with a sale prior to the date the assessed value of a property was certified. Sales ratios calculated using sales following the certification date will exhibit much less bias from sales chasing than sales ratios calculated using sales prior to the certification date. 
 
 **Matching Assessment Years to Sale Years for Ratio Studies.** 
-
 This section follows 9.2, p 33, of the IAAO Standard on Ratio Studies. In order to minimize the influence of sales chasing on reported statistics, sales used in calculating statistic for years prior to the year prior to the current assessment year should utilize sales following the date of assessment. For A sale will be included in the study for prior years if the transaction date is between the first day of the year in which the property was re-assessed, and the same day in the following calendar year. 
 
 $$
@@ -196,6 +194,7 @@ $$
 $$
 
 For example, sales ratios reported during the 2019 re-assessment for assessments in 2018 and 2019 should use sales in 2017 and 2018 respectively in their denominators.
+
 
 ## Sales Selection. 
 
@@ -215,6 +214,7 @@ Deeds are excluded based on deed type: Quitclaim Deeds, Executor Deeds, ‘B’ 
 
 Sale prices are not adjusted for sales ratio studies. 
 
+
 ## Outlier Trimming
 
 ### Limit Sale Amounts. 
@@ -224,6 +224,7 @@ Sales with amounts less than $10,000 are excluded from sales ratio studies.
 ### Unusually Large or Small Ratios. 
 
 The top and bottom 5% of sales in terms of sales ratios are excluded from sales ratio studies.
+
 
 ## Forms
 
