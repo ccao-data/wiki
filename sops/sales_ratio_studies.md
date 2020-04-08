@@ -2,7 +2,7 @@
 title: SOP on Sales Ratio Studies
 description: Standard Operating Procedures and policies for CCAO sales ratio studies
 published: true
-date: 2020-04-08T21:07:38.354Z
+date: 2020-04-08T21:10:49.337Z
 tags: sop, policy
 ---
 
@@ -182,7 +182,8 @@ Properties are appraised on the first day of the re-assessment year. Assessments
 This section follows 9.2, p 33, of the IAAO Standard on Ratio Studies. In order to minimize the influence of sales chasing on reported statistics, sales used in calculating statistic for years prior to the year prior to the current assessment year should utilize sales following the date of assessment. For A sale will be included in the study for prior years if the transaction date is between the first day of the year in which the property was re-assessed, and the same day in the following calendar year. 
 
 $$
-\text{Sales Ratio}_t = \frac{\text{Assessor's Estimated Fair Cash Value}_t}{\text{Sale Price}_{t + 1}} \\ \forall \; \;  t \in [\infty, t-2]
+\text{Sales Ratio}_t = \frac{\text{Assessor's Estimated Fair Cash Value}_t}{\text{Sale Price}_{t + 1}} \\
+\forall \; \;  t \in [\infty, t-2]
 $$
 
 For example, sales ratios reported during the 2019 re-assessment for assessments in 2017 should use sales in 2018 sales respectively in their denominators.
