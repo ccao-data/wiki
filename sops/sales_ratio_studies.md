@@ -2,8 +2,8 @@
 title: SOP on Sales Ratio Studies
 description: Standard Operating Procedures and policies for CCAO sales ratio studies
 published: true
-date: 2020-04-08T21:13:27.032Z
-tags: sop, policy
+date: 2020-04-08T21:13:28.267Z
+tags: 
 ---
 
 # Overview
