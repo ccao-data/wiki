@@ -2,8 +2,8 @@
 title: Onboarding
 description: Get setup to contribute to the Data Science department
 published: true
-date: 2020-04-08T21:45:19.938Z
-tags: required, data
+date: 2020-04-08T22:05:48.611Z
+tags: setup
 ---
 
 # Contributors external to CCAO
