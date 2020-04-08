@@ -1,12 +1,12 @@
 ---
 title: Home
-description: CCAO Wiki Home
+description: 
 published: true
-date: 2020-04-08T21:42:57.790Z
+date: 2020-04-08T21:44:27.720Z
 tags: home, external
 ---
 
-# Cook County Assessor's Office Wiki
+## Getting Started
 
 > [**Onboarding**](/getting-started/onboarding) | Get set up to work with the CCAO DS department
 {.is-info}
