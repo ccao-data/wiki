@@ -2,13 +2,14 @@
 title: Home
 description: 
 published: true
-date: 2020-04-09T17:45:31.310Z
+date: 2020-04-09T17:50:21.274Z
 tags: 
 ---
 
 # Technical Documentation
 
-- [Onboarding *Get started with the Data Science department*](/getting-started/onboarding)
+- [Onboarding *Get started with the Data Science department*](/data/onboarding)
+- [Data *Documentation covering CCAO data architecture and best practices*](/data)
 {.links-list}
 
 # Standard Operating Procedures
