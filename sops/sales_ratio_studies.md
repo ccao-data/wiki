@@ -22,7 +22,7 @@ This policy references the [IAAO Standard on Ratio Studies](https://www.iaao.org
 
 ### Definitions
 
-**Fair Cash Value (FCV):** “The amount for which a property can be sold in the due course of business and trade, not under duress, between a willing buyer and a willing seller.” (35 ILCS 200/1-50)
+**Fair Cash Value (FCV):** 'The amount for which a property can be sold in the due course of business and trade, not under duress, between a willing buyer and a willing seller.” (35 ILCS 200/1-50)
 
 **Sales Ratio:** The ratio of the assessor’s estimated Fair Cash Value in year t to that property’s sale price in period $t \pm z$:
 
@@ -45,7 +45,7 @@ a) Residential condominiums;
 b) Property with up to seven self-contained dwelling units;
 c) Vacant and marginally improved land used, or intended to be used in in conjunction with a residential property.
 
-**Arm’s length:** Of or relating to dealings between two parties who are not related or not on close terms and who are presumed to have roughly equal bargaining power; not involving a confidential relationship.
+**Arm's length:** Of or relating to dealings between two parties who are not related or not on close terms and who are presumed to have roughly equal bargaining power; not involving a confidential relationship.
 
 **Bootstrapped Standard Deviation:** The standard deviation of 100 or more calculations of the same statistic, with each calculation based on a random sample of the overall population. 
 
@@ -55,7 +55,7 @@ $$
 CI = \text{Mean} \pm \sigma / \sqrt n
 $$
 
-**Sales Chasing:** “Sales Chasing,” also known as “Selective Appraisal,” is the practice of changing a property’s assessed value in response to a recent sale. 
+**Sales Chasing:** 'Sales Chasing,” also known as 'Selective Appraisal,” is the practice of changing a property’s assessed value in response to a recent sale. 
 
 **Coefficient of Dispersion (COD):** COD is a measure of horizontal equity and uniformity. The COD is the average percentage deviation of ratios from the median ratio. It is calculated as the ratio of the Average Absolute Deviation from the Median Sales Ratio to the Median Sales Ratio:
 
@@ -115,7 +115,7 @@ The Chief Data Officer shall make all necessary data and code for replication av
 
 ### Target Ranges. 
 
-Assessments within a strata are considered ‘high quality’ if they fall within the defined ranges below. 
+Assessments within a strata are considered 'high quality’ if they fall within the defined ranges below. 
 
 
 | Statistic  | Acceptable Range  |
@@ -127,10 +127,10 @@ Assessments within a strata are considered ‘high quality’ if they fall withi
 |Sales Chasing (E.4)   | $\le$ 5%  |
 
 **Standards Met.**
-Statistics that fall within the target ranges as defined in 2.1 may be said to have ‘met the standard for high quality assessment.'
+Statistics that fall within the target ranges as defined in 2.1 may be said to have 'met the standard for high quality assessment.'
 
 **Standards Statistically Met.**
-Statistics that fall outside the target ranges as defined in 2.1, but whose 95% confidence interval contains part of the range defined in 2.1 may be said to have ‘statistically met the standard for high quality assessment.'
+Statistics that fall outside the target ranges as defined in 2.1, but whose 95% confidence interval contains part of the range defined in 2.1 may be said to have 'statistically met the standard for high quality assessment.'
 
 **Differentiation Between Standards Met and Standards Statistically Met.**
 The Chief Communications Officer shall at all times make clear the distinction between statistics that meet 2.1.1 and statistics that meet 2.1.2.
@@ -148,7 +148,7 @@ Residential Properties are grouped into four groups according to minor property 
 * Vacant Land: 200, 201, 241.
 
 **Exclusion of Special Properties.**
-Some residential properties classified as ‘Single-Family’ by 2.1 are valued by the ‘Special Properties’ division of the Valuations Department. These are excluded from the sales ratio study. 
+Some residential properties classified as 'Single-Family’ by 2.1 are valued by the 'Special Properties’ division of the Valuations Department. These are excluded from the sales ratio study. 
 
 ### Stratification
 
@@ -201,7 +201,7 @@ For example, sales ratios reported during the 2019 re-assessment for assessments
 
 ### Data Source. 
 
-Sales are obtained by the CCAO from MyDec Web Service (“MyDec”), a service by the Illinois Department of Revenue. 
+Sales are obtained by the CCAO from MyDec Web Service ('MyDec”), a service by the Illinois Department of Revenue. 
 
 ### Pre-processing of sales. 
 
@@ -209,7 +209,7 @@ The sales data obtained via MyDec Web Service contain irregularities that requir
 
 ### Excluded Deed Types. 
 
-Deeds are excluded based on deed type: Quitclaim Deeds, Executor Deeds, ‘B’ type deeds.
+Deeds are excluded based on deed type: Quitclaim Deeds, Executor Deeds, 'B’ type deeds.
 
 ### Adjusting Sale Amounts. 
 
