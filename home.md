@@ -2,11 +2,11 @@
 title: Home
 description: 
 published: true
-date: 2020-04-09T17:39:48.871Z
+date: 2020-04-09T17:45:31.310Z
 tags: 
 ---
 
-# Getting Started
+# Technical Documentation
 
 - [Onboarding *Get started with the Data Science department*](/getting-started/onboarding)
 {.links-list}
