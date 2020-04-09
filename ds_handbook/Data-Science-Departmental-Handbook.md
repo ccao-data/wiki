@@ -2,7 +2,7 @@ Introduction
 ============
 
 This document outlines the purpose, procedures, and best practices of
-the Data Science Department at the Cook County Assessor’s Office.
+the Data Science Department at the Cook County Assessor's Office.
 
 Data Science Department
 =======================
@@ -21,11 +21,11 @@ The mission of this new department is to build, maintain, organize, and
 utilize data to create value for taxpayers and facilitate production of
 annual property assessments. This is separate from the role of the IT
 department, which is to build and maintain technological enterprise
-assets. The Data Science Department’s Mission is to facilitate
+assets. The Data Science Department's Mission is to facilitate
 production of annual property assessments in Cook County by:
 
 -   Leveraging computing and statistical techniques to estimate
-    property’s fair market values;
+    property's fair market values;
 -   Leveraging existing data bases to generate insights into valuation
     processes;
 -   Support other CCAO departments in generating machine-readable data
@@ -38,7 +38,7 @@ production of annual property assessments in Cook County by:
 Vision
 ------
 
-Our vision is to enhance the CCAO’s reputation among taxpayer and peers
+Our vision is to enhance the CCAO's reputation among taxpayer and peers
 as a technological leader in the field of property tax assessment, known
 for innovative, ethical, transparent, and fair assessments.
 
@@ -151,10 +151,10 @@ two regular practices:
 
 There is a standing departmental meeting from 8:45-9:00 a.m. which all
 departmental staff are required to attend. The purpose of this meeting
-is to discuss the day’s tasks and raise issues that staff may have
+is to discuss the day's tasks and raise issues that staff may have
 encountered in the previous day.
 
-### Weekly Spring Planning \\label{Weekly Sprint Planning
+### Weekly Spring Planning 
 
 There is a standing departmental meeting from 9:00 - 10:00 which select
 senior staff is required to attend. The purpose of this meeting is to
@@ -164,7 +164,7 @@ modified, and/or assigned, and priorities are reviewed. Milestone
 (\\ref{Milestones) burndown charts are reviewed. Members of other
 departments may attend to keep apprised of progress.
 
-### Limiting Work-in-Progress \\label{Limit WIP
+### Limiting Work-in-Progress 
 
 Staff should not be assigned more than a few issues to work
 simultaneously. Work should be executed in the order in which it is due.
@@ -173,7 +173,7 @@ The Deputy Assessor Chief Data Officer and the Senior Data Scientists
 should adjust their assignments and expectations based on milestone
 burndown charts and the open issue list.
 
-### Limiting mid-sprint objective changes \\label{Limit Mid Sprint Changes
+### Limiting mid-sprint objective changes 
 
 Staff should not be re-assigned to different issue tickets mid-sprint.
 This is extremely detrimental to productivity, and wastes time.
@@ -212,7 +212,7 @@ Work-Terminal Setup
 ### Git
 
 1.  set up accounts
-2.  If you don’t already have a pending invite to the CCAO Group, ask
+2.  If you don't already have a pending invite to the CCAO Group, ask
     @sweatyhandshake for one
 3.  install programs
     -   link your bitbucket account to sourcetree during sourcetree
@@ -225,7 +225,7 @@ Work-Terminal Setup
         search results. This will open up a Windows command prompt.
         Enter `mkdir .ssh` in the command prompt. This will create a
         folder called `.ssh` in your home directory.
-5.  open sourcetree (if you’d like to generate an SSH key pair without
+5.  open sourcetree (if you'd like to generate an SSH key pair without
     sourcetree, see instructions
     [here](https://docs.gitlab.com/ee/ssh/#generating-a-new-ssh-key-pair))
     -   go to “tools”
@@ -250,7 +250,7 @@ Work-Terminal Setup
         bottom-left corner
         -   under `security` click `SSH Keys` then `Add Key`
 8.  in sourcetree, select “clone”
-    -   from gitlab, view the repository you’d like to clone
+    -   from gitlab, view the repository you'd like to clone
     -   on the left hand side select “projects” and “details”
     -   on the right-hand select the blue “clone” button and hit the
         chain button under “Clone with SSH”
@@ -277,14 +277,14 @@ Work-Terminal Setup
 ### SQL
 
 For use in R: \* contact @sweatyhandshake for read credentials and place
-them in the top level of your local utility repository once it’s been
+them in the top level of your local utility repository once it's been
 cloned from gitlab. \* the `odbc.credentials` function provides an
 example of how to connect to the SQL server from within R.
 
 For use in SSMS: \* Go to
 `SSMSBoost > Settings > Preferred COnnections > List` where you can
 store server credentials provided by @sweatyhandshake for all databases
-you’ll need to access. Select `Connect object explorer at startup` for
+you'll need to access. Select `Connect object explorer at startup` for
 each connection. \* Go to `Tools > Options > Environment > Startup` and
 select `Open empty environment`
 
@@ -298,7 +298,7 @@ Version Control and Workflow
 
 The Data Science Department uses
 \\href{<a href="https://gitlab.com/ccao-data-science---modeling%7BGitLab" class="uri">https://gitlab.com/ccao-data-science---modeling{GitLab</a>
-as a workflow and version control process. The Department’s work is
+as a workflow and version control process. The Department's work is
 oriented around GitLab code repositories, with each repository
 representing an area of responsibility for the department.
 
@@ -337,7 +337,7 @@ produced in response to FOIA requests. \#\# Reporting A repository to
 contain scripts relating to diagnostic and external reports. \#\#
 Training A repository to contain materials related to training.
 
-Issues\\label{Issues
+Issues
 --------------------
 
 An
@@ -390,7 +390,7 @@ to FOIA. WIP status should be resolved and branches should be merged
 into production upon the delivery of the work product to either internal
 or external stakeholders.
 
-Milestones\\label{Milestones
+Milestones
 ----------------------------
 
 Issues are organized into Milestones. Milestones are large projects that
@@ -398,7 +398,7 @@ take 6 - 9 months to accomplish. Milestones allow us to group issues
 together based on their long-term goals. The Chief Data Officer creates
 and tracks Milestones to ensure timely delivery of work-product.
 
-Residential Automated Valuation\\label{Res Modeling
+Residential Automated Valuation
 ===================================================
 
 Models
@@ -409,11 +409,11 @@ outcome and a set of predictors. In the case of the residential
 automated valuation program, the outcome is the sale price of a
 property. Our modeling script loops over a menu of models that contains
 every model the CCAO has ever built. Models in this menu can be set to
-‘deactive’ if they are low-quality or otherwise unnecessary. However,
+'inactive' if they are low-quality or otherwise unnecessary. However,
 models should never be removed from the list, since inactive models sill
 provide important information about what does and does not work.
 
-Coding Standards\\label{Coding Standards
+Coding Standards
 ========================================
 
 Replicability
@@ -441,7 +441,7 @@ Integrity Checks
 Simplicity
 ----------
 
-Data Architecture Standards\\label{Architecure
+Data Architecture Standards
 ----------------------------------------------
 
 Developer Engagement Program
