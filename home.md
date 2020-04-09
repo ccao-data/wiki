@@ -21,7 +21,7 @@ tags:
 # Technical Documentation
 
 - [Data Dictionaries *Field definitions and storage locations*](/data/sql-database-guide)
-- [Residential Modeling *Processes and Procedures*](/data/residential-pipeline-documentation)
+- [Residential Modeling *Processes and Procedures*](/residential/residential-pipeline-documentation)
 {.links-list}
 
 # Applicaitons
