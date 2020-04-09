@@ -2,7 +2,7 @@
 title: SQL Database Guide
 description: SQL Inventory/Dictionary
 published: true
-date: 2020-04-09T18:41:59.869Z
+date: 2020-04-09T20:16:52.427Z
 tags: 
 ---
 
@@ -21,7 +21,7 @@ All data dictionary materials can be found in the [Residential Repository](https
 * TB suffix - updated after a township has been certified by the assessor's office.  Karen sends out an email every time a town is closed, this is the easiest way to keep track of which towns have been updated. These tables are considered ***SECOND PASS***.
 * BR suffix - updated after a township has been certified by the BoR. These tables are considered ***THIRD PASS***.
 
-> ***AS_HEAD***
+***AS_HEAD***
 The universe of all PINs in Cook County.
 
 ***AS_DETAIL***
