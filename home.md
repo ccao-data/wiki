@@ -8,7 +8,8 @@ tags:
 
 # Getting Started
 
-- [Onboarding *Get started with the Data Science department*](/getting-started/onboarding)
+- [Onboarding *Get started with the Data Science department*](/ds_handbook/Data-Science-Departmental-Handbook)
+- [Departmental Handbook *Data Science Departmental Handbook Draft*](/ds_handbook/onboarding)
 {.links-list}
 
 # Standard Operating Procedures
