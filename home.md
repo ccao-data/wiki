@@ -6,15 +6,23 @@ date: 2020-04-09T17:39:48.871Z
 tags: 
 ---
 
-# Getting Started
+# The Data Science Department
 
-- [Onboarding *Get started with the Data Science department*](/ds_handbook/Data-Science-Departmental-Handbook)
-- [Departmental Handbook *Data Science Departmental Handbook Draft*](/ds_handbook/onboarding)
+- [Onboarding *Get started with the Data Science department*](/ds_handbook/onboarding)
+- [Departmental Handbook *Data Science Departmental Handbook Draft*](/ds_handbook/Data-Science-Departmental-Handbook)
 {.links-list}
 
 # Standard Operating Procedures
 
 - [Sales Ratio Studies *Learn how the CCAO measures the performance of its models*](/sops/sales_ratio_studies)
-- [Residential Exemptions *Policies and processes related to residential exemptions*](/sops/sales_ratio_studies)
+- [Residential Exemptions *Policies and processes related to residential exemptions*](/sops/residential_exemptions)
 {.links-list}
 
+# Technical Documentation
+
+- [Data Dictionaries *Field definitions and storage locations*](/data/sql-database-guide)
+{.links-list}
+
+# Applicaitons
+
+- [Residential PINVAL *PIN Valuation Report*](http://10.124.101.1:8080/app/shiny_app_pinval)

@@ -1,8 +1,8 @@
 ---
 title: Onboarding
-description: Get setup to contribute to the Data Science department
+description: Get started with the Data Science department
 published: true
-date: 2020-04-08T22:05:48.611Z
+date: 2020-04-09T17:57:30.388Z
 tags: setup
 ---
 
