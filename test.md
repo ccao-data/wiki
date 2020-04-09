@@ -2,7 +2,7 @@
 title: Home
 description: 
 published: true
-date: 2020-04-09T17:31:03.913Z
+date: 2020-04-09T17:31:52.106Z
 tags: 
 ---
 
@@ -19,5 +19,5 @@ tags:
 
 # Applications
 
-- [PINVAL *Get information about a single residential property*](10.124.101.1:8080/app/shiny_app_pinval)
+- [PINVAL *Get information about a single residential property*](http://10.124.101.1:8080/app/shiny_app_pinval)
 {.links-list}
