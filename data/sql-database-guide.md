@@ -2,11 +2,13 @@
 title: SQL Database Guide
 description: SQL Inventory/Dictionary
 published: true
-date: 2020-04-09T17:33:59.251Z
+date: 2020-04-09T18:41:37.563Z
 tags: 
 ---
 
-**Anything with a prefix of `DEV` is still in development and should not be used by anyone other than its creator.**
+> Anything with a prefix of `DEV` is still in development and should not be used by anyone other than its creator.
+{.is-warning}
+
 
 ## AS_ TABLES
 *AS Tables contain data that originates from the AS400.*
@@ -15,7 +17,7 @@ tags:
 * TB suffix - updated after a township has been certified by the assessor's office.  Karen sends out an email every time a town is closed, this is the easiest way to keep track of which towns have been updated. These tables are considered ***SECOND PASS***.
 * BR suffix - updated after a township has been certified by the BoR. These tables are considered ***THIRD PASS***.
 
-***AS_HEAD***
+> ***AS_HEAD***
 The universe of all PINs in Cook County.
 
 ***AS_DETAIL***
