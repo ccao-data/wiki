@@ -2,11 +2,11 @@
 title: SQL Database Guide
 description: SQL Inventory/Dictionary
 published: true
-date: 2020-04-09T18:41:37.563Z
+date: 2020-04-09T18:41:59.869Z
 tags: 
 ---
 
-> Anything with a prefix of `DEV` is still in development and should not be used by anyone other than its creator.
+> Anything with a `DEV` prefix is still in development and should not be used by anyone other than its creator.
 {.is-warning}
 
 
