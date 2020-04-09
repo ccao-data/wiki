@@ -24,6 +24,3 @@ tags:
 - [Residential Modeling *Processes and Procedures*](/residential/residential-pipeline-documentation)
 {.links-list}
 
-# Applicaitons
-
-- [Residential PINVAL *PIN Valuation Report*](http://10.124.101.1:8080/app/shiny_app_pinval)
