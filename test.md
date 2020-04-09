@@ -2,7 +2,7 @@
 title: Home
 description: 
 published: true
-date: 2020-04-09T17:35:13.585Z
+date: 2020-04-09T17:38:07.281Z
 tags: 
 ---
 
@@ -17,7 +17,3 @@ tags:
 - [Residential Exemptions *Policies and processes related to residential exemptions*](/sops/sales_ratio_studies)
 {.links-list}
 
-# Applications
-
-- [PINVAL *Get information about a single residential property*](http://10.124.101.1:8080/app/shiny_app_pinval)
-{.links-list}
