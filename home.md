@@ -16,7 +16,7 @@ tags:
 
 - [Sales Ratio Studies *Learn how the CCAO measures the performance of its models*](/sops/sales_ratio_studies)
 - [Residential Exemptions *Policies and processes related to residential exemptions*](/sops/residential_exemptions)
-- [Residential Exemptions *Policies and processes related to residential exemptions*](/sops/desk_review)
+- [Desk Review *The process of post-modeling desktop review*](/sops/desk_review)
 {.links-list}
 
 # Technical Documentation
