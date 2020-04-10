@@ -1,0 +1,253 @@
+segment,field_name,length,offset
+Fixed,   Assessment status (binary: non-assessed/assessed),1,1
+Fixed,   Town,3,3
+Fixed,   Volume,3,7
+Fixed,   Property no.,14,11
+Fixed,   Tax code,5,26
+Fixed," Tax status [0:Taxable Parcel, 1: Exempt, 2: Railroad, 3: Homestead Non-coop, 4: Veteran, 5: Homestead Coop]",1,32
+Fixed,  Class: 1st digit is the major class identifier and 2nd & 3rd minor class identifier,3,34
+Fixed,  Neighborhood code no.,3,38
+Fixed,  Street code no.,5,42
+Fixed,  House no.,5,48
+Fixed,   Land dimension,7,54
+Fixed,  Land dimension sign,1,62
+Fixed,  Land code no.,1,64
+Fixed,  Land square footage,7,66
+Fixed,  Land square footage sign,1,74
+Fixed,  Irregular lot,1,76
+Fixed,  Complaint status,1,78
+Fixed,  Board of Appeal complaint no.,7,80
+Fixed,  Board of Appeal action year,1,88
+Fixed,  Board of Appeal action revision,1,90
+Fixed,  Assessment action year 1,1,92
+Fixed,  Assessment action change 1,1,94
+Fixed,  Assessment action revision 1,1,96
+Fixed,  Assessment action year 2,1,98
+Fixed,  Assessment action change 2,1,100
+Fixed,  Assessment action revision 2,1,102
+Fixed,  Assessment action year 3,1,104
+Fixed,  Assessment action change 3,1,106
+Fixed,  Assessment action revision 3,1,108
+Fixed,  Assessment action year 4,1,110
+Fixed,  Assessment action change 4,1,112
+Fixed,  Assessment action revision 4,1,114
+Fixed,  Prior land value,9,116
+Fixed,  Prior land value sign,1,126
+Fixed,"  Senior Freeze exemption, Or prior improvement   ",9,128
+Fixed,  Senior Freeze exemption sign,1,138
+Fixed," Prior total enterprise zone value, Or total of prior land and improvements",9,140
+Fixed,  Prior tot. entpz. zone sign,1,150
+Fixed,"  Current Long Time exemption, or current land value",9,152
+Fixed,  Curr. Long Time sign,1,162
+Fixed,"  Current Improvement Occupancy factor, Or current improvement",9,164
+Fixed,  Curr. Impv. Occ. Sign,1,174
+Fixed,  Current total land improvement valuation,9,176
+Fixed,  Current total valuation sign,1,186
+Fixed,  Proposed land valuation,9,188
+Fixed,  Proposed land valuation sign,1,198
+Fixed,  Proposed improvement value,9,200
+Fixed,  Proposed Imprv. value sign,1,210
+Fixed,  Proposed total land improvement valuation,9,212
+Fixed, Proposed tot. val. sign,1,222
+Fixed, Farm valuation,9,224
+Fixed, Farm valuation sign,1,234
+Fixed, Homeowner valuation,9,236
+Fixed,Homeowner val. sign ,1,246
+Fixed, Non-Homeowner val.,9,248
+Fixed,Non-Home val. sign,1,258
+Fixed,  Prior class,3,260
+Fixed, Sale segment counter (binary),1,264
+Fixed, Sales seg. Ctr. sign,1,266
+Fixed, Detail/questionnaire segment counter,3,268
+Fixed, Detl./Quest. Ctr. sign,1,272
+Sales,     Deed Type,2,274
+Sales,     Deed no.,9,277
+Sales,     Sales date 1 [mmddyyyy],8,287
+Sales,     Sales amount 1,9,296
+Sales,     Sales amount 1 sign,1,306
+Sales,  Sales date 2 [mmddyyyy],8,308
+Sales,  Sales amount 2,9,317
+Sales,  Sales amount 2 sign,1,327
+Sales,  Sales date 3 [mmddyyyy],8,329
+Sales,  Sales amount 3,9,338
+Sales,  Sales amount 3 sign,1,348
+Sales,  Filler,41,350
+Detail Type 1,     Multi-code,3,392
+Detail Type 1,     Type,1,396
+Detail Type 1,     S1-code [binary: vacant/improved),1,398
+Detail Type 1,     Decimal,1,400
+Detail Type 1,     Unit of measure,2,402
+Detail Type 1,  Class,3,405
+Detail Type 1,  Exempt Railroad indicator,1,409
+Detail Type 1,  Front footage,7,411
+Detail Type 1,  Front footage sign,1,419
+Detail Type 1,  Depth,5,421
+Detail Type 1,  Depth sign,1,427
+Detail Type 1,  Unit price [xxxxx.xx],7,429
+Detail Type 1,  Unit price sign,1,437
+Detail Type 1,  Depth factor [xx.xxx],5,439
+Detail Type 1,  Depth factor sign,1,445
+Detail Type 1,  Corner factor [x.xxxx],5,447
+Detail Type 1,  Corner factor sign,1,453
+Detail Type 1,  Extra Corner factor [0.xxxxx],5,455
+Detail Type 1,  Extra Corner factor sign,1,461
+Detail Type 1,  Percent Assessed [xx.xxxxx],7,463
+Detail Type 1,  Percent Assessed sign,1,471
+Detail Type 1,"  Economic indicator [xx.x] [1: 10, 2: 13, 3: 15, 4: 16, 5: 20, 6:25]",3,473
+Detail Type 1,  Economic ind. Sign,1,475
+Detail Type 1,  Economic indicator sign,1,477
+Detail Type 1,  Valuation,9,479
+Detail Type 1,  Valuation sign,1,489
+Detail Type 1,  Filler,11,491
+Detail Type 1,  S1 Unit indicator,1,503
+Detail Type 1,  Filler,4,505
+Detail Type 2,     Multi-code,3,392
+Detail Type 2,     Type,1,396
+Detail Type 2,"     S2-code [2: major improvement, 3: minor improvement]",1,398
+Detail Type 2,     Decimal,1,400
+Detail Type 2,     Unit of measure,2,402
+Detail Type 2,  Class,3,405
+Detail Type 2,  CDU,2,409
+Detail Type 2,  Area,7,412
+Detail Type 2,  Area sign,1,420
+Detail Type 2,  Unit price [xxxxx.xx],7,422
+Detail Type 2,  Unit price sign,1,430
+Detail Type 2,  Product,9,432
+Detail Type 2,  Product sign,1,442
+Detail Type 2,  Age,3,444
+Detail Type 2,  Age sign,1,448
+Detail Type 2,  Condition [xx.x],3,450
+Detail Type 2,  Condition sign,1,454
+Detail Type 2,  Percent Assessed [xx.xxxxx],7,456
+Detail Type 2,  Percent Assessed sign,1,464
+Detail Type 2,  Buff no.,3,466
+Detail Type 2,  Buff no. sign,1,470
+Detail Type 2,  filler,2,472
+Detail Type 2,  Valuation,9,475
+Detail Type 2,  Valuation sign,1,485
+Detail Type 2,  Key Parcel,14,487
+Detail Type 2,  Split code,1,502
+Detail Type 2,  Filler,5,504
+Detail Type 3,     Multi-code,3,392
+Detail Type 3,     Type,1,396
+Detail Type 3,"     S3-code [2: major improvement, 3: minor improvement]",1,398
+Detail Type 3,     Filler,3,400
+Detail Type 3,     Class,3,404
+Detail Type 3,  CDU,2,408
+Detail Type 3,  Reproductive cost,9,411
+Detail Type 3,  Reproductive cost sign,1,421
+Detail Type 3,  Filler,6,423
+Detail Type 3,  Year,2,430
+Detail Type 3,  Age,3,433
+Detail Type 3,  Age sign,1,437
+Detail Type 3,  Condition [xx.x],7,439
+Detail Type 3,  Condition sign,1,443
+Detail Type 3,  Percent assessed [xx.xxxxx],7,445
+Detail Type 3,  Percent assessed sign,1,453
+Detail Type 3,  Buff no.,3,455
+Detail Type 3,  Buff no. sign,1,459
+Detail Type 3,  Filler,2,461
+Detail Type 3,  Valuation,9,464
+Detail Type 3,  Valuation sign,1,474
+Detail Type 3,  Key parcel,14,476
+Detail Type 3,  Split code,1,491
+Detail Type 3,  Filler,16,493
+Detail Type 4,     Multi-code,3,392
+Detail Type 4,     Type = 4,1,396
+Detail Type 4,"     S2-code [2: major improvement, 3: minor improvement]",1,398
+Detail Type 4,     Filler,3,400
+Detail Type 4,     Class,3,404
+Detail Type 4,  CDU,2,408
+Detail Type 4,  Reproductive cost,9,411
+Detail Type 4,  Reproductive cost sign,1,421
+Detail Type 4,  Total valuation,9,423
+Detail Type 4,  Total valuation sign,1,433
+Detail Type 4,  Filler,1,435
+Detail Type 4,  Occupancy factor [xx.x],3,437
+Detail Type 4,  Occupancy factor sign,1,441
+Detail Type 4,  Age,3,443
+Detail Type 4,  ‘Age sign,1,447
+Detail Type 4,  Condition [xx.x],3,449
+Detail Type 4,  Condition sign,1,453
+Detail Type 4,  Percent assessed [xx.xxxxx],7,455
+Detail Type 4,  Percent assessed sign,1,463
+Detail Type 4,  Buff no.,3,465
+Detail Type 4,  Buff no. sign,1,469
+Detail Type 4,  Filler,2,471
+Detail Type 4,  Valuation,9,474
+Detail Type 4,  Valuation sign,1,484
+Detail Type 4,  Key parcel,14,486
+Detail Type 4,  Split code,1,501
+Detail Type 4,  Filler,6,503
+Detail Type 5,     Multi-code,3,392
+Detail Type 5,     Type = 5,1,396
+Detail Type 5,"     S2-code [2: major improvement, 3: minor improvement]",1,398
+Detail Type 5,     Filler,3,400
+Detail Type 5,     Class,3,404
+Detail Type 5,  CDU,2,408
+Detail Type 5,  Reproductive cost,9,411
+Detail Type 5,  Reproductive cost sign,1,421
+Detail Type 5,  Filler,6,423
+Detail Type 5,  Occupancy factor [xx.x],3,430
+Detail Type 5,  Occupancy factor sign,1,434
+Detail Type 5,  Age,3,436
+Detail Type 5,  ‘Age sign,1,440
+Detail Type 5,  Condition [xx.x],3,442
+Detail Type 5,  Condition sign,1,446
+Detail Type 5,  Percent assessed [xx.xxxxx],7,448
+Detail Type 5,  Percent assessed sign,1,456
+Detail Type 5,  Buff no.,3,458
+Detail Type 5,  Buff no. sign,1,462
+Detail Type 5,  Filler,2,464
+Detail Type 5,  Valuation,9,467
+Detail Type 5,  Valuation sign,1,477
+Detail Type 5,  Key parcel,14,479
+Detail Type 5,  Split code,1,494
+Detail Type 5,  Filler,13,496
+Questionnaire,     Questionnaire type: Value 1-5,1,510
+Questionnaire,     Use,1,512
+Questionnaire,     No. of apartments,1,514
+Questionnaire,     Type indicator,1,516
+Questionnaire,value ‘Q’,1,517
+Questionnaire,     Exterior construction - walls,1,518
+Questionnaire,  Roof,1,520
+Questionnaire,  No. of rooms,3,522
+Questionnaire,  “|’,1,525
+Questionnaire,  No. of rooms sign,1,526
+Questionnaire,  No. of bedrooms,2,528
+Questionnaire,  Basement type,1,531
+Questionnaire,  Basement finish,1,533
+Questionnaire,  Central-heat,1,535
+Questionnaire,  Floor-furnace,1,537
+Questionnaire,  Unit-heater,1,539
+Questionnaire,  Stove,1,541
+Questionnaire,  Solar,1,543
+Questionnaire,  Central-air,1,545
+Questionnaire,  No. of fireplaces,1,547
+Questionnaire,  No. of commercial units,1,549
+Questionnaire,  Filler,3,551
+Questionnaire,  Attic-type,1,555
+Questionnaire,  Attic-finish,1,557
+Questionnaire,  No. of full baths,2,559
+Questionnaire,  No. of half baths,1,562
+Questionnaire,  Architect design/Stock plan,1,564
+Questionnaire,  Typical or Atypical design,1,566
+Questionnaire,"  Construction quality [1: Deluxe, 2: Average, 3: Poor]",1,568
+Questionnaire,   Construction renovated,1,570
+Questionnaire,  Site desirability,1,572
+Questionnaire,  Garage size - 1,1,574
+Questionnaire,  Garage construction - 1,1,576
+Questionnaire,  Garage attached - 1,1,578
+Questionnaire,  Garage in area - 1,1,580
+Questionnaire,  Garage size - 2,1,582
+Questionnaire,  Garage construction – 2,1,584
+Questionnaire,  Garage attached - 2,1,586
+Questionnaire,  Garage in area - 2,1,588
+Questionnaire,  Porch,1,590
+Questionnaire,  Other improvements,7,592
+Questionnaire,  Other improvements sign,1,600
+Questionnaire,  Building sq. footage,7,602
+Questionnaire,  Building sq. footage sign,1,610
+Questionnaire,  State of repair,1,612
+Questionnaire,  Special condition,1,614
+Questionnaire,  Filler,11,616
