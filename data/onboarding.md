@@ -2,7 +2,7 @@
 title: Onboarding
 description: Get started with the Data Science department
 published: true
-date: 2020-04-14T19:43:52.869Z
+date: 2020-04-14T19:45:15.931Z
 tags: setup
 ---
 
@@ -14,11 +14,11 @@ Please review the documents in [collaborator.documents](https://gitlab.com/ccao-
 
 # Contributors internal to CCAO
 
-### Accounts to create
+## Accounts to create
 - [gitlab](https://gitlab.com/)
 - [bitbucket](https://bitbucket.org/)
 
-### Progams to install
+## Progams to install
 - [Sourcetree](https://www.sourcetreeapp.com/)
 - [R](https://cloud.r-project.org/)
 - [R Studio](https://download1.rstudio.org/RStudio-1.1.463.exe)
