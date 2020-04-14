@@ -2,7 +2,7 @@
 title: Onboarding
 description: Get started with the Data Science department
 published: true
-date: 2020-04-14T19:36:14.954Z
+date: 2020-04-14T19:43:52.869Z
 tags: setup
 ---
 
@@ -13,7 +13,7 @@ We are happy to announce a new Developer Engagement Program at the Cook County A
 Please review the documents in [collaborator.documents](https://gitlab.com/ccao-data-science---modeling/ccao_sf_cama_dev/tree/master/collaborator.documents) for additional information.
 
 # Contributors internal to CCAO
-## GETTING SET UP
+
 ### Accounts to create
 - [gitlab](https://gitlab.com/)
 - [bitbucket](https://bitbucket.org/)
