@@ -2,7 +2,7 @@
 title: Onboarding
 description: Get started with the Data Science department
 published: true
-date: 2020-04-14T19:27:00.472Z
+date: 2020-04-14T19:36:14.954Z
 tags: setup
 ---
 
@@ -70,11 +70,14 @@ For use in R:
  * the `odbc.credentials` function provides an example of how to connect to the SQL server from within R.
 
 For use in SSMS:
- * Go to `SSMSBoost > Settings > Preferred COnnections > List` where you can store server credentials provided by @sweatyhandshake for all databases you'll need to access. Select `Connect object explorer at startup` for each connection.
+ * Go to `SSMSBoost > Settings > Preferred Connections > List` where you can store server credentials provided by @sweatyhandshake for all databases you'll need to access. Select `Connect object explorer at startup` for each connection.
  * Go to `Tools > Options > Environment > Startup` and select `Open empty environment`
 
 ### Teams
  * After installation, ask @sweatyhandshake for an invite to the data science "Team" in the CCAO group
+ 
+### VPN Client
+ * You should recieve and email during onboarding from Admins or NCC with instructions on how to set up and access the CCAO network through a VPN. Confirm it works and contact Admins if it does not.
 
 ## Issue Resolution
 Our current workflow process is based on the basci branch-per-issue system. In this workflow, issues are tied to branches and merge requests.
