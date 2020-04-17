@@ -2,7 +2,7 @@
 title: Onboarding
 description: Get started with the Data Science department
 published: true
-date: 2020-04-09T17:57:30.388Z
+date: 2020-04-14T19:45:15.931Z
 tags: setup
 ---
 
@@ -13,19 +13,19 @@ We are happy to announce a new Developer Engagement Program at the Cook County A
 Please review the documents in [collaborator.documents](https://gitlab.com/ccao-data-science---modeling/ccao_sf_cama_dev/tree/master/collaborator.documents) for additional information.
 
 # Contributors internal to CCAO
-## GETTING SET UP
-### Accounts to create
+
+## Accounts to create
 - [gitlab](https://gitlab.com/)
 - [bitbucket](https://bitbucket.org/)
 
-### Progams to install
+## Progams to install
 - [Sourcetree](https://www.sourcetreeapp.com/)
 - [R](https://cloud.r-project.org/)
 - [R Studio](https://download1.rstudio.org/RStudio-1.1.463.exe)
 - [Java](https://www.java.com/en/download/manual.jsp) (Use Chrome to ensure you download a 64-bit version)
 - [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017)
 - [SSMSBoost](https://www.ssmsboost.com/)
-- [Slack](https://slack.com/downloads/windows)
+- [Teams](https://products.office.com/en-us/microsoft-teams/download-app)
 
 ### Git
 1. set up accounts
@@ -70,11 +70,14 @@ For use in R:
  * the `odbc.credentials` function provides an example of how to connect to the SQL server from within R.
 
 For use in SSMS:
- * Go to `SSMSBoost > Settings > Preferred COnnections > List` where you can store server credentials provided by @sweatyhandshake for all databases you'll need to access. Select `Connect object explorer at startup` for each connection.
+ * Go to `SSMSBoost > Settings > Preferred Connections > List` where you can store server credentials provided by @sweatyhandshake for all databases you'll need to access. Select `Connect object explorer at startup` for each connection.
  * Go to `Tools > Options > Environment > Startup` and select `Open empty environment`
 
-### Slack
- * After installation, ask @sweatyhandshake for an invite to the slack group
+### Teams
+ * After installation, ask @sweatyhandshake for an invite to the data science "Team" in the CCAO group
+ 
+### VPN Client
+ * You should recieve and email during onboarding from Admins or NCC with instructions on how to set up and access the CCAO network through a VPN. Confirm it works and contact Admins if it does not.
 
 ## Issue Resolution
 Our current workflow process is based on the basci branch-per-issue system. In this workflow, issues are tied to branches and merge requests.
