@@ -2,7 +2,7 @@
 title: Sales Ratio Studies
 description: Standard Operating Procedures and policies for CCAO sales ratio studies
 published: true
-date: 2020-04-09T03:29:18.161Z
+date: 2020-04-21T14:54:28.420Z
 tags: sop, policy
 ---
 
@@ -17,6 +17,8 @@ This policy governs the calculation and reporting of sales ratio study statistic
 Senior Data Scientists, the Chief Data Officer, the Chief Communications Officer.
 
 ### Related Information
+
+This policy governs functions contained in [AssessR](https://gitlab.com/ccao-data-science---modeling/packages/assessr), the Cook County Assessor's R Package.
 
 This policy references the [IAAO Standard on Ratio Studies](https://www.iaao.org/media/standards/Standard_on_Ratio_Studies.pdf). The Cook County Assessor’s Office does not have a residential sales validation unit, and therefore cannot adhere to the [IAAO Standard on Verification and Adjustment of Sales](https://www.iaao.org/media/standards/Verification_Adjustment_of_Sales.pdf). The Cook County Assessor’s Office recognizes that there exists an institutional bias to self-report favorable sales ratio statistics. This policy is constructed in such a way as to minimize the impact of that bias on self-reported sales ratio statistics.
 
