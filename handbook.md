@@ -2,7 +2,7 @@
 title: Data Science Departmental Handbook
 description: Everything you need to know about the mission and work of the CCAO Data Science department
 published: true
-date: 2020-05-04T23:00:17.291Z
+date: 2020-05-04T23:32:36.794Z
 tags: handbook
 ---
 
@@ -171,17 +171,37 @@ Draft working documents are not available under FOIA. The WIP status of branches
 
 Issues are organized into Milestones. Milestones are large projects that take multiple weeks or months to accomplish. Milestones allow the Data Science Department to group issues together based on its long-term goals. The Chief Data Officer creates and tracks Milestones to ensure timely delivery of work-product. Epics can also be used to organize issues and milestones into even larger grouping.
 
-
 # Coding Standards
 
 All work-product produced by the Data Science Department should be replicable by either a third-party, or another staff member, at any point in the future. This both increases productivity by reducing confusion and technological debt, and facilitates transparency and accountability. In order to ensure replicability of work, departmental staff should adhere to the following coding standards.
 
-### Comments
+## Comments
 
-### Function names
+Comments in R are denoted with a `#` on the commented line. Comments should be frequent and useful. The golden rule of code commenting is: **Code tells you how, comments tells you why**. Code comments should provide context that is not immediately apparent from the code itself. For example, this is **not** a useful comment:
+
+```r
+# Filter ratios by quantile
+ratios %>%
+  filter(between(ratio, quantile(ratio, 0.05), quantile(ratio, 0.95))
+```
+
+It doesn't explain why author made the choice they did, what the end result is, or point out any dangers in changing the code. It is a waste of space. A better version of this comment might be:
+
+```r
+# Drop extreme outliers from sales ratios in accordance with CCAO SOPs
+ratios %>%
+  filter(between(ratio, quantile(ratio, 0.05), quantile(ratio, 0.95))
+```
+
+This comment provides context, it tells you **why** this code was written. 
+
+Of course, there are still cases where the function of especially complicated pieces of code is not immediately obvious. In this case, comments should both explain what the code is doing and explain why it's doing that thing.
+
+### Code Style
+
+Code style is important. It makes your code more readable and ensures that other people working on the same project use the same syntax. The CCAO Data Science Department mostly follows the [Tidyverse Style Guide](https://style.tidyverse.org/). This is the most widely accepted standard format for R, whi
 
 ### Program Headers
-
 
 ### Integrity Checks
 
