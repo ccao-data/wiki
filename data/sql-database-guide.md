@@ -2,7 +2,7 @@
 title: SQL Database Guide
 description: SQL Inventory/Dictionary
 published: true
-date: 2020-04-09T20:16:52.427Z
+date: 2020-05-04T18:01:18.927Z
 tags: 
 ---
 
@@ -102,3 +102,12 @@ Spatial data as well as addresses and political districts for each PIN in the cu
 
 ***VW_RES_UNIVERSE***
 A collection of all residential PINs available in the HEADT file from 1997 to present.  Physical characteristics are added for SF and MF PINs, condo strata, percent assessed, and the number of units in condo buildings for NCHAR PINs.
+
+## OTHER TABLES
+*These are tables that are generally sourced from the AS/400 but don't have T/TB/BT suffixes.*
+
+***65D***
+A table recording changes made to pipeline values during desk review.  Precedes "mailed" into CCAO assessment work flow.
+
+> This table will not be reliable for towns in TAX_YEAR 2020.
+{.is-danger}
