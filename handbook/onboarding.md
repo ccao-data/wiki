@@ -2,22 +2,25 @@
 title: Onboarding
 description: Get started with the Data Science department
 published: true
-date: 2020-05-04T20:43:48.312Z
+date: 2020-05-04T21:00:38.749Z
 tags: setup
 ---
 
-## Important Places
+## Bookmarks
+**External**
+* [CCAO GitLab](https://gitlab.com/ccao-data-science---modeling) - Main source for all Data Science department code
+* [IAAO Technical Standards](https://iaao.org/wcm/Resources/Technical_Standards/wcm/Resources_Content/Pubs/Technical_Standards.aspx) - Technical standards and measurements for the assessment field
 
-* [External | GitLab](https://gitlab.com/ccao-data-science---modeling) - Main source for all CCAO code
-* [Internal | Wiki](https://dswiki.cookcountyassessor.com/) - This wiki, you're already here!
-* [Internal | DS Application Server](https://datascience.cookcountyassessor.com/shiny) - Shiny server that launches CCAO Shiny applications. Login with Windows credentials
-* [Internal | App Monitoring Server](https://datascience.cookcountyassessor.com/grafana/) - Dashboards for monitoring app usage, pipeline processes, etc. Ask `@dfsnow` for login
+**Internal**
+* [Data Science Wiki](https://dswiki.cookcountyassessor.com/) - This wiki, you're already here!
+* [Data Science Application Server](https://datascience.cookcountyassessor.com/shiny) - Shiny server that launches CCAO Shiny applications. Login with Windows credentials
+* [App Monitoring Server](https://datascience.cookcountyassessor.com/grafana/) - Dashboards for monitoring app usage, pipeline processes, etc. Ask `@dfsnow` for login
 
 > The internal application locations above will have a security warning when you first visit them. This warning can safely be ignored. Click **Advanced --> Accept the risk** to bypass the warning.
 {.is-warning}
 
 ## Accounts to Create
-* [GitLab](https://gitlab.com/) - Needed to contribute to CCAO codebase
+* [GitLab](https://gitlab.com/) - Needed to contribute to the CCAO codebase (use your @cookcountyassessor.com email to make an account)
 * [Bitbucket](https://bitbucket.org/) - Needed for Sourcetree install
 
 ## Progams to Install
