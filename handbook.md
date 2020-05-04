@@ -2,7 +2,7 @@
 title: Data Science Departmental Handbook
 description: Everything you need to know about the mission and work of the CCAO Data Science department
 published: true
-date: 2020-05-04T22:47:03.694Z
+date: 2020-05-04T23:00:17.291Z
 tags: handbook
 ---
 
@@ -16,12 +16,12 @@ The rationale for having a separate department in the CCAO that specifically dea
 
 The mission of the Data Science Department is to build, maintain, organize, and utilize data to create value for taxpayers and facilitate production of annual property assessments. This is separate from the role of the IT department, which is to build and maintain technological enterprise assets. Specifically, the Data Science Department's Mission is to facilitate production of annual property assessments in Cook County by:
 
- * Leveraging computing and statistical techniques to estimate property's fair market values;
- * Leveraging existing data bases to generate insights into valuation processes;
- * Supporting other CCAO departments in generating machine-readable data and analyzing it;
- * Maintaining and improving relationships between data sets to increase their value;
- * Identifying opportunities to generate new valuable data;
- * Improving intra-office data and statistical literacy.
+  *  Leveraging computing and statistical techniques to estimate property's fair market values;
+  *  Leveraging existing data bases to generate insights into valuation processes;
+  *  Supporting other CCAO departments in generating machine-readable data and analyzing it;
+  *  Maintaining and improving relationships between data sets to increase their value;
+  *  Identifying opportunities to generate new valuable data;
+  *  Improving intra-office data and statistical literacy.
 
 ## Vision
 
@@ -121,9 +121,9 @@ Repositories are structured following the best practices laid out in [GitLab Flo
 
 This repository structure has a few advantages:
 
- * GitLab's continuous integration and delivery features work well with this workflow
- * Having a separate staging branch is easy to understand vs other models like Git Flow or GitHub Flow
- * Breaking changes that might make it into the staging environment are not sent to the production application, meaning users rarely see them
+  *  GitLab's continuous integration and delivery features work well with this workflow
+  *  Having a separate staging branch is easy to understand vs other models like Git Flow or GitHub Flow
+  *  Breaking changes that might make it into the staging environment are not sent to the production application, meaning users rarely see them
 
 > NOTE: Not all CCAO repositories are set up this way, but most future ones will be. If you need to work on a repository without a `staging` branch, simply use `master` as the default branch rather than `staging` (make issue branches off of and merge requests into `master`).
 {.is-note}
@@ -138,106 +138,59 @@ These repositories are available to the public through FOIA. Only the main branc
 
 ## Issues
 
-An [issue](https://docs.gitlab.com/ee/user/project/issues/) is a work assignment that should take less than 1-2 work weeks to complete (see [Continuous Delivery](#continuous-delivery). Work products that take longer than one
-to two weeks to complete should be broken into multiple issues and,
-where appropriate, grouped into a milestone (see \\ref{Milestones)).
+An [issue](https://docs.gitlab.com/ee/user/project/issues/) is a work assignment that should take less than 1-2 work weeks to complete (see [Continuous Delivery](#continuous-delivery)). Work products that take longer than one to two weeks to complete should be broken into multiple issues and, where appropriate, grouped into a milestone (see [Milestones](#milestones)).
 
-Issues may be created by anyone in the organization. Issue deadlines are
-assigned by the Deputy Assessor Chief Data Officer in consultation with
-their Senior Data Scientists (see \\ref{Weekly Sprint Planning). Issues
-should always correspond to a
-\\href{<a href="https://docs.gitlab.com/ee/gitlab-basics/add-merge-request.html%7Bmerge" class="uri">https://docs.gitlab.com/ee/gitlab-basics/add-merge-request.html{merge</a>
-request that closes the issue.
+Issues may be created by anyone in the organization. Issue deadlines are assigned by the Deputy Assessor Chief Data Officer in consultation with Senior Data Scientists (see [Weekly Sprint Planning](#weekly-sprint-planning)). Issues should always correspond to a [merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html) that closes the issue.
 
 ### Labels
 
-All labels should be maintained at the group level. Issues should be
-labeled so that work is more easily searchable and categorized. Labels
-are maintained by the Senior Data Scientists.
+All labels should be maintained at the group level. Issues should be labeled so that work is more easily searchable and categorized. Labels are maintained by the Senior Data Scientists.
 
 ### Weights
 
-Issues should be assigned weights relative to their importance. Weights
-should be in (1,5,15).
+Issues should be assigned weights relative to their importance. Weights are a relative number without a distinct meaning, their actual value is arbitrary. The Data Science Department typically makes higher weights = more important.
 
-Working Issues
---------------
+## Working Issues
 
 When working an issue, departmental staff should follow these steps:
 
   *  Make sure the issue has a due date, time estimate, label, and associated merge request. If any of these are missing, notify the issue creator.
   *  Make sure you are tracking the branch associated with this issue in Sourcetree.
-  *  Work the issue. Follow the coding standards (\ref{Coding Standards). Use the comment section of the issue to discuss the work. This creates a record that can be referenced in the future.
+  *  Work the issue. Follow all [coding standards](#coding-standards). Use the comment section of the issue to discuss the work. This creates a record that can be referenced in the future.
   *  Upon completion of the work, resolve the WIP status of the merge request and notify your supervisor that you have completed the work.
 
-### Merge request approvals
+### Merge Request Approvals
 
-In collaboration with the Senior Data Scientists, the Deputy Assessor
-Chief Data Officer can set approvals for merge requests. Branches will
-not be merged into the production branch until all approvals are made.
+In collaboration with the Senior Data Scientists, the Deputy Assessor Chief Data Officer can set approvals for merge requests. Branches will not be merged into the production branch until all approvals are made.
 
 ### Work In Progress Status
 
-Draft working documents are not available under FOIA. The WIP status of
-branches should not be resolved until the branch is merged into
-production. Work on branches labeled with WIP status are not available
-to FOIA. WIP status should be resolved and branches should be merged
-into production upon the delivery of the work product to either internal
-or external stakeholders.
+Draft working documents are not available under FOIA. The WIP status of branches should not be resolved until the branch is merged into production. Work on branches labeled with WIP status are not available to FOIA. WIP status should be resolved and branches should be merged into production upon the delivery of the work product to either internal or external stakeholders.
 
-Milestones
-----------------------------
+## Milestones
 
-Issues are organized into Milestones. Milestones are large projects that
-take 6 - 9 months to accomplish. Milestones allow us to group issues
-together based on their long-term goals. The Chief Data Officer creates
-and tracks Milestones to ensure timely delivery of work-product.
+Issues are organized into Milestones. Milestones are large projects that take multiple weeks or months to accomplish. Milestones allow the Data Science Department to group issues together based on its long-term goals. The Chief Data Officer creates and tracks Milestones to ensure timely delivery of work-product. Epics can also be used to organize issues and milestones into even larger grouping.
 
-Residential Automated Valuation
-===================================================
 
-Models
-------
+# Coding Standards
 
-A model is a mathematic characterization of the relationship between an
-outcome and a set of predictors. In the case of the residential
-automated valuation program, the outcome is the sale price of a
-property. Our modeling script loops over a menu of models that contains
-every model the CCAO has ever built. Models in this menu can be set to
-'inactive' if they are low-quality or otherwise unnecessary. However,
-models should never be removed from the list, since inactive models sill
-provide important information about what does and does not work.
+All work-product produced by the Data Science Department should be replicable by either a third-party, or another staff member, at any point in the future. This both increases productivity by reducing confusion and technological debt, and facilitates transparency and accountability. In order to ensure replicability of work, departmental staff should adhere to the following coding standards.
 
-Coding Standards
-========================================
+### Comments
 
-Replicability
--------------
+### Function names
 
-All work-product produced by the Data Science Department should be
-replicable by either a third party, or another staff member, at any
-point in the future. This both increases productivity by reducing
-confusion and technological debt, and facilitates transparency and
-accountability. In order to ensure replicability of work, departmental
-staff should adhere to the following coding standards.
+### Program Headers
 
-Comments
---------
 
-Function names
---------------
+### Integrity Checks
 
-Program Headers
----------------
 
-Integrity Checks
-----------------
+### Simplicity
 
-Simplicity
-----------
 
-Data Architecture Standards
-----------------------------------------------
+### Data Architecture Standards
+
 
 Developer Engagement Program
 ============================
