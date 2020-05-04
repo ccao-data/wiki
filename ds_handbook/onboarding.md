@@ -2,7 +2,7 @@
 title: Onboarding
 description: Get started with the Data Science department
 published: true
-date: 2020-05-04T20:17:44.408Z
+date: 2020-05-04T20:21:31.886Z
 tags: setup
 ---
 
@@ -77,18 +77,18 @@ For use in SSMS:
 The CCAO Data Science team uses [GitLab Flow](https://docs.gitlab.com/ee/topics/gitlab_flow.html) to structure its workflow. GitLab Flow uses a basic branch-per-issue system. Each issue or new feature is tied to a branch and merge request. Work is done on the branch, then merged to `master` after testing and review. Here's an example of a typical workflow:
 
 1. You are assigned **Issue #118, Update Internal Contribution Guidelines** within GitLab.
-   * Check to see if there is a branch associated with your issue within GitLab. Branches created via issues usually have a similar name, in this case the branch name would be **118-update-internal-contribution-guidelines**.
+   * Check to see if there is a branch associated with your issue within GitLab. Branches created via issues usually have a similar name, in this case the branch name would be `118-update-internal-contribution-guidelines`.
    * If a branch doesn't exist, please ask your supervisor to create one. Please *do not* create a branch yourself.
    
 2. Checkout the issue branch. 
-   * Within Sourcetree, click **Repository --> Checkout**, then select the branch associated with the issue you have been assigned. In this case, **118-update-internal-contribution-guidelines**. You can also double-click different branch names to check them out.
-   * This branch should now appear bolded under **BRANCHES** on the left side of Sourcetree. You are now working within that branch.
+   * Within Sourcetree, click **Repository --> Checkout**, then select the branch associated with the issue you have been assigned. In this case, `118-update-internal-contribution-guidelines`. You can also double-click different branch names to check them out.
+   * The branch you selected should now appear bolded under **BRANCHES** on the left side of Sourcetree. You are now working within that branch.
    
 2. Work the issue. Please use the issue page comments to communicate with your supervisor about the issue.
 
-3. Commit , commit your work and push to your issue branch. Commmitting and pushing more often is fine.
+3. Commit often and use [descriptive commit messages](https://commit.style/). Only push to your issue branch, never directly to `master`.
 
-4. When you have finished working on the issue, let your supervisor know in the comments.
+4. When you have finished working on the issue, request approval for your merge request let your supervisor know you've finished working the issue.
 
 ---
 :fire:
