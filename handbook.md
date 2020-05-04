@@ -2,7 +2,7 @@
 title: Data Science Departmental Handbook
 description: Everything you need to know about the mission and work of the CCAO Data Science department
 published: true
-date: 2020-05-04T21:51:08.905Z
+date: 2020-05-04T22:47:03.694Z
 tags: handbook
 ---
 
@@ -106,8 +106,8 @@ There is a standing departmental meeting from 9:00 - 10:00 which select senior s
 
 # Work Terminal Setup
 
-> [See Onboarding](/handbook/onboarding)
-{.is-warning}
+* [See Onboarding](/handbook/onboarding)
+{.links-list}
 
 # Version Control and Workflow
 
@@ -130,29 +130,15 @@ This repository structure has a few advantages:
 
 ### Public Repositories
 
-These repositories are fully visible to the public. 
+These repositories are fully visible to the public, including all issue branches, comments, and documentations. As such, be cautious and courteous with your issue comments and commit messages. Perhaps more importantly, *never commit sensitive material, such as API keys or database passwords to one of these repositories* (or any repository). If sensitive material is committed accidentally, notify a Senior Data Scientist immediately.
 
 ### Private Repositories
 
-These repositories are available to the public through FOIA. Only the main branch of each repository is available through FOIA - all other branches are drafts and deliberative materials and are not subject to FOIA.
-
-### Income Producing
-
-Code base for the computer assisted mass appraisal programs supporting
-industrial/commercial valuation. \#\# Policy Policy documents, draft
-legislation, and other written material. \#\# Enterprise Intelligence A
-repository to contain all ad-hoc data requests, investigations, or other
-non-production analysis. \#\# FOIA A repository to contain code and data
-produced in response to FOIA requests. \#\# Reporting A repository to
-contain scripts relating to diagnostic and external reports. \#\#
-Training A repository to contain materials related to training.
+These repositories are available to the public through FOIA. Only the main branch of each repository is available through FOIA - all other branches are drafts/deliberative materials and are not subject to FOIA.
 
 ## Issues
 
-An
-\\href{<a href="https://docs.gitlab.com/ee/user/project/issues/%7BIssue" class="uri">https://docs.gitlab.com/ee/user/project/issues/{Issue</a>
-is a work-assignment that should take one to two work weeks to complete
-(see \\ref{Continuous Delivery). Work products that take longer than one
+An [issue](https://docs.gitlab.com/ee/user/project/issues/) is a work assignment that should take less than 1-2 work weeks to complete (see [Continuous Delivery](#continuous-delivery). Work products that take longer than one
 to two weeks to complete should be broken into multiple issues and,
 where appropriate, grouped into a milestone (see \\ref{Milestones)).
 
