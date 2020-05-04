@@ -1,8 +1,8 @@
 ---
-title: Desk Review Standard Operating procedures
+title: Desk Review Standard Operating Procedures
 description: 
 published: true
-date: 2020-04-10T13:38:18.331Z
+date: 2020-05-04T20:51:19.023Z
 tags: 
 ---
 
