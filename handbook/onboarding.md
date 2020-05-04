@@ -1,14 +1,14 @@
 ---
 title: Onboarding
-description: Get started with the Data Science department
+description: Get started with the Data Science Department
 published: true
-date: 2020-05-04T23:51:19.663Z
+date: 2020-05-04T23:51:51.259Z
 tags: setup
 ---
 
 # Bookmarks
 **External**
-* [CCAO GitLab](https://gitlab.com/ccao-data-science---modeling) - Main source for all Data Science department code
+* [CCAO GitLab](https://gitlab.com/ccao-data-science---modeling) - Main source for all Data Science Department code
 * [IAAO Technical Standards](https://iaao.org/wcm/Resources/Technical_Standards/wcm/Resources_Content/Pubs/Technical_Standards.aspx) - Technical standards and measurements for the assessment field
 
 **Internal**
