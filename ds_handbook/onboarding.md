@@ -2,7 +2,7 @@
 title: Onboarding
 description: Get started with the Data Science department
 published: true
-date: 2020-05-04T19:51:18.972Z
+date: 2020-05-04T19:56:33.475Z
 tags: setup
 ---
 
@@ -15,16 +15,16 @@ tags: setup
 ## Progams to Install
 
 * [Sourcetree](https://www.sourcetreeapp.com/) - Frontend UI for git version control and GitLab
-* [R](https://cloud.r-project.org/) - Main CCAO programming language (use version 3.6.3 or greater
+* [R](https://cloud.r-project.org/) - Main CCAO programming language (use version 3.6.3 or greater)
 * [R Studio](https://rstudio.com/products/rstudio/download/#download) - Integrated development environment for R
-* [SQL Server Management Studio](https://aka.ms/ssmsfullsetup) (SMSS) - SQL client that plays well with SQL Server
+* [SQL Server Management Studio (SMSS)](https://aka.ms/ssmsfullsetup) - SQL client that plays well with CCAO's SQL Server
 * [SSMSBoost](https://www.ssmsboost.com/) - Add-on to SMSS that adds handy features
 * [PuTTY](https://www.putty.org/) - SSH client and key generator
-* [Teams](https://products.office.com/en-us/microsoft-teams/download-app) - Main CCAO communications app
+* [Teams](https://products.office.com/en-us/microsoft-teams/download-app) - Main CCAO DS communications app
 
 ## Setup
 
-### Git and Sourcetree
+### Git, GitLab, and Sourcetree
 1. Set up your GitLab and Bitbucket accounts
 2. If you don't already have a pending invite to the [CCAO GitLab](https://gitlab.com/ccao-data-science---modeling) group, request one from `@sweatyhandshake`.
 3. Install programs
@@ -68,10 +68,10 @@ For use in SSMS:
  * Go to `Tools > Options > Environment > Startup` and select `Open empty environment`
 
 ### Teams
- * After installation, ask @sweatyhandshake for an invite to the data science "Team" in the CCAO group
+ * After installation, ask @sweatyhandshake for an invite to the Data Science "Team" within the CCAO group
  
 ### VPN Client
- * You should recieve and email during onboarding from Admins or NCC with instructions on how to set up and access the CCAO network through a VPN. Confirm it works and contact Admins if it does not.
+ * You should recieve and email during onboarding from Admins or NCC with instructions on how to set up and access the CCAO network through a VPN. For VPN troubleshooting, email the CCAO [Admins](mailto:admins@cookcountyassessor.com).
 
 ## Issue Resolution
 Our current workflow process is based on the basci branch-per-issue system. In this workflow, issues are tied to branches and merge requests.
