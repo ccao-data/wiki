@@ -1,3 +1,11 @@
+---
+title: Residential Exemptions
+description: Standard Operating Procedures and polices governing the CCAO residential exemptions process
+published: true
+date: 2020-05-04T20:54:16.130Z
+tags: sop, residential
+---
+
 ## [CCAO Organizational Chart: Exemption Focus](new/org_edit_p.pdf)
 ## Overview
 <details><summary>Property Tax Exemptions 101</summary>
