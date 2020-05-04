@@ -2,7 +2,7 @@
 title: SQL Database Guide
 description: SQL Inventory/Dictionary
 published: true
-date: 2020-05-04T18:17:25.679Z
+date: 2020-05-04T18:17:55.706Z
 tags: 
 ---
 
@@ -88,7 +88,7 @@ Industrial and commercial class sales identified by whether or not they're valid
 ***65D***
 A table recording changes made to pipeline values during desk review.  Precedes "mailed" in CCAO assessment work flow.
 
-> This table will not be reliable for River Forest, Riverside, Oak Park, and Palos in 2020.
+> This table will is not reliable for River Forest, Riverside, Oak Park, and Palos in 2020.
 {.is-danger}
 
 ## VIEWS
