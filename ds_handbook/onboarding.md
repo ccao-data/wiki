@@ -2,7 +2,7 @@
 title: Onboarding
 description: Get started with the Data Science department
 published: true
-date: 2020-05-04T20:38:24.475Z
+date: 2020-05-04T20:41:03.800Z
 tags: setup
 ---
 
@@ -59,7 +59,7 @@ tags: setup
    * Paste this into the top line of the **Clone** page in Sourcetree, and click out of the box
    * If Sourcetree encounters an error, restart it and repaste the text into the **Clone** field
    * Under **Advanced Options**, select the `master` branch
-   * Press the *Clone* button at the bottom of the page
+   * Press the **Clone** button at the bottom of the page
    * Clone the repositories to `"My Documents"`, or file paths will need to be rewritten in several scripts
 
 ### R
@@ -68,18 +68,18 @@ tags: setup
 
 ### SQL
 For use in R:
- * Contact `@sweatyhandshake` for read credentials and place them in the top level of your local utility repository once it's been cloned from GitLab.
- * The `odbc.credentials` function provides an example of how to connect to the SQL server from within R.
+ * Contact `@sweatyhandshake` for read credentials and place them in the top level of your local utility repository once it's been cloned from GitLab
+ * The `odbc.credentials` function provides an example of how to connect to the SQL server from within R
 
 For use in SSMS:
- * Go to **SSMSBoost > Settings > Preferred Connections > List**.  Here you can store server credentials provided by `@sweatyhandshake` for all databases you'll need to access. Select **Connect object explorer at startup** for each connection.
- * Go to **Tools > Options > Environment > Startup** and select **Open empty environment**.
+ * Go to **SSMSBoost > Settings > Preferred Connections > List**.  Here you can store server credentials provided by `@sweatyhandshake` for all databases you'll need to access. Select **Connect object explorer at startup** for each connection
+ * Go to **Tools > Options > Environment > Startup** and select **Open empty environment**
 
 ### Teams
- * After installation, ask `@sweatyhandshake` for an invite to the Data Science "Team" within the CCAO group
+ After installation, ask `@sweatyhandshake` for an invite to the Data Science "Team" within the CCAO group
  
 ### VPN Client
- * You should recieve and email during onboarding from Admins or NCC with instructions on how to set up and access the CCAO network through a VPN. For VPN troubleshooting, email the CCAO [Admins](mailto:admins@cookcountyassessor.com).
+ You should recieve and email during onboarding from Admins or NCC with instructions on how to set up and access the CCAO network through a VPN. For VPN troubleshooting, email the CCAO [Admins](mailto:admins@cookcountyassessor.com).
 
 ## Issue Resolution
 The CCAO Data Science team uses [GitLab Flow](https://docs.gitlab.com/ee/topics/gitlab_flow.html) to structure its workflow. GitLab Flow uses a basic branch-per-issue system. Each issue or new feature is tied to a branch and merge request. Work is done on the branch, then merged to `master` after testing and review. Here's an example of a typical workflow:
