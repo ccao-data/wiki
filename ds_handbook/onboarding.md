@@ -2,15 +2,23 @@
 title: Onboarding
 description: Get started with the Data Science department
 published: true
-date: 2020-05-04T20:25:31.905Z
+date: 2020-05-04T20:38:24.475Z
 tags: setup
 ---
 
+## Important Places
 
+* [External | GitLab](https://gitlab.com/ccao-data-science---modeling) - Main source for all CCAO code
+* [Internal | Wiki](https://dswiki.cookcountyassessor.com/) - This wiki, you're already here!
+* [Internal | DS Application Server](https://datascience.cookcountyassessor.com/shiny) - Shiny server that launches CCAO Shiny applications. Login with Windows credentials
+* [Internal | App Monitoring Server](https://datascience.cookcountyassessor.com/grafana/) - Dashboards for monitoring app usage, pipeline processes, etc. Ask `@dfsnow` for login
+
+> The internal application locations above will have a security warning when you first visit them. This warning can safely be ignored. Click **Advanced --> Accept the risk** to bypass the warning.
+{.is-warning}
 
 ## Accounts to Create
-- [GitLab](https://gitlab.com/)
-- [Bitbucket](https://bitbucket.org/)
+* [GitLab](https://gitlab.com/) - Needed to contribute to CCAO codebase
+* [Bitbucket](https://bitbucket.org/) - Needed for Sourcetree install
 
 ## Progams to Install
 
