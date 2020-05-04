@@ -2,7 +2,7 @@
 title: Onboarding
 description: Get started with the Data Science department
 published: true
-date: 2020-05-04T20:21:31.886Z
+date: 2020-05-04T20:25:31.905Z
 tags: setup
 ---
 
@@ -22,7 +22,7 @@ tags: setup
 * [PuTTY](https://www.putty.org/) - SSH client and key generator
 * [Teams](https://products.office.com/en-us/microsoft-teams/download-app) - Main CCAO DS communications app
 
-## Setup
+## Initial Setup
 
 ### Git, GitLab, and Sourcetree
 1. Set up your GitLab and Bitbucket accounts
