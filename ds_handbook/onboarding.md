@@ -2,7 +2,7 @@
 title: Onboarding
 description: Get started with the Data Science department
 published: true
-date: 2020-05-04T19:56:33.475Z
+date: 2020-05-04T20:17:44.408Z
 tags: setup
 ---
 
@@ -56,40 +56,37 @@ tags: setup
 
 ### R
 * If at any point R cannot contact CRAN mirrors to download packages, run `options(download.file.method="libcurl")`
-* if at any point R returns the errors `LAPACK routines cannot be loaded` or `maximal number of DLLs reached`, run `file.edit('~/.Renviron')`, enter `R_MAX_NUM_DLLS=1000` in the viewer, save, and reboot RStudio
+* If at any point R returns the errors `LAPACK routines cannot be loaded` or `maximal number of DLLs reached`, run `file.edit('~/.Renviron')`, enter `R_MAX_NUM_DLLS=1000` in the viewer, save, and reboot RStudio
 
 ### SQL
 For use in R:
- * contact @sweatyhandshake for read credentials and place them in the top level of your local utility repository once it's been cloned from gitlab.
- * the `odbc.credentials` function provides an example of how to connect to the SQL server from within R.
+ * Contact `@sweatyhandshake` for read credentials and place them in the top level of your local utility repository once it's been cloned from GitLab.
+ * The `odbc.credentials` function provides an example of how to connect to the SQL server from within R.
 
 For use in SSMS:
- * Go to `SSMSBoost > Settings > Preferred Connections > List` where you can store server credentials provided by @sweatyhandshake for all databases you'll need to access. Select `Connect object explorer at startup` for each connection.
- * Go to `Tools > Options > Environment > Startup` and select `Open empty environment`
+ * Go to **SSMSBoost > Settings > Preferred Connections > List**.  Here you can store server credentials provided by `@sweatyhandshake` for all databases you'll need to access. Select **Connect object explorer at startup** for each connection.
+ * Go to **Tools > Options > Environment > Startup** and select **Open empty environment**.
 
 ### Teams
- * After installation, ask @sweatyhandshake for an invite to the Data Science "Team" within the CCAO group
+ * After installation, ask `@sweatyhandshake` for an invite to the Data Science "Team" within the CCAO group
  
 ### VPN Client
  * You should recieve and email during onboarding from Admins or NCC with instructions on how to set up and access the CCAO network through a VPN. For VPN troubleshooting, email the CCAO [Admins](mailto:admins@cookcountyassessor.com).
 
 ## Issue Resolution
-Our current workflow process is based on the basci branch-per-issue system. In this workflow, issues are tied to branches and merge requests.
+The CCAO Data Science team uses [GitLab Flow](https://docs.gitlab.com/ee/topics/gitlab_flow.html) to structure its workflow. GitLab Flow uses a basic branch-per-issue system. Each issue or new feature is tied to a branch and merge request. Work is done on the branch, then merged to `master` after testing and review. Here's an example of a typical workflow:
 
-For example: 
-
-Issue #118, Branch 118-update-internal-contribution-guidelines, with a merge request.
-
-1. After being assigned an issue,
-* Check to see if there is a branch associated with your issue.
-   * If there is not, please ask your supervisor to create one. Please **do not** create a branch yourself.
-In Sourcetree,
-   * Click Repository --> Checkout --> select the branch associated with the issue you have been assigned.
-   * This branch should now appear bolded under BRANCHES on the left side of Sourcetree. You are now tracking that branch.
+1. You are assigned **Issue #118, Update Internal Contribution Guidelines** within GitLab.
+   * Check to see if there is a branch associated with your issue within GitLab. Branches created via issues usually have a similar name, in this case the branch name would be **118-update-internal-contribution-guidelines**.
+   * If a branch doesn't exist, please ask your supervisor to create one. Please *do not* create a branch yourself.
+   
+2. Checkout the issue branch. 
+   * Within Sourcetree, click **Repository --> Checkout**, then select the branch associated with the issue you have been assigned. In this case, **118-update-internal-contribution-guidelines**. You can also double-click different branch names to check them out.
+   * This branch should now appear bolded under **BRANCHES** on the left side of Sourcetree. You are now working within that branch.
    
 2. Work the issue. Please use the issue page comments to communicate with your supervisor about the issue.
 
-3. At the end of each work day, commit your work and push to your issue branch. Commmitting and pushing more often is fine.
+3. Commit , commit your work and push to your issue branch. Commmitting and pushing more often is fine.
 
 4. When you have finished working on the issue, let your supervisor know in the comments.
 
