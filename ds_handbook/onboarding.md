@@ -2,7 +2,7 @@
 title: Onboarding
 description: Get started with the Data Science department
 published: true
-date: 2020-05-04T19:39:49.122Z
+date: 2020-05-04T19:47:44.343Z
 tags: setup
 ---
 
@@ -13,15 +13,19 @@ tags: setup
 - [Bitbucket](https://bitbucket.org/)
 
 ## Progams to Install
-- [Sourcetree](https://www.sourcetreeapp.com/)
-- [R](https://cloud.r-project.org/) (Version 3.6.3 or greater)
-- [R Studio](https://rstudio.com/products/rstudio/download/#download)
-- [SQL Server Management Studio](https://aka.ms/ssmsfullsetup)
-- [SSMSBoost](https://www.ssmsboost.com/)
-- [PuTTY](https://www.putty.org/)
-- [Teams](https://products.office.com/en-us/microsoft-teams/download-app)
+| Program                                                                 | Purpose                                        |
+|-------------------------------------------------------------------------|------------------------------------------------|
+| [Sourcetree](https://www.sourcetreeapp.com/)                            | Frontend UI for git version control and GitLab |
+| [R](https://cloud.r-project.org/)                                       | Main CCAO programming language (use version 3.6.3 or greater     |
+| [R Studio](https://rstudio.com/products/rstudio/download/#download)     | Integrated development environment for R       |
+| [SQL Server Management Studio](https://aka.ms/ssmsfullsetup) (SMSS)     | SQL client that plays well with SQL Server     |
+| [SSMSBoost](https://www.ssmsboost.com/)                                 | Add-on to SMSS that adds handy features        |
+| [PuTTY](https://www.putty.org/)                                         | SSH client and key generator                   |
+| [Teams](https://products.office.com/en-us/microsoft-teams/download-app) | Main CCAO communications app                   |
 
-## Git Setup
+## Program Setup
+
+### Git and Sourcetree
 1. Set up your GitLab and Bitbucket accounts
 2. If you don't already have a pending invite to the [CCAO GitLab](https://gitlab.com/ccao-data-science---modeling) group, request one from `@sweatyhandshake`.
 3. Install programs
