@@ -2,7 +2,7 @@
 title: SQL Database Guide
 description: SQL Inventory/Dictionary
 published: true
-date: 2020-05-04T18:10:46.476Z
+date: 2020-05-04T18:14:29.255Z
 tags: 
 ---
 
@@ -82,6 +82,15 @@ A dataset of commercial PINs and the RPIE codes associated with them.
 ***DTBL_VALIDATED_IC_SALES***
 Industrial and commercial class sales identified by whether or not they're valid and by deed number.  Commercial analysts included comments while validating sales.
 
+## OTHER TABLES
+*These are tables that are generally sourced from the AS/400 but don't have T/TB/BR suffixes.*
+
+***65D***
+A table recording changes made to pipeline values during desk review.  Precedes "mailed" into CCAO assessment work flow.
+
+> This table will not be reliable for River Forest, Riverside, Oak Park, and Palos in 2020.
+{.is-danger}
+
 ## VIEWS
 *Views are combinations of tables that exist as queries rather than a physical flat file.  They must be assembled each time they're referenced.*
 
@@ -102,12 +111,3 @@ Spatial data as well as addresses and political districts for each PIN in the cu
 
 ***VW_RES_UNIVERSE***
 A collection of all residential PINs available in the HEADT file from 1997 to present.  Physical characteristics are added for SF and MF PINs, condo strata, percent assessed, and the number of units in condo buildings for NCHAR PINs.
-
-## OTHER TABLES
-*These are tables that are generally sourced from the AS/400 but don't have T/TB/BR suffixes.*
-
-***65D***
-A table recording changes made to pipeline values during desk review.  Precedes "mailed" into CCAO assessment work flow.
-
-> This table will not be reliable for River Forest, Riverside, Oak Park, and Palos in 2020.
-{.is-danger}
