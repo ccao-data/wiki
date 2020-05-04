@@ -2,14 +2,13 @@
 title: Data Science Departmental Handbook
 description: Everything you need to know about the mission and work of the CCAO Data Science department
 published: true
-date: 2020-05-04T21:50:37.865Z
+date: 2020-05-04T21:51:08.905Z
 tags: handbook
 ---
 
 # Data Science Department
 
-This document outlines the purpose, procedures, and best practices of
-the Data Science Department at the Cook County Assessor's Office.
+This document outlines the purpose, procedures, and best practices of the Data Science Department at the Cook County Assessor's Office.
 
 ## Mission
 
