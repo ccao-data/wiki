@@ -2,7 +2,7 @@
 title: Onboarding
 description: Get started with the Data Science department
 published: true
-date: 2020-05-04T19:47:44.343Z
+date: 2020-05-04T19:51:18.972Z
 tags: setup
 ---
 
@@ -13,17 +13,16 @@ tags: setup
 - [Bitbucket](https://bitbucket.org/)
 
 ## Progams to Install
-| Program                                                                 | Purpose                                        |
-|-------------------------------------------------------------------------|------------------------------------------------|
-| [Sourcetree](https://www.sourcetreeapp.com/)                            | Frontend UI for git version control and GitLab |
-| [R](https://cloud.r-project.org/)                                       | Main CCAO programming language (use version 3.6.3 or greater     |
-| [R Studio](https://rstudio.com/products/rstudio/download/#download)     | Integrated development environment for R       |
-| [SQL Server Management Studio](https://aka.ms/ssmsfullsetup) (SMSS)     | SQL client that plays well with SQL Server     |
-| [SSMSBoost](https://www.ssmsboost.com/)                                 | Add-on to SMSS that adds handy features        |
-| [PuTTY](https://www.putty.org/)                                         | SSH client and key generator                   |
-| [Teams](https://products.office.com/en-us/microsoft-teams/download-app) | Main CCAO communications app                   |
 
-## Program Setup
+* [Sourcetree](https://www.sourcetreeapp.com/) - Frontend UI for git version control and GitLab
+* [R](https://cloud.r-project.org/) - Main CCAO programming language (use version 3.6.3 or greater
+* [R Studio](https://rstudio.com/products/rstudio/download/#download) - Integrated development environment for R
+* [SQL Server Management Studio](https://aka.ms/ssmsfullsetup) (SMSS) - SQL client that plays well with SQL Server
+* [SSMSBoost](https://www.ssmsboost.com/) - Add-on to SMSS that adds handy features
+* [PuTTY](https://www.putty.org/) - SSH client and key generator
+* [Teams](https://products.office.com/en-us/microsoft-teams/download-app) - Main CCAO communications app
+
+## Setup
 
 ### Git and Sourcetree
 1. Set up your GitLab and Bitbucket accounts
@@ -56,7 +55,7 @@ tags: setup
    * Clone the repositories to `"My Documents"`, or file paths will need to be rewritten in several scripts
 
 ### R
-* if at any point R cannont contact CRAN mirrors to download packages, run `options(download.file.method="libcurl")`
+* If at any point R cannot contact CRAN mirrors to download packages, run `options(download.file.method="libcurl")`
 * if at any point R returns the errors `LAPACK routines cannot be loaded` or `maximal number of DLLs reached`, run `file.edit('~/.Renviron')`, enter `R_MAX_NUM_DLLS=1000` in the viewer, save, and reboot RStudio
 
 ### SQL
