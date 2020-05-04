@@ -1,8 +1,8 @@
 ---
 title: Desk Review Standard Operating Procedures
-description: 
+description: Standard Operating Procedures and polices for CCAO internal desk review
 published: true
-date: 2020-05-04T20:51:19.023Z
+date: 2020-05-04T20:53:05.368Z
 tags: 
 ---
 
