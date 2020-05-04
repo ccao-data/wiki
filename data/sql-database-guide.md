@@ -2,7 +2,7 @@
 title: SQL Database Guide
 description: SQL Inventory/Dictionary
 published: true
-date: 2020-05-04T18:01:18.927Z
+date: 2020-05-04T18:10:46.476Z
 tags: 
 ---
 
@@ -44,7 +44,7 @@ Historical IDOR Cook County equalization factors.
 Table containing township and triad names and codes.
 
 ## DTBL_ TABLES
-*Data Tables contain data collected, stored, or calculated from sources other than the AS400.*
+*Data Tables contain data collected, stored, or calculated from sources other than the AS/400.*
 
 ***DTBL_CCRDSALES***
 Sales data received monthly from the Cook County Recorder of Deeds.
@@ -104,10 +104,10 @@ Spatial data as well as addresses and political districts for each PIN in the cu
 A collection of all residential PINs available in the HEADT file from 1997 to present.  Physical characteristics are added for SF and MF PINs, condo strata, percent assessed, and the number of units in condo buildings for NCHAR PINs.
 
 ## OTHER TABLES
-*These are tables that are generally sourced from the AS/400 but don't have T/TB/BT suffixes.*
+*These are tables that are generally sourced from the AS/400 but don't have T/TB/BR suffixes.*
 
 ***65D***
 A table recording changes made to pipeline values during desk review.  Precedes "mailed" into CCAO assessment work flow.
 
-> This table will not be reliable for towns in TAX_YEAR 2020.
+> This table will not be reliable for River Forest, Riverside, Oak Park, and Palos in 2020.
 {.is-danger}
