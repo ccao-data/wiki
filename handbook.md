@@ -2,7 +2,7 @@
 title: Data Science Departmental Handbook
 description: Everything you need to know about the mission and work of the CCAO Data Science department
 published: true
-date: 2020-05-04T21:29:55.259Z
+date: 2020-05-04T21:50:37.865Z
 tags: handbook
 ---
 
@@ -17,12 +17,12 @@ The rationale for having a separate department in the CCAO that specifically dea
 
 The mission of the Data Science Department is to build, maintain, organize, and utilize data to create value for taxpayers and facilitate production of annual property assessments. This is separate from the role of the IT department, which is to build and maintain technological enterprise assets. Specifically, the Data Science Department's Mission is to facilitate production of annual property assessments in Cook County by:
 
--   Leveraging computing and statistical techniques to estimate property's fair market values;
--   Leveraging existing data bases to generate insights into valuation processes;
--   Supporting other CCAO departments in generating machine-readable data and analyzing it;
--   Maintaining and improving relationships between data sets to increase their value;
--   Identifying opportunities to generate new valuable data;
--   Improving intra-office data and statistical literacy.
+ * Leveraging computing and statistical techniques to estimate property's fair market values;
+ * Leveraging existing data bases to generate insights into valuation processes;
+ * Supporting other CCAO departments in generating machine-readable data and analyzing it;
+ * Maintaining and improving relationships between data sets to increase their value;
+ * Identifying opportunities to generate new valuable data;
+ * Improving intra-office data and statistical literacy.
 
 ## Vision
 
@@ -112,18 +112,32 @@ There is a standing departmental meeting from 9:00 - 10:00 which select senior s
 
 # Version Control and Workflow
 
+## Repositories
+
 The Data Science Department uses [GitLab](https://gitlab.com/ccao-data-science---modeling) as a workflow and version control tool. The Department's work is oriented around GitLab code repositories, with each repository representing an area of responsibility for the department or a specific service/application that it runs.
 
-## Public Repositories
+### Structure 
 
-## Non-public Repositories
+Repositories are structured following the best practices laid out in [GitLab Flow](https://docs.gitlab.com/ee/topics/gitlab_flow.html). Each repository has a `master` branch that represents the production version of that code. This `master` branch is *never* committed to directly. Rather, it is updated by merging a separate intermediate branch. This intermediate branch, usually called `staging`, is the long-lived default branch of each repository. Issues are created off of and merged into `staging`, and only once the updated code is tested are those changes then merged into `master`. 
 
-These repositories are available to the public through FOIA. Only the
-main branch of each repository is available through FOIA - all other
-branches are drafts and deliberative materials and are not subject to
-FOIA.
+This repository structure has a few advantages:
 
-## Income Producing
+ * GitLab's continuous integration and delivery features work well with this workflow
+ * Having a separate staging branch is easy to understand vs other models like Git Flow or GitHub Flow
+ * Breaking changes that might make it into the staging environment are not sent to the production application, meaning users rarely see them
+
+> NOTE: Not all CCAO repositories are set up this way, but most future ones will be. If you need to work on a repository without a `staging` branch, simply use `master` as the default branch rather than `staging` (make issue branches off of and merge requests into `master`).
+{.is-note}
+
+### Public Repositories
+
+These repositories are fully visible to the public. 
+
+### Private Repositories
+
+These repositories are available to the public through FOIA. Only the main branch of each repository is available through FOIA - all other branches are drafts and deliberative materials and are not subject to FOIA.
+
+### Income Producing
 
 Code base for the computer assisted mass appraisal programs supporting
 industrial/commercial valuation. \#\# Policy Policy documents, draft
@@ -134,8 +148,7 @@ produced in response to FOIA requests. \#\# Reporting A repository to
 contain scripts relating to diagnostic and external reports. \#\#
 Training A repository to contain materials related to training.
 
-Issues
---------------------
+## Issues
 
 An
 \\href{<a href="https://docs.gitlab.com/ee/user/project/issues/%7BIssue" class="uri">https://docs.gitlab.com/ee/user/project/issues/{Issue</a>
