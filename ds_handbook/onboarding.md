@@ -2,63 +2,54 @@
 title: Onboarding
 description: Get started with the Data Science department
 published: true
-date: 2020-04-17T16:38:48.866Z
+date: 2020-05-04T19:39:49.122Z
 tags: setup
 ---
 
-# Contributors external to CCAO
 
-We are happy to announce a new Developer Engagement Program at the Cook County Assessor's Office. In this program, developers, coders, data scientists, and others can partner with our office. In this partnership, the CCAO provides data and knowledge, and outside contributors build solutions that advance the mission of the agency.
 
-Please review the documents in [collaborator.documents](https://gitlab.com/ccao-data-science---modeling/ccao_sf_cama_dev/tree/master/collaborator.documents) for additional information.
+## Accounts to Create
+- [GitLab](https://gitlab.com/)
+- [Bitbucket](https://bitbucket.org/)
 
-# Contributors internal to CCAO
-
-## Accounts to create
-- [gitlab](https://gitlab.com/)
-- [bitbucket](https://bitbucket.org/)
-
-## Progams to install
+## Progams to Install
 - [Sourcetree](https://www.sourcetreeapp.com/)
-- [R](https://cloud.r-project.org/)
-- [R Studio](https://download1.rstudio.org/RStudio-1.1.463.exe)
-- [Java](https://www.java.com/en/download/manual.jsp) (Use Chrome to ensure you download a 64-bit version)
-- [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017)
+- [R](https://cloud.r-project.org/) (Version 3.6.3 or greater)
+- [R Studio](https://rstudio.com/products/rstudio/download/#download)
+- [SQL Server Management Studio](https://aka.ms/ssmsfullsetup)
 - [SSMSBoost](https://www.ssmsboost.com/)
+- [PuTTY](https://www.putty.org/)
 - [Teams](https://products.office.com/en-us/microsoft-teams/download-app)
 
-### Git
-1. set up accounts
-2. If you don't already have a pending invite to the CCAO Group, ask @sweatyhandshake for one
-3. install programs
-   * link your bitbucket account to sourcetree during sourcetree installation
-   * when sourcetree asks you to install mercucial and git, select yes for both
-4. create a .ssh folder
+## Git Setup
+1. Set up your GitLab and Bitbucket accounts
+2. If you don't already have a pending invite to the [CCAO GitLab](https://gitlab.com/ccao-data-science---modeling) group, request one from `@sweatyhandshake`.
+3. Install programs
+   * Link your Bitbucket account to Sourcetree during Sourcetree installation
+   * When Sourcetree asks you to install mercurial and git, select **Yes** for both
+4. Create a .ssh folder in your home directory
    * One way to do this is to open the Start Menu and type `cmd` in the search box. Click on `cmd.exe` when it comes up in the search results. This will open up a Windows command prompt. Enter `mkdir .ssh` in the command prompt. This will create a folder called `.ssh` in your home directory.
-5. open sourcetree (if you'd like to generate an SSH key pair without sourcetree, see instructions [here](https://docs.gitlab.com/ee/ssh/#generating-a-new-ssh-key-pair))
-   * go to "tools"
-   * select "create or import SSH keys"
-   * select "generate"
-   * save the public and private keys in your .ssh folder (add a password to your private key if you desire)
-   * keep the sourcetree window with your newly generated ssh key up and copy it: **pasting this version of your ssh key into putty, gitlab, and bitbucket will help avoid errors**
-6. right click the putty icon in the system tray (bottom right portion of task bar)
-   * click "add key"
-   * locate your key in your .ssh folder and add it
-7. add your ssh keys to gitlab and bitbucket
-   * in gitlab, go to settings under your profile icon in the top-right corner
-     * on the left-hand side of the settings window, scroll down to `SSH Keys` and paste in your public key. title it whatever you like.
-   * in bitbucket go to settings under your profile icon in the bottom-left corner
-     * under `security` click `SSH Keys` then `Add Key`
-8. in sourcetree, select "clone"
-   * from gitlab, view the repository you'd like to clone
-   * on the left hand side select "projects" and "details"
-   * on the right-hand select the blue "clone" button and hit the chain button under "Clone with SSH"
-   * paste this into the top line of the "clone" page in sourcetree, and click out of the box
-   * if source tree encoutners an error, restart it and repaste the text into the "clone" field
-   * under "Advanced Options", select the `master` branch
-   * press the "clone" button at the bottom of the page
-   * clone the repositories to `"My Documents"`, or file paths will need to be rewritten in several scripts
-   * for work in any repository it is likely you will need to clone the `UTILITY` repository as well
+5. Generate SSH keys with Sourcetree (if you'd like to generate an SSH key pair without sourcetree, see instructions [here](https://docs.gitlab.com/ee/ssh/#generating-a-new-ssh-key-pair))
+   * Open Sourcetree and go to **Tools**
+   * Select **Create or import SSH keys**
+   * Select **Generate**
+   * Save the public and private keys to your `.ssh` folder (add a password to your private key if you desire)
+   * Copy your newly generated SSH keys from the Sourcetree window. **Pasting this version of your ssh key into PuTTY and GitLab will help avoid errors.**
+6. Right click the PuTTY icon in the system tray (bottom right portion of task bar)
+   * Click **Add key**
+   * Locate the private key in your `.ssh` folder (no .pub ending) and add it to PuTTY
+7. Add your SSH keys to GitLab
+   * In GitLab, go to **Settings** under your profile icon in the top-right corner
+   * On the left-hand side of the settings window, click **SSH Keys**, then paste your public key into the box (the title and expiration date are arbitrary and can be whatever you'd like)
+8. Clone your desired CCAO project
+   * In Sourcetree, select **Clone**
+   * Within GitLab, find the repository you'd like to clone
+   * From the main page of the project, select the blue **Clone** button on the top right-hand side of the page. Click the **Clone with SSH** button to copy the SSH URI to your clipboard.
+   * Paste this into the top line of the **Clone** page in Sourcetree, and click out of the box
+   * If Sourcetree encounters an error, restart it and repaste the text into the **Clone** field
+   * Under **Advanced Options**, select the `master` branch
+   * Press the *Clone* button at the bottom of the page
+   * Clone the repositories to `"My Documents"`, or file paths will need to be rewritten in several scripts
 
 ### R
 * if at any point R cannont contact CRAN mirrors to download packages, run `options(download.file.method="libcurl")`
