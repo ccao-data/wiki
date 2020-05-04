@@ -2,14 +2,14 @@
 title: Home
 description: 
 published: true
-date: 2020-05-04T20:45:58.420Z
+date: 2020-05-04T20:46:56.239Z
 tags: 
 ---
 
 # The Data Science Department
 
 - [Onboarding *Get started with the Data Science department*](/handbook/onboarding)
-- [Departmental Handbook *Data Science Departmental Handbook Draft*](/handbook/ds-dept-handbook)
+- [Departmental Handbook *Data Science Departmental Handbook Draft*](/handbook)
 {.links-list}
 
 # Standard Operating Procedures
