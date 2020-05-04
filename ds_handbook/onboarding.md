@@ -2,7 +2,7 @@
 title: Onboarding
 description: Get started with the Data Science department
 published: true
-date: 2020-05-04T20:41:03.800Z
+date: 2020-05-04T20:43:48.312Z
 tags: setup
 ---
 
