@@ -2,7 +2,7 @@
 title: Data Science Departmental Handbook
 description: Everything you need to know about the mission and work of the CCAO Data Science department
 published: true
-date: 2020-05-04T21:16:16.194Z
+date: 2020-05-04T21:29:55.259Z
 tags: handbook
 ---
 
@@ -54,135 +54,76 @@ In the case of the Data Science Department, these work products are software, al
 
 ### Agile Principles
 
-In order to deliver accurate and timely work products, the Data Science
-Department follows the following agile principles:
+In order to deliver accurate and timely work products, the Data Science Department follows the following agile principles:
 
 #### Continuous Delivery
-The Data Science Department produces tools and analysis to support CCAO
-operations. In order to ensure that this is accomplished, development
-times should be shortened so that products are delivered to the end user
-more quickly. This is done by limiting the number and complexity of the
-feature in each version. By producing incrementally better versions with
-shorter build times, the Data Science Department can solicit user
-feedback more regularly, and more frequently. This increases the
-usability of the final product.
+
+The Data Science Department produces tools and analyses to support CCAO operations. In order to ensure that these are delivered, development times should be shortened so that products are delivered to the end user more quickly. This is done by limiting the number and complexity of the features in each version. By producing incrementally better versions with shorter build times, the Data Science Department can solicit user feedback more frequently, ultimately increasing the usability of the final product.
 
 #### Embrace Change
 
-The Data Science Department should be very flexible in terms of making
-changes to tools to suit the end-users needs. Changes to tools and
-scripts should be considered even at late stage of development.
+The Data Science Department should be very flexible in terms of making changes to tools to suit the end-users' needs. Changes to tools and scripts should be considered even at late stage of development.
 
-#### Developers work with Management
+#### Developers Work with Management
 
-Senior Data Scientists and developers are regularly involved in
-managerial discussions so that they have an intimate knowledge of
-institutional and end-user needs.
+Senior Data Scientists and developers are regularly involved in managerial discussions so that they have an intimate knowledge of institutional and end-user needs.
 
 #### Measuring Progress
 
-The primary metric by which the Data Science Department judges its work
-is by functional products. The continuous deployment of increasingly
-useful, functional tools is really what matters.
+The primary metric by which the Data Science Department judges its work is by functional products. The continuous deployment of increasingly useful, functional tools is really what matters.
 
-#### Self-organization and initiative
+#### Self-organization and Initiative
 
-The Deputy Assessor Chief Data Office should not micro-manage staff. The
-Senior Data Scientists should be given tasks to accomplish and left to
-determine for themselves how exactly to accomplish that task, within
-departmental guidelines. Developers and employees should feel free to
-raise problems quickly with the Deputy Assessor Chief Data Officer so
-that project goals may be adjusted, where necessary.
+The Deputy Assessor Chief Data Office should not micro-manage staff. The Senior Data Scientists should be given tasks to accomplish and left to determine for themselves how exactly to accomplish that task, within departmental guidelines. Developers and employees should feel free to raise problems quickly with the Deputy Assessor Chief Data Officer so that project goals may be adjusted, where necessary.
 
 #### Reflect and Adapt
 
-At regular intervals the staff of the Data Science Department should
-reflect on their work to date, and identify ways to become more
-efficient. Workflow processes should be treated in the same manner as
-work-product, constantly evolving to meet the demands of the enterprise.
-
-### Agile Practices
-
-In addition to these principles, the Data Science Department adheres to
-two regular practices:
-
-#### Daily Standup
-
-There is a standing departmental meeting from 8:45-9:00 a.m. which all
-departmental staff are required to attend. The purpose of this meeting
-is to discuss the day's tasks and raise issues that staff may have
-encountered in the previous day.
-
-#### Weekly Spring Planning 
-
-There is a standing departmental meeting from 9:00 - 10:00 which select
-senior staff is required to attend. The purpose of this meeting is to
-discuss the goals of the week, and review the progress of the past week.
-During this meeting, Issues (\\ref{Issues) are created, discussed,
-modified, and/or assigned, and priorities are reviewed. Milestone
-(\\ref{Milestones) burndown charts are reviewed. Members of other
-departments may attend to keep apprised of progress.
+At regular intervals the staff of the Data Science Department should reflect on their work to date, and identify ways to become more efficient. Workflow processes should be treated in the same manner as work-product, constantly evolving to meet the demands of the enterprise.
 
 #### Limiting Work-in-Progress 
 
-Staff should not be assigned more than a few issues to work
-simultaneously. Work should be executed in the order in which it is due.
-Work should be accomplished within the sprint in which it was assigned.
-The Deputy Assessor Chief Data Officer and the Senior Data Scientists
-should adjust their assignments and expectations based on milestone
-burndown charts and the open issue list.
+Staff should not be assigned more than a few issues to work simultaneously. Work should be executed in the order in which it is due. Work should be accomplished within the sprint in which it was assigned. The Deputy Assessor Chief Data Officer and the Senior Data Scientists should adjust their assignments and expectations based on milestone burndown charts and the open issue list.
 
-#### Limiting mid-sprint objective changes 
+#### Limiting Mid-sprint Objective Changes 
 
-Staff should not be re-assigned to different issue tickets mid-sprint.
-This is extremely detrimental to productivity, and wastes time.
+Staff should not be re-assigned to different issue tickets mid-sprint. This is extremely detrimental to productivity, and wastes time.
 
-Database Map
-------------
+#### Agile Practices
 
-Organizational Structure
-------------------------
+In addition to these principles, the Data Science Department adheres to two regular practices:
 
-Training and Continuous Development
------------------------------------
+**Daily Standup**
+There is a standing departmental meeting from 8:45-9:00 a.m. which all departmental staff are required to attend. The purpose of this meeting is to discuss the day's tasks and raise issues that staff may have encountered in the previous day.
 
-# Work-Terminal Setup
+**Weekly Sprint Planning** 
+There is a standing departmental meeting from 9:00 - 10:00 which select senior staff is required to attend. The purpose of this meeting is to discuss the goals of the week, and review the progress of the past week. During this meeting, Issues are created, discussed, modified, and/or assigned, and priorities are reviewed. Milestone burndown charts are reviewed. Members of other departments may attend to keep apprised of progress.
 
 
-Version Control and Workflow
-============================
+## Database Map
 
-The Data Science Department uses
-\\href{<a href="https://gitlab.com/ccao-data-science---modeling%7BGitLab" class="uri">https://gitlab.com/ccao-data-science---modeling{GitLab</a>
-as a workflow and version control process. The Department's work is
-oriented around GitLab code repositories, with each repository
-representing an area of responsibility for the department.
+## Organizational Structure
 
-Public Repositories
--------------------
+## Training and Continuous Development
 
-These repositories are available to the public in their entirety, for
-free, via the internet.
+# Work Terminal Setup
 
-Residential Code base for the computer assisted mass appraisal programs supporting residential valuation.
----------------------------------------------------------------------------------------------------------
+> [See Onboarding](/handbook/onboarding)
+{.is-warning}
 
-Utility A collection of commonly used functions across multiple repositories.
------------------------------------------------------------------------------
+# Version Control and Workflow
 
-Data Architecture A collection of commonly used functions across multiple repositories.
----------------------------------------------------------------------------------------
+The Data Science Department uses [GitLab](https://gitlab.com/ccao-data-science---modeling) as a workflow and version control tool. The Department's work is oriented around GitLab code repositories, with each repository representing an area of responsibility for the department or a specific service/application that it runs.
 
-Non-public Repositories
------------------------
+## Public Repositories
+
+## Non-public Repositories
 
 These repositories are available to the public through FOIA. Only the
 main branch of each repository is available through FOIA - all other
 branches are drafts and deliberative materials and are not subject to
 FOIA.
 
-Income Producing
-----------------
+## Income Producing
 
 Code base for the computer assisted mass appraisal programs supporting
 industrial/commercial valuation. \#\# Policy Policy documents, draft
@@ -226,10 +167,10 @@ Working Issues
 
 When working an issue, departmental staff should follow these steps:
 
-    *  Make sure the issue has a due date, time estimate, label, and associated merge request. If any of these are missing, notify the issue creator.
-    *  Make sure you are tracking the branch associated with this issue in Sourcetree.
-    *  Work the issue. Follow the coding standards (\ref{Coding Standards). Use the comment section of the issue to discuss the work. This creates a record that can be referenced in the future.
-    *  Upon completion of the work, resolve the WIP status of the merge request and notify your supervisor that you have completed the work.
+  *  Make sure the issue has a due date, time estimate, label, and associated merge request. If any of these are missing, notify the issue creator.
+  *  Make sure you are tracking the branch associated with this issue in Sourcetree.
+  *  Work the issue. Follow the coding standards (\ref{Coding Standards). Use the comment section of the issue to discuss the work. This creates a record that can be referenced in the future.
+  *  Upon completion of the work, resolve the WIP status of the merge request and notify your supervisor that you have completed the work.
 
 ### Merge request approvals
 
