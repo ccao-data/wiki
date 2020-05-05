@@ -2,7 +2,7 @@
 title: Data Science Departmental Handbook
 description: Everything you need to know about the mission and work of the CCAO Data Science Department
 published: true
-date: 2020-05-05T00:44:48.098Z
+date: 2020-05-05T01:14:39.172Z
 tags: handbook
 ---
 
@@ -210,6 +210,20 @@ These packages make it easy to conform to the Tidyverse style guide. Simply run 
 
 > The Data Science Department does not strictly enforce Tidyverse style for most repositories. However, certain very important repositories (R packages) will automatically reject merges that doesn't conform to Tidyverse style. 
 {.is-warning}
+
+## Commit Style
+
+People who frequently use git follow a [de-facto set of rules](https://commit.style/) for writing good commit messages. A detailed breakdown of those rules can be found [here](https://chris.beams.io/posts/git-commit/), but they can largely be condensed to:
+
+  1.  Separate subject from body with a blank line
+  2.  Limit the subject line to 50 characters
+  3.  Capitalize the subject line
+  4.  Do not end the subject line with a period
+  5.  Use the imperative mood in the subject line (Use "Fix bug" instead of "Fixed bug")
+  6.  Wrap the body at 72 characters
+  7.  Use the body to explain what and why vs. how
+  
+Following these rules makes reading commit logs much easier, which is extremely helpful when working on projects with multiple people or even just when looking back at your own commit history. 
 
 ### Program Headers
 
