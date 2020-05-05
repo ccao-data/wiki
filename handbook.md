@@ -2,7 +2,7 @@
 title: Data Science Departmental Handbook
 description: Everything you need to know about the mission and work of the CCAO Data Science Department
 published: true
-date: 2020-05-05T16:33:38.806Z
+date: 2020-05-05T16:41:35.197Z
 tags: handbook
 ---
 
@@ -122,8 +122,6 @@ graph TD
   SENDS2 --- FELLOW([Data Fellow])
   FELLOW --- CAPSTONE([Capstone Students x 2])
 
-  classDef org fill:#f96;
-  class TOP,DS,DA org;
 ```
 
 
