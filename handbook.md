@@ -2,7 +2,7 @@
 title: Data Science Departmental Handbook
 description: Everything you need to know about the mission and work of the CCAO Data Science department
 published: true
-date: 2020-05-04T23:32:36.794Z
+date: 2020-05-05T00:01:05.339Z
 tags: handbook
 ---
 
@@ -125,7 +125,7 @@ This repository structure has a few advantages:
   *  Having a separate staging branch is easy to understand vs other models like Git Flow or GitHub Flow
   *  Breaking changes that might make it into the staging environment are not sent to the production application, meaning users rarely see them
 
-> NOTE: Not all CCAO repositories are set up this way, but most future ones will be. If you need to work on a repository without a `staging` branch, simply use `master` as the default branch rather than `staging` (make issue branches off of and merge requests into `master`).
+> Not all CCAO repositories are set up this way, but most future ones will be. If you need to work on a repository without a `staging` branch, simply use `master` as the default branch rather than `staging` (make issue branches off of and merge requests into `master`).
 {.is-note}
 
 ### Public Repositories
@@ -197,9 +197,19 @@ This comment provides context, it tells you **why** this code was written.
 
 Of course, there are still cases where the function of especially complicated pieces of code is not immediately obvious. In this case, comments should both explain what the code is doing and explain why it's doing that thing.
 
-### Code Style
+## Code Style
 
-Code style is important. It makes your code more readable and ensures that other people working on the same project use the same syntax. The CCAO Data Science Department mostly follows the [Tidyverse Style Guide](https://style.tidyverse.org/). This is the most widely accepted standard format for R, whi
+Code style is important. It makes your code more readable and ensures that other people working on the same project use the same syntax. The CCAO Data Science Department mostly follows the [Tidyverse Style Guide](https://style.tidyverse.org/). This is the most widely accepted style for R, but it is also quite lengthy an difficult to remember.
+
+Fortunately, two packages exist that support the Tidyverse style guide:
+
+  *  [styler](https://cran.r-project.org/web/packages/styler/vignettes/introducing_styler.html) allows you to automagically restyle text, files, or entire projects. It includes an RStudio add-in, the easiest way to re-style existing code.
+  *  [lintr](https://github.com/jimhester/lintr) automatically checks your code for style errors.
+
+These packages make it easy to conform to the Tidyverse style guide. Simply run `styler` and then `lintr` on your entire project before each commit. This will automatically restyle your code and then tell you if there are any remaining issues.
+
+> The Data Science Department does not strictly enforce style guide on most repositories. However, certain very important repositories (R packages) will automatically reject merges that doesn't conform to Tidyverse style. 
+{.is-warning}
 
 ### Program Headers
 
