@@ -2,21 +2,21 @@
 title: Home
 description: 
 published: true
-date: 2020-05-04T20:46:56.239Z
+date: 2020-05-05T00:44:27.890Z
 tags: 
 ---
 
 # The Data Science Department
 
-- [Onboarding *Get started with the Data Science department*](/handbook/onboarding)
-- [Departmental Handbook *Data Science Departmental Handbook Draft*](/handbook)
+- [Onboarding *Get started with the Data Science Department*](/handbook/onboarding)
+- [Departmental Handbook *Mission statements, best practices, and rules, oh my!*](/handbook)
 {.links-list}
 
 # Standard Operating Procedures
 
 - [Sales Ratio Studies *Learn how the CCAO measures the performance of its models*](/sops/sales_ratio_studies)
 - [Residential Exemptions *Policies and processes related to residential exemptions*](/sops/residential_exemptions)
-- [Desk Review *The process of post-modeling desktop review*](/sops/desk_review)
+- [Desk Review *Learn how the CCAO catches errors in assessed values*](/sops/desk_review)
 {.links-list}
 
 # Technical Documentation
