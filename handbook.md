@@ -1,8 +1,8 @@
 ---
 title: Data Science Departmental Handbook
-description: Everything you need to know about the mission and work of the CCAO Data Science department
+description: Everything you need to know about the mission and work of the CCAO Data Science Department
 published: true
-date: 2020-05-05T00:38:54.055Z
+date: 2020-05-05T00:44:48.098Z
 tags: handbook
 ---
 
