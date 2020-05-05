@@ -2,7 +2,7 @@
 title: Data Science Departmental Handbook
 description: Everything you need to know about the mission and work of the CCAO Data Science Department
 published: true
-date: 2020-05-05T01:14:39.172Z
+date: 2020-05-05T16:25:13.384Z
 tags: handbook
 ---
 
@@ -101,6 +101,29 @@ There is a standing departmental meeting from 9:00 - 10:00 which select senior s
 ## Database Map
 
 ## Organizational Structure
+
+```mermaid
+graph TD
+  TOP[Data and Modeling Department] --- CDO([Deputy Assessor<br>Chief Data Officer])
+	CDO --- DS[Data Science]
+	CDO --- DA[Data Analytics]
+
+  DA --- DIRDAA([Director of<br>Data Analytics])
+
+  DS --- SENDS1([Senior Data Scientist 1])
+  SENDS1 --- RMODSR1([Res. Model Sr. Analyst])
+  RMODSR1 --- RMODJR1([Res. Model Jr. Analyst])
+  SENDS1 --- INTERNS([Interns x 4])
+
+  DS --- SENDS2([Senior Data Scientist 2])
+  SENDS2 --- RMODSR2([Res. Model Sr. Analyst])
+  RMODSR2 --- RMODJR2([Res. Model Jr. Analyst])
+  SENDS2 --- FELLOW([Data Fellow])
+  FELLOW --- CAPSTONE([Capstone Students x 2])
+
+  classDef org fill:#f96;
+  class TOP,DS,DA org;
+```
 
 ## Training and Continuous Development
 
