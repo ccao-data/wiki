@@ -1,4 +1,4 @@
-<img src="new/asrlogo.png" alt="" align="right" width="300">
+<img src="new/asrlogo.png" alt="" align="right" width="500">
 
 ## [CCAO Organizational Chart: Exemption Focus](new/org_edit_p.pdf)
 ### Overview
