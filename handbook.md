@@ -2,7 +2,7 @@
 title: Data Science Departmental Handbook
 description: Everything you need to know about the mission and work of the CCAO Data Science department
 published: true
-date: 2020-05-05T00:01:05.339Z
+date: 2020-05-05T00:38:54.055Z
 tags: handbook
 ---
 
@@ -208,7 +208,7 @@ Fortunately, two packages exist that support the Tidyverse style guide:
 
 These packages make it easy to conform to the Tidyverse style guide. Simply run `styler` and then `lintr` on your entire project before each commit. This will automatically restyle your code and then tell you if there are any remaining issues.
 
-> The Data Science Department does not strictly enforce style guide on most repositories. However, certain very important repositories (R packages) will automatically reject merges that doesn't conform to Tidyverse style. 
+> The Data Science Department does not strictly enforce Tidyverse style for most repositories. However, certain very important repositories (R packages) will automatically reject merges that doesn't conform to Tidyverse style. 
 {.is-warning}
 
 ### Program Headers
