@@ -2,7 +2,7 @@
 title: Data Science Departmental Handbook
 description: Everything you need to know about the mission and work of the CCAO Data Science Department
 published: true
-date: 2020-05-05T16:25:55.531Z
+date: 2020-05-05T16:33:38.806Z
 tags: handbook
 ---
 
@@ -102,6 +102,7 @@ There is a standing departmental meeting from 9:00 - 10:00 which select senior s
 
 ## Organizational Structure
 
+
 ```mermaid
 graph TD
   TOP[Data and Modeling Department] --- CDO([Deputy Assessor<br>Chief Data Officer])
@@ -124,6 +125,7 @@ graph TD
   classDef org fill:#f96;
   class TOP,DS,DA org;
 ```
+
 
 ## Training and Continuous Development
 
