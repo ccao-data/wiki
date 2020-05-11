@@ -1,6 +1,9 @@
 # Onboarding
 
 # Bookmarks
+
+Take a moment to bookmark these commonly used CCAO links:
+
 **External**
 * [CCAO GitLab](https://gitlab.com/ccao-data-science---modeling) - Main source for all Data Science Department code
 * [IAAO Technical Standards](https://iaao.org/wcm/Resources/Technical_Standards/wcm/Resources_Content/Pubs/Technical_Standards.aspx) - Technical standards and measurements for the assessment field
@@ -13,6 +16,7 @@
 > :warning: The internal application locations above will have a security warning when you first visit them. This warning can safely be ignored. Click **Advanced --> Accept the risk** to bypass the warning.
 
 # Accounts to Create
+
 * [GitLab](https://gitlab.com/) - Needed to contribute to the CCAO codebase (use your @cookcountyassessor.com email to make an account)
 * [Bitbucket](https://bitbucket.org/) - Needed for Sourcetree install
 
@@ -29,6 +33,7 @@
 # Initial Setup
 
 ## Git, GitLab, and Sourcetree
+
 1. Set up your GitLab and Bitbucket accounts
 2. If you don't already have a pending invite to the [CCAO GitLab](https://gitlab.com/ccao-data-science---modeling) group, request one from `@sweatyhandshake`.
 3. Install programs
@@ -59,10 +64,12 @@
    * Clone the repositories to `"My Documents"`, or file paths will need to be rewritten in several scripts
 
 ## R
+
 * If at any point R cannot contact CRAN mirrors to download packages, run `options(download.file.method="libcurl")`
 * If at any point R returns the errors `LAPACK routines cannot be loaded` or `maximal number of DLLs reached`, run `file.edit('~/.Renviron')`, enter `R_MAX_NUM_DLLS=1000` in the viewer, save, and reboot RStudio
 
 ## SQL
+
 For use in R:
  * Contact `@sweatyhandshake` for read credentials and place them in the top level of your local utility repository once it's been cloned from GitLab
  * The `odbc.credentials` function provides an example of how to connect to the SQL server from within R
@@ -72,12 +79,15 @@ For use in SSMS:
  * Go to **Tools > Options > Environment > Startup** and select **Open empty environment**
 
 ## Teams
+
  After installation, ask `@sweatyhandshake` for an invite to the Data Science "Team" within the CCAO group
 
 ## VPN Client
+
  You should recieve and email during onboarding from Admins or NCC with instructions on how to set up and access the CCAO network through a VPN. For VPN troubleshooting, email the CCAO [Admins](mailto:admins@cookcountyassessor.com).
 
 # Issue Resolution
+
 The CCAO Data Science team uses [GitLab Flow](https://docs.gitlab.com/ee/topics/gitlab_flow.html) to structure its workflow. GitLab Flow uses a basic branch-per-issue system. Each issue or new feature is tied to a branch and merge request. Work is done on the branch, then merged to `master` after testing and review. Here's an example of a typical workflow:
 
 1. You are assigned **Issue #118, Update Internal Contribution Guidelines** within GitLab.
@@ -95,4 +105,5 @@ The CCAO Data Science team uses [GitLab Flow](https://docs.gitlab.com/ee/topics/
 4. When you have finished working on the issue, request approval for your merge request let your supervisor know you've finished working the issue.
 
 ---
+
 :fire:
