@@ -3,7 +3,7 @@
 # The Data Science Department
 
  * [:handshake: Onboarding](handbook/onboarding.md)
- * [:blue_book: Departmental Handbook](handbook/handbook.md)
+ * [:blue_book: Department Handbook](handbook/handbook.md)
 
 # Standard Operating Procedures
 
