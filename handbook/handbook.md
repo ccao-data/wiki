@@ -100,7 +100,7 @@ There is a standing departmental meeting from 9:00 - 10:00 which select senior s
 
 # Work Terminal Setup
 
-* [See Onboarding](handbook/onboarding.md)
+* [See Onboarding](onboarding.md)
 
 # Version Control and Workflow
 
