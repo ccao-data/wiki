@@ -2,7 +2,7 @@
 title: Home
 description: 
 published: true
-date: 2020-05-11T11:29:37.482Z
+date: 2020-05-11T11:32:05.229Z
 tags: 
 ---
 
@@ -15,7 +15,6 @@ tags:
 # Standard Operating Procedures
 
 - [Sales Ratio Studies *Learn how the CCAO measures the performance of its models*](/sops/sales-ratio-studies)
-- [Residential Exemptions *Policies and processes related to residential exemptions*](/sops/residential-exemptions)
 - [Desk Review *Learn how the CCAO catches errors in assessed values*](/sops/desk-review)
 {.links-list}
 
