@@ -2,7 +2,7 @@
 title: Home
 description: 
 published: true
-date: 2020-05-11T11:26:59.999Z
+date: 2020-05-11T11:29:37.482Z
 tags: 
 ---
 
@@ -19,9 +19,15 @@ tags:
 - [Desk Review *Learn how the CCAO catches errors in assessed values*](/sops/desk-review)
 {.links-list}
 
+# Residential
+
+- [Residential Modeling *Processes and Procedures*](/residential)
+{.links-list}
+
 # Technical Documentation
 
 - [Data Dictionaries *Field definitions and storage locations*](/data/sql-database-guide)
-- [Residential Modeling *Processes and Procedures*](/residential)
 {.links-list}
+
+
 
