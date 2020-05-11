@@ -1,4 +1,4 @@
-<img src="new/asrlogo.png" alt="" align="right" width="500">
+<img src="new/asrlogo.png" alt="" align="top" width="500">
 
 ## [CCAO Organizational Chart: Exemption Focus](new/org_edit_p.pdf)
 ### Overview
@@ -18,7 +18,7 @@ No File|62,117||
 </details>
 
 <details><summary>__Property Tax Exemptions 101__</summary>
-####The Assessor’s Office processes seven types of property tax exemptions.
+#### The Assessor’s Office processes seven types of property tax exemptions.
 
 1.	Senior (a.k.a. “homestead”) – processed in the mainframe (MF);
     * A Senior “Prime” Application refers to a first time applicant.
@@ -49,22 +49,22 @@ No File|62,117||
 2. Homeowner
 3. Homestead non-Coop
 4. Veteran
-5. Homestead Coop 
+5. Homestead Coop
 6. Disabled Person
 7. Disabled Veteran < 75%
 8. Disabled Veteran > 74%
-9. Returning Veteran 
+9. Returning Veteran
 </details><br>
 
-__Note__: Given limitations of the mainframe, exemption applications are grouped in batches. In practice, the initial entry of Senior and Senior Freeze Exemptions uses batch numbers `000001` to `000005`; one batch per branch including downtown.  
+__Note__: Given limitations of the mainframe, exemption applications are grouped in batches. In practice, the initial entry of Senior and Senior Freeze Exemptions uses batch numbers `000001` to `000005`; one batch per branch including downtown.
 
 Senior renewals are captured in the AS400 and thus batch in a simpler manner, in sets of 100 records, each group of 100 gets its own batch number (to make it easier to search and retrieve). The County requires the elimination of these limitations.
 
 While some exemptions are captured and processed in the AS400, all exemption information is subsequently uploaded to the mainframe. Assessor’s Office does not apply exemption amounts directly, but rather to the equalized assessed value (EAV) after this has been determined by the Illinois State Department of Revenue.
 
-###[Original Granular Process Map (.pdf)](new/mirella_pmap.pdf)
+### Original Granular Process Map (.pdf)](new/mirella_pmap.pdf)
 
-###<details><summary>Abstract System Map</summary> (S. Eifert 8/16/2016)![](new/systems_diag.png)</details>
+### details><summary>Abstract System Map</summary> (S. Eifert 8/16/2016)![](new/systems_diag.png)</details>
 
 </details><br>
 
@@ -83,7 +83,7 @@ Occupancy Affidavit: attestation by someone other than applicant.|Applicant now 
 Homeowner and Senior Exemptions were on the same form.|These exemptions are now on separate forms, as they have different eligibility and document requirements.
 Listed accepted ID documents: drivers license, state ID.|Lists are greatly expanded to match eligibility requirements for ID, occupancy, and taxpayer status.
 Must renew Senior Exemption every year.|Now the Senior Exemption is renewed automatically.
-Didn’t ask for last 4 of SSN.|Senior and Senior Freeze forms request (optional) the last 4 of SSN. 
+Didn’t ask for last 4 of SSN.|Senior and Senior Freeze forms request (optional) the last 4 of SSN.
 __Mailers:__ Two senior-related mailers: _purple_ "full" booklet for deed changes (Homeowner, Senior, Freeze) and the _blue_ “senior renewal” booklet that included the Senior and Freeze.|This “Senior” group was broken into 3 categories. _Blue_ mailer: modified to just renew the Freeze. _Gold_ mailer: new. Is the “full booklet” renewal mailed to prior recipients of the Senior who may be deceased. _Postcard:_ new. Confirms Homeowner and Senior auto-renewal so that no action is necessary.
 
 ### Resources for taxpayers
@@ -100,9 +100,9 @@ __Mailers:__ Two senior-related mailers: _purple_ "full" booklet for deed change
 ![](new/hi_lvl_flowchart.png)
 </details>
 
-### Schedule & Relationship Dependencies 
+### Schedule & Relationship Dependencies
 <details>
-<summary>__Gantt Chart__</summary> 
+<summary>__Gantt Chart__</summary>
 __The Chart below focuses on the period following application intake in which meeting deadlines is critical, due to the way each step is dependent upon completion of the prior steps. Many of the other tasks in the administration process can be and usually are completed in varied order.__
 ##### [Interactive Excel File](new/GANTT.xlsx)
 ![](new/GANTT.png)
@@ -118,8 +118,8 @@ Data Science | AS400
 Legacy Systems |
 
 ## Description
-####Generates list of taxpayers who are likely eligible for exemptions (“Master File”).
-####These will be informed of their eligibility, status and the next steps to take to receive their exemption.
+#### enerates list of taxpayers who are likely eligible for exemptions (“Master File”).
+#### hese will be informed of their eligibility, status and the next steps to take to receive their exemption.
 
 ## Details
 <details>
@@ -132,50 +132,50 @@ Legacy Systems |
     - HUPD is a program that interfaces directly with the Mainframe
     - TPI can use it to update the records directly
     - HUPD is technically a noun, but is often used as a verb as jargon for "use the HUPD to access the Mainframe"
-- 
-<details> 
+-
+<details>
   <summary>Associated files, programs & naming conventions</summary>
   -	  Conversion program: `TRIPT761`
   -	  Panvalet record description: `ASREASRDU3`
   -	  Run-A-job: `TRIPT63T`   -	  FTP file name example: `AS.REA.ASMTMSTR-MF-120817.TXT` </details>
-    -	  <details> 
+    -	  <details>
     <summary>Data dictionary & documentation</summary>
         - [as.rea.asmtmstr.csv](new/as.rea.asmtmstr.csv)
             - NB: each field is interspersed with a '|' delimiter, omitted here.
-            - [Original](orig/VSAM_layout.docx) (S. Pham 2017) 
+            - [Original](orig/VSAM_layout.docx) (S. Pham 2017)
         - The Assessor property master is a __VSAM__ file that has detail segment data for all Cook County properties: land data, improvement data and questionnaire data.
             - __V__irtual __S__torage __A__ccess __M__ethod, IBM data structure circa 1970.
         -	 The file name the mainframe uses is `AS.REA.ASMTMSTR`
-        -	 The converted output file will be a variable length file. 
-        -	 Bytes 1 – 273 will always be on each record as defined below. 
+        -	 The converted output file will be a variable length file.
+        -	 Bytes 1 – 273 will always be on each record as defined below.
         -	 File length is variable.
             -	After byte 273, the data format will vary depending on what variable segments the records will have.
-            -	 Minimum length is 273. 
-            -	 Maximum length is 273 + (118 * 200) = 23,873.  
+            -	 Minimum length is 273.
+            -	 Maximum length is 273 + (118 * 200) = 23,873.
             -	 118 is the variable segment data length for all segments
-            -	 200 is maximum number of segments.  
+            -	 200 is maximum number of segments.
         - Each record can three distinct types of segments all 118 bytes in length. They are:
-            - _Sales segment:_ 
-                - This segment can exist only once on each record. 
+            - _Sales segment:_
+                - This segment can exist only once on each record.
                 - You must inspect the value of ‘Sales segment counter’ in byte 264.
                 - If the value is ‘zero’ then the record will have no Sales	segment.
                 - If the value is ‘one’ the record will have a Sales segment.
                 - The Sales segment, if it exists, will always follow the fixed data of the record.
-                - It will always be in bytes 274 to 391 on the record. 
-            - _Detail segments:_ 
-                - These segments can occur up as many times as the value in the field called ‘Detail/Questionnaire segment counter’. 
+                - It will always be in bytes 274 to 391 on the record.
+            - _Detail segments:_
+                - These segments can occur up as many times as the value in the field called ‘Detail/Questionnaire segment counter’.
                 - There are five different types of Detail segments.
                     - Type 1 – Land
                     - Type 2 – Improvement
                     - Type 3 – Improvement
                     - Type 4 – Improvement
                     - Type 5 – Improvement
-                    - In order to determine what kind of Detail segment you are dealing with you must inspect the value in the field called ‘Type’, which will be in the fifth byte of every Detail segment. 
+                    - In order to determine what kind of Detail segment you are dealing with you must inspect the value in the field called ‘Type’, which will be in the fifth byte of every Detail segment.
                 - If no Sales segment exists, the Detail segment will followed the fixed data in bytes 274 to 391.
-                - If a Sale segment exists then the first detail segment will follow it in bytes 392 to 509. 
-            - _Questionnaire:_ 
-                - This segment will always follow directly behind a Detail segment if that Detail segment is either Type 2, 3, 4 or 5 and the Detail segment field called ‘Class’ has a value of 202-212, 234, 278, 295, 402-412, 434, 478 or 495.  
-                - The field ‘Class’ will be in bytes 13-15 in all of the Detail Type 2-5 segments. 
+                - If a Sale segment exists then the first detail segment will follow it in bytes 392 to 509.
+            - _Questionnaire:_
+                - This segment will always follow directly behind a Detail segment if that Detail segment is either Type 2, 3, 4 or 5 and the Detail segment field called ‘Class’ has a value of 202-212, 234, 278, 295, 402-412, 434, 478 or 495.
+                - The field ‘Class’ will be in bytes 13-15 in all of the Detail Type 2-5 segments.
                 - When dealing with the variable segments you will have bump through the record after the fixed portion by 118 bytes as many times as the counters in the fixed portion of the record tell you in order to process all the variable data.
 
 </details>
@@ -223,10 +223,10 @@ Bureau of Technology (BOT) | Mainframe
 Taxpayer Information (TPI) | AS400
 Legacy Systems |
 
-##Description
-####Use Master File to create list of addresses associated with potential exemption eligibility.
+## escription
+#### se Master File to create list of addresses associated with potential exemption eligibility.
 
-##Details
+## etails
 <details>
 <summary>__2.1.__ Build Sales File for mailings</summary>
 
@@ -281,7 +281,7 @@ Legacy Systems |
         - IF CURRENT TAX YEAR =TRI YEAR-1, THEN AGE=9
         - IF CURRENT TAX YEAR =TRI YEAR-2, THEN AGE =8
         - Library `DATAC`
-        
+
         | AS400 Query | Result | Output File |
         |-------------|--------|-------------|
         DTLAGE_CY|CITY PINS (CURRENT TRI YEAR, AGE=10)| DTLAGE/DATAC
@@ -303,7 +303,7 @@ LTOWN02|ELIMINATES DUPLICATES|LTOWN02
     * run `tslstbuil1/datac`<br>
     ![](p1.4/fig2.png)
     </details>
-    
+
     <details>
     <summary> Calculate LT4 & LT2 Exemptions: </summary>
     - New queries: Run `PRORAT3` and `PRORAT4` BEFORE FOLLOWING QUERIES<br>
@@ -341,7 +341,7 @@ LTOWN02|ELIMINATES DUPLICATES|LTOWN02
 	 ![](p1.4/f10.png)<br>
 	 ![](p1.4/f11.png)
 	 </details>
-	 
+
 	 <details>
 	 <summary> Calculate LT7 Exemptions</summary>
         - Files Needed:<br>
@@ -358,7 +358,7 @@ LTOWN02|ELIMINATES DUPLICATES|LTOWN02
         ![](p1.4/f18.png)
         ![](p1.4/f19.png)
     </details>
-    
+
 </details>
 
 
@@ -392,7 +392,7 @@ LTOWN02|ELIMINATES DUPLICATES|LTOWN02
 <summary>__2.4.__ Mainframe generates Mailing Files</summary>
 
 * Senior & Senior Freeze Exemption
-    * Systems/TPI requests BOT send `HSRENEW` and `HOMOWNMST` files 
+    * Systems/TPI requests BOT send `HSRENEW` and `HOMOWNMST` files
     * BOT transfers file from Mainframe to AS400
     * Systems generates the Senior Renewal and Senior Freeze mailing files on the AS400, filtering out persons that should not be on the list, in order to narrow it down to the accurate final mailing list
     * <details><summary>Process on AS400</summary>
@@ -416,9 +416,9 @@ LTOWN02|ELIMINATES DUPLICATES|LTOWN02
         * Following provides counts. Check with Lumni on mailing SENMAILCT3 ( C oFE)<br>
         ![](p2.4/a/image027.png)
         * <details><summary>AS400 Query Detailed Explanations (N. Bernacchi 01/15/2020)</summary>
-            
+
             [Query Dictionary (.csv)](p2.4/a/sr_mailing_queries_bernacchi.csv)
-            
+
             | AS400 Query | Result | Output File |
             |-------------|--------|-------------|
             |SENMAIL1CA/DATAC|SELECTS PINS WITH PRIOR YEAR SENIOR C OF E AND NOT ON PRIOR YEAR COOP FILE& ASSIGNS CODE "1C"|SENMAIL1CA/DATAC|
@@ -446,7 +446,7 @@ LTOWN02|ELIMINATES DUPLICATES|LTOWN02
 |SENMAILSA1/DATAC|SELECTS PINS FROM SENMAILJN5 NOT ON SALE2018GO/DATAC FILE|SENMAILSA1/DATAC|
 |SENMAILVD1/DATAC|SELECTS SENMAILDV1/DATAC AND CURRENT ASMASTER/MASTERS AND EXCLUDES ANY PIN ON NO-FILE|SENMAILVD1/DATAC|
         </details>
-        
+
 
 * Long-term Exemptions
     * Create data entry file (`TS70LT`/`TSPRD`)
@@ -497,7 +497,7 @@ LTOWN02|ELIMINATES DUPLICATES|LTOWN02
             * _No Exemption:_ If property owner lives in the home, and there is no recorded sale, but they have secondary property on file, then no exemption option is given to the second property.
             * _Yes Exemption:_ If property owner received the home owner exemption last year, and did not sell it, then exemption renews automatically.
             * _No Mailing:_ PIN is in the “No” file (PINs are for rental, common areas, parking spaces, or some other ineligible category).
-            * Systems runs further queries to define if the Assessor has heard from property owner in 3 years 
+            * Systems runs further queries to define if the Assessor has heard from property owner in 3 years
                 * These have incredibly low response rate and do not receive mailed notifications)
         * <details><summary>Apply Lucky 777’s to Homeowner Master file</summary>
             * What is this?<br>
@@ -535,18 +535,18 @@ LTOWN02|ELIMINATES DUPLICATES|LTOWN02
 #3.	Mail Exemption Notifications
 Departments Involved | Programs & <br> Technology Employed
 :-------------------:|:---------------------------:
-Taxpayer Information (TPI) | 
+Taxpayer Information (TPI) |
 ADLAXX (Vendor) |
 Communications |
 
-##Description
-####Taxpayers are mailed information about the exemptions for which they may qualify. 
-####The information sent is dependent on the data TPI has about each taxpayer.
-##Details
+## escription
+#### axpayers are mailed information about the exemptions for which they may qualify.
+#### he information sent is dependent on the data TPI has about each taxpayer.
+## etails
 <details>
 <summary>__3.1.__ Communications department sends mailer designs to vendor</summary>
 
-* [Senior Freeze ("Blue Booklet")](orig/SF_ap.pdf) 
+* [Senior Freeze ("Blue Booklet")](orig/SF_ap.pdf)
 * [Full Application ("Purple Packet")](orig/full_ap.pdf)
 * [Senior Prime ("Gold Packet")](orig/gold.pdf)
 * [Automatic Renewal Postcard](orig/postcard.pdf)
@@ -578,7 +578,7 @@ Communications |
 
 <details>
 <summary>__3.4.__ Determination of mailer is different in 2020 due to automatic renewal of Senior Exemption.</summary>
-    
+
 * <details><summary>Decision Tree Effective 2020 (tax year 2019)</summary> ![](orig/desTree2020.png)</details>
 * <details><summary>Deprecated Decision Tree (2019/tax year 2018 and earlier)</summary> ![](orig/desTree2019.png)</details>
 </details>
@@ -591,10 +591,10 @@ Taxpayer Information (TPI) | Mainframe
 ADLAXX (Vendor) | AS400
 Legal: Freedom of Information (FOIA) | Microsoft Excel
 
-##Description
-####Applications for exemptions are received from several channels.
+## escription
+#### pplications for exemptions are received from several channels.
 
-##Details
+## etails
 <details>
 <summary>__4.1.__ Most applicactions are submitted as hard copies. </summary>
 
@@ -648,7 +648,7 @@ Legal: Freedom of Information (FOIA) | Microsoft Excel
     * GO `TSPRD/HOMEFZ`
     * OPTION 3: CALL `TSPRD/TS40001CL` - HOMEWOWNER YES
     * OPTION 28: CALL `TSPRD/TS4005CL` - BASE YEAR ADJUSTMENT
-* Contact Tanya (Clerk) for the Abatement pins spreadsheet. 
+* Contact Tanya (Clerk) for the Abatement pins spreadsheet.
     * SNDNETF:  `ABATE_MIS/SYSOPS/ABATEYYYY`
     * `ASSRREA/COOKCNTYB/F...` MIS submits job
     * [Process](orig/process/6_AB.html)
@@ -656,17 +656,17 @@ Legal: Freedom of Information (FOIA) | Microsoft Excel
 * Veterans file - Legal Dept - Khang [Process](orig/process/7_BAVET.html)
 * Duplicate pins in Division FROM/To file
     * Query = `chkfromto1` & `2` - `DVVOIDPIN/DVPRD`
-* Upload an early "NO" file for AINQ so TPI sees on current exemptions 
+* Upload an early "NO" file for AINQ so TPI sees on current exemptions
     * earlyno1 thru 4 and sndnetf
-* Senior Freeze w/no Seniors 
+* Senior Freeze w/no Seniors
     * Q = `EX_VER_040` and `EX_VER_40C` - coops
     * Q = `CHKSF09YR` - SF birth year > 100 and/or sold last 10 years
     * Q = `CHKHS09YR` - Senior H/S birth year > 100 and/or sold last 10 years
 * Number of Pins Current SF Equalized Assessed Value (EAV) less than Base Year EAV on prior year Qualified (Q’ed)
 * SF Policing: Have SYSTEMS change years on following SF CL’s
-    * Call `SFPRD/SF0106CL`: Change SF age 
+    * Call `SFPRD/SF0106CL`: Change SF age
     * Call `SFPRD/SF0106CLC`: Change SF age
-    * Call `SFPRD/SF400082CL`: Change Process and Tax year 
+    * Call `SFPRD/SF400082CL`: Change Process and Tax year
     * Call `TSPRD/TS1002CL`: Change year for COOP Maintenance File
 * Update `STPRD/LANDMARK` File
     * APIN (`ASAIS93B`)
@@ -680,8 +680,8 @@ Legal: Freedom of Information (FOIA) | Microsoft Excel
     * `SFDUP01`
     * `SFDUP02` - Check for SF duplicate PIN’s
     * `HSDUP01`
-    * `HSDUP02	` - Check for HS duplicate PIN’s 
-    * `CHKSFHSHO1` 
+    * `HSDUP02	` - Check for HS duplicate PIN’s
+    * `CHKSFHSHO1`
         * Compares `SF09` and `HOMOWNMST` for `STA1` and `STA2` counts
         * Run early and also after new `HOMOWNST` is built
     * `CHKSFHSHO2`
@@ -727,10 +727,10 @@ Taxpayer Information (TPI) | Mainframe
 Legacy Systems | AS400
 Legal: Counsel | DocuSign
 
-##Description
-####All exemptions have eligibility requirements; TPI and satellite offices verify taxpayers qualify and record documentation.
+## escription
+#### ll exemptions have eligibility requirements; TPI and satellite offices verify taxpayers qualify and record documentation.
 
-##Details
+## etails
 <details>
 <summary>__5.1.__ Verification Process Abstract </summary>
 
@@ -745,16 +745,16 @@ Legal: Counsel | DocuSign
 ##### The following is a brief comparison of the seven major exemption types
 ![](new/grid_1.png)<br>
 ![](new/grid_2.png)
-####Full Document | [.pdf](new/grid_full.pdf) | [.png](new/grid_full.png) | [.xlsx](new/2020_GRID.xlsx)
+#### ull Document | [.pdf](new/grid_full.pdf) | [.png](new/grid_full.png) | [.xlsx](new/2020_GRID.xlsx)
 </details>
 
 <details>
 <summary>__5.2.__ Homestead / Senior Exemption</summary>
 
 * Determine type of senior application – first time or renewal
-    * Senior renewals are processed automatically 
+    * Senior renewals are processed automatically
     * Senior First Time filer are the only ones keyed into the mainframe
-* TPI validates requirements: applicants must meet the following 
+* TPI validates requirements: applicants must meet the following
     * Age = 65+ (e.g. via driver's license)
     * Proof of residence
 * TPI staff member keys info into Homestead Update Display (HUPD) which interfaces with mainframe
@@ -802,7 +802,7 @@ Legal: Counsel | DocuSign
 <summary>__5.4.__ Disabled Person, Returning Veteran, Disabled Veteran </summary>
 
 * Verify: is the applicant a Disabled Person, Disabled Veteran, or Returning Veteran?
-* TPI validates requirements. 
+* TPI validates requirements.
     * Disabled Person applicants must display one of the following documents:
         * Verification letter from Social Security Office
         * Verification letter from Doctor
@@ -837,14 +837,14 @@ Bureau of Technology (BOT) | Mainframe
 Taxpayer Information (TPI) | AS400
 Legacy Systems | Printers
 
-##Description
+## escription
 All temporary files are transferred to the Property tax System of Record.
 
-##Details
+## etails
 <details>
 <summary>__6.1.__ Assessor starts consolidation of all exemptions </summary>
 
-* BOT runs jobs 1 to 29 of the BOT MF Procedures 
+* BOT runs jobs 1 to 29 of the BOT MF Procedures
 * Systems uploads updated/returned vendor files to AS400
 * Systems runs AS400 batch jobs to MF
     * This step updates the exemption file that is ready to be processed by BOT
@@ -856,7 +856,7 @@ All temporary files are transferred to the Property tax System of Record.
 <summary>__6.3.__ Quality Assurance Analysis </summary>
 
 * MF validates accuracy
-    * Does a lookup for values in the MF table file. 
+    * Does a lookup for values in the MF table file.
     * The MF has ~ 10 tables (or “TBs”), one for each exemption type
 * BOT provides QA Report (File download from MF)
 * Systems conducts manual QA
@@ -886,9 +886,9 @@ Taxpayer Information (TPI) | AS400
 Legacy Systems | Printers
 Cook County Clerk | Clerk's Mainframe Interface
 
-##Description
+## escription
 Teams from the County Clerk and the CCAO meet to discuss the results of this calculation and make adjustments as necessary to ameliorate discrepancies between their records systems.
-##Details
+## etails
 
 <details>
 <summary>__7.1__ The Clerk reviews all exemption calculations in relation to prior year</summary></details>
@@ -918,7 +918,7 @@ Teams from the County Clerk and the CCAO meet to discuss the results of this cal
 <details>
 <summary>__7.4__ Assessor makes changes based on results of conference.</summary>
 
-* Changes must be coordinated with the County Clerk. 
+* Changes must be coordinated with the County Clerk.
 * The assessor cannot make changes without County Clerk’s collaboration.
     * [Data Request Memo](orig/2018_tax_files_request.doc)
 * Changes are handled by Legacy Systems in tandem with BOT
@@ -930,8 +930,8 @@ Teams from the County Clerk and the CCAO meet to discuss the results of this cal
 * MF applies final calculation to the 2nd Installment tax bill
 * Clerk Notifies the TR to proceed with Tax processing (print the tax bills)
 * Did tax payer receive all entitled exemption?
-    * If Yes: end of process. 
-    * If No: 
+    * If Yes: end of process.
+    * If No:
         * Property owners must file Certificate of Error to receive an exemption.
     * If exemptions applications are received after the system is closed, TPI automatically converts them to a Certificate of Error
 * Filing a Cerficate of Error results in a higher initial tax bill that is offset by a refund issued at a later date.
@@ -941,7 +941,7 @@ Teams from the County Clerk and the CCAO meet to discuss the results of this cal
 Departments Involved | Programs & <br> Technology Employed
 :-------------------:|:---------------------------:
 Legal | Docketing Software
-##Description
+## escription
 Subunit within the Legal Department investigates potentially unqualified exemptions and uses a variety of means to recoup the revenues lost.
 
 #### [Investigations Process Map](orig/EEIflow.pdf)
@@ -958,7 +958,7 @@ Year | Cases | Pins | Re-bills | No Action
 2019	|4,136	|27,910	|2,708	|2,023
 __Totals__| __23,818__ | __129,405__ | __16,765__ | __11,846__
 
-##Details
+## etails
 <details>
 <summary>__8.1.__ Investigators generate leads regarding possible statutory violations. </summary>
 
@@ -1015,7 +1015,7 @@ __Totals__| __23,818__ | __129,405__ | __16,765__ | __11,846__
 * Identify who has exemptions what type and for how long
 * Identify any and all Pin. #’s and exemptions associated with docket number
 * Use all data supplied by vendor as well as, all data bases available to verify violations
-* Data bases available, Lexus Nexus and the AS400 and Mainframe 
+* Data bases available, Lexus Nexus and the AS400 and Mainframe
 * Prepare docket to be sent down to the 3rd FL. to be billed or send to field for further investigating
 * Prepare in-house dockets in a step by step manner to send to 3rd FL. for processing
 * All Docket files are to be approved by chief of investigations.
@@ -1046,7 +1046,7 @@ __Totals__| __23,818__ | __129,405__ | __16,765__ | __11,846__
     * All properties found to be rentals will be entered into the No File in order to prevent future exemptions from being taken
     * Erroneous Exemptions will be entered into the Treasurer’s APIN File
     * Each Erroneous Exemption will be entered into the C.C.A.O. Erroneous Exemption System
-    * A bill for each Erroneous Exemption will be created 
+    * A bill for each Erroneous Exemption will be created
     * Bills placed in Billing Envelopes with Return Envelopes
     * Envelopes placed in trays for pick up and mailing</details>
     * Tax bill to recoup amount along with notice of legal action is mailed to violator
@@ -1061,7 +1061,7 @@ __Totals__| __23,818__ | __129,405__ | __16,765__ | __11,846__
         * Incoming Payment (Walk Ins):
             * All walk in payments handled at front counter on 3rd FL.
             * Follow steps B through D in Incoming Payments (Mail In)
-            * No incorrect or partial payments are to be accepted 
+            * No incorrect or partial payments are to be accepted
         * After checks are scanned and an electronic record is made, all checks not taken to Treasurer that day should be secured for safe keeping</details>
 
 </details>

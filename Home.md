@@ -13,6 +13,7 @@
 # Residential
 
  * [:house: Residential Modeling](residential/residential.md)
+ * [:heavy_check_mark: Exemptions](residential/exemptions.md)
 
 # Technical Documentation
 
