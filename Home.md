@@ -2,25 +2,18 @@
 
 ## The Data Science Department
 
-- [Onboarding *Get started with the Data Science Department*](/handbook/onboarding)
-- [Departmental Handbook *Mission statements, best practices, and rules, oh my!*](/handbook)
-{.links-list}
+- [Onboarding](handbook/onboarding.md)
+- [Departmental Handbook](handbook/handbook.md)
 
 ## Standard Operating Procedures
 
-- [Sales Ratio Studies *Learn how the CCAO measures the performance of its models*](/sops/sales-ratio-studies)
-- [Desk Review *Learn how the CCAO catches errors in assessed values*](/sops/desk-review)
-{.links-list}
+- [Sales Ratio Studies](sops/sales-ratio-studies.md)
+- [Desk Review](sops/desk-review.md)
 
 ## Residential
 
-- [Residential Modeling *Processes and Procedures*](/residential)
-{.links-list}
+- [Residential Modeling](residential.md)
 
 ## Technical Documentation
 
-- [Data Dictionaries *Field definitions and storage locations*](/data/sql-database-guide)
-{.links-list}
-
-
-
+- [Data Dictionaries](data/sql-database-guide.md)
