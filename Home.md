@@ -1,7 +1,5 @@
 # Home
 
----
-
 # The Data Science Department
 
  * [:handshake: Onboarding](handbook/onboarding.md)
