@@ -1,10 +1,4 @@
----
-title: Data Science Departmental Handbook
-description: Everything you need to know about the mission and work of the CCAO Data Science Department
-published: true
-date: 2020-05-10T18:57:58.586Z
-tags: handbook
----
+# Data Science Department Handbook
 
 # Data Science Department
 
@@ -47,7 +41,7 @@ The Data Science Department will never stand idle. We will strive to hold oursel
 
 ## Project Mangagement
 
-The Data Science Department follows principles of agile project management in its work. This management approach is designed for institutions that produce a large amount of complex, customized, tangible work product in a high-stakes environment. 
+The Data Science Department follows principles of agile project management in its work. This management approach is designed for institutions that produce a large amount of complex, customized, tangible work product in a high-stakes environment.
 
 In the case of the Data Science Department, these work products are software, algorithms, analysis, and policy recommendations that can have a large impact on property tax assessments in Cook County. Our end users are either internal staff executing the duties of the office, or external stakeholders, like taxpayers or elected representatives.
 
@@ -79,11 +73,11 @@ The Deputy Assessor Chief Data Office should not micro-manage staff. The Senior 
 
 At regular intervals the staff of the Data Science Department should reflect on their work to date, and identify ways to become more efficient. Workflow processes should be treated in the same manner as work-product, constantly evolving to meet the demands of the enterprise.
 
-#### Limiting Work-in-Progress 
+#### Limiting Work-in-Progress
 
 Staff should not be assigned more than a few issues to work simultaneously. Work should be executed in the order in which it is due. Work should be accomplished within the sprint in which it was assigned. The Deputy Assessor Chief Data Officer and the Senior Data Scientists should adjust their assignments and expectations based on milestone burndown charts and the open issue list.
 
-#### Limiting Mid-sprint Objective Changes 
+#### Limiting Mid-sprint Objective Changes
 
 Staff should not be re-assigned to different issue tickets mid-sprint. This is extremely detrimental to productivity, and wastes time.
 
@@ -94,7 +88,7 @@ In addition to these principles, the Data Science Department adheres to two regu
 **Daily Standup**
 There is a standing departmental meeting from 8:45-9:00 a.m. which all departmental staff are required to attend. The purpose of this meeting is to discuss the day's tasks and raise issues that staff may have encountered in the previous day.
 
-**Weekly Sprint Planning** 
+**Weekly Sprint Planning**
 There is a standing departmental meeting from 9:00 - 10:00 which select senior staff is required to attend. The purpose of this meeting is to discuss the goals of the week, and review the progress of the past week. During this meeting, Issues are created, discussed, modified, and/or assigned, and priorities are reviewed. Milestone burndown charts are reviewed. Members of other departments may attend to keep apprised of progress.
 
 
@@ -102,38 +96,11 @@ There is a standing departmental meeting from 9:00 - 10:00 which select senior s
 
 ## Organizational Structure
 
-
-```mermaid
-graph TD
-  TOP[Data and Modeling Department] --- CDO([Deputy Assessor<br>Chief Data Officer])
-	CDO --- DS[Data Science]
-	CDO --- DA[Data Analytics]
-
-  DA --- DIRDAA([Director of<br>Data Analytics])
-
-  DS --- SENDS1([Senior Data Scientist 1])
-  SENDS1 --- RMODSR1([Res. Model Sr. Analyst])
-  RMODSR1 --- RMODJR1([Res. Model Jr. Analyst])
-  SENDS1 --- INTERNS([Interns x 4])
-
-  DS --- SENDS2([Senior Data Scientist 2])
-  SENDS2 --- RMODSR2([Res. Model Sr. Analyst])
-  RMODSR2 --- RMODJR2([Res. Model Jr. Analyst])
-  SENDS2 --- FELLOW([Data Fellow])
-  FELLOW --- CAPSTONE([Capstone Students x 2])
-
-  classDef org fill:#f96;
-  class TOP,DS,DA org;
-
-```
-
-
 ## Training and Continuous Development
 
 # Work Terminal Setup
 
-* [See Onboarding](/handbook/onboarding)
-{.links-list}
+* [See Onboarding](handbook/onboarding.md)
 
 # Version Control and Workflow
 
@@ -141,9 +108,9 @@ graph TD
 
 The Data Science Department uses [GitLab](https://gitlab.com/ccao-data-science---modeling) as a workflow and version control tool. The Department's work is oriented around GitLab code repositories, with each repository representing an area of responsibility for the department or a specific service/application that it runs.
 
-### Structure 
+### Structure
 
-Repositories are structured following the best practices laid out in [GitLab Flow](https://docs.gitlab.com/ee/topics/gitlab_flow.html). Each repository has a `master` branch that represents the production version of that code. This `master` branch is *never* committed to directly. Rather, it is updated by merging a separate intermediate branch. This intermediate branch, usually called `staging`, is the long-lived default branch of each repository. Issues are created off of and merged into `staging`, and only once the updated code is tested are those changes then merged into `master`. 
+Repositories are structured following the best practices laid out in [GitLab Flow](https://docs.gitlab.com/ee/topics/gitlab_flow.html). Each repository has a `master` branch that represents the production version of that code. This `master` branch is *never* committed to directly. Rather, it is updated by merging a separate intermediate branch. This intermediate branch, usually called `staging`, is the long-lived default branch of each repository. Issues are created off of and merged into `staging`, and only once the updated code is tested are those changes then merged into `master`.
 
 This repository structure has a few advantages:
 
@@ -219,7 +186,7 @@ ratios %>%
   filter(between(ratio, quantile(ratio, 0.05), quantile(ratio, 0.95))
 ```
 
-This comment provides context, it tells you **why** this code was written. 
+This comment provides context, it tells you **why** this code was written.
 
 Of course, there are still cases where the function of especially complicated pieces of code is not immediately obvious. In this case, comments should both explain what the code is doing and explain why it's doing that thing.
 
@@ -234,7 +201,7 @@ Fortunately, two packages exist that support the Tidyverse style guide:
 
 These packages make it easy to conform to the Tidyverse style guide. Simply run `styler` and then `lintr` on your entire project before each commit. This will automatically restyle your code and then tell you if there are any remaining issues.
 
-> The Data Science Department does not strictly enforce Tidyverse style for most repositories. However, certain very important repositories (R packages) will automatically reject merges that doesn't conform to Tidyverse style. 
+> The Data Science Department does not strictly enforce Tidyverse style for most repositories. However, certain very important repositories (R packages) will automatically reject merges that doesn't conform to Tidyverse style.
 {.is-warning}
 
 ## Commit Style
@@ -248,19 +215,11 @@ People who frequently use git follow a [de-facto set of rules](https://commit.st
   5.  Use the imperative mood in the subject line (Use "Fix bug" instead of "Fixed bug")
   6.  Wrap the body at 72 characters
   7.  Use the body to explain what and why vs. how
-  
-Following these rules makes reading commit logs much easier, which is extremely helpful when working on projects with multiple people or even just when looking back at your own commit history. 
+
+Following these rules makes reading commit logs much easier, which is extremely helpful when working on projects with multiple people or even just when looking back at your own commit history.
 
 ### Program Headers
 
 ### Integrity Checks
 
-
 ### Simplicity
-
-
-### Data Architecture Standards
-
-
-Developer Engagement Program
-============================

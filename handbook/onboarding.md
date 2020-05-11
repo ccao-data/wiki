@@ -1,10 +1,4 @@
----
-title: Onboarding
-description: Get started with the Data Science Department
-published: true
-date: 2020-05-04T23:51:51.259Z
-tags: setup
----
+# Onboarding
 
 # Bookmarks
 **External**
@@ -12,7 +6,7 @@ tags: setup
 * [IAAO Technical Standards](https://iaao.org/wcm/Resources/Technical_Standards/wcm/Resources_Content/Pubs/Technical_Standards.aspx) - Technical standards and measurements for the assessment field
 
 **Internal**
-* [Data Science Wiki](https://dswiki.cookcountyassessor.com/) - This wiki, you're already here!
+* [Data Science Wiki](https://datascience.cookcountyassessor.com/wiki) - This wiki, you're already here!
 * [Data Science Application Server](https://datascience.cookcountyassessor.com/shiny) - Shiny server that launches CCAO Shiny applications. Login with Windows credentials
 * [App Monitoring Server](https://datascience.cookcountyassessor.com/grafana/) - Dashboards for monitoring app usage, pipeline processes, etc. Ask `@dfsnow` for login
 
@@ -80,7 +74,7 @@ For use in SSMS:
 
 ## Teams
  After installation, ask `@sweatyhandshake` for an invite to the Data Science "Team" within the CCAO group
- 
+
 ## VPN Client
  You should recieve and email during onboarding from Admins or NCC with instructions on how to set up and access the CCAO network through a VPN. For VPN troubleshooting, email the CCAO [Admins](mailto:admins@cookcountyassessor.com).
 
@@ -90,11 +84,11 @@ The CCAO Data Science team uses [GitLab Flow](https://docs.gitlab.com/ee/topics/
 1. You are assigned **Issue #118, Update Internal Contribution Guidelines** within GitLab.
    * Check to see if there is a branch associated with your issue within GitLab. Branches created via issues usually have a similar name, in this case the branch name would be `118-update-internal-contribution-guidelines`.
    * If a branch doesn't exist, please ask your supervisor to create one. Please *do not* create a branch yourself.
-   
-2. Checkout the issue branch. 
+
+2. Checkout the issue branch.
    * Within Sourcetree, click **Repository --> Checkout**, then select the branch associated with the issue you have been assigned. In this case, `118-update-internal-contribution-guidelines`. You can also double-click different branch names to check them out.
    * The branch you selected should now appear bolded under **BRANCHES** on the left side of Sourcetree. You are now working within that branch.
-   
+
 2. Work the issue. Please use the issue page comments to communicate with your supervisor about the issue.
 
 3. Commit often and use [descriptive commit messages](https://commit.style/). Only push to your issue branch, never directly to `master`.

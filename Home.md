@@ -1,21 +1,21 @@
 # Home
 
-## The Data Science Department
+# The Data Science Department
 
 [:handshake: Onboarding](handbook/onboarding.md)
 
 [:blue_book: Departmental Handbook](handbook/handbook.md)
 
-## Standard Operating Procedures
+# Standard Operating Procedures
 
 [:houses: Sales Ratio Studies](sops/sales-ratio-studies.md)
 
 [:mag: Desk Review](sops/desk-review.md)
 
-## Residential
+# Residential
 
 [:house: Residential Modeling](residential/residential.md)
 
-## Technical Documentation
+# Technical Documentation
 
 [:grey_question: Data Dictionaries](data/sql-database-guide.md)
