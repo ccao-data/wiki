@@ -1,21 +1,13 @@
----
-title: SQL Database Guide
-description: SQL Inventory/Dictionary
-published: true
-date: 2020-05-11T12:05:17.946Z
-tags: data, sql
----
+# SQL Database Guide
 
+> :warning: Anything with a `DEV` prefix is still in development and should not be used by anyone other than its creator.
 
-> Anything with a `DEV` prefix is still in development and should not be used by anyone other than its creator.
-{.is-warning}
-
-## Data Dictionaries
+# Data Dictionaries
 
 All data dictionary materials can be found in the [Residential Repository](https://gitlab.com/ccao-data-science---modeling/ccao_sf_cama_dev/-/tree/master/data_dictionary_constituents)
 
 
-## AS_ TABLES
+# AS_ TABLES
 *AS Tables contain data that originates from the AS400.*
 
 * T suffix - updated after a township has been mailed assessment notices.  It's the most up-to-date version of the HEAD file. These tables are considered ***FIRST PASS***.
@@ -28,7 +20,7 @@ The universe of all PINs in Cook County.
 ***AS_DETAIL***
 Land, improvement, and potentially 288 lines for each PIN that break down valuation and provide information necessary for proration.
 
-## FTBL_ TABLES
+# FTBL_ TABLES
 *Fact Tables are attributes about objects that are determined exclusively by some bureaucratic agency. For example, the township codes are simply set by the CCAO, and are therefore facts.*
 
 ***FTBL_CERT_DATES***
@@ -39,12 +31,12 @@ Historical IDOR Cook County equalization factors.
 
 > The department is required by law to calculate the factor, also called the multiplier, to achieve uniform property assessment throughout the state.
 >
-> The department determines the final equalization factor for each county by comparing the actual selling price of individual properties, over a three-year period, with the assessed value placed on those properties by the county assessor and adjusted by the board of review. If the median level of assessment for all property in the county varies from the 33 1/3 percent level required by law, an equalization factor is assigned to bring assessments to the legally mandated level. 
+> The department determines the final equalization factor for each county by comparing the actual selling price of individual properties, over a three-year period, with the assessed value placed on those properties by the county assessor and adjusted by the board of review. If the median level of assessment for all property in the county varies from the 33 1/3 percent level required by law, an equalization factor is assigned to bring assessments to the legally mandated level.
 
 ***FTBL_CERT_DATES***
 Table containing township and triad names and codes.
 
-## DTBL_ TABLES
+# DTBL_ TABLES
 *Data Tables contain data collected, stored, or calculated from sources other than the AS/400.*
 
 ***DTBL_CCRDSALES***
@@ -83,7 +75,7 @@ A dataset of commercial PINs and the RPIE codes associated with them.
 ***DTBL_VALIDATED_IC_SALES***
 Industrial and commercial class sales identified by whether or not they're valid and by deed number.  Commercial analysts included comments while validating sales.
 
-## OTHER TABLES
+# OTHER TABLES
 *These are tables that are generally sourced from the AS/400 but don't have T/TB/BR suffixes.*
 
 ***65D***
@@ -92,7 +84,7 @@ A table recording changes made to pipeline values during desk review.  Precedes 
 > This table is not reliable for Berwyn, Lemont, Lyons, Worth, and Stickney in 2020 due to COVID-19 adjustments.
 {.is-danger}
 
-## VIEWS
+# VIEWS
 *Views are combinations of tables that exist as queries rather than a physical flat file.  They must be assembled each time they're referenced.*
 
 ***VW_CLEAN_IDORSALES***
