@@ -92,8 +92,8 @@ The Data Science Department uses a few SQL servers to store most of its backend 
 
 R will automatically load [environmental variables](https://medium.com/chingu/an-introduction-to-environment-variables-and-how-to-use-them-f602f66d15fa) into memory from your [.Renviron file](https://www.dartistics.com/renviron.html). This can be used to load sensitive information like credentials and API keys without depending on a third-party library or function. To use this method:
 
- * Create a .Renviron file inside your HOME folder (My Documents on Windows, ~ on *nix systems)
- * Create an environmental variable equal to an ODBC-formatted connection string for the server you want to connect to within .Renviron. For example, `DB_CONFIG_CCAODATA=Driver={ODBC Driver 17 for SQL Server};Server=10.124.134.118;Database=CCAODATA;Uid=CCAODATAR;Pwd=PASSWORD;`. This will create a variable named `DB_CONFIG_CCAODATA`.
+ * Create a `.Renviron` file inside your HOME folder (`"My Documents"` on Windows, `~` on *nix systems)
+ * Create an environmental variable equal to an ODBC-formatted connection string for the server you want to connect to within the `.Renviron` file. For example, `DB_CONFIG_CCAODATA=Driver={ODBC Driver 17 for SQL Server};Server=10.124.134.118;Database=CCAODATA;Uid=CCAODATAR;Pwd=PASSWORD;`. This will create a variable named `DB_CONFIG_CCAODATA`.
  * Restart R/RStudio to load the environmental variable into R. You can access the variable's value using `Sys.genenv()`. For example, `Sys.getenv("DB_CONFIG_CCAODATA")` will access the variable created above.
  * Connect to the database using the `.connection_string` argument of the `dbConnect()` function from `DBI`. A full example would look like:
  
