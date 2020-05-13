@@ -18,3 +18,4 @@
 # Technical Documentation
 
  * [:file_folder: SQL Database Guide](data/sql-database-guide.md)
+ * [:bank: Property Class Definitions](data/class-definitions.pdf) - *Also available in the CCAO R package*
