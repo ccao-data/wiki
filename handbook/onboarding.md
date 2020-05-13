@@ -21,7 +21,7 @@ Take a moment to bookmark these commonly used CCAO links:
 
 # Vocabulary
 
-The property assessment world involves a lot of real estate-specific jargon and vocabulary. A non-exhaustive list of commonly used vocabulary can be found in the [Sales Ratio Studies SOP](/sops/sales-ratio-studies.md#definitions).
+The property assessment world involves a lot of real estate-specific jargon and vocabulary. A non-exhaustive list of commonly used vocabulary can be found in the [Sales Ratio Studies SOP](../sops/sales-ratio-studies.md#definitions).
 
 # Accounts to Create
 
