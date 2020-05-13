@@ -1,6 +1,6 @@
 # Residential Exemptions 
 
-# This exemptions documentation contains four main elements:
+This exemptions documentation contains four main elements:
 
  * UIC Capstone Team deliverable: [HTML reference tool](exemptions/exem_process.html)
  * [Markdown](exemptions/exem_process.md) & CSS code for local generation of HTML reference tool (doesn't render correctly on wiki, use HTML directly)
