@@ -1,4 +1,4 @@
-# Residential Exemptions Process Document
+# Residential Exemptions 
 
 # This exemptions documentation contains four main elements:
 
