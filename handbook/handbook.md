@@ -119,7 +119,6 @@ This repository structure has a few advantages:
   *  Breaking changes that might make it into the staging environment are not sent to the production application, meaning users rarely see them
 
 > Not all CCAO repositories are set up this way, but most future ones will be. If you need to work on a repository without a `staging` branch, simply use `master` as the default branch rather than `staging` (make issue branches off of and merge requests into `master`).
-{.is-note}
 
 ### Public Repositories
 
@@ -201,8 +200,7 @@ Fortunately, two packages exist that support the Tidyverse style guide:
 
 These packages make it easy to conform to the Tidyverse style guide. Simply run `styler` and then `lintr` on your entire project before each commit. This will automatically restyle your code and then tell you if there are any remaining issues.
 
-> The Data Science Department does not strictly enforce Tidyverse style for most repositories. However, certain very important repositories (R packages) will automatically reject merges that doesn't conform to Tidyverse style.
-{.is-warning}
+> :warning: The Data Science Department does not strictly enforce Tidyverse style for most repositories. However, certain very important repositories (R packages) will automatically reject merges that doesn't conform to Tidyverse style.
 
 ## Commit Style
 

@@ -81,8 +81,7 @@ Industrial and commercial class sales identified by whether or not they're valid
 ***65D***
 A table recording changes made to pipeline values during desk review.  Precedes "mailed" in CCAO assessment work flow.
 
-> This table is not reliable for Berwyn, Lemont, Lyons, Worth, and Stickney in 2020 due to COVID-19 adjustments.
-{.is-danger}
+> :warning: This table is not reliable for Berwyn, Lemont, Lyons, Worth, and Stickney in 2020 due to COVID-19 adjustments.
 
 # VIEWS
 *Views are combinations of tables that exist as queries rather than a physical flat file.  They must be assembled each time they're referenced.*
