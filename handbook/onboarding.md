@@ -140,6 +140,10 @@ The CCAO Data Science team uses [GitLab Flow](https://docs.gitlab.com/ee/topics/
 
 See the [Version Control and Workflow](handbook.md#version-control-and-workflow) section of the handbook for more information.
 
+# Intern Timesheets
+
+Interns will need to manually record their hours on a paper timesheet which is turned in at the end of each week. The timesheet can be found [here :page_facing_up:](intern-signin-sheet.pdf).
+
 ---
 
 :fire:
