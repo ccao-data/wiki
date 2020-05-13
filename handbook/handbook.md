@@ -91,6 +91,36 @@ There is a standing departmental meeting from 8:45-9:00 a.m. which all departmen
 **Weekly Sprint Planning**
 There is a standing departmental meeting from 9:00 - 10:00 which select senior staff is required to attend. The purpose of this meeting is to discuss the goals of the week, and review the progress of the past week. During this meeting, Issues are created, discussed, modified, and/or assigned, and priorities are reviewed. Milestone burndown charts are reviewed. Members of other departments may attend to keep apprised of progress.
 
+## Organizational Structure
+
+<!--
+Diagram created with this code using Mermaid
+```mermaid
+graph TD
+  TOP[Data and Modeling Department] --- CDO([Deputy Assessor<br>Chief Data Officer])
+	CDO --- DS[Data Science]
+	CDO --- DA[Data Analytics]
+
+  DA --- DIRDAA([Director of<br>Data Analytics])
+
+  DS --- SENDS1([Senior Data Scientist 1])
+  SENDS1 --- RMODSR1([Res. Model Sr. Analyst])
+  RMODSR1 --- RMODJR1([Res. Model Jr. Analyst])
+  SENDS1 --- INTERNS([Interns x 4])
+
+  DS --- SENDS2([Senior Data Scientist 2])
+  SENDS2 --- RMODSR2([Res. Model Sr. Analyst])
+  RMODSR2 --- RMODJR2([Res. Model Jr. Analyst])
+  SENDS2 --- FELLOW([Data Fellow])
+  FELLOW --- CAPSTONE([Capstone Students x 2])
+
+  classDef org fill:#f96;
+  class TOP,DS,DA org;
+```
+-->
+
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiAgVE9QW0RhdGEgYW5kIE1vZGVsaW5nIERlcGFydG1lbnRdIC0tLSBDRE8oW0RlcHV0eSBBc3Nlc3Nvcjxicj5DaGllZiBEYXRhIE9mZmljZXJdKVxuXHRDRE8gLS0tIERTW0RhdGEgU2NpZW5jZV1cblx0Q0RPIC0tLSBEQVtEYXRhIEFuYWx5dGljc11cblxuICBEQSAtLS0gRElSREFBKFtEaXJlY3RvciBvZjxicj5EYXRhIEFuYWx5dGljc10pXG5cbiAgRFMgLS0tIFNFTkRTMShbU2VuaW9yIERhdGEgU2NpZW50aXN0IDFdKVxuICBTRU5EUzEgLS0tIFJNT0RTUjEoW1Jlcy4gTW9kZWwgU3IuIEFuYWx5c3RdKVxuICBSTU9EU1IxIC0tLSBSTU9ESlIxKFtSZXMuIE1vZGVsIEpyLiBBbmFseXN0XSlcbiAgU0VORFMxIC0tLSBJTlRFUk5TKFtJbnRlcm5zIHggNF0pXG5cbiAgRFMgLS0tIFNFTkRTMihbU2VuaW9yIERhdGEgU2NpZW50aXN0IDJdKVxuICBTRU5EUzIgLS0tIFJNT0RTUjIoW1Jlcy4gTW9kZWwgU3IuIEFuYWx5c3RdKVxuICBSTU9EU1IyIC0tLSBSTU9ESlIyKFtSZXMuIE1vZGVsIEpyLiBBbmFseXN0XSlcbiAgU0VORFMyIC0tLSBGRUxMT1coW0RhdGEgRmVsbG93XSlcbiAgRkVMTE9XIC0tLSBDQVBTVE9ORShbQ2Fwc3RvbmUgU3R1ZGVudHMgeCAyXSlcblxuICBjbGFzc0RlZiBvcmcgZmlsbDojZjk2O1xuICBjbGFzcyBUT1AsRFMsREEgb3JnO1xuIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiAgVE9QW0RhdGEgYW5kIE1vZGVsaW5nIERlcGFydG1lbnRdIC0tLSBDRE8oW0RlcHV0eSBBc3Nlc3Nvcjxicj5DaGllZiBEYXRhIE9mZmljZXJdKVxuXHRDRE8gLS0tIERTW0RhdGEgU2NpZW5jZV1cblx0Q0RPIC0tLSBEQVtEYXRhIEFuYWx5dGljc11cblxuICBEQSAtLS0gRElSREFBKFtEaXJlY3RvciBvZjxicj5EYXRhIEFuYWx5dGljc10pXG5cbiAgRFMgLS0tIFNFTkRTMShbU2VuaW9yIERhdGEgU2NpZW50aXN0IDFdKVxuICBTRU5EUzEgLS0tIFJNT0RTUjEoW1Jlcy4gTW9kZWwgU3IuIEFuYWx5c3RdKVxuICBSTU9EU1IxIC0tLSBSTU9ESlIxKFtSZXMuIE1vZGVsIEpyLiBBbmFseXN0XSlcbiAgU0VORFMxIC0tLSBJTlRFUk5TKFtJbnRlcm5zIHggNF0pXG5cbiAgRFMgLS0tIFNFTkRTMihbU2VuaW9yIERhdGEgU2NpZW50aXN0IDJdKVxuICBTRU5EUzIgLS0tIFJNT0RTUjIoW1Jlcy4gTW9kZWwgU3IuIEFuYWx5c3RdKVxuICBSTU9EU1IyIC0tLSBSTU9ESlIyKFtSZXMuIE1vZGVsIEpyLiBBbmFseXN0XSlcbiAgU0VORFMyIC0tLSBGRUxMT1coW0RhdGEgRmVsbG93XSlcbiAgRkVMTE9XIC0tLSBDQVBTVE9ORShbQ2Fwc3RvbmUgU3R1ZGVudHMgeCAyXSlcblxuICBjbGFzc0RlZiBvcmcgZmlsbDojZjk2O1xuICBjbGFzcyBUT1AsRFMsREEgb3JnO1xuIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)
+
 # Work Terminal Setup
 
 * [See Onboarding](onboarding.md)
