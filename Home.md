@@ -4,6 +4,7 @@
 
  * [:handshake: Onboarding](handbook/onboarding.md)
  * [:blue_book: Handbook](handbook/handbook.md)
+ * [:construction_worker: Contributing](contributing/contributing.md)
 
 # Standard Operating Procedures
 
