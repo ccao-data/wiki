@@ -1,20 +1,21 @@
 # Townships
 
-Cook County is divided into three parts, called 'triads' or 'tris'. Triads are reassessed on a triennial assessment cycle (i.e. they are assessed every three years). Triads are made up of smaller units known as townships. Townships act as a sort of 'unit of work' within the assessor's office, as they are assessed, mailed, appealed, and closed on a predetermined schedule. Townships are also important for modeling, as they're often used as fixed effects (in conjunction with neighborhoods) to absorb geographic variation in assessed value.
+Cook County is divided into three parts, called 'triads' or 'tris'. Triads are reassessed on a triennial assessment cycle (i.e. they are assessed every three years). Triads are made up of smaller units known as townships. Townships act as a sort of 'unit of work' within the assessor's office, as they are assessed, mailed, appealed, and closed on a predetermined schedule. Townships are also important for modeling, as they're often used as fixed effects (in conjunction with neighborhoods) to absorb geographic variation in assessed value. Below is an example map showing townships and their respective triads and reassessment years:
+
+![](townships-map.png)
 
 ## Township Definitions
 
 The table below represents township and triad definitions as of 2020. This data is also accessible via the [CCAO R package](https://gitlab.com/ccao-data-science---modeling/packages/ccao). You can retrieve this data with the following code:
 
 ```r
- # After intalling the package using the instruction in the package README 
- # Load the ccao library
+# After intalling the package using the instruction in the package README, load the ccao library
 library(ccao)
 
 ccao::town_dict
 ```
 
-|township_name|township_code|triad_code|triad_name|
+|Township Name|Township Code|Triad Code|Triad Name|
 |-------------|-------------|----------|----------|
 |Barrington   |10           |2         |North     |
 |Berwyn       |11           |3         |South     |
