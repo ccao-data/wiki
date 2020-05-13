@@ -1,6 +1,6 @@
-# Residential Pipeline
 
 # Single Family Sale Comparables
+
 The Data Science Department has developed an algorithm that automatically identified **comparable sales** for nearly every single-family residential property in the County (918,481 properties). We are currently alpha testing our comparison sets. The end-goal of this project is to establish a single set of comparable sales to be used for valuation purposes that is also easily visible to the public.
 
 ## Background
