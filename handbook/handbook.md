@@ -91,13 +91,6 @@ There is a standing departmental meeting from 8:45-9:00 a.m. which all departmen
 **Weekly Sprint Planning**
 There is a standing departmental meeting from 9:00 - 10:00 which select senior staff is required to attend. The purpose of this meeting is to discuss the goals of the week, and review the progress of the past week. During this meeting, Issues are created, discussed, modified, and/or assigned, and priorities are reviewed. Milestone burndown charts are reviewed. Members of other departments may attend to keep apprised of progress.
 
-
-## Database Map
-
-## Organizational Structure
-
-## Training and Continuous Development
-
 # Work Terminal Setup
 
 * [See Onboarding](onboarding.md)
@@ -216,8 +209,3 @@ People who frequently use git follow a [de-facto set of rules](https://commit.st
 
 Following these rules makes reading commit logs much easier, which is extremely helpful when working on projects with multiple people or even just when looking back at your own commit history.
 
-### Program Headers
-
-### Integrity Checks
-
-### Simplicity
