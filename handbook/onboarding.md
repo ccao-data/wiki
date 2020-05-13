@@ -1,5 +1,9 @@
 # Onboarding
 
+Welcome to the Cook County Assessor's Office Data Science Department! We're excited to have you! 
+
+Please read the content below to get started. Once finished, please take a bit of time to read the [handbook](handbook.md) as well. If you have any questions, feel free to ask `@sweatyhandshake` or `@dfsnow`.
+
 # Bookmarks
 
 Take a moment to bookmark these commonly used CCAO links:
@@ -15,18 +19,22 @@ Take a moment to bookmark these commonly used CCAO links:
 
 > :warning: The internal application locations above will have a security warning when you first visit them. This warning can safely be ignored. Click **Advanced --> Accept the risk** to bypass the warning.
 
+# Vocabulary
+
+The property assessment world involves a lot of real estate-specific jargon and vocabulary. A non-exhaustive list of commonly used vocabulary can be found in the [Sales Ratio Studies SOP](/sops/sales-ratio-studies.md#definitions).
+
 # Accounts to Create
 
 * [GitLab](https://gitlab.com/) - Needed to contribute to the CCAO codebase (use your @cookcountyassessor.com email to make an account)
-* [Bitbucket](https://bitbucket.org/) - Needed for Sourcetree install
+* [Bitbucket](https://bitbucket.org/) - Needed only for Sourcetree install
 
-# Progams to Install
+# Programs to Install
 
 * [Sourcetree](https://www.sourcetreeapp.com/) - Frontend UI for git version control and GitLab
 * [R](https://cloud.r-project.org/) - Main CCAO programming language (use version 3.6.3 or greater)
 * [R Studio](https://rstudio.com/products/rstudio/download/#download) - Integrated development environment for R
 * [SQL Server Management Studio (SMSS)](https://aka.ms/ssmsfullsetup) - SQL client that plays well with CCAO's SQL Server
-* [SSMSBoost](https://www.ssmsboost.com/) - Add-on to SMSS that adds handy features
+* [SSMSBoost](https://www.ssmsboost.com/) - (Optional) Add-on to SMSS that adds handy features
 * [PuTTY](https://www.putty.org/) - SSH client and key generator
 * [Teams](https://products.office.com/en-us/microsoft-teams/download-app) - Main CCAO DS communications app
 
@@ -35,7 +43,7 @@ Take a moment to bookmark these commonly used CCAO links:
 ## Git, GitLab, and Sourcetree
 
 1. Set up your GitLab and Bitbucket accounts
-2. If you don't already have a pending invite to the [CCAO GitLab](https://gitlab.com/ccao-data-science---modeling) group, request one from `@sweatyhandshake`.
+2. If you don't already have a pending invite to the [CCAO GitLab](https://gitlab.com/ccao-data-science---modeling) group, request one from `@sweatyhandshake`
 3. Install programs
    * Link your Bitbucket account to Sourcetree during Sourcetree installation
    * When Sourcetree asks you to install mercurial and git, select **Yes** for both
@@ -63,24 +71,50 @@ Take a moment to bookmark these commonly used CCAO links:
    * Press the **Clone** button at the bottom of the page
    * Clone the repositories to `"My Documents"`, or file paths will need to be rewritten in several scripts
 
-## R
+## SQL Credentials
 
-* If at any point R cannot contact CRAN mirrors to download packages, run `options(download.file.method="libcurl")`
-* If at any point R returns the errors `LAPACK routines cannot be loaded` or `maximal number of DLLs reached`, run `file.edit('~/.Renviron')`, enter `R_MAX_NUM_DLLS=1000` in the viewer, save, and reboot RStudio
+The Data Science Department uses a few SQL servers to store most of its backend data. The IP addresses and details of each database are:
 
-## SQL
+| Common Name           | Usage                                  | IP Address     | Port | DB Name  | User      | Password | Permissions | Type     |
+|-----------------------|----------------------------------------|----------------|------|----------|-----------|----------|-------------|----------|
+| CCAODATA / SQL Server | All DS operations                      | 10.124.134.118 | 1433 | CCAODATA | CCAODATAR | Ask      | Read only   | MS SQL   |
+| Reporting Server      | Reporting only, has subset of CCAODATA | 10.124.134.121 | 1433 | CCAODATA | CCAORSRV  | Ask      | Read/index  | MS SQL   |
+| RPIE Server           | RPIE backend data                      | 10.124.134.120 | 1433 | RPIE     | CCAORPIE  | Ask      | Read only   | MS SQL   |
+| Monitoring Server     | Monitors DS applications               | 10.124.101.1   | 5432 | shiny    | shiny     | Ask      | Read/write  | Postgres |
 
-For use in R:
+
+**For use in R (old way):**
+
  * Contact `@sweatyhandshake` for read credentials and place them in the top level of your local utility repository once it's been cloned from GitLab
  * The `odbc.credentials` function provides an example of how to connect to the SQL server from within R
 
-For use in SSMS:
+**For use in R (new way):**
+
+R will automatically load [environmental variables](https://medium.com/chingu/an-introduction-to-environment-variables-and-how-to-use-them-f602f66d15fa) into memory from your [.Renviron file](https://www.dartistics.com/renviron.html). This can be used to load sensitive information like credentials and API keys without depending on a third-party library or function. To use this method:
+
+ * Create a .Renviron file inside your HOME folder (My Documents on Windows, ~ on *nix systems)
+ * Create an environmental variable equal to an ODBC-formatted connection string for the server you want to connect to within .Renviron. For example, `DB_CONFIG_CCAODATA=Driver={ODBC Driver 17 for SQL Server};Server=10.124.134.118;Database=CCAODATA;Uid=CCAODATAR;Pwd=PASSWORD;`. This will create a variable named `DB_CONFIG_CCAODATA`.
+ * Restart R/RStudio to load the environmental variable into R. You can access the variable's value using `Sys.genenv()`. For example, `Sys.getenv("DB_CONFIG_CCAODATA")` will access the variable created above.
+ * Connect to the database using the `.connection_string` argument of the `dbConnect()` function from `DBI`. A full example would look like:
+ 
+```r
+library(DBI) # required for DB connection
+library(odbc) # required for ODBC specification
+
+# Instantiate a database connection object, where DB_CONFIG_CCAODATA is equal
+# to the environmental variable stored in the .Renviron file
+CCAODATA <- dbConnect(odbc(), .connection_string = Sys.getenv("DB_CONFIG_CCAODATA"))
+
+```
+
+**For use in SSMS (only if SMSSBoost is installed):**
+
  * Go to **SSMSBoost > Settings > Preferred Connections > List**.  Here you can store server credentials provided by `@sweatyhandshake` for all databases you'll need to access. Select **Connect object explorer at startup** for each connection
  * Go to **Tools > Options > Environment > Startup** and select **Open empty environment**
 
 ## Teams
 
- After installation, ask `@sweatyhandshake` for an invite to the Data Science "Team" within the CCAO group
+ After installation, ask `@sweatyhandshake` for an invite to the Data Science "Team" within the CCAO group.
 
 ## VPN Client
 
@@ -103,6 +137,8 @@ The CCAO Data Science team uses [GitLab Flow](https://docs.gitlab.com/ee/topics/
 3. Commit often and use [descriptive commit messages](https://commit.style/). Only push to your issue branch, never directly to `master`.
 
 4. When you have finished working on the issue, request approval for your merge request let your supervisor know you've finished working the issue.
+
+See the [Version Control and Workflow](handbook.md#version-control-and-workflow) section of the handbook for more information.
 
 ---
 
