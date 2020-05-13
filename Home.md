@@ -17,4 +17,4 @@
 
 # Technical Documentation
 
- * [:grey_question: Data Dictionaries](data/sql-database-guide.md)
+ * [:file_folder: SQL Database Guide](data/sql-database-guide.md)
