@@ -1,4 +1,3 @@
-
 # Wiki Content
 
 This repository holds content displayed by the [Data Science Department Wiki](https://datascience.cookcountyassessor.com/wiki). The wiki is rendered using a [gollum backend](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content/-/tree/master) and is updated automatically every 3 minutes. You can also view the wiki content by going to [Home.md](Home.md) within GitLab.
@@ -9,3 +8,4 @@ To edit wiki content, simply use any markdown text editor and commit back to thi
 
  * [GitLab Markdown Reference](https://docs.gitlab.com/ee/user/markdown.html)
  * [Emoji Cheat Sheet](https://gist.github.com/rxaviers/7360908)
+ * [GitLab Handbook](https://about.gitlab.com/handbook/) (for reference)
