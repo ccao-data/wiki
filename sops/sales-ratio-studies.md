@@ -100,8 +100,7 @@ The following statistics must be included in any sales ratio study:
 * Sample size (i.e., number of properties with sales being used in the sales ratio study)
 * Population size (i.e., number of properties to which the sales ratio study is intended to generalize).
 
-**Measures of Variance.**
-Each statistic in 1.4 must be reported with an accompanying measure of statistical precision. Where mathematic definitions of a statistic’s standard deviation does not exist, standard deviations should be obtained via bootstrapping.
+**Measures of Variance** - Each statistic in 1.4 must be reported with an accompanying measure of statistical precision. Where mathematic definitions of a statistic’s standard deviation does not exist, standard deviations should be obtained via bootstrapping.
 
 ## Data Publication
 The Chief Data Officer shall make all necessary data and code for replication available to the public free of charge. This should include, but is not limited to: the universe of sales available to the CCAO for the sales ratio study, indicators for which sales were excluded, reasons for their exclusion, code to perform the necessary calculations for the sales ratio study, and a report of the results of the study.
@@ -148,11 +147,9 @@ Some residential properties classified as 'Single-Family’ by 2.1 are valued by
 
 Properties may be stratified according to geography, sale price, assessed value, physical characteristics, and other attributes.
 
-**Maximum Variance of Strata Statistic.**
-Stratification should not be so granular as to produce unduly large standard errors.
+**Maximum Variance of Strata Statistic** - Stratification should not be so granular as to produce unduly large standard errors.
 
-**Minimum Observations within Strata.**
-Statistics should not be reported on a strata with fewer than 30 observations.
+**Minimum Observations within Strata.** - Statistics should not be reported on a strata with fewer than 30 observations.
 
 
 ## Matching Appraisal Data and Market Data
@@ -163,17 +160,13 @@ The physical and legal characteristics of each property used in the ratio study 
 
 ### Timing and Sales Sample Selection
 
-**Multi-Parcel Sales.**
-Deeds transacted on multiple PINs are excluded from the sales sample.
+**Multi-Parcel Sales** - Deeds transacted on multiple PINs are excluded from the sales sample.
 
-**Foreclosures and Bank Sales.**
-Foreclosure and Real Estate Owned sales may be excluded from the sales samples.
+**Foreclosures and Bank Sales** - Foreclosure and Real Estate Owned sales may be excluded from the sales samples.
 
-**Selective Appraisal.**
-Properties are appraised on the first day of the re-assessment year. Assessments are calculated and produced over the course of the assessment year. Where sales chasing occurs, it can only occur for properties with a sale prior to the date the assessed value of a property was certified. Sales ratios calculated using sales following the certification date will exhibit much less bias from sales chasing than sales ratios calculated using sales prior to the certification date.
+**Selective Appraisal** - Properties are appraised on the first day of the re-assessment year. Assessments are calculated and produced over the course of the assessment year. Where sales chasing occurs, it can only occur for properties with a sale prior to the date the assessed value of a property was certified. Sales ratios calculated using sales following the certification date will exhibit much less bias from sales chasing than sales ratios calculated using sales prior to the certification date.
 
-**Matching Assessment Years to Sale Years for Ratio Studies.**
-This section follows 9.2, p 33, of the IAAO Standard on Ratio Studies. In order to minimize the influence of sales chasing on reported statistics, sales used in calculating statistic for years prior to the year prior to the current assessment year should utilize sales following the date of assessment. For A sale will be included in the study for prior years if the transaction date is between the first day of the year in which the property was re-assessed, and the same day in the following calendar year.
+**Matching Assessment Years to Sale Years for Ratio Studies** - This section follows 9.2, p 33, of the IAAO Standard on Ratio Studies. In order to minimize the influence of sales chasing on reported statistics, sales used in calculating statistic for years prior to the year prior to the current assessment year should utilize sales following the date of assessment. For A sale will be included in the study for prior years if the transaction date is between the first day of the year in which the property was re-assessed, and the same day in the following calendar year.
 
 $$
 \text{Sales Ratio}_t = \frac{\text{Assessor's Estimated Fair Cash Value}_t}{\text{Sale Price}_{t + 1}} \\
