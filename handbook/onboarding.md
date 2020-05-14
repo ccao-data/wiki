@@ -85,17 +85,17 @@ The Data Science Department uses a few SQL servers to store most of its backend 
 
 **For use in R (old way):**
 
- * Contact `@sweatyhandshake` for read credentials and place them in the top level of your local utility repository once it's been cloned from GitLab
- * The `odbc.credentials` function provides an example of how to connect to the SQL server from within R
+1. Contact `@sweatyhandshake` for read credentials and place them in the top level of your local utility repository once it's been cloned from GitLab
+2. The `odbc.credentials` function provides an example of how to connect to the SQL server from within R
 
 **For use in R (new way):**
 
 R will automatically load [environmental variables](https://medium.com/chingu/an-introduction-to-environment-variables-and-how-to-use-them-f602f66d15fa) into memory from your [.Renviron file](https://www.dartistics.com/renviron.html). This can be used to load sensitive information like credentials and API keys without depending on a third-party library or function. To use this method:
 
- * Create a `.Renviron` file inside your HOME folder (`"My Documents"` on Windows, `~` on *nix systems)
- * Create an environmental variable equal to an ODBC-formatted connection string for the server you want to connect to within the `.Renviron` file. For example, `DB_CONFIG_CCAODATA=Driver={ODBC Driver 17 for SQL Server};Server=10.124.134.118;Database=CCAODATA;Uid=CCAODATAR;Pwd=PASSWORD;`. This will create a variable named `DB_CONFIG_CCAODATA`.
- * Restart R/RStudio to load the environmental variable into R. You can access the variable's value using `Sys.genenv()`. For example, `Sys.getenv("DB_CONFIG_CCAODATA")` will access the variable created above.
- * Connect to the database using the `.connection_string` argument of the `dbConnect()` function from `DBI`. A full example would look like:
+1. Create a `.Renviron` file inside your HOME folder (`"My Documents"` on Windows, `~` on *nix systems)
+2. Create an environmental variable equal to an ODBC-formatted connection string for the server you want to connect to within the `.Renviron` file. For example, `DB_CONFIG_CCAODATA=Driver={ODBC Driver 17 for SQL Server};Server=10.124.134.118;Database=CCAODATA;Uid=CCAODATAR;Pwd=PASSWORD;`. This will create a variable named `DB_CONFIG_CCAODATA`.
+3. Restart R/RStudio to load the environmental variable into R. You can access the variable's value using `Sys.genenv()`. For example, `Sys.getenv("DB_CONFIG_CCAODATA")` will access the variable created above.
+4. Connect to the database using the `.connection_string` argument of the `dbConnect()` function from `DBI`. A full example would look like:
  
 ```r
 library(DBI) # required for DB connection
@@ -109,8 +109,8 @@ CCAODATA <- dbConnect(odbc(), .connection_string = Sys.getenv("DB_CONFIG_CCAODAT
 
 **For use in SSMS (only if SMSSBoost is installed):**
 
- * Go to **SSMSBoost > Settings > Preferred Connections > List**.  Here you can store server credentials provided by `@sweatyhandshake` for all databases you'll need to access. Select **Connect object explorer at startup** for each connection
- * Go to **Tools > Options > Environment > Startup** and select **Open empty environment**
+1. Go to **SSMSBoost > Settings > Preferred Connections > List**.  Here you can store server credentials provided by `@sweatyhandshake` for all databases you'll need to access. Select **Connect object explorer at startup** for each connection
+2. Go to **Tools > Options > Environment > Startup** and select **Open empty environment**
 
 ## Teams
 
