@@ -23,21 +23,13 @@ The Data Science Department's vision is to enhance the CCAO's reputation among t
 
 ## Core Values
 
-### Precision and Accuracy
+**Precision and Accuracy** - The Data Science Department is dedicated to providing precise and accurate values and analysis. It is not enough to get the numbers right some of the time, or on average. We strive for the highest level of precision and accuracy achievable, and we are committed to evaluating ourselves against the fundamental question: "did we get it right?"
 
-The Data Science Department is dedicated to providing precise and accurate values and analysis. It is not enough to get the numbers right some of the time, or on average. We strive for the highest level of precision and accuracy achievable, and we are committed to evaluating ourselves against the fundamental question: "did we get it right?"
+**Growth and Innovation** - The Data Science Department is committed to continual improvement and innovation. We believe that moving forward is keeping up, and standing still is falling behind. We are committed to learning and testing state-of-the-art algorithms and analytic techniques in our work.
 
-### Growth and Innovation
+**Transparency and Ethics** - The Data Science Department is committed to radical transparency and high ethical standards. We operate under the assumption that all of our work will be available to highly skilled outside reviewers, and that all of our decisions will be scrutinized. As such, we will hold ourselves to the highest ethical standards, and always evaluate our work on the basis of fairness.
 
-The Data Science Department is committed to continual improvement and innovation. We believe that moving forward is keeping up, and standing still is falling behind. We are committed to learning and testing state-of-the-art algorithms and analytic techniques in our work.
-
-### Transparency and Ethics
-
-The Data Science Department is committed to radical transparency and high ethical standards. We operate under the assumption that all of our work will be available to highly skilled outside reviewers, and that all of our decisions will be scrutinized. As such, we will hold ourselves to the highest ethical standards, and always evaluate our work on the basis of fairness.
-
-### Efficiency and Productivity
-
-The Data Science Department will never stand idle. We will strive to hold ourselves to a rigorous production schedule that results in tangible, high quality, and useful work product on a regular basis. We will strive to hold ourselves to agreed timelines, and take responsibility for missed deadlines or low quality work.
+**Efficiency and Productivity** - The Data Science Department will never stand idle. We will strive to hold ourselves to a rigorous production schedule that results in tangible, high quality, and useful work product on a regular basis. We will strive to hold ourselves to agreed timelines, and take responsibility for missed deadlines or low quality work.
 
 ## Project Mangagement
 
@@ -45,51 +37,28 @@ The Data Science Department follows principles of agile project management in it
 
 In the case of the Data Science Department, these work products are software, algorithms, analysis, and policy recommendations that can have a large impact on property tax assessments in Cook County. Our end users are either internal staff executing the duties of the office, or external stakeholders, like taxpayers or elected representatives.
 
-### Agile Principles
-
 In order to deliver accurate and timely work products, the Data Science Department follows the following agile principles:
 
-#### Continuous Delivery
+**Continuous Delivery** - The Data Science Department produces tools and analyses to support CCAO operations. In order to ensure that these are delivered, development times should be shortened so that products are delivered to the end user more quickly. This is done by limiting the number and complexity of the features in each version. By producing incrementally better versions with shorter build times, the Data Science Department can solicit user feedback more frequently, ultimately increasing the usability of the final product.
 
-The Data Science Department produces tools and analyses to support CCAO operations. In order to ensure that these are delivered, development times should be shortened so that products are delivered to the end user more quickly. This is done by limiting the number and complexity of the features in each version. By producing incrementally better versions with shorter build times, the Data Science Department can solicit user feedback more frequently, ultimately increasing the usability of the final product.
+**Embrace Change** - The Data Science Department should be very flexible in terms of making changes to tools to suit the end-users' needs. Changes to tools and scripts should be considered even at late stage of development.
 
-#### Embrace Change
+**Developers Work with Management** - Senior Data Scientists and developers are regularly involved in managerial discussions so that they have an intimate knowledge of institutional and end-user needs.
 
-The Data Science Department should be very flexible in terms of making changes to tools to suit the end-users' needs. Changes to tools and scripts should be considered even at late stage of development.
+**Measuring Progress** - The primary metric by which the Data Science Department judges its work is by functional products. The continuous deployment of increasingly useful, functional tools is really what matters.
 
-#### Developers Work with Management
+**Self-organization and Initiative** - The Deputy Assessor Chief Data Office should not micro-manage staff. The Senior Data Scientists should be given tasks to accomplish and left to determine for themselves how exactly to accomplish that task, within departmental guidelines. Developers and employees should feel free to raise problems quickly with the Deputy Assessor Chief Data Officer so that project goals may be adjusted, where necessary.
 
-Senior Data Scientists and developers are regularly involved in managerial discussions so that they have an intimate knowledge of institutional and end-user needs.
+**Reflect and Adapt** - At regular intervals the staff of the Data Science Department should reflect on their work to date, and identify ways to become more efficient. Workflow processes should be treated in the same manner as work-product, constantly evolving to meet the demands of the enterprise.
 
-#### Measuring Progress
+**Limiting Work-in-Progress** - Staff should not be assigned more than a few issues to work simultaneously. Work should be executed in the order in which it is due. Work should be accomplished within the sprint in which it was assigned. The Deputy Assessor Chief Data Officer and the Senior Data Scientists should adjust their assignments and expectations based on milestone burndown charts and the open issue list.
 
-The primary metric by which the Data Science Department judges its work is by functional products. The continuous deployment of increasingly useful, functional tools is really what matters.
+**Limiting Mid-sprint Objective Changes** - Staff should not be re-assigned to different issue tickets mid-sprint. This is extremely detrimental to productivity, and wastes time.
 
-#### Self-organization and Initiative
+**Agile Practices** - In addition to these principles, the Data Science Department adheres to two regular practices:
 
-The Deputy Assessor Chief Data Office should not micro-manage staff. The Senior Data Scientists should be given tasks to accomplish and left to determine for themselves how exactly to accomplish that task, within departmental guidelines. Developers and employees should feel free to raise problems quickly with the Deputy Assessor Chief Data Officer so that project goals may be adjusted, where necessary.
-
-#### Reflect and Adapt
-
-At regular intervals the staff of the Data Science Department should reflect on their work to date, and identify ways to become more efficient. Workflow processes should be treated in the same manner as work-product, constantly evolving to meet the demands of the enterprise.
-
-#### Limiting Work-in-Progress
-
-Staff should not be assigned more than a few issues to work simultaneously. Work should be executed in the order in which it is due. Work should be accomplished within the sprint in which it was assigned. The Deputy Assessor Chief Data Officer and the Senior Data Scientists should adjust their assignments and expectations based on milestone burndown charts and the open issue list.
-
-#### Limiting Mid-sprint Objective Changes
-
-Staff should not be re-assigned to different issue tickets mid-sprint. This is extremely detrimental to productivity, and wastes time.
-
-#### Agile Practices
-
-In addition to these principles, the Data Science Department adheres to two regular practices:
-
-**Daily Standup**
-There is a standing departmental meeting from 8:45-9:00 a.m. which all departmental staff are required to attend. The purpose of this meeting is to discuss the day's tasks and raise issues that staff may have encountered in the previous day.
-
-**Weekly Sprint Planning**
-There is a standing departmental meeting from 9:00 - 10:00 which select senior staff is required to attend. The purpose of this meeting is to discuss the goals of the week, and review the progress of the past week. During this meeting, Issues are created, discussed, modified, and/or assigned, and priorities are reviewed. Milestone burndown charts are reviewed. Members of other departments may attend to keep apprised of progress.
+ * *Daily Standup* - There is a standing departmental meeting from 8:45-9:00 a.m. which all departmental staff are required to attend. The purpose of this meeting is to discuss the day's tasks and raise issues that staff may have encountered in the previous day.
+ * *Weekly Sprint Planning* - There is a standing departmental meeting from 9:00 - 10:00 which select senior staff is required to attend. The purpose of this meeting is to discuss the goals of the week, and review the progress of the past week. During this meeting, Issues are created, discussed, modified, and/or assigned, and priorities are reviewed. Milestone burndown charts are reviewed. Members of other departments may attend to keep apprised of progress.
 
 ## Organizational Structure
 
