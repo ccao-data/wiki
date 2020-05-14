@@ -189,7 +189,7 @@ For example, sales ratios reported during the 2019 re-assessment for assessments
 
 Sales are obtained by the CCAO from MyDec Web Service ('MyDec”), a service by the Illinois Department of Revenue.
 
-### Pre-processing of sales
+### Pre-processing of Sales
 
 The sales data obtained via MyDec Web Service contain irregularities that require correction. These include multiple deeds recorded on a given PIN on a single day listing different amounts and typographic errors in consideration amounts. A query is executed to produce a list of sales that are unique by PIN and date recorded.
 
