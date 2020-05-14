@@ -140,8 +140,7 @@ Residential Properties are grouped into four groups according to minor property 
 * Residential Condominiums: 299.
 * Vacant Land: 200, 201, 241.
 
-**Exclusion of Special Properties.**
-Some residential properties classified as 'Single-Family’ by 2.1 are valued by the 'Special Properties’ division of the Valuations Department. These are excluded from the sales ratio study.
+**Exclusion of Special Properties** - Some residential properties classified as 'Single-Family’ by 2.1 are valued by the 'Special Properties’ division of the Valuations Department. These are excluded from the sales ratio study.
 
 ## Stratification
 
@@ -149,7 +148,7 @@ Properties may be stratified according to geography, sale price, assessed value,
 
 **Maximum Variance of Strata Statistic** - Stratification should not be so granular as to produce unduly large standard errors.
 
-**Minimum Observations within Strata.** - Statistics should not be reported on a strata with fewer than 30 observations.
+**Minimum Observations within Strata** - Statistics should not be reported on a strata with fewer than 30 observations.
 
 
 ## Matching Appraisal Data and Market Data
