@@ -25,7 +25,7 @@ This section contains a table displaying the mean and median sales ratio across 
 Since this is a prediction problem, we have included [measures](http://www.sthda.com/english/articles/38-regression-model-validation/158-regression-model-accuracy-metrics-r-square-aic-bic-cp-and-more/) often used to compare various machine learning models. The ones currently implemented are: R-squared (R2), Root Mean Squared Error (RMSE), Mean Absolute Error (MAE), and AIC (Akaike’s Information Criteria. R2, RMSE, and MAE were chosen because they are the most commonly reported measures. RMSE and MAE are in the same unit as the original data, making them more interpretable.
 
 For the definitions below, the following notation will be used:
-
+```math
 A dataset has $n$ values of sale price $y_1, y_2, ... y_n$ and each value is associated with a predicted value $f_1, f_2, ... f_n$. 
 $\bar{y}$ is defined as the mean of observed sale prices, calculated as
 $$
@@ -37,20 +37,20 @@ $$
 
 The total sum of squares ($SS_tot$) is:
 
-```math
-SS_tot = \sum_{i} (y_i - \bar{y})^2
-```
+$$
+SS_{tot} = \sum_{i} (y_i - \bar{y})^2
+$$
 
 The residual sum of squares ($SS_res$) is:
 
 $$
-SS_res = \sum_{i} (y_i - f_i)^2
+SS_{res} = \sum_{i} (y_i - f_i)^2
 $$
 
 Then, $R^2$ is:
 
 $$
-R^2 = 1 - \frac{\text{SS_res}}{\text{SS_tot}}
+R^2 = 1 - \frac{\text{SS_{res}}}{\text{SS_{tot}}}
 $$
 
 
@@ -73,7 +73,7 @@ AIC = -2(log-likelihood) + 2K
 $$
 
 where $K$ is the number of model parameters and log-likelihood is a measure of model fit. The higher the log-likelihood, the better.
-
+```
 ### Bias in error structure: General heteroskedasticity
 Current output: Boxplots showing sales ratio by decile of assessed value. Ideally, we want to see similar variance in sales ratios across all deciles of assessed (predicted) value. If not, we likely have heteroskedasticity in our errors.
 
