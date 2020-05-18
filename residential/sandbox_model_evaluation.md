@@ -37,9 +37,9 @@ $$
 
 The total sum of squares ($SS_tot$) is:
 
-$$
+```math
 SS_tot = \sum_{i} (y_i - \bar{y})^2
-$$
+```
 
 The residual sum of squares ($SS_res$) is:
 
