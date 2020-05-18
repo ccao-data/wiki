@@ -1,7 +1,7 @@
 # Sandbox Model Evaluation
 
 ## Sandbox Overview
-The residential modeling sandbox is a tool developed to evaluate and compare the performance of two models simultaneously. The intended audience for this tool is, initially, analysts in the Data Science department who are trying to find the best model (see how best is defined below) for each township, triad, or the whole county. The sandbox currently supports the following functionality:
+The residential modeling sandbox is a tool developed to evaluate and compare the performance of two models simultaneously. The tool is designed to be used by analysts in the Data Science department to aid in finding the best model for each township, triad, or whole county. The sandbox currently supports the following functionality:
 
 - Ingesting data from SQL server, Cook County Open Data Portal, using data from the last SQL pull stored locally, or using your own sales sample
 - Comparing two different estimation methods (linear model, quantile regression, GBM, or using COMPS data)
@@ -9,7 +9,7 @@ The residential modeling sandbox is a tool developed to evaluate and compare the
 - Comparing two different sources of data
 - Adding a location adjustment factor
 
-After specifying the models the user would like to compare, the user can run the sandbox. The output will be an HTML report the evaluates both models using the criteria described below.
+After specifying the two models the user would like to compare, the user can run the sandbox. The output will be an HTML report the evaluates both models using the criteria described below.
 
 ## Sample size
 Currently, the residential modeling pipeline models each township separately. The sandbox is also designed to do the same. Going forward, we will be shifting to having one model for the entire county, or one model per triad.
@@ -73,7 +73,7 @@ $$
 where $K$ is the number of model parameters and log-likelihood is a measure of model fit. The higher the log-likelihood, the better.
 
 ### Bias in error structure: General heteroskedasticity
-Current output: Boxplots showing sales ratio by decile of assessed value. Ideally, we want to see similar variance in sales ratios across all deciles of assessed (predicted) value. If not, we likely have heteroskedasticity in our errors.
+Boxplots showing sales ratio by decile of assessed value. Ideally, we want to see similar variance in sales ratios across all deciles of assessed (predicted) value. If not, we likely have heteroskedasticity in our errors.
 
 ### Bias in error structure: Bad treatment of time
 [Looking](http://www-stat.wharton.upenn.edu/~stine/insr260_2009/lectures/trend.pdf) at residuals by ['order number'](https://online.stat.psu.edu/stat462/node/121/) can help show if there is a time trend, positive serial autocorrelation or negative serial autocorrelation. In our context, we look at sales ratios against various measures of time (sale quarter, sale year, etc.) which the user can specify as a parameter. If sales ratios appear cyclical, linearly increasing or decreasing, or otherwise related to the measure of time specified on the x-axis, it is likely our model is not properly accounting for time.
