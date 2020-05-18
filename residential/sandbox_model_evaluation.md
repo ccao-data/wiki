@@ -31,16 +31,16 @@ $\bar{y}$ is defined as the mean of observed sale prices, calculated as
 $$
 \bar{y} = \frac{1}{n}\sum_{i=1}^{n} y_i
 $$
-
+```
 **R-squared (R2):**  R-squared, also known as the co-efficient of determination, is the proportion of variation in the outcome that is explained by the predictor variables. In general, the higher the R-squared, the better the model. However, R-squared will almost always increase as more predictor variables are added, so R-squared could be artifically inflated without actually having better explanatory power. For this reason, RMSE and MAE may be more helpful evaluation metrics. R-squared is calculated as follows:
 
 
 The total sum of squares ($SS_tot$) is:
-
+```math
 $$
 SS_{tot} = \sum_{i} (y_i - \bar{y})^2
 $$
-
+```
 The residual sum of squares ($SS_res$) is:
 
 $$
@@ -73,7 +73,7 @@ AIC = -2(log-likelihood) + 2K
 $$
 
 where $K$ is the number of model parameters and log-likelihood is a measure of model fit. The higher the log-likelihood, the better.
-```
+
 ### Bias in error structure: General heteroskedasticity
 Current output: Boxplots showing sales ratio by decile of assessed value. Ideally, we want to see similar variance in sales ratios across all deciles of assessed (predicted) value. If not, we likely have heteroskedasticity in our errors.
 
