@@ -15,6 +15,7 @@
 
  * [:house: Sales Comparables](residential/residential.md)
  * [:heavy_check_mark: Exemptions](residential/exemptions.md)
+ * [:chart_with_downwards_trend: Sandbox Model Evaluation](residential/sandbox-model-evaluation.md)
 
 # Technical Documentation
 
