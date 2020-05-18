@@ -14,7 +14,7 @@ After specifying the two models the user would like to compare, the user can run
 ## Sample size
 Currently, the residential modeling pipeline models each township separately. The sandbox is also designed to do the same. Going forward, we will be shifting to having one model for the entire county, or one model per triad.
 
-## Output Currently Inluded
+## Output Currently Included
 ### Best Model (WIP): 
 Currently this decision is made by only considering two criteria: lowest COD and lowest RMSE. Going forward, this might be revisited to incorporate more metrics in deciding which model performed best.
 
