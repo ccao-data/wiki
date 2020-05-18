@@ -73,10 +73,10 @@ $$
 
 where $K$ is the number of model parameters and log-likelihood is a measure of model fit. The higher the log-likelihood, the better.
 
-### Bias in Error Structure: General heteroskedasticity
+### Bias in Error Structure: General Heteroskedasticity
 Boxplots showing sales ratio by decile of assessed value. Ideally, we want to see similar variance in sales ratios across all deciles of assessed (predicted) value. If not, we likely have heteroskedasticity in our errors.
 
-### Bias in Error Structure: Bad treatment of Time
+### Bias in Error Structure: Bad Treatment of Time
 [Looking](http://www-stat.wharton.upenn.edu/~stine/insr260_2009/lectures/trend.pdf) at residuals by ['order number'](https://online.stat.psu.edu/stat462/node/121/) can help show if there is a time trend, positive serial autocorrelation or negative serial autocorrelation. In our context, we look at sales ratios against various measures of time (sale quarter, sale year, etc.) which the user can specify as a parameter. If sales ratios appear cyclical, linearly increasing or decreasing, or otherwise related to the measure of time specified on the x-axis, it is likely our model is not properly accounting for time.
 
 ### Disuniformity:
@@ -86,7 +86,7 @@ These maximum jumps in predicted values are displayed graphically using two boxp
 
 In addition to the boxplot, the same data is presented in a table so the user can see which township, neighborhood, and class have the largest jumps, and between which two PINs we see this jump. This can be used to diagnose possible characteristics our models are not appropriately capturing.
 
-### Bias in Estimates: Spatial Auto-correlation (WIP)
+### Bias in Estimates: Spatial Auto-Correlation (WIP)
 To test for Spatial Autocorrelation, we have the Moran's test. Moran's I is computed by regressing model residuals onto spatially lagged model residuals, and it ranges from -1 (negative autocorrelation) to +1 (positive autocorrelation.) A random spatial arrangement of property sale prices would give a Moran's I statistic of 0. The implemented test constructs a list of k nearest neighbors (3 for now) for each PIN, develops a matrix of spatial weights for each of those neighbors, then applies the Moran's test. The p-value of Moran's test tells us whether or not we can reject the null of no spatial autocorrelation.
 
 While this test is functional in the sandbox, it should be interpreted with caution. The model data being used in the sandbox is longitudinal, and we are not yet clear on how spatial autocorrelation works with longitudinal data, since PINs (and their locations) will be repeated in the data. This test would make more sense when conducted on assessment data, which is a prediction at a given point in time and is not longitudinal data.
