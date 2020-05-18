@@ -25,21 +25,19 @@ This section contains a table displaying the mean and median sales ratio across 
 Since this is a prediction problem, we have included [measures](http://www.sthda.com/english/articles/38-regression-model-validation/158-regression-model-accuracy-metrics-r-square-aic-bic-cp-and-more/) often used to compare various machine learning models. The ones currently implemented are: R-squared (R2), Root Mean Squared Error (RMSE), Mean Absolute Error (MAE), and AIC (Akaike’s Information Criteria. R2, RMSE, and MAE were chosen because they are the most commonly reported measures. RMSE and MAE are in the same unit as the original data, making them more interpretable.
 
 For the definitions below, the following notation will be used:
-```math
+
 A dataset has $n$ values of sale price $y_1, y_2, ... y_n$ and each value is associated with a predicted value $f_1, f_2, ... f_n$. 
 $\bar{y}$ is defined as the mean of observed sale prices, calculated as
 $$
 \bar{y} = \frac{1}{n}\sum_{i=1}^{n} y_i
 $$
-```
+
 **R-squared (R2):**  R-squared, also known as the co-efficient of determination, is the proportion of variation in the outcome that is explained by the predictor variables. In general, the higher the R-squared, the better the model. However, R-squared will almost always increase as more predictor variables are added, so R-squared could be artifically inflated without actually having better explanatory power. For this reason, RMSE and MAE may be more helpful evaluation metrics. R-squared is calculated as follows:
 
 
 The total sum of squares ($SS_tot$) is:
 ```math
-$$
 SS_{tot} = \sum_{i} (y_i - \bar{y})^2
-$$
 ```
 The residual sum of squares ($SS_res$) is:
 
