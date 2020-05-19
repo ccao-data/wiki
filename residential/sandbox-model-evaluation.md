@@ -33,7 +33,7 @@ $$
 \bar{y} = \frac{1}{n}\sum_{i=1}^{n} y_i
 $$
 
-**R-squared (R2):** - R-squared, also known as the co-efficient of determination, is the proportion of variation in the outcome that is explained by the predictor variables. In general, the higher the R-squared, the better the model. However, R-squared will almost always increase as more predictor variables are added, so R-squared could be artificially inflated without actually having better explanatory power. For this reason, RMSE and MAE may be more helpful evaluation metrics. R-squared is calculated as follows:
+**R-squared (R2):** R-squared, also known as the co-efficient of determination, is the proportion of variation in the outcome that is explained by the predictor variables. In general, the higher the R-squared, the better the model. However, R-squared will almost always increase as more predictor variables are added, so R-squared could be artificially inflated without actually having better explanatory power. For this reason, RMSE and MAE may be more helpful evaluation metrics. R-squared is calculated as follows:
 
 
 The total sum of squares ($SS_{tot}$) is:
@@ -53,19 +53,19 @@ R^2 = 1 - \frac{\text{SS}_{res}}{\text{SS}_{tot}}
 $$
 
 
-**Root Mean Squared Error (RMSE):** - RMSE is the square root of Mean Squared Error (MSE) which is the average squared difference between observed actual values and the predicted values. The lower the RMSE, the better the model. It is calculated as follows:
+**Root Mean Squared Error (RMSE):** RMSE is the square root of Mean Squared Error (MSE) which is the average squared difference between observed actual values and the predicted values. The lower the RMSE, the better the model. It is calculated as follows:
 
 $$
 RMSE = \sqrt{\frac{\sum_{i=1}^{n} (f_i - y_i)^2}{n}}
 $$
 
-**Mean Absolute Error (MAE):** - Like RMSE, also measures prediction error. It is the average absolute difference between observed and predicted outcomes, and is less sensitive to outliers than MAE. The lower the MAE, the better the model. It is calculated as follows:
+**Mean Absolute Error (MAE):** Like RMSE, also measures prediction error. It is the average absolute difference between observed and predicted outcomes, and is less sensitive to outliers than MAE. The lower the MAE, the better the model. It is calculated as follows:
 
 $$
 MAE = \frac{\sum_{i=1}^{n} |f_i - y_i|}{n}
 $$
 
-**Akaike’s Information Criteria (AIC):** - AIC is a metric developed to penalize the inclusion of additional variables to a model. It adds a penalty which increases the error when additional variables are added. The lower the AIC, the better the model. This is only calculated for  regression models, and outputs an NA for GBM models.
+**Akaike’s Information Criteria (AIC):** AIC is a metric developed to penalize the inclusion of additional variables to a model. It adds a penalty which increases the error when additional variables are added. The lower the AIC, the better the model. This is only calculated for  regression models, and outputs an NA for GBM models.
 
 $$
 AIC = -2(log-likelihood) + 2K
