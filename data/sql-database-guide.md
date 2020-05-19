@@ -84,6 +84,13 @@ A table recording changes made to pipeline values during desk review.  Precedes 
 
 > :warning: This table is not reliable for Berwyn, Lemont, Lyons, Worth, and Stickney in 2020 due to COVID-19 adjustments.
 
+***EXEMPTIONS***
+Documents different exemptions homeowners can recieve:
+
+* 'HO' = Homeowner Exemption
+* 'HS' = Senior Exemption
+* 'SF' = Senior Freeze 
+
 ## VIEWS
 *Views are combinations of tables that exist as queries rather than a physical flat file.  They must be assembled each time they're referenced.*
 
