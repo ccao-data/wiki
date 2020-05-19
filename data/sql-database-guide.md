@@ -1,6 +1,6 @@
 # SQL Database Guide
 
-:warning: Anything with a `DEV` prefix is still in development and should not be used by anyone other than its creator. :warning:
+<sup> :warning: </sup> Anything with a `DEV` prefix is still in development and should not be used by anyone other than its creator. <sup> :warning: </sup>
 
 # Data Dictionaries
 
@@ -82,7 +82,7 @@ Industrial and commercial class sales identified by whether or not they're valid
 ***65D***  
 A table recording changes made to pipeline values during desk review.  Precedes "mailed" in CCAO assessment work flow.
 
-:warning: This table is not reliable for Berwyn, Lemont, Lyons, Worth, and Stickney in 2020 due to COVID-19 adjustments. :warning:
+<sup> :warning: </sup> This table is not reliable for Berwyn, Lemont, Lyons, Worth, and Stickney in 2020 due to COVID-19 adjustments. <sup> :warning: </sup>
 
 ***EXEMPTIONS***  
 Database of exemptions homeowners are recieving/have recieved:
