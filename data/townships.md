@@ -4,7 +4,7 @@ Cook County is divided into three parts, called 'triads' or 'tris'. Triads are r
 
 ![](townships-map.png)
 
-## Township Definitions
+# Township Definitions
 
 The table below represents township and triad definitions as of 2020. This data is also accessible via the [CCAO R package](https://gitlab.com/ccao-data-science---modeling/packages/ccao). You can retrieve this data with the following code:
 
