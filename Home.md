@@ -3,6 +3,7 @@
 # The Data Science Department
 
  * [:handshake: Onboarding](handbook/onboarding.md)
+ * [:wave: Offboarding](handbook/offboarding.md)
  * [:blue_book: Handbook](handbook/handbook.md)
  * [:construction_worker: Contributing](contributing/contributing.md)
 
