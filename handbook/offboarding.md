@@ -6,18 +6,18 @@ If you're reading this, then it's finally time to say goodbye. :sob: We're sad t
 
 # Checklist
 
-- [ ] Change your GitLab account email under **Profile > Main settings**
-- [ ] Return any CCAO equipment (if applicable)
-- [ ] Email HR to confirm your last day and arrange your exit survey and interview
-- [ ] Turn in your ID card to HR (at the same place you drop off your timesheet). If working remotely, mail your ID to the following address:
+- Change your GitLab account email under **Profile > Main settings**
+- Return any CCAO equipment (if applicable)
+- Email HR to confirm your last day and arrange your exit survey and interview
+- Turn in your ID card to HR (at the same place you drop off your timesheet). If working remotely, mail your ID to the following address:
     ```
     ATTN: Human Resources
     Cook County Assessor's Office
     118 N. Clark St.
     Chicago, IL 60602
     ```
-- [ ] Pick up your certificate from HR. If working remotely, provide a mailing address so they can send your certificate.
-- [ ] Email the Chief Data Officer and Senior Data Scientists: 
+- Pick up your certificate from HR. If working remotely, provide a mailing address so they can send your certificate.
+- Email the Chief Data Officer and Senior Data Scientists: 
   - A reminder to change the permissions on your GitLab account
   - A reminder to revoke any private API/deploy keys
   - Your contact information, in case we need to follow-up on something you worked on
