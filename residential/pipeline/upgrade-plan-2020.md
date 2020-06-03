@@ -544,30 +544,30 @@ These are tasks that _must_ be completed in order for the project to be complete
 
 # System Diagrams
 
-See [diagram PDF](residential/pipeline/upgrade-diagram-2020.pdf) or [Visio file](residential/pipeline/upgrade-diagram-2020.vsdx)
+See [diagram PDF](upgrade-diagram-2020.pdf) or [Visio file](upgrade-diagram-2020.vsdx)
 
 # Resources
 
-### Workflow
+## Workflow
 
 - Outline of a standard data science workflow we can use as a template: [https://towardsdatascience.com/the-data-science-workflow-43859db0415](https://towardsdatascience.com/the-data-science-workflow-43859db0415)
 - Rstudio::conf course on 2020 methods for applied machine learning. This is the workflow and methodology we should replicate: [https://github.com/rstudio-conf-2020/applied-ml](https://github.com/rstudio-conf-2020/applied-ml)
 - Giant list of data quality metrics that we should attempt to use: [https://reddit.com/r/datascience/comments/fzweaf/my\_giant\_data\_quality\_checklist/](https://reddit.com/r/datascience/comments/fzweaf/my_giant_data_quality_checklist/)
 - Useful blog post on containerizing data workflows: [https://medium.com/enigma-engineering/containerizing-data-workflows-95df1d338048](https://medium.com/enigma-engineering/containerizing-data-workflows-95df1d338048)
 
-### Tools
+## Tools
 
 - **MinIO:** Self-hosted object storage equivalent to Amazon S3 to host our data warehouse: [https://github.com/minio/minio/](https://github.com/minio/minio/)
 - **Airflow:** Tool to create visual pipelines of steps that can be run via GUI: [https://airflow.apache.org/](https://airflow.apache.org/)
 - **Metaflow:** Data science project management and pipeline construction: [https://docs.metaflow.org/introduction/what-is-metaflow](https://docs.metaflow.org/introduction/what-is-metaflow)
 
-### Walkthroughs
+## Walkthroughs
 
 - Extremely thorough book on designing data workflows and applications: [https://dataintensive.net/](https://dataintensive.net/)
 - Basic overview of tidymodels R package workflow: [https://rviews.rstudio.com/2019/06/19/a-gentle-intro-to-tidymodels/](https://rviews.rstudio.com/2019/06/19/a-gentle-intro-to-tidymodels/)
 - Kaggle competitions on housing that we may be able to steal models and features from: [https://www.kaggle.com/mgmarques/houses-prices-complete-solution](https://www.kaggle.com/mgmarques/houses-prices-complete-solution) [https://www.kaggle.com/jesucristo/1-house-prices-solution-top-1](https://www.kaggle.com/jesucristo/1-house-prices-solution-top-1)
 
-### Feedback Posts
+## Feedback Posts
 
 - On r/datascience: [https://old.reddit.com/r/datascience/comments/g8ojeg/critiquehelp\_with\_the\_mlops\_plan\_for\_a\_small\_ds/](https://old.reddit.com/r/datascience/comments/g8ojeg/critiquehelp_with_the_mlops_plan_for_a_small_ds/)
 - On r/dataengineering: [https://old.reddit.com/r/dataengineering/comments/g93bs5/critiquehelp\_with\_the\_data\_engineering\_plan\_for\_a/](https://old.reddit.com/r/dataengineering/comments/g93bs5/critiquehelp_with_the_data_engineering_plan_for_a/)
