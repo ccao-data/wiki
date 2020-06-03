@@ -1,6 +1,6 @@
 # Offboarding
 
-> :warning: This page only applies to CCAO Data Science Department Interns and Capstone students who are leaving at the end of their quarter/semester
+> :warning: This page only applies to CCAO Data Science Department Interns and Capstone students who are leaving at the end of their quarter/semester.
 
 If you're reading this, then it's finally time to say goodbye. :sob: We're sad to see you go, but hope you've gained something from being on the Data Science Team! After leaving, you'll automatically lose access to your CCAO email address, CCAO private GitLab repos, the VPN, and Teams. Here are the things you need to do before you leave:
 
