@@ -16,7 +16,8 @@ If you're reading this, then it's finally time to say goodbye. :sob: We're sad t
     118 N. Clark St.
     Chicago, IL 60602
     ```
-- Pick up your certificate from HR. If working remotely, provide a mailing address so they can send your certificate.
+- Pick up your certificate from HR. If working remotely, provide a mailing address so they can send your certificate
+- Delete any stored CCAO read-only database credentials (.Renviron or SQL_ACCESS.txt files) on your local machine
 - Email the Chief Data Officer and Senior Data Scientists: 
   - A reminder to change the permissions on your GitLab account
   - A reminder to revoke any private API/deploy keys
