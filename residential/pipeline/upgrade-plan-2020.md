@@ -9,7 +9,7 @@ This document outlines the CCAO&#39;s vision and plan for improvements to its re
 
 # Vision
 
-The overall goal of this upgrade is to increase the **flexibility, resiliency, portability, fairness, longevity, and transparency** of the residential modeling pipeline. Each of these five tenants has a corresponding current state, future state, and set of epics/milestones:
+The overall goal of this upgrade is to increase the **flexibility, resiliency, portability, fairness, longevity, and transparency** of the residential modeling pipeline. Each of these five tenants has a corresponding current state, future state, and set of phases/milestones:
 
 ## Flexibility
 
@@ -113,376 +113,45 @@ The current pipeline is a massive improvement over previous modeling techniques,
 4. Consolidate documentation that currently exists on GitLab, the O: drive, and elsewhere into a single data science wiki. This wiki will explain the entire residential modeling process.
 5. Create an R package for modeling that can be used by external parties. Version existing and future pipeline code with GitLab.
 
-# Epics and Milestones
+# Phases and Milestones
 
 Rebuilding the residential modeling pipeline will require significant upfront development time, but will lead to a more robust, scalable, and extensible system in the future.
 
-**Total development time is at least 6 months**. However, the overall development can be **split into discrete chunks (GitLab calls them Epics)** that are largely independent projects. If a crisis arises or development is interrupted, efforts from previous epics can still be utilized within the existing residential modeling framework.
+**Total development time is at least 6 months**. However, the overall development can be **split into discrete chunks (GitLab calls them Milestones)** that are largely independent projects. If a crisis arises or development is interrupted, efforts from previous milestones can still be utilized within the existing residential modeling framework.
 
-Square brackets at the end of tasks represent the corresponding ID in the residential modeling feature list. See the spreadsheet for information about each task. Development can be split into 3 epics:
+Development can be split into 3 phases, all contained within a [single epic](https://gitlab.com/groups/ccao-data-science---modeling/-/epics/1) on GitLab:
 
-## Package and rebuild the existing residential codebase (2 months)
+## Phase 1
 
-The current residential code needs to be updated, simplified, and packaged in order to facilitate further development. Building new complexity on top of our existing codebase will not be maintainable long-term and will not meet the goals outlined above. This epic can be broken down into 4 milestones:
+**Package and rebuild the existing residential codebase (2 months)**
 
-### Milestone 1: Convert existing residential repository functions into an R package
+The current residential code needs to be updated, simplified, and packaged in order to facilitate further development. Building new complexity on top of our existing codebase will not be maintainable long-term and will not meet the goals outlined above. This phase can be broken down into 4 milestones:
 
-**Due:** May 15, 2020
+* [Milestone 1: Consolidate Res. Functions Into Packages](https://gitlab.com/groups/ccao-data-science---modeling/-/milestones/13)
+* [Milestone 2: Simplify Data Ingest for Res. Rebuild](https://gitlab.com/groups/ccao-data-science---modeling/-/milestones/11)
+* [Milestone 3: Setup Data Warehouse Infrastructure](https://gitlab.com/groups/ccao-data-science---modeling/-/milestones/12)
+* [Milestone 4: Update Residential Pipeline Codebase](https://gitlab.com/groups/ccao-data-science---modeling/-/milestones/14)
 
-**Goal:** Move existing _CCAO-specific_ functionality into its own package (named ccao). This will allow us better add, maintain, share, and document functions like COD calculation or adding characteristics.
+## Phase 2
 
-**Parties involved:**
+**Setup integrity checks, integrations, and new data pipelines (2 months)**
 
-- Dan Snow: lead developer
-- Billy Ridgeway: maintainer and advisor on functions needs
+This phase encompasses data integrity checks, new data discovery, feature engineering, and data architecture tasks that need to occur before modeling.
 
-**Time estimate:** 32-64 hours
+* [Milestone 1: Setup Data Integrity Checks](https://gitlab.com/groups/ccao-data-science---modeling/-/milestones/16)
+* [Milestone 2: Integrate 288s, 299s, and 399s in Modeling Data](https://gitlab.com/groups/ccao-data-science---modeling/-/milestones/17)
+* [Milestone 3: Collect New Spatial Data](https://gitlab.com/groups/ccao-data-science---modeling/-/milestones/18)
+* [Milestone 4: Build Better Sales Comps Algorithm](https://gitlab.com/groups/ccao-data-science---modeling/-/milestones/19)
 
-**Problem to solve:** Difficulty in distributing and maintaining critical model performance assessment functions and other utility functions used widely within the assessment pipeline. Dependency on the existence of local files (99\_utility.R).
+## Phase 3
 
-**Problem severity:** Moderate to low (Minor time cost associated with current distribution method. More significant cost if existing measurement functions are not used consistently).
+**Build new models and improve existing ones (3 months)**
 
-**Project risk level:** Low (Little to no potential for failure, minor problems if failed)
+Once the data and modeling framework is complete (Phase 1) and new sources of data are investigated and collected (Phase 2), we can begin the process of actually modeling. This phase will likely be the most difficult and time consuming. Modeling in the wake of Covid-19 may prove especially difficult.
 
-**Tasks involved:**
-
-1. Create a separate repo with a new git history (suggested package name = assessr)
-2. Transfer existing utility code to new repo, generalize all functions
-3. Transfer existing Residential code to new repo (functions only), generalize
-4. Add standardized documentation to all functions (roxygen2)
-5. Add unit tests to all functions
-6. Add integration tests to all functions where applicable
-7. Integrate roxygen documentation into GitLab and DS Wiki
-8. Build CI scripts to automatically run unit and integration tests
-
-### Milestone 2: Simplify and extend data ingest methods
-
-**Due:** May 22, 2020
-
-**Goal:** Simplify and clean existing SQL tables and views, as well as add functionality to allow novel, non-SQL data such as data from the Open Data portal or new spatial data.
-
-**Parties involved:**
-
-- Dan Snow: lead developer
-- IT Admins: May be needed for certain SQL permissions, help moving and optimizing tables
-
-**Time estimate:** 32-64 hours
-
-**Problem to solve:** Current structure of the SQL server is largely ad-hoc and undocumented. New people joining the organization or using internal data must rediscover existing knowledge. Current data ingest architecture leads to reproducibility but very slow iteration and data updates. Data ingest is largely not separable from modeling.
-
-**Problem severity:** Moderate (Moderate resource/organizational cost associated with people relearning SQL knowledge, moderate to severe time cost associated with long SQL query and data retrieval times. Low impact on public outcomes)
-
-**Project risk level:** Very low (Almost no potential for failure, very minor problems if failed)
-
-**Tasks involved:**
-
-1. Inventory existing SQL tables and views
-2. Remove/archive unused tables and views
-3. Ensure all views and tables have appropriate, well-designed indices
-4. Optimize existing SQL queries and views
-5. Better define/update the residential universe of PINs needed for modeling [43]
-6. If possible, add data transformation or feature extraction for modeling to SQL views
-7. Separate R ingest files and SQL queries into discrete files
-8. Create a Dockerized ETL pipeline that can run the ingest portion of the residential pipeline (create model data)
-9. Create a Dockerized ETL pipeline to allow data ingest from Open Data portal [36]
-10. Document all data ingest functionality [22]
-
-### Milestone 3: Setup new data warehouse infrastructure
-
-**Due:** May 29, 2020
-
-**Goal:** Setup the hardware infrastructure and software to create a data warehouse. This warehouse would store cleaned modeling data, intermediate data, model objects, and results. Clean data would be ingested into this warehouse via ETL processes that run automatically via [Airflow](https://airflow.apache.org/). This facilitates faster model iteration, easy replication, and public sharing.
-
-**Parties involved:**
-
-- Dan Snow: lead developer
-- IT Admins: Computing and storage resources will be needed to set this up internally. MinIO can run on existing hardware or Nutanix VMs.
-
-**Time estimate:** 32-64 hours
-
-**Problem to solve:** Current data setup is slow, cumbersome, and system dependent. Currently, model data is ingested from SQL every time the modeling script is run. Different users must recreate the same model data for each pipeline run, leading to slow iteration and ad-hoc data storage. Models that produced assessed values are saved locally or on the O: drive but do not have standardized schema or set of associated performance statistics. Final model objects are stored on the O: drive or user machines.
-
-**Problem severity:** Moderate (Current data structure is tenable but disorganized and could lead to long term difficulties. For example, it would be difficult for us to provide the exact model and code that produced the 2018 assessed values. As modeling data grows in size the current system will become less tenable).
-
-**Project risk level:** Moderate (Some potential for failure given lack of resources. Storing data always bring risk of drive failure that could slow progress. Failure of this project could significantly limit progress on the rest of the pipeline).
-
-**Tasks involved:**
-
-1. Provision new VMs or servers with the help of IT
-2. Setup [minIO](https://github.com/minio/minio/) to serve as a storage server backend. This replicates Amazon&#39;s S3 storage service
-3. Setup monitoring of minIO usage via Grafana
-4. Test interface of minIO and integration with R via S3 API
-5. Setup PSQL server to server as backend for modeling data
-6. Point ETL pipelines created in step 2 toward new warehouse
-7. Setup Airflow to automatically run ETL processes and future pipeline
-8. Document new changes to data and model object storage in wiki
-
-### Milestone 4: Update residential pipeline to use new CCAO package, tidymodels syntax
-
-**Due:** June 19, 2020
-
-**Goal:** Simplify the residential modeling pipeline to make it easier to use, more robust, and simpler to maintain. Make iterating on models and testing new ones _significantly_ easier.
-
-**Parties involved:**
-
-- Dan Snow: lead developer
-- Billy Ridgeway: maintainer and advisor
-
-**Time estimate:** 4-5 weeks
-
-**Problem to solve:** Current residential modeling pipeline is complex and difficult to change. Small errors and data quality issues sometimes arise that lead to significant misvaluations (though they are usually caught). Adding new models to the pipeline is a manual task only able to be done by 1-2 people.
-
-**Problem severity:** Moderate to severe (Maintenance and model iteration using the current residential pipeline costs a significant amount of organization time/resources on a regular basis. Complexity in the existing codebase sometimes leads to errors that are discovered by the public).
-
-**Project risk level:** Moderate (Rebuilding the pipeline carries a risk of changing _how_ values are created, making us internally inconsistent with our past selves. Failure of this project would stop progress on any further milestones).
-
-**Tasks involved:**
-
-1. Create a fork of the existing residential repository (called V2)
-2. Replace existing CCAO functions with those from new CCAO package
-3. Replace current package management system with renv environment
-4. Replace data ingest with ETL processes created in Milestones 2/3
-5. Convert existing pipeline steps/scripts into tidyverse syntax
-6. Replace preprocessing, model selection, and tuning with tidymodels syntax [32]
-7. Modify trimming of outliers using tidymodels [47]
-8. Add better cross-validation to prevent overfitting [42]
-9. Integrate model and data storage with MinIO
-10. Integrate model and metrics collection with PSQL
-11. Document these changes to the residential pipeline in the res and DS wikis [23, 24]
-12. Document data integrations and usage
-13. Update post-modeling adjustment scripts and functionality
-14. Document post-modeling adjustments [25]
-
-### Milestone 5: Get modeling sandbox/comparison operational
-
-**Due:** June 26, 2020
-
-**Goal:** Create a simplified UI layer on top of the modeling pipeline that allows end users to create and test new models.
-
-**Parties involved:**
-
-- Dan Snow: lead developer
-- Damini Sharma: secondary developer/consulting on original code
-
-**Time estimate:** 32-64 hours
-
-**Problem to solve:** Current residential pipeline can only by run by highly technical people. This prevents other users and members of the office from contributing domain knowledge about which models/features may perform best.
-
-**Problem severity:** Severe (If the modeling pipeline is to be long-lived and useful, it must be accessible. If this project is not completed, testing new models will be much more burdensome).
-
-**Project risk level:** Low (This project has a low change of failure and a high reward. Do this project.).
-
-**Tasks involved:**
-
-1. Refactor Damini&#39;s existing sandbox code to sit on top of the new pipeline code.
-  1. Change data ingest to use data warehouse
-  2. Change RMarkdown file to interface with new pipeline
-  3. Alter results storage to output to data warehouse? Need to think about how to store and compare model results
-2. Document the usage of the sandbox
-3. Create a graph of dependencies that shows points of potential failure
-
-## Setup integrity checks, integrations, and new data pipelines (2 months)
-
-This epic encompasses data integrity checks, new data discovery, feature engineering, and data architecture tasks that need to occur before modeling.
-
-### Milestone 1: Verify existing data integrity and create better data validation processes
-
-**Due:** July 3, 2020
-
-**Goal:** The goal of this milestone is to design systems or modules that verify the integrity of CCAO data.
-
-**Parties involved:**
-
-- Dan Snow: lead developer
-- Billy Ridgeway: advisor and data expert
-- Tristan G. Calvo: already designed some data integrity checks
-- IT Admins: knowledge about existing data systems and eccentricities
-
-**Time estimate:** 32-64 hours
-
-**Problem to solve:** CCAO&#39;s current data architecture is designed specifically to accommodate a legacy system. This introduces constant data integrity issues such as: randomly missing entire SQL tables, extremely strange handling of otherwise common fields (age), data errors from users, etc. These issues can sometimes go undetected and lead to misvaluations.
-
-**Problem severity:** Severe (Data integrity issues happen almost constantly (at least weekly) and significantly affect the ability of the department to produce accurate valuations. The public sometimes discovers valuations that are a result of these data issues).
-
-**Project risk level:** Low (Very little potential for failure with enormous benefits. Do this project).
-
-**Tasks involved:**
-
-1. Integrate the data integrity report into model data creation as an Airflow pipeline component
-2. Create a process for spreadsheet based desktop review process outside of the AS400
-3. Add a function to automatically flag properties with incorrect classes [44]
-4. Create a minimal script which automatically outputs model values in AS400 format [46]
-5. Automatic detection of invalid fixed effects (low number of sales in neighborhood, few of specific class of sale) [34]
-6. Document (wiki) and create SOPs for desktop review process [26, 27]
-7. Document any process changes to the residential pipeline
-8. Investigate whether fire data can be used to update property records or offer reductions in AV automatically [28]
-
-### Milestone 2: Integrate 288s, 299s, and 399s into modeling data
-
-**Due:** July 17, 2020
-
-**Goal:** Create an improved process for handling 288s, 299s, and 399s and create process documentation.
-
-**Parties involved:**
-
-- Dan Snow: lead developer
-- Billy Ridgeway: advisor and data expert
-- Valuations: advice on how to best handle 299s and 399s
-
-**Time estimate:** 1-2 weeks
-
-**Problem to solve:** Currently, properties with 288 exemptions are valued in a hybrid manner. First, we model the original structure. Then, the value of the 288 is determined by M&S cost tables. This may produce disuniformity, and it is certainly complicated and opaque.Commercial valuations spends a lot of time on 399s, and different valuation approaches may produce differences in valuation. Often, there is no material difference between 299s and 399s and they can be effectively bundled.
-
-**Problem severity:** Moderate to severe (The complication created by the current 288 process leads to strange valuations and disuniformity. This is sometimes discovered by the public. Valuations for 299s and 399s are sometimes inconsistent).
-
-**Project risk level:** Moderate to high (Given the difficulty of accurately integrating 288 characteristics across all properties, this project carries some risk. Done poorly, this could lead to misvaluations).
-
-**Tasks involved:**
-
-1. Build an updated function (addchars) or module that can add characteristics data from 288s to model data [16]
-2. Document this new process for 288 handling [17]
-3. Test the effect of including 288s on sales ratio studies [18]
-4. Update SOPs to account for 288 inclusion in modeling data [19]
-5. Bundle 299s with 399s in the modeling data [40]
-
-### Milestone 3: Investigate and collect new sources of spatial data
-
-**Due:** July 24, 2020
-
-**Goal:** Investigate the viability of new spatial data sources and incorporate them into the pipeline if warranted. Validate existing spatial methods. Create metrics for measuring spatial discontinuity and autocorrelation.
-
-**Parties involved:**
-
-- Dan Snow: lead developer
-- Center for Spatial Data Science (CSDS) at UChicago: can help verify methods and data
-- Data Science for Social Good (DSSG): can significantly assist with data exploration and collection and can help measure the validity of spatial models
-
-**Time estimate:** 1-2 weeks
-
-**Problem to solve:** The existing residential pipeline lacks spatial information needed for more accurate and unbiased predictions. The current use of spatial fixed effects models sometimes produces sharp discontinuities in assessed value along neighborhood/township boundaries.
-
-**Problem severity:** Moderate to severe (Lack of spatial information leads to less accurate models. Public may find existing spatial discontinuities strange).
-
-**Project risk level:** Moderate (Incorrectly including spatial information could lead to worse performance and/or model bias. Project failure could hurt long-term model performance).
-
-**Tasks involved:**
-
-1. Investigate/integrate walking distance to CTA/Metra stations [1, 2]
-2. Investigate/integrate straight-line distance to noisy rail lines and roads [3, 4]
-3. Investigate/integrate measures of local crime rate [5, 6, 7]
-4. Investigate school quality and distance [8, 9, 10, 11]
-5. Investigate walk-score and other measures of neighborhood spatial quality [12, 13]
-6. Measure percentage of vacant land nearby [14]
-7. Measure of historic redlining [15]
-8. Investigate whether new neighborhood boundaries or strata can improve model performance [33]
-9. Better account for the effects of spatial autocorrelation
-10. Include measure of the distance to Austin Blvd in Oak Park [37]
-11. Investigate the effect of local hedonic pricing indices [39]
-12. Investigate the potential for matching building footprint data to res characteristics data [49]
-
-### Milestone 4: Build better sale comp finding algorithms
-
-**Due:** July 31, 2020
-
-**Goal:** Update the methodology used to find sales comps to be more logical, performant, and consistent. Provide documentation on the process of finding these comparables.
-
-**Parties involved:**
-
-- Dan Snow: lead developer
-- Data Science for Social Good (DSSG): may be able to assist the developing new algorithms
-
-**Time estimate:** 1-2 weeks
-
-**Problem to solve:** Property owners expect to see sensible nearby sales comps, which we currently struggle to provide. When we do provide sales comps, we are largely unable to explain how we found them. Additionally, the existing models that use sales comparables underperform standard regression models. This may be the fault of the comparables finding algorithm rather than the fault of the model.
-
-**Problem severity:** Severe (We must be able explain to property owners how we find any comps we show them. The current methods for comp finding result in strange and inconsistent comps (sometimes very far away from the target property)).
-
-**Project risk level:** High (There is high potential for this project to fail due to poor data and data capacity issues. Additionally, this is essentially a separate, very difficult machine learning problem that is separate from the primary task of modeling).
-
-**Tasks involved:**
-
-1. Design and test new algorithms for identifying sales comparables [29]
-2. Create a whitepaper explaining our comp finding methodology [30]
-3. Create a system to export comparables to other systems or store them in SQL [31]
-4. Document the new comp finding process in the wiki
-
-## Build new models and improve existing ones (3 months)
-
-Once the data and modeling framework is complete (Epic 1) and new sources of data are investigated and collected (Epic 2), we can begin the process of actually modeling. This epic will likely be the most difficult and time consuming. Modeling in the wake of Covid-19 may prove especially difficult.
-
-### Milestone 1: Replicate existing model results, establish baselines, document process
-
-**Due:** August 7, 2020
-
-**Goal:** Replicate (to the extent possible) existing model results to ensure validity and internal consistency. Create a baseline model of all Cook County to use as a performance minimum/baseline. Document the process of running the model from end-to-end.
-
-**Parties involved:**
-
-- Dan Snow: lead developer
-- Billy Ridgeway: advisor on previous model design and performance
-
-**Time estimate:** 16-32 hours
-
-**Problem to solve:** Our new pipeline should be internally consistent when compared to previous models. This does not mean having exactly the same numbers for every property. Rather, we want the coefficients of a baseline model to be in line with those of previous models.
-
-**Problem severity:** Low (This is more of a nice-to-have, no a need-to-have).
-
-**Project risk level:** Low (This project has a very low potential for failure and could possibly be skipped).
-
-**Tasks involved:**
-
-1. Run a baseline model using the old residential pipeline, using microbenchmark to do timing tests
-2. Run a baseline (lm) model using new pipeline, compare to previous
-3. Run baseline non-linear models for the entire county
-4. Compare the baseline model results to previous model results
-5. Diagnose and correct any potential problems with the modeling pipeline
-6. Document the full pipeline run process
-
-### Milestone 2: Feature engineering, tweak modeling pipeline for different attributes/classes
-
-**Due:** August 21, 2020
-
-**Goal:** Build modules that increase the performance of the model for specific types of properties or for specific scenarios. Additionally, do feature engineering to discover highly predictive attributes.
-
-**Parties involved:**
-
-- Dan Snow: lead developer
-- David Aarons and William Caballero: knowledge of most impactful features
-- Data Science for Social Good (DSSG): may be able to assist with new feature development
-
-**Time estimate:** 2-3 weeks
-
-**Problem to solve:** The current modeling pipeline must be manually adjusted to account for different scenarios and property classes. It may be possible to automate some of this adjustment. Additionally, the highest performing models require significant upfront work to determine which features/attributes of the data will yield the most predictive power. Without this work, our models will always be suboptimal.
-
-**Problem severity:** Moderate to severe (Our current models cannot account for certain property types such as vacant land, or certain situations such as recessions. This could lead to misvaluations or errors).
-
-**Project risk level:** High (Poorly implementing one of these adjustments could lead to significant misvaluations. If the project fails we may need to scramble for an alternative for these specific properties).
-
-**Tasks involved:**
-
-1. Create a mechanism for detecting and modeling major market fluctuations [45]
-2. Create a mechanism that automatically adjusts for regressivity in our predictions [41]
-3. Create a mechanism for valuing vacant and developed land [35]
-4. Create a mechanism for valuing cooperatives [48]
-5. Rebuild/redesign the existing condominium strata functionality
-6. Design and test new features, interaction terms, etc
-
-### Milestone 3: Build the best model possible for the 2021 city assessment
-
-**Due:** 2021
-
-**Goal:** Build a model (or set of models) that performs better than the baseline established in milestone 1. This model should be broadly generalizable to the rest of the county (not overfit to the City).
-
-**Parties involved:**
-
-- Dan Snow: lead developer
-- Data Science for Social Good (DSSG): may be able to assist with new feature development
-
-**Time estimate:** 2 months
-
-This milestone is more open-ended and doesn&#39;t have a discrete set of tasks. We will need to continuously iterate and experiment to find a model (or models) that perform well but are not overfit to the city.
-
-This process will be time consuming and will require significant statistical expertise. This will likely be the hardest task of the proposal, but has high potential payoff as it could ultimately yield significantly more accurate assessed values. We will also need to determine exactly how to measure model performance against the baseline.
+* [Milestone 1: Run Baseline Models with New Pipeline](https://gitlab.com/groups/ccao-data-science---modeling/-/milestones/20)
+* [Milestone 2: Complete Feature Engineering and Automatic Modeling Adjustments](https://gitlab.com/groups/ccao-data-science---modeling/-/milestones/21)
+* [Milestone 3: Build 2021 City Assessment Model](https://gitlab.com/groups/ccao-data-science---modeling/-/milestones/22)
 
 # Constraints
 
