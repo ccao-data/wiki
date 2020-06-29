@@ -144,6 +144,8 @@ See the [Version Control and Workflow](handbook.md#version-control-and-workflow)
 
 Interns will need to manually record their hours on a paper timesheet which is turned in at the end of each week. The timesheet can be found [here :page_facing_up:](intern-signin-sheet.pdf).
 
+While working remotely, email your timesheet to KJackson@cookcountyassessor.com and CC RRoss@cookcountyassessor.com.
+
 ---
 
 :fire:
