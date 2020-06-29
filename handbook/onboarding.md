@@ -94,7 +94,7 @@ R will automatically load [environmental variables](https://medium.com/chingu/an
 
 1. Create a `.Renviron` file inside your HOME folder (`"My Documents"` on Windows, `~` on *nix systems)
 2. Create an environmental variable equal to an ODBC-formatted connection string for the server you want to connect to within the `.Renviron` file. For example, `DB_CONFIG_CCAODATA=Driver={ODBC Driver 17 for SQL Server};Server=10.124.134.118;Database=CCAODATA;Uid=CCAODATAR;Pwd=PASSWORD;`. This will create a variable named `DB_CONFIG_CCAODATA`.
-3. Restart R/RStudio to load the environmental variable into R. You can access the variable's value using `Sys.genenv()`. For example, `Sys.getenv("DB_CONFIG_CCAODATA")` will access the variable created above.
+3. Restart R/RStudio to load the environmental variable into R. You can access the variable's value using `Sys.getenv()`. For example, `Sys.getenv("DB_CONFIG_CCAODATA")` will access the variable created above.
 4. Connect to the database using the `.connection_string` argument of the `dbConnect()` function from `DBI`. A full example would look like:
  
 ```r
@@ -144,7 +144,7 @@ See the [Version Control and Workflow](handbook.md#version-control-and-workflow)
 
 Interns will need to manually record their hours on a paper timesheet which is turned in at the end of each week. The timesheet can be found [here :page_facing_up:](intern-signin-sheet.pdf).
 
-While working remotely, email your timesheet to KJackson@cookcountyassessor.com and CC RRoss@cookcountyassessor.com by 2pm every Friday.
+While working remotely, email your timesheet to: KJackson@cookcountyassessor.com and CC: RRoss@cookcountyassessor.com by 2pm every Friday.
 
 ---
 
