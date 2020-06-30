@@ -24,3 +24,4 @@
  * [:file_folder: SQL Database Guide](data/sql-database-guide.md)
  * [:bank: Property Class Definitions](data/class-definitions.pdf) - *Available via the [CCAO R package](https://gitlab.com/ccao-data-science---modeling/packages/ccao)*
  * [:round_pushpin: Township Definitions](data/townships.md) - *Available via the [CCAO R package](https://gitlab.com/ccao-data-science---modeling/packages/ccao)*
+ * [:thumbsdown: Appeal Reason Codes](https://prodassets.cookcountyassessor.com/s3fs-public/form_documents/reasoncodes.pdf) - *Used in the DKEMPL SQL table*
