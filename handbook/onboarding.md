@@ -37,6 +37,7 @@ The property assessment world involves a lot of real estate-specific jargon and 
 * [SSMSBoost](https://www.ssmsboost.com/) - (Optional) Add-on to SMSS that adds handy features
 * [PuTTY](https://www.putty.org/) - SSH client and key generator
 * [Teams](https://products.office.com/en-us/microsoft-teams/download-app) - Main CCAO DS communications app
+* [Microsoft ODBC Driver 17 for SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=56567) - Necessary to connect to SQL through R
 
 # Initial Setup
 
