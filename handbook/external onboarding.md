@@ -9,6 +9,7 @@ Please read the content below to get started.
 Take a moment to bookmark these commonly used CCAO links:
 
 **External**
+
 * [CCAO GitLab](https://gitlab.com/ccao-data-science---modeling) - Main source for all Data Science Department code
 * [IAAO Technical Standards](https://iaao.org/wcm/Resources/Technical_Standards/wcm/Resources_Content/Pubs/Technical_Standards.aspx) - Technical standards and measurements for the assessment field
 
