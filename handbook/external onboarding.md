@@ -1,8 +1,8 @@
-# Onboarding for internal new hires
+# Onboarding for external contributors
 
-Welcome to the Cook County Assessor's Office Data Science Department! We're excited to have you! 
+Thank you for becoming an external partner to the Cook County Assessor's Data Science Department.
 
-Please read the content below to get started. Once finished, please take a bit of time to read the [handbook](handbook.md) as well. If you have any questions, feel free to ask `@sweatyhandshake` or `@dfsnow`.
+Please read the content below to get started. 
 
 # Bookmarks
 
@@ -12,20 +12,17 @@ Take a moment to bookmark these commonly used CCAO links:
 * [CCAO GitLab](https://gitlab.com/ccao-data-science---modeling) - Main source for all Data Science Department code
 * [IAAO Technical Standards](https://iaao.org/wcm/Resources/Technical_Standards/wcm/Resources_Content/Pubs/Technical_Standards.aspx) - Technical standards and measurements for the assessment field
 
-**Internal**
-* [Data Science Wiki](https://datascience.cookcountyassessor.com/wiki) - This wiki, you're already here!
-* [Data Science Application Server](https://datascience.cookcountyassessor.com/shiny) - Shiny server that launches CCAO Shiny applications. Login with Windows credentials
-* [App Monitoring Server](https://datascience.cookcountyassessor.com/grafana/) - Dashboards for monitoring app usage, pipeline processes, etc. Ask `@dfsnow` for login
+# Developer Engagement Documents
 
-> :warning: The internal application locations above will have a security warning when you first visit them. This warning can safely be ignored. Click **Advanced --> Accept the risk** to bypass the warning.
+Before we can begin collaborating on a project, we need a collaborator agreement. Please review the [introduction letter](https://gitlab.com/ccao-data-science---modeling/ccao_sf_cama_dev/-/blob/master/collaborator.documents/Developer%20Engagement%20Introduction%20Letter.pdf) for an overview of the documents that are required by our external collaboration program. Please email these completed documents to datascience@cookcountyassessor.com.
 
-# Vocabulary
+# Virtural Private Network
 
-The property assessment world involves a lot of real estate-specific jargon and vocabulary. A non-exhaustive list of commonly used vocabulary can be found in the [Sales Ratio Studies SOP](../sops/sales-ratio-studies.md#definitions).
+You will need a VPN to access internal CCAP databases and servers. Please request VPN documents from datascience@cookcountyassessor.com, complete them, and return them to datascience@cookcountyassessor.com. 
 
 # Accounts to Create
 
-* [GitLab](https://gitlab.com/) - Needed to contribute to the CCAO codebase (use your @cookcountyassessor.com email to make an account)
+* [GitLab](https://gitlab.com/) - Needed to contribute to the CCAO codebase.
 * [Bitbucket](https://bitbucket.org/) - Needed only for Sourcetree install
 
 # Programs to Install
@@ -44,7 +41,7 @@ The property assessment world involves a lot of real estate-specific jargon and 
 ## Git, GitLab, and Sourcetree
 
 1. Set up your GitLab and Bitbucket accounts
-2. If you don't already have a pending invite to the [CCAO GitLab](https://gitlab.com/ccao-data-science---modeling) group, request one from `@sweatyhandshake`
+2. If you don't already have a pending invite to the [CCAO GitLab](https://gitlab.com/ccao-data-science---modeling) group, request one from datascience@cookcountyassessor.com.
 3. Install programs
    * Link your Bitbucket account to Sourcetree during Sourcetree installation
    * When Sourcetree asks you to install mercurial and git, select **Yes** for both
@@ -117,10 +114,6 @@ CCAODATA <- dbConnect(odbc(), .connection_string = Sys.getenv("DB_CONFIG_CCAODAT
 
  After installation, ask `@sweatyhandshake` for an invite to the Data Science "Team" within the CCAO group.
 
-## VPN Client
-
- You should recieve and email during onboarding from Admins or NCC with instructions on how to set up and access the CCAO network through a VPN. For VPN troubleshooting, email the CCAO [Admins](mailto:admins@cookcountyassessor.com).
-
 # Issue Resolution
 
 The CCAO Data Science team uses [GitLab Flow](https://docs.gitlab.com/ee/topics/gitlab_flow.html) to structure its workflow. GitLab Flow uses a basic branch-per-issue system. Each issue or new feature is tied to a branch and merge request. Work is done on the branch, then merged to `master` after testing and review. Here's an example of a typical workflow:
@@ -140,12 +133,6 @@ The CCAO Data Science team uses [GitLab Flow](https://docs.gitlab.com/ee/topics/
 4. When you have finished working on the issue, request approval for your merge request let your supervisor know you've finished working the issue.
 
 See the [Version Control and Workflow](handbook.md#version-control-and-workflow) section of the handbook for more information.
-
-# Intern Timesheets
-
-Interns will need to manually record their hours on a paper timesheet which is turned in at the end of each week. The timesheet can be found [here :page_facing_up:](intern-signin-sheet.pdf).
-
-While working remotely, email your timesheet to: KJackson@cookcountyassessor.com and CC: RRoss@cookcountyassessor.com by 2pm every Friday.
 
 ---
 
