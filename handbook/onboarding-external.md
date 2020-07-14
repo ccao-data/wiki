@@ -1,6 +1,6 @@
-# Onboarding for external contributors
+# Onboarding for External Contributors
 
-Thank you for becoming an external partner to the Cook County Assessor's Data Science Department.
+Thank you for partnering with the Cook County Assessor's Data Science Department.
 
 Please read the content below to get started. 
 
@@ -12,17 +12,17 @@ Take a moment to bookmark these commonly used CCAO links:
 
 * [CCAO GitLab](https://gitlab.com/ccao-data-science---modeling) - Main source for all Data Science Department code
 * [IAAO Technical Standards](https://iaao.org/wcm/Resources/Technical_Standards/wcm/Resources_Content/Pubs/Technical_Standards.aspx) - Technical standards and measurements for the assessment field
-* [The Cook County Assessor's PIN search](https://www.cookcountyassessor.com/address-search) - Our office's application to find information about a PIN
-* [Cook County Property info](http://www.cookcountypropertyinfo.com/) - The county's application to find information about a PIN.
+* [The Cook County Assessor's PIN Search](https://www.cookcountyassessor.com/address-search) - Our office's application to find information about a PIN
+* [Cook County Property Info](http://www.cookcountypropertyinfo.com/) - The County's application to find information about a PIN
 * [Cook Viewer](https://maps.cookcountyil.gov/cookviewer/mapViewer.html) - A GIS application for finding PINs.
 
 # Developer Engagement Documents
 
-Before we can begin collaborating on a project, we need a collaborator agreement. Please review the [introduction letter](https://gitlab.com/ccao-data-science---modeling/ccao_sf_cama_dev/-/blob/master/collaborator.documents/Developer%20Engagement%20Introduction%20Letter.pdf) for an overview of the documents that are required by our external collaboration program. Please email these completed documents to datascience@cookcountyassessor.com.
+Before we can begin collaborating on a project, we need a collaborator agreement. Please review the [introduction letter](https://gitlab.com/ccao-data-science---modeling/ccao_sf_cama_dev/-/blob/master/collaborator.documents/Developer%20Engagement%20Introduction%20Letter.pdf) for an overview of the documents that are required by our external collaboration program. Please email the completed documents to datascience@cookcountyassessor.com.
 
 # Virtural Private Network
 
-You will need a VPN to access internal CCAP databases and servers. Please request VPN documents from datascience@cookcountyassessor.com, complete them, and return them to datascience@cookcountyassessor.com. 
+You will need a VPN to access internal CCAO databases and servers. Please request VPN documents from datascience@cookcountyassessor.com, complete them, and return them to datascience@cookcountyassessor.com. 
 
 # Accounts to Create
 

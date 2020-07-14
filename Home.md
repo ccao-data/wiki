@@ -2,8 +2,8 @@
 
 # The Data Science Department
 
- * [:handshake: Onboarding for new CCAO employees](handbook/onboarding.md)
- * [:handshake: Onboarding for external contributors](handbook/external onboarding.md)
+ * [:handshake: Onboarding for New CCAO Employees](handbook/onboarding.md)
+ * [:handshake: Onboarding for External Contributors](handbook/onboarding-external.md)
  * [:wave: Offboarding](handbook/offboarding.md)
  * [:blue_book: Handbook](handbook/handbook.md)
  * [:construction_worker: Contributing](contributing/contributing.md)

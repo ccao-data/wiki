@@ -1,4 +1,4 @@
-# Onboarding for internal new hires
+# Onboarding for Internal CCAO Employees
 
 Welcome to the Cook County Assessor's Office Data Science Department! We're excited to have you! 
 
@@ -13,9 +13,9 @@ Take a moment to bookmark these commonly used CCAO links:
 * [IAAO Technical Standards](https://iaao.org/wcm/Resources/Technical_Standards/wcm/Resources_Content/Pubs/Technical_Standards.aspx) - Technical standards and measurements for the assessment field
 * [CCAO GitLab](https://gitlab.com/ccao-data-science---modeling) - Main source for all Data Science Department code
 * [IAAO Technical Standards](https://iaao.org/wcm/Resources/Technical_Standards/wcm/Resources_Content/Pubs/Technical_Standards.aspx) - Technical standards and measurements for the assessment field
-* [The Cook County Assessor's PIN search](https://www.cookcountyassessor.com/address-search) - Our office's application to find information about a PIN
-* [Cook County Property info](http://www.cookcountypropertyinfo.com/) - The county's application to find information about a PIN.
-* [Cook Viewer](https://maps.cookcountyil.gov/cookviewer/mapViewer.html) - A GIS application for finding PINs.
+* [The Cook County Assessor's PIN Search](https://www.cookcountyassessor.com/address-search) - Our office's application to find information about a PIN
+* [Cook County Property Info](http://www.cookcountypropertyinfo.com/) - The County's application to find information about a PIN
+* [Cook Viewer](https://maps.cookcountyil.gov/cookviewer/mapViewer.html) - A GIS application for finding PINs
 
 **Internal**
 * [Data Science Wiki](https://datascience.cookcountyassessor.com/wiki) - This wiki, you're already here!
