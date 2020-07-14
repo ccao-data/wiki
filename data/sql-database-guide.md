@@ -4,7 +4,32 @@
 
 # Data Dictionaries
 
-All data dictionary materials can be found in the [Residential Repository](https://gitlab.com/ccao-data-science---modeling/ccao_sf_cama_dev/-/tree/master/data_dictionary_constituents)
+| HEAD COLUMN | DESCRIPTION |
+| ------ | ------ |
+| HD_PIN | parcel ID number, not left padded |
+| HD_VOL | - |
+| HD_TOWN | 5 digit tax code, use first two digits for township |
+| HD_CLASS | class code |
+| HD_NBHD | neighborhood |
+| HD_ASS_LND | land AV |
+| HD_ASS_BLD | improvement AV |
+| HD_PRI_LND | prior year land AV |
+| HD_PRI_BLD | prior year improvement AV |
+| HD_NAME | mailing name |
+| HD_DEED_TYPE | - |
+| HD_SDATE | most recent sale date |
+| HD_SPRICE | most recent sale price |
+| HD_HD_SF | land square footage |
+| HD_STREET_CODE | - |
+| HD_HOUSE_NO | - |
+| HD_ADDR | address |
+| HD_CITY | city |
+| HD_ZIP | zip code |
+| HD_DOCUMENT | unique sale document no. (do not use for joins) |
+| TAX_YEAR | assessment year |
+| PIN | parcel ID number, left padded |
+
+All other data dictionary materials can be found in the [Residential Repository](https://gitlab.com/ccao-data-science---modeling/ccao_sf_cama_dev/-/tree/master/data_dictionary_constituents)
 
 # Table Definitions
 
