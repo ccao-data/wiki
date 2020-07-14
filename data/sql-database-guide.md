@@ -25,7 +25,7 @@
 | HD_ADDR | address |
 | HD_CITY | city |
 | HD_ZIP | zip code |
-| HD_DOCUMENT | unique sale document no. (do not use for joins) |
+| HD_DOCUMENT | unique sale document number (do not use for joins) |
 | TAX_YEAR | assessment year |
 | PIN | parcel ID number, left padded |
 
