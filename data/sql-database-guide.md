@@ -116,7 +116,7 @@ Database of exemptions homeowners are recieving/have recieved:
 * 'HS' = Senior Exemption
 * 'SF' = Senior Freeze 
 
-## VIEWS
+# View Definitions
 *Views are combinations of tables that exist as queries rather than a physical flat file.  They must be assembled each time they're referenced.*
 
 ***VW_CLEAN_IDORSALES***  
