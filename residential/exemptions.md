@@ -1,5 +1,7 @@
 # Residential Exemptions 
 
+# Table of Contents
+
 This exemptions documentation contains four main elements:
 
  * UIC Capstone Team deliverable: [HTML reference tool](exemptions/exem_process.html)

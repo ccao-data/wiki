@@ -15,7 +15,7 @@
 
 # Residential
 
- * [:house: Sales Comparables](residential/residential.md)
+ * [:house: Sales Comparables](residential/sales-comps.md)
  * [:heavy_check_mark: Exemptions](residential/exemptions.md)
  * [:chart_with_downwards_trend: Sandbox Model Evaluation](residential/sandbox-model-evaluation.md)
  * [:rocket: 2020 Upgrade Plan](residential/pipeline/upgrade-plan-2020.md)
