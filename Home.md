@@ -19,6 +19,7 @@
  * [:heavy_check_mark: Exemptions](residential/exemptions.md)
  * [:chart_with_downwards_trend: Sandbox Model Evaluation](residential/sandbox-model-evaluation.md)
  * [:rocket: 2020 Upgrade Plan](residential/pipeline/upgrade-plan-2020.md)
+ * [:heavy_plus_sign: Home Improvement Exemptions (288s)](residential/addchars.md)
 
 # Technical Documentation
 
