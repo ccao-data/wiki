@@ -180,7 +180,13 @@ $$
 \text{Sales Ratio}_t = \frac{\text{Assessor's Estimated Fair Cash Value}_t}{\text{Sale Price}_{t - 1}} \\ \forall \; \;  t \in [t-1, t]
 $$
 
-For example, sales ratios reported during the 2019 re-assessment for assessments in 2018 and 2019 should use sales in 2017 and 2018 respectively in their denominators.
+For example, sales ratios reported during the 2019 re-assessment for assessments in 2018 and 2019 should use sales in 2017 and 2018 respectively in their denominators. The table below shows how sales ratios should be calculated for each tax year in each reporting year.
+
+| Year assessments were produced | Year in which you are reporting | Year from which you draw sales |
+| ------ | ------ | ------ |
+| 2020 | 2020 | 2019 |
+| 2020 | 2021 | 2019 |
+| 2020 | 2022 | 2021 |
 
 
 ## Sales Selection
