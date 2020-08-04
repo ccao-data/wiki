@@ -89,7 +89,7 @@ The Data Science Department uses a few SQL servers to store most of its backend 
 | Monitoring Server     | Monitors DS applications               | 10.124.101.1   | 5432 | shiny    | shiny     | Ask      | Read/write  | Postgres |
 
 
-**For use in R (new way):**
+**For use in R:**
 
 R will automatically load [environmental variables](https://medium.com/chingu/an-introduction-to-environment-variables-and-how-to-use-them-f602f66d15fa) into memory from your [.Renviron file](https://www.dartistics.com/renviron.html). This can be used to load sensitive information like credentials and API keys without depending on a third-party library or function. To use this method:
 
