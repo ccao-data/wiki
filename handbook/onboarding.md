@@ -83,7 +83,7 @@ The Data Science Department uses a few SQL servers to store most of its backend 
 
 | Common Name           | Usage                                  | IP Address     | Port | DB Name  | User      | Password | Permissions | Type     |
 |-----------------------|----------------------------------------|----------------|------|----------|-----------|----------|-------------|----------|
-| CCAODATA / SQL Server | All DS operations                      | 10.124.134.118 | 1433 | CCAODATA | CCAODATAR | Ask      | Read only   | MS SQL   |
+| CCAODATA / SQL Server | All DS operations                      | 10.124.134.118 | 1433 | CCAODATA | CCAODATAR | Ask      | Read/write   | MS SQL   |
 | Reporting Server      | Reporting only, has subset of CCAODATA | 10.124.134.121 | 1433 | CCAODATA | CCAORSRV  | Ask      | Read/index  | MS SQL   |
 | RPIE Server           | RPIE backend data                      | 10.124.134.120 | 1433 | RPIE     | CCAORPIE  | Ask      | Read only   | MS SQL   |
 | Monitoring Server     | Monitors DS applications               | 10.124.101.1   | 5432 | shiny    | shiny     | Ask      | Read/write  | Postgres |
@@ -107,6 +107,8 @@ library(odbc) # required for ODBC specification
 CCAODATA <- dbConnect(odbc(), .connection_string = Sys.getenv("DB_CONFIG_CCAODATA"))
 
 ```
+
+5. If write access is needed for the CCAODATA database, ask @sweatyhandshake for the code needed to generate and store the necessary credentials. Using the code above, change `.connection_string = key_get("ccaodata_write", keyring = "ccaodata")` to connect with write priviledges.
 
 **For use in SSMS (only if SMSSBoost is installed):**
 
