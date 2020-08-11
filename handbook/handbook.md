@@ -4,24 +4,18 @@
 
 This document outlines the purpose, procedures, and best practices of the Data Science Department at the Cook County Assessor's Office.
 
-## Mission
-
 The rationale for having a separate department in the CCAO that specifically deals with data science is similar to that in the private sector: data, apart from the IT systems that store it, is a valuable enterprise asset and must be managed accordingly. This is particularly true for the CCAO, where data is absolutely critical to the mission of the agency.
 
-The mission of the Data Science Department is to build, maintain, organize, and utilize data to create value for taxpayers and facilitate production of annual property assessments. This is separate from the role of the IT department, which is to build and maintain technological enterprise assets. Specifically, the Data Science Department's Mission is to facilitate production of annual property assessments in Cook County by:
+## Mission
 
-  *  Leveraging computing and statistical techniques to estimate property's fair market values;
-  *  Leveraging existing data bases to generate insights into valuation processes;
-  *  Supporting other CCAO departments in generating machine-readable data and analyzing it;
-  *  Maintaining and improving relationships between data sets to increase their value;
-  *  Identifying opportunities to generate new valuable data;
-  *  Improving intra-office data and statistical literacy.
+The mission of the Data Science Department is to transform the Cook County Assesor's Office into the most effective property assessment office in the world.
 
 ## Vision
 
-The Data Science Department's vision is to enhance the CCAO's reputation among taxpayers and peers as a technological leader in the field of property tax assessment, and to become known for innovative, ethical, transparent, and fair assessments.
+We strive to be known as a technological leader in the field of public sector data analytics by creating an assessement office that is innovative, ethical, transparent, and fair.
 
 ## Core Values
+**Digital Democracy** - We believe that the analytic processes of government should be transparent to, and contestable by the public. As social arrangements evolve to become more complext, so too should the conception of public commons. We will operate on a public-by-default model, in which any process that is used in production is made accessible to the public.
 
 **Precision and Accuracy** - The Data Science Department is dedicated to providing precise and accurate values and analysis. It is not enough to get the numbers right some of the time, or on average. We strive for the highest level of precision and accuracy achievable, and we are committed to evaluating ourselves against the fundamental question: "did we get it right?"
 
