@@ -8,14 +8,14 @@ The rationale for having a separate department in the CCAO that specifically dea
 
 ## Mission
 
-The mission of the Data Science Department is to transform the Cook County Assesor's Office into the most effective property assessment office in the world.
+The mission of the Data Science Department is to transform the Cook County Assessor’s Office into the most effective property assessment office in the world.
 
 ## Vision
 
-We strive to be known as a technological leader in the field of public sector data analytics by creating an assessement office that is innovative, ethical, transparent, and fair.
+We strive to be known as a technological leader in the field of public sector data analytics by creating an assessment office that is innovative, ethical, transparent, and fair.
 
 ## Core Values
-**Digital Democracy** - We believe that the analytic processes of government should be transparent to, and contestable by the public. As social arrangements evolve to become more complext, so too should the conception of public commons. We will operate on a public-by-default model, in which any process that is used in production is made accessible to the public.
+**Digital Democracy** - We believe that the analytic processes of government should be transparent to, and contestable by the public. As social arrangements evolve to become more complex, so too should the conception of public commons. We will operate on a public-by-default model, in which any process that is used in production is made accessible to the public.
 
 **Precision and Accuracy** - The Data Science Department is dedicated to providing precise and accurate values and analysis. It is not enough to get the numbers right some of the time, or on average. We strive for the highest level of precision and accuracy achievable, and we are committed to evaluating ourselves against the fundamental question: "did we get it right?"
 
