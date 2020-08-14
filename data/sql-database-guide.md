@@ -101,6 +101,11 @@ A dataset of commercial PINs and the RPIE codes associated with them.
 ***DTBL_VALIDATED_IC_SALES***  
 Industrial and commercial class sales identified by whether or not they're valid and by deed number.  Commercial analysts included comments while validating sales.
 
+***DTBL_LEVIES***
+Compiled levy data by tax agency and tax code.
+
+> :warning: This table is generated in the PTAXSIM repo, *NOT* Data Architecture
+
 ## OTHER TABLES
 *These are tables that are generally sourced from the AS/400 but don't have T/TB/BR suffixes.*
 
