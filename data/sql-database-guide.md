@@ -106,6 +106,12 @@ Compiled levy data by tax agency and tax code.
 
 > :warning: This table is generated in the PTAXSIM repo, *NOT* Data Architecture
 
+## MTBL_ TABLES
+*Metrics Tables contain summary data calculated from views (see below).*
+
+***MTBL_RESIDENTIAL_DIAGOSTIC***
+Contains summary statistics and IAAO statistics for townships and triads. Used to run the diagnostic report. 
+
 ## OTHER TABLES
 *These are tables that are generally sourced from the AS/400 but don't have T/TB/BR suffixes.*
 
