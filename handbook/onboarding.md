@@ -152,6 +152,10 @@ Interns will need to manually record their hours on a paper timesheet which is t
 
 While working remotely, email your timesheet to: KJackson@cookcountyassessor.com and CC: RRoss@cookcountyassessor.com by 2pm every Friday.
 
+# Fellow Timesheets
+
+Data science fellows do not need to submit time sheets to the CCAO. They are still accountable for their time, but are paid by their academic institutions.
+
 ---
 
 :fire:
