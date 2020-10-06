@@ -65,6 +65,9 @@ Table containing township and triad names and codes.
 ## DTBL_ TABLES
 *Data Tables contain data collected, stored, or calculated from sources other than the AS/400.*
 
+***DTBL_CLASSCODES*** 
+Provides joinable text descriptions of all class codes
+
 ***DTBL_CCRDSALES***  
 Sales data received monthly from the Cook County Recorder of Deeds.
 
