@@ -145,9 +145,11 @@ See the [Version Control and Workflow](handbook.md#version-control-and-workflow)
 
 # Intern Timesheets
 
-Interns will need to manually record their hours on a paper timesheet which is turned in at the end of each week. The timesheet can be found [here :page_facing_up:](intern-signin-sheet.pdf).
+During the first week of employment, interns will need to manually record their hours on a paper timesheet which is turned in at the end of each week. The timesheet can be found [here :page_facing_up:](intern-signin-sheet.pdf). After that first week, interns will use the Cook County Time system to track their hours. Click [Dashboard login](https://www.cookcountyil.gov/cct) to log into CCT.
 
-While working remotely, email your timesheet to: KJackson@cookcountyassessor.com and CC: RRoss@cookcountyassessor.com by 2pm every Friday.
+## Choosing your hours
+
+Interns may work up to 20 hours per week. You are encouraged to do so; working 15 hours or less severly limits the quality of work you can do. Please email your preferred schedule to Rob rross@cookcountyassessor.com so that he can put it on the DS calendar.
 
 # Fellow Timesheets
 
