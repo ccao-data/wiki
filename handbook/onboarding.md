@@ -155,6 +155,9 @@ Interns may work up to 20 hours per week. You are encouraged to do so; working 1
 
 Data science fellows do not need to submit time sheets to the CCAO. They are still accountable for their time, but are paid by their academic institutions.
 
+# Additional resources
+
+[New Hire Orientation Slides](https://gitlab.com/ccao-data-science---modeling/ccao_ds_training/-/tree/master/Slides)
 ---
 
 :fire:
