@@ -145,7 +145,7 @@ See the [Version Control and Workflow](handbook.md#version-control-and-workflow)
 
 # Intern Timesheets
 
-During the first week of employment, interns will need to manually record their hours on a paper timesheet which is turned in at the end of each week. The timesheet can be found [here :page_facing_up:](intern-signin-sheet.pdf). After that first week, interns will use the Cook County Time system to track their hours. Click [Dashboard login](https://www.cookcountyil.gov/cct) to log into CCT.
+During the first week of employment, interns will need to manually record their hours on a paper timesheet which is turned in at the end of each week. The timesheet can be found [here :page_facing_up:](intern-signin-sheet.pdf). After that first week, interns will use the Cook County Time system to track their hours. Click [Dashboard login](https://www.cookcountyil.gov/cct) to log into CCT. **We recommend that you create a recurring calendar event to remind you to clock in and out.**
 
 ## Choosing your hours
 
@@ -158,6 +158,7 @@ Data science fellows do not need to submit time sheets to the CCAO. They are sti
 # Additional resources
 
 [New Hire Orientation Slides](https://gitlab.com/ccao-data-science---modeling/ccao_ds_training/-/tree/master/Slides)
+See the section [Working Remotely at the CCAO](https://datascience.cookcountyassessor.com/wiki/handbook/handbook.md) in our data science handbook.
 ---
 
 :fire:

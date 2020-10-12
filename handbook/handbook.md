@@ -64,6 +64,15 @@ The Data Science Department into two sub-departments: Data Science, which is res
 
 * [See Onboarding](onboarding.md)
 
+# Working Remotely 
+
+Due to the COVID global pandemic, the Data Science Department is working 100% remotely until further notice. This section contains tips, tricks, and requirements for working with CCAO Data Science remotely.
+
+* **Workspace:** Make sure you have a quite space with good internet access from which to work. Please make sure you have a microphone to participate in remote meetings. A camera is also a good thing to have, though not required.
+* **Weekly sprint planning:** 8:45 - 9:30 AM CT every Monday, the Data Science team meets to discuss ongoing work, problems, and new projects. Please be preapred to discuss any questions you have about your work during these meetings.
+* **Daily Standup:** Each day when you start work, please message the General chat on Microsoft Teams with a short description of the work you plan to do that day.
+* **Socializing:** The Data Science Department tries to facilitate regular social events, time and COVID permitting. Please feel free to join these, though they are not mandatory in any way.
+
 # Version Control and Workflow
 
 ## Repositories
