@@ -2,7 +2,7 @@
 
 Welcome to the Cook County Assessor's Office Data Science Department! We're excited to have you! 
 
-Please read the content below to get started. Once finished, please take a bit of time to read the [handbook](handbook.md) as well. If you have any questions, feel free to ask `@sweatyhandshake` or `@dfsnow`.
+Please read the content below to get started. Once finished, please take a bit of time to read the [handbook](handbook.md) as well. If you have any questions, feel free to ask [Billy](mailto:wridgeway@cookcountyassessor.com) or [Dan](DSnow@cookcountyassessor.com).
 
 # Bookmarks
 
