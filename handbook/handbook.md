@@ -69,9 +69,17 @@ The Data Science Department into two sub-departments: Data Science, which is res
 Due to the COVID global pandemic, the Data Science Department is working 100% remotely until further notice. This section contains tips, tricks, and requirements for working with CCAO Data Science remotely.
 
 * **Workspace:** Make sure you have a quite space with good internet access from which to work. Please make sure you have a microphone to participate in remote meetings. A camera is also a good thing to have, though not required.
-* **Weekly sprint planning:** 8:45 - 9:30 AM CT every Monday, the Data Science team meets to discuss ongoing work, problems, and new projects. Please be preapred to discuss any questions you have about your work during these meetings.
+* **Weekly sprint planning:** 8:45 - 9:30 AM CT every Monday, the Data Science team meets to discuss ongoing work, problems, and new projects. Please be prepared to discuss any questions you have about your work during these meetings.
 * **Daily Standup:** Each day when you start work, please message the General chat on Microsoft Teams with a short description of the work you plan to do that day.
 * **Socializing:** The Data Science Department tries to facilitate regular social events, time and COVID permitting. Please feel free to join these, though they are not mandatory in any way.
+
+## Communicating in a remote work environment
+
+Data Science staff are often working on multiple projects simultaneously. This means that our communication style and norms are somewhat different from those of a co-located team. Here are a few points to highlight the differences between communicating in a remote environment, and communicating in a co-located one.
+
+* **Low-context communication:**  Assume that the person you are communicating with does not know the context of your work and/or question. A simple question like 'What's the difference between AS_HEADT and AS_HEADBR?' actually has a very lengthy response, depending on the context of the question. In order to make communication efficient, try signaling the context of the question. E.g. "I am trying to report 'final' assessed values for 2019 to compare to 'initial' assessed values. Which HEAD file should I use for each set?" Take the extra time to contextualize your question.
+* **Asynchronous Communication:** In general, each team member should not expect other team members to respond quickly to questions. This is due to the variety and timing of the work we do. When you hit a stumbling block and need to ask a clarifying question, do so, and then work on a different task while you wait for a response. Similarly, unless otherwise indicated, do not interpret questions from other team members as requiring an immediate response.
+
 
 # Version Control and Workflow
 
