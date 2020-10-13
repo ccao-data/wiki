@@ -4,6 +4,8 @@ Welcome to the Cook County Assessor's Office Data Science Department! We're exci
 
 Please read the content below to get started. Once finished, please take a bit of time to read the [handbook](handbook.md) as well. If you have any questions, feel free to ask [Billy](mailto:wridgeway@cookcountyassessor.com) or [Dan](DSnow@cookcountyassessor.com).
 
+> :warning:  Mac users should first obtain a remote desktop VPN from IT and follow the remaining instructions for that terminal. This tech stack does not seem to work well with mac OS.
+
 # Bookmarks
 
 Take a moment to bookmark these commonly used CCAO links:
