@@ -56,7 +56,7 @@ In order to deliver accurate and timely work products, the Data Science Departme
 
 ## Organizational Structure
 
-The Data Science Department into two sub-departments: Data Science, which is responsible for building models and tools that enhance the CCAO's mission, and Data Analytics, which is responsible for reporting on and analyzing the performance of the Data Science Department. An [organisation chart](O:\CCAODATA\documentation\Departmental Documentation.pdf) for the department can be found on the common drive.
+The Data Science Department into two sub-departments: Data Science, which is responsible for building models and tools that enhance the CCAO's mission, and Data Analytics, which is responsible for reporting on and analyzing the performance of the Data Science Department. An [organisation chart](https://gitlab.com/ccao-data-science---modeling/ccao_ds_training/-/blob/master/Documentation/Data%20Science%20Organisation%20Chart.pdf) for the department can be found on the common drive.
 
 There are two units inside of the Data Science Department: Data Science and Data Analytics. These units perform reltated, but different types of work. The Data Science unit builds and maintains applications, pipelines, and databases. The Data Analytics department provides data extracts, writes reports, and builds dashboards. 
 
@@ -68,7 +68,7 @@ The Data Science department is building a rigorous framework for career advancem
 
 ** Leadership Track:** This track termins at the level of Chief Data Officer, and is designed to cultivate policy leaders that create and implement data-informed policy. Staff in this track are expected to master statistical concepts and advanced data analysis in excel, as well as intuition about creating value for the organisation.
 
-A more detailed description of this pipeline can be found in [these slides](https://gitlab.com/ccao-data-science---modeling/ccao_ds_training/-/blob/master/Slides/Data%20Science%20Leadership%20Pipeline.pptx) and [this excel workbook](O:\CCAODATA\documentation\Departmental Documentation\Leadership Pipeline.xlsx).
+A more detailed description of this pipeline can be found in [these slides](https://gitlab.com/ccao-data-science---modeling/ccao_ds_training/-/blob/master/Slides/Data%20Science%20Leadership%20Pipeline.pptx) and [this excel workbook](https://gitlab.com/ccao-data-science---modeling/ccao_ds_training/-/blob/master/Documentation/Leadership%20Pipeline.xlsx).
 
 # Work Terminal Setup
 
