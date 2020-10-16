@@ -8,6 +8,9 @@
  * [:blue_book: Handbook](handbook/handbook.md)
  * [:construction_worker: Contributing](contributing/contributing.md)
 
+# People Group
+ * [DRAFT DRAFT Hiring with GitLab](people/hiring with gitlab.md)
+
 # Standard Operating Procedures
 
  * [:bar_chart: Sales Ratio Studies](sops/sales-ratio-studies.md)
