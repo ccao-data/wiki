@@ -8,22 +8,52 @@ The rationale for having a separate department in the CCAO that specifically dea
 
 ## Mission
 
-The mission of the Data Science Department is to transform the Cook County Assessor’s Office into the most effective property assessment office in the world.
+The mission of the Data Science Department is to transform the Cook County Assessor's Office into the most effective property assessment office in the world.
 
 ## Vision
 
 We strive to be known as a technological leader in the field of public sector data analytics by creating an assessment office that is innovative, ethical, transparent, and fair.
 
 ## Core Values
-**Digital Democracy** - We believe that the analytic processes of government should be transparent to, and contestable by the public. As social arrangements evolve to become more complex, so too should the conception of public commons. We will operate on a public-by-default model, in which any process that is used in production is made accessible to the public.
 
-**Precision and Accuracy** - The Data Science Department is dedicated to providing precise and accurate values and analysis. It is not enough to get the numbers right some of the time, or on average. We strive for the highest level of precision and accuracy achievable, and we are committed to evaluating ourselves against the fundamental question: "did we get it right?"
+We are a mission driven department first, and our work is guided by a core set of values outlined below. 
 
-**Growth and Innovation** - The Data Science Department is committed to continual improvement and innovation. We believe that moving forward is keeping up, and standing still is falling behind. We are committed to learning and testing state-of-the-art algorithms and analytic techniques in our work.
+### Diversity, Inclusion & Belonging
 
-**Transparency and Ethics** - The Data Science Department is committed to radical transparency and high ethical standards. We operate under the assumption that all of our work will be available to highly skilled outside reviewers, and that all of our decisions will be scrutinized. As such, we will hold ourselves to the highest ethical standards, and always evaluate our work on the basis of fairness.
+We foster an environment where everyone can thrive and ensure that the Data Science Department is a place where people from every background and circumstance feel like they belong and can contribute.
 
-**Efficiency and Productivity** - The Data Science Department will never stand idle. We will strive to hold ourselves to a rigorous production schedule that results in tangible, high quality, and useful work product on a regular basis. We will strive to hold ourselves to agreed timelines, and take responsibility for missed deadlines or low quality work.
+### Precision and Accuracy
+
+We are dedicated to providing precise and accurate data and analysis. It is not enough to get the numbers right some of the time, or on average. We strive for the highest level of precision and accuracy achievable, and we are committed to evaluating ourselves against the fundamental question: "did we get it right?"
+
+### Growth and Innovation
+
+We are committed to continuous improvement and innovation. We believe that moving forward is keeping up, and standing still is falling behind. We are committed to learning and testing state-of-the-art algorithms and analytic techniques in our work.
+
+### Transparency and Ethics 
+
+Transparency and ethics mutually reinforce one another. The Data Science Department operates on a public-by-default model, [publishing all production code](https://gitlab.com/ccao-data-science---modeling), maintaining a (curated set of public data)[https://datacatalog.cookcountyil.gov/browse?tags=cook%20county%20assessor], and publishing documentation and analysis regularly. We invite the scrutiny of the public, and welcome any feedback, including criticism.
+
+
+### Efficiency and Productivity
+
+We hold ourselves to a rigorous production schedule that results in tangible, high quality, and useful work product on a regular basis. We will strive to hold ourselves to agreed timelines, and take responsibility for missed deadlines or low quality work.
+
+## Core Technical Competencies
+
+### R
+
+### Shiny
+
+### Git
+
+### Excel
+
+### Markdown
+
+### Leadership
+
+### SQL
 
 ## Project Mangagement
 
@@ -69,6 +99,36 @@ The Data Science department is building a rigorous framework for career advancem
 ** Leadership Track:** This track termins at the level of Chief Data Officer, and is designed to cultivate policy leaders that create and implement data-informed policy. Staff in this track are expected to master statistical concepts and advanced data analysis in excel, as well as intuition about creating value for the organisation.
 
 A more detailed description of this pipeline can be found in [these slides](https://gitlab.com/ccao-data-science---modeling/ccao_ds_training/-/blob/master/Slides/Data%20Science%20Leadership%20Pipeline.pptx) and [this excel workbook](https://gitlab.com/ccao-data-science---modeling/ccao_ds_training/-/blob/master/Documentation/Leadership%20Pipeline.xlsx).
+
+## Performance Review 
+
+The data science department is committed to fostering the development of its members. We believe that 360 performance evaluation is necessary to foster the development of both employees and managers. Performance reviews are designed to help employees identify and eliminate barriers to their individual professional advancement. There are four components to the performance review process.
+
+Each employee's performance review will be coordinated using a GitLab issue popuated from a [template](https://gitlab.com/ccao-data-science---modeling/career-development/employment/-/blob/master/.gitlab/issue_templates/ds-performance%20evaluation.md). The title of the issue should be "Annual Performance Review: [Employee Name]." The due date should be two days after the scheduled performance review meeting.
+
+### Self-evaluation
+
+Each exmployee should complete a [self-evaluation](https://gitlab.com/ccao-data-science---modeling/career-development/employment/-/blob/master/forms/360%20Evaluation%20-%20Employee%20Self%20Evaluation.docx) of their work performance prior to participating in a performance review meeting with their supervisor. The purpose of the self-evaluation is two-fold. First, it helps employees understand the framework under which they are being evaluated. Second, by comparing an employee's self-evaluation to their supervisor's evaluation, we can identify instances where the employee was unable to anticipate their supervisor's comments. The annual performance review should now be the first time an employee is made aware of issues. 
+
+Employees can choose not to share their self-evaluations with their supervisor.
+
+### Supervisor evalution
+
+Each exmployee should complete a supervisor evaluation appropriate to the level of their supervisor. This evaluation will be shared with the supervisor and is designed to help managers identify areas of weakness in their management practices. Supervisor evaluations are specific to each supervisory level:
+* [Deputy](https://gitlab.com/ccao-data-science---modeling/career-development/employment/-/blob/master/forms/360%20Evaluation%20-%20Employee%20Evaluating%20Deputy.docx)
+* Director
+* Senior Data Scientist
+ 
+Employees can choose not to share their supervisor-evaluations with their supervisor. 
+
+### Peer evaluation
+
+Employees can request [peer evaluations](https://gitlab.com/ccao-data-science---modeling/career-development/employment/-/blob/master/forms/360%20Evaluation%20-%20Employee%20Evaluating%20Deputy.docx) from another employee of the Cook County Assessor's Office. This peer cannot be in the supervisory chain for the employee, and must have worked with the employee on a significant project, or regularly as part of their assigned duties. Peer evalautions will be shared with both the employee and the supervisor. Supervisors cannot request peer evaluations for their employees.
+
+### Performance evaluation
+
+The supervisor and employee complete the performance evaluation process as outlined in the employee handbook.
+
 
 # Work Terminal Setup
 
