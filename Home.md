@@ -2,11 +2,9 @@
 
 # The Data Science Department
 
- * [:handshake: Onboarding for New CCAO Employees](handbook/onboarding.md)
- * [:handshake: Onboarding for External Contributors](handbook/onboarding-external.md)
- * [:wave: Offboarding](handbook/offboarding.md)
+ * [:handshake: Onboarding](handbook/onboarding.md)
  * [:blue_book: Handbook](handbook/handbook.md)
- * [:construction_worker: Contributing](contributing/contributing.md)
+ * [:construction_worker: External Developer Engagement Program](contributing/contributing.md)
 
 # People Group
  * [DRAFT DRAFT Hiring with GitLab](people/hiring with gitlab.md)
