@@ -6,38 +6,9 @@ This document outlines the purpose, procedures, and best practices of the Data S
 
 The rationale for having a separate department in the CCAO that specifically deals with data science is similar to that in the private sector: data, apart from the IT systems that store it, is a valuable enterprise asset and must be managed accordingly. This is particularly true for the CCAO, where data is absolutely critical to the mission of the agency.
 
-## Mission
+# Mission, Vision, and Values
 
-The mission of the Data Science Department is to transform the Cook County Assessor's Office into the most effective property assessment office in the world.
-
-## Vision
-
-We strive to be known as a technological leader in the field of public sector data analytics by creating an assessment office that is innovative, ethical, transparent, and fair.
-
-## Core Values
-
-We are a mission driven department first, and our work is guided by a core set of values outlined below. 
-
-### Diversity, Inclusion & Belonging
-
-We foster an environment where everyone can thrive and ensure that the Data Science Department is a place where people from every background and circumstance feel like they belong and can contribute.
-
-### Precision and Accuracy
-
-We are dedicated to providing precise and accurate data and analysis. It is not enough to get the numbers right some of the time, or on average. We strive for the highest level of precision and accuracy achievable, and we are committed to evaluating ourselves against the fundamental question: "did we get it right?"
-
-### Growth and Innovation
-
-We are committed to continuous improvement and innovation. We believe that moving forward is keeping up, and standing still is falling behind. We are committed to learning and testing state-of-the-art algorithms and analytic techniques in our work.
-
-### Transparency and Ethics 
-
-Transparency and ethics mutually reinforce one another. The Data Science Department operates on a public-by-default model, [publishing all production code](https://gitlab.com/ccao-data-science---modeling), maintaining a (curated set of public data)[https://datacatalog.cookcountyil.gov/browse?tags=cook%20county%20assessor], and publishing documentation and analysis regularly. We invite the scrutiny of the public, and welcome any feedback, including criticism.
-
-
-### Efficiency and Productivity
-
-We hold ourselves to a rigorous production schedule that results in tangible, high quality, and useful work product on a regular basis. We will strive to hold ourselves to agreed timelines, and take responsibility for missed deadlines or low quality work.
+See [Mission, Vision, & Values](handbook/mission vision values.md)
 
 ## Core Technical Competencies
 

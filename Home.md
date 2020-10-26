@@ -4,6 +4,8 @@
 
  * [:handshake: Onboarding](handbook/onboarding.md)
  * [:blue_book: Handbook](handbook/handbook.md)
+ * [:blue_book: Handbook: Not Public](handbook/not-public.md)
+ * [:blue_book: Handbook: Mission, Vision, & Values](handbook/mission vision values.md)
  * [:construction_worker: External Developer Engagement Program](contributing/contributing.md)
 
 # People Group
