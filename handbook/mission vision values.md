@@ -48,19 +48,18 @@ Note that "I disagree" is not a negative statement. Disagreement should be discu
 
 ### Say thanks
 
-Recognize the people that helped you publicly. Cheeleading your co-workers is a great practice to get into.
+Recognize the people that helped you publicly. Cheerleading your co-workers is a great practice to get into.
 
 ### Say sorry
 
-If you made a mistake, apologize as soon as possible. Saying sorry is not a sign of weakness but one of strength. The people that do the most work will likely make the most mistakes. Additionally, when we share our mistakes and bring attention to them, others can learn from us, and the same mistake is less likely to be repeated by someone else. Mistakes can include when you have not been kind to someone. In order to reinforce our values, it is important, and takes more courage, to apologize publicly when you have been unkind publicly (e.g., when you have said something unkind or unprofessional to an individual or group in a Team channel).
+If you made a mistake, apologize as soon as possible. Saying sorry is not a sign of weakness but one of strength. The people that do the most work will likely make the most mistakes. Additionally, when we share our mistakes and bring attention to them, others can learn from us, and the same mistake is less likely to be repeated by someone else. Mistakes can include when you have not been kind to someone. In order to reinforce our values, it is important, and takes more courage, to apologize publicly when you have been unkind publicly (e.g., when you have said something unkind or unprofessional to an individual or group in a Teams channel).
 
 ## Transparency
 
 The public has a right to know what we are doing and how we are doing it. Your colleagues need to be able to see your work easily, without interrupting you. Transparency with the public and with each other is central to our success. Share as much information with each other and the public as you can. 
 
 An example is the [data science group on GitLab](https://gitlab.com/ccao-data-science---modeling)
-that also contains our [departmental documentation](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content). Everything we do is public by default; if it is used in production, it is available to the public. Transparency creates awareness for the CCAO, allows us to recruit people that care about our values, gets us more and faster feedback from people outside the agency, and makes it easier to collaborate with them. It is also about sharing great software, documentation, examples, lessons,
-and processes with the **whole community** and the world in the spirit of open source, which we believe creates more value than it captures.
+that also contains our [departmental documentation](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content). Everything we do is public by default; if it is used in production, it is available to the public. Transparency creates awareness for the CCAO, allows us to recruit people that care about our values, gets us more and faster feedback from people outside the agency, and makes it easier to collaborate with them. It is also about sharing great software, documentation, examples, lessons, and processes with the **whole community** and the world in the spirit of open source, which we believe creates more value than it captures.
 
 There are exceptions. Material that is not public by default will be documented. We are above average at keeping things confidential that need to be. On a personal level, you should tell it like it is instead of putting up a poker face. Don't be afraid to admit you made a mistake or were wrong. When something goes wrong, it is a great opportunity to say "What's the [kaizen](https://en.wikipedia.org/wiki/Kaizen) moment here?" and find a better way without hurt feelings.
 
@@ -76,29 +75,27 @@ If you believe something shouldn't be public that currently is (or vice versa), 
 
 ### Transparency is only a value if you do it when it is hard
 
-The Supreme Court wrote that the ["function of free speech under our system of government is to invite dispute"](https://en.wikipedia.org/wiki/Terminiello_v._City_of_Chicago). We practice transparency even when hiding the facts would be easier.  For example, many agencies will not voluntarily release reports showing flaws in their own work. We do, so that the public will know the challenges our agency faces, and to build trust. Other examples are being transparent about [mistakes we make](https://gitlab.com/ccao-data-science---modeling/ccao_sf_cama_dev/-/issues/100).
+The Supreme Court wrote that the ["function of free speech under our system of government is to invite dispute"](https://en.wikipedia.org/wiki/Terminiello_v._City_of_Chicago). We practice transparency even when hiding the facts would be easier. For example, many agencies will not voluntarily release reports showing flaws in their own work. We do, so that the public will know the challenges our agency faces, and to build trust. Other examples include being transparent about [mistakes we make](https://gitlab.com/ccao-data-science---modeling/ccao_sf_cama_dev/-/issues/100).
 
 ##### Not public
 
 We make information public by default because [transparency is one of our values](/handbook/values/#transparency). However, some material may not be available to the public. Therefore, a category of information is **public** unless there is a reason for it not to be.
 
-When information is not public, it may also be treated as limited access, only shared with certain roles, teams, or team members due to privacy considerations, contractual obligation, or other reasons that the author or DRI can specify.
-Certain kinds of information default to limited access, including details about team members or customers who did not give permission to share the information.
+When information is not public, it may also be treated as limited access, only shared with certain roles, teams, or team members due to privacy considerations, contractual obligation, or other reasons that the author or DRI can specify. Certain kinds of information default to limited access, including details about team members or customers who did not give permission to share the information.
 
 We document what is [not public by default](/handbook/not-public.md) on our wiki page.
 
 ### Directness
 
-Being direct is about being transparent with each other. We try to be [both straightforward
-and kind, an uncommon cocktail of no-bullshit and no-asshole](https://medium.com/@producthunt/ben-horowitz-s-best-startup-advice-7e8c09c8de1b). Feedback is always about your work and not your person. That doesn't mean it will be easy to give or receive it.
+Being direct is about being transparent with each other. We try to be [both straightforward and kind, an uncommon cocktail of no-bullshit and no-asshole](https://medium.com/@producthunt/ben-horowitz-s-best-startup-advice-7e8c09c8de1b). Feedback is always about your work and not your person. That doesn't mean it will be easy to give or receive it.
 
 ### Articulate when you change your mind
 
-If you state one thing, and then change course and support a different direction, point, or outcome, articulate this. It is OK to have your position changed by new data. Articulating that an *earlier* stance is not your *current* stance provides clarity to others and encourages data-driven decision making. 
+If you state one thing, and then change course and support a different direction, point, or outcome, articulate this. It is OK to have your position changed by new data. Articulating that an *earlier* stance is not your *current* stance provides clarity to others and encourages data-driven decision making.
 
 ### Surface issues constructively
 
-Be transparent to the right people (up) at the right time (when still actionable). If you make a mistake, don't worry; correct it and **proactively** let the affected party, your team, and the CEO know what happened, how you corrected it, and how-if needed-you changed the process to prevent future mistakes.
+Be transparent to the right people (up) at the right time (when still actionable). If you make a mistake, don't worry; correct it and **proactively** let the affected party, your team, and the CEO know what happened, how you corrected it, and how - if needed - you changed the process to prevent future mistakes.
 
 ### Anyone and anything can be questioned
 
@@ -120,8 +117,7 @@ We accept that we occasionally make mistakes in the direction of transparency. I
 
 Transparent changes have the reasons for the change laid out clearly along with the change itself. This leads to fewer questions later on because people already have some understanding. A change with no public explanation can lead to a lot of extra rounds of questioning, which is less efficient. 
 
-This also helps with institutional memory: a year from now when you want to know why a decision was made, or not, the issue or MR that has the decision also shares why the decision was made. 
-This is related to [Chesterton's fence](https://en.wikipedia.org/wiki/Wikipedia:Chesterton%27s_fence) - it's much easier to suggest removing or changing something if you know why it exists in the first place.
+This also helps with institutional memory: a year from now when you want to know why a decision was made, or not, the issue or MR that has the decision also shares why the decision was made. This is related to [Chesterton's fence](https://en.wikipedia.org/wiki/Wikipedia:Chesterton%27s_fence) - it's much easier to suggest removing or changing something if you know why it exists in the first place.
 
 Avoid using terms such as "industry standard" or "best practices" as they are, in effect, appeals to authority.
 
@@ -139,13 +135,11 @@ It is critical for the success of the Data Science Department to foster a cultur
 
 ### Embracing uncomfortable ideas and conversations 
 
-
 Part of inclusion is a willingness to embrace often uncomfortable conversations and situations. This concept is at the core of inclusion and helping to eliminate the problems that are faced by certain team members who may not be in the majority.
 
 We believe that being willing to embrace discomfort is the path forward to a safe, balanced and inclusive work place for all. Challenge yourself, challenge your own pre-set notions and ideas about different cultures or things you don't understand. When we are willing to embrace being uncomfortable, we can focus on actually fixing the issues at hand rather than simply "appearing to care".
 
 ### Understanding the impact of microaggressions
-
 
 Microaggressions are much more than merely rude or insensitive comments. They can wear people down by slowly chipping away their sense of belonging/safety/inclusion over time. What is a microaggression?
 
@@ -175,13 +169,12 @@ There is sometimes a grey area where advocating for diversity and political acti
 
 Unexpected and unconventional things make life more interesting. Celebrate and encourage quirky gifts, habits, behavior, and points of view. 
 
-### Inclusive language & pronouns
+### Inclusive language and pronouns
 
 Use **inclusive** language.
-For example, prefer "Hi everybody" or "Hi people" to "Hi guys", and "they" instead of "he/she". While there are several good guides from folks like [18f](https://content-guide.18f.gov/inclusive-language/), [University of Calgary](https://www.ucalgary.ca/news/ucalgary-guidelines-updated-communicating-about-gender-and-sexual-diversity), and [Buffer](https://open.buffer.com/inclusive-language-tech/) on using inclusive language, we don't keep an exhaustive list.
-When new possibly non-inclusive words arise, we prefer to be proactive and look for an alternative.
-If your goal is to be inclusive, it is more effective to make a small adjustment in the vocabulary when some people have a problem with it, rather than making a decision to not change it because some people don't think it is a problem.
-And if you make a mistake (e.g. accidentally using the wrong pronoun or an outdated phrase), acknowledge it, **apologize gracefully and move on**; there is no need to dwell on it, and you can work to avoid making that mistake in the future.
+For example, prefer "Hi everybody" or "Hi people" to "Hi guys", and "they" instead of "he/she". While there are several good guides from folks like [18f](https://content-guide.18f.gov/inclusive-language/), [University of Calgary](https://www.ucalgary.ca/news/ucalgary-guidelines-updated-communicating-about-gender-and-sexual-diversity), and [Buffer](https://open.buffer.com/inclusive-language-tech/) on using inclusive language, we don't keep an exhaustive list. When new possibly non-inclusive words arise, we prefer to be proactive and look for an alternative.
+
+If your goal is to be inclusive, it is more effective to make a small adjustment in the vocabulary when some people have a problem with it, rather than making a decision to not change it because some people don't think it is a problem. And if you make a mistake (e.g. accidentally using the wrong pronoun or an outdated phrase), acknowledge it, **apologize gracefully and move on**; there is no need to dwell on it, and you can work to avoid making that mistake in the future.
 
 ### Inclusive meetings
 
@@ -191,7 +184,7 @@ With internal meetings, consider using an agenda document for questions. During 
 
 Customers are not used to working in this way. To promote inclusion with customers: ask participants for their goals; make sure during demos that you pause for question; leave time for discussion.
 
-### See Something, Say Something
+### See something, say something
 
 It is important for each of us to use great judgment in being respectful and inclusive of our teammates. At the same time, we may sometimes not fully realize we have said or done something to offend someone. It is important that our teammates hold each other accountable and let them know if they have unintentionally or intentionally done something so they can learn and gain additional understanding of perspectives different from our own. It is also important that our teammates don't feel excluded or minimized by the words we use or the things we do. Thus, we all need to speak up when we see something that isn't respectful or inclusive.
 
@@ -207,7 +200,6 @@ We believe that lasting transformational change happens incrementally. This can 
 
 While it is important to have ambitious long-term goals, the path to accomplishing those lofty goals is incrementalism. Incrementalism can be uncomfortable. The first iteration of all of our projects is usually almost embarrassingly minimalist. We don't often have large and highly detailed roadmaps of our long-term projects. Sometimes our code is messy. Sometimes we don't use exactly the right tools to accomplish our tasks because using the right tools would require too much learning time. But over time, incrementalism leads to more stable, lasting transformation, and higher quality work product.
 
-
 ### Minimal Viable Change (MVC) AKA better not best
 
 Always look to make the quickest change possible to improve outcomes. If you validate that the change adds more value than what is there now, then do it. No need to wait for something more robust.This applies to everything we do in all functions. We do not allow the perfect to impede the good, nor do we allow the good to impede better.
@@ -222,7 +214,9 @@ We always try to set a due date, and we try to stick to it. If needed, we cut sc
 
 ### Make a proposal
 
-If you need to decide something as a team, make a concrete proposal instead of calling a meeting to get everyone's input. Having a proposal will be a much more effective use of everyone's time. Every meeting should be a review of a proposal. We should be [brainwriting on our own instead of brainstorming out loud](https://www.fastcompany.com/3033567/brainstorming-doesnt-work-try-this-technique-instead). State the underlying problem so that people have enough context to propose reasonable alternatives. The people that receive the proposal should not feel left out and the person making it should not feel bad if a completely different proposal is implemented. Don't let your desire to be involved early or to see your solution implemented stand in the way of getting to the best outcome. If you don't have a proposal, don't let that stop you from highlighting a problem, but please state that you couldn't think of a good solution and list any solutions you considered.
+If you need to decide something as a team, make a concrete proposal instead of calling a meeting to get everyone's input. Having a proposal will be a much more effective use of everyone's time. Every meeting should be a review of a proposal. We should be [brainwriting on our own instead of brainstorming out loud](https://www.fastcompany.com/3033567/brainstorming-doesnt-work-try-this-technique-instead). State the underlying problem so that people have enough context to propose reasonable alternatives. The people that receive the proposal should not feel left out and the person making it should not feel bad if a completely different proposal is implemented. 
+
+Don't let your desire to be involved early or to see your solution implemented stand in the way of getting to the best outcome. If you don't have a proposal, don't let that stop you from highlighting a problem, but please state that you couldn't think of a good solution and list any solutions you considered.
 
 ### Focus on Improvement
 
@@ -234,7 +228,7 @@ First, optimize for speed and results; when it is a success, figure out how to s
 
 ## Innovation
 
-Transformational change does not occur without innovation. Innovation need not be complex or 'fancy'. One of the most important inventions of modern history was the [flush toilet](https://www.economist.com/leaders/2013/01/12/the-great-innovation-debate). We are dedicated to elegant innovation, simple solutions to complex problems. Like [Nikolai Begg](https://www.ted.com/talks/nikolai_begg_a_tool_to_fix_one_of_the_most_dangerous_moments_in_surgery?language=en), we identify simple problems and design elegant soulations for them. 
+Transformational change does not occur without innovation. Innovation need not be complex or 'fancy'. One of the most important inventions of modern history was the [flush toilet](https://www.economist.com/leaders/2013/01/12/the-great-innovation-debate). We are dedicated to elegant innovation, simple solutions to complex problems. Like [Nikolai Begg](https://www.ted.com/talks/nikolai_begg_a_tool_to_fix_one_of_the_most_dangerous_moments_in_surgery?language=en), we identify simple problems and design elegant solutions for them. 
 
 Innovation comes in two parts: good ideas, executed well. The first part requires a problem-solver's mindset. The second requires a dedication to efficiency and hard work. Together, these elements produce transformational change in a short time frame.
 
@@ -256,12 +250,13 @@ You don't always get results and this will lead to criticism from yourself and/o
 
 ### Global optimization
 
-This name comes from the [quick guide to Stripe's culture](https://stripe.com/us/jobs/candidate-info?a=1#culture). Our definition of global optimization is that you do what is best for the organization as a whole. Don't optimize for the goals of your team when it negatively impacts the goals of other teams, our users, and/or the company. Those goals are also your problem and your job. Keep your team as lean as possible, and help other teams achieve their goals. This means that if anyone is blocked by you on a question, your approval, or a merge request review, your top priority is always to unblock them, either directly or through helping them find someone else who can, even if this takes time away from your own or your team's priorities.
+This name comes from the [quick guide to Stripe's culture](https://stripe.com/us/jobs/candidate-info?a=1#culture). Our definition of global optimization is that you do what is best for the organization as a whole. Don't optimize for the goals of your team when it negatively impacts the goals of other teams, our users, and/or the company. Those goals are also your problem and your job. 
+
+Keep your team as lean as possible, and help other teams achieve their goals. This means that if anyone is blocked by you on a question, your approval, or a merge request review, your top priority is always to unblock them, either directly or through helping them find someone else who can, even if this takes time away from your own or your team's priorities.
 
 ### Boring solutions
 
-Use the simplest and most boring solution for a problem, and remember that ["boring" should not be conflated with "bad" or "technical debt."](http://mcfunley.com/choose-boring-technology)
-The speed of innovation for our organization and product is constrained by the total complexity we have added so far, so every little reduction in complexity helps. Don't pick an interesting technology just to make your work more fun;
+Use the simplest and most boring solution for a problem, and remember that ["boring" should not be conflated with "bad" or "technical debt."](http://mcfunley.com/choose-boring-technology) The speed of innovation for our organization and product is constrained by the total complexity we have added so far, so every little reduction in complexity helps. Don't pick an interesting technology just to make your work more fun;
 using established, popular tech will ensure a more stable and more familiar experience for you and other contributors.
 
 Make a conscious effort to **recognize** the constraints of others within the team. For example, sales is hard because you are dependent on another organization, and development is hard because you have to preserve the ability to quickly improve the product in the future.
@@ -280,10 +275,9 @@ While we iterate with small changes, we strive for large, ambitious results.
 
 ### Perseverance
 
-Working at a profoundly dysfunctional public institution is hard. You will need focus and the ability to defer gratification.
-We value the ability to maintain focus and motivation when work is tough and asking for help when needed.
+Working at a profoundly dysfunctional public institution is hard. You will need focus and the ability to defer gratification. We value the ability to maintain focus and motivation when work is tough and promote asking for help when needed.
 
-### Bias for Action
+### Bias for action
 
 It's important that we keep our focus on action, and don't fall into the trap of analysis paralysis or sticking to a slow, quiet path without risk. Decisions should be thoughtful, but delivering fast results requires the fearless acceptance of occasionally making mistakes; our bias for action also allows us to course correct quickly. Everyone will make mistakes, but it's the relative number of mistakes against all decisions made (i.e. percentage of mistakes), and the swift correction or resolution of that mistake, which is important. A key to success with transparency is to always combine an observation with questions to ensure understanding and suggestions for solutions / improvement to the group that can take action.  We don't take the easy path of general complaints without including and supporting the groups that can affect change.
 
@@ -291,7 +285,7 @@ It's important that we keep our focus on action, and don't fall into the trap of
 
 Team members should first search for their own answers and, if an answer is not readily found or the answer is not clear, ask in public as we all should have a low level of shame. Write down any new information discovered and pay it forward so that those coming after will have better efficiency built on top of practicing collaboration, inclusion, and documenting the results.
 
-### Accepting Uncertainty
+### Accepting uncertainty
 
 We should strive to accept that there are things that we don't know about the work we're trying to do, and that the best way to drive out that uncertainty is not by layering analysis and conjecture over it, but rather accepting it and moving forward, driving it out as we go along. Wrong solutions can be fixed, but non-existent ones aren't adjustable at all. [The Clever PM Blog](https://www.cleverpm.com/2018/08/23/accepting-uncertainty-is-the-key-to-agility/)
 
@@ -299,19 +293,16 @@ We should strive to accept that there are things that we don't know about the wo
 
 The Data Science Department consists of five full-time employees. Why would such a small unit need a detailed description of their values? There are a few reasons why we have made the effort to create this document and train all members of the team on it.
 
-**Scaleable Success: **The Data Science Department will continue to grow and evolve, and it is critical that our values are not diluted as the unit grows. Establishing a strong values-driven culture early in our development helps ensure a [durable data science unit](https://en.wikipedia.org/wiki/Built_to_Last:_Successful_Habits_of_Visionary_Companies). 
+**Scaleable Success:** The Data Science Department will continue to grow and evolve, and it is critical that our values are not diluted as the unit grows. Establishing a strong values-driven culture early in our development helps ensure a [durable data science unit](https://en.wikipedia.org/wiki/Built_to_Last:_Successful_Habits_of_Visionary_Companies). 
 
-**Recuirtment: **A clear, public statement of value helps attract like-minded people to our team. This helps prevent value dilution as the unit grows, and helps bring in new and innovative ideas.
+**Recruitment:** A clear, public statement of value helps attract like-minded people to our team. This helps prevent value dilution as the unit grows, and helps bring in new and innovative ideas.
 
-**Reproducability: ** Part of the [vision](#Vision) for this department is to lead-by-example, providing other public-sector institutions a blueprint for creating a world-class data science unit. Transparency is critical to this mission, for obvious reasons.
+**Reproducibility:** Part of the [vision](#Vision) for this department is to lead-by-example, providing other public-sector institutions a blueprint for creating a world-class data science unit. Transparency is critical to this mission, for obvious reasons.
 
-## No Halos
+## No halos
 
 We do not operate under the delusion that our values are superior to others' values, or that our values make our work better simply because we hold them. [Good values do not cause good performance](https://en.wikipedia.org/wiki/The_Halo_Effect_(book)). But good values are an important component of a good culture, and a high-functioning team. This document attempts to outline the ways in which team members are expected to demonstrate our values in their daily work. 
 
 ## Updating our values
 
-Our values are updated as frequently as needed. To suggest changes to our values, feel free to email rross@cookcountyassessor.com with thoughts, or submit a merge request to this document.
-
-
-
+Our values are updated as frequently as needed. To suggest changes to our values, feel free to email [Rob Ross](mailto:rross@cookcountyassessor.com) with thoughts, or submit a merge request to this document.
