@@ -1,21 +1,37 @@
-# Why file an RPIE statement?
+## What you will need to complete this form
 
-Accurate property values depend on accurate data. Our data sources often do not capture the full range of data applicable to different business types and neighborhoods. By completing  an RPIE filing, you help our analysts accurately assess your properties and properties like yours in your area. Your data is safe with us; we are committed to protecting you and your business' private information. To find out more about how we will keep and use your data, read our [privacy policy](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content/-/blob/master/RPIE/CCAO-RPIE-Privacy-Policy.md).
+Before starting a filing, please make sure you are prepared with providing the following information:
+PINs
 
-### A different kind of RPIE
+* PINs associated with your annual IRS tax filing.
+* RPIE codes that are associated with your PINs sent to you via US Post.
 
-RPIE is structured differently than other forms you may be familiar with. This data portal assembles and stores data in a structured database.  This helps our office use mass appraisal to estimate property values. Non-financial data you enter into this portal, including building and unit characteristics, will be stored and will pre-populate your filing next year. Over time, we hope this filing process because an easy annual task for all commercial taxpayers. 
+Buildings
 
-#### Important things to know about your RPIE filing:
+    Any buildings that you have submitted an IRS tax filing for in the last two years.
+    All addresses associated with those buildings.
 
-* You can save your incomplete filing at any point and return to it later. However, once you submit your filing, it will be locked for editing. Please review the data in your filing carefully before submitting it.
-* You can file one RPIE for multiple PINs and multiple properties, even if those properties are not adjacent to one another.
-* You will not be asked to supply income from business activities if you are the taxpayer of an owner-occupied property that is not a hotel or motel. 
-* You will be required to tell us about the physical characteristics of the buildings on your PINs, as well as the units inside those buildings. This data will be saved so that, in future filings, it will pre-populate.
-* We want to know all of the parties involved in a filing. For large filings, you may include property management companies, multiple owners, etc. At minimum, all properties owners must be listed, and their legal representation, if they have any.
-* We have created excel templates to make some data entry easier:
-    * Residential Spaces
-    * Commercial Spaces
-    * I&E General Template
-    * I&E Motel/Hotel
-* When you are done with your filing, you may review, print, and/or save the data you have submitted for our records. A PDF of your RPIE filing can be attached to your appeal to show that you filed.
+IRS Tax Forms
+
+In some cases we will ask you to submit information on the following tax forms:
+
+    Schedule E Form
+    IRS Tax form 8825
+
+Lease information
+
+In some cases we will ask you yo provide a digital copy of your lease.
+Income and Expense Information
+
+    Total expenses and revenues attached to buildings included in your filing
+    Subtotals for the following expenses for buildings you are filing for
+        Maintenance
+        Administration
+        Utilities and sanitation services
+        Finance and taxes
+        Any other expenses you wish to volunteer
+
+Ownership and lawyer information
+
+    Detailed information on the owner of any building associated with your filing
+    Detailed information on the legal representation for buildings
