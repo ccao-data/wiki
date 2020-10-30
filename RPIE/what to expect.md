@@ -1,6 +1,6 @@
 ## What you will need to complete this form
 
-Before starting a filing, please make sure you are prepared with providing the following information:
+This page contains an exhaustive description of the information you will need to complete an RPIE filing. If we have omitted information from this page, please [contact us](mailto:RPIEsupport@cookcountyassessor.com).
 
 ### Information about PIN numbers
 
@@ -12,6 +12,7 @@ Before starting a filing, please make sure you are prepared with providing the f
 For the purposes of RPIE, a building is a structure that contains either rentable spaces, or a business. Sheds, chemical storage facilities, infrastructure buildings like antennae, and other such structures are not included in this definition.
 
 * All addresses associated with each building. 
+* The PIN numbers associated with each buildings. **Note** that buildings may span PINs and PINs may contain multiple buildings. You can see how building footprints should be associated with PINs by searching for a PIN on the Cook County's [Cook Viewer Application](https://maps.cookcountyil.gov/cookviewer/mapViewer.html).
 * If you do not own the entire building, you will not be asked about the buidling's physical characteristics.
 * If you do own the entire building, you will be **required** to provide the following information:
   * A list of amenities for the building.
@@ -51,6 +52,55 @@ Taxpayers who do not have IRS forms can submit income and expense information in
         Any other expenses you wish to volunteer
 * Option 3: Report gross rental income & detailed expense information.
 
+You can see an excel template for income and expense data [here](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content/-/blob/master/RPIE/I&E%20Templates.xlsx).
 
-Detailed information on the owner of any building associated with your filing
-    Detailed information on the legal representation for buildings
+### Vacant and occupied spaces
+
+The RPIE collects data at the level of individual units. For the purposes of RPIE, there are two types of spaces: residential apartments and commercial spaces. RPIE automatically associates spaces with buildings. 
+
+#### Residential apartments
+
+The RPIE application will accept a template upload. You can find the template for residential spaces [here](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content/-/blob/master/RPIE/2021%20RPIE_Residentials_Spaces_Template.xlsx).
+
+For each apartment, users will be required to submit the following information:
+
+* Unit designation
+* Months vacant during prior 12 months
+* Currently vacant on date of RPIE submission?
+* Affordable / Subsidized status
+* Garden apartment
+* Owner Occupied on date of submission?
+* Bedroom count
+* Bathroom count
+* Square feet
+* Lease start date (month/day/year)
+* Lease end date (month/day/year)
+* Base rent per month
+* Free Rent
+
+#### Commercial spaces
+
+The RPIE application will accept a template upload. You can find the template for residential spaces [here](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content/-/blob/master/RPIE/2021%20RPIE_Commercials_Spaces_Template.xlsx).
+
+**Lessees responsible for taxes** should report just their own space. 
+
+For commercial space, users will be required to submit the following information:
+
+* Unit
+* Months vacant during prior 12 months
+* Vacant on date of submission?
+* Owner Occupied on date of submission?
+* Square feet
+* Lease Type
+* Use
+* Lease start date (month/day/year)
+* Lease end date (month/day/year)
+* Base rent per month
+* Taxes paid in past 12 months if lessee responsible for taxes
+* Total Concenssions paid by lessee in past 12 months
+* Free Rent
+
+#### Parties to a filing
+
+The RPIE system collects information on parties to each filing. At minimum, all property owners must be listed. If a property owner has legal representation, the attorney or tax rep's information must also be included.
+
