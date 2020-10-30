@@ -24,6 +24,10 @@
  * [:rocket: 2020 Upgrade Plan](residential/pipeline/upgrade-plan-2020.md)
  * [:heavy_plus_sign: Home Improvement Exemptions (288s)](residential/addchars.md)
 
+# Commercial & RPIE
+ * [RPIE FAQs](RPIE/RPIE_FAQ.md)
+ * [RPIE Privacy](RPIE/CCAO RPIE Privacy Policy.md)
+
 # Technical Documentation
 
  * [:file_folder: SQL Database Guide](data/sql-database-guide.md)
