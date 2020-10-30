@@ -1,0 +1,37 @@
+Why we're here
+Accurate property values depend on accurate data. Our data sources often do not capture the actual incomes and expenses specific to different business types and neighborhoods. Our data sources don't always know how much space a PIN takes up in a building. By providing any of this information, you'll help our analysts accurately assess the property values of your property and other similar businesses in your neighborhood.
+We are committed to protecting the competitive advantages of you and your business. Read more in our privacy policy below.
+
+A different kind of RPIE
+This online form is structured differently than other forms you may be familiar with. The first time you submit your RPIE filing, it may take some time to input all the data. However, due to the scope of each filing, and the fact that we will pre-populate next year's filing with a lot of the data you input this year, we think you'll save time overall. The RPIE steps are ordered by importance to the assessment process, so some steps may not seem to follow logically from your perspective. We did this because the RPIE is a voluntary submission, and we were concerned that some people may not complete the entire form.
+
+The general outline of our online RPIE filing is as follows:
+*  Each RPIE filing corresponds to an economic unit. This can be a business or individual that owns multiple properties, or a lessee responsible for taxes on one or more PINs. An RPIE filing can cover one or many PINs with one or many properties. 
+*  First, we ask you to submit the income and expense information for the economic unit for the most recent fiscal period.
+*  Then, we ask you to indicate all of the PINs associated with the economic unit. Again, if the unit is a company that owns many different properties, you should input all of the PINs. If you plan on filing multiple RPIE Online Foms, you can input all of the PINs associated with all of the filings on this page, and then **carefully** select the groups of PINs associated with each specific filing.
+*  Once we have the universe of PINs defined, we will ask you to define all of the buildings on these PINs. In addition to telling us information about each building, we will ask you to connect each building to the PINs that intersect with the building.
+*  On the 'Saved Parties' section, we ask you to list all the parties that participated in the creation of the filing. It is the case that the user who clicks the 'Submit' button attests to the validity of the information provided in the RPIE Online Form. However, we know that large filings are collaborative efforts, and we would like to know all of the parties who participated in the filing. If you are the owner of a property, but you have legal counsel, please list them in this section.
+*  On the 'Saved Spaces' section, we ask you to list out all of the rentable spaces in each building you defined in the previous step. We have provided a template that you can download, populate, and then upload. Or you can manually enter the information.  
+*  Finally, in the 'Supporting Materials' section, you can upload a wide variety of documents and materials. While the RPIE is a voluntary form, the rules concerning commercial appeals are binding. If you have filed an appeal, or plan to file an appeal, your RPIE submission will be used to process that appeal. Please review the rules for commercial appeals carefully before submitting your RPIE form.
+
+Should I file an RPIE?
+Filing is voluntary. Although complete filings are encouraged, incomplete filings are also welcome, as any additional data will contribute to more accuracy in property assessment. If for tax year 2019 you or your business filed an IRS Schedule E (Form 1040), or Form 8825, or if you were a lessee responsible for the property taxes for an industrial or commercial property, the online RPIE should be an appropriate tool for your filing.
+
+How many RPIE submissions should I submit?
+You should submit one RPIE filing for each IRS Schedule E, 8825, or net or triple net lease, in the case where you are a lessee responsible for taxes. If you are a person or company that owns multiple properties in Cook County, and you filed a single IRS tax return that reported the income from all of your properties, you may include all of these properties in a single filing. On the other hand, if you filed multiple IRS tax returns for multiple properties in Cook County, you should file an RPIE form corresponding to each group of properties.
+
+Is there a deadline for an RPIE filing?
+Since filing an RPIE is voluntary, there is no deadline for filing. However, The Cook County Assessor requires an RPIE submission in order to process an appeal on a commercial or industrial property. Therefore, if you intend to appeal a particular PIN, you should submit your RPIE filing before the appeal deadline for that PIN. The Cook County Assessor will not consider late RPIE filings on appeal. The Cook County Assessor will not accept printed RPIE forms in lieu of an online submission.
+
+What documents should I prepare before filing?
+To submit a complete filing, for each business, please have:
+*  The mailed RPIE Invitation Letter you received from the Cook County Assessor's Office, containing a PIN and its RPIE Code, for all associated PINs.
+*  Your business's IRS Schedule E (Form 1040) or your IRS Form 8825, for income and expense information.
+*  Your rent roll, formatted for the RPIE. You can download our template here.
+*  Information about the building's addresses.
+*  The percentage of the building associated with each of your PINs.
+*  All documentation you may need for an appeal.
+
+For lessees responsible for taxes, please have:
+
+*  Your lease requiring you to pay property taxes.
