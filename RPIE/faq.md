@@ -60,7 +60,7 @@ For lessees responsible for taxes, please have:
 
 -   Your lease requiring you to pay property taxes. 
 
-#### lost my RPIE code! I need to edit a submitted filing! I need help (with the RPIE form)!
+#### I lost my RPIE code! I need to edit a submitted filing! I need help (with the RPIE form)!
 
 If you need support completing your RPIE submission, managing your account, or managing past submissions, please call our office at (312) 443-7550 or email us at [RPIEsupport@cookcountyassessor.com](mailto:RPIEsupport@cookcountyassessor.com)
 
