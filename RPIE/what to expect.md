@@ -8,8 +8,9 @@ PINs
 
 Buildings
 
-    Any buildings that you have submitted an IRS tax filing for in the last two years.
-    All addresses associated with those buildings.
+* Any buildings that generate income reported on an IRS tax filing or I & E statement.
+* All addresses associated with those buildings.
+* Characteristics of buildings: S
 
 IRS Tax Forms
 

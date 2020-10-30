@@ -27,6 +27,7 @@
 # Commercial & RPIE
  * [RPIE FAQs](RPIE/faq.md)
  * [RPIE Privacy](RPIE/privacy.md)
+ * [RPIE Details](RPIE/what to expect.md)
 
 # Technical Documentation
 
