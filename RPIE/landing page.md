@@ -8,6 +8,7 @@ RPIE is structured differently than other forms you may be familiar with. This d
 
 #### Important things to know about your RPIE filing:
 
+* You can see a detailed list of information you will need to complete your RPIE filing [here](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content/-/blob/master/RPIE/what%20to%20expect.md).
 * You can save your incomplete filing at any point and return to it later. However, once you submit your filing, it will be locked for editing. Please review the data in your filing carefully before submitting it.
 * You can file one RPIE for multiple PINs and multiple properties, even if those properties are not adjacent to one another.
 * You will not be asked to supply income from business activities if you are the taxpayer of an owner-occupied property that is not a hotel or motel. 
