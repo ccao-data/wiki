@@ -25,6 +25,7 @@
  * [:heavy_plus_sign: Home Improvement Exemptions (288s)](residential/addchars.md)
 
 # Commercial & RPIE
+ * [RPIE landing](RPIE/landing.md)
  * [RPIE FAQs](RPIE/faq.md)
  * [RPIE Privacy](RPIE/privacy.md)
  * [RPIE Details](RPIE/what to expect.md)

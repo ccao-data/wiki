@@ -95,7 +95,7 @@ If you state one thing, and then change course and support a different direction
 
 ### Surface issues constructively
 
-Be transparent to the right people (up) at the right time (when still actionable). If you make a mistake, don't worry; correct it and **proactively** let the affected party, your team, and the CEO know what happened, how you corrected it, and how - if needed - you changed the process to prevent future mistakes.
+Be transparent to the right people (up) at the right time (when still actionable). If you make a mistake, don't worry; correct it and **proactively** let the affected party, your team, and the Chief Deputy know what happened, how you corrected it, and how - if needed - you changed the process to prevent future mistakes.
 
 ### Anyone and anything can be questioned
 
