@@ -15,6 +15,7 @@
 
  * [:bar_chart: Sales Ratio Studies](sops/sales-ratio-studies.md)
  * [:mag: Desk Review](sops/desk-review.md)
+ * [Open data](sops/open-data.md)
 
 # Residential
 
@@ -25,7 +26,7 @@
  * [:heavy_plus_sign: Home Improvement Exemptions (288s)](residential/addchars.md)
 
 # Commercial & RPIE
- * [RPIE landing](RPIE/landing.md)
+ * [RPIE landing](RPIE/landing page.md)
  * [RPIE FAQs](RPIE/faq.md)
  * [RPIE Privacy](RPIE/privacy.md)
  * [RPIE Details](RPIE/what to expect.md)
