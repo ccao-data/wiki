@@ -12,6 +12,7 @@
 
  * [:bar_chart: Sales Ratio Studies](sops/sales-ratio-studies.md)
  * [:mag: Desk Review](sops/desk-review.md)
+ * [:mag: Desk Review](sops/residential-appeals.md)
 
 # Residential
 
