@@ -1,9 +1,16 @@
 ---
 title: "Residential Appeal SOPs"
-author: "Robert Ross"
-date: "11/12/2020"
 output: html_document
 ---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, fig.align='center', warning = FALSE)
+
+
+# need in-line citation data
+
+```
+
 ### Feedback Tracker
 Please download the attached file and use comments to provide feedback. All feedback is due to Samantha Simpson by November 20, 2020.
 
@@ -17,22 +24,82 @@ Check the box below if your department will **not** provide feedback.
 - [ ] Administrative Operations
 - [ ] Chief Deputy
 
-## Opportunity
-The Data Science Department proposes to introduce Standard Operating Procedures (SOPs) to improve the Cook County Assessor’s Office (CCAO) residential property appeals process for the purpose of providing comprehensive, clear, consistent rules for appeals. The implementation of SOPs for the 2021 reassessment will further align the appeals process with the CCAO three strategic values: fairness, transparency, and ethics.
+# Opportunity
+The Cook County Assessor’s Office (CCAO) is committed to fair, transparent, ethical assessments. The Data Science Department (DS) proposes these Standard Operating Procedures (SOPs) to govern the CCAO's residential property appeals process starting 2021. These SOPs provide comprehensive, clear, consistent guidelines to residential appeals analysts and other CCAO staff processing residential appeals. These SOPs will also be available to the public so that taxpayers can understand and anticipate appeal decisions before filing their appeal. These SOPs will help de-mystify the residential appeals process, reducing potential for unethical behavior and increasing transparency and fairness.
 
-## Background
-In 2019, the Data Science Department developed a robust set of diagnostic tools to determine whether initial residential assessments were fair and accurate. When comparing appeal results for single-family appeals in 2019 and 2016, the data shows inconsistencies in appeal success rates. The linkage between the reason an appellant files a residential appeal, and the decision path an analyst uses to assign an appeal reason code are critical to our strategic values. Unfortunately, there is limited information available detailing what constitutes a successful appeal. 
+
+# Motivation
+
+This section dsicusses the motivation for adopting these SOPs. Transparency [requires us](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content/-/blob/master/handbook/mission%20vision%20values.md#transparency) to release both the policy itself, as well as the motivation and intended outcomes of the policy. To the degree possible, we have written these SOPs so that they are understandable to the typical taxpayer.
+
+## Fairness
+
+Illinois property taxes operate according to a levy-based system. In this system, local governments establish the amount of money they want to raise from property taxes, and the assessment process determines the distribution of that tax burden. During a re-assessment, assessors mail initial values to taxpayers, who then have the opportunity to appeal. Successful appeals _do not deprive the government of tax revenue._ Instead, successful appeals shift the burden of a pre-determined levy from taxpayers with successful appeals to those without successful appeals. Under this system, the appeals process has inherent consequences for fairness.
+
+In most Illinois counties, between 5/% and 10/% of residential property owners appeal their assessments **FACT CHECK PLEASE.** In Cook County, 35/% of residential taxpayers appealed their 2019 triennial re-assessment. As a consequence, residential appeals account for a large portion of the agency's workload; in 2019, the CCAO processed more than 100,000 residential appeals of triennial re-assessments. Residential assessments significantly impact of the distribution of property taxes in Cook County; during the past three re-assessments, residential appeals reduced the size of jurisdiction's total assessed values by 3/% to 6/%. The fairness of the appeals process is a particularly important consideration in Cook County because of the large volume of appeals.
+
+### Appeals make the system less fair overall
+
+The CCAO did not perform sales ratio studies prior to the Kaegi administration. In response to recommendations [(pg. 17)](https://prodassets.cookcountyassessor.com/s3fs-public/reports/PCS_Cook-County_Report_final.pdf) from the International Association of Assessing Officer (IAAO) DS developed a robust set of diagnostic tools to determine whether residential assessments were fair and accurate. The residential valuation reports [released with each township mailing](https://www.cookcountyassessor.com/valuation-reports), and the [residential diagnostic report](https://gitlab.com/ccao-data-science---modeling/reports/assessment-diagnostic-report) consistently raise questions about the accuracy and fairness of the CCAO's residential appeals decisions.
+
+A number of credible third party reports have also found that residential appeals reduce fairness in assessments. In 2016, researchers at the [University of Chicago](https://harris.uchicago.edu/files/inline-files/Ross%20-%20Vertical%20Equity%20in%20Cook%20County%20-%20CMF%20-%20Final.pdf), in collaboration with [ProPublic](https://www.propublica.org/series/the-tax-divide) and [The Chicago Tribune](https://www.chicagotribune.com/investigations/ct-tax-divide-investigation-20180425-storygallery.html) found that appeals decrease fairness in assessments overall. In 2018, a [Civic Consulting Alliance report](https://prodassets.cookcountyassessor.com/s3fs-public/reports/CivicConsultingAllianceStudyResults.pdf) found the same. There is ample reason to believe that the CCAO's residential appeals process does not reliably and consistently improve fairness in assessments. 
+
+### Taxpayers with more valuable homes are more likely to appeal
+
+### Taxpayers with more valuable homes are more likely to win their appeal
+
+## Transparency
+
+
+
+
+When comparing appeal results for single-family appeals in 2019 and 2016, the data shows inconsistencies in appeal success rates. The linkage between the reason an appellant files a residential appeal, and the decision path an analyst uses to assign an appeal reason code are critical to our strategic values. Unfortunately, there is limited information available detailing what constitutes a successful appeal. 
 For further details see [Comparing Residential Triennial Appeals in 2016 & 2019](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content/uploads/cf89ef12391221afbe4b1b6b8923c4af/Impact-of-Appeals-on-Vertical-Equity-in-a-Budget-Based-Property-Tax-Regime.html).
+
+
+## Ethics
+
+# Background
+
+This section provides background information on the process of developing these SOPs.
+
+## How do other agencies process residential appeals?
 
 In 2020, the Data Science Department conducted a qualitative analysis on the transparency of rules to appeal. The public-facing websites of 10 counties in the United States was surveyed for well-defined rules on the residential appeals process and the criteria to win an appeal. When applying industry best practices themes, there were three consistent findings. First, none of the counties have a published single source of truth for the appeals process and win criteria. Second, six out of ten counties provided criteria on how to win an appeal, however there are inconsistencies due to the number of webpages and sources. Third, all counties provided varying degrees of information on reasons and rules to appeal, however the readability of this information does not perform well according to the basic standards of words per sentence, jargon, and length of text. Based on these observations, there is no industry standard for transparency of the appeals process. 
 For further details see [Residential Appeals County Survey Data].
 
-## Approach
-SOPs create a rules-based approach to increase accuracy in predictability for analysts and appellants. This approach allows:
+## What are the technical limitations on these SOPs?
 
-_Analysts to apply appeal decisions and reason codes that stand up to scrutiny. The expected outcome is increased precision in fairness and ethics through the application of market data formatted with rigorous rules that identify when to apply each reason code, including decision matrix guidance on amounts._
+SmartFile, central data storage, etc.
 
-_Appellants to apply clear win criteria to anticipate the outcome of their appeal. The expected outcome is a transparent appeals process. This process will be initiated by holding a period of public comment for taxpayers to engage in SOPs prior to implementation, and result in a CCAO standard for rule-making and taxpayer engagement._
+## What are the technical assets for these SOPs
+
+PINVAL
+
+## Selective appraisal
+
+NO.
+
+# Obejctives and Key Results
+
+SOPs create a rules-based approach to increase accuracy and predictability for analysts and appellants. We expect this approach to accomplish the following Key Results.
+
+- Appeal decisions are consistent with market indicators.
+- Appeal decisions are independent of one another, such that the order in which the decisions on two properties are made does not impact the decisions that are made.
+- Analysts apply appeal reason codes that clearly indicate to everyone the reason(s) an appeal was granted or denied. Reason codes clearly correlate with these SOPs.
+- Appellants apply these SOPs to their particular parcel in order to anticipate the outcome of their appeal.
+- Citizens contribute to the development of these SOPs, which evolve over time to accomodate many edge cases.
+- The cost of processing residential appeals remains constant, or declines; the SOPs do not impose an additional administrative burden on the agency.
+
+## Key Performance Indicators
+
+In order to evaluate whether these SOPs are accomplishing the Key Results, the CCAO will track a series of Key Performance Indicators (KPIs). 
+
+- **Appeal SOPs are applied faithfully:** DS will randomly sample appeal results and investigate whether the SOPs were correctly applied. This is necessary to test the functional applicability of the SOPs and their implementation.
+- **Appeal reason codes are clear and accurate:** DS will produce a report summarising appeal reason codes, success rates, and reduction amounts. This will help characterise the appeals process and determine whether codes need to be revised.
+- **Board Appeals do not increase as a result of CCAO appeals:** Many taxpayer appeal both at the CCAO and at the Board of Review (BOR). DS will sample properties that had unsuccessful appeals at the CCAO, and successful appeals at the BOR. DS will identify all comparable properties for this set, and determine whether changes to each property's comparable set due to CCAO appeals created conditions for a successful BOR appeal.
+- **Appeal decision consistent with sales in following year:** Many properties that appeal transact after an appeal decision has been reached. This transaction provides a strong indicator for whether or not the appeal decision was consistent with the market. The CCAO will track both the probability of a successful appeal, and the mean reduction on appeal, across properties with sales in the following year. If appeal decisions are consistent with the market, there should be a strong correlation between the decision to grant an appeal and the amount of rediction, on one side, and the relative value of the sale price to the initial value on the other side.
+- **The number of appeals filed decreases, appeals are more successful:** 
 
 ## Implementation
 The SOPs should be applicable equally across properties.
@@ -46,3 +113,14 @@ The SOPs should be available for public comment for a period of no less than 21 
 ## Adoption
 If these SOPs are approved by the Cook County Assessor, the proposed SOPs will be put to the Valuations Department Residential Tax Analysts to process appeals in 2021. The impact of the SOPs will be analyzed at the end of the year to determine refinement.
 
+
+# Residential Appeal Standard Operating Procedures
+
+
+## Characteristics
+
+## Vacancy
+
+## Uniformity
+
+## Valuation
