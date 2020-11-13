@@ -42,11 +42,11 @@ In most Illinois counties, between 5/% and 10/% of residential property owners a
 
 The CCAO did not perform sales ratio studies prior to the Kaegi administration. In response to recommendations [(pg. 17)](https://prodassets.cookcountyassessor.com/s3fs-public/reports/PCS_Cook-County_Report_final.pdf) from the International Association of Assessing Officer (IAAO) DS developed a robust set of diagnostic tools to determine whether residential assessments were fair and accurate. The residential valuation reports [released with each township mailing](https://www.cookcountyassessor.com/valuation-reports), and the [residential diagnostic report](https://gitlab.com/ccao-data-science---modeling/reports/assessment-diagnostic-report) consistently raise questions about the accuracy and fairness of the CCAO's residential appeals decisions.
 
-A number of credible third party reports have also found that residential appeals reduce fairness in assessments. In 2016, researchers at the [University of Chicago](https://harris.uchicago.edu/files/inline-files/Ross%20-%20Vertical%20Equity%20in%20Cook%20County%20-%20CMF%20-%20Final.pdf), in collaboration with [ProPublic](https://www.propublica.org/series/the-tax-divide) and [The Chicago Tribune](https://www.chicagotribune.com/investigations/ct-tax-divide-investigation-20180425-storygallery.html) found that appeals decrease fairness in assessments overall. In 2018, a [Civic Consulting Alliance report](https://prodassets.cookcountyassessor.com/s3fs-public/reports/CivicConsultingAllianceStudyResults.pdf) found the same. There is ample reason to believe that the CCAO's residential appeals process does not reliably and consistently improve fairness in assessments. 
+A number of credible third party reports have also found that residential appeals reduce fairness in assessments. In 2016, researchers at the [University of Chicago](https://harris.uchicago.edu/files/inline-files/Ross%20-%20Vertical%20Equity%20in%20Cook%20County%20-%20CMF%20-%20Final.pdf), in collaboration with [ProPublic](https://www.propublica.org/series/the-tax-divide) and [The Chicago Tribune](https://www.chicagotribune.com/investigations/ct-tax-divide-investigation-20180425-storygallery.html) found that appeals decrease fairness in assessments overall. In 2018, a [Civic Consulting Alliance report](https://prodassets.cookcountyassessor.com/s3fs-public/reports/CivicConsultingAllianceStudyResults.pdf) found the same. There is ample reason to believe that the CCAO's residential appeals process does not reliably or consistently improve fairness in assessments overall. 
 
-### Taxpayers with more valuable homes are more likely to appeal
+### Taxpayers with more valuable homes are more likely to appeal, be successful
 
-### Taxpayers with more valuable homes are more likely to win their appeal
+
 
 ## Transparency
 
