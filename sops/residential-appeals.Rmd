@@ -95,6 +95,8 @@ ggarrange(g1, g2, ncol=2, nrow=1, common.legend = FALSE)
 
 
 
+**MAYA  & BONI's stuff here **
+
 ## Transparency
 
 
@@ -117,13 +119,13 @@ For further details see [Residential Appeals County Survey Data].
 
 ## What are the technical limitations on these SOPs?
 
-###SmartFile
+### SmartFile
 
 
-###Central data storage
+### Central data storage
 
 
-###Other
+### Other
 
 
 ## What are the technical assets for these SOPs
@@ -152,20 +154,11 @@ In order to evaluate whether these SOPs are accomplishing the Key Results, the C
 - **Appeal SOPs are applied faithfully:** DS will randomly sample appeal results and investigate whether the SOPs were correctly applied. This is necessary to test the functional applicability of the SOPs and their implementation.
 - **Appeal reason codes are clear and accurate:** DS will produce a report summarising appeal reason codes, success rates, and reduction amounts. This will help characterise the appeals process and determine whether codes need to be revised.
 - **Board Appeals do not increase as a result of CCAO appeals:** Many taxpayer appeal both at the CCAO and at the Board of Review (BOR). DS will sample properties that had unsuccessful appeals at the CCAO, and successful appeals at the BOR. DS will identify all comparable properties for this set, and determine whether changes to each property's comparable set due to CCAO appeals created conditions for a successful BOR appeal.
+- **Probability of success, amount of reduction: ** The success rate and mean reduction amount should be minimally correlated with property values. 
 - **Appeal decision consistent with sales in following year:** Many properties that appeal transact after an appeal decision has been reached. This transaction provides a strong indicator for whether or not the appeal decision was consistent with the market. The CCAO will track both the probability of a successful appeal, and the mean reduction on appeal, across properties with sales in the following year. If appeal decisions are consistent with the market, there should be a strong correlation between the decision to grant an appeal and the amount of rediction, on one side, and the relative value of the sale price to the initial value on the other side.
-- **The number of appeals filed decreases, appeals are more successful:** 
+- **The number of appeals filed decreases, appeals are more successful:** The rate of appeal should approach 10/%, while the rate of success should approach 90/%.
+- **The SOPs should change as the office discovers edge cases, or with input from citizens:** The SOPs should not be static, and should evolve to meet the needs of taxpayers, and further the agencies mission. 
 
-## Implementation
-The SOPs should be applicable equally across properties.
-
-The SOPs should be scalable to learning and inclusive of edge cases.
-
-The SOPs should not create new opportunities for successful appeals or instability.
-
-The SOPs should be available for public comment for a period of no less than 21 days and no more than 30 days.
-
-## Adoption
-If these SOPs are approved by the Cook County Assessor, the proposed SOPs will be put to the Valuations Department Residential Tax Analysts to process appeals in 2021. The impact of the SOPs will be analyzed at the end of the year to determine refinement.
 
 
 # Residential Appeal Standard Operating Procedures
@@ -177,4 +170,29 @@ If these SOPs are approved by the Cook County Assessor, the proposed SOPs will b
 
 ## Uniformity
 
+An appeal based on uniformity argues that the appellant's property assessment is inconsistent with assessments of similar properties nearby. The simplest example consiststs of adjacent identical properties; uniformity requires that these properties receive virtually identical assessments. Similar properties that are close to each other should receive similar assessments. As properties become increasingly dissimilar, or more distant geographically, their assessments also become more dissimilar. The degree of dissimilarity required to support a uniformity argument is defined by these SOPs.
+
+### Uniformity comparables
+
+Each property in the County has a set of other properties that form their 'comparable set.' This set is defined as **DAN SNOW**
+
+### Uniformity rule
+
+/> 10/% above the median of the uniformity distribution.
+
 ## Valuation
+
+### Sale comparables
+
+**DAN SNOW**
+
+### Overvaluation rule
+
+/> 10/% above the median of the sale comparable distribution.
+
+# Managerial overrides
+
+# Updating these SOPs
+
+## Adoption
+If these SOPs are approved by the Cook County Assessor, the proposed SOPs will be put to the Valuations Department Residential Tax Analysts to process appeals in 2021. The impact of the SOPs will be analyzed at the end of the year to determine refinement.
