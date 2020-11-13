@@ -74,7 +74,14 @@ For further details see [Residential Appeals County Survey Data].
 
 ## What are the technical limitations on these SOPs?
 
-SmartFile, central data storage, etc.
+###SmartFile
+
+
+###Central data storage
+
+
+###Other
+
 
 ## What are the technical assets for these SOPs
 
