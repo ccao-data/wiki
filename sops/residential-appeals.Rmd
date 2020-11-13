@@ -30,7 +30,7 @@ The Cook County Assessor’s Office (CCAO) is committed to fair, transparent, et
 
 # Motivation
 
-This section dsicusses the motivation for adopting these SOPs. Transparency [requires us](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content/-/blob/master/handbook/mission%20vision%20values.md#transparency) to release both the policy itself, as well as the motivation and intended outcomes of the policy. To the degree possible, we have written these SOPs so that they are understandable to the typical taxpayer.
+This section discusses the motivation for adopting these SOPs. Transparency [requires us](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content/-/blob/master/handbook/mission%20vision%20values.md#transparency) to release both the policy itself, as well as the motivation and intended outcomes of the policy. To the degree possible, we have written these SOPs so that they are understandable to the typical taxpayer.
 
 ## Fairness
 
@@ -46,7 +46,11 @@ A number of credible third party reports have also found that residential appeal
 
 ### Taxpayers with more valuable homes are more likely to appeal
 
+
+
 ### Taxpayers with more valuable homes are more likely to win their appeal
+
+
 
 ## Transparency
 
@@ -80,7 +84,7 @@ PINVAL
 
 NO.
 
-# Obejctives and Key Results
+# Objectives and Key Results
 
 SOPs create a rules-based approach to increase accuracy and predictability for analysts and appellants. We expect this approach to accomplish the following Key Results.
 
