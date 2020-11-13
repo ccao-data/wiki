@@ -6,6 +6,20 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, fig.align='center', warning = FALSE)
 
+# Load the necessary libraries
+library(ggpubr); library(ccao); library(DBI)
+library(ggplot2); library(gridExtra); library(htmltools)
+library(htmlwidgets); library(jsonlite); library(knitr)
+library(leaflet); library(lubridate); library(odbc)
+library(readr); library(readxl); library(RSocrata)
+library(scales); library(sf); library(stargazer)
+library(testit); library(tidyr); library(tidyverse)
+library(writexl); library(ccao); library(DT)
+library(margins)
+
+# Load
+load('graph_data_1.Rda')
+
 
 # need in-line citation data
 
@@ -30,7 +44,7 @@ The Cook County Assessor’s Office (CCAO) is committed to fair, transparent, et
 
 # Motivation
 
-This section dsicusses the motivation for adopting these SOPs. Transparency [requires us](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content/-/blob/master/handbook/mission%20vision%20values.md#transparency) to release both the policy itself, as well as the motivation and intended outcomes of the policy. To the degree possible, we have written these SOPs so that they are understandable to the typical taxpayer.
+This section discusses the motivation for adopting these SOPs. Transparency [requires us](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content/-/blob/master/handbook/mission%20vision%20values.md#transparency) to release both the policy itself, as well as the motivation and intended outcomes of the policy. To the degree possible, we have written these SOPs so that they are understandable to the typical taxpayer.
 
 ## Fairness
 
@@ -45,6 +59,39 @@ The CCAO did not perform sales ratio studies prior to the Kaegi administration. 
 A number of credible third party reports have also found that residential appeals reduce fairness in assessments. In 2016, researchers at the [University of Chicago](https://harris.uchicago.edu/files/inline-files/Ross%20-%20Vertical%20Equity%20in%20Cook%20County%20-%20CMF%20-%20Final.pdf), in collaboration with [ProPublic](https://www.propublica.org/series/the-tax-divide) and [The Chicago Tribune](https://www.chicagotribune.com/investigations/ct-tax-divide-investigation-20180425-storygallery.html) found that appeals decrease fairness in assessments overall. In 2018, a [Civic Consulting Alliance report](https://prodassets.cookcountyassessor.com/s3fs-public/reports/CivicConsultingAllianceStudyResults.pdf) found the same. There is ample reason to believe that the CCAO's residential appeals process does not reliably or consistently improve fairness in assessments overall. 
 
 ### Taxpayers with more valuable homes are more likely to appeal, be successful
+
+The two primary drivers of unfairness in the appeals process are the self-selective nature of appeals, and the way in which our office processes appeals. Since appeals are initiated by taxpayers, taxpayers with more valuable homes have a greater incentive to appeal. Our office disproportionatly processes appeals from higher-value homes. Partly as a result of this self selection, higher value homes are also more likely to win their appeal, and win a larger reduction as a percentage of value on appeal.
+
+``` {r, appeal_by_value}
+
+g1 <- ggplot(subset(gd1, Period=='2019' & Statistic != 'Mean reduction %')
+             , aes(x=`First Pass Market Value`, y=Rate))+
+  geom_bar(stat='identity', aes(fill=Statistic), position = "dodge")+
+  scale_y_continuous(labels = function(x) paste0(x*100, "%")) +
+  theme_minimal()+
+  theme(axis.text.x = element_text(angle = 90),
+        legend.position = 'bottom') +
+  scale_fill_manual(values=c("#29428D","#FFAF00")) +
+  labs(title = "Appeal rate & success rate",
+  subtitle = '2019 re-assessment')+
+  ylab(' ')
+g2 <- ggplot(subset(gd1, Period=='2019' & Statistic == 'Mean reduction %')
+             , aes(x=`First Pass Market Value`, y=Rate))+
+  geom_bar(stat='identity', aes(fill=Statistic), position = "dodge")+
+  scale_y_continuous(labels = function(x) paste0(x*100, "%")) +
+  theme_minimal()+
+  theme(axis.text.x = element_text(angle = 90),
+        legend.position = 'bottom') +
+  scale_fill_manual(values=c("#81CA9C")) +
+  labs(title = "Mean reduction for successful appeals", subtitle = '2019 re-assessment')+
+  ylab(' ')+
+  coord_cartesian( ylim = c(.04, .085))
+
+ggarrange(g1, g2, ncol=2, nrow=1, common.legend = FALSE)
+
+```
+
+## Appeal decisions are uncorrelated with market signals
 
 
 
@@ -70,7 +117,14 @@ For further details see [Residential Appeals County Survey Data].
 
 ## What are the technical limitations on these SOPs?
 
-SmartFile, central data storage, etc.
+###SmartFile
+
+
+###Central data storage
+
+
+###Other
+
 
 ## What are the technical assets for these SOPs
 
@@ -80,7 +134,7 @@ PINVAL
 
 NO.
 
-# Obejctives and Key Results
+# Objectives and Key Results
 
 SOPs create a rules-based approach to increase accuracy and predictability for analysts and appellants. We expect this approach to accomplish the following Key Results.
 
