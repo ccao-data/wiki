@@ -89,7 +89,7 @@ The orange line shows the average success rates for appeals of triennial assessm
 ``` {r, appeal_accuracy}
 graph_data_2 <- graph_data_2 %>% mutate(`Initial value difference`=`Initial value difference`/100)
 
-graph_data_2 %>%
+g1 <- graph_data_2 %>%
   ggplot(aes(x=`Initial value difference`, y = `Appeal success rate`, group = `Decision type`, color =`Decision type`)) +
   geom_point() + geom_line() +
   geom_vline(xintercept = 0, linetype = 'dotted', size = 1) + 
@@ -101,6 +101,24 @@ graph_data_2 %>%
   labs(
     title = 'Appeal success rates'
     , subtitle = 'Simulated vs. real 2015 - 2019')
+
+g2 <- graph_data_2 %>%
+  dplyr::filter(`Decision type` != 'Simulated accurate decisions' & `Median reduction` > -.3) %>%
+  ggplot(aes(x=`Initial value difference`, y = `Median reduction`
+             , group = `Decision type`, color =`Decision type`)) +
+  geom_point() + geom_line() +
+  geom_vline(xintercept = 0, linetype = 'dotted', size = 1) + 
+  theme_minimal() +
+  theme(legend.position = 'bottom') +
+  scale_y_continuous(labels = scales::percent_format()) +
+  scale_x_continuous(labels = scales::percent_format()) +
+  geom_abline(intercept = 0, slope = 1, linetype = 'solid', size = 1, color = 'green') +
+  scale_color_manual(values = c('orange', 'red')) +
+  labs(
+    title = 'Appeal reduction amounts'
+    , subtitle = 'Simulated vs. real 2015 - 2019')
+
+ggarrange(g1, g2, ncol=2, nrow=1, common.legend = TRUE)
 
 ```
 
