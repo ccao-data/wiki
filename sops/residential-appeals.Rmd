@@ -4,7 +4,7 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, fig.align='center', warning = FALSE)
+knitr::opts_chunk$set(echo = FALSE, fig.align='center', warning = FALSE, fig.align = "center")
 
 # Load the necessary libraries
 library(ggpubr); library(ccao); library(DBI)
@@ -18,29 +18,15 @@ library(writexl); library(ccao); library(DT)
 library(margins)
 
 # Load
-load('graph_data_1.Rda')
-
+load('res_appeals_graph_data_1.Rda')
+load('res_appeals_graph_data_2.Rda')
 
 # need in-line citation data
 
 ```
 
-### Feedback Tracker
-Please download the attached file and use comments to provide feedback. All feedback is due to Samantha Simpson by November 20, 2020.
-
-Check the box below if your department will **not** provide feedback.
-- [ ] Valuations
-- [ ] Legal
-- [ ] Communications
-- [ ] Data
-- [ ] Policy
-- [ ] Information Technology
-- [ ] Administrative Operations
-- [ ] Chief Deputy
-
 # Opportunity
 The Cook County Assessor’s Office (CCAO) is committed to fair, transparent, ethical assessments. The Data Science Department (DS) proposes these Standard Operating Procedures (SOPs) to govern the CCAO's residential property appeals process starting 2021. These SOPs provide comprehensive, clear, consistent guidelines to residential appeals analysts and other CCAO staff processing residential appeals. These SOPs will also be available to the public so that taxpayers can understand and anticipate appeal decisions before filing their appeal. These SOPs will help de-mystify the residential appeals process, reducing potential for unethical behavior and increasing transparency and fairness.
-
 
 # Motivation
 
@@ -91,11 +77,32 @@ ggarrange(g1, g2, ncol=2, nrow=1, common.legend = FALSE)
 
 ```
 
-## Appeal decisions are uncorrelated with market signals
+### Appeal decisions should be correlated with market signals
+
+In the year following a reassessment, many properties transact. Each transaction can be used to test whether the initial assessment or the certified (post-appeal) assessment was closer to the sale price. The graph below shows three sets of data. The x-axis of the graph is the percent difference between a sale price in the year following a reassessment, and the initial value mailed to taxpayers that appealed. The y-axis shows the chances of having an appeal result in a reduction of value. Properties to the left of the black line are over-assessed, since their future sale price is less than their initial mailed value. Properties to the right of the black line are under-assessed, since their sale prices are greater than their mailed values. 
+
+The green line simulates "accurate" appeal decisions. In this scenario, we gave analysts a 70% chance of identifying over-assessed properties as such. As a result, over-assessed properties' appeals are much more likely to be successful compared to those of under-assessed properties. The red line simulates the opposite scenario; appeals analysts simply cannot distinguish between over- and under-assessed properties. As a result, all appeals have an equal chance of winning, regardless of whether they are over- or under-assesed initially.
+
+The orange line shows the average success rates for appeals of triennial assessments from 2015 to 2019. While the CCAO's appeal decisions are not entirely divorced from the market, there is significant room for improvement. For example, consider two properties, one over-assessed by 50%, and one under assessed by 50%. On average, the relative chances of a successful appeal for these properties are about 60% and 30% respectivly. Given such a large difference between the market and initial values of these properties, a larger difference in success chances would be preferred. We hope that these SOPs will increase the correlation between appeal decisions and market indicators. 
 
 
+``` {r, appeal_accuracy}
+graph_data_2 <- graph_data_2 %>% mutate(`Initial value difference`=`Initial value difference`/100)
 
-**MAYA  & BONI's stuff here **
+graph_data_2 %>%
+  ggplot(aes(x=`Initial value difference`, y = `Appeal success rate`, group = `Decision type`, color =`Decision type`)) +
+  geom_point() + geom_line() +
+  geom_vline(xintercept = 0, linetype = 'dotted', size = 1) + 
+  theme_minimal() +
+  theme(legend.position = 'bottom') +
+  scale_y_continuous(labels = scales::percent_format()) +
+  scale_x_continuous(labels = scales::percent_format()) +
+  scale_color_manual(values = c('orange', 'green', 'red')) +
+  labs(
+    title = 'Appeal success rates'
+    , subtitle = 'Simulated vs. real 2015 - 2019')
+
+```
 
 ## Transparency
 
@@ -132,10 +139,6 @@ For further details see [Residential Appeals County Survey Data].
 
 PINVAL
 
-## Selective appraisal
-
-NO.
-
 # Objectives and Key Results
 
 SOPs create a rules-based approach to increase accuracy and predictability for analysts and appellants. We expect this approach to accomplish the following Key Results.
@@ -159,14 +162,33 @@ In order to evaluate whether these SOPs are accomplishing the Key Results, the C
 - **The number of appeals filed decreases, appeals are more successful:** The rate of appeal should approach 10/%, while the rate of success should approach 90/%.
 - **The SOPs should change as the office discovers edge cases, or with input from citizens:** The SOPs should not be static, and should evolve to meet the needs of taxpayers, and further the agencies mission. 
 
-
-
 # Residential Appeal Standard Operating Procedures
 
+The following guidelines govern the processing of residential appeals at the CCAO.
+
+## Recent sales and selective reappraisal
+
+Many taxpayers say 'I just purchased my home for \$X, and you have assessed me at \$X*y. Why isn't my assesment equal to my recent sale price?' Usually, they say this when y < 1. Setting an estimated property value equal to a recent sale price is called 'selective reappraisal,' and is generally considered bad practice in assessment. 
+
+Selective reappriasal occurres when one property is reassessed differently than others similar to it. When assessments of properties with recent sales are changed to more closely reflect the sale price, they are selectivly re-appraised. Selective reappraisal is unfair because it treats some taxpayers differently than others. Consider two identical homes nearby one another, one recently purchased, the other not. If their assessments differ considerably, they are disuniform. 
+
+It is important to understand that our residential modeling pipeline produces _the most accurate estimates of fair cash value acheivable with the data and technology we have on hand_. All properties, reguardless of recency of sale, receive equally accurate assessments. Selectivly reappraising property arbitrarily treats some properties differently than others.
+
+In addition, selective reappraisal invalidates sales ratio study statistics. The IAAO recommends that all sales ratio studies incorporate tests for selective reappraisal [(pg. 11)](https://www.iaao.org/media/standards/Standard_on_Ratio_Studies.pdf). The CCAO follows that recommendation because meeting IAAO standards on sales ratio studies by selective reappraisal is akin to cheating. 
+
+For these reasons, 
+
+* A recent sale alone is neither sufficient nor necessary evidence to support an argument of over-valuation.
 
 ## Characteristics
 
+An appeal based on characteristics argues that the CCAO's physical characteristic data is inaccurate. Inaccurate physical data will likely result in an inaccurate valuation. 
+
+**RAY & MARTY **
+
 ## Vacancy
+
+**RAY & MARTY **
 
 ## Uniformity
 
@@ -190,7 +212,11 @@ Each property in the County has a set of other properties that form their 'compa
 
 /> 10/% above the median of the sale comparable distribution.
 
+## Examples
+
 # Managerial overrides
+
+
 
 # Updating these SOPs
 
