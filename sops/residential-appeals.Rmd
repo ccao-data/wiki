@@ -202,7 +202,7 @@ The tax rate that would have raised the Board of Education's \$3.06 bln levy fro
 
 The graph below shows the net impact of appeals on tax bills. The data is grouped based on year, and whether the property has a successful appeal at either the CCAO, the BOR, neither office, or both offices. Notice that about half of residential taxpayers, even those with successful appeals, end up with a higher tax bill after all appeals are processed. 
 
-![](res_appeals_graph_3)
+![](res_appeals_graph_3.jpeg)
 
 The lack of transparency in the appeals process makes it very difficult to identify the distributional consequences of appeals. These SOPs will help make these consequences more apparent. 
 
@@ -309,13 +309,39 @@ Each property in the County has a set of other properties that form their 'compa
 
 /> 10/% above the median of the sale comparable distribution.
 
-## Examples
+### Examples
 
-# Managerial overrides
+## Managerial review
 
+There will be instances where these SOPs do not provide sufficient guidance to process a particular appeal. In such cases, staff may request managerial review of a particular docket. This section outlines that process. Staff are expected to use their judgment and apply these SOPs to most cases. Managerial review should be an uncommon event.
 
+Any staff processing an appeal may ask for managerial review from their immediate supervisor. This request and subsequent actions taken will be recorded for future analysis. In response to a request for managerial review, the immediate supervisor can take one of three actions:
 
-# Updating these SOPs
+1. The supervisor can review the docket and return it to their supervisee for processing. This action should be taken when these SOPs and the information in the docket are sufficient for the supervisee to decide the appeal.
+2. The supervisor can review the docket and process it. This action should be taken when these SOPs and the information in the docket are not sufficient for the supervisee to decide the appeal, but they are sufficient for the supervisor to decide the appeal. In these instances, the supervisor should discuss the decision with the supervisee to clarify the application of these SOPs.
+3. The supervisor can review the docket and request managerial review from their supervisor. This action should be taken when these SOPs and the information in the docket are not sufficient for either the supervisee or supervisor to decide the appeal. If this action is taken, the supervisor's supervisor should request an SOP review as described in the section titled 'Updating these SOPs.'
+
+## Updating these SOPs
+
+These SOPs may be updated by annual review, or by a requested review. 
+
+### Annual review
+
+Each year, the Data Science department will prepare a report on the implementation of these SOPs for the Assessor and their deputies. This report will contain KPI data, as well as recommended changes to the SOPs for the following assessment cycle. All changes to these SOPs must be authorized by the Chief Valuations Officer and the Assessor.
+
+### Requested review
+
+Any person may request a review of the SOPs. Such a request may be initiated by an email to the [Data Science department](mailto:datascience@cookcountyassessor.com), or by opening and issue ticket in the [wiki_content repository](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content/-/issues). In order to be considered, the request to review must contain the following information:
+
+* The exact portion of these SOPs to be reviewed.
+* A description of why the section should be reviewed. If this review is the result of a managerial review, please provide the docket number and a description of why the SOPs were insufficient to process the docket.
+* Optional: a recommended change to the SOPs to resove the issue. 
+
+Review requests will be considered on a case-by-case basis. If changes to the SOPs are warranted, they will be authorized by the Chief Valuations Officer and the Assessor.
+
+### Version history
+
+The entire history of the versions of this SOP will be available to the public for review.
 
 ## Adoption
 If these SOPs are approved by the Cook County Assessor, the proposed SOPs will be put to the Valuations Department Residential Tax Analysts to process appeals in 2021. The impact of the SOPs will be analyzed at the end of the year to determine refinement.
