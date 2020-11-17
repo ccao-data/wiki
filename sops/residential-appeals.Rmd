@@ -200,7 +200,11 @@ knitr::kable(table)
 
 The tax rate that would have raised the Board of Education's \$3.06 bln levy from the CCAO's initial tax base of \$32.8 bln was 9.32%. After the appeals process of the CCAO and Board of Review, the tax base was 11.3% smaller, and the rate required to raise the same levy was 12% higher. The taxpayer in question would have had to win a cumulative reduction of 11.2% in order to receive a tax bill that was lower than the bill they would have received without any appeals process. The median reduction in assessed value for residential properties in 2018 was 8\%.
 
-This lack of transparency makes it very difficult to identify the distributional consequences of appeals. These SOPs will help make these consequences more apparent. 
+The graph below shows the net impact of appeals on tax bills. The data is grouped based on year, and whether the property has a successful appeal at either the CCAO, the BOR, neither office, or both offices. Notice that about half of residential taxpayers, even those with successful appeals, end up with a higher tax bill after all appeals are processed. 
+
+![](res_appeals_graph_3)
+
+The lack of transparency in the appeals process makes it very difficult to identify the distributional consequences of appeals. These SOPs will help make these consequences more apparent. 
 
 ### Appeals make it difficult to anticipate tax rates
 

@@ -77,48 +77,37 @@ gd1$`First Pass Market Value` <- factor(gd1$`First Pass Market Value`
 
 save(gd1, file = "graph_data_1.Rda")
 
+load(paste0("C:/Users/", Sys.info()[["user"]], "/Documents/appeals-impact-on-tax-rates/data.Rda"))
 
-tax_bases %>%
-  filter(`Appeal Reduction %` > .01 & `Appeal Reduction %` < .4) %>%
-  ungroup() %>%
+graph_3 <- data %>%
+  dplyr::ungroup() %>%
   dplyr::mutate(
-     `Mailed rate` = `Tax Extension` / `Caclulated Mailed Base`
-    , `CCAO certified rate` = `Tax Extension` / `Caclulated Assr. Cert. Base`
-    , `BOR certified rate` = `Tax Extension` / `Caclulated BOR Cert. Base`
-    , `Jurisdiction Size` = factor(case_when(
-    between(`Caclulated Mailed Base`, 0, 2104905) ~ '< 2 Mln'
-    , between(`Caclulated Mailed Base`, 2104905, 17626796) ~ '2 - 17 Mln'
-    , between(`Caclulated Mailed Base`, 17626796, 154578282) ~ '17 - 154 Mln'
-    , `Caclulated Mailed Base` > 154578282 ~ '154 - 61 Bln'
-  ), levels = c('< 2 Mln', '2 - 17 Mln', '17 - 154 Mln', '154 - 61 Bln'))
+    `Net gain from assessor` = case_when(`Assessor % effect on tax bill` <0 ~ TRUE, TRUE ~ FALSE)
+    ,`Net gain from Board` = case_when(`BOR % effect on tax bill` <0 ~ TRUE, TRUE ~ FALSE)
+    ,`Net gain from appeals` = case_when(`Appeal % effect on tax bill` <0 ~ TRUE, TRUE ~ FALSE)
+    , Year = as.factor(Year)
   ) %>%
-  dplyr::mutate(
-    `CCAO appeals` = `CCAO certified rate` -`Mailed rate`
-    , `BOR appeals` = `BOR certified rate` - `CCAO certified rate`) %>%
-  dplyr::select(c('CCAO appeals', 'BOR appeals', 'Jurisdiction Size', Year)) %>%
-  pivot_longer( `CCAO appeals`: `BOR appeals`) %>%
-  dplyr::rename('Agency' = 'name') %>%
-  ggplot(aes(x=`Jurisdiction Size`, y=value, fill =Agency)) +
+  dplyr::filter(`Appeals won` != 'Other' &
+                  abs(`Appeal % effect on tax bill`)<.5) %>%
+  ggplot(aes(y=`Appeal % effect on tax bill`, x = `Appeals won`, fill=`Major Class`)) +
   geom_boxplot(outlier.shape = NA) +
-  coord_cartesian(ylim=c(0, .1)) +
-  scale_y_continuous(labels = percent) +
-  facet_grid(vars(Year))
-
-  dplyr::group_by(Year, `Jurisdiction Size`) %>%
-  dplyr::summarise(
-    `Mean ` = -1*mean(`Assr. Reduction %`, na.rm = TRUE)
-    , `BOR Reduction %` = -1*mean(`BOR Reduction %`, na.rm = TRUE)
-  ) %>%
-  pivot_longer(`Assr. Reduction %`: `BOR Reduction %`) %>%
-  dplyr::rename('Agency' = 'name') %>%
-  ggplot(aes(x=`Jurisdiction Size`, y=value,
-             color = Agency, fill = Agency)) +
-  geom_bar(stat = 'identity', position = 'stack') +
-  facet_grid(vars(Year)) +
+  scale_y_continuous(labels = function(x) paste0(x*100, "%")) +
+  xlab('Successful appeals') +
+  ylab('Net appeal effect') +
   theme_minimal() +
-  theme(legend.position = 'top') +
-  scale_fill_manual(values=c("#29428D","#FFAF00", "black")) +
-  labs(title = 'Reductions in tax base from appeals'
-       , subtitle = 'By quartile of jurisdiction base size')+
-  ylab('Percent reduction') +
-  scale_y_continuous(labels = percent)
+  facet_grid(vars(Year)) +
+  labs(title = 'Net impact of appeals on tax bills'
+       , subtitle = '2017 - 2019') +
+  geom_hline(yintercept = 0) +
+  scale_fill_manual(values=c(
+    ccao::ccao_colors$navy
+    , ccao::ccao_colors$gold
+    , ccao::ccao_colors$buttermilk
+    , ccao::ccao_colors$lightgreen)) +
+  theme(legend.position="bottom")
+
+rm(data)
+
+jpeg(file="res_appeals_graph_3.jpeg")
+graph_3
+dev.off()
