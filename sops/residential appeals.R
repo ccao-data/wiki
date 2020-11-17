@@ -1,8 +1,16 @@
 # This file produces summary statistics for the SOPs on residential appeals
 
 # ---- Setup ----
-
-library(odbc); library(dplyr); library(tidyr); library(stringr)
+# Load the necessary libraries
+library(ggpubr); library(ccao); library(DBI)
+library(ggplot2); library(gridExtra); library(htmltools)
+library(htmlwidgets); library(jsonlite); library(knitr)
+library(leaflet); library(lubridate); library(odbc)
+library(readr); library(readxl); library(RSocrata)
+library(scales); library(sf); library(stargazer)
+library(testit); library(tidyr); library(tidyverse)
+library(writexl); library(ccao); library(DT)
+library(margins)
 
 setwd(paste0("C:/Users/", Sys.info()[["user"]], "/Documents/wiki_content/sops"))
 
@@ -70,5 +78,47 @@ gd1$`First Pass Market Value` <- factor(gd1$`First Pass Market Value`
 save(gd1, file = "graph_data_1.Rda")
 
 
+tax_bases %>%
+  filter(`Appeal Reduction %` > .01 & `Appeal Reduction %` < .4) %>%
+  ungroup() %>%
+  dplyr::mutate(
+     `Mailed rate` = `Tax Extension` / `Caclulated Mailed Base`
+    , `CCAO certified rate` = `Tax Extension` / `Caclulated Assr. Cert. Base`
+    , `BOR certified rate` = `Tax Extension` / `Caclulated BOR Cert. Base`
+    , `Jurisdiction Size` = factor(case_when(
+    between(`Caclulated Mailed Base`, 0, 2104905) ~ '< 2 Mln'
+    , between(`Caclulated Mailed Base`, 2104905, 17626796) ~ '2 - 17 Mln'
+    , between(`Caclulated Mailed Base`, 17626796, 154578282) ~ '17 - 154 Mln'
+    , `Caclulated Mailed Base` > 154578282 ~ '154 - 61 Bln'
+  ), levels = c('< 2 Mln', '2 - 17 Mln', '17 - 154 Mln', '154 - 61 Bln'))
+  ) %>%
+  dplyr::mutate(
+    `CCAO appeals` = `CCAO certified rate` -`Mailed rate`
+    , `BOR appeals` = `BOR certified rate` - `CCAO certified rate`) %>%
+  dplyr::select(c('CCAO appeals', 'BOR appeals', 'Jurisdiction Size', Year)) %>%
+  pivot_longer( `CCAO appeals`: `BOR appeals`) %>%
+  dplyr::rename('Agency' = 'name') %>%
+  ggplot(aes(x=`Jurisdiction Size`, y=value, fill =Agency)) +
+  geom_boxplot(outlier.shape = NA) +
+  coord_cartesian(ylim=c(0, .1)) +
+  scale_y_continuous(labels = percent) +
+  facet_grid(vars(Year))
 
-
+  dplyr::group_by(Year, `Jurisdiction Size`) %>%
+  dplyr::summarise(
+    `Mean ` = -1*mean(`Assr. Reduction %`, na.rm = TRUE)
+    , `BOR Reduction %` = -1*mean(`BOR Reduction %`, na.rm = TRUE)
+  ) %>%
+  pivot_longer(`Assr. Reduction %`: `BOR Reduction %`) %>%
+  dplyr::rename('Agency' = 'name') %>%
+  ggplot(aes(x=`Jurisdiction Size`, y=value,
+             color = Agency, fill = Agency)) +
+  geom_bar(stat = 'identity', position = 'stack') +
+  facet_grid(vars(Year)) +
+  theme_minimal() +
+  theme(legend.position = 'top') +
+  scale_fill_manual(values=c("#29428D","#FFAF00", "black")) +
+  labs(title = 'Reductions in tax base from appeals'
+       , subtitle = 'By quartile of jurisdiction base size')+
+  ylab('Percent reduction') +
+  scale_y_continuous(labels = percent)
