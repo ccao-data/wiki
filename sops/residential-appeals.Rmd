@@ -1,6 +1,10 @@
 ---
 title: "Residential Appeal SOPs"
-output: html_document
+output: 
+  html_document:
+    toc: true
+    toc_depth: 2
+    toc_float: true
 ---
 
 ```{r setup, include=FALSE}
@@ -211,6 +215,8 @@ The lack of transparency in the appeals process makes it very difficult to ident
 Agencies finalize their budgets in December, deciding on property tax levies at that time. The BOR typically closes the final township in the late spring of the following year. In order to identify the impacts of their levy choices on taxpayers, they must attempt to predict the BOR's impact on tax bases after December. This makes budgeting difficult.
 
 ## Ethics
+
+Unethical behavior is most likely to occur when people are making consequential decisions in an untransparent environment with little to no guidance and supervision. 
 
 # Background
 
