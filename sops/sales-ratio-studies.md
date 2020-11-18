@@ -14,13 +14,13 @@ Senior Data Scientists, the Chief Data Officer, the Chief Communications Officer
 
 This policy governs functions contained in [AssessR](https://gitlab.com/ccao-data-science---modeling/packages/assessr), the Cook County Assessor's R Package.
 
-This policy references the [IAAO Standard on Ratio Studies](https://www.iaao.org/media/standards/Standard_on_Ratio_Studies.pdf). The Cook County Assessor’s Office does not have a residential sales validation unit, and therefore cannot adhere to the [IAAO Standard on Verification and Adjustment of Sales](https://www.iaao.org/media/standards/Verification_Adjustment_of_Sales.pdf). The Cook County Assessor’s Office recognizes that there exists an institutional bias to self-report favorable sales ratio statistics. This policy is constructed in such a way as to minimize the impact of that bias on self-reported sales ratio statistics.
+This policy references the [IAAO Standard on Ratio Studies](https://www.iaao.org/media/standards/Standard_on_Ratio_Studies.pdf). The Cook County Assessor's Office does not have a residential sales validation unit, and therefore cannot adhere to the [IAAO Standard on Verification and Adjustment of Sales](https://www.iaao.org/media/standards/Verification_Adjustment_of_Sales.pdf). The Cook County Assessor's Office recognizes that there exists an institutional bias to self-report favorable sales ratio statistics. This policy is constructed in such a way as to minimize the impact of that bias on self-reported sales ratio statistics.
 
 ## Definitions
 
-**Fair Cash Value (FCV):** 'The amount for which a property can be sold in the due course of business and trade, not under duress, between a willing buyer and a willing seller.” (35 ILCS 200/1-50)
+**Fair Cash Value (FCV):** 'The amount for which a property can be sold in the due course of business and trade, not under duress, between a willing buyer and a willing seller. (35 ILCS 200/1-50)
 
-**Sales Ratio:** The ratio of the assessor’s estimated Fair Cash Value in year t to that property’s sale price in period $t \pm z$:
+**Sales Ratio:** The ratio of the assessor's estimated Fair Cash Value in year t to that property's sale price in period $t \pm z$:
 
 $$
 \text{Sales Ratio}_t = \frac{\text{Assessor's Estimated Fair Cash Value}_t}{\text{Sale Price}_{t \pm z}}
@@ -28,7 +28,7 @@ $$
 
 The value of z is governed by this standard (See 3.3.2.1 and 3.3.2.2).
 
-**Assessment ratio:** The ratio of a certified assessment to the assessor’s estimated Fair Cash Value in period t:
+**Assessment ratio:** The ratio of a certified assessment to the assessor's estimated Fair Cash Value in period t:
 
 $$
 \text{Assessment Ratio}_t = \frac{\text{Assessment}_t}{\text{Sale Price}_{t \pm z}}
@@ -51,7 +51,7 @@ $$
 CI = \text{Mean} \pm \sigma / \sqrt n
 $$
 
-**Sales Chasing:** 'Sales Chasing,” also known as 'Selective Appraisal,” is the practice of changing a property’s assessed value in response to a recent sale.
+**Sales Chasing:** 'Sales Chasing,' also known as 'Selective Appraisal,' is the practice of changing a property's assessed value in response to a recent sale.
 
 **Coefficient of Dispersion (COD):** COD is a measure of horizontal equity and uniformity. The COD is the average percentage deviation of ratios from the median ratio. It is calculated as the ratio of the Average Absolute Deviation from the Median Sales Ratio to the Median Sales Ratio:
 
@@ -100,7 +100,7 @@ The following statistics must be included in any sales ratio study:
 * Sample size (i.e., number of properties with sales being used in the sales ratio study)
 * Population size (i.e., number of properties to which the sales ratio study is intended to generalize).
 
-**Measures of Variance** - Each statistic in 1.4 must be reported with an accompanying measure of statistical precision. Where mathematic definitions of a statistic’s standard deviation does not exist, standard deviations should be obtained via bootstrapping.
+**Measures of Variance** - Each statistic in 1.4 must be reported with an accompanying measure of statistical precision. Where mathematic definitions of a statistic's standard deviation does not exist, standard deviations should be obtained via bootstrapping.
 
 ## Data Publication
 The Chief Data Officer shall make all necessary data and code for replication available to the public free of charge. This should include, but is not limited to: the universe of sales available to the CCAO for the sales ratio study, indicators for which sales were excluded, reasons for their exclusion, code to perform the necessary calculations for the sales ratio study, and a report of the results of the study.
@@ -108,7 +108,7 @@ The Chief Data Officer shall make all necessary data and code for replication av
 
 # Standards for High Quality Assessment
 
-Assessments within a strata are considered 'high quality’ if they fall within the defined ranges below.
+Assessments within a strata are considered 'high quality' if they fall within the defined ranges below.
 
 
 | Statistic  | Acceptable Range  |
@@ -140,7 +140,7 @@ Residential Properties are grouped into four groups according to minor property 
 * Residential Condominiums: 299.
 * Vacant Land: 200, 201, 241.
 
-**Exclusion of Special Properties** - Some residential properties classified as 'Single-Family’ by 2.1 are valued by the 'Special Properties’ division of the Valuations Department. These are excluded from the sales ratio study.
+**Exclusion of Special Properties** - Some residential properties classified as 'Single-Family' by 2.1 are valued by the 'Special Properties' division of the Valuations Department. These are excluded from the sales ratio study.
 
 ## Stratification
 
@@ -193,7 +193,7 @@ For example, sales ratios reported during the 2019 re-assessment for assessments
 
 ### Data Source
 
-Sales are obtained by the CCAO from MyDec Web Service ('MyDec”), a service by the Illinois Department of Revenue.
+Sales are obtained by the CCAO from MyDec Web Service ('MyDec'), a service by the Illinois Department of Revenue.
 
 ### Pre-processing of Sales
 
@@ -201,7 +201,7 @@ The sales data obtained via MyDec Web Service contain irregularities that requir
 
 ### Excluded Deed Types
 
-Deeds are excluded based on deed type: Quitclaim Deeds, Executor Deeds, 'B’ type deeds.
+Deeds are excluded based on deed type: Quitclaim Deeds, Executor Deeds, 'B' type deeds.
 
 ### Adjusting Sale Amounts
 
