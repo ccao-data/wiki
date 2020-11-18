@@ -1,5 +1,3 @@
-THIS IS A DRAFT VERSION. Please send feedback to Rob, OR please just edit this yourself.
-
 # Mission
 
 The mission of the Data Science Department is to transform the Cook County Assessor's Office into the most effective property assessment office in the world.
