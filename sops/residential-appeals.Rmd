@@ -34,7 +34,9 @@ The Cook County Assessor’s Office (CCAO) is committed to fair, transparent, et
 
 # Motivation
 
-This section discusses the motivation for adopting these SOPs. Transparency [requires us](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content/-/blob/master/handbook/mission%20vision%20values.md#transparency) to release both the policy itself, as well as the motivation and intended outcomes of the policy. To the degree possible, we have written these SOPs so that they are understandable to the typical taxpayer.
+This section discusses the motivation for adopting these SOPs. Transparency [requires us](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content/-/blob/master/handbook/mission%20vision%20values.md#transparency) to release both the policy itself, as well as the motivation and intended outcomes of the policy. To the degree possible, we have written these SOPs so that they are understandable to the typical taxpayer. The development process of these SOPs can be found on [GitLab](https://gitlab.com/groups/ccao-data-science---modeling/-/milestones/26).
+
+An appeal is effectivly a second look at a value produced by our office. The objective of this second look is to determine whether the value is accurate and fair. These SOPs are written to guide analysts to produce accurate and fair appeals decisions. 
 
 ## Fairness
 
@@ -281,7 +283,19 @@ In addition, selective reappraisal invalidates sales ratio study statistics. The
 
 For these reasons, 
 
-* A recent sale alone is neither sufficient nor necessary evidence to support an argument of over-valuation.
+> **Guideline 1: ** A recent sale alone is neither sufficient nor necessary evidence to support an argument of over-valuation.
+
+## Reduction amount and precision
+
+Imagine a scene: a large, empty warehouse, painted in immaculate white. Two workmen in coveralls stand beside a chifforobe in the center of the space. A fashionably dressed artist says 'A little to the left... a little more... back to the right a little...no, that's too far." This cliched joke plays on the notion of precision and accuracy; can the artist really detect such small deviations from the 'correct' position of the peice, or is it pretense?
+
+Similarly, a very small reduction in value on appeal reflects a level of precision that is not credible. In 2018, **X\% INSERT NUMBER** of appeal reductions were between 2\% and 3\% of fair cash value. The implication here is that the appeals analyst can detect a deviation of such a small magnitude from true fair market value with the resources at their disposal. This is not credible based on the information presented above. 
+
+Uniformity and over-valuation appeals are decided on a two-step process. First, the analyst determines whether or not a reduction is warranted. Second, the analyst determines the amount of reduction to be granted. In the section above, we showed that both decisions have historically not been closely alingned with the market. In order to push both decisions towards alignment with the market, these SOPs set guidelines on both decisions. 
+
+In order to guide those bounds, [we took a random sample of properties](https://gitlab.com/ccao-data-science---modeling/models/ccao_res_avm/-/issues/52) and found every comparable property, and every comparable sale for each target property in the sample. 
+
+**BONI's GRAPHS **
 
 ## Characteristics
 
@@ -301,9 +315,13 @@ An appeal based on uniformity argues that the appellant's property assessment is
 
 Each property in the County has a set of other properties that form their 'comparable set.' This set is defined as **DAN SNOW**
 
-### Uniformity rule
+### Granting uniformity reductions
+
+#### Warranted reductions
 
 /> 10/% above the median of the uniformity distribution.
+
+#### Reduction amounts
 
 ## Valuation
 
