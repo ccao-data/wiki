@@ -1,5 +1,5 @@
 ---
-title: "Residential Appeal SOPs"
+title: "Residential Appeal Standard Operating Procedures"
 output: 
   html_document:
     toc: true
@@ -38,7 +38,7 @@ This section discusses the motivation for adopting these SOPs. Transparency [req
 
 ## Fairness
 
-Illinois property taxes operate according to a levy-based system. In this system, local governments establish the amount of money they want to raise from property taxes, and the assessment process determines the distribution of that tax burden. During a re-assessment, assessors mail initial values to taxpayers, who then have the opportunity to appeal. Successful appeals _do not deprive the government of tax revenue._ Instead, successful appeals shift the burden of a pre-determined levy from taxpayers with successful appeals to those without successful appeals. Under this system, the appeals process has inherent consequences for fairness.
+Illinois property taxes operate according to a levy-based system. In this system, local governments establish the amount of money they want to raise from property taxes, and the assessment process determines the distribution of that tax burden. During a re-assessment, assessors mail initial values to taxpayers, who then have the opportunity to appeal the initial value based on inaccurate information. Successful appeals _do not deprive the government of tax revenue._ Instead, successful appeals shift the burden of a pre-determined levy from taxpayers with successful appeals to those without successful appeals, including those who do not appeal at all. Under this system, the appeals process has inherent consequences for fairness.
 
 In most Illinois counties, between 5/% and 10/% of residential property owners appeal their assessments **FACT CHECK PLEASE.** In Cook County, 35/% of residential taxpayers appealed their 2019 triennial re-assessment. As a consequence, residential appeals account for a large portion of the agency's workload; in 2019, the CCAO processed more than 100,000 residential appeals of triennial re-assessments. Residential assessments significantly impact of the distribution of property taxes in Cook County; during the past three re-assessments, residential appeals reduced the size of jurisdiction's total assessed values by 3/% to 6/%. The fairness of the appeals process is a particularly important consideration in Cook County because of the large volume of appeals.
 
@@ -46,13 +46,13 @@ In most Illinois counties, between 5/% and 10/% of residential property owners a
 
 The CCAO did not perform sales ratio studies prior to the Kaegi administration. In response to recommendations [(pg. 17)](https://prodassets.cookcountyassessor.com/s3fs-public/reports/PCS_Cook-County_Report_final.pdf) from the International Association of Assessing Officer (IAAO) DS developed a robust set of diagnostic tools to determine whether residential assessments were fair and accurate. The residential valuation reports [released with each township mailing](https://www.cookcountyassessor.com/valuation-reports), and the [residential diagnostic report](https://gitlab.com/ccao-data-science---modeling/reports/assessment-diagnostic-report) consistently raise questions about the accuracy and fairness of the CCAO's residential appeals decisions.
 
-A number of credible third party reports have also found that residential appeals reduce fairness in assessments. In 2016, researchers at the [University of Chicago](https://harris.uchicago.edu/files/inline-files/Ross%20-%20Vertical%20Equity%20in%20Cook%20County%20-%20CMF%20-%20Final.pdf), in collaboration with [ProPublic](https://www.propublica.org/series/the-tax-divide) and [The Chicago Tribune](https://www.chicagotribune.com/investigations/ct-tax-divide-investigation-20180425-storygallery.html) found that appeals decrease fairness in assessments overall. In 2018, a [Civic Consulting Alliance report](https://prodassets.cookcountyassessor.com/s3fs-public/reports/CivicConsultingAllianceStudyResults.pdf) found the same. There is ample reason to believe that the CCAO's residential appeals process does not reliably or consistently improve fairness in assessments overall. 
+A number of credible third party reports have also found that residential appeals reduce fairness in assessments. In 2016, researchers at the [University of Chicago](https://harris.uchicago.edu/files/inline-files/Ross%20-%20Vertical%20Equity%20in%20Cook%20County%20-%20CMF%20-%20Final.pdf), in collaboration with [ProPublica](https://www.propublica.org/series/the-tax-divide) and [The Chicago Tribune](https://www.chicagotribune.com/investigations/ct-tax-divide-investigation-20180425-storygallery.html) found that appeals decrease fairness in assessments overall. In 2018, a [Civic Consulting Alliance report](https://prodassets.cookcountyassessor.com/s3fs-public/reports/CivicConsultingAllianceStudyResults.pdf) found the same. There is ample reason to believe that the CCAO's residential appeals process does not reliably or consistently improve fairness in assessments overall. 
 
-### Taxpayers with more valuable homes are more likely to appeal, be successful
+### Taxpayers with more valuable homes are more likely to appeal and win their appeal
 
-The two primary drivers of unfairness in the appeals process are the self-selective nature of appeals, and the way in which our office processes appeals. Since appeals are initiated by taxpayers, taxpayers with more valuable homes have a greater incentive to appeal. Our office disproportionatly processes appeals from higher-value homes. Partly as a result of this self selection, higher value homes are also more likely to win their appeal, and win a larger reduction as a percentage of value on appeal.
+The two primary drivers of unfairness in the appeals process are the self-selective nature of appeals, and the way in which our office processes appeals. Since appeals are initiated by taxpayers, taxpayers with more valuable homes have a greater incentive to appeal which introduces self-selection bias. Our office disproportionately processes appeals from higher-value homes. Partly as a result of this self selection, higher value homes are also more likely to win their appeal, and win a larger reduction as a percentage of value on appeal.
 
-Another factor driving the pattern of appeal decisions illustrated below is year-over-year change in market valuation. There is a general perception in the CCAO and BOR that there should be an upper limit to the year-over-year change in a property's fair cash value. Many properties, however, receive very large reductions on appeal, and so their fair cash value in the year prior to a reassessment is considerably lower than the market would indicate their value should be. On reassessment, these properties experience a large increase in their assessed value to bring them back in-line with the market. Analysts processing appeals see this large increase and are tempted to temper them by granting reductions on appeal.
+Another factor driving the pattern of appeal decisions illustrated below is year-over-year change in market valuation. There is a general perception in the CCAO and Cook County Board of Review (BOR) that there should be an upper limit to the year-over-year change in a property's fair cash value. Many properties, however, receive large reductions on appeal and so their fair cash value in the year prior to a reassessment is considerably lower than the market would indicate. On reassessment, these properties experience a large increase in their assessed value to bring them back in-line with the market. Analysts processing appeals see this large increase and are tempted to temper them by granting reductions on appeal.
 
 
 ``` {r, appeal_by_value}
@@ -90,13 +90,13 @@ In the year following a reassessment, many properties transact. Each transaction
 
 The left graph below shows three sets of data on the binary decision to grant an appeal. The x-axis of the graph is the percent difference between a sale price in the year following a reassessment, and the initial value mailed to taxpayers that appealed. The y-axis shows the chances of having an appeal result in a reduction of value. Properties to the left of the black line are over-assessed, since their future sale price is less than their initial mailed value. Properties to the right of the black line are under-assessed, since their sale prices are greater than their mailed values. 
 
-The green line simulates "accurate" appeal decisions. In this scenario, we simulated analysts with a 70% chance of identifying over-assessed properties as such. As a result, over-assessed properties' appeals are much more likely to be successful compared to those of under-assessed properties. The red line simulates the opposite scenario; appeals analysts simply cannot distinguish between over- and under-assessed properties. As a result, all appeals have an equal chance of winning, regardless of whether they are over- or under-assesed initially.
+The green line simulates "accurate" appeal decisions. In this scenario, we simulated analysts with a 70% chance of identifying over-assessed properties as such. As a result, over-assessed properties' appeals are much more likely to be successful compared to those of under-assessed properties. The red line simulates the opposite scenario; appeals analysts simply cannot distinguish between over- and under-assessed properties. As a result, all appeals have an equal chance of winning, regardless of whether they are over- or under-assessed initially.
 
-The orange line shows the average success rates for appeals of triennial assessments from 2015 to 2019. While the CCAO's appeal decisions are not entirely divorced from the market, there is significant room for improvement. For example, consider two properties, one over-assessed by 50%, and one under assessed by 50%. On average, the relative chances of a successful appeal for these properties are about 60% and 30% respectivly. Given such a large difference between the market and initial values of these properties, a larger difference in success chances would be preferred. A 60% chance of receiving a reduction is only marginally better than a fair coin toss.
+The orange line shows the average success rates for appeals of triennial assessments from 2015 to 2019. While the CCAO's appeal decisions are not entirely divorced from the market, there is significant room for improvement. For example, consider two properties, one over-assessed by 50%, and one under assessed by 50%. On average, the relative chances of a successful appeal for these properties are about 60% and 30% respectively. Given such a large difference between the market and initial values of these properties, a larger difference in success chances would be preferred. A 60% chance of receiving a reduction is only marginally better than a fair coin toss.
 
 The right graph below shows data on the amount of reduction resulting from successful appeals. The x-axis again shows the percent difference between a sale price in the year following a reassessment, and the initial value mailed to taxpayers that appealed. The y-axis shows the median change resulting from a successful appeal. The red line simulates analysts that cannot distinguish over- and under-assessed properties. The green line shows reductions exactly equal to the amount a property is over-assessed. On average, the CCAO reduced properties that were over-assessed by 50% only 15%. 
 
-In general, there is too loose a connection between appeals decisions and market signals. We hope that these SOPs will increase the correlation between appeal decisions and market indicators. 
+In general, there is too loose of a connection between appeals decisions and market signals. We are motivated to implement SOPs that will increase the correlation between appeal decisions and market indicators. 
 
 
 ``` {r, appeal_accuracy}
@@ -137,16 +137,16 @@ ggarrange(g1, g2, ncol=2, nrow=1, common.legend = TRUE)
 
 ## Transparency
 
-Appeals should be transparent on two levels: individual, and jurisdiction. At the individual level, everyone should be able to see which taxpayers appealed, which appeals were granted, and the reasons they were granted. At the jurisdiction level, everyone should be able to see how appeals changed the distribution of levvies. Unfortunatly, non of this is transparent to the public, and it is extreamly difficult even for CCAO staff to monitor these. These SOPs are designed to bring transparency to the residential appeals process.
+Appeals should be transparent on two levels: individual and jurisdiction. At the individual level, everyone should be able to see which taxpayers appealed, which appeals were granted, and the reasons they were granted. At the jurisdiction level, everyone should be able to see how appeals changed the distribution of levies. Unfortunately, none of this information is transparent to the public, and it is extremely difficult even for CCAO staff to monitor this information. These SOPs are designed to bring transparency to the residential appeals process.
 
-### Appeals change the distribution of levvies untransparently
+### Appeals change the distribution of levies untransparently
 
-As we noted above, appeals change the distribution of the property tax levy across taxpayers. To fix ideas, consider a district that raises \$100 from two properties. The graphic below illustrates how the \$100 tax levy is distributed accross these two properties. Note that a proportionate change in both properties values does not impact their tax bills. Doubling, or halving all fair cash values has no impact on tax bills. Only a change in their values relative to each other changes change with tax bills.
+As we noted above, appeals change the distribution of the property tax levy across taxpayers. To fix ideas, consider a district that raises \$100 from two properties. The graphic below illustrates how the \$100 tax levy is distributed across these two properties. Note that a proportionate change in both properties values does not impact their tax bills. Doubling, or halving all fair cash values has no impact on tax bills. Only a change in their values relative to each other changes with tax bills.
 
 
 ![](res_appeals_ptax101_1.jpg)
 
-The volume of appeals in Cook County have a large impact on tax bases, and therefore on rates. The graph below shows the impact of appeals on tax rates for the 674 taxing agencies in Cook County over the past three assessment cycles. While most agencies' rates increased by a very small amount, some agencies saw increases of 5\% to 10\%, which is quite a large change.
+The volume of appeals in Cook County have a large impact on tax bases, and therefore on tax rates. The graph below shows the impact of appeals on tax rates for the 674 taxing agencies in Cook County over the past three assessment cycles. While most agencies' rates increased by a very small amount, some agencies saw increases of 5\% to 10\%, which is quite a large change.
 
 ``` {r, appeals_rates}
 
@@ -208,15 +208,22 @@ The graph below shows the net impact of appeals on tax bills. The data is groupe
 
 ![](res_appeals_graph_3.jpeg)
 
-The lack of transparency in the appeals process makes it very difficult to identify the distributional consequences of appeals. These SOPs will help make these consequences more apparent. 
+The lack of transparency in the appeals process makes it very difficult to identify the distributional consequences of appeals. We are motivated to implement SOPs that will help make these consequences more apparent. 
 
 ### Appeals make it difficult to anticipate tax rates
 
-Agencies finalize their budgets in December, deciding on property tax levies at that time. The BOR typically closes the final township in the late spring of the following year. In order to identify the impacts of their levy choices on taxpayers, they must attempt to predict the BOR's impact on tax bases after December. This makes budgeting difficult.
+Agencies finalize their budgets in December, deciding on property tax levies at that time. The BOR typically closes the appeal session for the final township in late spring of the following year. In order to identify the impacts of their levy choices on taxpayers, agencies must attempt to predict the BOR's impact on tax bases months after December which makes budgeting difficult.
 
 ## Ethics
 
-Unethical behavior is most likely to occur when people are making consequential decisions in an untransparent environment with little to no guidance and supervision. 
+There should always be just cause for shifting tax burdens. Unethical behavior is most likely to occur when people are making consequential decisions in an untransparent environment with undefined rules. 
+
+### Code of Conduct
+
+The linkage between the reason an appellant files a residential appeal, and the decision path an analyst uses to assign an appeal reason code are critical to the ethical behavior of the CCAO. In its current state, the volume, distribution and success of appeals lacks self-regulation and accountability for those who work to only lower assessments. 
+
+We are motivated to implement SOPs that clearly define our ethical conduct.
+
 
 # Background
 
@@ -227,7 +234,8 @@ This section provides background information on the process of developing these 
 In 2020, the Data Science Department conducted a qualitative analysis on the transparency of rules to appeal. The public-facing websites of 10 counties in the United States was surveyed for well-defined rules on the residential appeals process and the criteria to win an appeal. When applying industry best practices themes, there were three consistent findings. First, none of the counties have a published single source of truth for the appeals process and win criteria. Second, six out of ten counties provided criteria on how to win an appeal, however there are inconsistencies due to the number of webpages and sources. Third, all counties provided varying degrees of information on reasons and rules to appeal, however the readability of this information does not perform well according to the basic standards of words per sentence, jargon, and length of text. Based on these observations, there is no industry standard for transparency of the appeals process. 
 For further details see [Residential Appeals County Survey Data].
 
-## What are the technical limitations on these SOPs?
+## Known limitations on SOPs 
+**MIRELLA**
 
 ### SmartFile
 
@@ -238,9 +246,9 @@ For further details see [Residential Appeals County Survey Data].
 ### Other
 
 
-## What are the technical assets for these SOPs
+## Technical assets for SOPs
 
-PINVAL
+PINVAL **Does Comms already have language for PINVAL?**
 
 # Objectives and Key Results
 
@@ -250,7 +258,7 @@ SOPs create a rules-based approach to increase accuracy and predictability for a
 - Appeal decisions are independent of one another, such that the order in which the decisions on two properties are made does not impact the decisions that are made.
 - Analysts apply appeal reason codes that clearly indicate to everyone the reason(s) an appeal was granted or denied. Reason codes clearly correlate with these SOPs.
 - Appellants apply these SOPs to their particular parcel in order to anticipate the outcome of their appeal.
-- Citizens contribute to the development of these SOPs, which evolve over time to accomodate many edge cases.
+- Citizens contribute to the development of these SOPs, which evolve over time to accommodate many edge cases.
 - The cost of processing residential appeals remains constant, or declines; the SOPs do not impose an additional administrative burden on the agency.
 
 ## Key Performance Indicators
@@ -258,7 +266,7 @@ SOPs create a rules-based approach to increase accuracy and predictability for a
 In order to evaluate whether these SOPs are accomplishing the Key Results, the CCAO will track a series of Key Performance Indicators (KPIs). 
 
 - **Appeal SOPs are applied faithfully:** DS will randomly sample appeal results and investigate whether the SOPs were correctly applied. This is necessary to test the functional applicability of the SOPs and their implementation.
-- **Appeal reason codes are clear and accurate:** DS will produce a report summarising appeal reason codes, success rates, and reduction amounts. This will help characterise the appeals process and determine whether codes need to be revised.
+- **Appeal reason codes are clear and accurate:** DS will produce a report summarizing appeal reason codes, success rates, and reduction amounts. This will help characterize the appeals process and determine whether codes need to be revised.
 - **Board Appeals do not increase as a result of CCAO appeals:** Many taxpayer appeal both at the CCAO and at the Board of Review (BOR). DS will sample properties that had unsuccessful appeals at the CCAO, and successful appeals at the BOR. DS will identify all comparable properties for this set, and determine whether changes to each property's comparable set due to CCAO appeals created conditions for a successful BOR appeal.
 - **Probability of success, amount of reduction: ** The success rate and mean reduction amount should be minimally correlated with property values. 
 - **Appeal decision consistent with sales in following year:** Many properties that appeal transact after an appeal decision has been reached. This transaction provides a strong indicator for whether or not the appeal decision was consistent with the market. The CCAO will track both the probability of a successful appeal, and the mean reduction on appeal, across properties with sales in the following year. If appeal decisions are consistent with the market, there should be a strong correlation between the decision to grant an appeal and the amount of rediction, on one side, and the relative value of the sale price to the initial value on the other side.
@@ -271,9 +279,9 @@ The following guidelines govern the processing of residential appeals at the CCA
 
 ## Recent sales and selective reappraisal
 
-Many taxpayers say 'I just purchased my home for \$X, and you have assessed me at \$X*y. Why isn't my assesment equal to my recent sale price?' Usually, they say this when y < 1. Setting an estimated property value equal to a recent sale price is called 'selective reappraisal,' and is generally considered bad practice in assessment. 
+Many taxpayers say 'I just purchased my home for \$X, and you have assessed me at \$X*y. Why isn't my assessment equal to my recent sale price?' Usually, they say this when y < 1. Setting an estimated property value equal to a recent sale price is called 'selective reappraisal,' and is generally considered bad practice in assessment. 
 
-Selective reappriasal occurres when one property is reassessed differently than others similar to it. When assessments of properties with recent sales are changed to more closely reflect the sale price, they are selectivly re-appraised. Selective reappraisal is unfair because it treats some taxpayers differently than others. Consider two identical homes nearby one another, one recently purchased, the other not. If their assessments differ considerably, they are disuniform. 
+Selective reappraisal occurs when one property is reassessed differently than others similar to it. When assessments of properties with recent sales are changed to more closely reflect the sale price, they are selectively re-appraised. Selective reappraisal is unfair because it treats some taxpayers differently than others. Consider two identical homes nearby one another, one recently purchased, the other not. If their assessments differ considerably, they are disuniform. 
 
 It is important to understand that our residential modeling pipeline produces _the most accurate estimates of fair cash value acheivable with the data and technology we have on hand_. All properties, reguardless of recency of sale, receive equally accurate assessments. Selectivly reappraising property arbitrarily treats some properties differently than others.
 
@@ -327,7 +335,7 @@ Any staff processing an appeal may ask for managerial review from their immediat
 2. The supervisor can review the docket and process it. This action should be taken when these SOPs and the information in the docket are not sufficient for the supervisee to decide the appeal, but they are sufficient for the supervisor to decide the appeal. In these instances, the supervisor should discuss the decision with the supervisee to clarify the application of these SOPs.
 3. The supervisor can review the docket and request managerial review from their supervisor. This action should be taken when these SOPs and the information in the docket are not sufficient for either the supervisee or supervisor to decide the appeal. If this action is taken, the supervisor's supervisor should request an SOP review as described in the section titled 'Updating these SOPs.'
 
-## Updating these SOPs
+## Updates
 
 These SOPs may be updated by annual review, or by a requested review. 
 
@@ -341,7 +349,7 @@ Any person may request a review of the SOPs. Such a request may be initiated by 
 
 * The exact portion of these SOPs to be reviewed.
 * A description of why the section should be reviewed. If this review is the result of a managerial review, please provide the docket number and a description of why the SOPs were insufficient to process the docket.
-* Optional: a recommended change to the SOPs to resove the issue. 
+* Optional: a recommended change to the SOPs to resolve the issue. 
 
 Review requests will be considered on a case-by-case basis. If changes to the SOPs are warranted, they will be authorized by the Chief Valuations Officer and the Assessor.
 
