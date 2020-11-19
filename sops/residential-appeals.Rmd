@@ -279,7 +279,9 @@ In order to evaluate whether these SOPs are accomplishing the Key Results, the C
 
 The following guidelines govern the processing of residential appeals at the CCAO.
 
-## Recent sales and selective reappraisal
+## General guidelines
+
+### Recent sales and selective reappraisal
 
 Many taxpayers say 'I just purchased my home for \$X, and you have assessed me at \$X*y. Why isn't my assessment equal to my recent sale price?' Usually, they say this when y < 1. Setting an estimated property value equal to a recent sale price is called 'selective reappraisal,' and is generally considered bad practice in assessment. 
 
@@ -289,11 +291,13 @@ It is important to understand that our residential modeling pipeline produces _t
 
 In addition, selective reappraisal invalidates sales ratio study statistics. The IAAO recommends that all sales ratio studies incorporate tests for selective reappraisal [(pg. 11)](https://www.iaao.org/media/standards/Standard_on_Ratio_Studies.pdf). The CCAO follows that recommendation because meeting IAAO standards on sales ratio studies by selective reappraisal is akin to cheating. 
 
+Finally, it is important to understand the subtle, but important distinction between a sale price and fair cash value. Consider a property that sells at a particular time with parties unknown to one another. Now consider traveling back in time and changing the parties involved in the transaction; the same property sells at the same time, but the realtors, mortgage brokes, buyers, and sellers are all different people. How likely is it that the transaction value will be exactly identical? It will be close, for sure, but it is likely to be slightly different. This thought-experiment illustrates an important point: transaction value is a very strong indicator of fair cash value, but it is not identical to fair cash value.
+
 For these reasons, 
 
-> **Guideline 1: ** A recent sale alone is neither sufficient nor necessary evidence to support an argument of over-valuation.
+> **Guideline C: ** A recent sale alone is neither sufficient nor necessary evidence to support an argument of over-valuation.
 
-## Reduction amount and precision
+### Reduction amount and precision
 
 Imagine a scene: a large, empty warehouse, painted in immaculate white. Two workmen in coveralls stand beside a chifforobe in the center of the space. A fashionably dressed artist says 'A little to the left... a little more... back to the right a little...no, that's too far." This cliched joke plays on the notion of precision and accuracy; can the artist really detect such small deviations from the 'correct' position of the peice, or is it pretense?
 
@@ -304,6 +308,30 @@ Uniformity and over-valuation appeals are decided on a two-step process. First, 
 In order to guide those bounds, [we took a random sample of properties](https://gitlab.com/ccao-data-science---modeling/models/ccao_res_avm/-/issues/52) and found every comparable property, and every comparable sale for each target property in the sample. 
 
 **BONI's GRAPHS **
+
+### Appeals with mismatched reasons
+
+> **Guideline AD:** An appeal where uniformity is the indicated reason, but the comparable properties are consistent with an appeal based on a different reason, may be processed under the criteria for that reason.
+
+
+### Similarity
+
+Two degrees of difference are defined below.
+
+#### Virtually identical
+
+For the purpose of uniformity appeals, two properties are **virtually identical** iff:
+* They are identical in full and half bathroom count, room count, basement and attic finish.
+* One property's building square footage is between .95 and 1.05 times that of the other property.
+* They are within 3/4 mile from one another OR they are within the same CCAO neighborhood.
+
+#### Similar
+
+For the purpose of uniformity appeals, two properties are **similar** iff:
+* One property's building square footage is between 0.9 and 1.1 times the other property's square footage
+* One property's full bathroom count is within 1 unit of the other property's full bathroom count.
+* They are within 1.5 miles from one another OR they are within the same CCAO neighborhood.
+
 
 ## Characteristics
 
@@ -327,32 +355,69 @@ Each property in the County has a set of other properties that form their 'compa
 
 The following guidelines define the criteria for a successful uniformity claim. 
 
-> **Guildline 2:** A reduction is warranted if the fair cash value of the subject property is greater than or equal to 1.1 times the median of its uniformity distribution.  
-> **Guildline 3:** A reduction is warranted if there are at least three properties virtually identical to the subject property and within 1 mile of the subject property with fair cash values less than or equal to .95 times the subject property's fair cash value.
+> **Guildline A:** A reduction is warranted if the fair cash value of the subject property is greater than or equal to 1.1 times the median of its uniformity distribution.  
+
+> **Guildline B:** A reduction is warranted if there are at least three virtually identical properties with fair cash values less than or equal to .95 times the subject property's fair cash value. 
+
+> **Guildline BB:** A reduction is warranted if there are at least six similar properties with fair cash values less than or equal to .90 times the subject property's fair cash value. 
+
+> **Guildline AA:** A reduction is **not** warranted if there are fewer than three comparable properties, either virtually identical or similar.
+
+> **Guildline AB:** A reduction is **not** warranted if Guideline A is not met, and the taxpayer has not supplied a sufficient number of comparables to evaluate other guidelines.
+
+> **Guildline AC:** A reduction is **not** warranted if Guideline A is not met, and the taxpayer has not supplied comparables that meet other guidelines.
+
+
 
 #### Warranted reductions
 
-/> 10/% above the median of the uniformity distribution.
+> **Guideline X :** If a reduction is warranted, the minimum reduction that can be granted is 15% of fair cash value. 
 
-#### Reduction amounts
+> **Guideline Y:** A reduction of 25% or more cannot be granted without **managerial review** by a manager.
+
+> **Guideline Z:** A reduction of 35% or more cannot be granted without **managerial review** by the director of valuations.
+
+> **Guideline W:** A reduction of 50% or more cannot be granted without **managerial review** by the chief valuations officer.
 
 ## Valuation
+
+An appeal based on valuation argues that the fair cash value of the subject property is inconsistent with market indicators. There are three types of market indicators that may be used alone or in combination to support an argument of over-valuation: sales transactions, debt issuances, and appraisals. Each type of indicator has different probative value. 
 
 ### Sale comparables
 
 **DAN SNOW**
 
-### Overvaluation rule
+### Granting valuation reductions
 
-/> 10/% above the median of the sale comparable distribution.
+The following guidelines define the criteria for a successful valuation claim:
 
-### Examples
+> **Guildline O:** A reduction is warranted if the fair cash value of the subject property is greater than or equal to 1.1 times the median of its comparable sales distribution.  
+
+> **Guildline OA:** A reduction is warranted if there are at least three virtually identical properties with sale prices less than or equal to .95 times the subject property's fair cash value, where the sale dates all fall in the year prior to the assessment year. 
+
+> **Guildline OB:** A reduction is warranted if there are at least six similar properties with sale prices less than or equal to .90 times the subject property's fair cash value, where the sale dates all fall in the year prior to the assessment year. 
+
+> **Guildline OC:** A reduction is **not** warranted if there are fewer than three sales of comparable properties, either virtually identical or similar, where the sale dates all fall in the year prior to the assessment year.
+
+> **Guildline OD:** A reduction is **not** warranted if Guideline A is not met, and the taxpayer has not supplied a sufficient number of comparable sales to evaluate other guidelines.
+
+> **Guildline OE:** A reduction is **not** warranted if Guideline A is not met, and the taxpayer has not supplied comparable sales that meet other guidelines.
 
 ## Managerial review
 
 There will be instances where these SOPs do not provide sufficient guidance to process a particular appeal. In such cases, staff may request managerial review of a particular docket. This section outlines that process. Staff are expected to use their judgment and apply these SOPs to most cases. Managerial review should be an uncommon event.
 
-Any staff processing an appeal may ask for managerial review from their immediate supervisor. This request and subsequent actions taken will be recorded for future analysis. In response to a request for managerial review, the immediate supervisor can take one of three actions:
+### Automatic managerial review
+
+Managerial review may be dictated by the guidelines of these SOPs.
+
+### Requests for managerial review
+
+Any staff processing an appeal may ask for managerial review from their immediate supervisor. This request and subsequent actions taken will be recorded for future analysis. 
+
+### Conducting managerial review
+
+Supervisors conducting managerial review can take one of three actions:
 
 1. The supervisor can review the docket and return it to their supervisee for processing. This action should be taken when these SOPs and the information in the docket are sufficient for the supervisee to decide the appeal.
 2. The supervisor can review the docket and process it. This action should be taken when these SOPs and the information in the docket are not sufficient for the supervisee to decide the appeal, but they are sufficient for the supervisor to decide the appeal. In these instances, the supervisor should discuss the decision with the supervisee to clarify the application of these SOPs.
