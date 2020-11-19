@@ -318,20 +318,31 @@ In order to guide those bounds, [we took a random sample of properties](https://
 
 Two degrees of difference are defined below.
 
+#### Same property sale
+
+A property sale can be used as a sale comparable if the sale date is within two years of the reassessment date, and if the characteristics of the property at the time of sale are identical to those at the reassessment date.
+
 #### Virtually identical
 
-For the purpose of uniformity appeals, two properties are **virtually identical** iff:
+For the purpose of appeals, two properties are **virtually identical** iff:
 * They are identical in full and half bathroom count, room count, basement and attic finish.
 * One property's building square footage is between .95 and 1.05 times that of the other property.
 * They are within 3/4 mile from one another OR they are within the same CCAO neighborhood.
 
+If the property is used as a sale comparable,
+
+* The sale must have taken place during the year prior to the assessment year.
+
 #### Similar
 
-For the purpose of uniformity appeals, two properties are **similar** iff:
+For the purpose of appeals, two properties are **similar** iff:
 * One property's building square footage is between 0.9 and 1.1 times the other property's square footage
 * One property's full bathroom count is within 1 unit of the other property's full bathroom count.
 * They are within 1.5 miles from one another OR they are within the same CCAO neighborhood.
 
+If the property is used as a sale comparable,
+
+* The sale must have taken place during the year and a half prior to the assessment year.
 
 ## Characteristics
 
@@ -393,9 +404,13 @@ The following guidelines define the criteria for a successful valuation claim:
 
 > **Guildline O:** A reduction is warranted if the fair cash value of the subject property is greater than or equal to 1.1 times the median of its comparable sales distribution.  
 
+> **Guildline OD:** A reduction is warranted if there is one similar property with a sale price less than or equal to .95 times the subject property's fair cash value, and on same-property sale less than or equal to .95 times the subject property's fair cash value.
+
 > **Guildline OA:** A reduction is warranted if there are at least three virtually identical properties with sale prices less than or equal to .95 times the subject property's fair cash value, where the sale dates all fall in the year prior to the assessment year. 
 
 > **Guildline OB:** A reduction is warranted if there are at least six similar properties with sale prices less than or equal to .90 times the subject property's fair cash value, where the sale dates all fall in the year prior to the assessment year. 
+
+> **Guildline OD:** 
 
 > **Guildline OC:** A reduction is **not** warranted if there are fewer than three sales of comparable properties, either virtually identical or similar, where the sale dates all fall in the year prior to the assessment year.
 
