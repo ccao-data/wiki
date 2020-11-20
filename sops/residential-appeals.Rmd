@@ -372,7 +372,18 @@ An appeal based on uniformity argues that the appellant's property assessment is
 
 ### Uniformity comparables
 
-Each property in the County has a set of other properties that form their 'comparable set.' This set is defined as **DAN SNOW**
+Each property in the County has a set of other properties that form its 'comparable set.' This set is defined as all residential properties that meet the following conditions when compared to the target property:
+
+- Has the same Cook County township
+- Has the same Assessor neighborhood
+- Has the same property class
+- Has the same exterior wall construction
+- $\pm$ 15% of target property's building square footage
+- $\pm$ 15% of target property's land square footage
+- $\pm$ 15% of target property's age
+- $\pm$ 15% of target property's price per square foot (assessed building value / building square footage)
+
+This set of conditions is pulled directly from the legacy systems used by the Assessor's office. These conditions do not return a fixed number of comparables, as more homogeneous areas will return a large number of comparables compared to areas with more heterogeneous housing stock.
 
 ### Granting uniformity reductions
 
@@ -416,7 +427,15 @@ An appeal based on valuation argues that the fair cash value of the subject prop
 
 ### Sale comparables
 
-**DAN SNOW**
+Sales comparables are properties with recent sales which have the same (or very similar) characteristics as a target property. They can be used to determine the consistency of a target property's assessed value with nearby sale values.
+
+Sales comparables are more difficult to find than uniformity comparables. There are far fewer sales than there are properties, so simple methods (such as looking for sales by neighborhood and class) may not yield enough comparables. To solve this problem, the CCAO has developed a relatively straightforward clustering algorithm. This algorithm, called CkNN, works in two stages:
+
+1. Divide all sales into clusters with similar property characteristics. This can be thought of intuitively as dividing all sales into different sub-markets. This is geographically unconstrained, so a property sold in Thornton may be considered similar to one in Evanston during this stage.
+
+2. For each target property, assign it to the cluster which has the most similar properties, then find most similar *and* closest sales within that cluster.
+
+This process yields a fixed number (set by the user) of comparables for each target property and mimics real-world consumer behavior. For a more detailed breakdown of the algorithm, see the [GitLab documentation](https://ccao-data-science---modeling.gitlab.io/packages/assessr/articles/finding-sales-comps.html).
 
 ### Granting valuation reductions
 
