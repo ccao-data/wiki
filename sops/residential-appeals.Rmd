@@ -475,6 +475,18 @@ The following guidelines define the criteria for a successful valuation claim:
 
 ### Warranted reductions
 
+******
+> **Guideline XY :** If a reduction is warranted, the minimum reduction that can be granted is 15% of fair cash value. 
+
+******
+> **Guideline Y:** A reduction of 25% or more cannot be granted without **managerial review** by a manager.
+
+******
+> **Guideline Z:** A reduction of 35% or more cannot be granted without **managerial review** by the director of valuations.
+
+******
+> **Guideline W:** A reduction of 50% or more cannot be granted without **managerial review** by the chief valuations officer.
+
 ## Managerial review
 
 There will be instances where these SOPs do not provide sufficient guidance to process a particular appeal. In such cases, staff may request managerial review of a particular docket. This section outlines that process. Staff are expected to use their judgment and apply these SOPs to most cases. Managerial review should be an uncommon event.
