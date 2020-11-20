@@ -279,6 +279,11 @@ In order to evaluate whether these SOPs are accomplishing the Key Results, the C
 
 The following guidelines govern the processing of residential appeals at the CCAO.
 
+******
+> **Guideline I:** The CCAO expended significant time and resources estimating intial fair cash values. Taxpayers are not inherently entitled to a successful appeal. Appeals are designed to be a stopgap measure, preventing unexpected or absurd results, or to accomodate edge cases. The onus is on the taxpayer to demonstrate their case.
+
+******
+
 ## General guidelines
 
 ### Recent sales and selective reappraisal
@@ -295,7 +300,10 @@ Finally, it is important to understand the subtle, but important distinction bet
 
 For these reasons, 
 
+*****
 > **Guideline C: ** A recent sale alone is neither sufficient nor necessary evidence to support an argument of over-valuation.
+
+*****
 
 ### Reduction amount and precision
 
@@ -311,16 +319,20 @@ In order to guide those bounds, [we took a random sample of properties](https://
 
 ### Appeals with mismatched reasons
 
-> **Guideline AD:** An appeal where uniformity is the indicated reason, but the comparable properties are consistent with an appeal based on a different reason, may be processed under the criteria for that reason.
+******
+> **Guideline AD:** An appeal where the indicated reason for the appeal is inconsistent with the evidence submitted should be processed according to the reason implied by the evidence submitted.
 
+******
+
+### Appeals 
 
 ### Similarity
 
 Two degrees of difference are defined below.
 
-#### Same property sale
+#### Own-property sale
 
-A property sale can be used as a sale comparable if the sale date is within two years of the reassessment date, and if the characteristics of the property at the time of sale are identical to those at the reassessment date.
+A property's own sale can be used as a sale comparable if the sale date is within two years of the reassessment date, and if the characteristics of the property at the time of sale are identical to those at the reassessment date.
 
 #### Virtually identical
 
@@ -386,12 +398,16 @@ The following guidelines define the criteria for a successful uniformity claim.
 
 #### Warranted reductions
 
+******
 > **Guideline X :** If a reduction is warranted, the minimum reduction that can be granted is 15% of fair cash value. 
 
+******
 > **Guideline Y:** A reduction of 25% or more cannot be granted without **managerial review** by a manager.
 
+******
 > **Guideline Z:** A reduction of 35% or more cannot be granted without **managerial review** by the director of valuations.
 
+******
 > **Guideline W:** A reduction of 50% or more cannot be granted without **managerial review** by the chief valuations officer.
 
 ## Valuation
@@ -406,21 +422,39 @@ An appeal based on valuation argues that the fair cash value of the subject prop
 
 The following guidelines define the criteria for a successful valuation claim:
 
-> **Guildline O:** A reduction is warranted if the fair cash value of the subject property is greater than or equal to 1.1 times the median of its comparable sales distribution.  
+******
+> **Guildline O:** A reduction is warranted if the fair cash value of the subject property is greater than or equal to 1.15 times the median of its comparable sales distribution.  
 
-> **Guildline OD:** A reduction is warranted if there is one similar property with a sale price less than or equal to .95 times the subject property's fair cash value, and one same-property sale less than or equal to .95 times the subject property's fair cash value.
+******
+> **Guildline OD:** A reduction is warranted if there are two **similar** property sale values less than or equal to .95 times the subject property's fair cash value, and one **own-property** sale value less than or equal to .95 times the subject property's fair cash value.
 
-> **Guildline OA:** A reduction is warranted if there are at least three virtually identical properties with sale prices less than or equal to .95 times the subject property's fair cash value, where the sale dates all fall in the year prior to the assessment year. 
+******
+> **Guildline OD:** A reduction is warranted if there is one **virtually identical** property sale value less than or equal to .95 times the subject property's fair cash value, and one **own-property** sale value less than or equal to .95 times the subject property's fair cash value.
 
-> **Guildline OB:** A reduction is warranted if there are at least six similar properties with sale prices less than or equal to .90 times the subject property's fair cash value, where the sale dates all fall in the year prior to the assessment year. 
+******
+> **Guildline OA:** A reduction is warranted if there are at least three **virtually identical** property sale values less than or equal to .95 times the subject property's fair cash value. 
 
-> **Guildline OD:** 
+******
+> **Guildline OB:** A reduction is warranted if there are at least six **similar** properties with sale prices less than or equal to .90 times the subject property's fair cash value.
 
-> **Guildline OC:** A reduction is **not** warranted if there are fewer than three sales of comparable properties, either virtually identical or similar, where the sale dates all fall in the year prior to the assessment year.
+******
+> **Guildline OD:** A reduction is warranted if the appellant submits an appraisal with a total appraised value equal to or less than .90 times the  subject property's fair cash value.
+
+******
+> **Guildline OE:** **Managerial review** must be completed if the appellant submits an appraisal with a total appraised value equal to or less than .80 times the subject property's fair cash value.
+
+******
+> **Guildline OF:** A reduction is warranted if the appellant submits evidence of a loan or loans against the value of the property where the debt holder is an institution and the total value of the debt is equal to or greater than .85 times the fair cash value of the subject property.
+
+******
+
+> **Guildline OC:** A reduction is **not** warranted if there are fewer than three sales of comparable properties, either virtually identical or similar, and there are no **own-property** sales. 
 
 > **Guildline OD:** A reduction is **not** warranted if Guideline A is not met, and the taxpayer has not supplied a sufficient number of comparable sales to evaluate other guidelines.
 
 > **Guildline OE:** A reduction is **not** warranted if Guideline A is not met, and the taxpayer has not supplied comparable sales that meet other guidelines.
+
+### Warranted reductions
 
 ## Managerial review
 
