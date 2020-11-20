@@ -111,3 +111,5 @@ rm(data)
 jpeg(file="res_appeals_graph_3.jpeg")
 graph_3
 dev.off()
+
+

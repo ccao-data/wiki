@@ -313,9 +313,20 @@ Similarly, a very small reduction in value on appeal reflects a level of precisi
 
 Uniformity and over-valuation appeals are decided on a two-step process. First, the analyst determines whether or not a reduction is warranted. Second, the analyst determines the amount of reduction to be granted. In the section above, we showed that both decisions have historically not been closely alingned with the market. In order to push both decisions towards alignment with the market, these SOPs set guidelines on both decisions. For reference, the current modeling pipeline estimtes the value of homes between \$250K and \$500K to within 18\% of their sale price. Higher value homes are estimated with slightly more precision.
 
-In order to guide those bounds, [we took a random sample of properties](https://gitlab.com/ccao-data-science---modeling/models/ccao_res_avm/-/issues/52) and found every comparable property, and every comparable sale for each target property in the sample. 
+In order to guide those bounds, [we took a random sample of properties](https://gitlab.com/ccao-data-science---modeling/models/ccao_res_avm/-/issues/52) and found every comparable property, and every comparable sale for each target property in the sample. The graph below shows the cumulative share of properties at each multiple of their individual comparable distributions. About 90% of properties fall below 1.1 times the median of their distribution. 
 
-**BONI's GRAPHS **
+``` {r}
+
+load('res_appeals_graph_data_3.Rda')
+
+g_data_1 %>% ggplot(aes(x=`Ratio of median`, y=`Cumulative share of PINs`)) +
+  geom_line(color = ccao::ccao_colors$navy) + geom_point(color = ccao::ccao_colors$navy) +
+  scale_y_continuous(labels = scales::percent_format()) +
+  scale_x_continuous(labels = scales::percent_format()) +
+  theme_minimal() +
+  geom_vline(xintercept = 1.1, linetype = 'dashed') + geom_hline(yintercept = 0.9198170, linetype = 'dashed') +
+  labs(title = "Cumulative count of PINs by ratio of comparables distribution median")
+```
 
 ### Appeals with mismatched reasons
 
