@@ -364,21 +364,25 @@ Each property in the County has a set of other properties that form their 'compa
 
 ### Granting uniformity reductions
 
-The following guidelines define the criteria for a successful uniformity claim. 
+The following guidelines define the criteria for a successful uniformity claim.
 
+******
 > **Guildline A:** A reduction is warranted if the fair cash value of the subject property is greater than or equal to 1.1 times the median of its uniformity distribution.  
 
+******
 > **Guildline B:** A reduction is warranted if there are at least three virtually identical properties with fair cash values less than or equal to .95 times the subject property's fair cash value. 
 
+******
 > **Guildline BB:** A reduction is warranted if there are at least six similar properties with fair cash values less than or equal to .90 times the subject property's fair cash value. 
 
+******
 > **Guildline AA:** A reduction is **not** warranted if there are fewer than three comparable properties, either virtually identical or similar.
 
+******
 > **Guildline AB:** A reduction is **not** warranted if Guideline A is not met, and the taxpayer has not supplied a sufficient number of comparables to evaluate other guidelines.
 
+******
 > **Guildline AC:** A reduction is **not** warranted if Guideline A is not met, and the taxpayer has not supplied comparables that meet other guidelines.
-
-
 
 #### Warranted reductions
 
@@ -404,7 +408,7 @@ The following guidelines define the criteria for a successful valuation claim:
 
 > **Guildline O:** A reduction is warranted if the fair cash value of the subject property is greater than or equal to 1.1 times the median of its comparable sales distribution.  
 
-> **Guildline OD:** A reduction is warranted if there is one similar property with a sale price less than or equal to .95 times the subject property's fair cash value, and on same-property sale less than or equal to .95 times the subject property's fair cash value.
+> **Guildline OD:** A reduction is warranted if there is one similar property with a sale price less than or equal to .95 times the subject property's fair cash value, and one same-property sale less than or equal to .95 times the subject property's fair cash value.
 
 > **Guildline OA:** A reduction is warranted if there are at least three virtually identical properties with sale prices less than or equal to .95 times the subject property's fair cash value, where the sale dates all fall in the year prior to the assessment year. 
 
