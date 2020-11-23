@@ -242,8 +242,27 @@ This section provides background information on the process of developing these 
 
 ## How do other agencies process residential appeals?
 
-In 2020, the Data Science Department conducted a qualitative analysis on the transparency of rules to appeal. The public-facing websites of 10 counties in the United States was surveyed for well-defined rules on the residential appeals process and the criteria to win an appeal. When applying industry best practices themes, there were three consistent findings. First, none of the counties have a published single source of truth for the appeals process and win criteria. Second, six out of ten counties provided criteria on how to win an appeal, however there are inconsistencies due to the number of webpages and sources. Third, all counties provided varying degrees of information on reasons and rules to appeal, however the readability of this information does not perform well according to the basic standards of words per sentence, jargon, and length of text. Based on these observations, there is no industry standard for transparency of the appeals process. 
-For further details see [Residential Appeals County Survey Data].
+In 2020, the Data Science Department conducted a qualitative analysis on the transparency of rules to appeal. The public-facing websites of 10 counties in the United States was surveyed for well-defined rules on the residential appeals process and the criteria to win an appeal. When applying industry best practices themes, there were three consistent findings. First, none of the counties have a published single source of truth for the appeals process and win criteria. Second, five out of ten counties provided criteria on how to win an appeal, however there are inconsistencies due to the number of webpages and sources. Third, all counties provided varying degrees of information on reasons and rules to appeal, however the readability of this information does not perform well according to the basic standards of words per sentence, jargon, and length of text. Based on these observations, there is no industry standard for transparency of the appeals process. The table below shows the qualitative analysis of the survey. For full details see [Residential Appeals County Survey Data](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content/-/issues/18).
+
+| State | County | Reasons for Appeals | Rules to Appeal | Win Criteria | Filing Fee | In-person Hearing | Single Source of Truth|
+|-------|---------|:-----------------:|:---------------:|:------------:|:----------:|:-----------------:|:---------------------:|
+| Washington | King | 3 | 3| 2 | 0 | 0 | 0| 
+| Arizona | Maricopa | 3 | 3 | 2 | 3 | 0 | 0|
+| New York | New York | 3 | 3 | 3 | 3 | 2 | 0|
+| Illinois | Lake | 3 | 3 | 3 | 1 | 0 | 0|
+| Texas | Harris | 3 | 3 | 2 | 1 | 3 | 0|
+| North Carolina | Wake | 3 | 3 | 2 | 0 | 0 | 0|
+| Florida| Miami-Dade | 3 | 3 | 2 | 3 | 3 | 0|
+| Florida | Broward | 3 | 3 | 2 | 3 | 3 | 0|
+| California | Los Angeles | 3 | 3 | 3 | 0 | 3 | 0|
+
+
+|Value| Code|
+|:---:|:---|
+| 0 | No/ not required|
+| 1 | Not published |
+| 2 | Limited and/or vague |
+| 3 | Yes |
 
 ## Known limitations on SOPs 
 **MIRELLA**
