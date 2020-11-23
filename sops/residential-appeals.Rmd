@@ -365,8 +365,6 @@ g_data_1 %>% ggplot(aes(x=`Ratio of median`, y=`Cumulative share of PINs`)) +
 
 ******
 
-### Appeals 
-
 ### Similarity
 
 Two degrees of difference are defined below.
@@ -378,6 +376,7 @@ A property's own sale can be used as a sale comparable if the sale date is withi
 #### Virtually identical
 
 For the purpose of appeals, two properties are **virtually identical** iff:
+
 * They are identical in full and half bathroom count, room count, basement and attic finish.
 * One property's building square footage is between .95 and 1.05 times that of the other property.
 * They are within 3/4 mile from one another OR they are within the same CCAO neighborhood.
@@ -389,6 +388,7 @@ If the property is used as a sale comparable,
 #### Similar
 
 For the purpose of appeals, two properties are **similar** iff:
+
 * One property's building square footage is between 0.9 and 1.1 times the other property's square footage
 * One property's full bathroom count is within 1 unit of the other property's full bathroom count.
 * They are within 1.5 miles from one another OR they are within the same CCAO neighborhood.
