@@ -36,11 +36,13 @@ The Cook County Assessor’s Office (CCAO) is committed to fair, transparent, et
 
 This section discusses the motivation for adopting these SOPs. Transparency [requires us](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content/-/blob/master/handbook/mission%20vision%20values.md#transparency) to release both the policy itself, as well as the motivation and intended outcomes of the policy. To the degree possible, we have written these SOPs so that they are understandable to the typical taxpayer. The development process of these SOPs can be found on [GitLab](https://gitlab.com/groups/ccao-data-science---modeling/-/milestones/26).
 
-An appeal is effectivly a second look at a value produced by our office. The objective of this second look is to determine whether the value is accurate and fair. These SOPs are written to guide analysts to produce accurate and fair appeals decisions. 
+An appeal is effectively a second look at a value of a property produced by our office. The objective of this second look is to determine whether the value is accurate and fair. These SOPs are written to guide analysts to produce accurate and fair appeals decisions. 
+
+Our motivation is fairness, transparency and ethics.
 
 ## Fairness
 
-Illinois property taxes operate according to a levy-based system. In this system, local governments establish the amount of money they want to raise from property taxes, and the assessment process determines the distribution of that tax burden. During a re-assessment, assessors mail initial values to taxpayers, who then have the opportunity to appeal the initial value based on inaccurate information. Successful appeals _do not deprive the government of tax revenue._ Instead, successful appeals shift the burden of a pre-determined levy from taxpayers with successful appeals to those without successful appeals, including those who do not appeal at all. Under this system, the appeals process has inherent consequences for fairness.
+Illinois property taxes operate according to a levy-based system. In this system, local governments establish the amount of money they want to raise from property taxes, and the assessment process determines the distribution of that tax burden. During a re-assessment, assessors mail initial property values to taxpayers, who then have the opportunity to appeal the initial value based on inaccurate information. Successful appeals _do not deprive the government of tax revenue._ Instead, successful appeals shift the burden of a pre-determined levy from taxpayers with successful appeals to those without successful appeals, including those who do not appeal at all. Under this system, the appeals process has inherent consequences for fairness.
 
 In most Illinois counties, between 5/% and 10/% of residential property owners appeal their assessments **FACT CHECK PLEASE.** In Cook County, 35/% of residential taxpayers appealed their 2019 triennial re-assessment. As a consequence, residential appeals account for a large portion of the agency's workload; in 2019, the CCAO processed more than 100,000 residential appeals of triennial re-assessments. Residential assessments significantly impact of the distribution of property taxes in Cook County; during the past three re-assessments, residential appeals reduced the size of jurisdiction's total assessed values by 3/% to 6/%. The fairness of the appeals process is a particularly important consideration in Cook County because of the large volume of appeals.
 
@@ -218,14 +220,21 @@ Agencies finalize their budgets in December, deciding on property tax levies at 
 
 ## Ethics
 
-There should always be just cause for shifting tax burdens. Unethical behavior is most likely to occur when people are making consequential decisions in an untransparent environment with undefined rules. 
+As a public trust, the CCAO should ensure a code of conduct in the appeals process where successful appeals do not shift the tax burden without just cause. Unethical behavior is most likely to occur when people are making consequential decisions in an untransparent environment with undefined rules. The linkage between the reason an appellant files a residential appeal, and the decision path an analyst uses to assign an appeal reason code are critical to the ethical behavior of the office. 
+###  Code of conduct for low ball appraisals
 
-### Code of Conduct
+Appraisals can be used as evidence for an appeal. The appraisal is an unbiased professional estimate of the fair cash value of a residence provided by a certified appraiser. In Cook County, collaborations between appraisers, and tax consultants and attorneys to increase the chances of a successful tax appeal.
 
-The linkage between the reason an appellant files a residential appeal, and the decision path an analyst uses to assign an appeal reason code are critical to the ethical behavior of the CCAO. In its current state, the volume, distribution and success of appeals lacks self-regulation and accountability for those who work to only lower assessments. 
 
-We are motivated to implement SOPs that clearly define our ethical conduct.
+### Appeals for vacancy and characteristics are vulnerable to schemes to defraud taxpayers
 
+A resident should appeal their assessment to provide the CCAO with accurate information about the property to receive a fair cash value assessment. The impact of the current volume of appeals reveals a lack of public trust and incentive to lower fair and accurate property assessments. Two examples from the Chicago Tribune highlight a successful appeal based on pre-renovation [characteristics](https://www.chicagotribune.com/columns/eric-zorn/ct-column-todd-ricketts-property-tax-wilmette-zorn-20190910-onaglennijf6rjpv6ap6ajmdxy-story.html) where a century-old house was demolished and a new home was built on two properties. The other appeal was successful because it was [uninhabitable](https://www.chicagotribune.com/opinion/editorials/ct-edit-pritzker-toilet-fraud-blanchard-20181002-story.html) due to lack of facilities. Both reports diminish the CCAO as a public trust. Both reports diminish the CCAO as a public trust. 
+
+###  Code of conduct for low-ball appraisals
+
+An appraisal is an unbiased professional estimate of the fair cash value of a residence. When provided by a certified appraiser, appraisals can be used as evidence for an appeal.  In some cases, collaborations exists between appraisers, and tax consultants and attorneys to increase the chances of a successful tax appeal. To ensure these collaborations are working fairly for all taxpayers, the CCAO tax analysts and relevant staff can no longer work within rules where the rules are undefined and wrong. These SOPs will create accountability to those who only work to unfairly lower assessments.
+
+We are motivated to implement SOPs that clearly define our ethical conduct. 
 
 # Background
 
@@ -271,9 +280,11 @@ In order to evaluate whether these SOPs are accomplishing the Key Results, the C
 - **Appeal reason codes are clear and accurate:** DS will produce a report summarizing appeal reason codes, success rates, and reduction amounts. This will help characterize the appeals process and determine whether codes need to be revised.
 - **Board Appeals do not increase as a result of CCAO appeals:** Many taxpayer appeal both at the CCAO and at the Board of Review (BOR). DS will sample properties that had unsuccessful appeals at the CCAO, and successful appeals at the BOR. DS will identify all comparable properties for this set, and determine whether changes to each property's comparable set due to CCAO appeals created conditions for a successful BOR appeal.
 - **Probability of success, amount of reduction: ** The success rate and mean reduction amount should be minimally correlated with property values. 
-- **Appeal decision consistent with sales in following year:** Many properties that appeal transact after an appeal decision has been reached. This transaction provides a strong indicator for whether or not the appeal decision was consistent with the market. The CCAO will track both the probability of a successful appeal, and the mean reduction on appeal, across properties with sales in the following year. If appeal decisions are consistent with the market, there should be a strong correlation between the decision to grant an appeal and the amount of rediction, on one side, and the relative value of the sale price to the initial value on the other side.
+- **Appeal decision consistent with sales in following year:** Many properties that appeal transact after an appeal decision has been reached. This transaction provides a strong indicator for whether or not the appeal decision was consistent with the market. The CCAO will track both the probability of a successful appeal, and the mean reduction on appeal, across properties with sales in the following year. If appeal decisions are consistent with the market, there should be a strong correlation between the decision to grant an appeal and the amount of reduction, on one side, and the relative value of the sale price to the initial value on the other side.
 - **The number of appeals filed decreases, appeals are more successful:** The rate of appeal should approach 10/%, while the rate of success should approach 90/%.
+- **Third party filer trends:** The number of repeat flagged appeals filed by appraisers, tax consultants or tax attorneys.
 - **The SOPs should change as the office discovers edge cases, or with input from citizens:** The SOPs should not be static, and should evolve to meet the needs of taxpayers, and further the agencies mission. 
+- **Knowledge and retention of SOPs:** All residential tax analyst and relevant CCAO staff have access to centralized, simple and consist training for effective implementation.
 
 # Residential Appeal Standard Operating Procedures
 
@@ -307,7 +318,7 @@ For these reasons,
 
 ### Reduction amount and precision
 
-Imagine a scene: a large, empty warehouse, painted in immaculate white. Two workmen in coveralls stand beside a chifforobe in the center of the space. A fashionably dressed artist says 'A little to the left... a little more... back to the right a little...no, that's too far." This cliched joke plays on the notion of precision and accuracy; can the artist really detect such small deviations from the 'correct' position of the peice, or is it pretense?
+Imagine a scene: a large, empty warehouse, painted in immaculate white. Two workmen in coveralls stand beside a chifforobe in the center of the space. A fashionably dressed artist says 'A little to the left... a little more... back to the right a little...no, that's too far." This cliched joke plays on the notion of precision and accuracy; can the artist really detect such small deviations from the 'correct' position of the piece, or is it pretense?
 
 Similarly, a very small reduction in value on appeal reflects a level of precision that is not credible. In 2018, 8\% of appeal reductions were between 2\% and 3\% of fair cash value, and 30\% were below 5\%. The implication here is that the appeals analyst can detect even small deviations from true fair market values with the resources at their disposal. This is not credible based on the information presented above. 
 
@@ -371,7 +382,7 @@ If the property is used as a sale comparable,
 
 An appeal based on characteristics argues that the CCAO's physical characteristic data is inaccurate. Inaccurate physical data will likely result in an inaccurate valuation. 
 
-**RAY & MARTY **
+**RAY & MARTY - guidelines can be driven by SmartFile**
 
 ## Vacancy
 
@@ -379,7 +390,7 @@ An appeal based on characteristics argues that the CCAO's physical characteristi
 
 ## Uniformity
 
-An appeal based on uniformity argues that the appellant's property assessment is inconsistent with assessments of similar properties nearby. The simplest example consiststs of adjacent identical properties; uniformity requires that these properties receive virtually identical assessments. Similar properties that are close to each other should receive similar assessments. As properties become increasingly dissimilar, or more distant geographically, their assessments also become more dissimilar. The degree of dissimilarity required to support a uniformity argument is defined by these SOPs.
+An appeal based on uniformity argues that the appellant's property assessment is inconsistent with assessments of similar properties nearby. The simplest example consists of adjacent identical properties; uniformity requires that these properties receive virtually identical assessments. Similar properties that are close to each other should receive similar assessments. As properties become increasingly dissimilar, or more distant geographically, their assessments also become more dissimilar. The degree of dissimilarity required to support a uniformity argument is defined by these SOPs.
 
 ### Uniformity comparables
 
@@ -401,22 +412,22 @@ This set of conditions is pulled directly from the legacy systems used by the As
 The following guidelines define the criteria for a successful uniformity claim.
 
 ******
-> **Guildline A:** A reduction is warranted if the fair cash value of the subject property is greater than or equal to 1.1 times the median of its uniformity distribution.  
+> **Guideline A:** A reduction is warranted if the fair cash value of the subject property is greater than or equal to 1.1 times the median of its uniformity distribution.  
 
 ******
-> **Guildline B:** A reduction is warranted if there are at least three virtually identical properties with fair cash values less than or equal to .95 times the subject property's fair cash value. 
+> **Guideline B:** A reduction is warranted if there are at least three virtually identical properties with fair cash values less than or equal to .95 times the subject property's fair cash value. 
 
 ******
-> **Guildline BB:** A reduction is warranted if there are at least six similar properties with fair cash values less than or equal to .90 times the subject property's fair cash value. 
+> **Guideline BB:** A reduction is warranted if there are at least six similar properties with fair cash values less than or equal to .90 times the subject property's fair cash value. 
 
 ******
-> **Guildline AA:** A reduction is **not** warranted if there are fewer than three comparable properties, either virtually identical or similar.
+> **Guideline AA:** A reduction is **not** warranted if there are fewer than three comparable properties, either virtually identical or similar.
 
 ******
-> **Guildline AB:** A reduction is **not** warranted if Guideline A is not met, and the taxpayer has not supplied a sufficient number of comparables to evaluate other guidelines.
+> **Guideline AB:** A reduction is **not** warranted if Guideline A is not met, and the taxpayer has not supplied a sufficient number of comparables to evaluate other guidelines.
 
 ******
-> **Guildline AC:** A reduction is **not** warranted if Guideline A is not met, and the taxpayer has not supplied comparables that meet other guidelines.
+> **Guideline AC:** A reduction is **not** warranted if Guideline A is not met, and the taxpayer has not supplied comparables that meet other guidelines.
 
 #### Warranted reductions
 
@@ -453,34 +464,34 @@ This process yields a fixed number (set by the user) of comparables for each tar
 The following guidelines define the criteria for a successful valuation claim:
 
 ******
-> **Guildline O:** A reduction is warranted if the fair cash value of the subject property is greater than or equal to 1.15 times the median of its comparable sales distribution.  
+> **Guideline O:** A reduction is warranted if the fair cash value of the subject property is greater than or equal to 1.15 times the median of its comparable sales distribution.  
 
 ******
-> **Guildline OD:** A reduction is warranted if there are two **similar** property sale values less than or equal to .95 times the subject property's fair cash value, and one **own-property** sale value less than or equal to .95 times the subject property's fair cash value.
+> **Guideline OD:** A reduction is warranted if there are two **similar** property sale values less than or equal to .95 times the subject property's fair cash value, and one **own-property** sale value less than or equal to .95 times the subject property's fair cash value.
 
 ******
-> **Guildline OD:** A reduction is warranted if there is one **virtually identical** property sale value less than or equal to .95 times the subject property's fair cash value, and one **own-property** sale value less than or equal to .95 times the subject property's fair cash value.
+> **Guideline OD:** A reduction is warranted if there is one **virtually identical** property sale value less than or equal to .95 times the subject property's fair cash value, and one **own-property** sale value less than or equal to .95 times the subject property's fair cash value.
 
 ******
-> **Guildline OA:** A reduction is warranted if there are at least three **virtually identical** property sale values less than or equal to .95 times the subject property's fair cash value. 
+> **Guideline OA:** A reduction is warranted if there are at least three **virtually identical** property sale values less than or equal to .95 times the subject property's fair cash value. 
 
 ******
-> **Guildline OB:** A reduction is warranted if there are at least six **similar** properties with sale prices less than or equal to .90 times the subject property's fair cash value.
+> **Guideline OB:** A reduction is warranted if there are at least six **similar** properties with sale prices less than or equal to .90 times the subject property's fair cash value.
 
 ******
-> **Guildline OD:** A reduction is warranted if the appellant submits an appraisal with a total appraised value equal to or less than .90 times the  subject property's fair cash value.
+> **Guideline OD:** A reduction is warranted if the appellant submits an appraisal with a total appraised value equal to or less than .90 times the  subject property's fair cash value.
 
 ******
-> **Guildline OE:** **Managerial review** must be completed if the appellant submits an appraisal with a total appraised value equal to or less than .80 times the subject property's fair cash value.
+> **Guideline OE:** **Managerial review** must be completed if the appellant submits an appraisal with a total appraised value equal to or less than .80 times the subject property's fair cash value.
 
 ******
-> **Guildline OF:** A reduction is warranted if the appellant submits evidence of a loan or loans against the value of the property, where the debt holder is an institution, and the total value of the debt is equal to or greater than .85 times the fair cash value of the subject property.
+> **Guideline OF:** A reduction is warranted if the appellant submits evidence of a loan or loans against the value of the property, where the debt holder is an institution, and the total value of the debt is equal to or greater than .85 times the fair cash value of the subject property.
 
 ******
 
-> **Guildline OC:** A reduction is **not** warranted if there are fewer than three sales of comparable properties, either virtually identical or similar, and there are no **own-property** sales. 
+> **Guideline OC:** A reduction is **not** warranted if there are fewer than three sales of comparable properties, either virtually identical or similar, and there are no **own-property** sales. 
 
-> **Guildline OD:** A reduction is **not** warranted if Guideline A is not met, and the taxpayer has not supplied a sufficient number of comparable sales to evaluate other guidelines.
+> **Guideline OD:** A reduction is **not** warranted if Guideline A is not met, and the taxpayer has not supplied a sufficient number of comparable sales to evaluate other guidelines.
 
 > **Guildline OE:** A reduction is **not** warranted if Guideline A is not met, and the taxpayer has not supplied comparable sales that meet other guidelines.
 
@@ -541,4 +552,6 @@ Review requests will be considered on a case-by-case basis. If changes to the SO
 The entire history of the versions of this SOP will be available to the public for review.
 
 ## Adoption
+Public comment for the SOPs will remain open. Implementation of recommendations and changes will occur in iterations for the purpose of quality training during reassessment periods. 
+
 If these SOPs are approved by the Cook County Assessor, the proposed SOPs will be put to the Valuations Department Residential Tax Analysts to process appeals in 2021. The impact of the SOPs will be analyzed at the end of the year to determine refinement.
