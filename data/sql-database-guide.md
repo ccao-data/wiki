@@ -71,6 +71,9 @@ Provides joinable text descriptions of all class codes
 ***DTBL_CCRDSALES***  
 Sales data received monthly from the Cook County Recorder of Deeds.
 
+***DTBL_COSTAR_CROSSWALK***
+Crosswalk linking Costar IDs to CCAO PINs
+
 ***DTBL_CONDOSTRATA***  
 Contains 10 and 100 level strata assigned to individual condo buildings by year.  Not all tris have been assigned strata values for every year due to the triennial schedule.
 

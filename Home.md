@@ -2,11 +2,14 @@
 
 # The Data Science Department
 
- * [:handshake: Onboarding for New CCAO Employees](handbook/onboarding.md)
- * [:handshake: Onboarding for External Contributors](handbook/onboarding-external.md)
- * [:wave: Offboarding](handbook/offboarding.md)
+ * [:handshake: Onboarding](handbook/onboarding.md)
  * [:blue_book: Handbook](handbook/handbook.md)
- * [:construction_worker: Contributing](contributing/contributing.md)
+ * [:blue_book: Handbook: Not Public](handbook/not-public.md)
+ * [:blue_book: Handbook: Mission, Vision, & Values](handbook/mission vision values.md)
+ * [:construction_worker: External Developer Engagement Program](contributing/contributing.md)
+
+# People Group
+ * [DRAFT DRAFT Hiring with GitLab](people/hiring with gitlab.md)
 
 # Standard Operating Procedures
 
@@ -21,6 +24,12 @@
  * [:chart_with_downwards_trend: Sandbox Model Evaluation](residential/sandbox-model-evaluation.md)
  * [:rocket: 2020 Upgrade Plan](residential/pipeline/upgrade-plan-2020.md)
  * [:heavy_plus_sign: Home Improvement Exemptions (288s)](residential/addchars.md)
+
+# Commercial & RPIE
+ * [RPIE landing](RPIE/landing page.md)
+ * [RPIE FAQs](RPIE/faq.md)
+ * [RPIE Privacy](RPIE/privacy.md)
+ * [RPIE Details](RPIE/what to expect.md)
 
 # Technical Documentation
 
