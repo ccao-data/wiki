@@ -153,3 +153,6 @@ Spatial data as well as addresses and political districts for each PIN in the cu
 
 ***VW_RES_UNIVERSE***  
 A collection of all residential PINs available in the HEADT file from 1997 to present.  Physical characteristics are added for SF and MF PINs, condo strata, percent assessed, and the number of units in condo buildings for NCHAR PINs.
+
+***VW_APARTMENT_SALES***  
+Essentially `VW_CLEAN_IDORSALES` but with a few added columns and only for commercial apartment class parcels.
