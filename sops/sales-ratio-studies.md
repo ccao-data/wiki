@@ -116,7 +116,7 @@ Assessments within a strata are considered 'high quality' if they fall within th
 |COD   | 5 - 15   |
 |PRD   | .98 - 1.03  |
 |PRB   | -.05 - .05  |
-|Median Assessment Ratio   |  .095 - 1.05 |
+|Median Sales Ratio   |  .95 - 1.05 |
 |Sales Chasing (E.4)   | $\le$ 5%  |
 
 **Standards Met.**
