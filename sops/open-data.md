@@ -63,6 +63,16 @@ This data replaces both [Residential Assessments](https://datacatalog.cookcounty
 
 **Code:** TBD
 
+### Commercial Apartment Valuation Data
+
+**Universe:** Data driving the [commercial automated valuation model](https://gitlab.com/ccao-data-science---modeling/models/commercial-apartments-automated-valuation-model).
+
+**Update frequency:** TBD
+
+**Use cases:** There are a wide range of research and public service applications for this data. 
+
+**Code:** TBD
+
 ### [Neighborhood Boundaries](https://datacatalog.cookcountyil.gov/Finance-Administration/Cook-County-Assessor-s-Residential-Neighborhood-Bo/wyzt-dzf8)
 
 **Universe:** All CCAO residential 'neighborhoods.'
