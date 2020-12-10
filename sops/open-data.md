@@ -1,16 +1,6 @@
 # Open Data
 
-# Overview
-
-## Purpose
-
-This policy governs the publication and curation of data on a public-facing repository.
-
-## Employees Affected
-
-The Chief Data Officer
-
-## Related Information
+The Cook County Assessor's Office is committed to transparency. In order to fulfill that committment, the Data Science Department is tasked with creating and maintaining public data sets. This document outlines these data, their uses, and pertinent source code. 
 
 The Cook County Assessor's Office publishes data on the [Cook County Open Data Portal](https://datacatalog.cookcountyil.gov/browse?tags=cook%20county%20assessor). The [AssessR](https://ccao-data-science---modeling.gitlab.io/packages/assessr/articles/example-ratio-study.html) package leverages this open data in its documentation.
 
