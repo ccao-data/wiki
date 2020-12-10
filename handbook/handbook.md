@@ -96,7 +96,18 @@ Employees can choose not to share their supervisor-evaluations with their superv
 
 Employees can request [peer evaluations](https://gitlab.com/ccao-data-science---modeling/career-development/employment/-/blob/master/forms/360%20Evaluation%20-%20Employee%20Evaluating%20Deputy.docx) from another employee of the Cook County Assessor's Office. This peer cannot be in the supervisory chain for the employee, and must have worked with the employee on a significant project, or regularly as part of their assigned duties. Peer evalautions will be shared with both the employee and the supervisor. Supervisors cannot request peer evaluations for their employees.
 
-### Performance evaluation
+### Performance evaluation templates
+
+Performance evalautions are a two-part process. First, the evaluator creates two issue tickets in the [employment repository](https://gitlab.com/ccao-data-science---modeling/career-development/employment). The first issue ticket covers the work the evaluator and evaluateee must complete *prior* to the performance management meeting. The second issue ticket covers the meeting itself, and is blocked by the first ticket. 
+
+The first issue ticket should be populated by the correct template, depending on the job title of the evaluator, and the Shakman exempt status of the evaluatee. The grid below indicates which template should be used.
+
+| Evaluator | Evaluatee | Template name |
+| :---------| :---------|:--------------|
+| Deputy    | Shakman exempt | ds-deputy_performance_eval_preparation_exempt |
+| Deputy    | Shakman non-exempt | ds-ds-deputy_performance_eval_preparation_non_exempt |
+| Non deputy    | Shakman exempt | TBD |
+| Non deputy    | Shakman non-exempt | TBD |
 
 The supervisor and employee complete the performance evaluation process as outlined in the employee handbook.
 
