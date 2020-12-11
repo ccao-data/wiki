@@ -104,7 +104,7 @@ The first issue ticket should be populated by the correct template, depending on
 
 | Evaluator | Evaluatee | Template name |
 | :---------| :---------|:--------------|
-| Deputy    | Shakman exempt | ds-deputy_performance_eval_preparation_exempt |
+| Deputy    | Shakman exempt | [Deputy evaluating Shakman exempt ](https://gitlab.com/ccao-data-science---modeling/career-development/employment/-/blob/master/.gitlab/issue_templates/ds-deputy_performance_eval_preparation_exempt.md) |
 | Deputy    | Shakman non-exempt | ds-ds-deputy_performance_eval_preparation_non_exempt |
 | Non deputy    | Shakman exempt | TBD |
 | Non deputy    | Shakman non-exempt | TBD |
