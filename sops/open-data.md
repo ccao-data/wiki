@@ -95,4 +95,6 @@ During April of 2020, we calculated a set of neighborhood-level adjustments to a
 
 **Code:**  [etl_pinlocations](https://gitlab.com/ccao-data-science---modeling/processes/etl_pinlocations)
 
-### Pacel Shapes
+### [Pacel Shapes](https://hub-cookcountyil.opendata.arcgis.com/datasets/3d3375ac11d147308815d5cf4bb43f4e_21)
+
+Parcel shapes are published by the Cook County Bureau of Technology and noted here for reference.
