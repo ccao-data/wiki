@@ -85,14 +85,14 @@ During April of 2020, we calculated a set of neighborhood-level adjustments to a
 
 **Code:** [COVID Impact on Residential Home Values](https://gitlab.com/ccao-data-science---modeling/covid-impact-on-residential-home-values)
 
-### PIN Locations
+### [PIN Locations](https://datacatalog.cookcountyil.gov/Property-Taxation/Cook-County-Assessor-s-Residential-Property-Charac/bcnq-qi2z)
 
-**Universe:** All addresses in the County, joined against PINs, and PIN locations.
+**Universe:** All 14-character PIN Numbers, their parcel centoid lat/long coordinates, and associated geographies.
 
 **Update frequency:** Anually, with the finalization of each parcel map.
 
 **Use cases:** Finding PINs and plotting them on maps.
 
-**Code:**  [etl_pingeo](https://gitlab.com/ccao-data-science---modeling/processes/etl_pingeo)
+**Code:**  [etl_pinlocations](https://gitlab.com/ccao-data-science---modeling/processes/etl_pinlocations)
 
 ### Pacel Shapes
