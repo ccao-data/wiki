@@ -79,7 +79,7 @@ save(gd1, file = "graph_data_1.Rda")
 
 load(paste0("C:/Users/", Sys.info()[["user"]], "/Documents/appeals-impact-on-tax-rates/data.Rda"))
 
-graph_3 <- data %>%
+gd4 <- data %>%
   dplyr::ungroup() %>%
   dplyr::mutate(
     `Net gain from assessor` = case_when(`Assessor % effect on tax bill` <0 ~ TRUE, TRUE ~ FALSE)
@@ -88,23 +88,18 @@ graph_3 <- data %>%
     , Year = as.factor(Year)
   ) %>%
   dplyr::filter(`Appeals won` != 'Other' &
-                  abs(`Appeal % effect on tax bill`)<.5) %>%
-  ggplot(aes(y=`Appeal % effect on tax bill`, x = `Appeals won`, fill=`Major Class`)) +
-  geom_boxplot(outlier.shape = NA) +
-  scale_y_continuous(labels = function(x) paste0(x*100, "%")) +
-  xlab('Successful appeals') +
-  ylab('Net appeal effect') +
-  theme_minimal() +
-  facet_grid(vars(Year)) +
-  labs(title = 'Net impact of appeals on tax bills'
-       , subtitle = '2017 - 2019') +
-  geom_hline(yintercept = 0) +
-  scale_fill_manual(values=c(
-    ccao::ccao_colors$navy
-    , ccao::ccao_colors$gold
-    , ccao::ccao_colors$buttermilk
-    , ccao::ccao_colors$lightgreen)) +
-  theme(legend.position="bottom")
+                  abs(`Appeal % effect on tax bill`)<.25) %>%
+  dplyr::mutate(`Appeal % effect on tax bill` = plyr::round_any(`Appeal % effect on tax bill`, .01)) %>%
+  dplyr::group_by(`Appeal % effect on tax bill`, `Appeals won`, `Major Class`) %>%
+  dplyr::summarise(
+    `Properties` = n()) %>%
+  dplyr::group_by(`Appeals won`) %>%
+  dplyr::mutate(
+    `Percentage of properties` = `Properties` / sum(`Properties`)) %>%
+  dplyr::filter(`Major Class` == "Residential")
+
+save(gd4, file = "res_appeals_graph_data_4.Rda")
+
 
 rm(data)
 
