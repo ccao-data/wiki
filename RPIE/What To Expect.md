@@ -5,7 +5,7 @@ This page contains an exhaustive description of the information you will need to
 ### Information about PIN numbers
 
 * All the PINs associated with your annual IRS tax filing, Income & Expense statement, business, and/or lease.
-* All the RPIE codes associated with these PINs. Each PIN is associated with a unique code. Instructions for recovering lost codes are [here](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content/-/blob/master/RPIE/faq.md#i-lost-my-rpie-code-i-need-to-edit-a-submitted-filing-i-need-help-with-the-rpie-form).
+* All the RPIE codes associated with these PINs. Each PIN is associated with a unique code. Instructions for recovering lost codes are [here](RPIE/FAQs#i-lost-my-rpie-code-i-need-to-edit-a-submitted-filing-i-need-help-with-the-rpie-form).
 
 ### Information about buildings
 
@@ -52,7 +52,7 @@ Taxpayers who do not have IRS forms can submit income and expense information in
         Any other expenses you wish to volunteer
 * Option 3: Report gross rental income & detailed expense information.
 
-You can see an excel template for income and expense data [here](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content/-/blob/master/RPIE/I&E%20Templates.xlsx).
+You can see an excel template for income and expense data [here](I&E%20Templates.xlsx).
 
 ### Vacant and occupied spaces
 
@@ -60,7 +60,7 @@ The RPIE collects data at the level of individual units. For the purposes of RPI
 
 #### Residential apartments
 
-The RPIE application will accept a template upload. You can find the template for residential spaces [here](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content/-/blob/master/RPIE/2021%20RPIE_Residentials_Spaces_Template.xlsx).
+The RPIE application will accept a template upload. You can find the template for residential spaces [here](2021%20RPIE_Residentials_Spaces_Template.xlsx).
 
 For each apartment, users will be required to submit the following information:
 
@@ -80,7 +80,7 @@ For each apartment, users will be required to submit the following information:
 
 #### Commercial spaces
 
-The RPIE application will accept a template upload. You can find the template for residential spaces [here](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content/-/blob/master/RPIE/2021%20RPIE_Commercials_Spaces_Template.xlsx).
+The RPIE application will accept a template upload. You can find the template for residential spaces [here](2021%20RPIE_Commercials_Spaces_Template.xlsx).
 
 **Lessees responsible for taxes** should report just their own space. 
 

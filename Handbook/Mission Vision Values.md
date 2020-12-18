@@ -11,7 +11,7 @@ This department is a unique entity in the public sector. In the last two years, 
 
 We believe our achievements are an outgrowth of our values, and that those values must always be at the forefront of our work. This article outlines those values in detail, and gives examples of how we practice those values in our work. In crafting this document, we took great inspiration from [GitLab's Company Handbook](https://about.gitlab.com/handbook/values). That company's ethos of transparency and collaboration is particularly important in democratic institutions like ours. 
 
-In order of importance, our five guiding principles are [Fairness](##Fairness), [Transparency](##Transparency), [Inclusion](##Inclusion), [Incrementalism](##Incrementalism), and [Innovation](##Innovation). These are outlined below, with detailed examples of how these principles operated practically.
+In order of importance, our five guiding principles are [Fairness](#fairness), [Transparency](#transparency), [Inclusion](#inclusion), [Incrementalism](#incrementalism), and [Innovation](#innovation). These are outlined below, with detailed examples of how these principles operated practically.
 
 ## Fairness
 Our office determines the distribution of taxes across members of society. That distribution must be fair. Fairness is our cardinal value, and is demonstrated in two important aspects of our work: fairness to taxpayers, and fairness to each other. We take inspiration from Deirdre McCloskey's argument for the [inclusion of transcendent values](https://www.deirdremccloskey.com/docs/graham/virtuous.pdf) in technical fields like economics. We recognize that we are in a unique position of authority, and it is critical that we exercise that authority in the most fair way possible.
@@ -56,8 +56,7 @@ If you made a mistake, apologize as soon as possible. Saying sorry is not a sign
 
 The public has a right to know what we are doing and how we are doing it. Your colleagues need to be able to see your work easily, without interrupting you. Transparency with the public and with each other is central to our success. Share as much information with each other and the public as you can. 
 
-An example is the [data science group on GitLab](https://gitlab.com/ccao-data-science---modeling)
-that also contains our [departmental documentation](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content). Everything we do is public by default; if it is used in production, it is available to the public. Transparency creates awareness for the CCAO, allows us to recruit people that care about our values, gets us more and faster feedback from people outside the agency, and makes it easier to collaborate with them. It is also about sharing great software, documentation, examples, lessons, and processes with the **whole community** and the world in the spirit of open source, which we believe creates more value than it captures.
+An example is the [data science group on GitLab](https://gitlab.com/ccao-data-science---modeling) that also contains our [departmental documentation](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content). Everything we do is public by default; if it is used in production, it is available to the public. Transparency creates awareness for the CCAO, allows us to recruit people that care about our values, gets us more and faster feedback from people outside the agency, and makes it easier to collaborate with them. It is also about sharing great software, documentation, examples, lessons, and processes with the **whole community** and the world in the spirit of open source, which we believe creates more value than it captures.
 
 There are exceptions. Material that is not public by default will be documented. We are above average at keeping things confidential that need to be. On a personal level, you should tell it like it is instead of putting up a poker face. Don't be afraid to admit you made a mistake or were wrong. When something goes wrong, it is a great opportunity to say "What's the [kaizen](https://en.wikipedia.org/wiki/Kaizen) moment here?" and find a better way without hurt feelings.
 
@@ -75,13 +74,13 @@ If you believe something shouldn't be public that currently is (or vice versa), 
 
 The Supreme Court wrote that the ["function of free speech under our system of government is to invite dispute"](https://en.wikipedia.org/wiki/Terminiello_v._City_of_Chicago). We practice transparency even when hiding the facts would be easier. For example, many agencies will not voluntarily release reports showing flaws in their own work. We do, so that the public will know the challenges our agency faces, and to build trust. Other examples include being transparent about [mistakes we make](https://gitlab.com/ccao-data-science---modeling/ccao_sf_cama_dev/-/issues/100).
 
-##### Not public
+### Not public
 
-We make information public by default because [transparency is one of our values](/handbook/values/#transparency). However, some material may not be available to the public. Therefore, a category of information is **public** unless there is a reason for it not to be.
+We make information public by default because [transparency is one of our values](#transparency). However, some material may not be available to the public. Therefore, a category of information is **public** unless there is a reason for it not to be.
 
 When information is not public, it may also be treated as limited access, only shared with certain roles, teams, or team members due to privacy considerations, contractual obligation, or other reasons that the author or DRI can specify. Certain kinds of information default to limited access, including details about team members or customers who did not give permission to share the information.
 
-We document what is [not public by default](/handbook/not-public.md) on our wiki page.
+We document what is [not public by default](Handbook/Not Public) on our wiki page.
 
 ### Directness
 
@@ -103,11 +102,11 @@ Any past decisions and guidelines are open to questioning as long as you act in 
 
 Everything can be questioned, but as long as a decision is in place, we expect people to commit to executing it, which is [a common principle](http://ryanestis.com/leadership/disagree-and-commit-to-get-things-done/). Every decision can be changed.
 
-### Single Source of Truth
+### Single source of truth
 
 The Data Science department is building a digital wiki to serve as the single source of truth. We make that document repository public.
 
-### Find the Limit
+### Find the limit
 
 We accept that we occasionally make mistakes in the direction of transparency. In other words, we accept it if we're sometimes publicizing information that should have remained confidential in retrospect. Most companies become non-transparent over time because they don't accept any mistakes. Making mistakes and reflecting on them means we know where the limit of transparency is.
 
@@ -216,7 +215,7 @@ If you need to decide something as a team, make a concrete proposal instead of c
 
 Don't let your desire to be involved early or to see your solution implemented stand in the way of getting to the best outcome. If you don't have a proposal, don't let that stop you from highlighting a problem, but please state that you couldn't think of a good solution and list any solutions you considered.
 
-### Focus on Improvement
+### Focus on improvement
 
 We believe great agencies sound negative because they focus on what they can improve, not on what is working. Our first question in every conversation with someone outside the company should be: What do you think we can improve? This doesn't mean we don't recognize our successes; for example, see our [Say Thanks](#say-thanks) value. We are positive about the future of the agency; we are present-day pessimists and long-term optimists.
 
@@ -287,7 +286,7 @@ Team members should first search for their own answers and, if an answer is not 
 
 We should strive to accept that there are things that we don't know about the work we're trying to do, and that the best way to drive out that uncertainty is not by layering analysis and conjecture over it, but rather accepting it and moving forward, driving it out as we go along. Wrong solutions can be fixed, but non-existent ones aren't adjustable at all. [The Clever PM Blog](https://www.cleverpm.com/2018/08/23/accepting-uncertainty-is-the-key-to-agility/)
 
-## Why have values?
+## Why Have Values?
 
 The Data Science Department consists of five full-time employees. Why would such a small unit need a detailed description of their values? There are a few reasons why we have made the effort to create this document and train all members of the team on it.
 
@@ -295,12 +294,12 @@ The Data Science Department consists of five full-time employees. Why would such
 
 **Recruitment:** A clear, public statement of value helps attract like-minded people to our team. This helps prevent value dilution as the unit grows, and helps bring in new and innovative ideas.
 
-**Reproducibility:** Part of the [vision](#Vision) for this department is to lead-by-example, providing other public-sector institutions a blueprint for creating a world-class data science unit. Transparency is critical to this mission, for obvious reasons.
+**Reproducibility:** Part of the [vision](#vision) for this department is to lead-by-example, providing other public-sector institutions a blueprint for creating a world-class data science unit. Transparency is critical to this mission, for obvious reasons.
 
-## No halos
+## No Halos
 
 We do not operate under the delusion that our values are superior to others' values, or that our values make our work better simply because we hold them. [Good values do not cause good performance](https://en.wikipedia.org/wiki/The_Halo_Effect_(book)). But good values are an important component of a good culture, and a high-functioning team. This document attempts to outline the ways in which team members are expected to demonstrate our values in their daily work. 
 
-## Updating our values
+## Updating Our Values
 
 Our values are updated as frequently as needed. To suggest changes to our values, feel free to email [Rob Ross](mailto:rross@cookcountyassessor.com) with thoughts, or submit a merge request to this document.

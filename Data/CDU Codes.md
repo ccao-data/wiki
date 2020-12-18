@@ -1,5 +1,3 @@
-# CDU Codes
-
 The table below condition, desirability, and utility (CDU) codes as of 2020. This data is also accessible via the [CCAO R package](https://gitlab.com/ccao-data-science---modeling/packages/ccao). You can retrieve this data with the following code:
 
 ```r

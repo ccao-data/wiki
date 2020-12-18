@@ -1,13 +1,10 @@
-# Hiring With GitLab
-
 This article outlines the process of creating a job description, obtaining approval to hire, posting for a job, interviewing candidates, making a job offer, and onboarding a new hire. The CCAO is testing GitLab as a platform to facilitate this process.
 
-
-### Job description
+### Job Description
 
 Make a job description
 
-### Request to hire
+### Request to Hire
 
 The requesting deputy submits a request to hire issue ticket using the request to hire template. The Deputy Assessor Chief Operations Officer or their delegate authorizes the position's funding. The Director of Hunman Resources or their delegate authorizes the job description.
 
@@ -15,7 +12,7 @@ The requesting deputy submits a request to hire issue ticket using the request t
 
 Once the request to hire is approved and the issue ticket is closed the Director of Human Resources @VWaller or his delegate creates a [project milestone](https://docs.gitlab.com/ee/user/project/milestones/) titled 'Hire [Name of Position].' In the milestone description, indicate the number of people and the deparment for which the hiring is taking place. For example: 
 
-> Title: **Hire Tranee Data Scientist**
+> Title: **Hire Trainee Data Scientist**
 >
 > Description: Hire three Trainee Data Scientists for the Data Science Department.
 

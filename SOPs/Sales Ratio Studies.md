@@ -1,5 +1,3 @@
-# Sales Ratio Studies
-
 # Overview
 
 ## Purpose
@@ -18,21 +16,21 @@ This policy references the [IAAO Standard on Ratio Studies](https://www.iaao.org
 
 ## Definitions
 
-**Fair Cash Value (FCV):** 'The amount for which a property can be sold in the due course of business and trade, not under duress, between a willing buyer and a willing seller. (35 ILCS 200/1-50)
+**Fair Cash Value (FCV):** The amount for which a property can be sold in the due course of business and trade, not under duress, between a willing buyer and a willing seller. (35 ILCS 200/1-50)
 
-**Sales Ratio:** The ratio of the assessor's estimated Fair Cash Value in year t to that property's sale price in period $t \pm z$:
+**Sales Ratio:** The ratio of the assessor's estimated Fair Cash Value in year t to that property's sale price in period $`t \pm z`$:
 
-$$
+```math
 \text{Sales Ratio}_t = \frac{\text{Assessor's Estimated Fair Cash Value}_t}{\text{Sale Price}_{t \pm z}}
-$$
+```
 
 The value of z is governed by this standard (See 3.3.2.1 and 3.3.2.2).
 
 **Assessment ratio:** The ratio of a certified assessment to the assessor's estimated Fair Cash Value in period t:
 
-$$
+```math
 \text{Assessment Ratio}_t = \frac{\text{Assessment}_t}{\text{Sale Price}_{t \pm z}}
-$$
+```
 
 **Sales Ratio Study:** A statistical analysis to evaluate the quality of assessments with respect to accuracy, uniformity, and vertical equity.
 
@@ -41,38 +39,37 @@ a) Residential condominiums;
 b) Property with up to seven self-contained dwelling units;
 c) Vacant and marginally improved land used, or intended to be used in in conjunction with a residential property.
 
-**Arm's length:** Of or relating to dealings between two parties who are not related or not on close terms and who are presumed to have roughly equal bargaining power; not involving a confidential relationship.
+**Arm's Length:** Of or relating to dealings between two parties who are not related or not on close terms and who are presumed to have roughly equal bargaining power; not involving a confidential relationship.
 
 **Bootstrapped Standard Deviation:** The standard deviation of 100 or more calculations of the same statistic, with each calculation based on a random sample of the overall population.
 
 **95% Confidence Interval:** The range in which it is likely that an unknown parameter lies given an observed sample distribution. The confidence interval is given by the mean of the sample statistic plus and minus the product of the z-score (1.96) and the ratio of the standard deviation or bootstrapped standard deviation to the square root of the sample size:
 
-$$
+```math
 CI = \text{Mean} \pm \sigma / \sqrt n
-$$
+```
 
 **Sales Chasing:** 'Sales Chasing,' also known as 'Selective Appraisal,' is the practice of changing a property's assessed value in response to a recent sale.
 
 **Coefficient of Dispersion (COD):** COD is a measure of horizontal equity and uniformity. The COD is the average percentage deviation of ratios from the median ratio. It is calculated as the ratio of the Average Absolute Deviation from the Median Sales Ratio to the Median Sales Ratio:
 
-$$
+```math
 COD = \frac{\text{Average Absolute Deviation From Median Ratio}}{\text{Median Ratio}}*100
-$$
+```
 
 **Price Related Differential (PRD):** PRD is a statistical measure of vertical equity in assessment. It is the mean prediction ratio divided by the sale-price weighted mean prediction ratio.
 
-$$
+```math
 PRD = \frac{\text{Mean Sales Ratio}}{\Big(\sum{\text{Sales Ratio}_i}*w\Big)/n}*100
-$$
+```
 
 **Price Related Bias (PRB):** PRB is a statistical measure of vertical equity. The statistic is obtained by running a linear regression:
 
-$$
+```math
 \frac{\text{Sales Ratio}_i-\text{Meidan Sales Ratio}}{\text{Median Sales Ratio}}=\beta_0 +\beta_1\Bigg[\frac{Ln\bigg(\Big(\frac{\text{EFCV}_i}{\text{Median EFCV}}\Big) + \text{Sale Price}_i\bigg)/2}{Ln(2)} \Bigg]+\mu_i
-$$
+```
 
-The recovered coefficient $\beta_1$ is the PRB statistic.
-
+The recovered coefficient $`\beta_1`$ is the PRB statistic.
 
 # Reporting Requirements
 
@@ -117,7 +114,7 @@ Assessments within a strata are considered 'high quality' if they fall within th
 |PRD   | .98 - 1.03  |
 |PRB   | -.05 - .05  |
 |Median Sales Ratio   |  .95 - 1.05 |
-|Sales Chasing (E.4)   | $\le$ 5%  |
+|Sales Chasing (E.4)   | $`\le`$ 5%  |
 
 **Standards Met.**
 Statistics that fall within the target ranges as defined in 2.1 may be said to have 'met the standard for high quality assessment.'
@@ -148,8 +145,7 @@ Properties may be stratified according to geography, sale price, assessed value,
 
 **Maximum Variance of Strata Statistic** - Stratification should not be so granular as to produce unduly large standard errors.
 
-**Minimum Observations within Strata** - Statistics should not be reported on a strata with fewer than 30 observations.
-
+**Minimum Observations Within Strata** - Statistics should not be reported on a strata with fewer than 30 observations.
 
 ## Matching Appraisal Data and Market Data
 
@@ -167,18 +163,18 @@ The physical and legal characteristics of each property used in the ratio study 
 
 **Matching Assessment Years to Sale Years for Ratio Studies** - This section follows 9.2, p 33, of the IAAO Standard on Ratio Studies. In order to minimize the influence of sales chasing on reported statistics, sales used in calculating statistic for years prior to the year prior to the current assessment year should utilize sales following the date of assessment. For A sale will be included in the study for prior years if the transaction date is between the first day of the year in which the property was re-assessed, and the same day in the following calendar year.
 
-$$
+```math
 \text{Sales Ratio}_t = \frac{\text{Assessor's Estimated Fair Cash Value}_t}{\text{Sale Price}_{t + 1}} \\
 \forall \; \;  t \in [\infty, t-2]
-$$
+```
 
 For example, sales ratios reported during the 2019 re-assessment for assessments in 2017 should use sales in 2018 sales respectively in their denominators.
 
 A sale will be included in the study for the current and prior year if the transaction date is within one year prior to the first day of the year in which the property was re-assessed.
 
-$$
+```math
 \text{Sales Ratio}_t = \frac{\text{Assessor's Estimated Fair Cash Value}_t}{\text{Sale Price}_{t - 1}} \\ \forall \; \;  t \in [t-1, t]
-$$
+```
 
 For example, sales ratios reported during the 2019 re-assessment for assessments in 2018 and 2019 should use sales in 2017 and 2018 respectively in their denominators. The table below shows how sales ratios should be calculated for each tax year in each reporting year.
 

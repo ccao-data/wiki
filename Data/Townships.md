@@ -1,5 +1,3 @@
-# Townships
-
 Cook County is divided into three parts, called 'triads' or 'tris'. Triads are reassessed on a triennial assessment cycle (i.e. they are assessed every three years). Triads are made up of smaller units known as townships. Townships act as a sort of 'unit of work' within the assessor's office, as they are assessed, mailed, appealed, and closed on a predetermined schedule. Townships are also important for modeling, as they're often used as fixed effects (in conjunction with neighborhoods) to absorb geographic variation in assessed value. Below is an example map showing townships and their respective triads and reassessment years:
 
 ![](townships-map.png)
