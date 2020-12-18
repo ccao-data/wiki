@@ -1,40 +1,40 @@
-# Home
-
 # The Data Science Department
 
- * [:handshake: Onboarding](handbook/onboarding.md)
- * [:blue_book: Handbook](handbook/handbook.md)
- * [:blue_book: Handbook: Not Public](handbook/not-public.md)
- * [:blue_book: Handbook: Mission, Vision, & Values](handbook/mission vision values.md)
- * [:construction_worker: External Developer Engagement Program](contributing/contributing.md)
+ * [:blue_book: Handbook](Handbook/Handbook)
+ * [:star: Mission, Vision, & Values](Handbook/Mission Vision Values)
 
-# People Group
- * [DRAFT DRAFT Hiring with GitLab](people/hiring with gitlab.md)
+# People
 
-# Standard Operating Procedures
+ * [:handshake: Onboarding](People/Onboarding)
+ * [:construction_worker: External Developer Engagement Program](People/Contributing)
+ * [:small_blue_diamond: DRAFT Hiring With GitLab](People/Hiring With GitLab)
 
- * [:bar_chart: Sales Ratio Studies](sops/sales-ratio-studies.md)
- * [:mag: Desk Review](sops/desk-review.md)
- * [:mag: Desk Review](sops/residential-appeals.md)
+# Standard Operating Procedures (SOPs)
+
+ * [Sales Ratio Studies](SOPs/Sales Ratio Studies)
+ * [Desk Review](SOPs/Desk Review)
+ * [Residential Appeals](SOPs/Residential Appeals)
+ * [Open Data](SOPs/Open Data)
 
 # Residential
 
- * [:house: Sales Comparables](residential/sales-comps.md)
- * [:heavy_check_mark: Exemptions](residential/exemptions.md)
- * [:chart_with_downwards_trend: Sandbox Model Evaluation](residential/sandbox-model-evaluation.md)
- * [:rocket: 2020 Upgrade Plan](residential/pipeline/upgrade-plan-2020.md)
- * [:heavy_plus_sign: Home Improvement Exemptions (288s)](residential/addchars.md)
+ * [Residential Modeling V2](Residential/Pipeline/Residential Modeling V2)
+ * [Sales Comparables](Residential/Sales Comparables)
+ * [Exemptions](Residential/Residential Exemptions)
+ * [Model Evaluation](Residential/Model Evaluation)
+ * [Home Improvement Exemptions (288s)](Residential/Home Improvement Exemptions)
 
 # Commercial & RPIE
- * [RPIE landing](RPIE/landing page.md)
- * [RPIE FAQs](RPIE/faq.md)
- * [RPIE Privacy](RPIE/privacy.md)
- * [RPIE Details](RPIE/what to expect.md)
 
-# Technical Documentation
+ * [RPIE Overview](RPIE/Overview)
+ * [RPIE FAQs](RPIE/FAQs)
+ * [RPIE Privacy Policy](RPIE/Privacy Policy)
+ * [RPIE Details](RPIE/What To Expect)
 
- * [:file_folder: SQL Database Guide](data/sql-database-guide.md)
- * [:bank: Property Class Definitions](data/class-definitions.pdf) - *Available via the [CCAO R package](https://gitlab.com/ccao-data-science---modeling/packages/ccao)*
- * [:round_pushpin: Township Definitions](data/townships.md) - *Available via the [CCAO R package](https://gitlab.com/ccao-data-science---modeling/packages/ccao)*
- * [:thumbsdown: Appeal Reason Codes](https://prodassets.cookcountyassessor.com/s3fs-public/form_documents/reasoncodes.pdf) - *Used in the DKEMPL SQL table*
- * [:construction: CDU Codes](data/cdus.md) - *Available via the [CCAO R package](https://gitlab.com/ccao-data-science---modeling/packages/ccao)*
+# Data Documentation
+
+ * [SQL Database Guide](Data/SQL Database Guide)
+ * [Property Class Definitions](Data/class-definitions.pdf) - *Available via the [CCAO R package](https://gitlab.com/ccao-data-science---modeling/packages/ccao)*
+ * [Township Definitions](Data/Townships) - *Available via the [CCAO R package](https://gitlab.com/ccao-data-science---modeling/packages/ccao)*
+ * [Appeal Reason Codes](https://prodassets.cookcountyassessor.com/s3fs-public/form_documents/reasoncodes.pdf) - *Used in the DKEMPL SQL table*
+ * [CDU Codes](Data/CDU Codes) - *Available via the [CCAO R package](https://gitlab.com/ccao-data-science---modeling/packages/ccao)*

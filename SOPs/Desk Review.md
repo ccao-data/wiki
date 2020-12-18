@@ -1,5 +1,3 @@
-# Desk Review Standard Operating Procedures
-
 # Purpose
 
 Following statistical modeling and automated post-modeling adjustments performed by software, analysts review residential values for anomalies. In some cases, analysts may change the values produced by CCAO software. This policy outlines when and how those changes can be made, and who must approve such changes.
@@ -11,9 +9,9 @@ All employees performing post-modeling desktop review.
 # Definitions
 
  * **Fair Cash Value (FCV):** 'The amount for which a property can be sold in the due course of business and trade, not under duress, between a willing buyer and a willing seller. (35 ILCS 200/1-50)
- * **Arm's length:** Of or relating to dealings between two parties who are not related or not on close terms and who are presumed to have roughly equal bargaining power; not involving a confidential relationship.
- * **Prediction ratio:** The ratio of the software's prediction for the fair market value of a property at a specified point in time to the recent sale price of a property. A prediction ratio of one indicates that the software's predicted fair market value is equal to the price at which the property most recently sold.
- * **Modeling group:** A group of properties used to estimate the parameters of a statistical model.
+ * **Arm's Length:** Of or relating to dealings between two parties who are not related or not on close terms and who are presumed to have roughly equal bargaining power; not involving a confidential relationship.
+ * **Prediction Ratio:** The ratio of the software's prediction for the fair market value of a property at a specified point in time to the recent sale price of a property. A prediction ratio of one indicates that the software's predicted fair market value is equal to the price at which the property most recently sold.
+ * **Modeling Group:** A group of properties used to estimate the parameters of a statistical model.
 
 # Desk Review Proceedure
 

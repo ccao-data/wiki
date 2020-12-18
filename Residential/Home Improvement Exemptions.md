@@ -1,5 +1,3 @@
-# Home Improvement Exemptions (288s)
-
 # Overview 
 
 The State of Illinois has a home improvement exemption program which allows property owners to deduct up to $75,000 per year of any value created by improvements to a residential property.

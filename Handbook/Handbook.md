@@ -1,6 +1,4 @@
-# Data Science Department Handbook
-
-# Data Science Department
+# The Data Science Department
 
 This document outlines the purpose, procedures, and best practices of the Data Science Department at the Cook County Assessor's Office.
 
@@ -8,23 +6,17 @@ The rationale for having a separate department in the CCAO that specifically dea
 
 # Mission, Vision, and Values
 
-See [Mission, Vision, & Values](handbook/mission vision values.md)
+See [Mission, Vision, & Values](Handbook/Mission Vision Values)
 
 ## Core Technical Competencies
 
-### R
-
-### Shiny
-
-### Git
-
-### Excel
-
-### Markdown
-
-### Leadership
-
-### SQL
+* **R**
+* **Shiny**
+* **Git**
+* **Excel**
+* **Markdown**
+* **Leadership**
+* **SQL**
 
 ## Project Mangagement
 
@@ -57,17 +49,17 @@ In order to deliver accurate and timely work products, the Data Science Departme
 
 ## Organizational Structure
 
-The Data Science Department into two sub-departments: Data Science, which is responsible for building models and tools that enhance the CCAO's mission, and Data Analytics, which is responsible for reporting on and analyzing the performance of the Data Science Department. An [organisation chart](https://gitlab.com/ccao-data-science---modeling/ccao_ds_training/-/blob/master/Documentation/Data%20Science%20Organisation%20Chart.pdf) for the department can be found on the common drive.
+The Data Science Department into two sub-departments: Data Science, which is responsible for building models and tools that enhance the CCAO's mission, and Data Analytics, which is responsible for reporting on and analyzing the performance of the Data Science Department. An [organization chart](https://gitlab.com/ccao-data-science---modeling/ccao_ds_training/-/blob/master/Documentation/Data%20Science%20Organisation%20Chart.pdf) for the department can be found on the common drive.
 
 There are two units inside of the Data Science Department: Data Science and Data Analytics. These units perform reltated, but different types of work. The Data Science unit builds and maintains applications, pipelines, and databases. The Data Analytics department provides data extracts, writes reports, and builds dashboards. 
 
-### Leadership pipelines 
+### Leadership Pipelines 
 
 The Data Science department is building a rigorous framework for career advancement. A 'leadership pipeline' is a well-articulated set of criteria that describes how each member of the team can advance their careers to the next step in the pipeline. We anticipate two different pipelines: tracks
 
-** Technical Track:** This track terminates at the level of Sr. Data Scientist, and is designed to cultivate highly capable data scientists. Staff in this track focus on aquiring and maintaining a wide array of advance skills in computer science, statistics, and application programming in R and Shiny.
+**Technical Track:** This track terminates at the level of Sr. Data Scientist, and is designed to cultivate highly capable data scientists. Staff in this track focus on aquiring and maintaining a wide array of advance skills in computer science, statistics, and application programming in R and Shiny.
 
-** Leadership Track:** This track termins at the level of Chief Data Officer, and is designed to cultivate policy leaders that create and implement data-informed policy. Staff in this track are expected to master statistical concepts and advanced data analysis in excel, as well as intuition about creating value for the organisation.
+**Leadership Track:** This track termins at the level of Chief Data Officer, and is designed to cultivate policy leaders that create and implement data-informed policy. Staff in this track are expected to master statistical concepts and advanced data analysis in excel, as well as intuition about creating value for the organisation.
 
 A more detailed description of this pipeline can be found in [these slides](https://gitlab.com/ccao-data-science---modeling/ccao_ds_training/-/blob/master/Slides/Data%20Science%20Leadership%20Pipeline.pptx) and [this excel workbook](https://gitlab.com/ccao-data-science---modeling/ccao_ds_training/-/blob/master/Documentation/Leadership%20Pipeline.xlsx).
 
@@ -83,7 +75,7 @@ Each exmployee should complete a [self-evaluation](https://gitlab.com/ccao-data-
 
 Employees can choose not to share their self-evaluations with their supervisor.
 
-### Supervisor evalution
+### Supervisor Evalution
 
 Each exmployee should complete a supervisor evaluation appropriate to the level of their supervisor. This evaluation will be shared with the supervisor and is designed to help managers identify areas of weakness in their management practices. Supervisor evaluations are specific to each supervisory level:
 * [Deputy](https://gitlab.com/ccao-data-science---modeling/career-development/employment/-/blob/master/forms/360%20Evaluation%20-%20Employee%20Evaluating%20Deputy.docx)
@@ -92,11 +84,11 @@ Each exmployee should complete a supervisor evaluation appropriate to the level 
  
 Employees can choose not to share their supervisor-evaluations with their supervisor. 
 
-### Peer evaluation
+### Peer Evaluation
 
 Employees can request [peer evaluations](https://gitlab.com/ccao-data-science---modeling/career-development/employment/-/blob/master/forms/360%20Evaluation%20-%20Employee%20Evaluating%20Deputy.docx) from another employee of the Cook County Assessor's Office. This peer cannot be in the supervisory chain for the employee, and must have worked with the employee on a significant project, or regularly as part of their assigned duties. Peer evalautions will be shared with both the employee and the supervisor. Supervisors cannot request peer evaluations for their employees.
 
-### Performance evaluation templates
+### Performance Evaluation Templates
 
 Performance evalautions are a two-part process. First, the evaluator creates two issue tickets in the [employment repository](https://gitlab.com/ccao-data-science---modeling/career-development/employment). The first issue ticket covers the work the evaluator and evaluateee must complete *prior* to the performance management meeting. The second issue ticket covers the meeting itself, and is blocked by the first ticket. 
 
@@ -111,10 +103,9 @@ The first issue ticket should be populated by the correct template, depending on
 
 The supervisor and employee complete the performance evaluation process as outlined in the employee handbook.
 
-
 # Work Terminal Setup
 
-* [See Onboarding](onboarding.md)
+* [See Onboarding](People/Onboarding)
 
 # Working Remotely 
 
@@ -125,17 +116,16 @@ Due to the COVID global pandemic, the Data Science Department is working 100% re
 
 ## Agile Project Management Practices
 
-* **Weekly sprint planning:** 8:45 - 9:30 AM CT every Monday, the Data Science team meets to discuss ongoing work, problems, and new projects. Please be prepared to discuss any questions you have about your work during these meetings.
+* **Weekly Sprint Planning:** 8:45 - 9:30 AM CT every Monday, the Data Science team meets to discuss ongoing work, problems, and new projects. Please be prepared to discuss any questions you have about your work during these meetings.
 * **Daily Standup:** Each day when you start work, please message the General chat on Microsoft Teams with a short description of the work you plan to do that day.
-* **Monthly sprint reviews:** At the end of each month, Senior Data Scientists, Director of Data Analytics, and the Chief Data Officer should be prepared to present updates on the projects they own. Other staff will present as needed.
+* **Monthly Sprint Reviews:** At the end of each month, Senior Data Scientists, Director of Data Analytics, and the Chief Data Officer should be prepared to present updates on the projects they own. Other staff will present as needed.
 
-## Communicating in a remote work environment
+## Communicating in a Remote Work Environment
 
 Data Science staff are often working on multiple projects simultaneously. This means that our communication style and norms are somewhat different from those of a co-located team. Here are a few points to highlight the differences between communicating in a remote environment, and communicating in a co-located one.
 
-* **Low-context communication:**  Assume that the person you are communicating with does not know the context of your work and/or question. A simple question like 'What's the difference between AS_HEADT and AS_HEADBR?' actually has a very lengthy response, depending on the context of the question. In order to make communication efficient, try signaling the context of the question. E.g. "I am trying to report 'final' assessed values for 2019 to compare to 'initial' assessed values. Which HEAD file should I use for each set?" Take the extra time to contextualize your question.
+* **Low-context Communication:**  Assume that the person you are communicating with does not know the context of your work and/or question. A simple question like 'What's the difference between `AS_HEADT` and `AS_HEADBR`?' actually has a very lengthy response, depending on the context of the question. In order to make communication efficient, try signaling the context of the question. E.g. "I am trying to report 'final' assessed values for 2019 to compare to 'initial' assessed values. Which HEAD file should I use for each set?" Take the extra time to contextualize your question.
 * **Asynchronous Communication:** In general, each team member should not expect other team members to respond quickly to questions. This is due to the variety and timing of the work we do. When you hit a stumbling block and need to ask a clarifying question, do so, and then work on a different task while you wait for a response. Similarly, unless otherwise indicated, do not interpret questions from other team members as requiring an immediate response.
-
 
 # Version Control and Workflow
 
@@ -190,7 +180,7 @@ When working an issue, departmental staff should follow these steps:
 
 In collaboration with the Senior Data Scientists, the Deputy Assessor Chief Data Officer can set approvals for merge requests. Branches will not be merged into the production branch until all approvals are made.
 
-### Work In Progress Status
+### Work in Progress Status
 
 Draft working documents are not available under FOIA. The WIP status of branches should not be resolved until the branch is merged into production. Work on branches labeled with WIP status are not available to FOIA. WIP status should be resolved and branches should be merged into production upon the delivery of the work product to either internal or external stakeholders.
 

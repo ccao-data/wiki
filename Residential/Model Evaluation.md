@@ -1,6 +1,3 @@
-# Sandbox Model Evaluation
-
-# Sandbox Overview
 The residential modeling sandbox is a tool developed to evaluate and compare the performance of two models simultaneously. The tool is designed to be used by analysts in the Data Science department to aid in finding the best model for each township, triad, or whole county. The sandbox currently supports the following functionality:
 
 - Ingesting data from SQL server, Cook County Open Data Portal, using data from the last SQL pull stored locally, or using your own sales sample
@@ -20,58 +17,61 @@ Currently, the residential modeling pipeline models each township separately. Th
 Currently this decision is made by only considering two criteria: lowest COD and lowest RMSE. Going forward, this might be revisited to incorporate more metrics in deciding which model performed best.
 
 ## Analysis of Sales Ratios
-This section contains a table displaying the mean and median sales ratio across all townships in the models evaluated. Additionally, it displays the IAAO statistics (COD, PRB, PRD) across townships and by township. For more information on sales ratios and the IAAO statistics, see [here](../sops/sales-ratio-studies.md).
+This section contains a table displaying the mean and median sales ratio across all townships in the models evaluated. Additionally, it displays the IAAO statistics (COD, PRB, PRD) across townships and by township. For more information on sales ratios and the IAAO statistics, see [here](SOPs/Sales Ratio Studies).
 
 ## Overall Model Performance
 Since this is a prediction problem, we have included [measures](http://www.sthda.com/english/articles/38-regression-model-validation/158-regression-model-accuracy-metrics-r-square-aic-bic-cp-and-more/) often used to compare various machine learning models. The ones currently implemented are: R-squared (R2), Root Mean Squared Error (RMSE), Mean Absolute Error (MAE), and AIC (Akaike’s Information Criteria. R2, RMSE, and MAE were chosen because they are the most commonly reported measures. RMSE and MAE are in the same unit as the original data, making them more interpretable.
 
 For the definitions below, the following notation will be used:
 
-A dataset has $n$ values of sale price $y_1, y_2, ... y_n$ and each value is associated with a predicted value $f_1, f_2, ... f_n$.
-$\bar{y}$ is defined as the mean of observed sale prices, calculated as
-$$
+A dataset has $`n`$ values of sale price $`y_1, y_2, ... y_n`$ and each value is associated with a predicted value $`f_1, f_2, ... f_n`$.
+$`\bar{y}`$ is defined as the mean of observed sale prices, calculated as
+
+```math
 \bar{y} = \frac{1}{n}\sum_{i=1}^{n} y_i
-$$
+```
 
 **R-squared (R2):** R-squared, also known as the co-efficient of determination, is the proportion of variation in the outcome that is explained by the predictor variables. In general, the higher the R-squared, the better the model. However, R-squared will almost always increase as more predictor variables are added, so R-squared could be artificially inflated without actually having better explanatory power. For this reason, RMSE and MAE may be more helpful evaluation metrics. R-squared is calculated as follows:
 
 
-The total sum of squares ($SS_{tot}$) is:
-$$
+The total sum of squares ($`SS_{tot}`$) is:
+
+```math
 SS_{tot} = \sum_{i} (y_i - \bar{y})^2
-$$
-The residual sum of squares ($SS_{res}$) is:
+```
 
-$$
+The residual sum of squares ($`SS_{res}`$) is:
+
+```math
 SS_{res} = \sum_{i} (y_i - f_i)^2
-$$
+```
 
-Then, $R^2$ is:
+Then, $`R^2`$ is:
 
-$$
+```math
 R^2 = 1 - \frac{\text{SS}_{res}}{\text{SS}_{tot}}
-$$
+```
 
 
 **Root Mean Squared Error (RMSE):** RMSE is the square root of Mean Squared Error (MSE) which is the average squared difference between observed actual values and the predicted values. The lower the RMSE, the better the model. It is calculated as follows:
 
-$$
+```math
 RMSE = \sqrt{\frac{\sum_{i=1}^{n} (f_i - y_i)^2}{n}}
-$$
+```
 
-**Mean Absolute Error (MAE):** Like RMSE, also measures prediction error. It is the average absolute difference between observed and predicted outcomes, and is less sensitive to outliers than MAE. The lower the MAE, the better the model. It is calculated as follows:
+**Mean Absolute Error (MAE):** Like RMSE, also measures prediction error. It is the average absolute difference between observed and predicted outcomes, and is less sensitive to outliers than RMSE. The lower the MAE, the better the model. It is calculated as follows:
 
-$$
+```math
 MAE = \frac{\sum_{i=1}^{n} |f_i - y_i|}{n}
-$$
+```
 
 **Akaike’s Information Criteria (AIC):** AIC is a metric developed to penalize the inclusion of additional variables to a model. It adds a penalty which increases the error when additional variables are added. The lower the AIC, the better the model. This is only calculated for  regression models, and outputs an NA for GBM models.
 
-$$
+```math
 AIC = -2(log-likelihood) + 2K
-$$
+```
 
-where $K$ is the number of model parameters and log-likelihood is a measure of model fit. The higher the log-likelihood, the better.
+where $`K`$ is the number of model parameters and log-likelihood is a measure of model fit. The higher the log-likelihood, the better.
 
 ## Bias in Error Structure: General Heteroskedasticity
 Boxplots showing sales ratio by decile of assessed value. Ideally, we want to see similar variance in sales ratios across all deciles of assessed (predicted) value. If not, we likely have heteroskedasticity in our errors.

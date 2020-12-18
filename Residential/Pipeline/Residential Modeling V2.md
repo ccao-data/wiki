@@ -1,11 +1,9 @@
-# Residential Modeling Upgrade 2020-2021
-
 # Purpose
 
-This document outlines the CCAO&#39;s vision and plan for improvements to its residential modeling pipeline in 2020. Its purpose is twofold:
+This document outlines the CCAO's vision and plan for improvements to its residential modeling pipeline in 2020. Its purpose is twofold:
 
-1. Define the future state of the residential modeling pipeline in 2021 and how it relates to the CCAO&#39;s mission and values
-2. Structure the development process by establishing clear goals, tasks, due dates, and delineation of work such that work is aligned to the agency&#39;s core mission
+1. Define the future state of the residential modeling pipeline in 2021 and how it relates to the CCAO's mission and values
+2. Structure the development process by establishing clear goals, tasks, due dates, and delineation of work such that work is aligned to the agency's core mission
 
 # Vision
 
@@ -19,7 +17,7 @@ The overall goal of this upgrade is to increase the **flexibility, resiliency, p
 
 1. Pipeline must be manually retooled for specific scenarios and models, e.g. floodplains, unexpected economic shocks, etc. This typically takes 2-3 days of full-time work.
 2. Adding new, more accurate or specialized models is a mostly manual task, and it can take days or weeks to fully integrate them into the pipeline.
-3. Pipeline is difficult to extend to new data schema (such as Tyler&#39;s). It would need to be refactored heavily to account for changes in data format and structure.
+3. Pipeline is difficult to extend to new data schema (such as Tyler's). It would need to be refactored heavily to account for changes in data format and structure.
 
 **Future state/goals:**
 
@@ -56,8 +54,8 @@ The overall goal of this upgrade is to increase the **flexibility, resiliency, p
 **Future state/goals:**
 
 1. Replace data ingest and pipeline infrastructure with a data warehouse system that stores intermediate data, cleaned data, and model objects in shared storage. This storage can even be made public to allow external users to easily run our models.
-2. Lock the software environment using the renv R package and Docker. This will ensure that the dependencies needed to run the pipeline are easily restored and that updates to dependencies don&#39;t break existing code.
-3. Replace existing codebase with an independent and generalized package that can be easily exported to other machines. This package could even be used by other assessors&#39; offices.
+2. Lock the software environment using the renv R package and Docker. This will ensure that the dependencies needed to run the pipeline are easily restored and that updates to dependencies don't break existing code.
+3. Replace existing codebase with an independent and generalized package that can be easily exported to other machines. This package could even be used by other assessors' offices.
 
 ## Fairness
 
@@ -90,7 +88,7 @@ The current pipeline is a massive improvement over previous modeling techniques,
 **Future state/goals:**
 
 1. Build the new pipeline to be system agnostic. It should be easily portable and its dependencies should be extremely explicit.
-2. Add version locking of packages via renv and Docker to ensure that future updates don&#39;t break functionality.
+2. Add version locking of packages via renv and Docker to ensure that future updates don't break functionality.
 3. Add a UI layer to allow non-technical users to test new models and compare their results. Also use Airflow to automatically trigger/schedule data ingestion and results reporting. This is equivalent to/an extension of the current modeling sandbox.
 
 ## Transparency

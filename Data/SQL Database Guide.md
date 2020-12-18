@@ -1,5 +1,3 @@
-# SQL Database Guide
-
 > :warning: Anything with a `DEV` prefix is still in development and should not be used by anyone other than its creator.
 
 # Data Dictionaries
@@ -29,7 +27,7 @@
 | TAX_YEAR | assessment year |
 | PIN | parcel ID number, left padded |
 
-All other data dictionary materials can be found in the [Residential Repository](https://gitlab.com/ccao-data-science---modeling/ccao_sf_cama_dev/-/tree/master/data_dictionary_constituents)
+All other data dictionary materials can be found in the [CCAO package](https://gitlab.com/ccao-data-science---modeling/packages/ccao).
 
 # Table Definitions
 

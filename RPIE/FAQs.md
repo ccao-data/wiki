@@ -1,5 +1,3 @@
-# Frequently Asked Questions about the Real Income & Expens Data Portal
-
 ## What is the Real Property Income and Expense Data Portal?
 
 The Real Property Income and Expense Data Portal (RPIE, "R-pie") will help gather data critical to the accurate and fair assessment of commercial properties in Cook County. This Data Portal is the CCAO's first online filing system for industrial and commercial property owners in Cook County. Any data submitted for one single business property contributes to the fair and accurate property assessment not just of that property, but of similar businesses throughout the county. We are publishing a functional tool for voluntary data collection to provide an opportunity for taxpayers and their representatives to provide feedback about how the Office can improve this filing system. If you are unfamiliar with the Cook County Assessor's RPIE, please read the FAQs carefully.
@@ -16,7 +14,7 @@ The Real Property Income and Expense Data Portal (RPIE, "R-pie") will help gathe
 
 #### Does filing the RPIE Online initiate an appeal?
 
-**No.** An appeal can be initiated only by filing the [CCAO'S online
+**No.** An appeal can be initiated only by filing the [CCAO's online
 appeal system.](https://www.cookcountyassessor.com/online-appeals)
 
 #### Is the RPIE required to process an appeal?
@@ -35,7 +33,7 @@ Any property that meets one of the following criteria:
 
 #### The documents I am filing contain sensitive information, including my SSN. How is CCAO protecting my privacy?
 
-**You private information is protected.** All sensitive identifying information is automatically redacted from your tax documents before any CCAO staff can see them. This includes SSN, name, address, and any other information that may be used to link a tax document to any property, company, or individual. RPIE data is stored in a secure server accessible only to a few authorized administrators. Data released to the public is aggregated such that individual incomes and expenses cannot be recovered. Sensitive information is not subject to FOIA. For more details, please read our [privacy statement](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content/-/blob/master/RPIE/CCAO-RPIE-Privacy-Policy.md).
+**You private information is protected.** All sensitive identifying information is automatically redacted from your tax documents before any CCAO staff can see them. This includes SSN, name, address, and any other information that may be used to link a tax document to any property, company, or individual. RPIE data is stored in a secure server accessible only to a few authorized administrators. Data released to the public is aggregated such that individual incomes and expenses cannot be recovered. Sensitive information is not subject to FOIA. For more details, please read our [privacy statement](RPIE/Privacy Policy).
 
 #### What is the deadline for filing the RPIE Online Form?
 
@@ -45,10 +43,8 @@ Since filing an RPIE is voluntary, there is no deadline for filing. However, The
 
 At minimum, you will need:
 
--   Each PIN & RPIE Code combination that was mailed to the
-    owner of record.
--   Each Schedule E or Form 8825 associated with each PIN included in
-    the filing, or an income and expense statement.
+-   Each PIN & RPIE Code combination that was mailed to the owner of record.
+-   Each Schedule E or Form 8825 associated with each PIN included in the filing, or an income and expense statement.
 
 You may also want to have: 
 

@@ -1,5 +1,3 @@
-# Open Data
-
 The Cook County Assessor's Office is committed to transparency. In order to fulfill that committment, the Data Science Department is tasked with creating and maintaining public data sets. This document outlines these data, their uses, and pertinent source code. 
 
 The Cook County Assessor's Office publishes data on the [Cook County Open Data Portal](https://datacatalog.cookcountyil.gov/browse?tags=cook%20county%20assessor). The [AssessR](https://ccao-data-science---modeling.gitlab.io/packages/assessr/articles/example-ratio-study.html) package leverages this open data in its documentation.
@@ -7,7 +5,6 @@ The Cook County Assessor's Office publishes data on the [Cook County Open Data P
 ## Curated Data 
 
 The Chief Data Officer will create and maintain the following open data sets. 
-
 
 ### [Residential Property Characteristics](https://datacatalog.cookcountyil.gov/Property-Taxation/Cook-County-Assessor-s-Residential-Property-Charac/bcnq-qi2z)
 
@@ -95,6 +92,6 @@ During April of 2020, we calculated a set of neighborhood-level adjustments to a
 
 **Code:**  [etl_pinlocations](https://gitlab.com/ccao-data-science---modeling/processes/etl_pinlocations)
 
-### [Pacel Shapes](https://hub-cookcountyil.opendata.arcgis.com/datasets/3d3375ac11d147308815d5cf4bb43f4e_21)
+### [Parcel Shapes](https://hub-cookcountyil.opendata.arcgis.com/datasets/3d3375ac11d147308815d5cf4bb43f4e_21)
 
 Parcel shapes are published by the Cook County Bureau of Technology and noted here for reference.
