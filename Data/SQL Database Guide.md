@@ -1,4 +1,4 @@
-> :warning: Anything with a `DEV` prefix is still in development and should not be used by anyone other than its creator.
+> <sup>:warning:</sup> Anything with a `DEV` prefix is still in development and should not be used by anyone other than its creator.
 
 # Data Dictionaries
 
@@ -108,7 +108,7 @@ Industrial and commercial class sales identified by whether or not they're valid
 ***DTBL_LEVIES***
 Compiled levy data by tax agency and tax code.
 
-> :warning: This table is generated in the PTAXSIM repo, *NOT* Data Architecture
+> <sup>:warning:</sup> This table is generated in the PTAXSIM repo, *NOT* Data Architecture
 
 ## MTBL_ TABLES
 *Metrics Tables contain summary data calculated from views (see below).*
@@ -122,14 +122,18 @@ Contains summary statistics and IAAO statistics for townships and triads. Used t
 ***65D***  
 A table recording changes made to pipeline values during desk review.  Precedes "mailed" in CCAO assessment work flow.
 
-> :warning: This table is not reliable for Berwyn, Lemont, Lyons, Worth, and Stickney in 2020 due to COVID-19 adjustments.
+> <sup>:warning:</sup> This table is not reliable for Berwyn, Lemont, Lyons, Worth, and Stickney in 2020 due to COVID-19 adjustments.
 
 ***EXEMPTIONS***  
 Database of exemptions homeowners are recieving/have recieved:
 
 * 'HO' = Homeowner Exemption
 * 'HS' = Senior Exemption
-* 'SF' = Senior Freeze 
+* 'SF' = Senior Freeze
+
+***IDORSALES***  
+Illinois Department of Revenue dataset of sales.
+> <sup>:warning:</sup> This table is not updated on a regular schedule.
 
 # View Definitions
 *Views are combinations of tables that exist as queries rather than a physical flat file.  They must be assembled each time they're referenced.*
