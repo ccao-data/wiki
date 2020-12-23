@@ -148,7 +148,7 @@ Illinois Department of Revenue dataset of sales.
 A list of sales since 1997 that has been "cleaned" - one record per sale (the record with the largest sale $). Excludes sales for deeds of type Q, E, and B.
 
 ***VW_EXEMPTION_COES***  
-Collects all certificates of error associated with an exemption and provides a reason error as well as code.
+Collects all certificates of error associated with an exemption and provides an error code and reason.
 
 ***VW_HB833***  
 Data to support the automatic renewal of the senior homestead exemptions
