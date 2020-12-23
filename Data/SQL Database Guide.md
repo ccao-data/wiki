@@ -45,7 +45,8 @@ The universe of all PINs in Cook County.
 Land, improvement, and potentially 288 lines for each PIN that break down valuation and provide information necessary for proration.
 
 ***AS_RES_CERTOFCORRECTIONS***  
-Contains certificates of error/correction.
+Contains certificates of error.
+> <sup>:warning:</sup> DOES NOT CONTAIN CERTIFICATES OF CORRECTION. CoCs are not on the AS400.
 
 ## FTBL_ TABLES
 *Fact Tables are attributes about objects that are determined exclusively by some bureaucratic agency. For example, the township codes are simply set by the CCAO, and are therefore facts.*
