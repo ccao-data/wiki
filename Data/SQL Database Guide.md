@@ -44,6 +44,9 @@ The universe of all PINs in Cook County.
 ***AS_DETAIL***  
 Land, improvement, and potentially 288 lines for each PIN that break down valuation and provide information necessary for proration.
 
+***AS_RES_CERTOFCORRECTIONS***  
+Contains certificates of error/correction.
+
 ## FTBL_ TABLES
 *Fact Tables are attributes about objects that are determined exclusively by some bureaucratic agency. For example, the township codes are simply set by the CCAO, and are therefore facts.*
 
@@ -60,6 +63,9 @@ Historical IDOR Cook County equalization factors.
 ***FTBL_CERT_DATES***  
 Table containing township and triad names and codes.
 
+***FTBL_CERT_OF_ERROR_REASONS***  
+Table containing certificate of error codes and their associated reasons.
+
 ## DTBL_ TABLES
 *Data Tables contain data collected, stored, or calculated from sources other than the AS/400.*
 
@@ -69,7 +75,7 @@ Provides joinable text descriptions of all class codes
 ***DTBL_CCRDSALES***  
 Sales data received monthly from the Cook County Recorder of Deeds.
 
-***DTBL_COSTAR_CROSSWALK***
+***DTBL_COSTAR_CROSSWALK***  
 Crosswalk linking Costar IDs to CCAO PINs
 
 ***DTBL_CONDOSTRATA***  
@@ -140,6 +146,9 @@ Illinois Department of Revenue dataset of sales.
 
 ***VW_CLEAN_IDORSALES***  
 A list of sales since 1997 that has been "cleaned" - one record per sale (the record with the largest sale $). Excludes sales for deeds of type Q, E, and B.
+
+***VW_EXEMPTION_COES***  
+Collects all certificates of error associated with an exemption and provides a reason error as well as code.
 
 ***VW_HB833***  
 Data to support the automatic renewal of the senior homestead exemptions
