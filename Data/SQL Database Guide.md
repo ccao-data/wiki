@@ -106,13 +106,10 @@ MODELVALS contains initial fitted values produced by data science.  These values
 ***DTBL_PINLOCATIONS***  
 Contains geographic data for all county parcels, such as centroid LAT/LONG, floodplain, distance from a major road, and political districts.
 
-***DTBL_RPIE_NOTICES***
-A dataset of commercial PINs and the RPIE codes associated with them.
-
 ***DTBL_VALIDATED_IC_SALES***  
 Industrial and commercial class sales identified by whether or not they're valid and by deed number.  Commercial analysts included comments while validating sales.
 
-***DTBL_LEVIES***
+***DTBL_LEVIES***  
 Compiled levy data by tax agency and tax code.
 
 > <sup>:warning:</sup> This table is generated in the PTAXSIM repo, *NOT* Data Architecture
@@ -120,8 +117,14 @@ Compiled levy data by tax agency and tax code.
 ## MTBL_ TABLES
 *Metrics Tables contain summary data calculated from views (see below).*
 
-***MTBL_RESIDENTIAL_DIAGOSTIC***
+***MTBL_RESIDENTIAL_DIAGOSTIC***  
 Contains summary statistics and IAAO statistics for townships and triads. Used to run the diagnostic report. 
+
+## ARCHV_ TABLES
+*Data Tables that have been archived. Do not use these unless there's a specific historical need.*
+
+***ARCHV_RPIE_NOTICES***  
+A dataset of commercial PINs and the RPIE codes associated with them. Repalce by `RPIE_PIN_CODES`
 
 ## OTHER TABLES
 *These are tables that are generally sourced from the AS/400 but don't have T/TB/BR suffixes.*
