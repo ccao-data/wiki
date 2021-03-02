@@ -50,7 +50,7 @@ The image below shows four different examples of how the objects defined above m
 
 <img src="Examples.png"
      alt="Examples"
-     width="1000" height="500"
+     width="1000" height="1000"
      style="float: right; margin-right: 10px;" />
 
 Example 1 shows a single building with two PINs, where one PIN is associated with all the residential spaces, and the other PIN is associated with all of the commercial spaces. Example 2 shows a PIN associated with a single building that contains both commercial and residential spaces. Example 3 shows a single PIN associated with multiple dissimilar buildings. And Example 4 shows an economic unit associated with different PINs and buildings some distance from one another. RPIE's data model accomodates all of these cases.
@@ -91,11 +91,11 @@ For RPIE V2, we designed a simple set of questions that would dictate which data
 
 <img src="Questionnaire 1.png"
      alt="Questionnaire 1"
-     width="1000" height="500"
+     width="1000" height="1000"
      style="float: right; margin-right: 10px;" />
 <img src="Questionnaire 2.png"
      alt="Questionnaire 2"
-     width="1000" height="500"
+     width="1000" height="1000"
      style="float: right; margin-right: 10px;" />
 <img src="RPIE v2 Questionnaire Flowchart_Page_1.png"
      alt="RPIE v2 Questionnaire Flowchart_Page_1"
