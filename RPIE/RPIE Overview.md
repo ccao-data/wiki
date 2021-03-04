@@ -50,11 +50,11 @@ There is m:1 relationship between spaces and buildings. The spaces data allow us
 
 Though often depicted as a cadasteral division, the PIN is actually an accounting identity. PINs identify, spatially in most cases, the tax liability for real estate assets. There is a m:m relationship between PINs and buildings, and PINs and economic units. I would not be surprised to see multiple PINs associated with a single space, though it would be uncommon. 
 
-The image below shows four different examples of how the objects defined above may associate in real life. RPIE V1 is designed to identify and accomodate these different relationships in a structured data model.
+The image below shows four different examples of how the objects defined above may associate in real life. RPIE V1 is designed to identify and accomodate these different relationships in a structured data model. Each example below corrosponds to a single RPIE filing. 
 
 <img src="Examples.png"
      alt="Examples"
-     width="1000" height="1000"
+     width="1000" height="600"
      style="float: right; margin-right: 10px;" />
 
 Example 1 shows a single building with two PINs, where one PIN is associated with all the residential spaces, and the other PIN is associated with all of the commercial spaces. Example 2 shows a PIN associated with a single building that contains both commercial and residential spaces. Example 3 shows a single PIN associated with multiple dissimilar buildings. And Example 4 shows an economic unit associated with different PINs and buildings some distance from one another. RPIE's data model accomodates all of these cases.
@@ -69,7 +69,7 @@ We wanted the RPIE Online Form to resemble digital tax prep software like TurboT
 
 <img src="Workflow V1.png"
      alt="Workflow 1"
-     width="1000" height="500"
+     width="1000" height="600"
      style="float: right; margin-right: 10px;" />
 
 #### Securing RPIE via RPIE codes
