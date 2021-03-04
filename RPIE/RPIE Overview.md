@@ -30,6 +30,10 @@ The primary task of RPIE V1 was to define a [data model](https://en.wikipedia.or
 
 At the least granular level, income and expense information is reported by an economic unit. For the purposes of RPIE, an economic unit may be a single person or a company with one or more real estate assets.  In RPIE, there is a 1:1 corrospondence between a single RPIE filing and an economic unit.
 
+#### Income and expense data
+
+Income and expense data attaches to the economic unit, and sometimes buildings, depending on how the econonomic unit tracks its financial data. For example, the first page of the [IRS Schedule E](https://www.irs.gov/pub/irs-pdf/f1040se.pdf) allows a filer to include three different properties separatly as A, B, and C, though this is not required. 
+
 #### Building
 
 RPIE V1 defined a 'building' as a structure that contained rentable spaces. This included apartment, office, and retail buildings, but excluded a large number of other building types.
