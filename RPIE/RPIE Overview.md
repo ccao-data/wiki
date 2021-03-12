@@ -102,8 +102,6 @@ We then translated our work into a preliminary set of wireframes, which were use
      width="1000" height="600"
      style="float: right; margin-right: 10px;" />
 
-Taxpayers are mailed randomly generated codes. These codes, in combination with PIN numbers, are required to create an account on the RPIE platform and to submit a contribution to the inventory of commercial real estate properties (also known as “filings”). From a taxpayer perspective, this is simply a requirement associated with an RPIE filing. For CCAO, this is an effort to keep RPIE secure from malicious actors and erroneous filings.
-
 #### Securing RPIE via RPIE codes
 
 If cinema has taught us anything, it's that all Apple pies cooling in windows are targets of petty theft. What would stop a malicious actor from filing thousands of erroneous RPIE filings? PINs and addresses are public information, posted online. It would be a simple task to create a program that files millions of erroneous RPIE filings with bogus data. That would create a real headache for our data science team.
