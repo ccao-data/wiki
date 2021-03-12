@@ -1,0 +1,12 @@
+Source File,Column Name,Display,Display Name,Description,Data Type
+Cook County Assessor's Sales,PIN,Y,PIN,14-character property identification code,Character
+Cook County Assessor's Sales,sale_date,Y,Recorded date,Date the sale was recorded at the Cook County Recorded of Deeds,Date
+Cook County Assessor's Sales,executed_date,Y,Executed date,Date deed was executed. This field is incomplete due to limited data sharing between the CCAO and CCRD.,Date
+Cook County Assessor's Sales,sale_price,Y,Sale price,Total sale amount on the deed. This sometimes includes personal property.,Numeric
+Cook County Assessor's Sales,VALID SALE,Y,Arms' length,"Indicator for whether the CCAO believes this is an arms' length transaction (No, Yes, Unkown; 0, 1, 9)",Numeric
+Cook County Assessor's Sales,VALIDATION COMMENTS,Y,Validation comments,Analyst comments on sales validation,Character
+Cook County Assessor's Sales,DOC_NO,Y,Deed number,Deed number,Character
+Cook County Assessor's Sales,DEED_TYPE,Y,Deed type,Deed type,Character
+Cook County Assessor's Sales,seller_name,Y,Seller name,Seller listed on deed. This field is incomplete due to limited data sharing between the CCAO and CCRD.,Character
+Cook County Assessor's Sales,buyer_name,Y,Buyer name,Buyer listed on deed. This field is incomplete due to limited data sharing between the CCAO and CCRD.,Character
+Cook County Assessor's Sales,TAX_YEAR,Y,Year,Year of recorded date,Numeric
