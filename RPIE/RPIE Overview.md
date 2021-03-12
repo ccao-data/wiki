@@ -1,67 +1,56 @@
 # What is the Real Property Income and Expense Online Form?
 
-The RPIE Online Form isn't a "form"; RPIE is a crowd-sourced database of commercial real estate. RPIE serves two primary purposes. First, RPIE is designed to build and maintain a complete inventory of commercial real estate assets in Cook County. Commercial real estate assets include land and structures that may be bought and sold in real estate markets. The CCAO cannot produce a reliable assessment roll of commercial properties without knowing what the properties' physical characteristics are. 
+Commercial real estate is diverse, and the attributes of each property are unique. When estimating the value of commercial real estate, experts need to be aware of those attributes. Historically, these details have been difficult to find or access, making property appraisal an opaque and labor-intensive task. In both the public and private sectors, there is a trend towards a standardized, data-driven approach to property appraisal (see, for example, the [Uniform Residential Appraisal Form](https://sf.freddiemac.com/general/uad-faq#new-uad-and-forms-redesign)). At minimum, standardization will increase transparency and improve efficiency.
 
-Second, RPIE is designed to collect a sufficient amount of financial and economic data to be able to estimate the value of these assets with a reasonable level of precision and accuracy. RPIE is designed to collect data in such a structured way as to be useful in automated valuation models. Primarily, this data includes income and expense data, and lease data. 
+Increased transparency and improved efficiency in property appraisals are vital to the success of the Cook County Assessor’s Office. Every three years, the CCAO estimates the value of every commercial property in the County. This is a unique challenge compared to private sector appraisers.The CCAO is almost unique both in terms of the number of estimates it must produce, as well as the information scarcity it faces. In order to meet these challenges, the CCAO needed an innovative data platform to gather and organise information. The Real Property Income and Expense Online Form (RPIE, pronounced 'R pie') is designed to collect and maintain the data required to accuratly and fairly assess commercial property.
 
-The universe of 'commercial real estate assets' is extreamly diverse. This means that the universe of physical structures, and the attributes pertinent to their valuation, is diverse. Historically, property appraisal is a labor-intensive task requiring substantial experties and knowledge of local market conditions. This is so because the methods of property appraisal were opaque, and the information required to appraise property was difficult to access. In both the public and private sectors, however, there is a strong trend towards a standardized, data-driven approach to property appraisal (see, for example, the [Uniform Residential Appraisal Form](https://sf.freddiemac.com/general/uad-faq#new-uad-and-forms-redesign)) There are many good reasons behind this push to standardize and digitize real estate appraisal data. With the RPIE, the CCAO hopes to collect highly ordered and standardized data to help it appraise commercial property in Cook County.
+RPIE serves two primary purposes. First, RPIE is designed to build and maintain a complete inventory of commercial real estate assets in Cook County. In order to accuratly estimated the value of *every single* commercial property in the County, the CCAO needs a highly detailed inventory of all of that real estate. That inventory needs to be stored in a structured data base so that it can be easily accessed and leveraged to estimate real estate values. 
 
-The CCAO faces a particularly difficult challenge compared to private sector appraisers. The CCAO is tasked with estimating the value of *every single commercial property* in the County every three years. Private sector appraisers often create individual appraisals upon request, often to support a real estate transaction. The CCAO is almost unique both in terms of the number of estimates it must produce, as well as the information scarcity it faces. In order to meet these challenges, the CCAO needed an innovative data platform to gather and organise information.
+Second, RPIE is designed to collect a sufficient amount of financial and economic data to be able to estimate the value of commercial real estate assets with a reasonable level of precision and accuracy. RPIE is designed to collect data in such a structured way as to be useful in automated valuation models. Primarily, this data includes income and expense data, and lease data. 
 
-# The RPIE development process
+Fundamentally, the RPIE Online Form is not a form at all; it is a crowd-sourced database of commercial real estate data. It is our hope that the RPIE Online Form evolves to become a common source of truth in commercial property assessment, bringing the public and the CCAO together around a common set of facts. 
 
-The RPIE was designed by CCAO staff and built by [Clarity Partners LLC](https://www.claritypartners.com/). It is unique in both the public and private sectors. We know of no similar platform in either the public or private sector. This is not surprising given 
+# Agile, not half-baked: The evolution of RPIE
 
-development of the RPIE platform proceeded incrementally. In the sections below, I outline the primary goals of each RPIE version, and how we acheived those goals. 
+The RPIE was designed by CCAO staff and built by [Clarity Partners LLC](https://www.claritypartners.com/). An iterative approach to design and development has produced a completely unique platform. RPIE is the only one of its kind—in both the private and public sectors.
 
 ## RPIE Version 1
 
-The universe of commercial property is extremely diverse. It would not have been feasible to develope, from scratch, a comprehensive data collection apparatus to support the CCAO in one year that successfully collected data on all commercial properties. Instead, we started with the most common, and easiest use cases in the County. For the first iteration, we attempted to build a system to collect data on properties that generate rental income that is reported on either a, IRS Schedule E or 8825. These include apartment buildings and office spaces.
+Two major constraints guided the first phase of development:
 
-In addition to the RPIE Online Form, the office used a fillable PDF form as a backstop for properties that were not supported by V1. 
+* Data needed to be collected in a structured and systematic way from a highly diverse user group.
+* The development timeline was 10 months.
 
-V1 went live at the end of 2019.
+A comprehensive data collection tool for all commercial properties could not be built in a single year. The CCAO adopted an agile approach to development, prioritizing the features necessary to collect data on the most common properties. The most common properties to generate rental income—apartment buildings and office spaces—report a Schedule E or 8825 to the IRS. Properties with these tax forms became the focus of the RPIE V1 online form. In an effort to collect details about properties that did not meet the requirements of the V1 form, the office used a fillable PDF as a backstop. 
 
-### Defining the data model
+V1 development began in the spring of 2019 and was deployed at the end of 2019.
+
+### Mise en place: The RPIE data model
 
 The primary task of RPIE V1 was to define a [data model](https://en.wikipedia.org/wiki/Data_model) that would be flexible enough to evolve over time, but also specific enough to impose structure onto the data. The RPIE data model identifies and relates the objects described below.
 
-#### Economic unit
+* **Economic unit:** At the least granular level, income and expense information is reported by an economic unit. For the purposes of RPIE, an economic unit may be a single person or a company with one or more real estate assets.  In RPIE, there is a 1:1 corrospondence between a single RPIE filing and an economic unit.
+* **Income and expense data:** Income and expense data attaches to the economic unit, and sometimes buildings, depending on how the econonomic unit tracks its financial data. For example, the first page of the [IRS Schedule E](https://www.irs.gov/pub/irs-pdf/f1040se.pdf) allows a filer to include three different properties separatly as A, B, and C, though this is not required. 
+* **Building:** *RPIE V1* defined a 'building' as a structure that contained rentable spaces. This included apartment, office, and retail buildings, but excluded a large number of other building types. 
+     * There is a m:m relationship between buildings and economic units. In some cases, one economic unit will own multiple buildings. In others, a building will contain many economic units. For example, a large office tower with multiple lessees responsible for taxes. 
+* **Spaces (leased and vacant):** RPIE V1 defined a space as a sub-division of a building that may be rented. There are two types of spaces: 'residential' and 'commercial.' Each type of space has its own vector of attributes, including lease status. A user that properly populates the spaces template will include both leased and un-leased spaces. 
+     * There is m:1 relationship between spaces and buildings. The spaces data allow us to programatically calculate a building's gross potential income and vacancy rate, and attach those calculations to buildings.
+**Property Index Number (PIN):** Though often depicted as a cadasteral division, the PIN is actually an accounting identity. PINs identify, spatially in most cases, the tax liability for real estate assets. 
+     * There is a m:m relationship between PINs and buildings, and PINs and economic units. I would not be surprised to see multiple PINs associated with a single space, though it would be uncommon. 
+* **Parties:** Parties are simply the people creating and submitting filings. 
+     * There is a m:m relationship between parties and filings. Attornies may be associated with many filings, while owners of single properties are only associated with one filing anually.
 
-At the least granular level, income and expense information is reported by an economic unit. For the purposes of RPIE, an economic unit may be a single person or a company with one or more real estate assets.  In RPIE, there is a 1:1 corrospondence between a single RPIE filing and an economic unit.
-
-#### Income and expense data
-
-Income and expense data attaches to the economic unit, and sometimes buildings, depending on how the econonomic unit tracks its financial data. For example, the first page of the [IRS Schedule E](https://www.irs.gov/pub/irs-pdf/f1040se.pdf) allows a filer to include three different properties separatly as A, B, and C, though this is not required. 
-
-#### Building
-
-RPIE V1 defined a 'building' as a structure that contained rentable spaces. This included apartment, office, and retail buildings, but excluded a large number of other building types.
-
-There is a m:m relationship between buildings and economic units. In some cases, one economic unit will own multiple buildings. In others, a building will contain many economic units. For example, a large office tower with multiple lessees responsible for taxes. 
-
-#### Spaces (leased and vacant)
-
-RPIE V1 defined a space as a sub-division of a building that may be rented. There are two types of spaces: 'residential' and 'commercial.' Each type of space has its own vector of attributes, including lease status. A user that properly populates the spaces template will include both leased and un-leased spaces. 
-
-There is m:1 relationship between spaces and buildings. The spaces data allow us to programatically calculate a building's gross potential income and vacancy rate, and attach those calculations to buildings.
-
-#### Property Index Number (PIN)
-
-Though often depicted as a cadasteral division, the PIN is actually an accounting identity. PINs identify, spatially in most cases, the tax liability for real estate assets. There is a m:m relationship between PINs and buildings, and PINs and economic units. I would not be surprised to see multiple PINs associated with a single space, though it would be uncommon. 
+### Practical examples of the data model
 
 The image below shows four different examples of how the objects defined above may associate in real life. RPIE V1 is designed to identify and accomodate these different relationships in a structured data model. Each example below corrosponds to a single RPIE filing. 
 
-<img src="Examples.png"
-     alt="Examples"
+<img src="Example 1.png"
+     alt="Example 1"
      width="1000" height="600"
-     style="float: right; margin-right: 10px;" />
+     style="float: left; margin-right: 10px;" />
 
 Example 1 shows a single building with two PINs, where one PIN is associated with all the residential spaces, and the other PIN is associated with all of the commercial spaces. Example 2 shows a PIN associated with a single building that contains both commercial and residential spaces. Example 3 shows a single PIN associated with multiple dissimilar buildings. And Example 4 shows an economic unit associated with different PINs and buildings some distance from one another. RPIE's data model accomodates all of these cases.
 
-#### Parties
-
-Parties are simply the people creating and submitting filings. There is a m:m relationship between parties and filings. Attornies may be associated with many filings, while owners of single properties are only associated with one filing anually.
 
 ### Defining the user-experience
 
