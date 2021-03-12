@@ -213,7 +213,7 @@ The end-result of this work is a 'wizard-like' approach to the user experience t
 | AWS Fixed Setup Cost - RPIE Application Infrastructure [Fixed Fee] | $         37,125.00   |
 | AWS Hosting Usage / Utility                                        | $         18,143.18   |
 | Managed Hosting Services                                           | $           1,304.44  |
-| **Grand Total**                                                        |** $      604,244.87     **|
+| **Grand Total**                                                        |**$      604,244.87**|
 
 
 ## RPIE V3
