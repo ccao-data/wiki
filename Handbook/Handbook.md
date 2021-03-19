@@ -167,7 +167,7 @@ The Data Science Department uses 4 scoped labels: priority, type, status, and st
 |----------------------|------------|---------------------------------------------------------------------------------------------------------|
 | `priority::critical` | Critical   | We will address this as soon as possible, typically within the next few days                            |
 | `priority::high`     | High       | We will address this as capacity becomes available, typically within the next few weeks                 |
-| `priority::medium`   | Medium     | We want to address this but have higher priority items, typically addressed within the next 6-12 months |
+| `priority::medium`   | Medium     | We will address this but have higher priority items. It will be addressed within the next 6-12 months   |
 | `priority::low`      | Low        | We don't have visibility on when this will be addressed but want to keep it back-of-mind                |
 
 ### Weights
