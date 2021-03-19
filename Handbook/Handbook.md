@@ -170,6 +170,8 @@ The Data Science Department uses 4 scoped labels: priority, type, status, and st
 | `priority::medium`   | Medium     | We will address this but have higher priority items. It will be addressed within the next 6-12 months   |
 | `priority::low`      | Low        | We don't have visibility on when this will be addressed but want to keep it back-of-mind                |
 
+For a full list of labels and their descriptions, see the [Labels section](https://gitlab.com/groups/ccao-data-science---modeling/-/labels) of the CCAO group.
+
 ### Weights
 
 Issues should be assigned weights relative to their importance. Weights are a relative number without a distinct meaning, their actual value is arbitrary. The Data Science Department typically makes higher weights = more important.
