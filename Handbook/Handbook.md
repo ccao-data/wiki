@@ -2,7 +2,7 @@
 
 This document outlines the purpose, procedures, and best practices of the Data Science Department at the Cook County Assessor's Office.
 
-The rationale for having a separate department in the CCAO that specifically deals with data science is similar to that in the private sector: data, apart from the IT systems that store it, is a valuable enterprise asset and must be managed accordingly. This is particularly true for the CCAO, where data is absolutely critical to the mission of the agency.
+The rationale for having a separate department in the CCAO that specifically deals with data science is similar to that of the private sector: data, apart from the IT systems that store it, is a valuable enterprise asset and must be managed accordingly. This is particularly true for the CCAO, where data is absolutely critical to the mission of the agency.
 
 # Mission, Vision, and Values
 
@@ -20,7 +20,7 @@ See [Mission, Vision, & Values](Handbook/Mission Vision Values)
 
 ## Project Mangagement
 
-The Data Science Department follows principles of agile project management in its work. This management approach is designed for institutions that produce a large amount of complex, customized, tangible work product in a high-stakes environment.
+The Data Science Department follows principles of agile project management. This management approach is designed for institutions that produce a large amount of complex, customized, tangible work product in a high-stakes environment.
 
 In the case of the Data Science Department, these work products are software, algorithms, analysis, and policy recommendations that can have a large impact on property tax assessments in Cook County. Our end users are either internal staff executing the duties of the office, or external stakeholders, like taxpayers or elected representatives.
 
@@ -161,7 +161,14 @@ Issues may be created by anyone in the organization. Issue deadlines are assigne
 
 ### Labels
 
-All labels should be maintained at the group level. Issues should be labeled so that work is more easily searchable and categorized. Labels are maintained by the Senior Data Scientists.
+The Data Science Department uses 4 scoped labels: priority, type, status, and stakeholder. All issues should have 1 variant of each of these labels, in addition to any project-specific labels. When triaging issues, the following priority intentions should be used:
+
+| Label                | Importance | Intention                                                                                               |
+|----------------------|------------|---------------------------------------------------------------------------------------------------------|
+| `priority::critical` | Critical   | We will address this as soon as possible, typically within the next few days                            |
+| `priority::high`     | High       | We will address this as capacity becomes available, typically within the next few weeks                 |
+| `priority::medium`   | Medium     | We want to address this but have higher priority items, typically addressed within the next 6-12 months |
+| `priority::low`      | Low        | We don't have visibility on when this will be addressed but want to keep it back-of-mind                |
 
 ### Weights
 
