@@ -1,3 +1,5 @@
+[Home](Home)
+
 # The Data Science Department
 
  * [Handbook](Handbook/Handbook)
@@ -34,7 +36,7 @@
 # Data Documentation
 
  * [SQL Database Guide](Data/SQL Database Guide)
- * [Property Class Definitions](Data/class-definitions.pdf) - *Available via the [CCAO R package](https://gitlab.com/ccao-data-science---modeling/packages/ccao)*
- * [Township Definitions](Data/Townships) - *Available via the [CCAO R package](https://gitlab.com/ccao-data-science---modeling/packages/ccao)*
- * [Appeal Reason Codes](https://prodassets.cookcountyassessor.com/s3fs-public/form_documents/reasoncodes.pdf) - *Used in the DKEMPL SQL table*
- * [CDU Codes](Data/CDU Codes) - *Available via the [CCAO R package](https://gitlab.com/ccao-data-science---modeling/packages/ccao)*
+ * [Property Class Definitions](Data/class-definitions.pdf)
+ * [Township Definitions](Data/Townships)
+ * [Appeal Reason Codes](https://prodassets.cookcountyassessor.com/s3fs-public/form_documents/reasoncodes.pdf)
+ * [CDU Codes](Data/CDU Codes)
