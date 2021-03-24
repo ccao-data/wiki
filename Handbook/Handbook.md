@@ -42,20 +42,18 @@ In order to deliver accurate and timely work products, the Data Science Departme
 
 **Limiting Mid-sprint Objective Changes** - Staff should not be re-assigned to different issue tickets mid-sprint. This is extremely detrimental to productivity, and wastes time.
 
-**Agile Practices** - In addition to these principles, the Data Science Department adheres to two regular practices:
-
- * *Daily Standup* - There is a standing departmental meeting from 8:45-9:00 a.m. which all departmental staff are required to attend. The purpose of this meeting is to discuss the day's tasks and raise issues that staff may have encountered in the previous day.
- * *Weekly Sprint Planning* - There is a standing departmental meeting from 8:45 - 9:30 a.m. which select senior staff are required to attend. The purpose of this meeting is to discuss the goals of the week, and review the progress of the past week. During this meeting, Issues are created, discussed, modified, and/or assigned, and priorities are reviewed. Milestone burndown charts are reviewed. Members of other departments may attend to keep apprised of progress.
-
 ## Organizational Structure
 
-The Data Science Department is broken into two sub-departments: Data Science, which is responsible for building models and tools that enhance the CCAO's mission, and Data Analytics, which is responsible for reporting on and analyzing the performance of the Data Science Department. An organization chart can be found [here](https://gitlab.com/ccao-data-science---modeling/ccao_ds_training/-/blob/master/Documentation/Data%20Science%20Organisation%20Chart.pdf).
+The Data Science Department is broken into two sub-departments: 
 
-There are two units inside of the Data Science Department: Data Science and Data Analytics. These units perform related, but different types of work. The Data Science unit builds and maintains applications, pipelines, and databases. The Data Analytics department provides data extracts, writes reports, and builds dashboards. 
+ 1. **Data Science** is responsible for building models and tools that enhance the CCAO's mission. It creates and maintains applications, pipelines, models, and databases.
+ 2. **Data Analytics** is responsible for reporting on and analyzing the performance of the Data Science Department and the CCAO. It creates extracts, writes reports, and builds dashboards.
+
+An organization chart can be found [here](https://gitlab.com/ccao-data-science---modeling/ccao_ds_training/-/blob/master/Documentation/Data%20Science%20Organisation%20Chart.pdf).
 
 ### Leadership Pipelines 
 
-The Data Science department is building a framework for career advancement. A 'leadership pipeline' is a well-articulated set of criteria that describes how each member of the team can advance their career to the next step in the pipeline. We anticipate two different pipeline tracks:
+The Data Science department is currently building a framework for career advancement. A 'leadership pipeline' is a well-articulated set of criteria that describes how each member of the team can advance their career to the next step in the pipeline. We anticipate two different pipeline tracks:
 
 **Technical Track:** This track terminates at the level of Senior Data Scientist, and is designed to cultivate highly capable data scientists. Staff in this track focus on acquiring and maintaining a wide array of advance skills in computer science, statistics, and application programming.
 
@@ -67,7 +65,7 @@ A more detailed description of this pipeline can be found in [these slides](http
 
 The data science department is committed to fostering the development of its members. We believe that 360 performance evaluation is necessary to foster the development of both employees and managers. Performance reviews are designed to help employees identify and eliminate barriers to their individual professional advancement. There are four components to the performance review process.
 
-Each employee's performance review will be coordinated using a GitLab issue populated from a [template](https://gitlab.com/ccao-data-science---modeling/career-development/employment/-/blob/master/.gitlab/issue_templates/ds-performance%20evaluation.md). The title of the issue should be "Annual Performance Review: [Employee Name]." The due date should be two days after the scheduled performance review meeting.
+Each employee's performance review will be coordinated using a GitLab issue populated from a [template](https://gitlab.com/ccao-data-science---modeling/career-development/employment/-/blob/master/.gitlab/issue_templates/ds-performance-evaluation.md). The title of the issue should be "Annual Performance Review: [Employee Name]." The due date should be two days after the scheduled performance review meeting.
 
 ### Self-evaluation
 
