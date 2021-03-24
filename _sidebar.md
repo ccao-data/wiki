@@ -25,7 +25,7 @@
  * [Model Evaluation](Residential/Model Evaluation)
  * [Home Improvement Exemptions (288s)](Residential/Home Improvement Exemptions)
 
-# Commercial & RPIE
+# RPIE
 
  * [RPIE Overview](RPIE/RPIE Overview)
  * [RPIE Landing Page Content](RPIE/Overview)
