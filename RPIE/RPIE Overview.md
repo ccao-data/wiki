@@ -50,7 +50,7 @@ The primary task of RPIE V1 was to define a [data model](https://en.wikipedia.or
 
 The image below shows four examples of different combinations of property and PINs. 
 
-<img src="Examples.png"
+<img src="overview-content/examples.png"
      alt="Examples"
      width="1000" height="600"
      style="float: left; margin-right: 10px;" />
@@ -77,7 +77,7 @@ The term “user experience” is generally used in the context of digital inter
 
 To create a form usable to humans, we needed a thorough understanding of the questions we would ask our users. The image below shows a preliminary diagram of the steps a user would go through during their filing.
 
-<img src="Workflow V1.png"
+<img src="overview-content/workflow-v1.png"
      alt="Workflow 1"
      width="1000" height="600"
      style="float: right; margin-right: 10px;" />
@@ -90,14 +90,14 @@ In order to make these steps clear and understandable, we then needed to put our
 * As a user, why do I care about this question?
 * As a user, do I understand what’s being asked of me?
 
-<img src="Paper slides.png"
+<img src="overview-content/paper-slides.png"
      alt="paper"
      width="1000" height="600"
      style="float: right; margin-right: 10px;" />
 
 We then translated our work into a preliminary set of wireframes, which were used to build the first test site version. CCAO visual brand guides were applied to the wireframes prior to launch.
 
-<img src="wireframes.png"
+<img src="overview-content/wireframes.png"
      alt="wireframes"
      width="1000" height="600"
      style="float: right; margin-right: 10px;" />
@@ -130,7 +130,7 @@ We added different types of income and expense data:
 * Model/Hotel I&E
 * General I&E
 
-Templates for these forms can be found [here](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content/-/blob/master/RPIE/I&E%20Templates.xlsx).
+Templates for these forms can be found [here](templates/rpie-ie-templates.xlsx).
 
 ### User experience
 
@@ -166,7 +166,7 @@ Our users are not experts in property appraisals or tax law, and nor should they
 
 The image below shows the first version of the questionnaire structure. In the design below, blue ovals indicate questions and boxes represent forms. Iteration 1 had too many poorly worded questions asked in a subotimal order.
 
-<img src="Questionnaire 1.png"
+<img src="overview-content/questionnaire-1.png"
      alt="Questionnaire 1"
      width="1000" height="800"
      style="float: right; margin-right: 10px;" />
@@ -175,7 +175,7 @@ The image below shows the first version of the questionnaire structure. In the d
 
 Clarity Partners UX researchers evaluated iteration 1 and worked with CCAO subject-matter experts to identify a few keys pieces for design improvement. User feedback collected during RPIE V1 was shared with the UX designers, who leveraged both pieces of research in RPIE V2. The result of this work was the design depicted below. In this iteration, questions have been condensed and re-ordered. 
 
-<img src="Questionnaire 2.png"
+<img src="overview-content/questionnaire-2.png"
      alt="Questionnaire 2"
      width="1000" height="800"
      style="float: right; margin-right: 10px;" />
@@ -185,8 +185,8 @@ Clarity Partners UX researchers evaluated iteration 1 and worked with CCAO subje
 
 Further refinement of the questionnaire by Clarity Partners UX designers resulted in the final questionnaire structure, depicted below. 
 
-<img src="RPIE v2 Questionnaire Flowchart_Page_1.png"
-     alt="RPIE v2 Questionnaire Flowchart_Page_1"
+<img src="overview-content/rpie-v2-questionnaire-flowchart-page-1.png"
+     alt="RPIE v2 Questionnaire Flowchart Page 1"
      width="1000" height="2000"
      style="float: right; margin-right: 10px;" />
 
@@ -194,7 +194,7 @@ Further refinement of the questionnaire by Clarity Partners UX designers resulte
 
 The end-result of this work is a 'wizard-like' approach to the user experience that guides users through their filing. In the image below, the text color corrsponds to the color of the arrows indicating the path through the RPIE system.
 
-<img src="Screenshot 1.png"
+<img src="overview-content/screenshot-1.png"
      alt="Screenshot 1"
      width="1000" height="600"
      style="float: right; margin-right: 10px;" />
@@ -267,5 +267,4 @@ It’s best if the system doesn’t need any additional explanation. However, it
 How this applies to RPIE V2:
 * Many users are reluctant to file an RPIE. This could be an indication that users do not understand why RPIE is beneficial to them.
 * Consider adding help/information documents to each section. These documents should clearly state why this information is needed and how it will be used.
-
 

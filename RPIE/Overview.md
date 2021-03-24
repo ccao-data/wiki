@@ -22,7 +22,7 @@ RPIE is structured differently than other forms you may be familiar with. This d
 * You will be required to tell us about the physical characteristics of the buildings on your PINs, as well as the units inside those buildings. This data will be saved so that, in future filings, it will pre-populate.
 * We want to know all of the parties involved in a filing. For large filings, you may include property management companies, multiple owners, etc. At minimum, all properties owners must be listed, and their legal representation, if they have any.
 * We have created excel templates to make some data entry easier:
-    * [Residential Spaces](2021%20RPIE_Residentials_Spaces_Template.xlsx)
-    * [Commercial Spaces](2021%20RPIE_Commercials_Spaces_Template.xlsx)
-    * [I&E General & I&E Motel/Hotel Template](I&E%20Templates.xlsx)
+    * [Residential Spaces](templates/2021-rpie-residential-spaces-template.xlsx)
+    * [Commercial Spaces](templates/2021-rpie-commercial-spaces-template.xlsx)
+    * [I&E General & I&E Motel/Hotel Template](templates/rpie-ie-templates.xlsx)
 * When you are done with your filing, you may review, print, and/or save the data you have submitted for our records. A PDF of your RPIE filing can be attached to your appeal to show that you filed.
