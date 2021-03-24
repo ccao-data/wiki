@@ -12,7 +12,7 @@ Fundamentally, the RPIE Online Form is not a form at all; it is a crowd-sourced 
 
 # Current uses of RPIE data
 
-Primarily, RPIE data is used to power an automated valuation model for commercial apartments. [See the repository for more details.](https://gitlab.com/ccao-data-science---modeling/models/commercial-apartments-automated-valuation-model_)
+Primarily, RPIE data is used to power an automated valuation model for commercial apartments. [See the repository for more details.](https://gitlab.com/ccao-data-science---modeling/models/commercial-apartments-automated-valuation-model)
 
 # Agile, not half-baked: The evolution of RPIE
 
@@ -39,8 +39,8 @@ The primary task of RPIE V1 was to define a [data model](https://en.wikipedia.or
      * There is a m:m relationship between buildings and economic units. In some cases, one economic unit will own multiple buildings. In others, a building will contain many economic units. For example, a large office tower with multiple lessees responsible for taxes. 
 * **Spaces (leased and vacant):** RPIE V1 defined a space as a sub-division of a building that may be rented. There are two types of spaces: 'residential' and 'commercial.' Each type of space has its own vector of attributes, including lease status. A user that properly populates the spaces template will include both leased and un-leased spaces. 
      * There is m:1 relationship between spaces and buildings. The spaces data allow us to programatically calculate a building's gross potential income and vacancy rate, and attach those calculations to buildings.
-     * [Residential spaces template](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content/-/blob/master/RPIE/2021%20RPIE_Residentials_Spaces_Template.xlsx) can be found here.
-     * [Commercial spaces template](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content/-/blob/master/RPIE/2021%20RPIE_Commercials_Spaces_Template.xlsx) can be found here.
+     * [Residential spaces template](templates/2021-rpie-residential-spaces-template.xlsx) can be found here.
+     * [Commercial spaces template](templates/2021-rpie-commercial-spaces-template.xlsx) can be found here.
 * **Property Index Number (PIN):** Though often depicted as a cadasteral division, the PIN is actually an accounting identity. PINs identify, spatially in most cases, the tax liability for real estate assets. 
      * There is a m:m relationship between PINs and buildings, and PINs and economic units. I would not be surprised to see multiple PINs associated with a single space, though it would be uncommon. 
 * **Parties:** Parties are simply the people creating and submitting filings. 
