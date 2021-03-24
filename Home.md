@@ -17,9 +17,10 @@
 
 # Residential
 
- * [Residential Modeling V2](Residential/Pipeline/Residential Modeling V2)
+ * [Single and Multi-family Home Model](https://gitlab.com/ccao-data-science---modeling/models/ccao_res_avm)
+ * [Condominium Model](https://gitlab.com/ccao-data-science---modeling/models/ccao_condo_avm)
  * [Sales Comparables](Residential/Sales Comparables)
- * [Exemptions](Residential/Residential Exemptions)
+ * [Residential Exemptions](Residential/Residential Exemptions)
  * [Model Evaluation](Residential/Model Evaluation)
  * [Home Improvement Exemptions (288s)](Residential/Home Improvement Exemptions)
 
