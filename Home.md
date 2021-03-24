@@ -12,7 +12,6 @@
 
  * [Sales Ratio Studies](SOPs/Sales Ratio Studies)
  * [Desk Review](SOPs/Desk Review)
- * [Residential Appeals](SOPs/Residential Appeals)
  * [Open Data](SOPs/Open Data)
 
 # Residential
