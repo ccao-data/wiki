@@ -18,11 +18,11 @@ See [Mission, Vision, & Values](Handbook/Mission Vision Values)
 * **Leadership**
 * **SQL**
 
-## Project Mangagement
+## Project Management
 
-The Data Science Department follows principles of agile project management. This management approach is designed for institutions that produce a large amount of complex, customized, tangible work product in a high-stakes environment.
+The Data Science Department follows the principles of agile project management. This management approach is designed for institutions that produce a large amount of complex, customized, tangible work product in a high-stakes environment.
 
-In the case of the Data Science Department, these work products are software, algorithms, analysis, and policy recommendations that can have a large impact on property tax assessments in Cook County. Our end users are either internal staff executing the duties of the office, or external stakeholders, like taxpayers or elected representatives.
+In the case of the Data Science Department, these work products are software, algorithms, analyses, and policy recommendations that can have a large impact on property tax assessments in Cook County. Our end users are either internal staff executing the duties of the office, or external stakeholders, like taxpayers or elected representatives.
 
 In order to deliver accurate and timely work products, the Data Science Department follows the following agile principles:
 
@@ -32,11 +32,11 @@ In order to deliver accurate and timely work products, the Data Science Departme
 
 **Developers Work with Management** - Senior Data Scientists and developers are regularly involved in managerial discussions so that they have an intimate knowledge of institutional and end-user needs.
 
-**Measuring Progress** - The primary metric by which the Data Science Department judges its work is by functional products. The continuous deployment of increasingly useful, functional tools is really what matters.
+**Measuring Progress** - The primary metric by which the Data Science Department judges its work is by functional products. The continuous deployment of increasingly useful, functional tools is what really matters.
 
-**Self-organization and Initiative** - The Deputy Assessor Chief Data Office should not micro-manage staff. The Senior Data Scientists should be given tasks to accomplish and left to determine for themselves how exactly to accomplish that task, within departmental guidelines. Developers and employees should feel free to raise problems quickly with the Deputy Assessor Chief Data Officer so that project goals may be adjusted, where necessary.
+**Self-organization and Initiative** - The Deputy Assessor Chief Data Office should not micro-manage staff. The Senior Data Scientists should determine for themselves how exactly to accomplish tasks, within departmental guidelines. Developers and employees should feel free to raise problems quickly with the Deputy Assessor Chief Data Officer so that project goals may be adjusted, where necessary.
 
-**Reflect and Adapt** - At regular intervals the staff of the Data Science Department should reflect on their work to date, and identify ways to become more efficient. Workflow processes should be treated in the same manner as work-product, constantly evolving to meet the demands of the enterprise.
+**Reflect and Adapt** - At regular intervals the staff of the Data Science Department should reflect on their work to date and identify ways to become more efficient. Workflow processes should be treated in the same manner as work-product, constantly evolving to meet the demands of the enterprise.
 
 **Limiting Work-in-Progress** - Staff should not be assigned more than a few issues to work simultaneously. Work should be executed in the order in which it is due. Work should be accomplished within the sprint in which it was assigned. The Deputy Assessor Chief Data Officer and the Senior Data Scientists should adjust their assignments and expectations based on milestone burndown charts and the open issue list.
 
@@ -45,21 +45,21 @@ In order to deliver accurate and timely work products, the Data Science Departme
 **Agile Practices** - In addition to these principles, the Data Science Department adheres to two regular practices:
 
  * *Daily Standup* - There is a standing departmental meeting from 8:45-9:00 a.m. which all departmental staff are required to attend. The purpose of this meeting is to discuss the day's tasks and raise issues that staff may have encountered in the previous day.
- * *Weekly Sprint Planning* - There is a standing departmental meeting from 8:45 - 9:30 a.m. which select senior staff is required to attend. The purpose of this meeting is to discuss the goals of the week, and review the progress of the past week. During this meeting, Issues are created, discussed, modified, and/or assigned, and priorities are reviewed. Milestone burndown charts are reviewed. Members of other departments may attend to keep apprised of progress.
+ * *Weekly Sprint Planning* - There is a standing departmental meeting from 8:45 - 9:30 a.m. which select senior staff are required to attend. The purpose of this meeting is to discuss the goals of the week, and review the progress of the past week. During this meeting, Issues are created, discussed, modified, and/or assigned, and priorities are reviewed. Milestone burndown charts are reviewed. Members of other departments may attend to keep apprised of progress.
 
 ## Organizational Structure
 
-The Data Science Department into two sub-departments: Data Science, which is responsible for building models and tools that enhance the CCAO's mission, and Data Analytics, which is responsible for reporting on and analyzing the performance of the Data Science Department. An [organization chart](https://gitlab.com/ccao-data-science---modeling/ccao_ds_training/-/blob/master/Documentation/Data%20Science%20Organisation%20Chart.pdf) for the department can be found on the common drive.
+The Data Science Department is broken into two sub-departments: Data Science, which is responsible for building models and tools that enhance the CCAO's mission, and Data Analytics, which is responsible for reporting on and analyzing the performance of the Data Science Department. An organization chart can be found [here](https://gitlab.com/ccao-data-science---modeling/ccao_ds_training/-/blob/master/Documentation/Data%20Science%20Organisation%20Chart.pdf).
 
-There are two units inside of the Data Science Department: Data Science and Data Analytics. These units perform reltated, but different types of work. The Data Science unit builds and maintains applications, pipelines, and databases. The Data Analytics department provides data extracts, writes reports, and builds dashboards. 
+There are two units inside of the Data Science Department: Data Science and Data Analytics. These units perform related, but different types of work. The Data Science unit builds and maintains applications, pipelines, and databases. The Data Analytics department provides data extracts, writes reports, and builds dashboards. 
 
 ### Leadership Pipelines 
 
-The Data Science department is building a rigorous framework for career advancement. A 'leadership pipeline' is a well-articulated set of criteria that describes how each member of the team can advance their careers to the next step in the pipeline. We anticipate two different pipelines: tracks
+The Data Science department is building a framework for career advancement. A 'leadership pipeline' is a well-articulated set of criteria that describes how each member of the team can advance their career to the next step in the pipeline. We anticipate two different pipeline tracks:
 
-**Technical Track:** This track terminates at the level of Sr. Data Scientist, and is designed to cultivate highly capable data scientists. Staff in this track focus on aquiring and maintaining a wide array of advance skills in computer science, statistics, and application programming in R and Shiny.
+**Technical Track:** This track terminates at the level of Senior Data Scientist, and is designed to cultivate highly capable data scientists. Staff in this track focus on acquiring and maintaining a wide array of advance skills in computer science, statistics, and application programming.
 
-**Leadership Track:** This track termins at the level of Chief Data Officer, and is designed to cultivate policy leaders that create and implement data-informed policy. Staff in this track are expected to master statistical concepts and advanced data analysis in excel, as well as intuition about creating value for the organisation.
+**Leadership Track:** This track terminates at the level of Chief Data Officer, and is designed to cultivate policy leaders that create and implement data-informed policy. Staff in this track are expected to master statistical concepts and advanced data analysis in excel, as well as intuition about creating value for the organisation.
 
 A more detailed description of this pipeline can be found in [these slides](https://gitlab.com/ccao-data-science---modeling/ccao_ds_training/-/blob/master/Slides/Data%20Science%20Leadership%20Pipeline.pptx) and [this excel workbook](https://gitlab.com/ccao-data-science---modeling/ccao_ds_training/-/blob/master/Documentation/Leadership%20Pipeline.xlsx).
 
@@ -67,17 +67,18 @@ A more detailed description of this pipeline can be found in [these slides](http
 
 The data science department is committed to fostering the development of its members. We believe that 360 performance evaluation is necessary to foster the development of both employees and managers. Performance reviews are designed to help employees identify and eliminate barriers to their individual professional advancement. There are four components to the performance review process.
 
-Each employee's performance review will be coordinated using a GitLab issue popuated from a [template](https://gitlab.com/ccao-data-science---modeling/career-development/employment/-/blob/master/.gitlab/issue_templates/ds-performance%20evaluation.md). The title of the issue should be "Annual Performance Review: [Employee Name]." The due date should be two days after the scheduled performance review meeting.
+Each employee's performance review will be coordinated using a GitLab issue populated from a [template](https://gitlab.com/ccao-data-science---modeling/career-development/employment/-/blob/master/.gitlab/issue_templates/ds-performance%20evaluation.md). The title of the issue should be "Annual Performance Review: [Employee Name]." The due date should be two days after the scheduled performance review meeting.
 
 ### Self-evaluation
 
-Each exmployee should complete a [self-evaluation](https://gitlab.com/ccao-data-science---modeling/career-development/employment/-/blob/master/forms/360%20Evaluation%20-%20Employee%20Self%20Evaluation.docx) of their work performance prior to participating in a performance review meeting with their supervisor. The purpose of the self-evaluation is two-fold. First, it helps employees understand the framework under which they are being evaluated. Second, by comparing an employee's self-evaluation to their supervisor's evaluation, we can identify instances where the employee was unable to anticipate their supervisor's comments. The annual performance review should now be the first time an employee is made aware of issues. 
+Each employee should complete a [self-evaluation](https://gitlab.com/ccao-data-science---modeling/career-development/employment/-/blob/master/forms/360%20Evaluation%20-%20Employee%20Self%20Evaluation.docx) of their work performance prior to participating in a performance review meeting with their supervisor. The purpose of the self-evaluation is two-fold. First, it helps employees understand the framework under which they are being evaluated. Second, by comparing an employee's self-evaluation to their supervisor's evaluation, we can identify instances where the employee was unable to anticipate their supervisor's comments. The annual performance review should now be the first time an employee is made aware of issues. 
 
 Employees can choose not to share their self-evaluations with their supervisor.
 
-### Supervisor Evalution
+### Supervisor Evaluation
 
-Each exmployee should complete a supervisor evaluation appropriate to the level of their supervisor. This evaluation will be shared with the supervisor and is designed to help managers identify areas of weakness in their management practices. Supervisor evaluations are specific to each supervisory level:
+Each employee should complete a supervisor evaluation appropriate to the level of their supervisor. This evaluation will be shared with the supervisor and is designed to help managers identify areas of weakness in their management practices. Supervisor evaluations are specific to each supervisory level:
+
 * [Deputy](https://gitlab.com/ccao-data-science---modeling/career-development/employment/-/blob/master/forms/360%20Evaluation%20-%20Employee%20Evaluating%20Deputy.docx)
 * Director
 * Senior Data Scientist
@@ -86,11 +87,11 @@ Employees can choose not to share their supervisor-evaluations with their superv
 
 ### Peer Evaluation
 
-Employees can request [peer evaluations](https://gitlab.com/ccao-data-science---modeling/career-development/employment/-/blob/master/forms/360%20Evaluation%20-%20Employee%20Evaluating%20Deputy.docx) from another employee of the Cook County Assessor's Office. This peer cannot be in the supervisory chain for the employee, and must have worked with the employee on a significant project, or regularly as part of their assigned duties. Peer evalautions will be shared with both the employee and the supervisor. Supervisors cannot request peer evaluations for their employees.
+Employees can request [peer evaluations](https://gitlab.com/ccao-data-science---modeling/career-development/employment/-/blob/master/forms/360%20Evaluation%20-%20Employee%20Evaluating%20Deputy.docx) from another employee of the Cook County Assessor's Office. This peer cannot be in the supervisory chain for the employee, and must have worked with the employee on a significant project, or regularly as part of their assigned duties. Peer evaluations will be shared with both the employee and the supervisor. Supervisors cannot request peer evaluations for their employees.
 
 ### Performance Evaluation Templates
 
-Performance evalautions are a two-part process. First, the evaluator creates two issue tickets in the [employment repository](https://gitlab.com/ccao-data-science---modeling/career-development/employment). The first issue ticket covers the work the evaluator and evaluateee must complete *prior* to the performance management meeting. The second issue ticket covers the meeting itself, and is blocked by the first ticket. 
+Performance evaluations are a two-part process. First, the evaluator creates two issue tickets in the [employment repository](https://gitlab.com/ccao-data-science---modeling/career-development/employment). The first issue ticket covers the work the evaluator and evaluatee must complete *prior* to the performance management meeting. The second issue ticket covers the meeting itself, and is blocked by the first ticket. 
 
 The first issue ticket should be populated by the correct template, depending on the job title of the evaluator, and the Shakman exempt status of the evaluatee. The grid below indicates which template should be used.
 
