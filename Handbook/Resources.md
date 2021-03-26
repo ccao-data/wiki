@@ -9,7 +9,7 @@ Resources, notes, and helpful links used by the Data Science Department. Organiz
 
 - [:exclamation: CCAO Webmail](https://webmail.cookcountyassessor.com/owa/#path=/mail/inbox) - Web-based version of Outlook available to employees
 - [:exclamation: CCT](https://www.cookcountyil.gov/cct) - Cook County Time and Attendance, the web-based portal for tracking hours, time-off, etc.
-- [:exclamation: Data Science Teams Channel](https://teams.microsoft.com/l/channel/19%3aa574fd1291b74be298d074c134226689%40thread.tacv2/General?groupId=c8f82972-b5a7-44c0-a00c-ba395f96c6e2&tenantId=d8c4abe1-1869-4ec9-ad1d-19767c494954) - Private teams channel for the Data Science department. Ask @sweatyhandshake for an invite
+- [:exclamation: Data Science Teams Channel](https://teams.microsoft.com/l/channel/19%3aa574fd1291b74be298d074c134226689%40thread.tacv2/General?groupId=c8f82972-b5a7-44c0-a00c-ba395f96c6e2&tenantId=d8c4abe1-1869-4ec9-ad1d-19767c494954) - Private teams channel for the Data Science department. Ask or [email](mailto:wridgeway@cookcountyassessor) @sweatyhandshake for an invite
 - [Employee Self-Service (ESS)](https://ccgprod.cookcountyil.gov/) - Benefits enrollment and tracking
 - [Data Science Application Server](https://datascience.cookcountyassessor.com/) - Shiny server that launches CCAO Shiny applications. Login with Windows credentials. **Must be connected to the VPN to access**. May throw a security warning when you first visit. This warning can safely be ignored. Click **Advanced --> Accept the risk** to bypass the warning.
 
@@ -41,7 +41,7 @@ Useful reports that provide context about our office, its history, and its probl
 
 ##### Books and Guides
 
-- [:star: R for Data Science](https://r4ds.had.co.nz/) - Classic book on data munging and the basics of modeling, highly recommended
+- [:exclamation: R for Data Science](https://r4ds.had.co.nz/) - Classic book on data munging and the basics of modeling, highly recommended
 - [:star: Advanced R](http://adv-r.had.co.nz/Introduction.html) - Extremely good overview of the R language, its quirks, and how to use it effectively
 - [:star: Package Development in R](https://r-pkgs.org/) - Book on how to develop, use, and test R packages
 - [:star: Efficient R Programming](https://csgillespie.github.io/efficientR/) - Online book covering how make R code faster to type and run
@@ -114,7 +114,7 @@ Useful reports that provide context about our office, its history, and its probl
 
 ##### Tree-Based Models
 
-- [:star: Gradient-Boosted Decision Trees, Explained](https://arogozhnikov.github.io/2016/06/24/gradient_boosting_explained.html) - An incredible visual explaination of how boosted trees work
+- [:star: Gradient-Boosted Decision Trees, Explained](https://arogozhnikov.github.io/2016/06/24/gradient_boosting_explained.html) - An incredible visual explanation of how boosted trees work
 - [xgboost's Introduction to Boosted Trees](https://xgboost.readthedocs.io/en/latest/tutorials/model.html) - Great overview of the math involved in tree-based models
 - [LightGBM vs. Catboost Feature Engineering](https://www.kaggle.com/c/zillow-prize-1/discussion/47283) - Nice insight from Kaggle on housing-specific feature engineering
 
@@ -129,14 +129,14 @@ Useful reports that provide context about our office, its history, and its probl
 
 - [:star: 3Blue1Brown](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw) - The best YouTube channel about math, statistics, and machine learning that has ever existed
 - [:star: Statistics Done Wrong](https://www.statisticsdonewrong.com/) - Guide to statistics errors, gotchas, and slip-ups
-- [:star: Elements of Stastical Learning](https://web.stanford.edu/~hastie/ElemStatLearn/) - Fairly technical book about stats and prediction. A classic
-- [Introduction to Stastical Learning](https://www.statlearning.com/) - Excellent book on basic stats and techniques. Less technical than Elements
+- [:star: Elements of Statistical Learning](https://web.stanford.edu/~hastie/ElemStatLearn/) - Fairly technical book about stats and prediction. A classic
+- [Introduction to Statistical Learning](https://www.statlearning.com/) - Excellent book on basic stats and techniques. Less technical than Elements
 - [Statistical Rethinking](https://xcelab.net/rm/statistical-rethinking/) - Well-known treatment of Bayesian statistics in R
 
 ## SQL
 
 - [:exclamation: Select Star SQL](https://selectstarsql.com/) - Excellent interactive book for learning SQL
-- [:star: Use The Index Luke](https://use-the-index-luke.com/) - Explaination of SQL indexing for developers, highly recommended
+- [:star: Use The Index Luke](https://use-the-index-luke.com/) - Explanation of SQL indexing for developers, highly recommended
 - [Common Table Expression (CTE) Overview](https://www.essentialsql.com/introduction-common-table-expressions-ctes/) - Short guide to using SQL's WITH statement to unnest complicated queries
 - [SQL Server Tutorials](https://www.sqlservertutorial.net/advanced-sql-server/) - Advanced tutorials specifically for SQL Server
 
@@ -147,7 +147,4 @@ Useful reports that provide context about our office, its history, and its probl
 - [Geofabrik](https://download.geofabrik.de/) - Data extracts from the entire OpenStreetMap (OSM) database. Useful for calculating distances
 - [Osmium Tool](https://osmcode.org/osmium-tool/manual.html) - Tool for manipulating and filtering OSM data. Requires using a command line
 - [Geocomputation in R](https://geocompr.robinlovelace.net/intro.html) - Free book covering lots of geospatial munging in R
-
-## Leadership and Management
-
 
