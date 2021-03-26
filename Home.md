@@ -2,6 +2,7 @@
 
  * [Handbook](Handbook/Handbook)
  * [Mission, Vision, & Values](Handbook/Mission Vision Values)
+ * [Resources](Resources/Resources)
 
 # People
 
