@@ -11,6 +11,7 @@ Take a moment to bookmark these commonly used CCAO links:
 
 - [:exclamation: CCAO Webmail](https://webmail.cookcountyassessor.com/owa/#path=/mail/inbox) - Web-based version of Outlook available to employees
 - [:exclamation: CCT](https://www.cookcountyil.gov/cct) - Cook County Time and Attendance, the web-based portal for tracking hours, time-off, etc.
+- [:exclamation: Data Science Teams Channel](https://teams.microsoft.com/l/channel/19%3aa574fd1291b74be298d074c134226689%40thread.tacv2/General?groupId=c8f82972-b5a7-44c0-a00c-ba395f96c6e2&tenantId=d8c4abe1-1869-4ec9-ad1d-19767c494954) - Private teams channel for the Data Science department. Ask @sweatyhandshake for an invite
 - [Data Science Application Server](https://datascience.cookcountyassessor.com/) - Shiny server that launches CCAO Shiny applications. Login with Windows credentials. **Must be connected to the VPN to access**. May throw a security warning when you first visit. This warning can safely be ignored. Click **Advanced --> Accept the risk** to bypass the warning.
 - [Employee Self-Service (ESS)](https://ccgprod.cookcountyil.gov/) - Benefits enrollment and tracking
 
@@ -19,6 +20,7 @@ Take a moment to bookmark these commonly used CCAO links:
 - [:exclamation: CCAO GitLab](https://gitlab.com/ccao-data-science---modeling) - Main source for all Data Science Department code
 - [Cook County Assessor's PIN Search](https://www.cookcountyassessor.com/address-search) - Our office's application to find information about a PIN
 - [Cook County Property Info](http://www.cookcountypropertyinfo.com/) - The County's application to find information about a PIN
+- [Cook County Data Portal](https://datacatalog.cookcountyil.gov/) - Public data portal for Cook County
 - [Cook Viewer](https://maps.cookcountyil.gov/cookviewer/mapViewer.html) - A GIS application for finding PINs
 - Subscribe to the [CCAO’s external newsletter](https://public.govdelivery.com/accounts/ILCOOK/signup/12686)
 - Subscribe to the CCAO’s social media channels: 
@@ -86,6 +88,20 @@ Useful reports that provide context about our office, its history, and its probl
 
 - [Docker Overview](https://docs.docker.com/get-started/overview/) - Read this to get started with Docker
 - [Deploying R Models in Production](https://medium.com/bbc-data-science/deploying-r-models-in-production-with-apache-airflow-and-aws-batch-9182b0c8ed83) - Walkthrough of how to productionize an R model using Docker. Somewhat outdated now
+- [:star: Dockerfile Best Practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/) - Required reading if you need to write a Dockerfile
+- [Docker Security Best Practices](https://snyk.io/blog/10-docker-image-security-best-practices/) - Tips for creating secure containers/images
+- [:star: Open Containers Labels Spec](https://github.com/opencontainers/image-spec/blob/master/annotations.md) - Standardized schema for container labels. Always use when creating new images
+- [Reducing Docker Image Size](https://www.ardanlabs.com/blog/2020/02/docker-images-part1-reducing-image-size.html) - Blog post on how to reduce the size of images
+- [Containerizing Data Workflows](https://medium.com/enigma-engineering/containerizing-data-workflows-95df1d338048) - Using Airflow with Docker to create DAGs
+
+## DevOps
+
+- [:star: The Twelve-Factor App](https://12factor.net/) - Framework/tips for building a stable application in the modern era
+- [:star: Production Readiness Checklist](https://gruntwork.io/devops-checklist/) - Checklist for productionizing an application on AWS
+- [:star: SemVer (Semantic Versioning)](https://semver.org/) - Standard for how to version applications, images, or any software
+- [Creating Models as Microservices](https://cnr.sh/essays/models-microservices-should-be-using-same-continuous-delivery-stack) - How to functionalize models as APIs
+- [Site Reliability Engineering Resources](https://sre.xyz/) - Huge curated list of useful DevOps/SRE resources
+- [DevOps Roadmap](https://roadmap.sh/devops) - Guide for skills needed for DevOps roles
 
 ## Modeling
 
@@ -107,8 +123,6 @@ Useful reports that provide context about our office, its history, and its probl
 - [Staked Model Example with Ames Housing Dataset](https://www.kaggle.com/hansjoerg/glmnet-xgboost-and-svm-using-tidymodels)
 
 ## Spatial Data
-
-
 
 ## Leadership and Management
 
