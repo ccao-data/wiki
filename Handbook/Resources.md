@@ -5,8 +5,6 @@ Resources, notes, and helpful links used by the Data Science Department. Organiz
 
 ## Useful Bookmarks
 
-Take a moment to bookmark these commonly used CCAO links:
-
 ##### For Employees Only
 
 - [:exclamation: CCAO Webmail](https://webmail.cookcountyassessor.com/owa/#path=/mail/inbox) - Web-based version of Outlook available to employees
@@ -129,13 +127,25 @@ Useful reports that provide context about our office, its history, and its probl
 
 ##### Statistics
 
+- [:exclamation: 3Blue1Brown](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw) - The best YouTube channel about math, statistics, and machine learning that has ever existed
+- [:star: Statistics Done Wrong](https://www.statisticsdonewrong.com/) - Guide to statistics errors, gotchas, and slip-ups
+- [:star: Elements of Stastical Learning](https://web.stanford.edu/~hastie/ElemStatLearn/) - Fairly technical book about stats and prediction. A classic
+- [Introduction to Stastical Learning](https://www.statlearning.com/) - Excellent book on basic stats and techniques. Less technical than Elements
+- [Statistical Rethinking](https://xcelab.net/rm/statistical-rethinking/) - Well-known treatment of Bayesian statistics in R
+
 ## SQL
 
 - [:exclamation: Select Star SQL](https://selectstarsql.com/) - Excellent interactive book for learning SQL
-- [:star: Use The Index Luke](https://use-the-index-luke.com/) - Explaination of SQL indexing for developers
+- [:star: Use The Index Luke](https://use-the-index-luke.com/) - Explaination of SQL indexing for developers, highly recommended
+- [Common Table Expression (CTE) Overview](https://www.essentialsql.com/introduction-common-table-expressions-ctes/) - Short guide to using SQL's WITH statement to unnest complicated queries
 - [SQL Server Tutorials](https://www.sqlservertutorial.net/advanced-sql-server/) - Advanced tutorials specifically for SQL Server
 
 ## Spatial Data
+
+- [:star: CSDS Spatial Data Tutorials](https://spatialanalysis.github.io/tutorials/) - List of tutorials for manipulating spatial data in R, created by UChicago's Center for Spatial Data Science
+- [Geofabrik](https://download.geofabrik.de/) - Data extracts from the entire OpenStreetMap (OSM) database. Useful for calculating distances
+- [Osmium Tool](https://osmcode.org/osmium-tool/manual.html) - Tool for manipulating and filtering OSM data. Requires using a command line
+- [Geocomputation in R](https://geocompr.robinlovelace.net/intro.html) - Free book covering lots of geospatial munging in R
 
 ## Leadership and Management
 
