@@ -1,6 +1,6 @@
 Resources, notes, and helpful links used by the Data Science Department. Organized by section and ordered alphabetically. 
 
-- :exclaimation: denotes required reading for interns and new hires
+- :exclamation: denotes required reading for interns and new hires
 - :star: denotes a recommended resource
 
 ## Useful Bookmarks
@@ -9,14 +9,14 @@ Take a moment to bookmark these commonly used CCAO links:
 
 #### For Employees Only
 
-- [:exclaimation: CCAO Webmail](https://webmail.cookcountyassessor.com/owa/#path=/mail/inbox) - Web-based version of Outlook available to employees
-- [:exclaimation: CCT](https://www.cookcountyil.gov/cct) - Cook County Time and Attendance, the web-based portal for tracking hours, time-off, etc.
+- [:exclamation: CCAO Webmail](https://webmail.cookcountyassessor.com/owa/#path=/mail/inbox) - Web-based version of Outlook available to employees
+- [:exclamation: CCT](https://www.cookcountyil.gov/cct) - Cook County Time and Attendance, the web-based portal for tracking hours, time-off, etc.
 - [Data Science Application Server](https://datascience.cookcountyassessor.com/) - Shiny server that launches CCAO Shiny applications. Login with Windows credentials. **Must be connected to the VPN to access**. May throw a security warning when you first visit. This warning can safely be ignored. Click **Advanced --> Accept the risk** to bypass the warning.
 - [Employee Self-Service (ESS)](https://ccgprod.cookcountyil.gov/) - Benefits enrollment and tracking
 
 #### External Links
 
-- [:exclaimation: CCAO GitLab](https://gitlab.com/ccao-data-science---modeling) - Main source for all Data Science Department code
+- [:exclamation: CCAO GitLab](https://gitlab.com/ccao-data-science---modeling) - Main source for all Data Science Department code
 - [Cook County Assessor's PIN Search](https://www.cookcountyassessor.com/address-search) - Our office's application to find information about a PIN
 - [Cook County Property Info](http://www.cookcountypropertyinfo.com/) - The County's application to find information about a PIN
 - [Cook Viewer](https://maps.cookcountyil.gov/cookviewer/mapViewer.html) - A GIS application for finding PINs
@@ -35,7 +35,7 @@ Useful reports that provide context about our office, its history, and its probl
 
 - [Chicago Triad Assessment Report (2018) - Civic Consulting Alliance](https://prodassets.cookcountyassessor.com/s3fs-public/reports/2018ChicagoTriadSRSvf.pdf) - Study of 2018 assessment quality in the Chicago triad
 - [Report on Property Taxes in Wicker Park - Block Club Chicago](https://blockclubchicago.org/2021/03/23/after-decades-in-wicker-park-senior-homeowners-forced-out-by-skyrocketing-property-taxes-this-neighborhood-has-broken-my-heart/) - Story on how increases in assessed value are affecting Wicker Park
-- [:exclaimation: The Tax Divide - Chicago Tribune](https://www.chicagotribune.com/investigations/ct-tax-divide-investigation-20180425-storygallery.html) - An excellent outline of the historical problems with the CCAO
+- [:exclamation: The Tax Divide - Chicago Tribune](https://www.chicagotribune.com/investigations/ct-tax-divide-investigation-20180425-storygallery.html) - An excellent outline of the historical problems with the CCAO
 
 ## R
 
@@ -62,7 +62,7 @@ Useful reports that provide context about our office, its history, and its probl
 
 - [Using LightGBM in R](https://lightgbm.readthedocs.io/en/latest/R/index.html) - How to use the LightGBM boosted tree framework in R
 - [Programming with dplyr](https://cran.r-project.org/web/packages/dplyr/vignettes/programming.html) - A quick rundown on how to write functions using the `dplyr` library
-- [:exclaimation: renv Overview](https://rstudio.github.io/renv/articles/renv.html) - A short vignette on how to use `renv`, R's local dependency management system
+- [:exclamation: renv Overview](https://rstudio.github.io/renv/articles/renv.html) - A short vignette on how to use `renv`, R's local dependency management system
 - [Speeding Up OLS](https://nelsonareal.net/blog/2017/06/speeding_up_ols.html) - Using `fastLm()` for quicker regressions
 - [Unit Testing in R](https://github.com/SchlossLab/intro-testing-r) - Brief overview of unit testing in R using the `testthat` library
 - [Parallel Parameter Tuning in Tidymodels](https://tune.tidymodels.org/articles/extras/optimizations.html#parallel-processing)
@@ -77,7 +77,7 @@ Useful reports that provide context about our office, its history, and its probl
 
 ## Git
 
-- [:exclaimation: commit.style](https://commit.style/) - Super brief guide on how to style a commit message. Follow these guidelines
+- [:exclamation: commit.style](https://commit.style/) - Super brief guide on how to style a commit message. Follow these guidelines
 - [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/) - A longer explanation on how to write git commit messages
 - [Git - The Simple Guide](https://rogerdudler.github.io/git-guide/) - A simple guide on what git does and how to use it (via the command line)
 - [Sourcetree Guides](https://confluence.atlassian.com/get-started-with-sourcetree) - Documentation for Sourcetree (if you prefer a GUI git client)
