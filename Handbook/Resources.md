@@ -7,7 +7,7 @@ Resources, notes, and helpful links used by the Data Science Department. Organiz
 
 Take a moment to bookmark these commonly used CCAO links:
 
-#### For Employees Only
+##### For Employees Only
 
 - [:exclamation: CCAO Webmail](https://webmail.cookcountyassessor.com/owa/#path=/mail/inbox) - Web-based version of Outlook available to employees
 - [:exclamation: CCT](https://www.cookcountyil.gov/cct) - Cook County Time and Attendance, the web-based portal for tracking hours, time-off, etc.
@@ -15,7 +15,7 @@ Take a moment to bookmark these commonly used CCAO links:
 - [Data Science Application Server](https://datascience.cookcountyassessor.com/) - Shiny server that launches CCAO Shiny applications. Login with Windows credentials. **Must be connected to the VPN to access**. May throw a security warning when you first visit. This warning can safely be ignored. Click **Advanced --> Accept the risk** to bypass the warning.
 - [Employee Self-Service (ESS)](https://ccgprod.cookcountyil.gov/) - Benefits enrollment and tracking
 
-#### External Links
+##### External Links
 
 - [:exclamation: CCAO GitLab](https://gitlab.com/ccao-data-science---modeling) - Main source for all Data Science Department code
 - [Cook County Assessor's PIN Search](https://www.cookcountyassessor.com/address-search) - Our office's application to find information about a PIN
@@ -41,7 +41,7 @@ Useful reports that provide context about our office, its history, and its probl
 
 ## R
 
-### Books and Guides
+##### Books and Guides
 
 - [:star: Advanced R](http://adv-r.had.co.nz/Introduction.html) - Extremely good overview of the R language, its quirks, and how to use it effectively
 - [Debugging with RStudio](https://support.rstudio.com/hc/en-us/articles/200713843?version=1.3.959&mode=server#introduction) - How to use RStudio's built-in debugging features
@@ -54,13 +54,13 @@ Useful reports that provide context about our office, its history, and its probl
 - [Stat 545](https://stat545.com/) - A very thorough walkthrough of data wrangling and exploration in R, does not cover stats
 - [Tidy Data](http://vita.had.co.nz/papers/tidy-data.pdf) - Paper describing the structure and utility of 'tidy' data
 
-### Cheatsheets
+##### Cheatsheets
 
 - [:star: Colorbrewer 2](https://colorbrewer2.org/) - Interactive color picker for cartography
 - [RStudio Official Cheatsheets](https://rstudio.com/resources/cheatsheets/) - The official cheatsheets maintained by RStudio. These are 1-2 page printouts covering the vital functions of individual libraries
 - [R Color Palette Cheatsheet](https://www.nceas.ucsb.edu/sites/default/files/2020-04/colorPaletteCheatsheet.pdf) - Useful printout covering the colors available in base R
 
-### Specific Libraries
+##### Specific Libraries
 
 - [Using LightGBM in R](https://lightgbm.readthedocs.io/en/latest/R/index.html) - How to use the LightGBM boosted tree framework in R
 - [Programming with dplyr](https://cran.r-project.org/web/packages/dplyr/vignettes/programming.html) - A quick rundown on how to write functions using the `dplyr` library
@@ -69,7 +69,7 @@ Useful reports that provide context about our office, its history, and its probl
 - [Unit Testing in R](https://github.com/SchlossLab/intro-testing-r) - Brief overview of unit testing in R using the `testthat` library
 - [Parallel Parameter Tuning in Tidymodels](https://tune.tidymodels.org/articles/extras/optimizations.html#parallel-processing)
 
-### Shiny
+##### Shiny
 
 - [Advanced Shiny](https://github.com/daattali/advanced-shiny#readme) - A collection of various Shiny tricks for common tasks
 - [Docker + ShinyProxy Setup](https://www.prunux.ch/blog/docker-shinyproxy-setup/) - A nice overview of using ShinyProxy with Docker and Docker Compose
@@ -77,14 +77,16 @@ Useful reports that provide context about our office, its history, and its probl
 - [Shiny Modules](https://shiny.rstudio.com/articles/modules.html) - An overview of how to use Shiny Modules to better organize your code
 - [ShinyProxy Config](https://www.shinyproxy.io/) - Website for ShinyProxy, the launcher we used to manage the [Data Science Application Server](https://datascience.cookcountyassessor.com/)
 
-## Git
+## Git, Linux, and DevOps
+
+##### Git
 
 - [:exclamation: commit.style](https://commit.style/) - Super brief guide on how to style a commit message. Follow these guidelines
 - [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/) - A longer explanation on how to write git commit messages
 - [Git - The Simple Guide](https://rogerdudler.github.io/git-guide/) - A simple guide on what git does and how to use it (via the command line)
 - [Sourcetree Guides](https://confluence.atlassian.com/get-started-with-sourcetree) - Documentation for Sourcetree (if you prefer a GUI git client)
 
-## Docker
+##### Docker
 
 - [Docker Overview](https://docs.docker.com/get-started/overview/) - Read this to get started with Docker
 - [Deploying R Models in Production](https://medium.com/bbc-data-science/deploying-r-models-in-production-with-apache-airflow-and-aws-batch-9182b0c8ed83) - Walkthrough of how to productionize an R model using Docker. Somewhat outdated now
@@ -94,7 +96,7 @@ Useful reports that provide context about our office, its history, and its probl
 - [Reducing Docker Image Size](https://www.ardanlabs.com/blog/2020/02/docker-images-part1-reducing-image-size.html) - Blog post on how to reduce the size of images
 - [Containerizing Data Workflows](https://medium.com/enigma-engineering/containerizing-data-workflows-95df1d338048) - Using Airflow with Docker to create DAGs
 
-## DevOps
+##### DevOps
 
 - [:star: The Twelve-Factor App](https://12factor.net/) - Framework/tips for building a stable application in the modern era
 - [:star: Production Readiness Checklist](https://gruntwork.io/devops-checklist/) - Checklist for productionizing an application on AWS
@@ -103,24 +105,35 @@ Useful reports that provide context about our office, its history, and its probl
 - [Site Reliability Engineering Resources](https://sre.xyz/) - Huge curated list of useful DevOps/SRE resources
 - [DevOps Roadmap](https://roadmap.sh/devops) - Guide for skills needed for DevOps roles
 
-## Modeling
+## Modeling and Statistics
 
-### OLS
+##### OLS
 
 - [Linear Regressions in R](http://r-statistics.co/Linear-Regression.html) - Basic overview of creating and visualizing linear regressions in R
 - [:star: A Deep Dive Into How R Fits a Linear Model](http://madrury.github.io/jekyll/update/statistics/2016/07/20/lm-in-R.html) - Excellent blog post on how R's `lm()` function works under the hood
+- [Gradient Descent Overview](https://ruder.io/optimizing-gradient-descent/) - Nice visual overview of how different gradient descent algorithms work
+- [Ridge Regression Overview](https://courses.cs.washington.edu/courses/cse446/17wi/slides/ridgeregression-annotated.pdf) - Mathy overview of regularization of overfit models
 
-### Tree-Based Models
+##### Tree-Based Models
 
 - [:star: Gradient-Boosted Decision Trees, Explained](https://arogozhnikov.github.io/2016/06/24/gradient_boosting_explained.html) - An incredible visual explaination of how boosted trees work
 - [xgboost's Introduction to Boosted Trees](https://xgboost.readthedocs.io/en/latest/tutorials/model.html) - Great overview of the math involved in tree-based models
 - [LightGBM vs. Catboost Feature Engineering](https://www.kaggle.com/c/zillow-prize-1/discussion/47283) - Nice insight from Kaggle on housing-specific feature engineering
 
-### Predictive Modeling
+##### Predictive Modeling
 
 - [:star: Max Kuhn's Applied Predictive Modeling](http://appliedpredictivemodeling.com/toc) - One of the best books on predictive modeling. Extremely clear and comprehensive
 - [Super-Learners with Tidymodels](https://www.alexpghayes.com/blog/implementing-the-super-learner-with-tidymodels/) - Blog post on how to create ensemble models in Tidymodels
-- [Staked Model Example with Ames Housing Dataset](https://www.kaggle.com/hansjoerg/glmnet-xgboost-and-svm-using-tidymodels)
+- [Stacked Model Example with Ames Housing Dataset](https://www.kaggle.com/hansjoerg/glmnet-xgboost-and-svm-using-tidymodels)
+- [Scikit-learn Algorithm Cheatsheet](https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html) - A flowchart to choosing an ML estimator 
+
+##### Statistics
+
+## SQL
+
+- [:exclamation: Select Star SQL](https://selectstarsql.com/) - Excellent interactive book for learning SQL
+- [:star: Use The Index Luke](https://use-the-index-luke.com/) - Explaination of SQL indexing for developers
+- [SQL Server Tutorials](https://www.sqlservertutorial.net/advanced-sql-server/) - Advanced tutorials specifically for SQL Server
 
 ## Spatial Data
 
