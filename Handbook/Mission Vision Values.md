@@ -68,7 +68,7 @@ The public process does two things: allows others to benefit from the conversati
 
 In line with our value of transparency and being public by default, all team member profiles should be public. Public profiles also enable broader collaboration and efficiencies between teams. To do so, please make sure that the checkbox under the [Private profile](https://docs.gitlab.com/ee/user/profile/#private-profile) option is unchecked [in your profile settings](https://gitlab.com/profile/). If you do not feel comfortable with your full name or location on your profile, please change it to what feels appropriate to you as these are displayed even on private profiles.
 
-If you believe something shouldn't be public that currently is (or vice versa), then email [Rob Ross](mailto:rross@cookcountyassessor.com).
+If you believe something shouldn't be public that currently is (or vice versa), then email [Samantha Simpson](mailto:ssimpson@cookcountyassessor.com).
 
 ### Transparency is only a value if you do it when it is hard
 
@@ -302,4 +302,4 @@ We do not operate under the delusion that our values are superior to others' val
 
 ## Updating Our Values
 
-Our values are updated as frequently as needed. To suggest changes to our values, feel free to email [Rob Ross](mailto:rross@cookcountyassessor.com) with thoughts, or submit a merge request to this document.
+Our values are updated as frequently as needed. To suggest changes to our values, feel free to email [Samantha Simpson](mailto:ssimpson@cookcountyassessor.com) with thoughts, or submit a merge request to this document.
