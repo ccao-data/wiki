@@ -3,7 +3,8 @@
 # The Data Science Department
 
  * [Handbook](Handbook/Handbook)
- * [Mission, Vision, & Values](Handbook/Mission Vision Values)
+ * [Mission, Vision, and Values](Handbook/Mission Vision Values)
+ * [Resources](Resources/Resources)
 
 # People
 
@@ -18,7 +19,7 @@
 
 # Residential
 
- * [Single and Multi-family Home Model](https://gitlab.com/ccao-data-science---modeling/models/ccao_res_avm)
+ * [Single and Multi-Family Home Model](https://gitlab.com/ccao-data-science---modeling/models/ccao_res_avm)
  * [Condominium Model](https://gitlab.com/ccao-data-science---modeling/models/ccao_condo_avm)
  * [Sales Comparables](Residential/Sales Comparables)
  * [Residential Exemptions](Residential/Residential Exemptions)
