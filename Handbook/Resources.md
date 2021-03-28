@@ -29,13 +29,17 @@ Resources, notes, and helpful links used by the Data Science Department. Organiz
   - [YouTube](https://www.youtube.com/channel/UC9w4Q3ZJyRS5J27eYKSjwZQ)
 - [IAAO Technical Standards](https://iaao.org/wcm/Resources/Technical_Standards/wcm/Resources_Content/Pubs/Technical_Standards.aspx) - Technical standards and measurements for the assessment field
 
-## Reporting
+## Property Tax Guides and Reporting
 
-Useful reports that provide context about our office, its history, and its problems:
+Useful materials that give an overview of Cook County's property tax system and provide context about our office, its history, and its problems:
 
+- [:exclamation: Cook County Property Taxes 101](https://maps.cookcountyil.gov/propertytax101/index.html) - Brief intro to property taxes, created by the Clerk's office
 - [:exclamation: The Tax Divide - Chicago Tribune](https://www.chicagotribune.com/investigations/ct-tax-divide-investigation-20180425-storygallery.html) - An excellent outline of the historical problems with the CCAO
+- [:star: Why Are My Property Taxes So High?](https://www.chicagobusiness.com/crains-forum-taxes/forum-why-are-my-property-taxes-so-high) - Neat interactive from Crain's that compares two very different homes that pay roughly the same amount of property tax
 - [Chicago Triad Assessment Report (2018) - Civic Consulting Alliance](https://prodassets.cookcountyassessor.com/s3fs-public/reports/2018ChicagoTriadSRSvf.pdf) - Study of 2018 assessment quality in the Chicago triad
 - [Report on Property Taxes in Wicker Park - Block Club Chicago](https://blockclubchicago.org/2021/03/23/after-decades-in-wicker-park-senior-homeowners-forced-out-by-skyrocketing-property-taxes-this-neighborhood-has-broken-my-heart/) - Story on how increases in assessed value are affecting Wicker Park
+- [City of Chicago Property Tax Explainer](http://chicago.github.io/annual-financial-analysis/Revenue-History/Property/) - Static site from the City that explains taxing districts, TIFs, and more
+- [State of Illinois Property Tax System](https://www2.illinois.gov/rev/research/publications/Documents/localgovernment/ptax-1004.pdf) - A long PDF from the Illinois Department of Revenue explaining property taxes in Illinois
 
 ## R
 
