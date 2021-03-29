@@ -246,7 +246,7 @@ Research
 Data that is not individually identifying may be made available to
 outside collaborators and researchers as part of our [Developer
 Engagement
-Program](https://gitlab.com/ccao-data-science---modeling/ccao_sf_cama_dev/tree/master/collaborator.documents).
+Program](People/Contributing).
 
 Anonymization and Statistical Disclosure Control
 ------------------------------------------------
@@ -314,4 +314,4 @@ use of the RPIE Online Form after any change in this PDS constitutes
 your acceptance of such change.
 
 The entire history of this privacy statment can be viewed
-[here.](https://gitlab.com/ccao-data-science---modeling/ccao_ic_cama_dev/commits/master/RPIE_website_content/CCAO%20RPIE%20Privacy%20Policy.Rmd)
+[here.](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content/-/commits/master/RPIE/Privacy%20Policy.md)

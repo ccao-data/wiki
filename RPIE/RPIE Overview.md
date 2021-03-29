@@ -12,7 +12,7 @@ Fundamentally, the RPIE Online Form is not a form at all; it is a crowd-sourced 
 
 # Current uses of RPIE data
 
-Primarily, RPIE data is used to power an automated valuation model for commercial apartments. [See the repository for more details.](https://gitlab.com/ccao-data-science---modeling/models/commercial-apartments-automated-valuation-model_)
+Primarily, RPIE data is used to power an automated valuation model for commercial apartments. [See the repository for more details.](https://gitlab.com/ccao-data-science---modeling/models/commercial-apartments-automated-valuation-model)
 
 # Agile, not half-baked: The evolution of RPIE
 
@@ -39,8 +39,8 @@ The primary task of RPIE V1 was to define a [data model](https://en.wikipedia.or
      * There is a m:m relationship between buildings and economic units. In some cases, one economic unit will own multiple buildings. In others, a building will contain many economic units. For example, a large office tower with multiple lessees responsible for taxes. 
 * **Spaces (leased and vacant):** RPIE V1 defined a space as a sub-division of a building that may be rented. There are two types of spaces: 'residential' and 'commercial.' Each type of space has its own vector of attributes, including lease status. A user that properly populates the spaces template will include both leased and un-leased spaces. 
      * There is m:1 relationship between spaces and buildings. The spaces data allow us to programatically calculate a building's gross potential income and vacancy rate, and attach those calculations to buildings.
-     * [Residential spaces template](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content/-/blob/master/RPIE/2021%20RPIE_Residentials_Spaces_Template.xlsx) can be found here.
-     * [Commercial spaces template](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content/-/blob/master/RPIE/2021%20RPIE_Commercials_Spaces_Template.xlsx) can be found here.
+     * [Residential spaces template](templates/2021-rpie-residential-spaces-template.xlsx) can be found here.
+     * [Commercial spaces template](templates/2021-rpie-commercial-spaces-template.xlsx) can be found here.
 * **Property Index Number (PIN):** Though often depicted as a cadasteral division, the PIN is actually an accounting identity. PINs identify, spatially in most cases, the tax liability for real estate assets. 
      * There is a m:m relationship between PINs and buildings, and PINs and economic units. I would not be surprised to see multiple PINs associated with a single space, though it would be uncommon. 
 * **Parties:** Parties are simply the people creating and submitting filings. 
@@ -50,7 +50,7 @@ The primary task of RPIE V1 was to define a [data model](https://en.wikipedia.or
 
 The image below shows four examples of different combinations of property and PINs. 
 
-<img src="Examples.png"
+<img src="overview-content/examples.png"
      alt="Examples"
      width="1000" height="600"
      style="float: left; margin-right: 10px;" />
@@ -77,7 +77,7 @@ The term “user experience” is generally used in the context of digital inter
 
 To create a form usable to humans, we needed a thorough understanding of the questions we would ask our users. The image below shows a preliminary diagram of the steps a user would go through during their filing.
 
-<img src="Workflow V1.png"
+<img src="overview-content/workflow-v1.png"
      alt="Workflow 1"
      width="1000" height="600"
      style="float: right; margin-right: 10px;" />
@@ -90,14 +90,14 @@ In order to make these steps clear and understandable, we then needed to put our
 * As a user, why do I care about this question?
 * As a user, do I understand what’s being asked of me?
 
-<img src="Paper slides.png"
+<img src="overview-content/paper-slides.png"
      alt="paper"
      width="1000" height="600"
      style="float: right; margin-right: 10px;" />
 
 We then translated our work into a preliminary set of wireframes, which were used to build the first test site version. CCAO visual brand guides were applied to the wireframes prior to launch.
 
-<img src="wireframes.png"
+<img src="overview-content/wireframes.png"
      alt="wireframes"
      width="1000" height="600"
      style="float: right; margin-right: 10px;" />
@@ -130,7 +130,7 @@ We added different types of income and expense data:
 * Model/Hotel I&E
 * General I&E
 
-Templates for these forms can be found [here](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content/-/blob/master/RPIE/I&E%20Templates.xlsx).
+Templates for these forms can be found [here](templates/rpie-ie-templates.xlsx).
 
 ### User experience
 
@@ -166,7 +166,7 @@ Our users are not experts in property appraisals or tax law, and nor should they
 
 The image below shows the first version of the questionnaire structure. In the design below, blue ovals indicate questions and boxes represent forms. Iteration 1 had too many poorly worded questions asked in a subotimal order.
 
-<img src="Questionnaire 1.png"
+<img src="overview-content/questionnaire-1.png"
      alt="Questionnaire 1"
      width="1000" height="800"
      style="float: right; margin-right: 10px;" />
@@ -175,7 +175,7 @@ The image below shows the first version of the questionnaire structure. In the d
 
 Clarity Partners UX researchers evaluated iteration 1 and worked with CCAO subject-matter experts to identify a few keys pieces for design improvement. User feedback collected during RPIE V1 was shared with the UX designers, who leveraged both pieces of research in RPIE V2. The result of this work was the design depicted below. In this iteration, questions have been condensed and re-ordered. 
 
-<img src="Questionnaire 2.png"
+<img src="overview-content/questionnaire-2.png"
      alt="Questionnaire 2"
      width="1000" height="800"
      style="float: right; margin-right: 10px;" />
@@ -185,8 +185,8 @@ Clarity Partners UX researchers evaluated iteration 1 and worked with CCAO subje
 
 Further refinement of the questionnaire by Clarity Partners UX designers resulted in the final questionnaire structure, depicted below. 
 
-<img src="RPIE v2 Questionnaire Flowchart_Page_1.png"
-     alt="RPIE v2 Questionnaire Flowchart_Page_1"
+<img src="overview-content/rpie-v2-questionnaire-flowchart-page-1.png"
+     alt="RPIE v2 Questionnaire Flowchart Page 1"
      width="1000" height="2000"
      style="float: right; margin-right: 10px;" />
 
@@ -194,7 +194,7 @@ Further refinement of the questionnaire by Clarity Partners UX designers resulte
 
 The end-result of this work is a 'wizard-like' approach to the user experience that guides users through their filing. In the image below, the text color corrsponds to the color of the arrows indicating the path through the RPIE system.
 
-<img src="Screenshot 1.png"
+<img src="overview-content/screenshot-1.png"
      alt="Screenshot 1"
      width="1000" height="600"
      style="float: right; margin-right: 10px;" />
@@ -267,5 +267,4 @@ It’s best if the system doesn’t need any additional explanation. However, it
 How this applies to RPIE V2:
 * Many users are reluctant to file an RPIE. This could be an indication that users do not understand why RPIE is beneficial to them.
 * Consider adding help/information documents to each section. These documents should clearly state why this information is needed and how it will be used.
-
 

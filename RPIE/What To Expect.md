@@ -52,7 +52,7 @@ Taxpayers who do not have IRS forms can submit income and expense information in
         Any other expenses you wish to volunteer
 * Option 3: Report gross rental income & detailed expense information.
 
-You can see an excel template for income and expense data [here](I&E%20Templates.xlsx).
+You can see an excel template for income and expense data [here](templates/rpie-ie-templates.xlsx).
 
 ### Vacant and occupied spaces
 
@@ -60,7 +60,7 @@ The RPIE collects data at the level of individual units. For the purposes of RPI
 
 #### Residential apartments
 
-The RPIE application will accept a template upload. You can find the template for residential spaces [here](2021%20RPIE_Residentials_Spaces_Template.xlsx).
+The RPIE application will accept a template upload. You can find the template for residential spaces [here](templates/2021-rpie-residential-spaces-template.xlsx).
 
 For each apartment, users will be required to submit the following information:
 
@@ -80,7 +80,7 @@ For each apartment, users will be required to submit the following information:
 
 #### Commercial spaces
 
-The RPIE application will accept a template upload. You can find the template for residential spaces [here](2021%20RPIE_Commercials_Spaces_Template.xlsx).
+The RPIE application will accept a template upload. You can find the template for commercial spaces [here](templates/2021-rpie-commercial-spaces-template.xlsx).
 
 **Lessees responsible for taxes** should report just their own space. 
 

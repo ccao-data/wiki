@@ -7,6 +7,7 @@ The mission of the Data Science Department is to transform the Cook County Asses
 We strive to be known as a technological leader in the field of public sector data analytics by creating an assessment office that is innovative, ethical, transparent, and fair.
 
 # Guiding Principles
+
 This department is a unique entity in the public sector. In the last two years, we have been extraordinarily successful building state-of-the-art analytic tools and processes. We are a critical component of Cook County's property tax apparatus, helping to ensure that the cost of local government is shared equitably across the community, and that the funding mechanisms of local government operate transparently and ethically. Our department is evolving to become the most efficient, transparent, and innovative unit of local government in the world. 
 
 We believe our achievements are an outgrowth of our values, and that those values must always be at the forefront of our work. This article outlines those values in detail, and gives examples of how we practice those values in our work. In crafting this document, we took great inspiration from [GitLab's Company Handbook](https://about.gitlab.com/handbook/values). That company's ethos of transparency and collaboration is particularly important in democratic institutions like ours. 
@@ -68,7 +69,7 @@ The public process does two things: allows others to benefit from the conversati
 
 In line with our value of transparency and being public by default, all team member profiles should be public. Public profiles also enable broader collaboration and efficiencies between teams. To do so, please make sure that the checkbox under the [Private profile](https://docs.gitlab.com/ee/user/profile/#private-profile) option is unchecked [in your profile settings](https://gitlab.com/profile/). If you do not feel comfortable with your full name or location on your profile, please change it to what feels appropriate to you as these are displayed even on private profiles.
 
-If you believe something shouldn't be public that currently is (or vice versa), then email [Rob Ross](mailto:rross@cookcountyassessor.com).
+If you believe something shouldn't be public that currently is (or vice versa), then email [Samantha Simpson](mailto:ssimpson@cookcountyassessor.com).
 
 ### Transparency is only a value if you do it when it is hard
 
@@ -290,7 +291,7 @@ We should strive to accept that there are things that we don't know about the wo
 
 The Data Science Department consists of five full-time employees. Why would such a small unit need a detailed description of their values? There are a few reasons why we have made the effort to create this document and train all members of the team on it.
 
-**Scaleable Success:** The Data Science Department will continue to grow and evolve, and it is critical that our values are not diluted as the unit grows. Establishing a strong values-driven culture early in our development helps ensure a [durable data science unit](https://en.wikipedia.org/wiki/Built_to_Last:_Successful_Habits_of_Visionary_Companies). 
+**Scalable Success:** The Data Science Department will continue to grow and evolve, and it is critical that our values are not diluted as the unit grows. Establishing a strong values-driven culture early in our development helps ensure a [durable data science unit](https://en.wikipedia.org/wiki/Built_to_Last:_Successful_Habits_of_Visionary_Companies). 
 
 **Recruitment:** A clear, public statement of value helps attract like-minded people to our team. This helps prevent value dilution as the unit grows, and helps bring in new and innovative ideas.
 
@@ -302,4 +303,4 @@ We do not operate under the delusion that our values are superior to others' val
 
 ## Updating Our Values
 
-Our values are updated as frequently as needed. To suggest changes to our values, feel free to email [Rob Ross](mailto:rross@cookcountyassessor.com) with thoughts, or submit a merge request to this document.
+Our values are updated as frequently as needed. To suggest changes to our values, feel free to email [Samantha Simpson](mailto:ssimpson@cookcountyassessor.com) with thoughts, or submit a merge request to this document.
