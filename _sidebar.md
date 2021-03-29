@@ -1,23 +1,23 @@
 [Home](Home)
 
-### The Data Science Department
+**The Data Science Department**
 
  * [Handbook](Handbook/Handbook)
  * [Mission, Vision, and Values](Handbook/Mission Vision Values)
  * [Resources](Resources/Resources)
 
-### People
+**People**
 
  * [Onboarding](People/Onboarding)
  * [External Developer Engagement Program](People/Contributing)
 
-### Standard Operating Procedures (SOPs)
+**Standard Operating Procedures (SOPs)**
 
  * [Sales Ratio Studies](SOPs/Sales Ratio Studies)
  * [Desk Review](SOPs/Desk Review)
  * [Open Data](SOPs/Open Data)
 
-### Residential
+**Residential**
 
  * [Single and Multi-Family Residential Model](https://gitlab.com/ccao-data-science---modeling/models/ccao_res_avm)
  * [Condominium Model](https://gitlab.com/ccao-data-science---modeling/models/ccao_condo_avm)
@@ -26,7 +26,7 @@
  * [Model Evaluation Standards](Residential/Model Evaluation)
  * [Home Improvement Exemptions (288s)](Residential/Home Improvement Exemptions)
 
-### Commercial and RPIE
+**Commercial and RPIE**
 
  * [Commercial Apartments Model](https://gitlab.com/ccao-data-science---modeling/models/commercial-apartments-automated-valuation-model)
  * [RPIE Overview](RPIE/RPIE Overview)
@@ -35,7 +35,7 @@
  * [RPIE Privacy Policy](RPIE/Privacy Policy)
  * [RPIE Details](RPIE/What To Expect)
 
-### Data Documentation
+**Data Documentation**
 
  * [CCAO R Package Documentation](https://ccao-data-science---modeling.gitlab.io/packages/ccao/reference/)
  * [(Old) SQL Database Guide](Data/SQL Database Guide)
