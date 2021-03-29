@@ -1,42 +1,44 @@
 [Home](Home)
 
-# The Data Science Department
+### The Data Science Department
 
  * [Handbook](Handbook/Handbook)
  * [Mission, Vision, and Values](Handbook/Mission Vision Values)
  * [Resources](Resources/Resources)
 
-# People
+### People
 
  * [Onboarding](People/Onboarding)
  * [External Developer Engagement Program](People/Contributing)
 
-# Standard Operating Procedures (SOPs)
+### Standard Operating Procedures (SOPs)
 
  * [Sales Ratio Studies](SOPs/Sales Ratio Studies)
  * [Desk Review](SOPs/Desk Review)
  * [Open Data](SOPs/Open Data)
 
-# Residential
+### Residential
 
- * [Single and Multi-Family Home Model](https://gitlab.com/ccao-data-science---modeling/models/ccao_res_avm)
+ * [Single and Multi-Family Residential Model](https://gitlab.com/ccao-data-science---modeling/models/ccao_res_avm)
  * [Condominium Model](https://gitlab.com/ccao-data-science---modeling/models/ccao_condo_avm)
  * [Sales Comparables](Residential/Sales Comparables)
  * [Residential Exemptions](Residential/Residential Exemptions)
- * [Model Evaluation](Residential/Model Evaluation)
+ * [Model Evaluation Standards](Residential/Model Evaluation)
  * [Home Improvement Exemptions (288s)](Residential/Home Improvement Exemptions)
 
-# RPIE
+### Commercial and RPIE
 
+ * [Commercial Apartments Model](https://gitlab.com/ccao-data-science---modeling/models/commercial-apartments-automated-valuation-model)
  * [RPIE Overview](RPIE/RPIE Overview)
  * [RPIE Landing Page Content](RPIE/Overview)
  * [RPIE FAQs](RPIE/FAQs)
  * [RPIE Privacy Policy](RPIE/Privacy Policy)
  * [RPIE Details](RPIE/What To Expect)
 
-# Data Documentation
+### Data Documentation
 
- * [SQL Database Guide](Data/SQL Database Guide)
+ * [CCAO R Package Documentation](https://ccao-data-science---modeling.gitlab.io/packages/ccao/reference/)
+ * [(Old) SQL Database Guide](Data/SQL Database Guide)
  * [Property Class Definitions](Data/class-definitions.pdf)
  * [Township Definitions](Data/Townships)
  * [Appeal Reason Codes](https://prodassets.cookcountyassessor.com/s3fs-public/form_documents/reasoncodes.pdf)

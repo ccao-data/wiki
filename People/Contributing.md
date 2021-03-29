@@ -1,4 +1,4 @@
-# Contributors External to CCAO
+### Contributors External to CCAO
 
 The Cook County Assessor's Office has a Developer Engagement Program for external contributors. By partnering with developers, coders, data scientists, and others, the CCAO hopes to integrate external knowledge and allow outside contributors to build solutions that advance the mission of the agency. External contributors are required to complete the following documents before receiving access to CCAO data or code:
 
@@ -8,6 +8,6 @@ The Cook County Assessor's Office has a Developer Engagement Program for externa
 *  [**Code of Conduct**](Contributing/Developer%20Engagement%20Code%20of%20Conduct.pdf) - All CCAO employees, officers, and officials are required to uphold the Ethics Executive Order put into place by Assessor Fritz Kaegi. As you will be working with CCAO staff and utilizing CCAO resources for your project, we will hold you to the same ethical standard as the employees, officers, and officials. We have adapted this Ethics Order into a Code of Conduct Agreement that you will need to agree to in order to work with our office.
 *  [**Statement of Not-For-Profit Purpose and Work**](Contributing/Developer%20Engagement%20Statement%20of%20Purpose%20Work.docx) - Once the details of your project are agreed upon, before beginning the work you will need to produce a statement of your not-for-profit purpose and a brief description of the work product or deliverables the CCAO can expect from your project. For example, the deliverable might be a new method of data analysis or acknowledgment that the data used in your research paper was provided by the CCAO.
 
-# Contributors Internal to CCAO
+### Contributors Internal to CCAO
 
 See [Onboarding](People/Onboarding).

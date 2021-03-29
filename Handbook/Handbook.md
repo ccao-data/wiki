@@ -55,7 +55,7 @@ The Data Science Department is broken into two sub-departments:
  1. **Data Science** is responsible for building models and tools that enhance the CCAO's mission. It creates and maintains applications, pipelines, models, and databases.
  2. **Data Analytics** is responsible for reporting on and analyzing the performance of the Data Science Department and the CCAO. It creates extracts, writes reports, and builds dashboards.
 
-An organization chart can be found [here](https://gitlab.com/ccao-data-science---modeling/people/training/-/blob/master/Documentation/Data%20Science%20Organisation%20Chart.pdf).
+An organization chart can be found [here](https://gitlab.com/ccao-data-science---modeling/people/talent/-/blob/master/documents/Data%20Science%20Organization%20Chart.pdf).
 
 ### Leadership Pipelines 
 
@@ -65,17 +65,17 @@ The Data Science department is currently building a framework for career advance
 
 **Leadership Track** - This track terminates at the level of Chief Data Officer and is designed to cultivate policy leaders that create and implement data-informed policy. Staff in this track are expected to master statistical concepts and advanced data analysis in excel, as well as intuition about how to create value for the organization and its stakeholders.
 
-A more detailed description of this pipeline can be found in [these slides](https://gitlab.com/ccao-data-science---modeling/people/training/-/blob/master/Documentation/Data%20Science%20Leadership%20Pipeline.pptx) and [this excel workbook](https://gitlab.com/ccao-data-science---modeling/people/training/-/blob/master/Documentation/Leadership%20Pipeline.xlsx).
+A more detailed description of this pipeline can be found in [these slides](https://gitlab.com/ccao-data-science---modeling/people/talent/-/blob/master/pipeline/Data%20Science%20Leadership%20Pipeline.pptx) and [this excel workbook](https://gitlab.com/ccao-data-science---modeling/people/talent/-/blob/master/pipeline/Leadership%20Pipeline.xlsx).
 
 ## Performance Review 
 
 The Data Science Department is committed to fostering the development of its members. We believe that 360 performance evaluation is necessary to foster the development of both employees and managers. Performance reviews are designed to help employees identify and eliminate barriers to their individual professional advancement. There are four components to the performance review process.
 
-Each employee's performance review will be coordinated using a GitLab issue populated from a [template](https://gitlab.com/ccao-data-science---modeling/people/employment/-/blob/master/.gitlab/issue_templates/ds-performance-evaluation.md). The title of the issue should be "Annual Performance Review: [Employee Name]." The due date should be two days after the scheduled performance review meeting.
+Each employee's performance review will be coordinated using a GitLab issue populated from a [template](https://gitlab.com/ccao-data-science---modeling/people/employment/-/tree/master/.gitlab/issue_templates). The title of the issue should be "Annual Performance Review: [Employee Name]." The due date should be two days after the scheduled performance review meeting.
 
 ### Self-evaluation
 
-Each employee should complete a [self-evaluation](https://gitlab.com/ccao-data-science---modeling/people/employment/-/blob/master/forms/360%20Evaluation%20-%20Employee%20Self%20Evaluation.docx) of their work performance prior to participating in a performance review meeting with their supervisor. The purpose of the self-evaluation is two-fold. First, it helps employees understand the framework under which they are being evaluated. Second, by comparing an employee's self-evaluation to their supervisor's evaluation, we can identify instances where the employee was unable to anticipate their supervisor's comments. The annual performance review should now be the first time an employee is made aware of issues. 
+Each employee should complete a [self-evaluation](https://gitlab.com/ccao-data-science---modeling/people/employment/-/blob/master/forms/performance-eval/360%20Evaluation%20-%20Employee%20Self%20Evaluation.docx) of their work performance prior to participating in a performance review meeting with their supervisor. The purpose of the self-evaluation is two-fold. First, it helps employees understand the framework under which they are being evaluated. Second, by comparing an employee's self-evaluation to their supervisor's evaluation, we can identify instances where the employee was unable to anticipate their supervisor's comments. The annual performance review should now be the first time an employee is made aware of issues. 
 
 Employees can choose not to share their self-evaluations with their supervisor.
 
@@ -83,7 +83,7 @@ Employees can choose not to share their self-evaluations with their supervisor.
 
 Each employee should complete a supervisor evaluation appropriate to the level of their supervisor. This evaluation will be shared with the supervisor and is designed to help managers identify areas of weakness in their management practices. Supervisor evaluations are specific to each supervisory level:
 
-* [Deputy](https://gitlab.com/ccao-data-science---modeling/people/employment/-/blob/master/forms/360%20Evaluation%20-%20Employee%20Evaluating%20Deputy.docx)
+* [Deputy](https://gitlab.com/ccao-data-science---modeling/people/employment/-/blob/master/forms/performance-eval/360%20Evaluation%20-%20Employee%20Evaluating%20Deputy.docx)
 * Director
 * Senior Data Scientist
  
@@ -91,7 +91,7 @@ Employees can choose not to share their supervisor-evaluations with their superv
 
 ### Peer Evaluation
 
-Employees can request [peer evaluations](https://gitlab.com/ccao-data-science---modeling/people/employment/-/blob/master/forms/360%20Evaluation%20-%20Employee%20Evaluating%20Deputy.docx) from another employee of the Cook County Assessor's Office. This peer cannot be in the supervisory chain for the employee, and must have worked with the employee on a significant project, or regularly as part of their assigned duties. Peer evaluations will be shared with both the employee and the supervisor. Supervisors cannot request peer evaluations for their employees.
+Employees can request [peer evaluations](https://gitlab.com/ccao-data-science---modeling/people/employment/-/blob/master/forms/performance-eval/360%20Evaluation%20-%20Employee%20Peer%20Evaluation.docx) from another employee of the Cook County Assessor's Office. This peer cannot be in the supervisory chain for the employee, and must have worked with the employee on a significant project, or regularly as part of their assigned duties. Peer evaluations will be shared with both the employee and the supervisor. Supervisors cannot request peer evaluations for their employees.
 
 ### Performance Evaluation Templates
 
@@ -99,12 +99,12 @@ Performance evaluations are a two-part process. First, the evaluator creates two
 
 The first issue ticket should be populated by the correct template, depending on the job title of the evaluator, and the Shakman exempt status of the evaluatee. The grid below indicates which template should be used.
 
-| Evaluator | Evaluatee | Template name |
+| Evaluator | Evaluatee | Template Name |
 | :---------| :---------|:--------------|
-| Deputy    | Shakman exempt | [Deputy evaluating Shakman exempt ](https://gitlab.com/ccao-data-science---modeling/people/employment/-/blob/master/.gitlab/issue_templates/ds-deputy_performance_eval_preparation_exempt.md) |
-| Deputy    | Shakman non-exempt | s-ds-deputy_performance_eval_preparation_non_exempt |
-| Non deputy    | Shakman exempt | TBD |
-| Non deputy    | Shakman non-exempt | TBD |
+| Deputy    | Shakman exempt | [Deputy evaluating Shakman exempt ](https://gitlab.com/ccao-data-science---modeling/people/employment/-/blob/master/.gitlab/issue_templates/deputy-performance-eval-preparation-exempt.md) |
+| Deputy    | Shakman non-exempt | [Deputy evaluating Shakman non-exempt](https://gitlab.com/ccao-data-science---modeling/people/employment/-/blob/master/.gitlab/issue_templates/deputy-performance-eval-preparation-non-exempt.md) |
+| Non deputy    | Shakman Exempt | TBD |
+| Non deputy    | Shakman Non-exempt | TBD |
 
 The supervisor and employee complete the performance evaluation process as outlined in the employee handbook.
 
