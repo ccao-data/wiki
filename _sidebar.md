@@ -38,7 +38,7 @@
 **Data Documentation**
 
  * [CCAO R Package Documentation](https://ccao-data-science---modeling.gitlab.io/packages/ccao/reference/)
- * [(Old) SQL Database Guide](Data/SQL Database Guide)
+ * [(DEPRECATED) SQL Database Guide](Data/SQL Database Guide)
  * [Property Class Definitions](Data/class-definitions.pdf)
  * [Township Definitions](Data/Townships)
  * [Appeal Reason Codes](https://prodassets.cookcountyassessor.com/s3fs-public/form_documents/reasoncodes.pdf)
