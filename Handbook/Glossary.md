@@ -2,10 +2,11 @@ The property assessment world is filled with lots of technical jargon that can m
 
 ## General
 
-##### Arm's Length Sale<sup>1</sup>
+##### Arm's Length Sale
 
 1. A sale between a willing buyer and a willing seller that are unrelated and are not acting under duress, abnormal pressure or undue influences.
 2. A sale between two unrelated parties, both seeking to maximize their positions from the transaction. 
+
 
 ##### Assessed Value (AV)
 
@@ -54,14 +55,6 @@ COD is a measure of horizontal equity and uniformity. The COD is the average per
 COD = \frac{\text{Average Absolute Deviation From Median Ratio}}{\text{Median Ratio}}*100
 ```
 
-##### Price Related Differential (PRD)
-
-PRD is a statistical measure of vertical equity in assessment. It is the mean prediction ratio divided by the sale-price weighted mean prediction [ratio](#sales-ratio).
-
-```math
-PRD = \frac{\text{Mean Sales Ratio}}{\Big(\sum{\text{Sales Ratio}_i}*w\Big)/n}*100
-```
-
 ##### Price Related Bias (PRB)
 
 PRB is a statistical measure of vertical equity. The statistic is obtained by running a linear regression:
@@ -72,6 +65,14 @@ PRB is a statistical measure of vertical equity. The statistic is obtained by ru
 
 The recovered coefficient $`\beta_1`$ is the PRB statistic.
 
+##### Price Related Differential (PRD)
+
+PRD is a statistical measure of vertical equity in assessment. It is the mean prediction ratio divided by the sale-price weighted mean prediction [ratio](#sales-ratio).
+
+```math
+PRD = \frac{\text{Mean Sales Ratio}}{\Big(\sum{\text{Sales Ratio}_i}*w\Big)/n}*100
+```
+
 ##### Sales Ratio
 
 The ratio of the assessor's estimated [Fair Cash Value](#fair-cash-value-fcv) in year $`t`$ to that property's sale price in period $`t \pm z`$:
@@ -80,7 +81,7 @@ The ratio of the assessor's estimated [Fair Cash Value](#fair-cash-value-fcv) in
 \text{Sales Ratio}_t = \frac{\text{Assessor's Estimated Fair Cash Value}_t}{\text{Sale Price}_{t \pm z}}
 ```
 
-The value of $`z`$ is governed by this standard (See 3.3.2.1 and 3.3.2.2).
+The value of $`z`$ is governed by the [CCAO's Sales Ratio Study SOP](/SOPs/Sales%20Ratio%20Studies) (See 3.3.2.1 and 3.3.2.2).
 
 ##### Sales Ratio Study
 
@@ -100,13 +101,54 @@ The range in which it is likely that an unknown parameter lies given an observed
 CI = \text{Mean} \pm \sigma / \sqrt n
 ```
 
-## CCAO-specific
+## CCAO/Cook County Specific
 
+##### Board of Review (BoR)
 
-## Commercial
+An independent office created by Illinois statute and governed by 3 commissioners who are elected to two or four-year terms. The Board of Review acts as a second round of assessment appeals (after the intial round of appeals processed by the CCAO).
 
+##### Assessment Review
+
+The review of an assessment placed on a property. The first place to appeal an assessment is at the Assessor’s Office; the second level of appeal is the [Board of Review (BOR)](#board-of-review-bor); the third avenue for appeal is the Property Tax Appeal Board (PTAB); the fourth is to file an objection in Circuit Court (only if filed at BOR).
+
+##### Equalization Factor
+
+A factor determined by the Illinois Department of Revenue (IDOR) each year to ensure an equal assessment among all 102 counties in the state. State statute requires that the aggregate value of assessments within each county must be equalized at $`33 \frac{1}{3}%` of the estimated [fair market value](#fair-market-value-fmv) of real property in the county. This factor is also known as the "multiplier." 
+
+##### Equalized Assessed Valuation (EAV)
+
+The [Assessed Value](#assessed-value) multiplied by the [Equalization Factor](#equalization-factor). The EAV is the value multiplied by a tax rate to calculate a property's tax bill.
+
+##### Partial Assessment
+
+An [assessed value](#assessed-value) that is less than a full assessed value, because
+
+1. Improvements were added but were not usable for the entire tax year, or
+2. The taxable status of the property changed during the tax year. 
+
+New construction, building demolition, or fire occurring during the taxable year are common triggers for a partial assessment.  
+
+##### Tax Base
+
+The total of all [assessed values](#assessed-value) of properties.
+
+##### Tax Incentives
+
+Incentives include exemptions, deferrals, abatements or tax credits. Incentives were established to stimulate a specific type of new growth for certain types of properties (i.e. affordable housing) or growth in areas of economic need.
+
+##### Tax Levy
+
+The amount in real estate taxes requested by each taxing body.
+
+##### Tax Rate
+
+The tax levy divided by the total of all equalized assessed values. This figure is compiled by the Cook County Clerk and applied to the [equalized assessed valuation](#equalized-assessed-value-eav) to determine the amount paid in property taxes.
+
+##### Taxing Body
+
+Units of governments that collect taxes to fund government services (the City of Chicago, Chicago Board of Education, Chicago Park District, County of Cook, and local school districts).
 
 ## Sources
 
-1. [IAAO Glossary](https://www.iaao.org/media/Pubs/IAAO_Glossary.pdf)
-2. [CCAO's Glossary](https://www.cookcountyassessor.com/glossary)
+* [IAAO Glossary](https://www.iaao.org/media/Pubs/IAAO_Glossary.pdf)
+* [CCAO Glossary](https://www.cookcountyassessor.com/glossary)
