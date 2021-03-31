@@ -249,7 +249,7 @@ A department within the CCAO responsible for:
 * Mailing, closing, and certifying assessed values
 * Processing appeals submitted to the CCAO
 * Validating data such as property characteristics, sales, and PIN divisions
-* Much more...
+* And many additional things
 
 <br>
 
