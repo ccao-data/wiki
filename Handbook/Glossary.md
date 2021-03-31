@@ -109,13 +109,30 @@ CI = \text{Mean} \pm \sigma / \sqrt n
 
 ## CCAO/Cook County Specific
 
+##### AS/400
+
+The machine used by the CCAO to communicate with the Cook County [Mainframe](#mainframe). Analysts interface with the AS/400 via an IBM System i terminal screen. Up until 2021, the AS/400 was the primary way analysts interacted with individual property records. The AS/400 has been effectively replaced by [iasWorld](#iasworld).
+
+##### Appeals Process
+
+See [Assessment Review](#assessment-review).
+
+##### Assessment Review
+
+The official review of an assessment placed on a property. Also known as the [Appeals Process](#appeals-process). Review can be up to four stages. Each stage can yield an adjustment in [Assessed Value](#assessed-value-av).
+
+1. Appeal an assessment at the Assessor’s Office
+2. Appeal at the [Board of Review (BOR)](#board-of-review-bor)
+3. Appeal to the [Property Tax Appeal Board (PTAB)](#property-tax-appeal-board-ptab)
+4. File an objection in Circuit Court (only if filed at BoR)
+
 ##### Board of Review (BoR)
 
 An independent office created by Illinois statute and governed by 3 commissioners who are elected to two or four-year terms. The Board of Review acts as a second round of assessment appeals (after the intial round of appeals processed by the CCAO).
 
-##### Assessment Review
+##### Bureau of Technology (BoT)
 
-The review of an assessment placed on a property. The first place to appeal an assessment is at the Assessor’s Office; the second level of appeal is the [Board of Review (BOR)](#board-of-review-bor); the third avenue for appeal is the Property Tax Appeal Board (PTAB); the fourth is to file an objection in Circuit Court (only if filed at BOR).
+The Cook County Bureau of Technology, an independent office that manages IT infrastructure, contracting, and setup. Responsbile for maintaining certain databases as well as the [AS/400](as-400).
 
 ##### Equalization Factor
 
@@ -124,6 +141,16 @@ A factor determined by the Illinois Department of Revenue (IDOR) each year to en
 ##### Equalized Assessed Valuation (EAV)
 
 The [Assessed Value](#assessed-value-av) multiplied by the [Equalization Factor](#equalization-factor). The EAV is the value multiplied by a tax rate to calculate a property's tax bill.
+
+##### iasWorld
+
+[Web portal link](https://iptsweb.ccounty.com/app/home#/dashboard) - Must be on CCAO network
+
+Property assessment and tax administration software produced by [Tyler Technologies](https://www.tylertech.com/products/iasworld). As of 2021, CCAO analysts use this software as their primary method of accessing individual property records. This system replaces the [AS/400](#as400) and will eventually replace the [Mainframe](#mainframe).
+
+##### Mainframe
+
+Cook County's system of record for property taxes and assessments. Shared between the Assessor, Clerk, and Treasurer. Originally installed in the 1980s. Still in use for the calculation of tax bills, but likely to be deprecated in the next few years.
 
 ##### Partial Assessment
 
@@ -153,6 +180,12 @@ The tax levy divided by the total of all equalized assessed values. This figure 
 ##### Taxing Body
 
 Units of governments that collect taxes to fund government services (the City of Chicago, Chicago Board of Education, Chicago Park District, County of Cook, and local school districts).
+
+##### Tax Increment Financing (TIF)
+
+A TIF is a special property tax district for a specific geographic area. TIFs are designed to encourage local development, fund specific projects, and help blighted areas. They work by effectively freezing the [Tax Base](#tax-base) of the TIF area, then funneling any additional tax revenues to a dedicated fund. TIFs expire after 23 years.
+
+See [City of Chicago resources on TIFs](https://www.chicago.gov/city/en/depts/dcd/provdrs/tif.html).
 
 ## Sources
 
