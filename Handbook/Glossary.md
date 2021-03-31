@@ -41,11 +41,13 @@ Also known as 'Selective Appraisal,' sales chasing is the practice of changing a
 
 ##### Assessment Ratio
 
-The ratio of a certified assessment to the assessor's estimated [Fair Cash Value](#fair-cash-value-fcv) in period $`t`$:
+The ratio of the assessors's estimated [Assessed Value](#assessed-value-av) to the property's sale price in the same period $`t`$:
 
 ```math
-\text{Assessment Ratio}_t = \frac{\text{Assessment}_t}{\text{Sale Price}_{t \pm z}}
+\text{Assessment Ratio}_t = \frac{\text{Assessor's Estimated Assessed Value}_t}{\text{Sale Price}_{t}}
 ```
+
+:warning: NOTE: The CCAO typically uses lagged/leading sales when calculating sales/assessment ratios. See the [Sales Ratio Study SOP](/SOPs/Sales%20Ratio%20Studies) for more details.
 
 ##### Coefficient of Dispersion (COD)
 
@@ -54,6 +56,10 @@ COD is a measure of horizontal equity and uniformity. The COD is the average per
 ```math
 COD = \frac{\text{Average Absolute Deviation From Median Ratio}}{\text{Median Ratio}}*100
 ```
+
+##### Prediction Ratio
+
+See [Sales Ratio](#sales-ratio).
 
 ##### Price Related Bias (PRB)
 
@@ -67,7 +73,7 @@ The recovered coefficient $`\beta_1`$ is the PRB statistic.
 
 ##### Price Related Differential (PRD)
 
-PRD is a statistical measure of vertical equity in assessment. It is the mean prediction ratio divided by the sale-price weighted mean prediction [ratio](#sales-ratio).
+PRD is a statistical measure of vertical equity in assessment. It is the mean prediction ratio divided by the sale-price weighted mean prediction ratio.
 
 ```math
 PRD = \frac{\text{Mean Sales Ratio}}{\Big(\sum{\text{Sales Ratio}_i}*w\Big)/n}*100
@@ -75,13 +81,13 @@ PRD = \frac{\text{Mean Sales Ratio}}{\Big(\sum{\text{Sales Ratio}_i}*w\Big)/n}*1
 
 ##### Sales Ratio
 
-The ratio of the assessor's estimated [Fair Cash Value](#fair-cash-value-fcv) in year $`t`$ to that property's sale price in period $`t \pm z`$:
+The ratio of the assessor's estimated [Fair Cash Value](#fair-cash-value-fcv) to the property's sale price in period $`t`$:
 
 ```math
-\text{Sales Ratio}_t = \frac{\text{Assessor's Estimated Fair Cash Value}_t}{\text{Sale Price}_{t \pm z}}
+\text{Sales Ratio}_t = \frac{\text{Assessor's Estimated Fair Cash Value}_{t}}{\text{Sale Price}_{t}}
 ```
 
-The value of $`z`$ is governed by the [CCAO's Sales Ratio Study SOP](/SOPs/Sales%20Ratio%20Studies) (See 3.3.2.1 and 3.3.2.2).
+:warning: NOTE: The CCAO typically uses lagged/leading sales when calculating sales/assessment ratios. See the [Sales Ratio Study SOP](/SOPs/Sales%20Ratio%20Studies) for more details.
 
 ##### Sales Ratio Study
 
@@ -113,7 +119,7 @@ The review of an assessment placed on a property. The first place to appeal an a
 
 ##### Equalization Factor
 
-A factor determined by the Illinois Department of Revenue (IDOR) each year to ensure an equal assessment among all 102 counties in the state. State statute requires that the aggregate value of assessments within each county must be equalized at $`33 \frac{1}{3}%`$ of the estimated [fair market value](#fair-market-value-fmv) of real property in the county. This factor is also known as the "multiplier." 
+A factor determined by the Illinois Department of Revenue (IDOR) each year to ensure an equal assessment among all 102 counties in the state. State statute requires that the aggregate value of assessments within each county must be equalized at $`33 \frac{1}{3}\%`$ of the estimated [Fair Market Value](#fair-market-value-fmv) of real property in the county. This factor is also known as the "multiplier." 
 
 ##### Equalized Assessed Valuation (EAV)
 
@@ -130,7 +136,7 @@ New construction, building demolition, or fire occurring during the taxable year
 
 ##### Tax Base
 
-The total of all [Assessed Values](#assessed-value-av) of properties.
+The total [Assessed Value](#assessed-value-av) of all properties. Sometimes broken out by area i.e the tax base of Rogers Park, which refers to the sum of all property [AVs](#assessed-value-av) in that town. 
 
 ##### Tax Incentives
 
@@ -138,7 +144,7 @@ Incentives include exemptions, deferrals, abatements or tax credits. Incentives 
 
 ##### Tax Levy
 
-The amount in real estate taxes requested by each taxing body.
+The amount in real estate taxes requested by each [taxing body](#taxing-body). 
 
 ##### Tax Rate
 
