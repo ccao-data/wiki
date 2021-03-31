@@ -2,7 +2,7 @@ The property assessment world is filled with lots of technical jargon that can m
 
 ## General
 
-##### Arm's Length Sale
+##### Arm's Length Sale<sup>1</sup>
 
 1. A sale between a willing buyer and a willing seller that are unrelated and are not acting under duress, abnormal pressure or undue influences.
 2. A sale between two unrelated parties, both seeking to maximize their positions from the transaction. 
@@ -106,4 +106,7 @@ CI = \text{Mean} \pm \sigma / \sqrt n
 ## Commercial
 
 
-Adopted from the official [IAAO Glossary](https://www.iaao.org/media/Pubs/IAAO_Glossary.pdf).
+## Sources
+
+1. [IAAO Glossary](https://www.iaao.org/media/Pubs/IAAO_Glossary.pdf)
+2. [CCAO's Glossary](https://www.cookcountyassessor.com/glossary)
