@@ -11,8 +11,8 @@ The property assessment world is filled with lots of technical jargon that can m
 
 The value set by the CCAO for the purpose of computing property taxes. In some jurisdictions, assessed value is equal to [Fair Cash Value](#fair-cash-value-fcv). In Cook County, assessed value is:
 
-   - 10% of fair cash value for [residential properties](#residential-property) (all class 200 properties, including condominiums)
-   - 25% of fair cash value for commercial properties (all class 500 properties) 
+   - 10% of [Fair Cash Value](#fair-cash-value-fcv) for [residential properties](#residential-property) (all class 200 properties, including condominiums)
+   - 25% of [Fair Cash Value](#fair-cash-value-fcv) for commercial properties (all class 500 properties) 
 
 These percentage multipliers are known as Assessment Levels.
 
@@ -138,9 +138,9 @@ The official review of an assessment placed on a property. Also known as [Assess
 The Cook County assessment cycle occurs in four primary stages:
 
 1. **Initial Values AKA Model Values:** These are the raw output from the [AVMs](#automated-valuation-model-avm).
-  * Desk Review: Initial values go through a review process to look for modeling errors, characteristic errors, and other anomalies. See [Desk Review](#desk-review) for more information.
-    - Model values are exported to Excel for review by class/neighborhood.
-    - Model values are uploaded to [iasWorld](#iasworld). Individual property prediction errors are corrected in iasWorld.
+   * Desk Review: Initial values go through a review process to look for modeling errors, characteristic errors, and other anomalies. See [Desk Review](#desk-review) for more information.
+     - Model values are exported to Excel for review by class/neighborhood.
+     - Model values are uploaded to [iasWorld](#iasworld). Individual property prediction errors are corrected in iasWorld.
 2. **Mailed Values AKA First Pass:** These are the values that are actually mailed to taxpayers.
 3. **Assessor Certified AKA Second Pass:** These are the first pass values after appeals. Values are considered Assessor Certified once the appeal window for a town has closed.
 4. **Board Certified AKA Final Values:** These are the final values after both CCAO and [BoR](#board-of-review-bor) appeals. Values are Board Certified after the [BoR's](#board-of-review-bor) appeal window has closed.
