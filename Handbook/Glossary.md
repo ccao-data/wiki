@@ -113,15 +113,15 @@ The review of an assessment placed on a property. The first place to appeal an a
 
 ##### Equalization Factor
 
-A factor determined by the Illinois Department of Revenue (IDOR) each year to ensure an equal assessment among all 102 counties in the state. State statute requires that the aggregate value of assessments within each county must be equalized at $`33 \frac{1}{3}%` of the estimated [fair market value](#fair-market-value-fmv) of real property in the county. This factor is also known as the "multiplier." 
+A factor determined by the Illinois Department of Revenue (IDOR) each year to ensure an equal assessment among all 102 counties in the state. State statute requires that the aggregate value of assessments within each county must be equalized at $`33 \frac{1}{3}%`$ of the estimated [fair market value](#fair-market-value-fmv) of real property in the county. This factor is also known as the "multiplier." 
 
 ##### Equalized Assessed Valuation (EAV)
 
-The [Assessed Value](#assessed-value) multiplied by the [Equalization Factor](#equalization-factor). The EAV is the value multiplied by a tax rate to calculate a property's tax bill.
+The [Assessed Value](#assessed-value-av) multiplied by the [Equalization Factor](#equalization-factor). The EAV is the value multiplied by a tax rate to calculate a property's tax bill.
 
 ##### Partial Assessment
 
-An [assessed value](#assessed-value) that is less than a full assessed value, because
+An [Assessed Value](#assessed-value-av) that is less than a full assessed value, because
 
 1. Improvements were added but were not usable for the entire tax year, or
 2. The taxable status of the property changed during the tax year. 
@@ -130,7 +130,7 @@ New construction, building demolition, or fire occurring during the taxable year
 
 ##### Tax Base
 
-The total of all [assessed values](#assessed-value) of properties.
+The total of all [Assessed Values](#assessed-value-av) of properties.
 
 ##### Tax Incentives
 
