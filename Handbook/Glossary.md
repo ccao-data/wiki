@@ -1,6 +1,6 @@
 The property assessment world is filled with lots of technical jargon that can make things confusing, even for veteran employees. This glossary of terms should clarify some of the confusion. Terms are listed by section in alphabetical order. If you have questions about a term or think something is omitted, please ping @dfsnow.
 
-### General
+## General
 
 **Arm's Length Sale:** (1) A sale between a willing buyer and a willing seller that are unrelated and are not acting under duress, abnormal pressure or undue influences. (2) A sale between two unrelated parties, both seeking to maximize their positions from the transaction. 
 
@@ -15,13 +15,13 @@ The property assessment world is filled with lots of technical jargon that can m
 
 **Residential Property:** A property valued solely on the market valuation standard that is used, or intended to be used, for a residential purposes. This includes:
 
-    * Residential condominiums
-    * Property with up to seven self-contained dwelling units
-    * Vacant and marginally improved land used, or intended to be used, in conjunction with a residential property
+ * Residential condominiums
+ * Property with up to seven self-contained dwelling units
+ * Vacant and marginally improved land used, or intended to be used, in conjunction with a residential property
 
 **Sales Chasing:** 'Sales Chasing,' also known as 'Selective Appraisal,' is the practice of changing a property's assessed value in response to a recent sale.
 
-### Sales Ratio Studies
+## Sales Ratio Studies
 
 **Assessment Ratio:** The ratio of a certified assessment to the assessor's estimated Fair Cash Value in period $`t`$:
 
@@ -59,7 +59,7 @@ The value of $`z`$ is governed by this standard (See 3.3.2.1 and 3.3.2.2).
 
 **Sales Ratio Study:** A statistical analysis to evaluate the quality of assessments with respect to accuracy, uniformity, and vertical equity.
 
-### Statistics
+## Statistics
 
 **Bootstrapped Standard Deviation:** The standard deviation of 100 or more calculations of the same statistic, with each calculation based on a random sample of the overall population.
 
@@ -69,10 +69,10 @@ The value of $`z`$ is governed by this standard (See 3.3.2.1 and 3.3.2.2).
 CI = \text{Mean} \pm \sigma / \sqrt n
 ```
 
-### CCAO-specific
+## CCAO-specific
 
 
-### Commercial
+## Commercial
 
 
-* Adopted from the official [IAAO Glossary](https://www.iaao.org/media/Pubs/IAAO_Glossary.pdf).
+Adopted from the official [IAAO Glossary](https://www.iaao.org/media/Pubs/IAAO_Glossary.pdf).
