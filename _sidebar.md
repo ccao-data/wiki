@@ -23,7 +23,6 @@
  * [Single and Multi-Family Residential Model](https://gitlab.com/ccao-data-science---modeling/models/ccao_res_avm)
  * [Condominium Model](https://gitlab.com/ccao-data-science---modeling/models/ccao_condo_avm)
  * [Residential Exemptions](Residential/Residential Exemptions)
- * [Model Evaluation Standards](Residential/Model Evaluation)
  * [Home Improvement Exemptions (288s)](Residential/Home Improvement Exemptions)
 
 **Commercial and RPIE**
