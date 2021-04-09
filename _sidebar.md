@@ -37,6 +37,7 @@
 
 **Data Documentation**
 
+ * [AssessR R Package Documentation](https://ccao-data-science---modeling.gitlab.io/packages/assessr/reference/)
  * [CCAO R Package Documentation](https://ccao-data-science---modeling.gitlab.io/packages/ccao/reference/)
  * [(DEPRECATED) SQL Database Guide](Data/SQL Database Guide)
  * [Property Class Definitions](Data/class-definitions.pdf)
