@@ -147,8 +147,9 @@ Useful materials that give an overview of Cook County's property tax system and 
 
 ## Spatial Data
 
+- [:star: R-Spatial Spatial Data Science Book](www.r-spatial.org/book) - Extremely thorough, brand-new book on spatial data in R. Also covers general GIS concepts like reference systems, geometry types, etc.
 - [:star: CSDS Spatial Data Tutorials](https://spatialanalysis.github.io/tutorials/) - List of tutorials for manipulating spatial data in R, created by UChicago's Center for Spatial Data Science
-- [:star: Simple Features for R](https://r-spatial.github.io/sf/articles/sf1.html) - Long vignette on R's `sf` library, its design, and how to use it
+- [Simple Features for R](https://r-spatial.github.io/sf/articles/sf1.html) - Long vignette on R's `sf` library, its design, and how to use it
 - [Geofabrik](https://download.geofabrik.de/) - Data extracts from the entire OpenStreetMap (OSM) database. Useful for calculating distances
 - [Osmium Tool](https://osmcode.org/osmium-tool/manual.html) - Tool for manipulating and filtering OSM data. Requires using a command line
 - [Geocomputation in R](https://geocompr.robinlovelace.net/intro.html) - Free book covering lots of geospatial munging in R
