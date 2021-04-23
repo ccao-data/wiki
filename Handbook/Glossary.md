@@ -20,6 +20,10 @@ These percentage multipliers are known as Assessment Levels.
 
 A mathematical model which produces estimates of property market value based on location, time, characteristics, etc. of properties. The distinguishing feature of an AVM is that it is a market appraisal produced through mathematical modeling. Credibility of an AVM is dependent on the data used and the skills of the modeler producing the AVM.
 
+#### Class
+
+Groupings of properties defined by use and physical characteristics. Different classes are subject to different [assessment levels](#assessed-value-av).
+
 #### Computer-Assisted Mass Appraisal (CAMA)
 
 See [AVM](#automated-valuation-model-avm).
@@ -32,9 +36,17 @@ The amount for which a property can be sold in the due course of business and tr
 
 Identical to [Fair Cash Value](#fair-cash-value-fcv). These terms are used interchangeably at the CCAO. 
 
+#### Exemption
+
+Removal  of  property  from  the  tax  base;  may  be  a  partial  (a  homestead) or complete (church building used exclusively for religious use) 
+
 #### IAAO
 
 The [International Association of Assessing Officers](https://www.iaao.org/). The IAAO (pronounced I double-A O) is the professional organization for assessors. It offers training, standards, and resources related to the process of assessment. It hosts an annual conference that many members of the CCAO attend.
+
+#### Property Index Number (PIN)
+
+A brief legal description of a particular parcel by numerical reference to parcels on assessment maps.  It is a fourteen-digit number.  The first two digits refer to the geographical township; the second two, to the section in which the parcel is located; the next three, to the block number; the next three digits identify the parcel within the block; the last four digits identify parcel subunits such as condos.
 
 #### Residential Property
 
@@ -145,7 +157,7 @@ The Cook County assessment cycle occurs in four primary stages:
 
 1. **Initial Values AKA Model Values:** These are the raw output from the [AVMs](#automated-valuation-model-avm).
    * Desk Review: Initial values go through a review process to look for modeling errors, characteristic errors, and other anomalies. See [Desk Review](#desk-review) for more information.
-     - Model values are exported to Excel for review by class/neighborhood.
+     - Model values are exported to Excel for review by [class](#class)/neighborhood.
      - Model values are uploaded to [iasWorld](#iasworld). Individual property prediction errors are corrected in iasWorld.
 2. **Mailed Values AKA First Pass:** These are the values that are actually mailed to taxpayers.
 3. **Assessor Certified AKA Second Pass:** These are the first pass values after appeals. Values are considered Assessor Certified once the appeal window for a town has closed.
@@ -165,7 +177,7 @@ The Cook County Bureau of Technology, an independent office that manages IT infr
 
 #### Certificate of Error (CofE)
 
-A way to apply changes to a property tax bill that has already been issued (the assessment is finalized). These are mostly (but not only) used to correct for missing exemptions.
+A way to apply changes to a property tax bill that has already been issued (the assessment is finalized). These are mostly (but not only) used to correct for missing [exemptions](#exemption).
 
 #### Certified Illinois Assessing Officer (CIAO)
 
@@ -216,7 +228,7 @@ The total [Assessed Value](#assessed-value-av) of all properties. Sometimes brok
 
 #### Tax Incentives
 
-Incentives include exemptions, deferrals, abatements or tax credits. Incentives were established to stimulate a specific type of new growth for certain types of properties (i.e. affordable housing) or growth in areas of economic need.
+Incentives include [exemptions](#exemption), deferrals, abatements or tax credits. Incentives were established to stimulate a specific type of new growth for certain types of properties (i.e. affordable housing) or growth in areas of economic need.
 
 #### Tax Increment Financing (TIF)
 
@@ -238,7 +250,7 @@ Units of governments that collect taxes to fund government services (the City of
 
 #### Taxpayer Information Services (TPI)
 
-A department within the CCAO responsible for interfacing with the public. TPI helps guide taxpayers through the appeals process, provides information about exemptions, etc. They are located on the 3rd floor of City Hall.
+A department within the CCAO responsible for interfacing with the public. TPI helps guide taxpayers through the appeals process, provides information about [exemptions](#exemption), etc. They are located on the 3rd floor of City Hall.
 
 #### Valuations
 
@@ -248,7 +260,7 @@ A department within the CCAO responsible for:
 * Reviewing initial model values from Data Science
 * Mailing, closing, and certifying assessed values
 * Processing appeals submitted to the CCAO
-* Validating data such as property characteristics, sales, and PIN divisions
+* Validating data such as property characteristics, sales, and [PIN](#property-index-number-pin) divisions
 * And many additional things
 
 <br>
