@@ -10,7 +10,7 @@ Note that 288s apply only to residential properties, excluding condominiums.
 
 Per Illinois statute, 288s expire after 4 years or until the next assessment cycle, whichever is longer. Since Cook County reassessments occur every 3 years, 288s can be active for up to 6 years. For example, a 288 activated in 2015 for a property in West Chicago (with assessment years 2015, 2018, and 2021) will last 6 years (until 2021, the next reassessment year). Visually, this looks like Option C below:
 
-![](Residential/Exemptions/288-timeline.png)
+![](/Residential/Exemptions/288-timeline.png)
 
 #### Data Model
 
