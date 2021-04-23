@@ -43,3 +43,4 @@
  * [Township Definitions](Data/Townships)
  * [Appeal Reason Codes](https://prodassets.cookcountyassessor.com/s3fs-public/form_documents/reasoncodes.pdf)
  * [CDU Codes](Data/CDU Codes)
+ * [Accessing Oracle Database Through R](Data/Accessing Oracle Database Through R)
