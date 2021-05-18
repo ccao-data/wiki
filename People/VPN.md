@@ -1,6 +1,6 @@
-Various CCAO services are only available while connected the CCAO's network using Cisco AnyConnect Secure Mobility Client&trade;.  Below is a list of services employees may need to use and whether or not they'll need to be connected to the VPN in order to use those services.
+Various CCAO services are only available while connected the CCAO's network using Cisco AnyConnect Secure Mobility Client&trade;. Below is a list of services employees may need to use and whether or not they'll need to be connected to the VPN in order to use those services.
 
-| Service | VPN |
+| Service | VPN Required |
 | ------- |:---:|
 | Web Clock | Sometimes Yes, Sometimes No :shrug: |
 | Intranet | ***Must*** be Connected |
