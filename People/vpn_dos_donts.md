@@ -3,6 +3,7 @@ Various CCAO services are only available while connected the CCAO's network usin
 | Service | VPN |
 |:------- |:---:|
 | Web Clock | Sometimes Yes, Sometimes No :shrug: |
-| SQL Servers | **Must** be Connected |
-| OneDrive | **Cannot** be Connected |
+| SQL Servers | ***Must*** be Connected |
+| OneDrive | ***Cannot*** be Connected |
 | Teams | Connection Agnostic |
+| Cook Viewer | ***Cannot*** be Connected |
