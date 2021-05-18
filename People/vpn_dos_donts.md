@@ -3,8 +3,10 @@ Various CCAO services are only available while connected the CCAO's network usin
 | Service | VPN |
 |:------- |:---:|
 | Web Clock | Sometimes Yes, Sometimes No :shrug: |
+| Intranet | ***Must*** be Connected |
 | Access SQL Servers | ***Must*** be Connected |
 | Access Shared Drives | ***Must*** be Connected |
+| Access Shiny Server | ***Must*** be Connected |
 | OneDrive | ***Cannot*** be Connected |
 | Teams | Connection Agnostic |
 | Outlook | Connection Agnostic |
