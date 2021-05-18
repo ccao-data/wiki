@@ -7,6 +7,7 @@ Various CCAO services are only available while connected the CCAO's network usin
 | Access Shared Drives | ***Must*** be Connected |
 | OneDrive | ***Cannot*** be Connected |
 | Teams | Connection Agnostic |
+| Outlook | Connection Agnostic |
 | Webmail (from home) | Connection Agnostic |
 | Webmail (from guest network @ CCAO) | ***Cannot*** be Connected |
 | Cook Viewer | ***Cannot*** be Connected |
