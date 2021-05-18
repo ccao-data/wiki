@@ -5,4 +5,4 @@ Various CCAO services are only available while connected the CCAO's network usin
 | Web Clock | Sometimes Yes, Sometimes No :shrug: |
 | SQL Servers | **Must** be Connected |
 | OneDrive | **Cannot** be Connected |
-| SQL Servers | Must be Connected |
+| Teams | Connection Agnostic |
