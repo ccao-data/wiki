@@ -7,6 +7,7 @@ Various CCAO services are only available while connected the CCAO's network usin
 | Access SQL Servers | ***Must*** be Connected |
 | Access Shared Drives | ***Must*** be Connected |
 | Access Shiny Server | ***Must*** be Connected |
+| iasWorld | ***Must*** be Connected |
 | OneDrive | ***Cannot*** be Connected |
 | Teams | Connection Agnostic |
 | Outlook | Connection Agnostic |
