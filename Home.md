@@ -9,6 +9,7 @@
 
  * [Onboarding](People/Onboarding)
  * [External Developer Engagement Program](People/Contributing)
+ * [VPN Dos and Don'ts](People/VPN)
 
 ### Standard Operating Procedures (SOPs)
 
