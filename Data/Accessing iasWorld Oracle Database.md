@@ -29,7 +29,7 @@ You can connect to the mirror database through R using the RJDBC package. To do 
 # Load necessary packages
 library(RJDBC)
 
-# Establish connection object, the drv points to the locally stored
+# Establish connection object, the drv parameter points to the locally stored
 # Oracle JDBC driver from step 2. You can get it here:
 # https://www.oracle.com/database/technologies/appdev/jdbc-ucp-21-1-c-downloads.html
 IASWORLD <- dbConnect(
