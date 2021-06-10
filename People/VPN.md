@@ -4,10 +4,12 @@ Various CCAO services are only available while connected the CCAO's network usin
 | ------- |:---:|
 | Web Clock | Sometimes Yes, Sometimes No :shrug: |
 | Intranet | ***Must*** be Connected |
-| Access SQL Servers | ***Must*** be Connected |
+| Access SQL Server | ***Must*** be Connected |
+| Access iasWorld Backend | ***Must*** be Connected |
 | Access Shared Drives | ***Must*** be Connected |
 | Access Shiny Server | ***Must*** be Connected |
-| iasWorld | ***Must*** be Connected |
+| Access RStudio Server | ***Must*** be Connected |
+| iasWorld Frontend | ***Must*** be Connected |
 | OneDrive | ***Cannot*** be Connected |
 | Teams | Connection Agnostic |
 | Outlook | Connection Agnostic |

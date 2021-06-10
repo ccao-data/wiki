@@ -11,7 +11,8 @@ Resources, notes, and helpful links used by the Data Science Department. Organiz
 - [:exclamation: CCT](https://www.cookcountyil.gov/cct) - Cook County Time and Attendance, the web-based portal for tracking hours, time-off, etc.
 - [:exclamation: Data Science Teams Channel](https://teams.microsoft.com/l/channel/19%3aa574fd1291b74be298d074c134226689%40thread.tacv2/General?groupId=c8f82972-b5a7-44c0-a00c-ba395f96c6e2&tenantId=d8c4abe1-1869-4ec9-ad1d-19767c494954) - Private teams channel for the Data Science department. Ask or [email](mailto:wridgeway@cookcountyassessor) @sweatyhandshake for an invite
 - [Employee Self-Service (ESS)](https://ccgprod.cookcountyil.gov/) - Benefits enrollment and tracking
-- [Data Science Application Server](https://datascience.cookcountyassessor.com/) - Shiny server that launches CCAO Shiny applications. Login with Windows credentials. **Must be connected to the VPN to access**. May throw a security warning when you first visit. This warning can safely be ignored. Click **Advanced --> Accept the risk** to bypass the warning.
+- [Data Science Application Server](https://datascience.cookcountyassessor.com/shiny) - Shiny server that launches CCAO Shiny applications. Login with Windows credentials. **Must be connected to the VPN to access**. May throw a security warning when you first visit. This warning can safely be ignored. Click **Advanced --> Accept the risk** to bypass the warning.
+- [RStudio Server](https://datascience.cookcountyassessor.com/rstudio) - Internal instance of [RStudio](https://www.rstudio.com/products/rstudio/download-server/) accessible via a webpage. Useful for compute-heavy jobs and interns. If needed, ask @dfsnow to make you an account.
 
 ##### External Links
 
