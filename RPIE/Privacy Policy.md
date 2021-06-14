@@ -225,16 +225,14 @@ Internal Diagnostics and Reporting
 ----------------------------------
 
 Data collected *via* RPIE Online Form filings is aggregated, anonymized,
-and combined with other data sets to produce internal diagnostic
-reports. These reports provide the Assessor and his staff with
-information about the integrity and accuracy of assessments, appeals
-results, RPIE Online Form participation rates, and other matters
-directly related to the valuation of income-producing properties.
+and combined with other data sets to produce internal reports. 
+These reports provide the Assessor and the office with
+information directly related to the valuation of income-producing properties.
 
 External Reporting
 ------------------
 
-Data collected *via* RPIE Online Form filings is aggregated, anonymized,
+Data collected *via* RPIE Online Form filings may be aggregated, anonymized,
 and combined with other data sets to produce external reports. These
 reports will provide the public, elected officials, journalists, and
 others with information about the assessment process and its results in
@@ -294,9 +292,7 @@ Contacting the CCAO about Your Privacy
 --------------------------------------
 
 If you have questions or concerns about the way we are handling your
-information, please email us with the subject line “Privacy Concern” at
-<RPIEprivacy@cookcountyassessor.com> . We will respond within 30 days of
-receiving your message.
+information, please email us at [RPIEsupport@cookcountyassessor.com](mailto:RPIEsupport@cookcountyassessor.com). 
 
 Privacy Disclosure Policy Changes
 ---------------------------------
@@ -313,5 +309,5 @@ check this page frequently for any changes to this PDS. Your continued
 use of the RPIE Online Form after any change in this PDS constitutes
 your acceptance of such change.
 
-The entire history of this privacy statment can be viewed
+The entire history of this privacy statement can be viewed
 [here.](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content/-/commits/master/RPIE/Privacy%20Policy.md)
