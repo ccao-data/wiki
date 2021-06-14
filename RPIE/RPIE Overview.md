@@ -1,10 +1,10 @@
 # What is the Real Property Income and Expense Online Form?
 
-Commercial real estate is diverse, and the attributes of each property are unique. When estimating the value of commercial real estate, experts need to be aware of those attributes. Historically, these details have been difficult to find or access, making property appraisal an opaque and labor-intensive task. In both the public and private sectors, there is a trend towards a standardized, data-driven approach to property appraisal (see, for example, the [Uniform Residential Appraisal Form](https://sf.freddiemac.com/general/uad-faq#new-uad-and-forms-redesign)). At minimum, standardization will increase transparency and improve efficiency.
+Commercial real estate is diverse, and the attributes of each property are unique. When estimating the value of commercial real estate assets, experts need to be aware of those attributes. Historically, these details have been difficult to find or access, making property appraisal an opaque and labor-intensive task. In both the public and private sectors, there is a trend towards a standardized, data-driven approach to property appraisal (see, for example, the [Uniform Residential Appraisal Form](https://sf.freddiemac.com/general/uad-faq#new-uad-and-forms-redesign)). At minimum, standardization will increase transparency and improve efficiency.
 
-Increased transparency and improved efficiency in property appraisals are vital to the success of the Cook County Assessor’s Office. Every three years, the CCAO estimates the value of every commercial property in the County. This is a unique challenge compared to private sector appraisers.The CCAO is almost unique both in terms of the number of estimates it must produce, as well as the information scarcity it faces. In order to meet these challenges, the CCAO needed an innovative data platform to gather and organise information. The Real Property Income and Expense Online Form (RPIE, pronounced 'R pie', like the dessert) is designed to collect and maintain the data required to accuratly and fairly assess commercial property.
+Increased transparency and improved efficiency in property appraisals are vital to the success of the Cook County Assessor’s Office. Every three years, the CCAO estimates the value of every commercial property in the County. This is a unique challenge compared to private sector appraisers.The CCAO is almost unique both in terms of the number of estimates it must produce, as well as the information scarcity it faces. In order to meet these challenges, the CCAO needed an innovative data platform to gather and organize information. The Real Property Income and Expense Online Form (RPIE, pronounced 'R pie', like the dessert) is designed to collect and maintain the data required to accurately and fairly assess commercial property.
 
-RPIE serves two primary purposes. First, RPIE is designed to build and maintain a complete inventory of commercial real estate assets in Cook County. In order to accuratly estimated the value of *every single* commercial property in the County, the CCAO needs a highly detailed inventory of all of that real estate. That inventory needs to be stored in a structured data base so that it can be easily accessed and leveraged to estimate real estate values. 
+RPIE serves two primary purposes. First, RPIE is designed to build and maintain a complete inventory of commercial real estate assets in Cook County. In order to accurately estimate the value of *every single* commercial property in the County, the CCAO needs a highly detailed inventory of all of that real estate. That inventory needs to be stored in a structured data base so that it can be easily accessed and leveraged to estimate real estate values. 
 
 Second, RPIE is designed to collect a sufficient amount of financial and economic data to be able to estimate the value of commercial real estate assets with a reasonable level of precision and accuracy. RPIE is designed to collect data in such a structured way as to be useful in automated valuation models. Primarily, this data includes income and expense data, and lease data. 
 
@@ -12,7 +12,12 @@ Fundamentally, the RPIE Online Form is not a form at all; it is a crowd-sourced 
 
 # Current uses of RPIE data
 
-Primarily, RPIE data is used to power an automated valuation model for commercial apartments. [See the repository for more details.](https://gitlab.com/ccao-data-science---modeling/models/commercial-apartments-automated-valuation-model)
+Our valuations team uses RPIE data in multiple ways to support the accurate revaluation of commercial properties, including:
+
+* Conducting market research on average rents, incomes, and vacancies in neighborhoods.
+
+* Verifying property-specific information, such as whether it was recently in a ramp-up period.
+
 
 # Agile, not half-baked: The evolution of RPIE
 
@@ -82,7 +87,7 @@ To create a form usable to humans, we needed a thorough understanding of the que
      width="1000" height="600"
      style="float: right; margin-right: 10px;" />
 
-In order to make these steps clear and understandable, we then needed to put ourselves in our users’ shoes. Using Kraft paper, scissors, and tape, we walked through the workflow. We asked ourselves questions like: 
+In order to make these steps clear and understandable, we then needed to put ourselves in our users’ shoes. Using paper, scissors, and tape, we walked through the workflow. We asked ourselves questions like: 
 
 * As a user, what information do I need to get a sense of this process?
 * As a user, what is the minimal amount of information I need to share to proceed in the process? 
@@ -106,11 +111,11 @@ We then translated our work into a preliminary set of wireframes, which were use
 
 If cinema has taught us anything, it's that all Apple pies cooling in windows are targets of petty theft. What would stop a malicious actor from filing thousands of erroneous RPIE filings? PINs and addresses are public information, posted online. It would be a simple task to create a program that files millions of erroneous RPIE filings with bogus data. That would create a real headache for our data science team.
 
-To secure RPIE, we generated random codes that we mailed to taxpayers directly. Users can only create accounts and filings by entering the correct RPIE <> Code combination. While this does not entirely eliminate the possibility of an erroneous filing, it eliminates the type of programatic attack that RPIE is most exposed to.
+To secure RPIE, we generated random codes and mailed them to taxpayers directly. Users can only create accounts and filings by entering the correct RPIE <> Code combination. While this does not entirely eliminate the possibility of an erroneous filing, it eliminates the type of programmatic attack that RPIE is most exposed to.
 
 ### Documentation and privacy
 
-Justin is writing this part
+The CCAO's Data Science and Legal teams developed a privacy policy, available [here.](https://rpie.cookcountyassessor.com/privacy-policy)
 
 ## From proof to bake: RPIE Version 2 expansion
 
@@ -134,7 +139,7 @@ Templates for these forms can be found [here](templates/rpie-ie-templates.xlsx).
 
 ### User experience
 
-For RPIE V2, the user experience needed to be different based on the user's 'type'. For example, users voluntarily filing an RPIE statement may not be required to submit income and expense information, but users filing an RPIE in support of an appeal would be required to submit income and expense information. Unfortuntaly, the CCAO cannot identify a user's type automatically based on PIN. Since an RPIE filing is required prior to submitting an appeal, the CCAO cannot determine which users are submitting voluntarily, and which in support of an appeal. Another example is owner-occupied properties; users filing on owner-occupied properties are not required to submit income and expense information, but the CCAO does not know which PINs are owner-occupied and which are not prior to filing. 
+For RPIE V2, the user experience needed to be different based on the user's 'type'. For example, users voluntarily filing an RPIE statement may not be required to submit income and expense information, but users filing an RPIE in support of an appeal would be required to submit income and expense information. Unfortunately, the CCAO cannot identify a user's type automatically based on PIN. Since an RPIE filing is required prior to submitting an appeal, the CCAO cannot determine which users are submitting voluntarily, and which in support of an appeal. Another example is owner-occupied properties; users filing on owner-occupied properties are not required to submit income and expense information, but the CCAO does not reliably know which PINs are and are not owner-occupied. 
 
 RPIE V2 needed a mechanism to identify user's types and sort them into the appropriate set of screens. The goals for RPIE V2 included:
 
@@ -150,9 +155,9 @@ RPIE V2 needed a mechanism to identify user's types and sort them into the appro
 
 ### Potato, Potahto: How to accomodate different users' business vernacular
 
-From the perspective of real estate valuation, the type of business operated on a property may be important information in order to estimate the value of the property. However, the categorization schema used by real estate professionals may differe considerably from the user's understanding of the business type. For example, the CCAO had a conversation with a number of owners of event spaces in Chicago. During that conversation, the CCAO learned that the term 'night club' carriers an undesireable connotation among some even space owners. On their website, one such space described itself as 'part of Chicago's rich cultural history for over 3 decades, proudly serving the LGBTQ community and friends for 37 years.' While certainly true, this description is not helpful in estimating the value of the real estate asset.
+From the perspective of real estate valuation, the type of business operated on a property may be important information in order to estimate the value of the property. However, the categorization schema used by real estate professionals may differ considerably from the user's understanding of the business type. For example, the CCAO had a conversation with a number of owners of event spaces in Chicago. During that conversation, the CCAO learned that the term 'night club' carriers an undesirable connotation among some event space owners.
 
-In order to accomodate users' expectations about their own businesses, we added a feature that allows users to add business types to the list of possible types for all users. The disadvantage of this is that the CCAO will have to parse and clean this list occasionally. The advantage is that it allows users to describe their businesses as they understand them, without needing a knowledge of real estate categorization.
+In order to accommodate users' expectations about their own businesses, we added a feature that allows users to add business types to the list of possible types for all users. The disadvantage of this is that the CCAO will have to parse and clean this list occasionally. The advantage is that it allows users to describe their businesses as they understand them, without needing a knowledge of real estate categorization.
 
 ### Questionnaire to Qualify User Taskflow
 
@@ -164,7 +169,7 @@ Our users are not experts in property appraisals or tax law, and nor should they
 
 #### Questionnaire iteration 1
 
-The image below shows the first version of the questionnaire structure. In the design below, blue ovals indicate questions and boxes represent forms. Iteration 1 had too many poorly worded questions asked in a subotimal order.
+The image below shows the first version of the questionnaire structure. In the design below, blue ovals indicate questions and boxes represent forms. Iteration 1 had too many poorly worded questions asked in a suboptimal order.
 
 <img src="overview-content/questionnaire-1.png"
      alt="Questionnaire 1"
@@ -219,13 +224,13 @@ The end-result of this work is a 'wizard-like' approach to the user experience t
 ### Feature considerations for V3
 
 #### Expand 'buildings' section to include a wide range of real assets
-RPIE V2 has a narrow conception of a 'building,' essentially a structure that generates income by being rented, or being able to be rented. The buidlings section of RPIE should be expanded in scope to include all 'real assets.' This would including parking garages, vacant lots, out-buildings, production factilities, cellular towers, chemical storage, etc. This can be acheived with minimal alteration of the underlying data model.
+RPIE V2 has a narrow conception of a 'building,' essentially a structure that generates income by being rented, or being able to be rented. The buildings section of RPIE should be expanded in scope to include all 'real assets.' This would including parking garages, vacant lots, out-buildings, production facilities, cellular towers, chemical storage, etc. This can be achieved with minimal alteration of the underlying data model.
 
 #### Expand building characteristics to include more features specific to building types
 The CCAO will want to collect different physical attributes of structures based on the structure type. RPIE V2 collects the same attributes of all buildings. In the future, physical attributes should be contingent on structure type. 
 
 #### API input
-The CCAO should develope APIs and documentation to allow third party data managers to push RPIE filings into the system. This would greatle reduce the time-cost of creating RPIE filings. 
+The CCAO should develop APIs and documentation to allow third party data managers to push RPIE filings into the system. This would greatly reduce the time-cost of creating RPIE filings. 
 
 ### UX Considerations for V3
 Below is a list of general principles for interaction design developed by designer Jakob Nielsen. These have become common place principles for any positive user experience. Below each principle is an explanation on how it applies to RPIE V2 and recommendations for future states. 
