@@ -45,5 +45,5 @@ IASWORLD <- dbConnect(
 )
 
 # Test the connection
-dbGetQuery(IASWORLD, "SELECT * FROM IASWORLD.asmt_hist FETCH FIRST 100 ROWS ONLY"))
+dbGetQuery(IASWORLD, "SELECT * FROM IASWORLD.asmt_hist FETCH FIRST 100 ROWS ONLY")
 ```
