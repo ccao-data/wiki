@@ -1,8 +1,8 @@
-# The Data Science Department
+# The Data Department
 
-This document outlines the purpose, procedures, and best practices of the Data Science Department at the Cook County Assessor's Office (CCAO).
+This document outlines the purpose, procedures, and best practices of the Data Department at the Cook County Assessor's Office (CCAO).
 
-The Data Science Department's primary responsibilities are to:
+The Data Department's primary responsibilities are to:
 
 * Estimate the value of over 1.8 million parcels in Cook County
 * Create tools and software to support the broader mission of the CCAO
@@ -26,23 +26,23 @@ See [Mission, Vision, and Values](Handbook/Mission Vision Values)
 
 ## Project Management
 
-The Data Science Department follows the principles of agile project management. This management approach is designed for institutions that produce a large amount of complex, customized, tangible work product in a high-stakes environment.
+The Data Department follows the principles of agile project management. This management approach is designed for institutions that produce a large amount of complex, customized, tangible work product in a high-stakes environment.
 
-For the Data Science Department, these work products are software, algorithms, analyses, and policy recommendations that can have a large impact on property tax assessments in Cook County. Our end-users are either internal staff executing the duties of the office, or external stakeholders, like taxpayers or elected representatives.
+For the Data Department, these work products are software, algorithms, analyses, and policy recommendations that can have a large impact on property tax assessments in Cook County. Our end-users are either internal staff executing the duties of the office, or external stakeholders, like taxpayers or elected representatives.
 
-In order to deliver accurate and timely work products, the Data Science Department adheres to the following agile principles:
+In order to deliver accurate and timely work products, the Data Department adheres to the following agile principles:
 
-**Continuous Delivery** - The Data Science Department produces tools and analyses to support CCAO operations. In order to ensure that these are delivered, development times should be shortened and products delivered to end-users more quickly. This is done by limiting the number and complexity of the features in each version. By producing incrementally better versions with shorter build times, the Data Science Department can solicit user feedback more frequently, ultimately increasing the usability of the final product.
+**Continuous Delivery** - The Data Department produces tools and analyses to support CCAO operations. In order to ensure that these are delivered, development times should be shortened and products delivered to end-users more quickly. This is done by limiting the number and complexity of the features in each version. By producing incrementally better versions with shorter build times, the Data Department can solicit user feedback more frequently, ultimately increasing the usability of the final product.
 
-**Embrace Change** - The Data Science Department should be flexible and able to accommodate changes to suit end-users' needs. Changes to tools and scripts should be considered even at late stages of development.
+**Embrace Change** - The Data Department should be flexible and able to accommodate changes to suit end-users' needs. Changes to tools and scripts should be considered even at late stages of development.
 
 **Developers Work with Management** - Senior Data Scientists and developers should be regularly involved in managerial discussions so they have an intimate knowledge of institutional and end-user needs.
 
-**Measuring Progress** - The Data Science Department should judge its work by the functionality of its products. The continuous deployment of increasingly useful, functional tools is what really matters.
+**Measuring Progress** - The Data Department should judge its work by the functionality of its products. The continuous deployment of increasingly useful, functional tools is what really matters.
 
 **Self-organization and Initiative** - The Deputy Assessor Chief Data Officer should not micro-manage staff. Senior Data Scientists should determine for themselves how to accomplish tasks, within departmental guidelines. Developers and employees should feel free to raise problems quickly with the Deputy Assessor Chief Data Officer so that project goals may be adjusted, where necessary.
 
-**Reflect and Adapt** - At regular intervals the staff of the Data Science Department should reflect on their work and identify ways to increase efficiency. Workflow processes should be treated in the same manner as work-product; they should evolve to meet the demands of the enterprise.
+**Reflect and Adapt** - At regular intervals the staff of the Data Department should reflect on their work and identify ways to increase efficiency. Workflow processes should be treated in the same manner as work-product; they should evolve to meet the demands of the enterprise.
 
 **Limiting Work-In-Progress** - Staff should not be assigned more than a few issues to work simultaneously. Work should be executed in order of priority (see [Labels](#Labels)). Work should be accomplished within the sprint in which it was assigned. The Deputy Assessor Chief Data Officer and Senior Data Scientists should adjust their assignments and expectations based on milestone burndown charts and the open issue list.
 
@@ -50,10 +50,10 @@ In order to deliver accurate and timely work products, the Data Science Departme
 
 ## Organizational Structure
 
-The Data Science Department is broken into two sub-departments: 
+The Data Department is broken into two sub-departments: 
 
  1. **Data Science** is responsible for building models and tools that enhance the CCAO's mission. It creates and maintains applications, pipelines, models, and databases.
- 2. **Data Analytics** is responsible for reporting on and analyzing the performance of the Data Science Department and the CCAO. It creates extracts, writes reports, and builds dashboards.
+ 2. **Data Analytics** is responsible for reporting on and analyzing the performance of the Data Department and the CCAO. It creates extracts, writes reports, and builds dashboards.
 
 An organization chart can be found [here](https://gitlab.com/ccao-data-science---modeling/people/talent/-/blob/master/documents/Data%20Science%20Organization%20Chart.pdf).
 
@@ -69,7 +69,7 @@ A more detailed description of this pipeline can be found in [these slides](http
 
 ## Performance Review 
 
-The Data Science Department is committed to fostering the development of its members. We believe that 360 performance evaluation is necessary to foster the development of both employees and managers. Performance reviews are designed to help employees identify and eliminate barriers to their individual professional advancement. There are four components to the performance review process.
+The Data Department is committed to fostering the development of its members. We believe that 360 performance evaluation is necessary to foster the development of both employees and managers. Performance reviews are designed to help employees identify and eliminate barriers to their individual professional advancement. There are four components to the performance review process.
 
 Each employee's performance review will be coordinated using a GitLab issue populated from a [template](https://gitlab.com/ccao-data-science---modeling/people/employment/-/tree/master/.gitlab/issue_templates). The title of the issue should be "Annual Performance Review: [Employee Name]." The due date should be two days after the scheduled performance review meeting.
 
@@ -114,10 +114,10 @@ The supervisor and employee complete the performance evaluation process as outli
 
 # Working Remotely 
 
-Due to the COVID global pandemic, the Data Science Department is working 100% remotely until further notice. This section contains tips, tricks, and requirements for working with CCAO Data Science remotely.
+Due to the COVID global pandemic, the Data Department is working 100% remotely until further notice. This section contains tips, tricks, and requirements for working with CCAO Data Science remotely.
 
 * **Workspace:** Make sure you have a quite space with good internet access from which to work. Please make sure you have a microphone to participate in remote meetings. A camera is also a good thing to have, though not required.
-* **Socializing:** The Data Science Department tries to facilitate regular social events, time and COVID permitting. Please feel free to join these, though they are not mandatory in any way.
+* **Socializing:** The Data Department tries to facilitate regular social events, time and COVID permitting. Please feel free to join these, though they are not mandatory in any way.
 
 ## Agile Project Management Practices
 
@@ -136,7 +136,7 @@ Data Science staff are often working on multiple projects simultaneously. This m
 
 ## Repositories
 
-The Data Science Department uses [GitLab](https://gitlab.com/ccao-data-science---modeling) as a workflow and version control tool. The Department's work is oriented around GitLab code repositories, with each repository representing an area of responsibility for the department or a specific service/application that it runs.
+The Data Department uses [GitLab](https://gitlab.com/ccao-data-science---modeling) as a workflow and version control tool. The Department's work is oriented around GitLab code repositories, with each repository representing an area of responsibility for the department or a specific service/application that it runs.
 
 ### Structure
 
@@ -166,7 +166,7 @@ Issues may be created by anyone in the organization. Issue deadlines are assigne
 
 ### Labels
 
-The Data Science Department uses 4 scoped labels: priority, type, status, and stakeholder. All issues should have 1 variant of each of these labels, in addition to any project-specific labels. When triaging issues, the following priority intentions should be used:
+The Data Department uses 4 scoped labels: priority, type, status, and stakeholder. All issues should have 1 variant of each of these labels, in addition to any project-specific labels. When triaging issues, the following priority intentions should be used:
 
 | Label                | Importance | Intention                                                                                               |
 |----------------------|------------|---------------------------------------------------------------------------------------------------------|
@@ -179,7 +179,7 @@ For a full list of labels and their descriptions, see the [Labels section](https
 
 ### Weights
 
-Issues should be assigned weights relative to their importance. Weights are a relative number without a distinct meaning, their actual value is arbitrary. The Data Science Department typically makes higher weights = more important.
+Issues should be assigned weights relative to their importance. Weights are a relative number without a distinct meaning, their actual value is arbitrary. The Data Department typically makes higher weights = more important.
 
 ## Working Issues
 
@@ -200,11 +200,11 @@ Draft working documents are not available under FOIA. The WIP status of branches
 
 ## Milestones
 
-Issues are organized into Milestones. Milestones are large projects that take multiple weeks or months to accomplish. Milestones allow the Data Science Department to group issues together based on its long-term goals. The Chief Data Officer creates and tracks Milestones to ensure timely delivery of work-product. Epics can also be used to organize issues and milestones into even larger grouping.
+Issues are organized into Milestones. Milestones are large projects that take multiple weeks or months to accomplish. Milestones allow the Data Department to group issues together based on its long-term goals. The Chief Data Officer creates and tracks Milestones to ensure timely delivery of work-product. Epics can also be used to organize issues and milestones into even larger grouping.
 
 # Coding Standards
 
-All work-product produced by the Data Science Department should be replicable by either a third-party, or another staff member, at any point in the future. This both increases productivity by reducing confusion and technological debt, and facilitates transparency and accountability. In order to ensure replicability of work, departmental staff should adhere to the following coding standards.
+All work-product produced by the Data Department should be replicable by either a third-party, or another staff member, at any point in the future. This both increases productivity by reducing confusion and technological debt, and facilitates transparency and accountability. In order to ensure replicability of work, departmental staff should adhere to the following coding standards.
 
 ## Comments
 
@@ -230,7 +230,7 @@ Of course, there are still cases where the function of especially complicated pi
 
 ## Code Style
 
-Code style is important. It makes your code more readable and ensures that other people working on the same project use the same syntax. The CCAO Data Science Department mostly follows the [Tidyverse Style Guide](https://style.tidyverse.org/). This is the most widely accepted style for R, but it is also quite lengthy an difficult to remember.
+Code style is important. It makes your code more readable and ensures that other people working on the same project use the same syntax. The CCAO Data Department mostly follows the [Tidyverse Style Guide](https://style.tidyverse.org/). This is the most widely accepted style for R, but it is also quite lengthy an difficult to remember.
 
 Fortunately, two packages exist that support the Tidyverse style guide:
 
@@ -239,7 +239,7 @@ Fortunately, two packages exist that support the Tidyverse style guide:
 
 These packages make it easy to conform to the Tidyverse style guide. Simply run `styler` and then `lintr` on your entire project before each commit. This will automatically restyle your code and then tell you if there are any remaining issues.
 
-> :warning: The Data Science Department does not strictly enforce Tidyverse style for most repositories. However, certain very important repositories (R packages) will automatically reject merges that doesn't conform to Tidyverse style.
+> :warning: The Data Department does not strictly enforce Tidyverse style for most repositories. However, certain very important repositories (R packages) will automatically reject merges that doesn't conform to Tidyverse style.
 
 ## Commit Style
 

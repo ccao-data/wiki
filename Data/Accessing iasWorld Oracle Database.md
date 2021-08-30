@@ -1,6 +1,6 @@
 The CCAO is in the process of migrating its records from an IBM mainframe system to Tyler Technologies' iasWorld. iasWorld is a web-based property record and assessment management system backended by an Oracle database.
 
-The Data Science Department has access to a mirror of the backend database. To get connected, please follow the steps below:
+The Data Department has access to a mirror of the backend database. To get connected, please follow the steps below:
 
 ## 1. Download Oracle SQL Developer
 
