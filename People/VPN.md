@@ -14,6 +14,5 @@ Various CCAO services are only available while connected the CCAO's network usin
 | OneDrive | ***Cannot*** be Connected |
 | Teams | Connection Agnostic |
 | Outlook | Connection Agnostic |
-| [Webmail (from home)](https://webmail.cookcountyassessor.com/owa/#path=/mail) | Connection Agnostic |
-| [Webmail (from guest network @ CCAO)](https://webmail.cookcountyassessor.com/owa/#path=/mail) | ***Cannot*** be Connected |
+| [Office 365](https://outlook.office365.com/cookcountyil.gov) | Connection Agnostic |
 | [Cook Viewer](https://maps.cookcountyil.gov/cookviewer/) | ***Cannot*** be Connected |

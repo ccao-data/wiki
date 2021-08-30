@@ -1,6 +1,6 @@
 # Mission
 
-The mission of the Data Science Department is to transform the Cook County Assessor's Office into the most effective property assessment office in the world.
+The mission of the Data Department is to transform the Cook County Assessor's Office into the most effective property assessment office in the world.
 
 # Vision
 
@@ -69,7 +69,7 @@ The public process does two things: allows others to benefit from the conversati
 
 In line with our value of transparency and being public by default, all team member profiles should be public. Public profiles also enable broader collaboration and efficiencies between teams. To do so, please make sure that the checkbox under the [Private profile](https://docs.gitlab.com/ee/user/profile/#private-profile) option is unchecked [in your profile settings](https://gitlab.com/profile/). If you do not feel comfortable with your full name or location on your profile, please change it to what feels appropriate to you as these are displayed even on private profiles.
 
-If you believe something shouldn't be public that currently is (or vice versa), then email [Samantha Simpson](mailto:ssimpson@cookcountyassessor.com).
+If you believe something shouldn't be public that currently is (or vice versa), then email [Samantha Simpson](mailto:samantha.simpson@cookcountyil.gov).
 
 ### Transparency is only a value if you do it when it is hard
 
@@ -129,7 +129,7 @@ Transparency increases accountability when making decisions and difficult choice
 
 ## Inclusion
 
-It is critical for the success of the Data Science Department to foster a culture of inclusion. As a general rule, [You Can't Say You Can't Play](https://www.amazon.com/You-Cant-Say-Play/dp/0674965906). There are many ways of indicating someone is unwelcome, or that they ideas are less important. We try to build a team that is aware of these types of pitfalls, and works to actively ensure that everyone is welcome. We embrace diversity of people, backgrounds, ideas, and lifestyles.
+It is critical for the success of the Data Department to foster a culture of inclusion. As a general rule, [You Can't Say You Can't Play](https://www.amazon.com/You-Cant-Say-Play/dp/0674965906). There are many ways of indicating someone is unwelcome, or that they ideas are less important. We try to build a team that is aware of these types of pitfalls, and works to actively ensure that everyone is welcome. We embrace diversity of people, backgrounds, ideas, and lifestyles.
 
 ### Embracing uncomfortable ideas and conversations 
 
@@ -289,9 +289,9 @@ We should strive to accept that there are things that we don't know about the wo
 
 ## Why Have Values?
 
-The Data Science Department consists of five full-time employees. Why would such a small unit need a detailed description of their values? There are a few reasons why we have made the effort to create this document and train all members of the team on it.
+The Data Department consists of five full-time employees. Why would such a small unit need a detailed description of their values? There are a few reasons why we have made the effort to create this document and train all members of the team on it.
 
-**Scalable Success:** The Data Science Department will continue to grow and evolve, and it is critical that our values are not diluted as the unit grows. Establishing a strong values-driven culture early in our development helps ensure a [durable data science unit](https://en.wikipedia.org/wiki/Built_to_Last:_Successful_Habits_of_Visionary_Companies). 
+**Scalable Success:** The Data Department will continue to grow and evolve, and it is critical that our values are not diluted as the unit grows. Establishing a strong values-driven culture early in our development helps ensure a [durable data science unit](https://en.wikipedia.org/wiki/Built_to_Last:_Successful_Habits_of_Visionary_Companies). 
 
 **Recruitment:** A clear, public statement of value helps attract like-minded people to our team. This helps prevent value dilution as the unit grows, and helps bring in new and innovative ideas.
 
@@ -303,4 +303,4 @@ We do not operate under the delusion that our values are superior to others' val
 
 ## Updating Our Values
 
-Our values are updated as frequently as needed. To suggest changes to our values, feel free to email [Samantha Simpson](mailto:ssimpson@cookcountyassessor.com) with thoughts, or submit a merge request to this document.
+Our values are updated as frequently as needed. To suggest changes to our values, feel free to email [Samantha Simpson](mailto:samantha.simpson@cookcountyil.gov) with thoughts, or submit a merge request to this document.
