@@ -38,10 +38,10 @@
  * [AssessR R Package Documentation](https://ccao-data-science---modeling.gitlab.io/packages/assessr/reference/)
  * [CCAO R Package Documentation](https://ccao-data-science---modeling.gitlab.io/packages/ccao/reference/)
  * [Accessing S3 from R](Data/Accessing AWS S3 Buckets.md)
- * [(DEPRECATED) SQL Database Guide](Data/SQL Database Guide)
+ * [(DEPRECATED) SQL Database Guide](Data/SQL Database Guide.md)
  * [Property Class Definitions](Data/class-definitions.pdf) - *Available via the [CCAO R package](https://gitlab.com/ccao-data-science---modeling/packages/ccao)*
  * [Township Definitions](Data/Townships) - *Available via the [CCAO R package](https://gitlab.com/ccao-data-science---modeling/packages/ccao)*
  * [Appeal Reason Codes](https://prodassets.cookcountyassessor.com/s3fs-public/form_documents/reasoncodes.pdf) - *Used in the DKEMPL SQL table*
  * [CDU Codes](Data/CDU Codes) - *Available via the [CCAO R package](https://gitlab.com/ccao-data-science---modeling/packages/ccao)*
- * [(DEPRECATED) Accessing iasWorld Oracle Database](Data/Accessing iasWorld Oracle Database)
+ * [(DEPRECATED) Accessing iasWorld Oracle Database](Data/Accessing iasWorld Oracle Database.md)
  * [RPIE SQL Database Data Dictionary](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content/-/blob/master/RPIE/rpie%20data%20dictionary.xlsx)
