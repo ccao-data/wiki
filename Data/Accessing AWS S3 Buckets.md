@@ -1,5 +1,5 @@
 The Data Department utilizes AWS to store raw data within a lake, as well as the products of various ETLs within a warehouse. The department's S3 buckets can be easily accessed through Athena in R using the package "noctua". To get connected, follow the instructions below:
-
+***
 ### 1. Installations
 
 - [Athena ODBC driver](https://docs.aws.amazon.com/athena/latest/ug/connect-with-odbc.html)
