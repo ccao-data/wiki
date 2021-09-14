@@ -1,0 +1,4 @@
+deploy:
+  stage: deploy
+  script:
+    - git push -f https://dfsnow:${WIKI_PUSH_PAT}@gitlab.com/ccao-data-science---modeling.wiki.git HEAD:master
