@@ -37,7 +37,7 @@
 
  * [AssessR R Package Documentation](https://ccao-data-science---modeling.gitlab.io/packages/assessr/reference/)
  * [CCAO R Package Documentation](https://ccao-data-science---modeling.gitlab.io/packages/ccao/reference/)
- * [Accessing S3 from R](Data/Accessing AWS S3 Buckets)
+ * [Accessing S3 from R](Data/Accessing AWS S3 Buckets.md)
  * [(DEPRECATED) SQL Database Guide](Data/SQL Database Guide)
  * [Property Class Definitions](Data/class-definitions.pdf) - *Available via the [CCAO R package](https://gitlab.com/ccao-data-science---modeling/packages/ccao)*
  * [Township Definitions](Data/Townships) - *Available via the [CCAO R package](https://gitlab.com/ccao-data-science---modeling/packages/ccao)*
