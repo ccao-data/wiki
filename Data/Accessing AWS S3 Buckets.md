@@ -5,7 +5,7 @@ The Data Department utilizes AWS to store raw data within a lake, as well as the
 - [Athena ODBC driver](https://docs.aws.amazon.com/athena/latest/ug/connect-with-odbc.html)
 - [AWS command line interface](https://aws.amazon.com/cli/), which allows users to store credentials needed to query S3 buckets with Athena
 - Python - [Anaconda](https://www.anaconda.com/products/individual) is recommended. During installation on Windows, make sure to add python to PATH
-- boto3 - run `conda install -c anaconda boto3` in terminal after Anaconda is installed
+- boto3 - run `conda install -c anaconda boto3` from terminal after Anaconda is installed
 
 ### 2. Set up multi-factor authentication in AWS
 
@@ -29,8 +29,6 @@ The Data Department utilizes AWS to store raw data within a lake, as well as the
 
 ### 5. Connect to Athena
 
-<br>
-
 #### R:
 
 ```r
@@ -47,8 +45,6 @@ con <- dbConnect(noctua::athena(),
 # test the connection
 dbGetQuery(conn = con, "SELECT * FROM dev_poc_ccao_archive.archive_aasysjur LIMIT 10")
 ```
-
-<br>
 
 #### Python:
 
