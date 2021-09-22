@@ -4,7 +4,8 @@ The Data Department utilizes AWS to store raw data within a lake, as well as the
 
 - [Athena ODBC driver](https://docs.aws.amazon.com/athena/latest/ug/connect-with-odbc.html)
 - [AWS command line interface](https://aws.amazon.com/cli/), which allows users to store credentials needed to query S3 buckets with Athena
-- Python - [Anaconda](https://www.anaconda.com/products/individual) is recommended. During installation on Windows, make sure to add python to PATH.
+- Python - [Anaconda](https://www.anaconda.com/products/individual) is recommended. During installation on Windows, make sure to add python to PATH
+- boto3 - run `conda install -c anaconda boto3` in terminal after Anaconda is installed
 
 ### 2. Set up multi-factor authentication in AWS
 
@@ -28,19 +29,45 @@ The Data Department utilizes AWS to store raw data within a lake, as well as the
 
 ### 5. Connect to Athena
 
+<br>
+
+#### R:
+
 ```r
 # Load necessary packages
 library(noctua)
 library(DBI)
 
-# Establish connection
+# establish connection
 con <- dbConnect(noctua::athena(),
                  s3_staging_dir = Sys.getenv("AWS_BUCKET"),
                  aws_session_token = readline(prompt = "one time use MFA token: ")
                  )
 
-# Test the connection
+# test the connection
 dbGetQuery(conn = con, "SELECT * FROM dev_poc_ccao_archive.archive_aasysjur LIMIT 10")
+```
+
+<br>
+
+#### Python:
+
+```python
+
+# load necessary packages
+import boto3
+
+# establish connection
+s3 = boto3.resource(
+    service_name='s3',
+    region_name='us-east-1',
+    aws_session_token=input("one time use MFA token: ")
+    )
+
+# test connection
+for bucket in s3.buckets.all():
+    print(bucket.name)
+    
 ```
 
 Most of this README originates from these sources:
