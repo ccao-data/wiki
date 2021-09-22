@@ -49,7 +49,6 @@ dbGetQuery(conn = con, "SELECT * FROM dev_poc_ccao_archive.archive_aasysjur LIMI
 #### Python:
 
 ```python
-
 # load necessary packages
 import boto3
 
@@ -63,7 +62,6 @@ s3 = boto3.resource(
 # test connection
 for bucket in s3.buckets.all():
     print(bucket.name)
-    
 ```
 
 Most of this README originates from these sources:
