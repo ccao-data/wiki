@@ -32,7 +32,7 @@ The Data Department utilizes AWS to store raw data within a lake, as well as the
 #### R:
 
 ```r
-# Load necessary packages
+# load necessary packages
 library(noctua)
 library(DBI)
 
