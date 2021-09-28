@@ -1,17 +1,35 @@
-The Data Department utilizes AWS to store raw data within a lake, as well as the products of various ETLs within a warehouse. The department's S3 buckets can be easily accessed through Athena in R using the package "noctua". To get connected, follow the instructions below:
+The Data Department utilizes AWS to store raw data within a lake, as well as the products of various ETLs within a warehouse. The department's S3 buckets can be easily accessed a number of ways. To get connected, follow the instructions below:
+
 ***
+
 ### 1. Installations
 
-- [Athena ODBC driver](https://docs.aws.amazon.com/athena/latest/ug/connect-with-odbc.html)
+***R & Python***
+
 - [AWS command line interface](https://aws.amazon.com/cli/), which allows users to store credentials needed to query S3 buckets with Athena
+
+***R***
+
+- [Athena ODBC driver](https://docs.aws.amazon.com/athena/latest/ug/connect-with-odbc.html)
 - Python - [Anaconda](https://www.anaconda.com/products/individual) is recommended. During installation on Windows, make sure to add python to PATH
+
+***Python***
+
 - boto3 - run `conda install -c anaconda boto3` from terminal after Anaconda is installed
 
+***Tableau***
+
+- [JDBC Driver with AWS SDK](https://docs.aws.amazon.com/athena/latest/ug/connect-with-jdbc.html) - move the downloaded .jar file to `C:\Program Files\Tableau\Drivers` on Windows
+
 ### 2. Set up multi-factor authentication in AWS
+
+***R & Python***
 
 - Log into [AWS](https://ccao-ds.signin.aws.amazon.com/console) and under your account select "My Security Credentials". Enable multi-factor authentication, and then create an access key. You'll need both the `access key ID`, the `secret access key`, and the name of the `assigned MFA device`. Do not include ` (Virtual)` when copying the name of the MFA device.
 
 ### 3. Set up 'aws-mfa'
+
+***R & Python***
 
 - In the command line:
   - Run `aws configure` and enter your `access key ID`, `secret access key`, region (`us-east-1`), and `json` for output.
@@ -23,13 +41,15 @@ The Data Department utilizes AWS to store raw data within a lake, as well as the
 
 ### 4. Create a .environ variable for the the data team's S3 bucket name
 
+***R***
+
 - Run `usethis::edit_r_environ()` in R, and add a variable named `AWS_BUCKET`.
 - Message @SweatyHandshake or @dfsnow for the name of the bucket.
 - Set the value for `AWS_BUCKET`, save the updated file, and restart the R session.
 
 ### 5. Connect to Athena
 
-#### R:
+***R***
 
 ```r
 # load necessary packages
@@ -46,7 +66,7 @@ con <- dbConnect(noctua::athena(),
 dbGetQuery(conn = con, "SELECT * FROM dev_poc_ccao_archive.archive_aasysjur LIMIT 10")
 ```
 
-#### Python:
+***Python***
 
 ```python
 # load necessary packages
@@ -63,6 +83,13 @@ s3 = boto3.resource(
 for bucket in s3.buckets.all():
     print(bucket.name)
 ```
+
+***Tableau***
+
+- Open Tableau and on the "Connect" sidebar under "To a Server", navigate to "Amazon Athena"
+- Message @SweatyHandshake or @dfsnow for the necessary server info and credentials. Tableau will not save the `Secret Access Key` field.
+
+***
 
 Most of this README originates from these sources:
 
