@@ -2,54 +2,14 @@ The Data Department utilizes AWS to store raw data within a lake, as well as the
 
 ***
 
-### 1. Installations
+### R
 
-***R & Python***
-
-- [AWS command line interface](https://aws.amazon.com/cli/), which allows users to store credentials needed to query S3 buckets with Athena
-
-***R***
-
-- [Athena ODBC driver](https://docs.aws.amazon.com/athena/latest/ug/connect-with-odbc.html)
-- Python - [Anaconda](https://www.anaconda.com/products/individual) is recommended. During installation on Windows, make sure to add python to PATH
-
-***Python***
-
-- boto3 - run `conda install -c anaconda boto3` from terminal after Anaconda is installed
-
-***Tableau***
-
-- [JDBC Driver with AWS SDK](https://docs.aws.amazon.com/athena/latest/ug/connect-with-jdbc.html) - move the downloaded .jar file to `C:\Program Files\Tableau\Drivers` on Windows
-
-### 2. Set up multi-factor authentication in AWS
-
-***R & Python***
-
-- Log into [AWS](https://ccao-ds.signin.aws.amazon.com/console) and under your account select "My Security Credentials". Enable multi-factor authentication, and then create an access key. You'll need both the `access key ID`, the `secret access key`, and the name of the `assigned MFA device`. Do not include ` (Virtual)` when copying the name of the MFA device.
-
-### 3. Set up 'aws-mfa'
-
-***R & Python***
-
-- In the command line:
-  - Run `aws configure` and enter your `access key ID`, `secret access key`, region (`us-east-1`), and `json` for output.
-  - Run `pip install aws-mfa`
-- Open your credentials file located at `~/.aws/credentials` on Linux or macOS, or at `C:\Users\USERNAME\.aws\credentials` on Windows and rename `[default]` to `[default-long-term]`.
-- Underneath `aws_secret_access_key` type `aws_mfa_device = assigned MFA device` where `assigned MFA device` is the `name of your assigned MFA device`, and save.
-- In the command line, run `aws-mfa` and enter the current MFA token provided by your `assigned MFA device`.
-- Note, this command will only store MFA credentials for 12 hours (unless the duration is explicitly changed when running `aws-mfa`).
-
-### 4. Create a .environ variable for the the data team's S3 bucket name
-
-***R***
-
-- Run `usethis::edit_r_environ()` in R, and add a variable named `AWS_BUCKET`.
+- Install and setup [AWS CLI and MFA](Data/Setting Up AWS Command Line Interface and Multi-factor Authentication)
+- Install [Athena ODBC driver](https://docs.aws.amazon.com/athena/latest/ug/connect-with-odbc.html)
+- Install Python - [Anaconda](https://www.anaconda.com/products/individual) is recommended. During installation on Windows, make sure to add python to PATH
+- Run `usethis::edit_r_environ()` in R, and add a variable named `S3_STAGING_DIR`.
 - Message @SweatyHandshake or @dfsnow for the name of the bucket.
 - Set the value for `AWS_BUCKET`, save the updated file, and restart the R session.
-
-### 5. Connect to Athena
-
-***R***
 
 ```r
 # load necessary packages
@@ -58,15 +18,18 @@ library(DBI)
 
 # establish connection
 con <- dbConnect(noctua::athena(),
-                 s3_staging_dir = Sys.getenv("AWS_BUCKET"),
+                 s3_staging_dir = Sys.getenv("S3_STAGING_DIR"),
                  aws_session_token = readline(prompt = "one time use MFA token: ")
-                 )
+)
 
-# test the connection
-dbGetQuery(conn = con, "SELECT * FROM dev_poc_ccao_archive.archive_aasysjur LIMIT 10")
+# test the connection replacing the X's with a known table
+dbGetQuery(conn = con, "SELECT * FROM XXX.XXX LIMIT 10")
 ```
 
-***Python***
+### Python
+
+- Install and setup [AWS CLI and MFA](Data/Setting Up AWS Command Line Interface and Multi-factor Authentication)
+- Install boto3 - run `conda install -c anaconda boto3` from terminal after Anaconda is installed
 
 ```python
 # load necessary packages
@@ -78,21 +41,21 @@ s3 = boto3.resource(
     region_name='us-east-1',
     aws_session_token=input("one time use MFA token: ")
     )
-
+  
 # test connection
 for bucket in s3.buckets.all():
     print(bucket.name)
+    
+# or, depending on your needs
+s3 = boto3.client(
+    service_name='s3',
+    region_name='us-east-1',
+    aws_session_token=input("one time use MFA token: ")
+    )
 ```
 
-***Tableau***
+### Tableau
 
+- Install the [JDBC Driver with AWS SDK](https://docs.aws.amazon.com/athena/latest/ug/connect-with-jdbc.html) - move the downloaded .jar file to `C:\Program Files\Tableau\Drivers` on Windows
 - Open Tableau and on the "Connect" sidebar under "To a Server", navigate to "Amazon Athena"
 - Message @SweatyHandshake or @dfsnow for the necessary server info and credentials. Tableau will not save the `Secret Access Key` field.
-
-***
-
-Most of this README originates from these sources:
-
-- [Configuration Basics - AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html)
-- [aws-mfa: Easily manage your AWS Security Credentials when using Multi-Factor Authentication (MFA)](https://github.com/broamski/aws-mfa)
-- [Connecting to AWS S3 with Python](https://www.gormanalysis.com/blog/connecting-to-aws-s3-with-python/)
