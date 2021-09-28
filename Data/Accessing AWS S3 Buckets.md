@@ -66,5 +66,6 @@ for bucket in s3.buckets.all():
 
 Most of this README originates from these sources:
 
-- https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html
-- https://github.com/broamski/aws-mfa
+- [Configuration Basics - AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html)
+- [aws-mfa: Easily manage your AWS Security Credentials when using Multi-Factor Authentication (MFA)](https://github.com/broamski/aws-mfa)
+- [Connecting to AWS S3 with Python](https://www.gormanalysis.com/blog/connecting-to-aws-s3-with-python/)
