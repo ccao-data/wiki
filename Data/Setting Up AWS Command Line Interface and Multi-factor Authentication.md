@@ -11,3 +11,10 @@ ASW CLI allows users to interact directly with AWS services such as sync through
 5. Underneath `aws_secret_access_key` type `aws_mfa_device = assigned MFA device` where `assigned MFA device` is the `name of your assigned MFA device`, and save.
 6. In the command line, run `aws-mfa` and enter the current MFA token provided by your `assigned MFA device`.
 7. Note, this command will only store MFA credentials for 12 hours (unless the duration is explicitly changed when running `aws-mfa`).
+
+***
+
+Most of this README originates from these sources:
+
+- [Configuration Basics - AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html)
+- [aws-mfa: Easily manage your AWS Security Credentials when using Multi-Factor Authentication (MFA)](https://github.com/broamski/aws-mfa)
