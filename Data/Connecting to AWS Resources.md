@@ -9,7 +9,7 @@ The Data Department utilizes AWS to store raw data within a lake, as well as the
 - Install Python - [Anaconda](https://www.anaconda.com/products/individual) is recommended. During installation on Windows, make sure to add python to PATH
 - Run `usethis::edit_r_environ()` in R, and add a variable named `S3_STAGING_DIR`
 - Message @SweatyHandshake or @dfsnow for the name of the bucket
-- Set the value for `AWS_BUCKET`, save the updated file, and restart the R session
+- Set the value for `S3_STAGING_DIR`, save the updated file, and restart the R session
 
 ```r
 # load necessary packages
