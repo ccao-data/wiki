@@ -1,4 +1,4 @@
-ASW CLI allows users to interact directly with AWS services such as sync through the command line.A AWS services may require multi-factor authentication to use, in which case users must setup aws-mfa.
+ASW CLI allows users to interact directly with AWS services such as sync through the command line. AWS services may require multi-factor authentication to use, in which case users must setup aws-mfa.
 
 ***
 
