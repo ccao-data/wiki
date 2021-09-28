@@ -1,4 +1,4 @@
-The Data Department utilizes AWS to store raw data within a lake, as well as the products of various ETLs within a warehouse. The department's S3 buckets can be easily accessed a number of ways. To get connected, follow the instructions below:
+The Data Department utilizes AWS to store raw data within a lake, as well as the products of various ETLs within a warehouse. The department's AWS services can be easily accessed a number of ways. To get connected, follow the instructions below:
 
 ***
 
