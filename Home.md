@@ -37,7 +37,7 @@
 
  * [AssessR R Package Documentation](https://ccao-data-science---modeling.gitlab.io/packages/assessr/reference/)
  * [CCAO R Package Documentation](https://ccao-data-science---modeling.gitlab.io/packages/ccao/reference/)
- * [Setting Up AWS Command Line Interface and Multi-factor Authentication](Data/Setting Up AWS Command Line Interface and Multi-factor Authentication)
+ * [Setting Up AWS Command Line Interface and Multi\-factor Authentication](Data/Setting Up AWS Command Line Interface and Multi-factor Authentication)
  * [Connecting to AWS Resources](Data/Connecting to AWS Resources)
  * [Property Class Definitions](Data/class-definitions.pdf) - *Available via the [CCAO R package](https://gitlab.com/ccao-data-science---modeling/packages/ccao)*
  * [Township Definitions](Data/Townships) - *Available via the [CCAO R package](https://gitlab.com/ccao-data-science---modeling/packages/ccao)*
