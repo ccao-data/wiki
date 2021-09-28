@@ -29,7 +29,7 @@ dbGetQuery(conn = con, "SELECT * FROM XXX.XXX LIMIT 10")
 ### Python
 
 1. Install and setup [AWS CLI and MFA](Data/Setting Up AWS Command Line Interface and Multi-factor Authentication)
-2. Install boto3 - run `conda install -c anaconda boto3` from terminal after Anaconda is installed
+2. Install boto3 - run `pip install boto3` from terminal after Anaconda is installed
 
 ```python
 # load necessary packages
