@@ -57,5 +57,10 @@ s3 = boto3.client(
 ### Tableau
 
 1. Install the [JDBC Driver with AWS SDK](https://docs.aws.amazon.com/athena/latest/ug/connect-with-jdbc.html) - move the downloaded .jar file to `C:\Program Files\Tableau\Drivers` on Windows
-2. Open Tableau and on the "Connect" sidebar under "To a Server", navigate to "Amazon Athena"
-3. Message @SweatyHandshake or @dfsnow for the necessary server info and credentials. Tableau will not save the `Secret Access Key` field
+2. Create a file called `athena.properties` in `C:\Users\$USER\Documents\My Tableau Repository\Datasources` with the following lines:
+    ```
+    workgroup=read-only-with-scan-limit
+    MetadataRetrievalMethod=ProxyAPI
+    ```
+3. Open Tableau and on the "Connect" sidebar under "To a Server", navigate to "Amazon Athena"
+4. Message @SweatyHandshake or @dfsnow for the necessary server info and credentials. Tableau will not save the `Secret Access Key` field
