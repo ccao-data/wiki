@@ -36,6 +36,7 @@ Useful materials that give an overview of Cook County's property tax system and 
 
 - [:exclamation: Cook County Property Taxes 101](https://maps.cookcountyil.gov/propertytax101/index.html) - Brief intro to property taxes, created by the Clerk's office
 - [:exclamation: The Tax Divide - Chicago Tribune](https://www.chicagotribune.com/investigations/ct-tax-divide-investigation-20180425-storygallery.html) - An excellent outline of the historical problems with the CCAO
+- [:exclamation: The Cook County Property Tax Extension Process: A Primer](https://www.civicfed.org/civic-federation/publications/cook-county-property-tax-extension-process-primer-levies-tax-caps-and-) - Incredibly useful guide to the intricacies of the entire Cook County tax system
 - [:star: Why Are My Property Taxes So High?](https://www.chicagobusiness.com/crains-forum-taxes/forum-why-are-my-property-taxes-so-high) - Neat interactive from Crain's that compares two very different homes that pay roughly the same amount of property tax
 - [:star: How Lower-Income Americans Get Cheated on Property Taxes - NYTimes](https://www.nytimes.com/2021/04/03/opinion/sunday/property-taxes-housing-assessment-inequality.html) - Concise and accessible overview of the nation-wide issue of inequitable assessments
 - [Chicago Triad Assessment Report (2018) - Civic Consulting Alliance](https://prodassets.cookcountyassessor.com/s3fs-public/reports/2018ChicagoTriadSRSvf.pdf) - Study of 2018 assessment quality in the Chicago triad
