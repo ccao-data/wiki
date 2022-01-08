@@ -70,11 +70,11 @@ You can use the `noctua` R package to pull small amounts of data from Athena. Th
     noctua_options(cache_size = 10)
 
     # Establish connection
-    AWS_ATHENA_CONN <- dbConnect(noctua::athena())
+    AWS_ATHENA_CONN_NOCTUA <- dbConnect(noctua::athena())
 
     # Test the connection 
     dbGetQuery(
-      conn = AWS_ATHENA_CONN,
+      conn = AWS_ATHENA_CONN_NOCTUA,
       "SELECT year, geoid FROM census.acs5 LIMIT 10"
     )
     ```
@@ -99,17 +99,17 @@ Athena queries that pull a large amount of data are best handled by Amazon's JDB
     # Load necessary libraries
     library(DBI)
     library(RJDBC)
-    
+
     # Connect to the JDBC driver
-    driver <- RJDBC::JDBC(
+    aws_athena_jdbc_driver <- RJDBC::JDBC(
       driverClass = "com.simba.athena.jdbc.Driver",
       classPath = list.files("~/drivers", "^Athena.*jar$", full.names = TRUE),
       identifier.quote = "'"
     )
     
     # Establish connection
-    AWS_ATHENA_JDBC <- dbConnect(
-      driver,
+    AWS_ATHENA_CONN_JDBC <- dbConnect(
+      aws_athena_jdbc_driver,
       url = Sys.getenv("AWS_ATHENA_JDBC_URL"),
       aws_credentials_provider_class = Sys.getenv("AWS_CREDENTIALS_PROVIDER_CLASS"),
       Schema = "Default"
