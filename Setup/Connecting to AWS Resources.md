@@ -7,8 +7,8 @@ The Data Department utilizes AWS for data storage (S3), data cleaning (Glue), an
 1. Install and setup the [AWS CLI and `aws-mfa`](Data/Setting Up the AWS Command Line Interface and Multi-factor Authentication)
 2. Authenticate with `aws-mfa` via the command line
 3. That's it, calls to S3 should work automatically
-  - You can use the `aws.s3` library in R or `boto3` in Python to upload, download, and manipulate S3 objects
-  - Certain packages, such as `arrow`, can also read from S3 directly (for example `read_parquet("s3://bucket-name/object")`
+    - You can use the `aws.s3` library in R or `boto3` in Python to upload, download, and manipulate S3 objects
+    - Certain packages, such as `arrow`, can also read from S3 directly (for example `read_parquet("s3://bucket-name/object")`
 
 #### R Example
 
@@ -61,20 +61,20 @@ You can use the `noctua` R package to pull small amounts of data from Athena. Th
     ```
 4. Run the following code to instantiate your connection and run a test query
 
-```r
-# Load necessary libraries
-library(DBI)
-library(noctua)
+    ```r
+    # Load necessary libraries
+    library(DBI)
+    library(noctua)
 
-# Optionally enable query caching
-noctua_options(cache_size = 10)
+    # Optionally enable query caching
+    noctua_options(cache_size = 10)
 
-# Establish connection
-AWS_ATHENA_CONN <- dbConnect(noctua::athena())
+    # Establish connection
+    AWS_ATHENA_CONN <- dbConnect(noctua::athena())
 
-# Test the connection 
-dbGetQuery(conn = AWS_ATHENA_CONN, "SELECT * FROM spatial.census LIMIT 10")
-```
+    # Test the connection 
+    dbGetQuery(conn = AWS_ATHENA_CONN, "SELECT * FROM spatial.census LIMIT 10")
+    ```
 
 ### R (Large Queries)
 
@@ -92,26 +92,30 @@ Athena queries that pull a large amount of data are best handled by Amazon's JDB
     ```
 5. Run the following code to instantiate your connection and run a test query
 
-```r
-library(DBI)
-library(RJDBC)
-
-driver_path <- "~/drivers"
-driver <- RJDBC::JDBC(
-  driverClass = "com.simba.athena.jdbc.Driver",
-  classPath = file.path(driver_path, "AthenaJDBC42_2.0.25.1001.jar"),
-  identifier.quote = "'"
-)
-
-AWS_ATHENA_JDBC <- dbConnect(
-  driver,
-  url = Sys.getenv("AWS_ATHENA_JDBC_URL"),
-  aws_credentials_provider_class = Sys.getenv("AWS_CREDENTIALS_PROVIDER_CLASS"),
-  Schema = "Default"
-)
-
-dbGetQuery(conn = AWS_ATHENA_JDBC, "SELECT * FROM spatial.census LIMIT 10")
-```
+    ```r
+    # Load necessary libraries
+    library(DBI)
+    library(RJDBC)
+    
+    # Connect to the JDBC driver
+    driver_path <- "~/drivers"
+    driver <- RJDBC::JDBC(
+      driverClass = "com.simba.athena.jdbc.Driver",
+      classPath = file.path(driver_path, "AthenaJDBC42_2.0.25.1001.jar"),
+      identifier.quote = "'"
+    )
+    
+    # Establish connection
+    AWS_ATHENA_JDBC <- dbConnect(
+      driver,
+      url = Sys.getenv("AWS_ATHENA_JDBC_URL"),
+      aws_credentials_provider_class = Sys.getenv("AWS_CREDENTIALS_PROVIDER_CLASS"),
+      Schema = "Default"
+    )
+    
+    # Test connection
+    dbGetQuery(conn = AWS_ATHENA_JDBC, "SELECT * FROM spatial.census LIMIT 10")
+    ```
 
 ### Tableau
 
