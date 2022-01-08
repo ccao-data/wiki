@@ -4,7 +4,7 @@
 
 The Real Property Income and Expense (RPIE) Data Portal helps gather data critical to the accurate and fair assessment of commercial properties in Cook County. Any data submitted for one single business property contributes to the fair and accurate property assessment not just of that property, but of similar properties throughout the county. 
 
-***
+---
 
 #### Why do I need an RPIE code for every PIN number? 
 

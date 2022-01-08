@@ -13,6 +13,11 @@
  * [External Developer Engagement Program](People/Contributing)
  * [VPN Dos and Don'ts](People/VPN)
 
+**Setup**
+
+ * [Setting Up the AWS Command Line Interface and Multi\-factor Authentication](Setup/Setting Up the AWS Command Line Interface and Multi-factor Authentication)
+ * [Connecting to AWS Resources](Setup/Connecting to AWS Resources)
+
 **Standard Operating Procedures (SOPs)**
 
  * [Sales Ratio Studies](SOPs/Sales Ratio Studies)
@@ -39,13 +44,7 @@
 
  * [AssessR R Package Documentation](https://ccao-data-science---modeling.gitlab.io/packages/assessr/reference/)
  * [CCAO R Package Documentation](https://ccao-data-science---modeling.gitlab.io/packages/ccao/reference/)
- * [Setting Up the AWS Command Line Interface and Multi\-factor Authentication](Data/Setting Up the AWS Command Line Interface and Multi-factor Authentication)
- * [Connecting to AWS Resources](Data/Connecting to AWS Resources)
  * [Property Class Definitions](Data/class-definitions.pdf) - *Available via the [CCAO R package](https://gitlab.com/ccao-data-science---modeling/packages/ccao)*
  * [Township Definitions](Data/Townships) - *Available via the [CCAO R package](https://gitlab.com/ccao-data-science---modeling/packages/ccao)*
- * [Appeal Reason Codes](https://prodassets.cookcountyassessor.com/s3fs-public/form_documents/reasoncodes.pdf) - *Used in the DKEMPL SQL table*
  * [CDU Codes](Data/CDU Codes) - *Available via the [CCAO R package](https://gitlab.com/ccao-data-science---modeling/packages/ccao)*
- * [RPIE SQL Database Data Dictionary](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content/-/blob/master/RPIE/rpie%20data%20dictionary.xlsx)
- ***
- * [(DEPRECATED) Accessing iasWorld Oracle Database](Data/Accessing iasWorld Oracle Database)
- * [(DEPRECATED) SQL Database Guide](Data/SQL Database Guide)
+ * [RPIE SQL Database Data Dictionary](RPIE/rpie-data-dictionary.xlsx)
