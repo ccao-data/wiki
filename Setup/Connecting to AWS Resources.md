@@ -73,7 +73,10 @@ You can use the `noctua` R package to pull small amounts of data from Athena. Th
     AWS_ATHENA_CONN <- dbConnect(noctua::athena())
 
     # Test the connection 
-    dbGetQuery(conn = AWS_ATHENA_CONN, "SELECT * FROM spatial.census LIMIT 10")
+    dbGetQuery(
+      conn = AWS_ATHENA_CONN,
+      "SELECT year, geoid FROM census.acs5 LIMIT 10"
+    )
     ```
 
 ### R (Large Queries)
@@ -114,7 +117,10 @@ Athena queries that pull a large amount of data are best handled by Amazon's JDB
     )
     
     # Test connection
-    dbGetQuery(conn = AWS_ATHENA_JDBC, "SELECT * FROM spatial.census LIMIT 10")
+    dbGetQuery(
+      conn = AWS_ATHENA_JDBC,
+      "SELECT year, geoid FROM census.acs5 LIMIT 10"
+    )
     ```
 
 ### Tableau
