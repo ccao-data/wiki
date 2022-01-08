@@ -96,6 +96,10 @@ Athena queries that pull a large amount of data are best handled by Amazon's JDB
 5. Run the following code to instantiate your connection and run a test query
 
     ```r
+    # Preallocate java memory (necessary for large queries) 
+    options(java.parameters = "-Xmx10g")
+    gc()
+    
     # Load necessary libraries
     library(DBI)
     library(RJDBC)
@@ -117,7 +121,7 @@ Athena queries that pull a large amount of data are best handled by Amazon's JDB
     
     # Test connection
     dbGetQuery(
-      conn = AWS_ATHENA_JDBC,
+      conn = AWS_ATHENA_CONN_JDBC,
       "SELECT year, geoid FROM census.acs5 LIMIT 10"
     )
     ```
