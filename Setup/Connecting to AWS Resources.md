@@ -85,7 +85,7 @@ Athena queries that pull a large amount of data are best handled by Amazon's JDB
 
 1. Install and setup the [AWS CLI and aws-mfa](Setup/Setting Up the AWS Command Line Interface and Multi-factor Authentication)
 2. Authenticate with `aws-mfa` via the command line
-3. Install the [JDBC Driver with AWS SDK](https://docs.aws.amazon.com/athena/latest/ug/connect-with-jdbc.html) - move the downloaded `.jar` file to `~/drivers` on Windows, Linux, or macOS
+3. Install the [JDBC Driver with AWS SDK](https://docs.aws.amazon.com/athena/latest/ug/connect-with-jdbc.html) - move the downloaded `.jar` file to `C:\Users\$USER\Documents\drivers` on Windows and `~/drivers` on Linux or macOS
 4. In your root-level `.Renviron` file, add the environmental variables below. Message @SweatyHandshake or @dfsnow for the name of the Athena results bucket. Save the file and restart your R session
     ```
     AWS_REGION=us-east-1
@@ -101,10 +101,9 @@ Athena queries that pull a large amount of data are best handled by Amazon's JDB
     library(RJDBC)
     
     # Connect to the JDBC driver
-    driver_path <- "~/drivers"
     driver <- RJDBC::JDBC(
       driverClass = "com.simba.athena.jdbc.Driver",
-      classPath = file.path(driver_path, "AthenaJDBC42_2.0.25.1001.jar"),
+      classPath = list.files("~/drivers", "^Athena.*jar$", full.names = TRUE),
       identifier.quote = "'"
     )
     
