@@ -128,8 +128,9 @@ Athena queries that pull a large amount of data are best handled by Amazon's JDB
 
 ### Tableau
 
-1. Install the [JDBC Driver with AWS SDK](https://docs.aws.amazon.com/athena/latest/ug/connect-with-jdbc.html) - move the downloaded .jar file to `C:\Program Files\Tableau\Drivers` on Windows
-2. Create a file called `athena.properties` in `C:\Users\$USER\Documents\My Tableau Repository\Datasources` with the following lines:
+1. Install the [JDBC Driver with AWS SDK](https://docs.aws.amazon.com/athena/latest/ug/connect-with-jdbc.html) - move the downloaded .jar file to `C:\Program Files\Tableau\Drivers` on Windows or `~/Library/Tableau/Drivers` on Mac
+2. Make sure [Java SE Development Kit](https://www.oracle.com/java/technologies/downloads/) is installed.
+3. Create a file called `athena.properties` in `C:\Users\$USER\Documents\My Tableau Repository\Datasources` on Windows or `~/Users/$USER/Documents/My Tableau Repository/Datasources` on Mac with the following lines:
     ```
     workgroup=read-only-with-scan-limit
     MetadataRetrievalMethod=ProxyAPI
