@@ -46,3 +46,4 @@
  * [Township Definitions](Data/Townships) - *Available via the [CCAO R package](https://gitlab.com/ccao-data-science---modeling/packages/ccao)*
  * [CDU Codes](Data/CDU Codes) - *Available via the [CCAO R package](https://gitlab.com/ccao-data-science---modeling/packages/ccao)*
  * [RPIE SQL Database Data Dictionary](RPIE/rpie-data-dictionary.xlsx)
+ * [Athena/S3 Warehouse Map](Data/warehouse_athena_map.xlsx)
