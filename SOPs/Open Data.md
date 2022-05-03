@@ -6,13 +6,13 @@ The Cook County Assessor's Office publishes data on the [Cook County Open Data P
 
 Releasing open data entails building reproducible data, documenting it, determining how and how often it should be updated, and recieving clearance from all necessary parties. These steps are outlined in further detail below.
 
-### Building the Data
+### Building Data
 
 Open data should, whenever possible, reflect data that is automatically updated (views or tables in Athena), well-maintained, or that doesn't depend on being updated often (political boundaries).  Datasets that are releasesed to the public ***must be scripted and the script must be version-controlled***. Data should not be built in a manner that is inconsistent with how it is used within the department as to avoid creating discrepancies between internal and public use of the department's data. Keep data as simple as possible - strip columns that won't be useful for end-users and don't release redundant data.
 
 Open data upload can also be automated using Socrata's SODA API and the [RSocrata package](https://github.com/Chicago/RSocrata).
 
-### Adding the Data to the Portal
+### Adding Data to the Portal
 
 The data department releases open data through the Cook County Open Data Portal, a service mainted by Socrata.  For data that lives in the department's warehouse, the preferred method for upload is through a provisioned Athena or S3 Socrata Gateway.  When creating a new dataset there will be an opportunity to 'Connect to an External Data Source (Socrata Gateway)' where available data can be viewed. Make sure to add data to the portal using the department's rather than a personal account in order to properly establish ownership of the asset.
 
