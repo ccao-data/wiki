@@ -4,7 +4,7 @@ The Cook County Assessor's Office publishes data on the [Cook County Open Data P
 
 ## Releasing Open Data
 
-Releasing open data entails building the data in a reproducible manner, documenting it, determining how and how often it should be updated, and recieving clearance from all necessary parties. These steps are outlined in further detail below:
+Releasing open data entails building reproducible data, documenting it, determining how and how often it should be updated, and recieving clearance from all necessary parties. These steps are outlined in further detail below:
 
 ### Building the Data
 
