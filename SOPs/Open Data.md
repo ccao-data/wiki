@@ -8,7 +8,7 @@ Releasing open data entails building the data in a reproducible manner, document
 
 ### Building the Data
 
-Open data should, whenever possible, reflect data that is automatically updated (views or tables in Athena), well-maintained, or that doesn't depend on being updated often (political boundaries).  Datasets that are releasesed to the public ***must be scripted and the script must be version controlled***. Data should not be built in a manner that is inconsistent with how it is used within the department as to avoid creating discrepancies between internal and public use of the department's data. Keep data as simple as possible - strip columns that won't be useful for end-users and don't release redundant data.
+Open data should, whenever possible, reflect data that is automatically updated (views or tables in Athena), well-maintained, or that doesn't depend on being updated often (political boundaries).  Datasets that are releasesed to the public ***must be scripted and the script must be version-controlled***. Data should not be built in a manner that is inconsistent with how it is used within the department as to avoid creating discrepancies between internal and public use of the department's data. Keep data as simple as possible - strip columns that won't be useful for end-users and don't release redundant data.
 
 Open data upload can also be automated using Socrata's SODA API and the [RSocrata package](https://github.com/Chicago/RSocrata).
 
