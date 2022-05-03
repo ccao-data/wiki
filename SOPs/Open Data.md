@@ -2,7 +2,33 @@ The Cook County Assessor's Office is committed to transparency. In order to fulf
 
 The Cook County Assessor's Office publishes data on the [Cook County Open Data Portal](https://datacatalog.cookcountyil.gov/browse?tags=cook+county+assessor). The [AssessR](https://ccao-data-science---modeling.gitlab.io/packages/assessr/articles/example-ratio-study.html) package leverages this open data in its documentation.
 
-## Curated Data 
+## Releasing Open Data
+
+Releasing open data entails building the data in a reproducible manner, documenting it, determining how and how often it should be updated, and recieving clearance from all necessary parties. These steps are outlined in further detail below:
+
+### Building the Data
+
+Open data should, whenever possible, reflect data that is automatically updated (views in Athena), well-maintained, or that doesn't depend on being updated often (political boundaries).  Datasets that are releasesed to the public ***must be scripted and the script must be version controlled***. Data should not be built in a manner that is inconsistent with how it is used within the department as to avoid creating discrepancies between internal and public use of the department's data. Keep data as simple as possible - strip columns that won't be useful for end-users and don't release redundant data.
+
+### Adding the Data to the Portal
+
+The data department releases open data through the Cook County Open Data Portal, a service mainted by Socrata.  For data that lives in the department's warehouse, the preferred method for upload is through a provisioned Athena or S3 Socrata Gateway.  When creating a new dataset there will be an opportunity to 'Connect to an External Data Source (Socrata Gateway)' where available data can be viewed. Make sure to add data to the portal using the department's rather than a personal account in order to properly establish ownership of the asset.
+
+During the upload process set a schedule for updates (when applicable), add dataset metadata, and document and code/recode columns.  Choose a schedule that ensures the data is current but that doesn't needlessly pull data from AWS and run up monthly operating expenses - Socrata only offers daily to monthly update schedules, so if the data changes less frequently than that it should likely be updated manually (shapefiles). Adhere to the departent's asset naming convention by prefixing the asset with 'Assessor' and tag it with `property tax` and `cook county assessor`.  Add documentation for the data to this wiki page.
+
+It is highly recommended to create a 'Story' on Socrata or add to an existing one in order to describe and vignette the data for its intended audience.
+
+### Clearance
+
+Clearance must be recieved from the following parties before private assets on the open data portal can be made public:
+
+- Chief Data Officer
+- Executive Committee, FOIA, Comms (optionally, TPI)
+- Bureau of Technology
+
+BoT may have their own clearance requirements such as adding a 'Story' on Socrata or formatting common county-related columns in a particular way. Defer to their schemas.
+
+## Currently Curated Data 
 
 The Data Department creates and maintains the following open data sets.
 
