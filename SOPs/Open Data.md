@@ -113,3 +113,10 @@ The Data Department creates and maintains the following open data sets.
 **Use cases:** Thematic mapping and location references. 
 
 **Code:** [spatial-ccao-neighborhood.R](https://gitlab.com/ccao-data-science---modeling/data-architecture/-/blob/master/aws-s3/scripts-ccao-data-warehouse-us-east-1/spatial-ccao-neighborhood.R) 
+
+## Raw Modeling Data
+
+The data department makes raw data used for modeling available through gitlab:
+
+ - [2022 single and multi-family modeling data](https://gitlab.com/ccao-data-science---modeling/models/ccao_res_avm/-/tree/2022-assessment-year/input)
+ - [2022 residential condominium modeling data](https://gitlab.com/ccao-data-science---modeling/models/ccao_condo_avm/-/tree/2021-assessment-year/input)
