@@ -118,5 +118,5 @@ The Data Department creates and maintains the following open data sets.
 
 The data department makes raw data used for modeling available through gitlab:
 
- - [2022 single and multi-family modeling data](https://gitlab.com/ccao-data-science---modeling/models/ccao_res_avm/-/tree/2022-assessment-year/input)
- - [2022 residential condominium modeling data](https://gitlab.com/ccao-data-science---modeling/models/ccao_condo_avm/-/tree/2022-assessment-year/input)
+ - [Final 2022 single and multi-family modeling input data](https://gitlab.com/ccao-data-science---modeling/models/ccao_res_avm/-/tree/2022-assessment-year/input)
+ - [Final 2022 residential condominium modeling input data](https://gitlab.com/ccao-data-science---modeling/models/ccao_condo_avm/-/tree/2022-assessment-year/input)
