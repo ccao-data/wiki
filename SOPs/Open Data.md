@@ -1,6 +1,6 @@
-The Cook County Assessor's Office is committed to transparency. In order to fulfill that commitment, the Data Department is tasked with creating and maintaining public data sets. This document outlines these data, their uses, and pertinent source code. 
+The Cook County Assessor's Office is committed to transparency. In order to fulfill that commitment, the Data Department is tasked with creating and maintaining public data sets. This document outlines these data, their uses, and pertinent source code. Data is published primarily on the [Cook County Open Data Portal](https://datacatalog.cookcountyil.gov/browse?tags=cook+county+assessor) and through GitLab. The [AssessR](https://ccao-data-science---modeling.gitlab.io/packages/assessr/articles/example-ratio-study.html) package leverages this open data in its documentation.
 
-The Cook County Assessor's Office publishes data on the [Cook County Open Data Portal](https://datacatalog.cookcountyil.gov/browse?tags=cook+county+assessor). The [AssessR](https://ccao-data-science---modeling.gitlab.io/packages/assessr/articles/example-ratio-study.html) package leverages this open data in its documentation.
+[[_TOC_]]
 
 ## Releasing Open Data
 
@@ -116,7 +116,7 @@ The Data Department creates and maintains the following open data sets.
 
 ## Raw Modeling Data
 
-The data department makes raw data used for modeling available through gitlab:
+The data department makes raw data used for modeling available through GitLab:
 
  - [Final 2022 single and multi-family modeling input data](https://gitlab.com/ccao-data-science---modeling/models/ccao_res_avm/-/tree/2022-assessment-year/input)
  - [Final 2022 residential condominium modeling input data](https://gitlab.com/ccao-data-science---modeling/models/ccao_condo_avm/-/tree/2022-assessment-year/input)
