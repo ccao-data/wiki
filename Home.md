@@ -39,10 +39,17 @@
 
 ### Data Documentation
 
+#### Packages
+
  * [AssessR R Package Documentation](https://ccao-data-science---modeling.gitlab.io/packages/assessr/reference/)
  * [CCAO R Package Documentation](https://ccao-data-science---modeling.gitlab.io/packages/ccao/reference/)
+
+#### Office Terminology
+
  * [Property Class Definitions](Data/class-definitions.pdf) - *Available via the [CCAO R package](https://gitlab.com/ccao-data-science---modeling/packages/ccao)*
  * [Township Definitions](Data/Townships) - *Available via the [CCAO R package](https://gitlab.com/ccao-data-science---modeling/packages/ccao)*
  * [CDU Codes](Data/CDU Codes) - *Available via the [CCAO R package](https://gitlab.com/ccao-data-science---modeling/packages/ccao)*
+
+#### Data Guides
  * [RPIE SQL Database Data Dictionary](RPIE/rpie-data-dictionary.xlsx)
  * [Athena/S3 Warehouse Map](Data/warehouse_athena_map.xlsx)
