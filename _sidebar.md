@@ -31,9 +31,8 @@
  * [Residential Exemptions](Residential/Residential Exemptions)
  * [Home Improvement Exemptions (288s)](Residential/Home Improvement Exemptions)
 
-**Commercial and RPIE**
+**RPIE**
 
- * [Commercial Apartments Model](https://gitlab.com/ccao-data-science---modeling/models/commercial-apartments-automated-valuation-model)
  * [RPIE Overview](RPIE/RPIE Overview)
  * [RPIE Landing Page Content](RPIE/Overview)
  * [RPIE FAQs](RPIE/FAQs)
