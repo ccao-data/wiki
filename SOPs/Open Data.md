@@ -62,7 +62,7 @@ The Data Department creates and maintains the following open data sets.
 
 **Code:** [default-vw_card_res_char.sql](https://gitlab.com/ccao-data-science---modeling/data-architecture/-/blob/master/aws-athena/views/default-vw_card_res_char.sql)
 
-### [Residential Condominium Parcel Characteristics](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Residential-Condominium-Parcel-Characteri/3r7i-mrz4)
+### [Residential Condominium Unit Characteristics](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Residential-Condominium-Unit-Characteri/3r7i-mrz4)
 
 | Timeframe    | Property Classes | Unique By | Row              | Updated  |
 | :---:        | :---:            | :---:     | :---:            | :---:    |
