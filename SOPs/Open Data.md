@@ -64,8 +64,8 @@ The Data Department creates and maintains the following open data sets.
 
 ### [Residential Condominium Unit Characteristics](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Residential-Condominium-Unit-Characteri/3r7i-mrz4)
 
-| Timeframe    | Property Classes | Unique By | Row              | Updated  |
-| :---:        | :---:            | :---:     | :---:            | :---:    |
+| Timeframe    | Property Classes | Unique By | Row              | Updated   |
+| :---:        | :---:            | :---:     | :---:            | :---:     |
 | 1999-Present | 299, 399         | PIN, Year | Condominium Unit | Bi-Weekly |
 
 **Notes:**
@@ -90,7 +90,7 @@ The Data Department creates and maintains the following open data sets.
 
 **Code:** [default-vw_pin_sale.sql](https://gitlab.com/ccao-data-science---modeling/data-architecture/-/blob/master/aws-athena/views/default-vw_pin_sale.sql)
 
-### [Historic Parcel Values](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Historic-Parcel-Values/uzyt-m557)
+### [Historic Assessed Values](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Historic-Assessed-Values/uzyt-m557)
 
 | Timeframe    | Property Classes | Unique By | Row    | Updated |
 | :---:        | :---:            | :---:     | :---:  | :---:   |
@@ -104,8 +104,8 @@ The Data Department creates and maintains the following open data sets.
 
 ### [Neighborhood Boundaries](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Neighborhood-Boundaries/pcdw-pxtg)
 
-| Timeframe | Property Classes | Unique By        | Row                  | Updated  |
-| :---:     | :---:            | :---:            | :---:                | :---:    |
+| Timeframe | Property Classes | Unique By         | Row                  | Updated  |
+| :---:     | :---:            | :---:             | :---:                | :---:    |
 | 2021      | —                | Neighborhood Code | Neighborhood Polygon | Annually |
 
 **Notes:** Refreshed yearly, but only changes with new neighborhood definitions. None are pending.
