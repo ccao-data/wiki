@@ -16,6 +16,15 @@ Our account setup requires multi-factor authentication (MFA) to use most service
 
 ---
 
+Note, when connecting through the VPN or working in-office, you may encounter a TLS error when trying to authenticate with AWS on Windows. This error is due to certificate chain issues with the AWS CLI. You can fix it by exporting the CCAO's root CA bundle and providing the path in the `C:\Users\$USERNAME\.aws\config` file.
+
+1. Search `Manage user certificates` in the Windows search bar. Then find the CCAO-specific root certificate under `Trusted Root Certificate Authorities > Certificates`.
+2. Right-click the CCAO CA, then click `All Tasks > Export`.
+3. Export the CA bundle in the base-64 X.509 format. Save the exported CA bundle somewhere accessible.
+4. Open the configuration file at `C:\Users\$USERNAME\.aws\config` and add the line `ca_bundle = $PATH_TO_EXPORTED_CERT`, where `$PATH_TO_EXPORTED_CERT` is the path to the root CA file you just generated.
+
+---
+
 Most of this README originates from these sources:
 
 - [Configuration Basics - AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html)
