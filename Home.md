@@ -28,6 +28,7 @@
  * [Condominium Model](https://gitlab.com/ccao-data-science---modeling/models/ccao_condo_avm)
  * [Residential Exemptions](Residential/Residential Exemptions)
  * [Home Improvement Exemptions (288s)](Residential/Home Improvement Exemptions)
+ * [Cook County Property Tax Ordinance](https://library.municode.com/il/cook_county/codes/code_of_ordinances?nodeId=PTIGEOR_CH74TA_ARTIIREPRTA)
 
 ### RPIE
 
