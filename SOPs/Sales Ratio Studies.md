@@ -2,16 +2,13 @@
 
 This policy governs the calculation and reporting of sales ratio studies for residential property. 
 
-A **sales ratio** is the ratio of the assessor's estimate of a property's value to its sale price. A **sales ratio study** is a statistical analysis of how accurately, uniformly, and equitably an assessor estimated property values.  
-
+A **sales ratio** is the ratio of the assessor's estimate of a property's value to its sale price. A **sales ratio study** is a statistical analysis of how accurately, uniformly, and equitably an assessor estimated property values.
 
 ## Related Information
 
-This policy governs functions contained in [AssessR](https://gitlab.com/ccao-data-science---modeling/packages/assessr), the Cook County Assessor's R Package.
+This policy governs functions contained in [AssessR](https://gitlab.com/ccao-data-science---modeling/packages/assessr), the Cook County Assessor's primary R package.
 
 This policy references the [IAAO Standard on Ratio Studies](https://www.iaao.org/media/standards/Standard_on_Ratio_Studies.pdf). 
-
-
 
 # Methods
 
@@ -23,11 +20,9 @@ This policy references the [IAAO Standard on Ratio Studies](https://www.iaao.org
 
 **Other.** Properties may also be stratified according to sale price, assessed value, physical characteristics, other geographies, and other attributes. 
 
+## Minimum Sample Size
 
-## Minimum sample size
-
-A valid ratio study for a strata requires at least 30 observations.
-
+A valid ratio study requires at least 30 observations.
 
 ## Sales Selection
 
@@ -37,34 +32,29 @@ Sales are obtained from the MyDec Web Service ('MyDec'), a service by the Illino
 
 ### Exclusion Criteria
 
-Sales ratio studies may exclude the following. 
+Sales ratio studies may exclude the following:
 
-**Multi-parcel sales.** Deeds transacted on multiple PINs are excluded.
+* **Multi-parcel sales.** Deeds transacted on multiple PINs are excluded.
+* **Foreclosures and bank sales.** Foreclosure and Real Estate Owned sales may be excluded from the sales samples. Sales are excluded based on deed type: Quitclaim Deeds, Executor Deeds, 'B' type deeds.
+* **Outlier sales.** Sales with amounts less than $10,000, and sales otherwise determined by the CCAO to be unlikely to reflect arms-length transactions, are excluded.
+* **Properties with known characteristic changes.** Properties known to have undergone physical and/or legal characteristic changes between the time of sale and assessment are excluded.
+* **Special properties.** Some residential properties classified as 'Single-Family' are valued by the 'Special Properties' division of the Valuations Department. These are excluded from the sales ratio study.
 
-**Foreclosures and bank sales.** Foreclosure and Real Estate Owned sales may be excluded from the sales samples. Sales are excluded based on deed type: Quitclaim Deeds, Executor Deeds, 'B' type deeds.
+### Comparison Years
 
-**Outlier sales.** Sales with amounts less than $10,000, and sales otherwise determined by the CCAO to be unlikely to reflect arms-length transactions, are excluded.
-
-**Properties with known characteristic changes.** Properties known to have undergone physical and/or legal characteristic changes between the time of sale and assessment are excluded.
-
-**Special properties.** Some residential properties classified as 'Single-Family' are valued by the 'Special Properties' division of the Valuations Department. These are excluded from the sales ratio study.
-
-### Comparison years
 For ratio studies used to evaluate current-year or past-year assessments, assessments should be compared to sales that occurred in the prior year. For example, 2020 assessments should be compared to sales that occurred in 2019. 
 
-The Data Department may also, in preparation for an upcoming  revaluation, conduct ratio studies of past assessments and current sales. This helps to set informal expectations to indicate magnitude and direction of market changes in the years since the past assessment. 
-
+The Data Department may also, in preparation for an upcoming revaluation, conduct ratio studies of past assessments and current sales. This helps to set informal expectations to indicate magnitude and direction of market changes in the years since the past assessment. 
 
 ## Ratio Study Code and Data Publication
-The Data Department publishes its ratio study code in [AssessR](https://gitlab.com/ccao-data-science---modeling/packages/assessr). The Data Department also publishes sales and Fair Cash Values on Cook [County's Open Data portal](https://datacatalog.cookcountyil.gov/stories/s/i22y-9sd2).
 
+The Data Department publishes its ratio study code in [AssessR](https://gitlab.com/ccao-data-science---modeling/packages/assessr). The Data Department also publishes sales and Fair Cash Values on [Cook County's Open Data portal](https://datacatalog.cookcountyil.gov/stories/s/i22y-9sd2).
 
 ## Outlier Trimming
 
 The top and bottom 5% of sales in terms of sales ratios are excluded from sales ratio studies.
 
-
-# Results & Interpretation
+# Results and Interpretation
 
 ## Results
 
@@ -78,15 +68,12 @@ The following statistics must be included in any sales ratio study. See appendix
 
 **Measures of Variance/Reliability.** Confidence intervals should accompany point estimates for COD, PRD, PRB, and Median Ratio.
 
-
 The ratio study must also include the following descriptive statistics:
 
 * Sample size (count of sold properties in the ratio study)
 * Population size (count of sold and unsold properties in the strata to which the ratio study may generalize)
 * Median sale price
 * Median estimated value
-
-
 
 ## Interpretation
 
@@ -101,23 +88,19 @@ Each statistic's point estimate is evaluated to see whether it falls within the 
 |Median Sales Ratio   |  .90 - 1.00 |The median ratio measures Accuracy: whether most estimates accurately reflect sale prices.   |
 |Sales Chasing (E.4)   | $`\le`$ 5%  |Measures the degree to which the statistics above are true reflections of the quality of assessments for sold and unsold properties.   |
 
-**Standard Met.**
-Below are the criteria to measure whether standards for Uniformity, Vertical Equity, and Accuracy have been met.
+**Standard Met.** Below are the criteria to measure whether standards for Uniformity, Vertical Equity, and Accuracy have been met.
 
 * Uniformity: if the COD is within the acceptable range, then assessments have met the standard for uniformity.
-
 * Vertical Equity: if either the PRD or PRB is within the acceptable range, then assessments have met the standard for vertical equity.
-
 * Accuracy: if the Median Ratio is within the acceptable range, then assessments have met the standard for accuracy.
 
-**High-quality assessment.**
-Assessments can be said to have met standards for high-quality assessments if standards for Uniformity, Vertical Equity, and Accuracy have been met. 
+**High-quality assessment.** Assessments can be said to have met standards for high-quality assessments if standards for Uniformity, Vertical Equity, and Accuracy have been met. 
 
 ## Validity
-If the COD is lower than 5.0 and the test for Sales Chasing suggests sales-chasing has occurred, further investigation is needed to ensure validity of the ratio study before it is used internally or externally.
+
+If the COD is lower than 5.0 and the test for Sales Chasing suggests sales chasing has occurred, further investigation is needed to ensure validity of the ratio study before it is used internally or externally.
 
 Note: CODs lower than 5.0, according to IAAO's Standard on Ratio Studies Section 9.2, may indicate issues with the validity of the ratio study (due to sales chasing), or may indicate a valid study conducted on a homogeneous strata of properties. As such, when the COD is lower than 5.0, the interpretation is nonetheless that the COD standard is met.
-
 
 # Publication
 
@@ -127,9 +110,7 @@ In addition to using ratio studies internally, the Assessor's Office is committe
 
 **Township Reporting:** The Data Department shall produce sales ratio studies for each triennially reassessed township. 
 
-
 The Data Department shall produce additional sales ratio studies as requested by the Cook County Assessor.
-
 
 # Appendix
 
@@ -152,9 +133,10 @@ The Data Department shall produce additional sales ratio studies as requested by
 **Sales Ratio Study:** A statistical analysis to evaluate the quality of assessments with respect to accuracy, uniformity, and vertical equity.
 
 **Residential Property:** A property valued solely on the market valuation standard that is used, or intended to be used, for a residential purposes, and includes:
-a) Residential condominiums;
-b) Property with six or fewer self-contained dwelling units;
-c) Vacant and marginally improved land used, or intended to be used in in conjunction with a residential property.
+
+* a) Residential condominiums;
+* b) Property with six or fewer self-contained dwelling units;
+* c) Vacant and marginally improved land used, or intended to be used in in conjunction with a residential property.
 
 **Arm's-Length:** Of or relating to dealings between two parties who are not related or not on close terms and who are presumed to have roughly equal bargaining power; not involving a confidential relationship.
 
