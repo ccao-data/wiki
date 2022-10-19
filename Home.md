@@ -14,7 +14,7 @@
 ### Setup
 
  * [Setting Up the AWS Command Line Interface and Multi\-factor Authentication](Setup/Setting Up the AWS Command Line Interface and Multi-factor Authentication)
- * [Connecting to AWS Resources](Setup/Connecting to AWS Resources)
+ * [Connecting to AWS Resources](Setup/Connecting-to-AWS-Resources)
 
 ### Standard Operating Procedures (SOPs)
 
