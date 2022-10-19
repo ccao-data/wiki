@@ -3,7 +3,7 @@
 ##### The Data Science Department
 
  * [Handbook](Handbook/Handbook)
- * [Mission, Vision, and Values](Handbook/Mission Vision Values)
+ * [Mission, Vision, and Values](Handbook/Mission-Vision-Values)
  * [Resources](Handbook/Resources)
  * [Glossary](Handbook/Glossary)
 
@@ -15,14 +15,14 @@
 
 ##### Setup
 
- * [Setting Up the AWS Command Line Interface and Multi\-factor Authentication](Setup/Setting Up the AWS Command Line Interface and Multi-factor Authentication)
- * [Connecting to AWS Resources](Setup/Connecting to AWS Resources)
+ * [Setting Up the AWS Command Line Interface and Multi\-factor Authentication](Setup/Setting-Up-the-AWS-Command-Line-Interface-and-Multi-factor-Authentication)
+ * [Connecting to AWS Resources](Setup/Connecting-to-AWS-Resources)
 
 ##### Standard Operating Procedures (SOPs)
 
- * [Sales Ratio Studies](SOPs/Sales Ratio Studies)
- * [Desk Review](SOPs/Desk Review)
- * [Open Data](SOPs/Open Data)
+ * [Sales Ratio Studies](SOPs/Sales-Ratio-Studies)
+ * [Desk Review](SOPs/Desk-Review)
+ * [Open Data](SOPs/Open-Data)
 
 ##### Residential
 
@@ -37,8 +37,8 @@
  * [RPIE Overview](RPIE/RPIE Overview)
  * [RPIE Landing Page Content](RPIE/Overview)
  * [RPIE FAQs](RPIE/FAQs)
- * [RPIE Privacy Policy](RPIE/Privacy Policy)
- * [RPIE Details](RPIE/What To Expect)
+ * [RPIE Privacy Policy](RPIE/Privacy-Policy)
+ * [RPIE Details](RPIE/What-To-Expect)
 
 ##### Data Documentation
 
