@@ -32,11 +32,11 @@
 
 ### RPIE
 
- * [RPIE Landing Page Content](RPIE/Overview.md)
- * [RPIE FAQs](RPIE/FAQs.md)
- * [RPIE Privacy Policy](RPIE/Privacy-Policy.md)
- * [RPIE Details](RPIE/What-To-Expect.md)
- * [RPIE 2021 Form](RPIE/RPIE2021.pdf)
+ * [RPIE Landing Page Content](RPIE/Overview)
+ * [RPIE FAQs](RPIE/FAQs)
+ * [RPIE Privacy Policy](RPIE/Privacy-Policy)
+ * [RPIE Details](RPIE/What-To-Expect)
+ * [RPIE 2021 Form](RPIE/RPIE2021)
 
 ### Data Documentation
 
