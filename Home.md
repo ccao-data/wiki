@@ -57,3 +57,4 @@
  * [Data Catalog](Data/data_catalog.xlsx)
  * [iasWorld Tables](Data/iasworld_tables.xlsx)
  * [iasWorld Keys](Data/Primary_Foreign_Keys_for_iasW_DB_-_in_use_as_of_6.14.21.xlsx)
+ * [iasWorld ERD (Preliminary Draft)](Data/system_of_record_erd.pdf)
