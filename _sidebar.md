@@ -57,7 +57,8 @@
 
  * [RPIE SQL Database Data Dictionary](RPIE/rpie-data-dictionary.xlsx)
  * [Athena/S3 Warehouse Map](Data/warehouse_athena_map.xlsx)
-* [Data Catalog](Data/data_catalog.xlsx)
+ * [Data Catalog](Data/data_catalog.xlsx)
  * [iasWorld Tables](Data/iasworld_tables.xlsx)
  * [iasWorld Keys](Data/Primary_Foreign_Keys_for_iasW_DB_-_in_use_as_of_6.14.21.xlsx)
+ * [iasWorld ERD (Preliminary Draft)](Data/system_of_record_erd.pdf)
 
