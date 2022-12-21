@@ -71,48 +71,42 @@ A more detailed description of this pipeline can be found in the [Talent reposit
 
 ## Performance Reviews and Feedback
 
-The Data Department believes that 360 performance evaluation is necessary to fostering the development of both employees and managers. Performance reviews are designed to help employees identify and eliminate barriers to their individual professional advancement. There are four components to the performance review process.
+The Data Department believes consistent performance evaluation is necessary for both employees and managers. Formal performance evaluations help employees identify and eliminate barriers to their individual professional success, while informal feedback sessions help employees and managers identify any performance/communication issues and keep the department running smoothly.
 
-Each employee's performance review will be coordinated using a GitLab issue populated from a [template](https://gitlab.com/ccao-data-science---modeling/people/employment/-/tree/master/.gitlab/issue_templates). The title of the issue should be "Annual Performance Review: [Employee Name]." The due date should be two days after the scheduled performance review meeting.
+### Formal Performance Evaluation
 
-### Self-evaluation
+For information on the formal CCAO performance evaluation process, see [Section 3 of the CCAO Employee Handbook](http://intranet/filedownloads/EmployeeHandbook.pdf).
 
-Each employee should complete a [self-evaluation](https://gitlab.com/ccao-data-science---modeling/people/employment/-/blob/master/forms/performance-eval/360%20Evaluation%20-%20Employee%20Self%20Evaluation.docx) of their work performance prior to participating in a performance review meeting with their supervisor. The purpose of the self-evaluation is two-fold. First, it helps employees understand the framework under which they are being evaluated. Second, by comparing an employee's self-evaluation to their supervisor's evaluation, we can identify instances where the employee was unable to anticipate their supervisor's comments. The annual performance review should now be the first time an employee is made aware of issues. 
+### Informal Feedback
 
-Employees can choose not to share their self-evaluations with their supervisor.
+In addition to the formal performance evaluation process, the Data Department maintains a separate process for sharing informal feedback. The ultimate goal of this process is to make the Data Department function as well as possible by:
 
-### Supervisor Evaluation
+* Raising any performance issues early, rather than at the formal evaluation stage
+* Providing a mechanism to resolve internal conflicts within the Data Department
+* Allowing employees and interns to provide feedback to their supervisor
 
-Each employee should complete a supervisor evaluation appropriate to the level of their supervisor. This evaluation will be shared with the supervisor and is designed to help managers identify areas of weakness in their management practices. Supervisor evaluations are specific to each supervisory level:
+#### Check-ins
 
-* [Deputy](https://gitlab.com/ccao-data-science---modeling/people/employment/-/blob/master/forms/performance-eval/360%20Evaluation%20-%20Employee%20Evaluating%20Deputy.docx)
-* Director
-* Senior Data Scientist
- 
-Employees can choose not to share their supervisor-evaluations with their supervisor. 
+Interns and new employees have weekly check-ins with their immediate supervisor. During these check-ins, the supervisor will:
 
-### Peer Evaluation
+* Ensure that assigned work is on-track and likely to meet any upcoming deadlines 
+* Provide feedback on work completed so far
+* Try to remove any blockers preventing further work (e.g. give guidance on a particularly difficult coding problem)
 
-Employees can request [peer evaluations](https://gitlab.com/ccao-data-science---modeling/people/employment/-/blob/master/forms/performance-eval/360%20Evaluation%20-%20Employee%20Peer%20Evaluation.docx) from another employee of the Cook County Assessor's Office. This peer cannot be in the supervisory chain for the employee, and must have worked with the employee on a significant project, or regularly as part of their assigned duties. Peer evaluations will be shared with both the employee and the supervisor. Supervisors cannot request peer evaluations for their employees.
+#### 1:1s
 
-### Performance Evaluation Templates
+Every 2 weeks all employees will have a 1:1 (one on one) with their immediate supervisor. The goal of this meeting is to exchange feedback, both from supervisor to employee and from employee to supervisor (i.e. managing up).
 
-Performance evaluations are a two-part process. First, the evaluator creates two issue tickets in the [employment repository](https://gitlab.com/ccao-data-science---modeling/people/employment). The first issue ticket covers the work the evaluator and evaluatee must complete *prior* to the performance management meeting. The second issue ticket covers the meeting itself, and is blocked by the first ticket. 
+This meeting is also typically used to discuss organization goals, manage ongoing projects, discuss any upcoming blockers, and ensure that the employee has everything they need to perform optimally. 
 
-The first issue ticket should be populated by the correct template, depending on the job title of the evaluator, and the Shakman exempt status of the evaluatee. The grid below indicates which template should be used.
+# CCAO Documents and Forms
 
-| Evaluator | Evaluatee | Template Name |
-| :---------| :---------|:--------------|
-| Deputy    | Shakman exempt | [Deputy evaluating Shakman exempt ](https://gitlab.com/ccao-data-science---modeling/people/employment/-/blob/master/.gitlab/issue_templates/deputy-performance-eval-preparation-exempt.md) |
-| Deputy    | Shakman non-exempt | [Deputy evaluating Shakman non-exempt](https://gitlab.com/ccao-data-science---modeling/people/employment/-/blob/master/.gitlab/issue_templates/deputy-performance-eval-preparation-non-exempt.md) |
-| Non deputy    | Shakman Exempt | TBD |
-| Non deputy    | Shakman Non-exempt | TBD |
-
-The supervisor and employee complete the performance evaluation process as outlined in the employee handbook.
+* See the [CCAO HR intranet site](http://intranet/humanresources.aspx) for general forms and information, including the Employee Handbook, Employment Plan, and pay schedule
 
 # Work Terminal Setup
 
-* [See Onboarding](People/Onboarding)
+* See [Onboarding](People/Onboarding) for computer and equipment setup
+* See the [Setup](https://gitlab.com/groups/ccao-data-science---modeling/-/wikis/home#setup) section of the wiki for troubleshooting
 
 # Working Remotely 
 
