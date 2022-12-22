@@ -42,7 +42,7 @@ We value caring for others. Demonstrating we care for people provides an effecti
 
 The incentives in the public sector are different than in the private sector. We should be willing to invest in people and engage in open dialogue, _even when that slows down production_. For example, it may be better to assign work to a team member because they need practice in a technical area, not because they will execute the task faster or better than other team members.
 
-### Negative feedback is 1-1
+### Negative feedback is 1-on-1
 
 Give negative feedback in the smallest setting possible. If you are unhappy with anything (your duties, your colleague, your boss, your salary, your location, your computer), please let your boss, or the CDO, know as soon as you realize it. We want to solve problems while they are **small**.
 

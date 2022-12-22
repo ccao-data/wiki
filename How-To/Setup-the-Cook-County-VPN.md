@@ -24,4 +24,4 @@ Various services used by the Data Department are only available while connected 
 | Microsoft   | Teams |  |
 | Microsoft   | Outlook |  |
 | Amazon      | [AWS Console](https://ccao-ds.signin.aws.amazon.com/console) |  |
-| Amazon      | AWS CLI | See [CLI setup](Setup/Setup-the-AWS-Command-Line-Interface-and-Multi-factor-Authentication) |
+| Amazon      | AWS CLI | See [CLI setup](How-To/Setup-the-AWS-Command-Line-Interface-and-Multi-factor-Authentication) |

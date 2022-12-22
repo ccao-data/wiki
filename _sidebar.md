@@ -13,12 +13,12 @@
 * [Onboarding](People/Onboarding)
 * [External Developer Engagement Program](People/Contributing)
 
-##### Setup
+##### How-To
 
-* [Setup the Cook County VPN](Setup/Setup-the-Cook-County-VPN)
-* [Setup the AWS Command Line Interface and Multi-factor Authentication](Setup/Setup-the-AWS-Command-Line-Interface-and-Multi-factor-Authentication)
-* [Connect to AWS Resources](Setup/Connect-to-AWS-Resources)
-* [Administer Users on CCAO Services](Setup/Administer-Users-on-CCAO-Services)
+* [Setup the Cook County VPN](How-To/Setup-the-Cook-County-VPN)
+* [Setup the AWS Command Line Interface and Multi-factor Authentication](How-To/Setup-the-AWS-Command-Line-Interface-and-Multi-factor-Authentication)
+* [Connect to AWS Resources](How-To/Connect-to-AWS-Resources)
+* [Administer Users on CCAO Services](How-To/Administer-Users-on-CCAO-Services)
 
 ##### Standard Operating Procedures (SOPs)
 

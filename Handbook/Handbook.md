@@ -93,9 +93,9 @@ Interns and new employees have weekly check-ins with their immediate supervisor.
 * Provide feedback on work completed so far
 * Try to remove any blockers preventing further work (e.g. give guidance on a particularly difficult coding problem)
 
-#### 1:1s
+#### 1-on-1s
 
-Every 2 weeks all employees will have a 1:1 (one on one) with their immediate supervisor. The goal of this meeting is to exchange feedback, both from supervisor to employee and from employee to supervisor (i.e. managing up).
+Every 2 weeks all employees will have a 1-on-1 with their immediate supervisor. The goal of this meeting is to exchange feedback, both from supervisor to employee and from employee to supervisor (i.e. managing up).
 
 This meeting is also typically used to discuss organization goals, manage ongoing projects, discuss any upcoming blockers, and ensure that the employee has everything they need to perform optimally. 
 
@@ -106,7 +106,7 @@ This meeting is also typically used to discuss organization goals, manage ongoin
 # Work Terminal Setup
 
 * See [Onboarding](People/Onboarding) for computer and equipment setup
-* See the [Setup](https://gitlab.com/groups/ccao-data-science---modeling/-/wikis/home#setup) section of the wiki for troubleshooting
+* See the [How-To](https://gitlab.com/groups/ccao-data-science---modeling/-/wikis/home#how-to) section of the wiki for further tutorials and troubleshooting
 
 # Working Remotely 
 
