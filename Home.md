@@ -14,7 +14,7 @@
 ### Setup
 
 * [Setup the Cook County VPN](Setup/Setup-the-Cook-County-VPN)
-* [Setup the AWS Command Line Interface and Multi\-factor Authentication](Setup/Setup-the-AWS-Command-Line-Interface-and-Multi‐factor-Authentication)
+* [Setup the AWS Command Line Interface and Multi-factor Authentication](Setup/Setup-the-AWS-Command-Line-Interface-and-Multi-factor-Authentication)
 * [Connect to AWS Resources](Setup/Connect-to-AWS-Resources)
 
 ### Standard Operating Procedures (SOPs)
