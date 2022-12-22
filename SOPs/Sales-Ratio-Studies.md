@@ -28,7 +28,7 @@ A valid ratio study requires at least 30 observations.
 
 ### Data Source
 
-Sales are obtained from the MyDec Web Service ('MyDec'), a service by the Illinois Department of Revenue. They are [pre-processed](https://gitlab.com/groups/ccao-data-science---modeling/-/wikis/SOPs/Open%20Data#parcel-sales) to correct, for example, multiple deeds recorded on a given PIN on a single day listing different transaction amounts.
+Sales are obtained from the MyDec Web Service ('MyDec'), a service by the Illinois Department of Revenue. They are [pre-processed](https://gitlab.com/groups/ccao-data-science---modeling/-/wikis/SOPs/Open-Data#parcel-sales) to correct, for example, multiple deeds recorded on a given PIN on a single day listing different transaction amounts.
 
 ### Exclusion Criteria
 

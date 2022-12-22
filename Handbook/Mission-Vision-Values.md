@@ -70,7 +70,7 @@ Everything produced by our department will be public by default. If something is
 
 The public process does two things: allows others to benefit from the conversation and acts as a filter. Since there is only a limited amount of time, we prioritize conversations that a wider audience can benefit from.
 
-In line with our value of transparency and being public by default, all team member profiles should be public. Public profiles also enable broader collaboration and efficiencies between teams. To do so, please make sure that the checkbox under the [Private profile](https://docs.gitlab.com/ee/user/profile/#private-profile) option is unchecked [in your profile settings](https://gitlab.com/profile/). If you do not feel comfortable with your full name or location on your profile, please change it to what feels appropriate to you as these are displayed even on private profiles.
+In line with our value of transparency and being public by default, all team member profiles should be public. Public profiles also enable broader collaboration and efficiencies between teams. To do so, please make sure that the checkbox under the [Private profile](https://docs.gitlab.com/ee/user/profile/#make-your-user-profile-page-private) option is unchecked [in your profile settings](https://gitlab.com/-/profile). If you do not feel comfortable with your full name or location on your profile, please change it to what feels appropriate to you as these are displayed even on private profiles.
 
 If you believe something shouldn't be public that currently is (or vice versa), then [email the Data Department](mailto:Assessor.Data@cookcountyil.gov).
 
@@ -218,7 +218,7 @@ Don't let your desire to be involved early or to see your solution implemented s
 
 ### Focus on improvement
 
-We believe great agencies sound negative because they focus on what they can improve, not on what is working. Our first question in every conversation with someone outside the organization should be: What do you think we can improve? This doesn't mean we don't recognize our successes; for example, see our [Say Thanks](#say-thanks) value. We are positive about the future of the agency; we are present-day pessimists and long-term optimists.
+We believe great agencies sound negative because they focus on what they can improve, not on what is working. Our first question in every conversation with someone outside the organization should be: What do you think we can improve? This doesn't mean we don't recognize our successes; for example, see our [say thanks](#say-thanks) value. We are positive about the future of the agency; we are present-day pessimists and long-term optimists.
 
 ### Do things that don't scale
 
@@ -272,7 +272,7 @@ Team members should first search for their own answers and, if an answer is not 
 
 ### Accepting uncertainty
 
-We should strive to accept that there are things that we don't know about the work we're trying to do, and that the best way to drive out that uncertainty is not by layering analysis and conjecture over it, but rather accepting it and moving forward, driving it out as we go along. Wrong solutions can be fixed, but non-existent ones aren't adjustable at all. [The Clever PM Blog](https://www.cleverpm.com/2018/08/23/accepting-uncertainty-is-the-key-to-agility/)
+We should strive to accept that there are things that we don't know about the work we're trying to do, and that the best way to drive out that uncertainty is not by layering analysis and conjecture over it, but rather accepting it and moving forward, driving it out as we go along. Wrong solutions can be fixed, but non-existent ones aren't adjustable at all. See the [Clever PM Blog](https://www.cleverpm.com/2018/08/23/accepting-uncertainty-is-the-key-to-agility/).
 
 ## Why Have Values?
 

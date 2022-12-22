@@ -68,7 +68,7 @@ The ratio of the assessor's estimated [Assessed Value](#assessed-value-av) to th
 \text{Assessment Ratio}_t = \frac{\text{Assessor's Estimated Assessed Value}_t}{\text{Sale Price}_{t}}
 ```
 
-:warning: NOTE: The CCAO typically uses lagged/leading sales when calculating sales/assessment ratios. See the [Sales Ratio Study SOP](/SOPs/Sales%20Ratio%20Studies) for more details.
+:warning: NOTE: The CCAO typically uses lagged/leading sales when calculating sales/assessment ratios. See the [Sales Ratio Study SOP](/SOPs/Sales-Ratio-Studies) for more details.
 
 #### Coefficient of Dispersion (COD)
 
@@ -112,7 +112,7 @@ The ratio of the assessor's estimated [Fair Cash Value](#fair-cash-value-fcv) to
 \text{Sales Ratio}_t = \frac{\text{Assessor's Estimated Fair Cash Value}_{t}}{\text{Sale Price}_{t}}
 ```
 
-:warning: NOTE: The CCAO typically uses lagged/leading sales when calculating sales/assessment ratios. See the [Sales Ratio Study SOP](/SOPs/Sales%20Ratio%20Studies) for more details.
+:warning: NOTE: The CCAO typically uses lagged/leading sales when calculating sales/assessment ratios. See the [Sales Ratio Study SOP](/SOPs/Sales-Ratio-Studies) for more details.
 
 #### Sales Ratio Study
 

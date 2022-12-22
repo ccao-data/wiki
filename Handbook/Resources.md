@@ -44,19 +44,16 @@ Useful materials that give an overview of Cook County's property tax system and 
 - [Chicago Triad Assessment Report (2018) - Civic Consulting Alliance](https://prodassets.cookcountyassessor.com/s3fs-public/reports/2018ChicagoTriadSRSvf.pdf) - Study of 2018 assessment quality in the Chicago triad
 - [2020 Cook County Tax Rate Report](https://www.cookcountyclerkil.gov/sites/default/files/publications/2020_Tax_Rate_Report_Web.pdf) - Clerk’s annual tax rate report, for tax year 2020
 - [Report on Property Taxes in Wicker Park - Block Club Chicago](https://blockclubchicago.org/2021/03/23/after-decades-in-wicker-park-senior-homeowners-forced-out-by-skyrocketing-property-taxes-this-neighborhood-has-broken-my-heart/) - Story on how increases in assessed value are affecting Wicker Park
-- [City of Chicago Property Tax Explainer](http://chicago.github.io/annual-financial-analysis/Revenue-History/Property/) - Static site from the City that explains taxing districts, TIFs, and more
-- [State of Illinois Property Tax System](https://www2.illinois.gov/rev/research/publications/Documents/localgovernment/ptax-1004.pdf) - A long PDF from the Illinois Department of Revenue explaining property taxes in Illinois
+- [State of Illinois Property Tax System](https://tax.illinois.gov/content/dam/soi/en/web/tax/research/publications/documents/localgovernment/ptax-1004.pdf) - A long PDF from the Illinois Department of Revenue explaining property taxes in Illinois
 
 ## R
 
 ##### Books and Guides
 
-- [:exclamation: R for Data Science](https://r4ds.had.co.nz/) - Classic book on data munging and the basics of modeling, highly recommended
+- [:exclamation: R for Data Science](https://r4ds.hadley.nz) - Classic book on data munging and the basics of modeling, highly recommended
 - [:star: Advanced R](http://adv-r.had.co.nz/Introduction.html) - Extremely good overview of the R language, its quirks, and how to use it effectively
 - [:star: Package Development in R](https://r-pkgs.org/) - Book on how to develop, use, and test R packages
 - [:star: Efficient R Programming](https://csgillespie.github.io/efficientR/) - Online book covering how make R code faster to type and run
-- [Making R Code Faster](https://robinsones.github.io/Making-R-Code-Faster-A-Case-Study/) - Blog post on the basics of speeding up slow code
-- [Optimizing Your R Code](https://www.statworx.com/ch/blog/optimising-your-r-code-a-guided-example/) - Blog post on how to benchmark and optimize bottlenecks
 - [Debugging with RStudio](https://support.rstudio.com/hc/en-us/articles/200713843?version=1.3.959&mode=server#introduction) - How to use RStudio's built-in debugging features
 - [Sharing Data](https://github.com/jtleek/datasharing) - A nice guide on how to share data with others
 - [Stat 545](https://stat545.com/) - A very thorough walkthrough of data wrangling and exploration in R, does not cover stats
@@ -74,7 +71,6 @@ Useful materials that give an overview of Cook County's property tax system and 
 - [Programming with dplyr](https://cran.r-project.org/web/packages/dplyr/vignettes/programming.html) - A quick rundown on how to write functions using the `dplyr` library
 - [Using LightGBM in R](https://lightgbm.readthedocs.io/en/latest/R/index.html) - How to use the LightGBM boosted tree framework in R
 - [:exclamation: renv Overview](https://rstudio.github.io/renv/articles/renv.html) - A short vignette on how to use `renv`, R's local dependency management system
-- [Speeding Up OLS](https://nelsonareal.net/blog/2017/06/speeding_up_ols.html) - Using `fastLm()` for quicker regressions
 - [Parallel Parameter Tuning in Tidymodels](https://tune.tidymodels.org/articles/extras/optimizations.html#parallel-processing)
 
 ##### Shiny
@@ -133,7 +129,6 @@ Useful materials that give an overview of Cook County's property tax system and 
 - [:star: Max Kuhn's Applied Predictive Modeling](http://appliedpredictivemodeling.com/toc) - One of the best books on predictive modeling. Extremely clear and comprehensive
 - [Stacked Model Example with Ames Housing Dataset](https://www.kaggle.com/hansjoerg/glmnet-xgboost-and-svm-using-tidymodels)
 - [Scikit-learn Algorithm Cheatsheet](https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html) - A flowchart to choosing an ML estimator 
-- [Super-Learners with Tidymodels](https://www.alexpghayes.com/blog/implementing-the-super-learner-with-tidymodels/) - Blog post on how to create ensemble models in Tidymodels
 
 ##### Statistics
 
@@ -152,7 +147,7 @@ Useful materials that give an overview of Cook County's property tax system and 
 
 ## Spatial Data
 
-- [:star: R-Spatial Spatial Data Science Book](www.r-spatial.org/book) - Extremely thorough, brand-new book on spatial data in R. Also covers general GIS concepts like reference systems, geometry types, etc.
+- [:star: R-Spatial Spatial Data Science Book](https://www.r-spatial.org/book) - Extremely thorough, brand-new book on spatial data in R. Also covers general GIS concepts like reference systems, geometry types, etc.
 - [:star: CSDS Spatial Data Tutorials](https://spatialanalysis.github.io/tutorials/) - List of tutorials for manipulating spatial data in R, created by UChicago's Center for Spatial Data Science
 - [Simple Features for R](https://r-spatial.github.io/sf/articles/sf1.html) - Long vignette on R's `sf` library, its design, and how to use it
 - [Geofabrik](https://download.geofabrik.de/) - Data extracts from the entire OpenStreetMap (OSM) database. Useful for calculating distances
