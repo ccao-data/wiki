@@ -51,16 +51,14 @@
 
 *Office Terminology*
 
-* [Property Class Definitions](Data/class-definitions.pdf) - *Available via the [CCAO R package](https://gitlab.com/ccao-data-science---modeling/packages/ccao)*
+* [Property Class Definitions](Data/Class-Definitions.pdf) - *Available via the [CCAO R package](https://gitlab.com/ccao-data-science---modeling/packages/ccao)*
 * [Township Definitions](Data/Townships) - *Available via the [CCAO R package](https://gitlab.com/ccao-data-science---modeling/packages/ccao)*
 * [CDU Codes](Data/CDU Codes) - *Available via the [CCAO R package](https://gitlab.com/ccao-data-science---modeling/packages/ccao)*
 
 *Data Guides*
 
 * [RPIE SQL Database Data Dictionary](RPIE/rpie-data-dictionary.xlsx)
-* [Athena/S3 Warehouse Map](Data/warehouse_athena_map.xlsx)
-* [Data Catalog](Data/data_catalog.xlsx)
-* [iasWorld Tables](Data/iasworld_tables.xlsx)
-* [iasWorld Keys](Data/Primary_Foreign_Keys_for_iasW_DB_-_in_use_as_of_6.14.21.xlsx)
-* [iasWorld ERD (Preliminary Draft)](Data/system_of_record_erd.pdf)
-
+* [Data Catalog](Data/Data-Catalog.xlsx)
+* [iasWorld Tables](Data/iasWorld-Tables.xlsx)
+* [iasWorld Keys](Data/iasWorld-PK-FK-2021-06-14.xlsx) - *As of June 14, 2021*
+* [iasWorld ERD (Preliminary Draft)](Data/iasWorld-ERD.pdf)
