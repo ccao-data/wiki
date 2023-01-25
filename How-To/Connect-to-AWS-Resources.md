@@ -4,7 +4,7 @@ The Data Department utilizes AWS for data storage (S3), data cleaning (Glue), an
 
 ## S3
 
-1. Install and setup the [AWS CLI and aws-mfa](How-To/Setup-the-AWS-Command-Line-Interface-and-Multi‐factor-Authentication)
+1. Install and setup the [AWS CLI and aws-mfa](How-To/Setup-the-AWS-Command-Line-Interface-and-Multi-factor-Authentication)
 2. Authenticate with `aws-mfa` via the command line
 3. That's it, calls to S3 should work automatically
     - You can use the `aws.s3` library in R or `boto3` in Python to upload, download, and manipulate S3 objects
