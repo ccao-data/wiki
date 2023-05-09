@@ -42,7 +42,7 @@ The Data Department creates and maintains the following open data sets.
 
 **Notes**: Contains a cornucopia of locational and spatial data for all parcels in Cook County.
 
-**Use cases:** Joining parcel-level data to this dataset allows analysis and reporting across a number of different political, tax, Census, and other boundaries. Distances to a number of common amenities can be used for spatial analysis.
+**Use cases:** Joining parcel-level data to this dataset allows analysis and reporting across a number of different political, tax, Census, and other boundaries.
 
 **Code:** [default-vw_pin_universe.sql](https://gitlab.com/ccao-data-science---modeling/data-architecture/-/blob/master/aws-athena/views/default-vw_pin_universe.sql)
 
@@ -101,6 +101,30 @@ The Data Department creates and maintains the following open data sets.
 **Use cases:** Alone, can characterize assessments in a given area. Can be combined with characteristic data to make more nuanced generalizations about assessments. Can be combined with sales data to conduct ratio studies. 
 
 **Code:** [default-vw_pin_history.sql](https://gitlab.com/ccao-data-science---modeling/data-architecture/-/blob/master/aws-athena/views/default-vw_pin_history.sql)
+
+### [Historic Appeals](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Historic-Appeals/y282-6ig3)
+
+| Time Frame   | Property Classes | Unique By | Row    | Updated |
+| :---:        | :---:            | :---:     | :---:  | :---:   |
+| 1999-Present | All              | PIN, Year | Parcel | Monthly |
+
+**Notes:** Refreshed monthly, data is updated as towns are mailed/certified by Valuations. 
+
+**Use cases:** Alone, can be used to investigate appeal trends. Can be combined with geographies to see how AV shifts around the county between mailing and assessor certified stages. 
+
+**Code:** [default-vw_pin_appeal.sql](https://gitlab.com/ccao-data-science---modeling/data-architecture/-/blob/master/aws-athena/views/default-vw_pin_appeal.sql)
+
+### [Parcel Addresses](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Addresses/3723-97qp)
+
+| Time Frame   | Property Classes | Unique By | Row    | Updated |
+| :---:        | :---:            | :---:     | :---:  | :---:   |
+| 1999-Present | All              | PIN, Year | Parcel | Monthly |
+
+**Notes:** Refreshed monthly, data is updated as towns are mailed/certified by Valuations. 
+
+**Use cases:** Can be used for geocoding or joining address-level data to other datasets. 
+
+**Code:** [default-vw_pin_appeal.sql](https://gitlab.com/ccao-data-science---modeling/data-architecture/-/blob/master/aws-athena/views/default-vw_pin_address.sql)
 
 ### [Neighborhood Boundaries](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Neighborhood-Boundaries/pcdw-pxtg)
 
