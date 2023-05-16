@@ -126,6 +126,18 @@ The Data Department creates and maintains the following open data sets.
 
 **Code:** [default-vw_pin_appeal.sql](https://gitlab.com/ccao-data-science---modeling/data-architecture/-/blob/master/aws-athena/views/default-vw_pin_address.sql)
 
+### [Parcel Proximity](https://datacatalog.cookcountyil.gov/dataset/Assessor-Parcel-Proximity/xk78-2fxq)
+
+| Time Frame   | Property Classes | Unique By | Row    | Updated |
+| :---:        | :---:            | :---:     | :---:  | :---:   |
+| 2000-Present | All              | PIN, Year | Parcel | Monthly |
+
+**Notes:** Refreshed monthly, data is updated yearly as spatial files are made available. 
+
+**Use cases:** Can be used to isolate parcels by distance to specific spatial features. 
+
+**Code:** [proximity-vw_pin10_proximity.sql](https://gitlab.com/ccao-data-science---modeling/data-architecture/-/blob/master/aws-athena/views/proximity-vw_pin10_proximity.sql)
+
 ### [Neighborhood Boundaries](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Neighborhood-Boundaries/pcdw-pxtg)
 
 | Time Frame | Property Classes | Unique By         | Row                  | Updated  |
