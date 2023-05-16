@@ -128,9 +128,9 @@ The Data Department creates and maintains the following open data sets.
 
 ### [Parcel Proximity](https://datacatalog.cookcountyil.gov/dataset/Assessor-Parcel-Proximity/xk78-2fxq)
 
-| Time Frame   | Property Classes | Unique By | Row    | Updated |
-| :---:        | :---:            | :---:     | :---:  | :---:   |
-| 2000-Present | All              | PIN, Year | Parcel | Monthly |
+| Time Frame   | Property Classes | Unique By   | Row    | Updated |
+| :---:        | :---:            | :---:       | :---:  | :---:   |
+| 2000-Present | All              | PIN10, Year | Parcel | Monthly |
 
 **Notes:** Refreshed monthly, data is updated yearly as spatial files are made available. 
 
