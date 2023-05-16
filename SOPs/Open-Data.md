@@ -126,7 +126,7 @@ The Data Department creates and maintains the following open data sets.
 
 **Code:** [default-vw_pin_appeal.sql](https://gitlab.com/ccao-data-science---modeling/data-architecture/-/blob/master/aws-athena/views/default-vw_pin_address.sql)
 
-### [Parcel Proximity](https://datacatalog.cookcountyil.gov/dataset/Assessor-Parcel-Proximity/xk78-2fxq)
+### [Parcel Proximity](https://datacatalog.cookcountyil.gov/dataset/Assessor-Parcel-Proximity/ydue-e5u3)
 
 | Time Frame   | Property Classes | Unique By   | Row    | Updated |
 | :---:        | :---:            | :---:       | :---:  | :---:   |
