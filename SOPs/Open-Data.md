@@ -90,7 +90,7 @@ The Data Department creates and maintains the following open data sets.
 
 **Code:** [default-vw_pin_sale.sql](https://gitlab.com/ccao-data-science---modeling/data-architecture/-/blob/master/aws-athena/views/default-vw_pin_sale.sql)
 
-### [Historic Assessed Values](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Historic-Assessed-Values/uzyt-m557)
+### [Assessed Values](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Assessed-Values/uzyt-m557)
 
 | Time Frame   | Property Classes | Unique By | Row    | Updated |
 | :---:        | :---:            | :---:     | :---:  | :---:   |
@@ -102,7 +102,7 @@ The Data Department creates and maintains the following open data sets.
 
 **Code:** [default-vw_pin_history.sql](https://gitlab.com/ccao-data-science---modeling/data-architecture/-/blob/master/aws-athena/views/default-vw_pin_history.sql)
 
-### [Historic Appeals](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Historic-Appeals/y282-6ig3)
+### [Appeals](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Appeals/y282-6ig3)
 
 | Time Frame   | Property Classes | Unique By | Row    | Updated |
 | :---:        | :---:            | :---:     | :---:  | :---:   |
