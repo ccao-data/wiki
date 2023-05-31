@@ -34,7 +34,7 @@ BoT may have their own clearance requirements such as adding a 'Story' on Socrat
 
 The Data Department creates and maintains the following open data sets.
 
-### [Parcel Universe](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Universe/tx2p-k2g9)
+### [Parcel Universe](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Universe/nj4t-kc8j)
 
 | Time Frame   | Property Classes | Unique By | Row    | Updated |
 | :---:        | :---:            | :---:     | :---:  | :---:   |
