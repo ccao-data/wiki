@@ -6,7 +6,7 @@
 * [Glossary](Handbook/Glossary.md)
 * [Not Public](Handbook/Not-Public.md)
 
-### People
+### People and Onboarding
 
 * [See People repository](https://github.com/ccao-data/people)
 
@@ -16,6 +16,7 @@
 * [Setup the AWS Command Line Interface and Multi-factor Authentication](How-To/Setup-the-AWS-Command-Line-Interface-and-Multi-factor-Authentication.md)
 * [Connect to AWS Resources](How-To/Connect-to-AWS-Resources.md)
 * [Administer Users on CCAO Services](How-To/Administer-Users-on-CCAO-Services.md)
+* [Use the renv global cache](How-To/Use-the-renv-global-cache.md)
 
 ### Standard Operating Procedures (SOPs)
 
