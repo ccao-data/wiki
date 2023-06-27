@@ -1,8 +1,8 @@
-# DRAFT.
+# DRAFT
 
 ## What you will need to submit a complete RPIE filing
 
-This page contains an description of the information you will need to complete an RPIE filing. 
+This page contains an description of the information you will need to complete an RPIE filing.
 
 ### Information about PIN numbers
 
@@ -16,7 +16,7 @@ This page contains an description of the information you will need to complete a
 
 For the purposes of RPIE, a building is a structure that contains either rentable spaces, or a business. Sheds, chemical storage facilities, infrastructure buildings like antennae, and other such structures are not included in this definition.
 
-* All addresses associated with each building. 
+* All addresses associated with each building.
 * The PIN numbers associated with each buildings. **Note** that buildings may span PINs and PINs may contain multiple buildings. You can see how building footprints should be associated with PINs by searching for a PIN on the Cook County's [Cook Viewer Application](https://maps.cookcountyil.gov/cookviewer/mapViewer.html).
 * If you *do not* own the entire building, you will not be asked about the building's physical characteristics.
 * If you *do* own the entire building, you will be **required** to provide the following information:
@@ -43,7 +43,7 @@ RPIE will request income and expenses (I&E) related to real property, not busine
 * IRS Schedule E
 * IRS Form 8825
 * Income and expense statement
-* Motel/Hotel income & expense 
+* Motel/Hotel income & expense
 * Lease document
 
 Taxpayers who do not have IRS forms can submit income and expense information in three different ways:
@@ -61,7 +61,7 @@ You can see an excel template for income and expense data [here](templates/rpie-
 
 ### Vacant and occupied spaces
 
-For the purposes of RPIE, there are two types of spaces: residential apartments and commercial spaces. The RPIE collects data at the level of individual spaces.  
+For the purposes of RPIE, there are two types of spaces: residential apartments and commercial spaces. The RPIE collects data at the level of individual spaces.
 
 #### Residential spaces
 
@@ -87,7 +87,7 @@ For each apartment unit, users will be required to submit the following informat
 
 The RPIE application will accept a template upload. You can find the template for commercial spaces [here](templates/2021-rpie-commercial-spaces-template.xlsx).
 
-**Lessees responsible for taxes** should report just their own space. 
+**Lessees responsible for taxes** should report just their own space.
 
 For each commercial space, users will be required to submit the following information:
 

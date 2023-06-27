@@ -225,7 +225,7 @@ Internal Diagnostics and Reporting
 ----------------------------------
 
 Data collected *via* RPIE Online Form filings is aggregated, anonymized,
-and combined with other data sets to produce internal reports. 
+and combined with other data sets to produce internal reports.
 These reports provide the Assessor and the office with
 information directly related to the valuation of income-producing properties.
 
@@ -243,8 +243,7 @@ Research
 
 Data that is not individually identifying may be made available to
 outside collaborators and researchers as part of our [Developer
-Engagement
-Program](People/Contributing).
+Engagement Program](/People/Contributing.md).
 
 Anonymization and Statistical Disclosure Control
 ------------------------------------------------
@@ -292,7 +291,7 @@ Contacting the CCAO about Your Privacy
 --------------------------------------
 
 If you have questions or concerns about the way we are handling your
-information, please email us at [RPIEsupport@cookcountyassessor.com](mailto:RPIEsupport@cookcountyassessor.com). 
+information, please email us at [RPIEsupport@cookcountyassessor.com](mailto:RPIEsupport@cookcountyassessor.com).
 
 Privacy Disclosure Policy Changes
 ---------------------------------
@@ -310,4 +309,4 @@ use of the RPIE Online Form after any change in this PDS constitutes
 your acceptance of such change.
 
 The entire history of this privacy statement can be viewed
-[here.](https://gitlab.com/ccao-data-science---modeling/documentation/wiki_content/-/commits/master/RPIE/Privacy%20Policy.md)
+[here](https://github.com/ccao-data/wiki/commits/master/RPIE).
