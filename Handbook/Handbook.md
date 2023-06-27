@@ -105,7 +105,7 @@ This meeting is also typically used to discuss organization goals, manage ongoin
 
 # Work Terminal Setup
 
-* See [Onboarding](/People/Onboarding.md) for computer and equipment setup
+* See the [people repository](https://github.com/ccao-data/people) for computer and equipment setup
 * See the [How-To](/How-To) section of the wiki for further tutorials and troubleshooting
 
 # Working Remotely

@@ -8,8 +8,7 @@
 
 ### People
 
-* [Onboarding](People/Onboarding.md)
-* [External Developer Engagement Program](People/Contributing.md)
+* [See People repository](https://github.com/ccao-data/people)
 
 ### How-To
 

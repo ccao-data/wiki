@@ -1,4 +1,4 @@
-When [Onboarding](/People/Onboarding.md), the CCAO's IT Department will provide you with the forms and handouts necessary to setup Cook County's VPN. Some troubleshooting tips:
+When [Onboarding](https://github.com/ccao-data/people), the CCAO's IT Department will provide you with the forms and handouts necessary to setup Cook County's VPN. Some troubleshooting tips:
 
 * If you need to redownload the Cisco AnyConnect Secure Mobility Client&trade;, visit [here](http://vpnclient.cookcountyil.gov).
 * Connecting to the VPN requires the use of a multi-factor authentication device. If you lose your device or get a new one, email [Assessor Admins](mailto:Assessor.Admins@cookcountyil.gov) for a new Duo setup link.

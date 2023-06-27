@@ -243,7 +243,7 @@ Research
 
 Data that is not individually identifying may be made available to
 outside collaborators and researchers as part of our [Developer
-Engagement Program](/People/Contributing.md).
+Engagement Program](https://github.com/ccao-data/people/CONTRIBUTING.md).
 
 Anonymization and Statistical Disclosure Control
 ------------------------------------------------
