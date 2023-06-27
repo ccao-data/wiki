@@ -34,11 +34,11 @@ s3 = boto3.resource(
     service_name='s3',
     region_name='us-east-1'
     )
-  
+
 # Test connection
 for bucket in s3.buckets.all():
     print(bucket.name)
-    
+
 # Or, depending on your needs
 s3 = boto3.client(
     service_name='s3',
@@ -72,7 +72,7 @@ You can use the `noctua` R package to pull small amounts of data from Athena. Th
     # Establish connection
     AWS_ATHENA_CONN_NOCTUA <- dbConnect(noctua::athena())
 
-    # Test the connection 
+    # Test the connection
     dbGetQuery(
       conn = AWS_ATHENA_CONN_NOCTUA,
       "SELECT year, geoid FROM census.acs5 LIMIT 10"
@@ -96,10 +96,10 @@ Athena queries that pull a large amount of data are best handled by Amazon's JDB
 5. Run the following code to instantiate your connection and run a test query
 
     ```r
-    # Preallocate java memory (necessary for large queries) 
+    # Preallocate java memory (necessary for large queries)
     options(java.parameters = "-Xmx10g")
     gc()
-    
+
     # Load necessary libraries
     library(DBI)
     library(RJDBC)
@@ -110,7 +110,7 @@ Athena queries that pull a large amount of data are best handled by Amazon's JDB
       classPath = list.files("~/drivers", "^Athena.*jar$", full.names = TRUE),
       identifier.quote = "'"
     )
-    
+
     # Establish connection
     AWS_ATHENA_CONN_JDBC <- dbConnect(
       aws_athena_jdbc_driver,
@@ -118,7 +118,7 @@ Athena queries that pull a large amount of data are best handled by Amazon's JDB
       aws_credentials_provider_class = Sys.getenv("AWS_CREDENTIALS_PROVIDER_CLASS"),
       Schema = "Default"
     )
-    
+
     # Test connection
     dbGetQuery(
       conn = AWS_ATHENA_CONN_JDBC,
@@ -128,12 +128,12 @@ Athena queries that pull a large amount of data are best handled by Amazon's JDB
 
 ### Tableau
 
-1. Install the [JDBC Driver with AWS SDK](https://docs.aws.amazon.com/athena/latest/ug/connect-with-jdbc.html) - move the downloaded .jar file to `C:\Program Files\Tableau\Drivers` on Windows or `~/Library/Tableau/Drivers` on Mac
+1. Install the [JDBC Driver with AWS SDK](https://docs.aws.amazon.com/athena/latest/ug/connect-with-jdbc.html) - move the downloaded .jar file to `C:\Program Files\Tableau\Drivers` on Windows or `~/Library/Tableau/Drivers` on Mac.
 2. Make sure [Java SE Development Kit](https://www.oracle.com/java/technologies/downloads/) is installed.
 3. Create a file called `athena.properties` in `C:\Users\$USER\Documents\My Tableau Repository\Datasources` on Windows or `~/Users/$USER/Documents/My Tableau Repository/Datasources` on Mac with the following lines:
     ```
     workgroup=read-only-with-scan-limit
     MetadataRetrievalMethod=ProxyAPI
     ```
-3. Open Tableau and on the `Connect` sidebar under `To a Server`, navigate to `Amazon Athena`
-4. Message @SweatyHandshake or @dfsnow for the necessary server info and credentials. Tableau will not save the `Secret Access Key` field
+3. Open Tableau and on the `Connect` sidebar under `To a Server`, navigate to `Amazon Athena`.
+4. Message a [core team](https://github.com/orgs/ccao-data/teams/core-team) member for the necessary server info and credentials. Tableau will not save the `Secret Access Key` field.

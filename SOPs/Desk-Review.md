@@ -8,12 +8,12 @@ All employees performing post-modeling desktop review.
 
 # Definitions
 
- * **Fair Cash Value (FCV):** 'The amount for which a property can be sold in the due course of business and trade, not under duress, between a willing buyer and a willing seller. (35 ILCS 200/1-50)
+ * **Fair Cash Value (FCV):** The amount for which a property can be sold in the due course of business and trade, not under duress, between a willing buyer and a willing seller. (35 ILCS 200/1-50)
  * **Arm's Length:** Of or relating to dealings between two parties who are not related or not on close terms and who are presumed to have roughly equal bargaining power; not involving a confidential relationship.
  * **Prediction Ratio:** The ratio of the software's prediction for the fair market value of a property at a specified point in time to the recent sale price of a property. A prediction ratio of one indicates that the software's predicted fair market value is equal to the price at which the property most recently sold.
  * **Modeling Group:** A group of properties used to estimate the parameters of a statistical model.
 
-# Desk Review Proceedure
+# Desk Review Procedure
 
 Following the execution of statistical modeling software, analysts review the estimated fair market values produced by the software. Analysts examine the following figures:
 
@@ -28,6 +28,7 @@ Properties are selected for further examination if the analyst determines that a
  * The subject property's predicted fair market value does not appear uniform within sub-class and/or neighborhood code, as determined by the analyst.
 
 For any property meeting any of these criteria, the analyst executes a desk-review of that subject PIN. This includes:
+
  * Reviewing the deed recorded by the Cook County Record of Deeds. The analyst determines whether the sale is an arm's length sale.
  * Reviewing the physical characteristics of the property, including square footage, rooms, construction quality, and other characteristics that have large impacts on fair market value. This review is conducted from the analyst's desk (hence name of the process) using areal pictometry and publicly accessible image databases.
  * Reviewing internal, historical records, and comparing those against the digital records to identify potential data input errors.

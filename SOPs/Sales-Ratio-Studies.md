@@ -1,24 +1,24 @@
 # Overview
 
-This policy governs the calculation and reporting of sales ratio studies for residential property. 
+This policy governs the calculation and reporting of sales ratio studies for residential property.
 
 A **sales ratio** is the ratio of the assessor's estimate of a property's value to its sale price. A **sales ratio study** is a statistical analysis of how accurately, uniformly, and equitably an assessor estimated property values.
 
 ## Related Information
 
-This policy governs functions contained in [AssessR](https://gitlab.com/ccao-data-science---modeling/packages/assessr), the Cook County Assessor's primary R package.
+This policy governs functions contained in [ccao](https://github.com/ccao-data/ccao), the Cook County Assessor's primary R package.
 
-This policy references the [IAAO Standard on Ratio Studies](https://www.iaao.org/media/standards/Standard_on_Ratio_Studies.pdf). 
+This policy references the [IAAO Standard on Ratio Studies](https://www.iaao.org/media/standards/Standard_on_Ratio_Studies.pdf).
 
 # Methods
 
 ## Stratification
 
-**Reporting Groups.** The Data Department groups relevant [residential property classes](https://gitlab.com/ccao-data-science---modeling/models/ccao_res_avm#primary-data) into Single-Family, Multi-Family, and Condominium modeling and reporting groups. 
+**Reporting Groups.** The Data Department groups relevant [residential property classes](https://gitlab.com/ccao-data-science---modeling/models/ccao_res_avm#primary-data) into Single-Family, Multi-Family, and Condominium modeling and reporting groups.
 
 **Geography.** Properties are stratified according to geography (triennial region and township).
 
-**Other.** Properties may also be stratified according to sale price, assessed value, physical characteristics, other geographies, and other attributes. 
+**Other.** Properties may also be stratified according to sale price, assessed value, physical characteristics, other geographies, and other attributes.
 
 ## Minimum Sample Size
 
@@ -28,7 +28,7 @@ A valid ratio study requires at least 30 observations.
 
 ### Data Source
 
-Sales are obtained from the MyDec Web Service ('MyDec'), a service by the Illinois Department of Revenue. They are [pre-processed](https://gitlab.com/groups/ccao-data-science---modeling/-/wikis/SOPs/Open-Data#parcel-sales) to correct, for example, multiple deeds recorded on a given PIN on a single day listing different transaction amounts.
+Sales are obtained from the MyDec Web Service ('MyDec'), a service by the Illinois Department of Revenue. They are [pre-processed](/SOPs/Open-Data.md#parcel-sales) to correct, for example, multiple deeds recorded on a given PIN on a single day listing different transaction amounts.
 
 ### Exclusion Criteria
 
@@ -42,13 +42,13 @@ Sales ratio studies may exclude the following:
 
 ### Comparison Years
 
-For ratio studies used to evaluate current-year or past-year assessments, assessments should be compared to sales that occurred in the prior year. For example, 2020 assessments should be compared to sales that occurred in 2019. 
+For ratio studies used to evaluate current-year or past-year assessments, assessments should be compared to sales that occurred in the prior year. For example, 2020 assessments should be compared to sales that occurred in 2019.
 
-The Data Department may also, in preparation for an upcoming revaluation, conduct ratio studies of past assessments and current sales. This helps to set informal expectations to indicate magnitude and direction of market changes in the years since the past assessment. 
+The Data Department may also, in preparation for an upcoming revaluation, conduct ratio studies of past assessments and current sales. This helps to set informal expectations to indicate magnitude and direction of market changes in the years since the past assessment.
 
 ## Ratio Study Code and Data Publication
 
-The Data Department publishes its ratio study code in [AssessR](https://gitlab.com/ccao-data-science---modeling/packages/assessr). The Data Department also publishes sales and Fair Cash Values on [Cook County's Open Data portal](https://datacatalog.cookcountyil.gov/stories/s/i22y-9sd2).
+The Data Department publishes its ratio study code in [AssessR](https://github.com/ccao-data/assessr). The Data Department also publishes sales and Fair Cash Values on [Cook County's Open Data portal](https://datacatalog.cookcountyil.gov/stories/s/9bqn-cfsv).
 
 ## Outlier Trimming
 
@@ -79,7 +79,6 @@ The ratio study must also include the following descriptive statistics:
 
 Each statistic's point estimate is evaluated to see whether it falls within the acceptable ranges below.
 
-
 | Statistic  | Acceptable Range  | Interpretation  |
 |---|---|---|
 |Coefficient of Dispersion (COD)   | 5 - 15   |The COD measures Uniformity: how often properties with the same sale price receive the same predicted market value. Lower CODs indicate more fairness between similarly priced properties.   |
@@ -94,7 +93,7 @@ Each statistic's point estimate is evaluated to see whether it falls within the 
 * Vertical Equity: if either the PRD or PRB is within the acceptable range, then assessments have met the standard for vertical equity.
 * Accuracy: if the Median Ratio is within the acceptable range, then assessments have met the standard for accuracy.
 
-**High-quality assessment.** Assessments can be said to have met standards for high-quality assessments if standards for Uniformity, Vertical Equity, and Accuracy have been met. 
+**High-quality assessment.** Assessments can be said to have met standards for high-quality assessments if standards for Uniformity, Vertical Equity, and Accuracy have been met.
 
 ## Validity
 
@@ -106,9 +105,9 @@ Note: CODs lower than 5.0, according to IAAO's Standard on Ratio Studies Section
 
 In addition to using ratio studies internally, the Assessor's Office is committed to periodically publishing ratio studies.
 
-**Annual Reporting:** The Cook County Assessor's Office publishes annual reports to the public and submits reports to Cook County for its annual reporting. These reports contain the results of a sales ratio study of residential properties in the County. 
+**Annual Reporting:** The Cook County Assessor's Office publishes annual reports to the public and submits reports to Cook County for its annual reporting. These reports contain the results of a sales ratio study of residential properties in the County.
 
-**Township Reporting:** The Data Department shall produce sales ratio studies for each triennially reassessed township. 
+**Township Reporting:** The Data Department shall produce sales ratio studies for each triennially reassessed township.
 
 The Data Department shall produce additional sales ratio studies as requested by the Cook County Assessor.
 

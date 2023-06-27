@@ -2,7 +2,7 @@
 
 Nearly all the services used by the Data Department are administered either by the County's Bureau of Technology (BoT) or the CCAO's in-house IT. Below is a list of commonly-used services along with contact information for their respective user account administrators.
 
-| Owner   | Service | Contact | 
+| Owner   | Service | Contact |
 | ------- | ------- | ------- |
 | Cook County | [Web Clock](https://www.cookcountyil.gov/cct) | [Admins](mailto:Assessor.Admins@cookcountyil.gov) |
 | Cook County | [Office 365](https://outlook.office365.com/cookcountyil.gov) | [Admins](mailto:Assessor.Admins@cookcountyil.gov) |
@@ -58,7 +58,7 @@ To delete users on the Data server, complete the following steps:
 The Data Department stores most of its active data on AWS. Reading this data requires an authenticated AWS user account. Most users, such as interns and analysts, only require read access. To add a read-only user, complete the following steps:
 
 1. Login to the [CCAO's AWS Console](https://ccao-ds.signin.aws.amazon.com/console) using an account with an administrator role.
-2. Visit the **IAM** service, click **Users** in the sidebar, then click **Add users** in the top-right corner. 
+2. Visit the **IAM** service, click **Users** in the sidebar, then click **Add users** in the top-right corner.
 3. Create a user following the prompts:
     * The user name should be a Cook County email address.
     * Access type should be both programmatic and console.
@@ -73,4 +73,4 @@ The Data Department stores most of its active data on AWS. Reading this data req
 
 The Data Department also administers the CCAO account on the [Cook County Data Portal](https://datacatalog.cookcountyil.gov). The main administrator account can delegate permissions to other user accounts on the portal.
 
-Ask Billy (@sweatyhandshake) or Dan (@dfsnow) for administrator account credentials. For any issues, contact the current main administrator of the portal [Josh K](mailto:josh.kalov@cookcountyil.gov).
+Ask a [core team](https://github.com/orgs/ccao-data/teams/core-team) member for administrator account credentials. For any issues, contact the current main administrator of the portal [Josh K](mailto:josh.kalov@cookcountyil.gov).

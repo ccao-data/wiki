@@ -1,6 +1,4 @@
-The Cook County Assessor's Office is committed to transparency. To fulfill that commitment, the Data Department creates and maintains public assessment-related data sets. This document outlines these data, their uses, and pertinent source code. Data is published primarily on the [Cook County Open Data Portal](https://datacatalog.cookcountyil.gov/browse?tags=cook+county+assessor) and through GitLab. The [AssessR](https://ccao-data-science---modeling.gitlab.io/packages/assessr/articles/example-ratio-study.html) package leverages this open data in its documentation.
-
-[[_TOC_]]
+The Cook County Assessor's Office is committed to transparency. To fulfill that commitment, the Data Department creates and maintains public assessment-related data sets. This document outlines these data, their uses, and pertinent source code. Data is published primarily on the [Cook County Open Data Portal](https://datacatalog.cookcountyil.gov/browse?tags=cook+county+assessor) and through GitLab. The [AssessR](https://ccao-data.github.io/assessr/articles/example-ratio-study.html) package leverages this open data in its documentation.
 
 ## Releasing Open Data
 
@@ -30,7 +28,7 @@ Clearance must be received from the following parties before private assets on t
 
 BoT may have their own clearance requirements such as adding a 'Story' on Socrata or formatting common county-related columns in a particular way. Defer to their schemas.
 
-## Currently Curated Data 
+## Currently Curated Data
 
 The Data Department creates and maintains the following open data sets.
 
@@ -44,13 +42,13 @@ The Data Department creates and maintains the following open data sets.
 
 **Use cases:** Joining parcel-level data to this dataset allows analysis and reporting across a number of different political, tax, Census, and other boundaries.
 
-**Code:** [default-vw_pin_universe.sql](https://gitlab.com/ccao-data-science---modeling/data-architecture/-/blob/master/aws-athena/views/default-vw_pin_universe.sql)
+**Code:** [default-vw_pin_universe.sql](https://github.com/ccao-data/data-architecture/blob/master/aws-athena/views/default-vw_pin_universe.sql)
 
 ### [Single and Multi-Family Improvement Characteristics](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Single-and-Multi-Family-Improvement-Chara/x54s-btds)
 
 | Time Frame   | Property Classes | Unique By | Row                         | Updated   |
 | :---:        | :---:            | :---:     | :---:                       | :---:     |
-| 1999-Present | [Regression-class](https://gitlab.com/ccao-data-science---modeling/models/ccao_res_avm#data-used)         | PIN, Card, Year | Residential Improvement | Bi-Weekly |
+| 1999-Present | [Regression-class](https://github.com/ccao-data/ccao_res_avm#data-used)         | PIN, Card, Year | Residential Improvement | Bi-Weekly |
 
 **Notes**: Residential PINs with multiple improvements (living structures) will have one card for _each_ improvement.
 
@@ -60,7 +58,7 @@ The Data Department creates and maintains the following open data sets.
 - Joined to assessments for analysis of assessments across geographies and housing types
 - Joined to sales for the construction of hedonic home value estimates
 
-**Code:** [default-vw_card_res_char.sql](https://gitlab.com/ccao-data-science---modeling/data-architecture/-/blob/master/aws-athena/views/default-vw_card_res_char.sql)
+**Code:** [default-vw_card_res_char.sql](https://github.com/ccao-data/data-architecture/blob/master/aws-athena/views/default-vw_card_res_char.sql)
 
 ### [Residential Condominium Unit Characteristics](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Residential-Condominium-Unit-Characteri/3r7i-mrz4)
 
@@ -76,7 +74,7 @@ The Data Department creates and maintains the following open data sets.
 - Joined to assessments for analysis of assessments across geographies and housing types
 - Joined to sales for the construction of hedonic home value estimates
 
-**Code:** [default-vw_pin_condo_char.sql](https://gitlab.com/ccao-data-science---modeling/data-architecture/-/blob/master/aws-athena/views/default-vw_pin_condo_char.sql)
+**Code:** [default-vw_pin_condo_char.sql](https://github.com/ccao-data/data-architecture/blob/master/aws-athena/views/default-vw_pin_condo_char.sql)
 
 ### [Parcel Sales](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Sales/wvhk-k5uv)
 
@@ -84,11 +82,11 @@ The Data Department creates and maintains the following open data sets.
 | :---:        | :---:            | :---:            | :---:       | :---:   |
 | 1999-Present | All              | Sale Deed Number | Parcel Sale | Monthly |
 
-**Notes:** Refreshed monthly, though data may only change roughly quarterly depending on how often new sales are added to iasWorld. 
+**Notes:** Refreshed monthly, though data may only change roughly quarterly depending on how often new sales are added to iasWorld.
 
 **Use cases:** Alone, sales data can be used to characterize real estate markets. Sales paired with characteristics can be used to find comparable properties or as an input to an automated modeling application. Sales paired with assessments can be used to calculate sales ratio statistics. Outliers can be easily removed using filters constructed from class, township, and year variables.
 
-**Code:** [default-vw_pin_sale.sql](https://gitlab.com/ccao-data-science---modeling/data-architecture/-/blob/master/aws-athena/views/default-vw_pin_sale.sql)
+**Code:** [default-vw_pin_sale.sql](https://github.com/ccao-data/data-architecture/blob/master/aws-athena/views/default-vw_pin_sale.sql)
 
 ### [Assessed Values](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Assessed-Values/uzyt-m557)
 
@@ -96,11 +94,11 @@ The Data Department creates and maintains the following open data sets.
 | :---:        | :---:            | :---:     | :---:  | :---:   |
 | 1999-Present | All              | PIN, Year | Parcel | Monthly |
 
-**Notes:** Refreshed monthly, data is updated as towns are mailed/certified by Valuations and the Board of Review. 
+**Notes:** Refreshed monthly, data is updated as towns are mailed/certified by Valuations and the Board of Review.
 
-**Use cases:** Alone, can characterize assessments in a given area. Can be combined with characteristic data to make more nuanced generalizations about assessments. Can be combined with sales data to conduct ratio studies. 
+**Use cases:** Alone, can characterize assessments in a given area. Can be combined with characteristic data to make more nuanced generalizations about assessments. Can be combined with sales data to conduct ratio studies.
 
-**Code:** [default-vw_pin_history.sql](https://gitlab.com/ccao-data-science---modeling/data-architecture/-/blob/master/aws-athena/views/default-vw_pin_history.sql)
+**Code:** [default-vw_pin_history.sql](https://github.com/ccao-data/data-architecture/blob/master/aws-athena/views/default-vw_pin_history.sql)
 
 ### [Appeals](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Appeals/y282-6ig3)
 
@@ -108,11 +106,11 @@ The Data Department creates and maintains the following open data sets.
 | :---:        | :---:            | :---:     | :---:  | :---:   |
 | 1999-Present | All              | PIN, Year | Parcel | Monthly |
 
-**Notes:** Refreshed monthly, data is updated as towns are mailed/certified by Valuations. 
+**Notes:** Refreshed monthly, data is updated as towns are mailed/certified by Valuations.
 
-**Use cases:** Alone, can be used to investigate appeal trends. Can be combined with geographies to see how AV shifts around the county between mailing and assessor certified stages. 
+**Use cases:** Alone, can be used to investigate appeal trends. Can be combined with geographies to see how AV shifts around the county between mailing and assessor certified stages.
 
-**Code:** [default-vw_pin_appeal.sql](https://gitlab.com/ccao-data-science---modeling/data-architecture/-/blob/master/aws-athena/views/default-vw_pin_appeal.sql)
+**Code:** [default-vw_pin_appeal.sql](https://github.com/ccao-data/data-architecture/blob/master/aws-athena/views/default-vw_pin_appeal.sql)
 
 ### [Parcel Addresses](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Addresses/3723-97qp)
 
@@ -120,11 +118,11 @@ The Data Department creates and maintains the following open data sets.
 | :---:        | :---:            | :---:     | :---:  | :---:   |
 | 1999-Present | All              | PIN, Year | Parcel | Monthly |
 
-**Notes:** Refreshed monthly, data is updated as towns are mailed/certified by Valuations. 
+**Notes:** Refreshed monthly, data is updated as towns are mailed/certified by Valuations.
 
-**Use cases:** Can be used for geocoding or joining address-level data to other datasets. 
+**Use cases:** Can be used for geocoding or joining address-level data to other datasets.
 
-**Code:** [default-vw_pin_appeal.sql](https://gitlab.com/ccao-data-science---modeling/data-architecture/-/blob/master/aws-athena/views/default-vw_pin_address.sql)
+**Code:** [default-vw_pin_appeal.sql](https://github.com/ccao-data/data-architecture/blob/master/aws-athena/views/default-vw_pin_address.sql)
 
 ### [Parcel Proximity](https://datacatalog.cookcountyil.gov/dataset/Assessor-Parcel-Proximity/ydue-e5u3)
 
@@ -132,11 +130,11 @@ The Data Department creates and maintains the following open data sets.
 | :---:        | :---:            | :---:       | :---:  | :---:   |
 | 2000-Present | All              | PIN10, Year | Parcel | Monthly |
 
-**Notes:** Refreshed monthly, data is updated yearly as spatial files are made available. 
+**Notes:** Refreshed monthly, data is updated yearly as spatial files are made available.
 
-**Use cases:** Can be used to isolate parcels by distance to specific spatial features. 
+**Use cases:** Can be used to isolate parcels by distance to specific spatial features.
 
-**Code:** [proximity-vw_pin10_proximity.sql](https://gitlab.com/ccao-data-science---modeling/data-architecture/-/blob/master/aws-athena/views/proximity-vw_pin10_proximity.sql)
+**Code:** [proximity-vw_pin10_proximity.sql](https://github.com/ccao-data/data-architecture/blob/master/aws-athena/views/proximity-vw_pin10_proximity.sql)
 
 ### [Neighborhood Boundaries](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Neighborhood-Boundaries/pcdw-pxtg)
 
@@ -146,13 +144,6 @@ The Data Department creates and maintains the following open data sets.
 
 **Notes:** Refreshed yearly, but only changes with new neighborhood definitions. None are pending.
 
-**Use cases:** Thematic mapping and location references. 
+**Use cases:** Thematic mapping and location references.
 
-**Code:** [spatial-ccao-neighborhood.R](https://gitlab.com/ccao-data-science---modeling/data-architecture/-/blob/master/aws-s3/scripts-ccao-data-warehouse-us-east-1/spatial-ccao-neighborhood.R) 
-
-## Raw Modeling Data
-
-The Data Department makes raw data used for modeling available through GitLab:
-
- - [Final 2022 single and multi-family modeling input data](https://gitlab.com/ccao-data-science---modeling/models/ccao_res_avm/-/tree/2022-assessment-year/input)
- - [Final 2022 residential condominium modeling input data](https://gitlab.com/ccao-data-science---modeling/models/ccao_condo_avm/-/tree/2022-assessment-year/input)
+**Code:** [spatial-ccao-neighborhood.R](https://github.com/ccao-data/data-architecture/blob/master/aws-s3/scripts-ccao-data-warehouse-us-east-1/spatial-ccao-neighborhood.R)
