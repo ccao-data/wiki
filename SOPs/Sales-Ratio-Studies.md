@@ -14,7 +14,7 @@ This policy references the [IAAO Standard on Ratio Studies](https://www.iaao.org
 
 ## Stratification
 
-**Reporting Groups.** The Data Department groups relevant [residential property classes](https://gitlab.com/ccao-data-science---modeling/models/ccao_res_avm#primary-data) into Single-Family, Multi-Family, and Condominium modeling and reporting groups.
+**Reporting Groups.** The Data Department groups relevant [residential property classes](https://github.com/ccao-data/ccao-res-avm#primary-data) into Single-Family, Multi-Family, and Condominium modeling and reporting groups.
 
 **Geography.** Properties are stratified according to geography (triennial region and township).
 
