@@ -12,7 +12,7 @@ The rationale for having a separate data department is similar to that of the pr
 
 # Mission, Vision, and Values
 
-See [Mission, Vision, and Values](Handbook/Mission-Vision-Values)
+See [Mission, Vision, and Values](Mission-Vision-Values.md)
 
 ## Core Technical Competencies
 
@@ -24,7 +24,7 @@ See [Mission, Vision, and Values](Handbook/Mission-Vision-Values)
 * **Leadership**
 * **Command Line**
 
-For more information, see the [Talent repository](https://gitlab.com/ccao-data-science---modeling/people/talent).
+For more information, see the [People repository](https://github.com/ccao-data/people).
 
 ## Project Management
 
@@ -52,14 +52,14 @@ In order to deliver accurate and timely work products, the Data Department adher
 
 ## Organizational Structure
 
-The Data Department is broken into two sub-departments: 
+The Data Department is broken into two sub-departments:
 
 1. **Data Science** is responsible for building models and tools that enhance the CCAO's mission. It creates and maintains applications, pipelines, models, and databases.
 2. **Data Analytics** is responsible for reporting on and analyzing the performance of the Data Department and the CCAO. It creates extracts, writes reports, and builds dashboards.
 
 A full CCAO organizational chart can be [found on the CCAO intranet](http://intranet/filedownloads/CCAOOrgChart.pdf).
 
-### Leadership Pipelines 
+### Leadership Pipelines
 
 The Data Department is currently building a framework for career advancement. A 'leadership pipeline' is a well-articulated set of criteria that describes how each member of the team can advance their career to the next step in the pipeline. We anticipate two different pipeline tracks:
 
@@ -67,7 +67,7 @@ The Data Department is currently building a framework for career advancement. A 
 
 **Leadership Track** - This track terminates at the level of Chief Data Officer and is designed to cultivate policy leaders that create and implement data-informed policy. Staff in this track are expected to master statistical concepts and advanced data analysis in excel, as well as intuition about how to create value for the organization and its stakeholders.
 
-A more detailed description of this pipeline can be found in the [Talent repository](https://gitlab.com/ccao-data-science---modeling/people/talent/).
+A more detailed description of this pipeline can be found in the [People repository](https://github.com/ccao-data/people).
 
 ## Performance Reviews and Feedback
 
@@ -89,7 +89,7 @@ In addition to the formal performance evaluation process, the Data Department ma
 
 Interns and new employees have weekly check-ins with their immediate supervisor. During these check-ins, the supervisor will:
 
-* Ensure that assigned work is on-track and likely to meet any upcoming deadlines 
+* Ensure that assigned work is on-track and likely to meet any upcoming deadlines
 * Provide feedback on work completed so far
 * Try to remove any blockers preventing further work (e.g. give guidance on a particularly difficult coding problem)
 
@@ -97,7 +97,7 @@ Interns and new employees have weekly check-ins with their immediate supervisor.
 
 Every 2 weeks all employees will have a 1-on-1 with their immediate supervisor. The goal of this meeting is to exchange feedback, both from supervisor to employee and from employee to supervisor (i.e. managing up).
 
-This meeting is also typically used to discuss organization goals, manage ongoing projects, discuss any upcoming blockers, and ensure that the employee has everything they need to perform optimally. 
+This meeting is also typically used to discuss organization goals, manage ongoing projects, discuss any upcoming blockers, and ensure that the employee has everything they need to perform optimally.
 
 # CCAO Documents and Forms
 
@@ -105,10 +105,10 @@ This meeting is also typically used to discuss organization goals, manage ongoin
 
 # Work Terminal Setup
 
-* See [Onboarding](People/Onboarding) for computer and equipment setup
-* See the [How-To](https://gitlab.com/groups/ccao-data-science---modeling/-/wikis/home#how-to) section of the wiki for further tutorials and troubleshooting
+* See [Onboarding](/People/Onboarding.md) for computer and equipment setup
+* See the [How-To](/How-To) section of the wiki for further tutorials and troubleshooting
 
-# Working Remotely 
+# Working Remotely
 
 The Data Department works a hybrid schedule typically consisting of 2 days in-office and 3 days remote. All employees share the same in-office days, usually Wednesday and Thursday. This section contains tips, tricks, and requirements for working remotely.
 
@@ -117,7 +117,7 @@ The Data Department works a hybrid schedule typically consisting of 2 days in-of
 
 ## Agile Project Management Practices
 
-* **Daily Standup:** 8:45 - 9:00 AM CT every day. Employees are required to attend, interns may optionally attend. Each attendee states the following:
+* **Daily Standup:** 9:00 - 9:15 AM CT every day. Employees are required to attend, interns may optionally attend. Each attendee states the following:
   1. What they worked on the prior work day
   2. What they plan to work on today
   3. Any blockers impeding their progress
@@ -137,7 +137,7 @@ Data Department staff are often working on multiple projects simultaneously. Thi
 
 ## Repositories
 
-The Data Department uses [GitLab](https://gitlab.com/ccao-data-science---modeling) as a workflow and version control tool. The Department's work is oriented around GitLab code repositories, with each repository representing an area of responsibility for the department or a specific service/application that it runs.
+The Data Department uses [GitHub](https://github.com/ccao-data) as a workflow and version control tool. The Department's work is oriented around GitHub code repositories, with each repository representing an area of responsibility for the department or a specific service/application that it runs.
 
 ### Structure
 
@@ -165,7 +165,7 @@ More complicated projects are structured using [GitLab flow](https://docs.gitlab
 
 This repository structure has a few advantages:
 
-* GitLab's continuous integration and delivery features work well with this workflow
+* Continuous integration and delivery features work well with this workflow
 * Having a separate staging branch is easy to understand vs other models like Git flow
 * Breaking changes that might make it into the staging environment are not sent to the production application, meaning users rarely see them
 
@@ -184,47 +184,30 @@ These repositories are available to the public through FOIA. Only the main branc
 
 ## Issues
 
-An [issue](https://docs.gitlab.com/ee/user/project/issues/) is a work assignment that should take less than 1-2 work weeks to complete (see [Continuous Delivery](#continuous-delivery)). Work products that take longer than one to two weeks to complete should be broken into multiple issues and, where appropriate, grouped into a milestone (see [Milestones](#milestones)).
+An [issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues) is a work assignment that should take less than 1-2 work weeks to complete. Work products that take longer than one to two weeks to complete should be broken into multiple issues and, where appropriate, grouped into a milestone (see [Milestones](#milestones)).
 
-Issues may be created by anyone in the organization. Issue deadlines are assigned by the Deputy Assessor Chief Data Officer in consultation with Senior Data Scientists and/or Directors (see [Agile Project Management Practices](#agile-project-management-practices)). Issues should always correspond to a [merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html) that closes the issue.
-
-### Labels
-
-The Data Department uses just 4 labels across all CCAO repositories. These labels represent the current status of the labeled item. They include:
-
-| Label                | Description                                                  |
-|----------------------|--------------------------------------------------------------|
-| `status::abandoned`  | Abandon issue due to inactivity or infeasibility             |
-| `status::critical`   | Address issue within the next 48 hours                       |
-| `status::doing`      | Work on issue today / this week                              |
-| `status::waiting`    | Wait for third-party input or feedback before proceeding     |
-
-For more on labels, see the [Labels section](https://gitlab.com/groups/ccao-data-science---modeling/-/labels) of the CCAO group.
-
-### Weights
-
-Issues should be assigned weights relative to their importance. Weights are a relative number without a distinct meaning, their actual value is arbitrary. The Data Department typically makes higher weights = more important and uses them to rank-order issues within a repository or milestone.
+Issues may be created by anyone in the organization. Issue deadlines are assigned by the Deputy Assessor Chief Data Officer in consultation with Senior Data Scientists and/or Directors (see [Agile Project Management Practices](#agile-project-management-practices)). Issues should always correspond to a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) that closes the issue.
 
 ## Working Issues
 
 When working an issue, departmental staff should follow these steps:
 
-* Make sure the issue has a due date, time estimate, label, and associated merge request. If any of these are missing, notify the issue creator.
+* Make sure the issue has a due date, time estimate, label, and associated pull request. If any of these are missing, notify the issue creator.
 * Make sure you are tracking the branch associated with this issue in git.
 * Work the issue. Follow all [coding standards](#coding-standards). Use the comment section of the issue to discuss the work. This creates a record that can be referenced in the future.
-* Upon completion of the work, resolve the WIP status of the merge request and notify your supervisor that you have completed the work.
+* Upon completion of the work, resolve the draft status of the pull request and notify your supervisor that you have completed the work.
 
-### Merge Request Approvals
+### Pull Request Approvals
 
-In collaboration with Senior Data Scientists and Directors, the Deputy Assessor Chief Data Officer can set approvals for merge requests. Branches will not be merged into the production branch until all approvals are made.
+In collaboration with Senior Data Scientists and Directors, the Deputy Assessor Chief Data Officer can set approvals for pull requests. Branches will not be merged into the production branch until all approvals are made.
 
-### Work-In-Progress Status
+### Draft Status
 
-The WIP status of branches should not be resolved until the branch is merged into production. Work on branches labeled with WIP status are not available to FOIA. WIP status should be resolved and branches should be merged into production upon the delivery of the work product to either internal or external stakeholders.
+The draft status of branches should not be resolved until the branch is merged into production. Work on branches labeled with draft status are not available to FOIA. Draft status should be resolved and branches should be merged into production upon the delivery of the work product to either internal or external stakeholders.
 
 ## Milestones
 
-Issues are organized into Milestones. Milestones are large projects that take multiple weeks or months to accomplish. Milestones allow the Data Department to group issues together based on long-term goals. The Chief Data Officer creates and tracks Milestones to ensure timely delivery of work-product. Epics can also be used to organize issues and milestones into even larger groupings.
+Issues are organized into Milestones. Milestones are large projects that take multiple weeks or months to accomplish. Milestones allow the Data Department to group issues together based on long-term goals. The Chief Data Officer creates and tracks Milestones to ensure timely delivery of work-product.
 
 # Coding Standards
 
@@ -265,7 +248,7 @@ Fortunately, two packages exist that support the Tidyverse style guide:
 
 These packages make it easy to conform to the Tidyverse style guide. Simply run `styler` and then `lintr` on your entire project before each commit. This will automatically restyle your code and then tell you if there are any remaining issues. You can even setup pre-commit [git hooks](https://githooks.com) to do this for you.
 
-> :warning: The Data Department does not strictly enforce Tidyverse style for most repositories. However, certain very important repositories (R packages) will automatically reject merges that doesn't conform to Tidyverse style or that have linting errors.
+> :warning: The Data Department does not strictly enforce Tidyverse style for most repositories. However, certain very important repositories (R packages) will automatically reject changes that doesn't conform to Tidyverse style or that have linting errors.
 
 ## Commit Style
 

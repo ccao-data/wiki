@@ -1,4 +1,6 @@
-Resources, notes, and helpful links used by the Data Department. Organized by section and ordered by importance. 
+# Resources
+
+Resources, notes, and helpful links used by the Data Department. Organized by section and ordered by importance.
 
 - :exclamation: denotes required reading for interns and new hires
 - :star: denotes a recommended resource
@@ -11,22 +13,23 @@ Resources, notes, and helpful links used by the Data Department. Organized by se
 - [:exclamation: CCT](https://www.cookcountyil.gov/cct) - Cook County Time and Attendance, the web-based portal for tracking hours, time-off, etc.
 - [:exclamation: Data Department Teams Channel](https://teams.microsoft.com/l/channel/19%3aa574fd1291b74be298d074c134226689%40thread.tacv2/General?groupId=c8f82972-b5a7-44c0-a00c-ba395f96c6e2&tenantId=d8c4abe1-1869-4ec9-ad1d-19767c494954) - Private teams channel for the Data department. Ask or [email](mailto:william.ridgeway@cookcountyil.gov) @sweatyhandshake for an invite
 - [:exclamation: RStudio Server](https://datascience.cookcountyassessor.com/rstudio) - Internal instance of [RStudio](https://www.rstudio.com/products/rstudio/download-server/) accessible via a webpage. Useful for compute-heavy jobs and interns. If needed, ask @dfsnow to make you an account.
-- [:exclamation: JupyterLab](https://datascience.cookcountyassessor.com/jupyter) - Internal instance of [JupyterLab](https://jupyter.org/) accessible via a webpage. Useful for Python and other non-R workloads. Same account as RStudio Server. 
+- [:exclamation: JupyterLab](https://datascience.cookcountyassessor.com/jupyter) - Internal instance of [JupyterLab](https://jupyter.org/) accessible via a webpage. Useful for Python and other non-R workloads. Same account as RStudio Server.
 - [:star: Employee Self-Service (ESS)](https://ccgprod.cookcountyil.gov/) - Benefits enrollment and tracking
 - [Data Department Application Server](https://datascience.cookcountyassessor.com/shiny) - Shiny server that launches CCAO Shiny applications. **Must be connected to the VPN to access**. May throw a security warning when you first visit. This warning can safely be ignored. Click **Advanced --> Accept the risk** to bypass the warning.
 
 ##### External Links
 
-- [:exclamation: CCAO GitLab](https://gitlab.com/ccao-data-science---modeling) - Main source for all Data Department code
+- [:exclamation: CCAO GitHub](https://github.com/ccao-data) - Main source for all Data Department code
+- [CCAO GitLab](https://gitlab.com/ccao-data-science---modeling) - Archived. Previous source of all CCAO code
 - [Cook County Assessor's PIN Search](https://www.cookcountyassessor.com/address-search) - Our office's application to find information about a PIN
 - [Cook County Property Info](http://www.cookcountypropertyinfo.com/) - The County's application to find information about a PIN
 - [Cook County Data Portal](https://datacatalog.cookcountyil.gov/) - Public data portal for Cook County
 - [Cook Viewer](https://maps.cookcountyil.gov/cookviewer/mapViewer.html) - A GIS application for finding PINs
 - Subscribe to the [CCAO’s external newsletter](https://public.govdelivery.com/accounts/ILCOOK/signup/12686)
-- Subscribe to the CCAO’s social media channels: 
-  - [Facebook](https://www.facebook.com/CookCountyAssessorsOffice)
+- Subscribe to the CCAO’s social media channels:
+  - [Facebook](https://www.facebook.com/CookCountyAssessorsOffice/)
   - [Instagram](https://www.instagram.com/cookcountyassessor/)
-  - [LinkedIn](https://www.linkedin.com/company/35589706)
+  - [LinkedIn](https://www.linkedin.com/company/cookcountyassessorsoffice/)
   - [Twitter](https://twitter.com/AssessorCook)
   - [YouTube](https://www.youtube.com/channel/UC9w4Q3ZJyRS5J27eYKSjwZQ)
 - [IAAO Technical Standards](https://iaao.org/wcm/Resources/Technical_Standards/wcm/Resources_Content/Pubs/Technical_Standards.aspx) - Technical standards and measurements for the assessment field
@@ -130,7 +133,7 @@ Useful materials that give an overview of Cook County's property tax system and 
 
 - [:star: Max Kuhn's Applied Predictive Modeling](http://appliedpredictivemodeling.com/toc) - One of the best books on predictive modeling. Extremely clear and comprehensive
 - [Stacked Model Example with Ames Housing Dataset](https://www.kaggle.com/hansjoerg/glmnet-xgboost-and-svm-using-tidymodels)
-- [Scikit-learn Algorithm Cheatsheet](https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html) - A flowchart to choosing an ML estimator 
+- [Scikit-learn Algorithm Cheatsheet](https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html) - A flowchart to choosing an ML estimator
 
 ##### Statistics
 

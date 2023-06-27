@@ -1,18 +1,20 @@
-The property assessment world is filled with lots of technical jargon that can make things confusing, even for veteran employees. This glossary of terms should clarify some of the confusion. Terms are listed by section in alphabetical order. If you have questions about a term or think something is omitted, please ping @dfsnow.
+# Glossary
+
+The property assessment world is filled with lots of technical jargon that can make things confusing, even for veteran employees. This glossary of terms should clarify some of the confusion. Terms are listed by section in alphabetical order. If you have questions about a term or think something is omitted, please open an issue.
 
 ## General
 
 #### Arm's Length Sale
 
 1. A sale between a willing buyer and a willing seller that are unrelated and are not acting under duress, abnormal pressure or undue influences.
-2. A sale between two unrelated parties, both seeking to maximize their positions from the transaction. 
+2. A sale between two unrelated parties, both seeking to maximize their positions from the transaction.
 
 #### Assessed Value (AV)
 
 The value set by the CCAO for the purpose of computing property taxes. In some jurisdictions, assessed value is equal to [Fair Cash Value](#fair-cash-value-fcv). In Cook County, assessed value is:
 
    - 10% of [Fair Cash Value](#fair-cash-value-fcv) for [residential properties](#residential-property) (all class 200 properties, including condominiums)
-   - 25% of [Fair Cash Value](#fair-cash-value-fcv) for commercial properties (all class 500 properties) 
+   - 25% of [Fair Cash Value](#fair-cash-value-fcv) for commercial properties (all class 500 properties)
 
 These percentage multipliers are known as Assessment Levels.
 
@@ -34,11 +36,11 @@ The amount for which a property can be sold in the due course of business and tr
 
 #### Fair Market Value (FMV)
 
-Identical to [Fair Cash Value](#fair-cash-value-fcv). These terms are used interchangeably at the CCAO. 
+Identical to [Fair Cash Value](#fair-cash-value-fcv). These terms are used interchangeably at the CCAO.
 
 #### Exemption
 
-Removal  of  property  from  the  tax  base;  may  be  a  partial  (a  homestead) or complete (church building used exclusively for religious use) 
+Removal  of  property  from  the  tax  base;  may  be  a  partial  (a  homestead) or complete (church building used exclusively for religious use)
 
 #### IAAO
 
@@ -68,7 +70,7 @@ The ratio of the assessor's estimated [Assessed Value](#assessed-value-av) to th
 \text{Assessment Ratio}_t = \frac{\text{Assessor's Estimated Assessed Value}_t}{\text{Sale Price}_{t}}
 ```
 
-:warning: NOTE: The CCAO typically uses lagged/leading sales when calculating sales/assessment ratios. See the [Sales Ratio Study SOP](/SOPs/Sales-Ratio-Studies) for more details.
+:warning: NOTE: The CCAO typically uses lagged/leading sales when calculating sales/assessment ratios. See the [Sales Ratio Study SOP](/SOPs/Sales-Ratio-Studies.md) for more details.
 
 #### Coefficient of Dispersion (COD)
 
@@ -112,7 +114,7 @@ The ratio of the assessor's estimated [Fair Cash Value](#fair-cash-value-fcv) to
 \text{Sales Ratio}_t = \frac{\text{Assessor's Estimated Fair Cash Value}_{t}}{\text{Sale Price}_{t}}
 ```
 
-:warning: NOTE: The CCAO typically uses lagged/leading sales when calculating sales/assessment ratios. See the [Sales Ratio Study SOP](/SOPs/Sales-Ratio-Studies) for more details.
+:warning: NOTE: The CCAO typically uses lagged/leading sales when calculating sales/assessment ratios. See the [Sales Ratio Study SOP](/SOPs/Sales-Ratio-Studies.md) for more details.
 
 #### Sales Ratio Study
 
@@ -185,7 +187,7 @@ A designation in the Illinois chapter of the [IAAO](#iaao) certifying that the r
 
 #### Equalization Factor
 
-A factor determined by the Illinois Department of Revenue (IDOR) each year to ensure an equal assessment among all 102 counties in the state. State statute requires that the aggregate value of assessments within each county must be equalized at $`33 \frac{1}{3}\%`$ of the estimated [Fair Market Value](#fair-market-value-fmv) of real property in the county. This factor is also known as the "multiplier." 
+A factor determined by the Illinois Department of Revenue (IDOR) each year to ensure an equal assessment among all 102 counties in the state. State statute requires that the aggregate value of assessments within each county must be equalized at $`33 \frac{1}{3}\%`$ of the estimated [Fair Market Value](#fair-market-value-fmv) of real property in the county. This factor is also known as the "multiplier."
 
 #### Equalized Assessed Valuation (EAV)
 
@@ -206,9 +208,9 @@ Cook County's system of record for property taxes and assessments. Shared betwee
 An [Assessed Value](#assessed-value-av) that is less than a full assessed value, because:
 
 1. Improvements were added but were not usable for the entire tax year, or
-2. The taxable status of the property changed during the tax year. 
+2. The taxable status of the property changed during the tax year.
 
-New construction, building demolition, or fire occurring during the taxable year are common triggers for a partial assessment.  
+New construction, building demolition, or fire occurring during the taxable year are common triggers for a partial assessment.
 
 #### Property Tax Appeal Board (PTAB)
 
@@ -216,15 +218,15 @@ A [quasi-judicial, state-level body](http://www.ptab.illinois.gov/) that also pr
 
 #### PTAXSIM
 
-Short for Property Tax Simulator, [PTAXSIM](https://gitlab.com/ccao-data-science---modeling/applications/ptaxsim) is an application developed by the CCAO Data Science designed to replicate the property tax bill calculations performed by the Clerk/Treasurer. The goal of the application is to allow users to model different scenarios in order to more accurately predict how certain changes will affect the tax bill of a property.
+Short for Property Tax Simulator, [PTAXSIM](https://github.com/ccao-data/ptaxsim) is an application developed by the CCAO Data Department designed to replicate the property tax bill calculations performed by the Clerk/Treasurer. The goal of the application is to allow users to model different scenarios in order to more accurately predict how certain changes will affect the tax bill of a property.
 
 #### RPIE
 
-The Real Property Income and Expense form. See the [RPIE pages](/RPIE/RPIE Overview) on the wiki for more information.
+The Real Property Income and Expense form. See the [RPIE pages](/RPIE/RPIE-Overview.md) on the wiki for more information.
 
 #### Tax Base
 
-The total [Assessed Value](#assessed-value-av) of all properties. Sometimes broken out by area i.e the tax base of Rogers Park, which refers to the sum of all property [AVs](#assessed-value-av) in that town. 
+The total [Assessed Value](#assessed-value-av) of all properties. Sometimes broken out by area i.e the tax base of Rogers Park, which refers to the sum of all property [AVs](#assessed-value-av) in that town.
 
 #### Tax Incentives
 
@@ -238,7 +240,7 @@ See [City of Chicago resources on TIFs](https://www.chicago.gov/city/en/depts/dc
 
 #### Tax Levy
 
-The amount in real estate taxes requested by each [taxing body](#taxing-body). 
+The amount in real estate taxes requested by each [taxing body](#taxing-body).
 
 #### Tax Rate
 
@@ -257,7 +259,7 @@ A department within the CCAO responsible for interfacing with the public. TPI he
 A department within the CCAO responsible for:
 
 * Certain aspects of the valuation process, such as valuing land
-* Reviewing initial model values from Data Science
+* Reviewing initial model values from the Data Department
 * Mailing, closing, and certifying assessed values
 * Processing appeals submitted to the CCAO
 * Validating data such as property characteristics, sales, and [PIN](#property-index-number-pin) divisions

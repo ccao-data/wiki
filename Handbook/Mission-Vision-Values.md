@@ -6,9 +6,9 @@ The mission of the Data Department is to transform the Cook County Assessor's Of
 
 We strive to be known as a technological leader in the field of public sector data science by creating an assessment office that is innovative, ethical, transparent, and fair.
 
-# Guiding Principles
+# Values
 
-This department is a unique entity in the public sector. In the last four years, we have been extraordinarily successful in building state-of-the-art analytic tools and processes. We are a critical component of Cook County's property tax apparatus, helping to ensure that the cost of local government is shared equitably across communities, and that the funding mechanisms of local government operate transparently and ethically. Our department is evolving to become the most efficient, transparent, and innovative unit of local government in the world. 
+This department is a unique entity in the public sector. In the last four years, we have been extraordinarily successful in building state-of-the-art analytic tools and processes. We are a critical component of Cook County's property tax apparatus, helping to ensure that the cost of local government is shared equitably across communities, and that the funding mechanisms of local government operate transparently and ethically. Our department is evolving to become the most efficient, transparent, and innovative unit of local government in the world.
 
 We believe our achievements are an outgrowth of our values, and that those values must always be at the forefront of our work. This article outlines those values in detail, and gives examples of how we practice those values in our work. In crafting this document, we took great inspiration from [GitLab's Company Handbook](https://about.gitlab.com/handbook/values) and the [Social Rules](https://www.recurse.com/manual#sub-sec-social-rules) of [The Recurse Center](https://www.recurse.com).
 
@@ -24,7 +24,7 @@ Anything we produce can have significant consequences for the distribution of ta
 
 Nearly every decision made at all levels of the organization creates winners and losers, and those distributional decisions should be made intentionally, with good and strong justification. We try to operate behind Rawl's [Veil of Ignorance](https://en.wikipedia.org/wiki/Veil_of_ignorance) when considering consequential changes to policy.
 
-### Fairness to colleagues 
+### Fairness to colleagues
 
 2,300 years ago, [Aristotle](https://en.wikipedia.org/wiki/Nicomachean_Ethics) wrote:
 
@@ -60,17 +60,17 @@ Mistakes can include when you have not been kind to someone. In order to reinfor
 
 ## Transparency
 
-The public has a right to know what we are doing and how we are doing it. Your colleagues need to be able to see your work easily, without interrupting you. Transparency with the public and with each other is central to our success. Share as much information with each other and the public as you can. 
+The public has a right to know what we are doing and how we are doing it. Your colleagues need to be able to see your work easily, without interrupting you. Transparency with the public and with each other is central to our success. Share as much information with each other and the public as you can.
 
-An example is the [Data Department group on GitLab](https://gitlab.com/ccao-data-science---modeling) that also contains [this wiki](https://gitlab.com/groups/ccao-data-science---modeling/-/wikis/home). Everything we do is public by default; if it is used in production, it is available to the public. Transparency creates awareness for the CCAO, allows us to recruit people that care about our values, gets us more and faster feedback from people outside the agency, and makes it easier to collaborate with others. It is also about sharing great software, documentation, examples, lessons, and processes with the **whole community** and the world in the spirit of open source, which we believe creates more value than it captures.
+An example is the [Data Department group on GitHub](https://github.com/ccao-data) that also contains [this wiki](https://github.com/ccao-data/wiki). Everything we do is public by default; if it is used in production, it is available to the public. Transparency creates awareness for the CCAO, allows us to recruit people that care about our values, gets us more and faster feedback from people outside the agency, and makes it easier to collaborate with others. It is also about sharing great software, documentation, examples, lessons, and processes with the **whole community** and the world in the spirit of open source, which we believe creates more value than it captures.
 
 ### Public by default
 
-Everything produced by our department will be public by default. If something is not public, there should be a reference in the documentation that states a confidential decision was taken with a link to our [Not Public](Handbook/Not-Public) guidelines, unless legal feels it carries undue risk.
+Everything produced by our department will be public by default. If something is not public, there should be a reference in the documentation that states a confidential decision was taken with a link to our [Not Public](Not-Public.md) guidelines, unless legal feels it carries undue risk.
 
 The public process does two things: allows others to benefit from the conversation and acts as a filter. Since there is only a limited amount of time, we prioritize conversations that a wider audience can benefit from.
 
-In line with our value of transparency and being public by default, all team member profiles should be public. Public profiles also enable broader collaboration and efficiencies between teams. To do so, please make sure that the checkbox under the [Private profile](https://docs.gitlab.com/ee/user/profile/#make-your-user-profile-page-private) option is unchecked [in your profile settings](https://gitlab.com/-/profile). If you do not feel comfortable with your full name or location on your profile, please change it to what feels appropriate to you as these are displayed even on private profiles.
+In line with our value of transparency and being public by default, all team member profiles should be public. Public profiles also enable broader collaboration and efficiencies between teams. If you do not feel comfortable with your full name or location on your profile, please change it to what feels appropriate to you as these are displayed even on private profiles.
 
 If you believe something shouldn't be public that currently is (or vice versa), then [email the Data Department](mailto:Assessor.Data@cookcountyil.gov).
 
@@ -84,7 +84,7 @@ We make information public by default because [transparency is one of our values
 
 When information is not public, it may also be treated as limited access, only shared with certain roles, teams, or team members due to privacy considerations, contractual obligation, or other reasons that the author or DRI can specify. Certain kinds of information default to limited access, including details about team members or taxpayers who did not give permission to share the information.
 
-We document what is not public by default [on our wiki](Handbook/Not Public).
+We document what is not public by default [on our wiki](Not Public.md).
 
 ### Directness
 
@@ -116,7 +116,7 @@ We accept that we occasionally make mistakes in the direction of transparency. I
 
 ### Say why, not just what
 
-Transparent changes have the reasons for the change laid out clearly along with the change itself. This leads to fewer questions later on because people already have some understanding. A change with no public explanation can lead to a lot of extra rounds of questioning, which is less efficient. 
+Transparent changes have the reasons for the change laid out clearly along with the change itself. This leads to fewer questions later on because people already have some understanding. A change with no public explanation can lead to a lot of extra rounds of questioning, which is less efficient.
 
 This also helps with institutional memory: a year from now when you want to know why a decision was made, or not, the issue or merge request that has the decision also shares why the decision was made. This is related to [Chesterton's fence](https://en.wikipedia.org/wiki/Wikipedia:Chesterton%27s_fence) - it's much easier to suggest removing or changing something if you know why it exists in the first place.
 
@@ -134,7 +134,7 @@ Transparency increases accountability when making decisions and difficult choice
 
 It is critical for the success of the Data Department to foster a culture of inclusion. As a general rule, [You Can't Say You Can't Play](https://www.amazon.com/You-Cant-Say-Play/dp/0674965906). There are many ways of indicating someone is unwelcome, or that they ideas are less important. We try to build a team that is aware of these types of pitfalls, and works to actively ensure that everyone is welcome. We embrace diversity of people, backgrounds, ideas, and lifestyles.
 
-### Embracing uncomfortable ideas and conversations 
+### Embracing uncomfortable ideas and conversations
 
 Part of inclusion is a willingness to embrace often uncomfortable conversations and situations. This concept is at the core of inclusion and helping to eliminate the problems that are faced by certain team members who may not be in the majority.
 
@@ -146,7 +146,7 @@ This rule is borrowed from the social rules of the [Recurse Center](https://www.
 
 ### Reach across departments
 
-While it's wise to seek advice from experts within your function, we encourage team members to seek and provide feedback across departments. This enables the team to iterate more quickly, taking a more diverse perspective into account. 
+While it's wise to seek advice from experts within your function, we encourage team members to seek and provide feedback across departments. This enables the team to iterate more quickly, taking a more diverse perspective into account.
 
 ### Shift working hours for a cause
 
@@ -158,13 +158,13 @@ People feel more included when they're supported. We are working to develop a ro
 
 ### Religion and politics at work
 
-We generally avoid discussing politics or religion in public forums because it is easy to alienate people that have a minority opinion. This doesn't mean we never discuss these topics. Because we value diversity, inclusion and belonging, and want all team members to feel welcome and contribute equally, we encourage free discussion of operational decisions that can move us toward being a more inclusive organization. 
+We generally avoid discussing politics or religion in public forums because it is easy to alienate people that have a minority opinion. This doesn't mean we never discuss these topics. Because we value diversity, inclusion and belonging, and want all team members to feel welcome and contribute equally, we encourage free discussion of operational decisions that can move us toward being a more inclusive organization.
 
-There is sometimes a grey area where advocating for diversity and political activities may intersect. Team members should use discretion in grey area communications, because a culture of belonging requires us to be respectful of the broad spectrum of views within our work environment. What does this mean in practice? Please feel empowered to share information that highlights diversity, inclusion and belonging issues team members can get involved. But do not post articles that reference specific political figures or parties.  
+There is sometimes a grey area where advocating for diversity and political activities may intersect. Team members should use discretion in grey area communications, because a culture of belonging requires us to be respectful of the broad spectrum of views within our work environment. What does this mean in practice? Please feel empowered to share information that highlights diversity, inclusion and belonging issues team members can get involved. But do not post articles that reference specific political figures or parties.
 
 ### Quirkiness
 
-Unexpected and unconventional things make life more interesting. Celebrate and encourage quirky gifts, habits, behavior, and points of view. 
+Unexpected and unconventional things make life more interesting. Celebrate and encourage quirky gifts, habits, behavior, and points of view.
 
 ### Inclusive language and pronouns
 
@@ -208,11 +208,11 @@ Don't wait. When you have something of value like small fix or documentation upd
 
 ### Set a due date
 
-We always try to set a due date, and we try to stick to it. If needed, we cut scope. 
+We always try to set a due date, and we try to stick to it. If needed, we cut scope.
 
 ### Make a proposal
 
-If you need to decide something as a team, make a concrete proposal instead of calling a meeting to get everyone's input. Having a proposal will be a much more effective use of everyone's time. The best meetings are a review of a proposal. State the underlying problem so that people have enough context to propose reasonable alternatives. The people that receive the proposal should not feel left out and the person making it should not feel bad if a completely different proposal is implemented. 
+If you need to decide something as a team, make a concrete proposal instead of calling a meeting to get everyone's input. Having a proposal will be a much more effective use of everyone's time. The best meetings are a review of a proposal. State the underlying problem so that people have enough context to propose reasonable alternatives. The people that receive the proposal should not feel left out and the person making it should not feel bad if a completely different proposal is implemented.
 
 Don't let your desire to be involved early or to see your solution implemented stand in the way of getting to the best outcome. If you don't have a proposal, don't let that stop you from highlighting a problem, but please state that you couldn't think of a good solution and list any solutions you considered.
 
@@ -226,13 +226,13 @@ First, optimize for speed and results; when it is a success, figure out how to s
 
 ## Innovation
 
-Transformational change does not occur without innovation. Innovation need not be complex or 'fancy'. One of the most important inventions of modern history was the [flush toilet](https://www.economist.com/leaders/2013/01/12/the-great-innovation-debate). We are dedicated to elegant innovation, simple solutions to complex problems. Like [Nikolai Begg](https://www.ted.com/talks/nikolai_begg_a_tool_to_fix_one_of_the_most_dangerous_moments_in_surgery?language=en), we identify simple problems and design elegant solutions for them. 
+Transformational change does not occur without innovation. Innovation need not be complex or 'fancy'. One of the most important inventions of modern history was the [flush toilet](https://www.economist.com/leaders/2013/01/12/the-great-innovation-debate). We are dedicated to elegant innovation, simple solutions to complex problems. Like [Nikolai Begg](https://www.ted.com/talks/nikolai_begg_a_tool_to_fix_one_of_the_most_dangerous_moments_in_surgery?language=en), we identify simple problems and design elegant solutions for them.
 
 Innovation comes in two parts: good ideas, executed well. The first part requires a problem-solver's mindset. The second requires a dedication to efficiency and hard work. Together, these elements produce transformational change in a short time frame.
 
 ### Measure results not hours
 
-The purpose of innovation is to solve problems. We care about what you achieve: the code you shipped, the taxpayer you made happy, and the team member you helped. An innovation is only as good as the problem it solves. 
+The purpose of innovation is to solve problems. We care about what you achieve: the code you shipped, the taxpayer you made happy, and the team member you helped. An innovation is only as good as the problem it solves.
 
 ### Give agency
 
@@ -246,7 +246,7 @@ We document everything: in the handbook, in meeting notes, in issues. We do that
 
 ### Growth mindset
 
-You don't always get results and this will lead to criticism from yourself and/or others. We believe our talents can be developed through hard work, targeted training, learning from others, on-the-job experience, and receiving input from others. 
+You don't always get results and this will lead to criticism from yourself and/or others. We believe our talents can be developed through hard work, targeted training, learning from others, on-the-job experience, and receiving input from others.
 
 It is in our DNA as an organization and individuals to look for opportunity, stay humble, and never settle. We try to hire people based on [their trajectory, not their pedigree](https://hbr.org/2016/01/what-having-a-growth-mindset-actually-means). We also strive to foster a culture of curiosity and continuous learning where team members are provided and proactively seek out opportunities to grow themselves and their careers.
 
@@ -278,7 +278,7 @@ We should strive to accept that there are things that we don't know about the wo
 
 The Data Department consists of a very small core team (< 5 people). Why would such a small unit need a detailed description of their values? There are a few reasons why we have made the effort to create this document and train all members of the team on it.
 
-**Scalable Success:** The Data Department will continue to grow and evolve, and it is critical that our values are not diluted as the unit grows. Establishing a strong values-driven culture early in our development helps ensure a [durable department](https://en.wikipedia.org/wiki/Built_to_Last:_Successful_Habits_of_Visionary_Companies). 
+**Scalable Success:** The Data Department will continue to grow and evolve, and it is critical that our values are not diluted as the unit grows. Establishing a strong values-driven culture early in our development helps ensure a [durable department](https://en.wikipedia.org/wiki/Built_to_Last:_Successful_Habits_of_Visionary_Companies).
 
 **Recruitment:** A clear, public statement of value helps attract like-minded people to our team. This helps prevent value dilution as the unit grows, and helps bring in new and innovative ideas.
 
@@ -286,11 +286,11 @@ The Data Department consists of a very small core team (< 5 people). Why would s
 
 ## How Do The Values Work?
 
-Again, borrowing from the [Recurse Center](https://www.recurse.com/social-rules), the values outlined here are meant to be lightweight. They aren't rules; there is no punishment for breaking them. They are designed to make the Data Department a fulfilling and pleasant place to work. If you don't adhere to one of the values and someone calls you out, [say sorry](#say-sorry), reflect, and move on. 
+Again, borrowing from the [Recurse Center](https://www.recurse.com/social-rules), the values outlined here are meant to be lightweight. They aren't rules; there is no punishment for breaking them. They are designed to make the Data Department a fulfilling and pleasant place to work. If you don't adhere to one of the values and someone calls you out, [say sorry](#say-sorry), reflect, and move on.
 
 ## No Halos
 
-We do not operate under the delusion that our values are superior to others' values, or that our values make our work better simply because we hold them. [Good values do not cause good performance](https://en.wikipedia.org/wiki/The_Halo_Effect_(book)). But good values are an important component of a good culture and a high-functioning team. This document attempts to outline the ways in which team members are expected to demonstrate our values in their daily work. 
+We do not operate under the delusion that our values are superior to others' values, or that our values make our work better simply because we hold them. [Good values do not cause good performance](https://en.wikipedia.org/wiki/The_Halo_Effect_(book)). But good values are an important component of a good culture and a high-functioning team. This document attempts to outline the ways in which team members are expected to demonstrate our values in their daily work.
 
 ## Updating Our Values
 
