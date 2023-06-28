@@ -26,7 +26,7 @@
 
 ### Residential
 
-* [Single and Multi-Family Residential Model](https://github.com/ccao-data/ccao-res-avm)
+* [Single and Multi-Family Residential Model](https://github.com/ccao-data/model-res-avm)
 * [Condominium Model](https://github.com/ccao-data/ccao-condo-avm)
 * [Residential Exemptions](Residential/Residential-Exemptions.md)
 * [Home Improvement Exemptions (288s)](Residential/Home-Improvement-Exemptions.md)
