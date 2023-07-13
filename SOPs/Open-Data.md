@@ -140,7 +140,7 @@ The Data Department creates and maintains the following open data sets.
 
 | Time Frame   | Property Classes | Unique By | Row    | Updated |
 | :---:        | :---:            | :---:     | :---:  | :---:   |
-| 2021-Present | All              | PIN, Year | Parcel | Monthly |
+| 2022-Present | All              | PIN, Year | Parcel | Monthly |
 
 **Notes**: Contains property tax-exempt parcels in Cook County.
 
