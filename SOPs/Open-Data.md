@@ -136,6 +136,18 @@ The Data Department creates and maintains the following open data sets.
 
 **Code:** [proximity-vw_pin10_proximity.sql](https://github.com/ccao-data/data-architecture/blob/master/aws-athena/views/proximity-vw_pin10_proximity.sql)
 
+### [Property Tax-Exempt Parcels](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Property-Tax-Exempt-Parcels/vgzx-68gb)
+
+| Time Frame   | Property Classes | Unique By | Row    | Updated |
+| :---:        | :---:            | :---:     | :---:  | :---:   |
+| 2021-Present | All              | PIN, Year | Parcel | Monthly |
+
+**Notes**: Contains property tax-exempt parcels in Cook County.
+
+**Use cases:** Investigating which properties and property owners in Cook County have been granted tax-exempt status.
+
+**Code:** [default-vw_pin_exempt.sql](https://github.com/ccao-data/data-architecture/blob/master/aws-athena/views/default-vw_pin_exempt.sql)
+
 ### [Neighborhood Boundaries](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Neighborhood-Boundaries/pcdw-pxtg)
 
 | Time Frame | Property Classes | Unique By         | Row                  | Updated  |
