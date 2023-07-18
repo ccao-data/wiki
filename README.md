@@ -17,6 +17,7 @@
 * [Connect to AWS Resources](How-To/Connect-to-AWS-Resources.md)
 * [Administer Users on CCAO Services](How-To/Administer-Users-on-CCAO-Services.md)
 * [Use the renv global cache](How-To/Use-the-renv-global-cache.md)
+* [Use the Data team server](How-To/Use-the-Data-team-server.md)
 
 ### Standard Operating Procedures (SOPs)
 
