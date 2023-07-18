@@ -1,5 +1,13 @@
 # How to use the Data team server
 
+## Contents
+
+* [What is the Data team server?](#what-is-the-data-team-server)
+* [Who controls the server?](#who-controls-the-server)
+* [What lives on the server?](#what-lives-on-the-server)
+* [How do I access the server?](#how-do-i-access-the-server)
+* [How do I add or remove users from the server?](#how-do-i-add-or-remove-users-from-the-server)
+
 ## What is the Data team server?
 
 The Data team server is a remote machine that we use to host various tools and services. It is an AWS EC2 instance running Ubuntu in the `us-east-1` region.
