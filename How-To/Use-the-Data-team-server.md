@@ -18,7 +18,7 @@ A sample of the types of things we use the server for include:
 * Schedule cron jobs to perform ETL tasks
 * Run web apps using Docker
 
-These examples are intended to give you a high-level overview of the types of tools we host on the server. For more detail on the tools that are available on the server, see: [What's running on the server?](#what-is-running-on-the-server)
+These examples are intended to give you a high-level overview of the types of tools we host on the server. For more detail on the tools that are available on the server, see: [What lives on the server?](#what-lives-on-the-server)
 
 ## Who controls the server?
 
