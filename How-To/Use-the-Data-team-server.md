@@ -10,11 +10,11 @@
 
 ## What is the Data team server?
 
-The Data team server is a remote machine that we use to host various tools and services. It is an AWS EC2 instance running Ubuntu in the `us-east-1` region.
+The Data team server is a remote machine that we use to host various tools and services. It is a virtual machine (VM) running on an on-premise server within the Cook County building.
 
 A sample of the types of things we use the server for include:
 
-* Run RStudio and JupyterLab instances with more compute than we have on our laptops 
+* Run RStudio and JupyterLab instances with more compute than we have on our laptops
 * Schedule cron jobs to perform ETL tasks
 * Run web apps using Docker
 
@@ -24,11 +24,13 @@ These examples are intended to give you a high-level overview of the types of to
 
 The server is owned and maintained collectively by the Data team staff, but only a small group of Senior Data Scientists have superuser permissions (these users are `sudoers` in Linux terminology). If you need access to superuser permissions (to run commands that require `sudo`, for example), contact a Senior Data Scientist.
 
+The hardware that the server runs on is controlled by the CCAO's internal IT. If you need hardware debugging/upgrades or a hard reboot, contact the IT Admins.
+
 ## What lives on the server?
 
 The following is a list of tools and services that live on the server as of summer 2023:
 
-| Path | Description | Repo | Run by |
+| Path | Description | Repo | Run By |
 | ---- | ----------- | ---- | ------ |
 | `/home/<username>` | Home directories for each member of the data team | | |
 | `/home/shiny-server/services` | Home directory for various apps that run on the server | | |
@@ -39,7 +41,7 @@ The following is a list of tools and services that live on the server as of summ
 | `/home/shiny-server/services/service-shiny-proxy` | Service that runs other services using Docker | [`service-shiny-proxy`](https://github.com/ccao-data/service-shiny-proxy) | docker |
 | `/home/shiny-server/services/service-jupyterhub` | JupyterHub instance for running notebooks | [`service-jupyterhub`](https://github.com/ccao-data/service-jupyterhub) | systemd |
 | `/home/shiny-server/services/api-res-avm` | REST API for getting predicted values from our residential model | [`api-res-avm`](https://github.com/ccao-data/api-res-avm) | docker |
-| `/etc/crontab` | Cron job configuration | | cron |
+| `/var/spool/cron/crontabs/shiny-server` | Cron job configuration | | cron |
 | `/etc/systemd/system/` | systemd service configurations | | systemd |
 
 If you add a new tool or service to the server, add it to this list and bump the date listed above.
@@ -56,7 +58,7 @@ ssh $YOUR_USER@datascience.cookcountyassessor.com
 
 This will prompt you to enter the password that was created for your account.
 
-Once you've logged in for the first time, you can change your password by running the `passwd` command; you can also configure your account [to log in using an SSH key instead of a password](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04) if you prefer. 
+Once you've logged in for the first time, you can change your password by running the `passwd` command; you can also configure your account [to log in using an SSH key instead of a password](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04) if you prefer.
 
 ## How do I add or remove users from the server?
 
