@@ -4,7 +4,7 @@ The Data Department utilizes AWS for data storage (S3), data cleaning (Glue), an
 
 ## S3
 
-1. Install and setup the [AWS CLI and aws-mfa](How-To/Setup-the-AWS-Command-Line-Interface-and-Multi-factor-Authentication)
+1. Install and setup the [AWS CLI and aws-mfa](/How-To/Setup-the-AWS-Command-Line-Interface-and-Multi-factor-Authentication.md)
 2. Authenticate with `aws-mfa` via the command line
 3. That's it, calls to S3 should work automatically
     - You can use the `aws.s3` library in R or `boto3` in Python to upload, download, and manipulate S3 objects
@@ -52,7 +52,7 @@ s3 = boto3.client(
 
 You can use the `noctua` R package to pull small amounts of data from Athena. This package uses the `paws` R package to directly grab query results, but it can be significantly slower and more memory-intensive than the JDBC connector. The benefit of `noctua` is that is can cache query results for faster reload of the same data. See [here](https://dyfanjones.github.io/noctua/articles/aws_athena_query_caching.html) for more details.
 
-1. Install and setup the [AWS CLI and aws-mfa](How-To/Setup-the-AWS-Command-Line-Interface-and-Multi‐factor-Authentication)
+1. Install and setup the [AWS CLI and aws-mfa](/How-To/Setup-the-AWS-Command-Line-Interface-and-Multi‐factor-Authentication.md)
 2. Authenticate with `aws-mfa` via the command line
 3. In your root-level `.Renviron` file, add the environmental variables below. Message @SweatyHandshake or @dfsnow for the name of the Athena results bucket. Save the file and restart your R session
     ```
