@@ -4,14 +4,6 @@ The property assessment world is filled with lots of technical jargon that can m
 
 ## General
 
-#### Accrual Basis
-
-A way of measuring pension and other benefit funding levels that counts employee contributions when they are due, and benefit payments and refunds when they are made. Unlike [actuarial basis](#actuarial-basis), accrual basis does not weigh future benefit payments against investments and expected returns.
-
-#### Actuarial Basis
-
-A complex determination of whether investments held by a pension or other benefit plans are adequate to cover future expenses. The determination weighs expected future benefit payments against the level of investments and how much they are expected to earn over time, resulting in a determination of unfunded liability.
-
 #### Arm's Length Sale
 
 1. A sale between a willing buyer and a willing seller that are unrelated and are not acting under duress, abnormal pressure or undue influences.
@@ -248,7 +240,7 @@ A factor determined by the [Illinois Department of Revenue](#illinois-department
 
 #### Equalized Assessed Valuation (EAV)
 
-The [assessed value](#assessed-value-av) multiplied by the [equalization factor](#equalization-factor). The EAV is the value multiplied by a tax rate to calculate a property's tax bill.
+The [assessed value](#assessed-value-av) multiplied by the [equalization factor](#equalization-factor).
 
 #### First Installment
 
@@ -256,7 +248,7 @@ The first of two property tax bills sent out each year. This bill is 55% of the 
 
 #### Home Rule Government
 
-A municipal government granted additional authority, including added taxation powers, by the state of Illinois. Municipalities that have more than 25,000 residents are automatically granted home rule powers,
+A municipal government granted additional authority, including added taxation powers, by the state of Illinois. Municipalities that have more than 25,000 residents are automatically granted home rule powers.
 
 #### iasWorld
 
