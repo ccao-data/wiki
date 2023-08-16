@@ -37,6 +37,23 @@ To add new users to the Data server (and these applications), complete the follo
     ```
 3. Follow the prompts for user creation. Ask the user to create a password (if they are present) or generate a random one and share it with them securely.
 4. Test the new account. Visit the [RStudio](https://datascience.cookcountyassessor.com/rstudio/) login page and test the new account credentials. The account should work immediately.
+5. (Optional) [Use systemd and cgroups](https://unix.stackexchange.com/a/732460) to limit the resources available to a user (to prevent them from using 100% of the server's memory or CPU). To do so:
+    1. Create a slice configuration file for each user:
+       ```
+       sudo mkdir /etc/systemd/system/user-<uid>.slice.d
+       sudo vim /etc/systemd/system/user-<uid>.slice.d/override.conf
+       ```
+    2. Use vim to configure resource controls, for example:
+       ```
+       [Slice]
+       Slice=user.slice
+       MemoryHigh=24G
+       CPUWeight=20
+       ```
+    3. Apply changes:
+       ```
+       systemctl daemon-reload
+       ```
 
 To delete users on the Data server, complete the following steps:
 
