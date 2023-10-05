@@ -49,14 +49,16 @@ Useful materials that give an overview of Cook County's property tax system and 
 - [Learn About Illinois' Property Tax System](https://www.youtube.com/watch?v=l9YVudOQuZ4) - Illinois Realtors’ video about property tax system and bills
 - [Why Are My Property Taxes so High?](https://www.chicagobusiness.com/crains-forum-taxes/forum-why-are-my-property-taxes-so-high) - Neat interactive from Crain's that compares two very different homes that pay roughly the same amount of property tax
 - [Report on Property Taxes in Wicker Park - Block Club Chicago](https://blockclubchicago.org/2021/03/23/after-decades-in-wicker-park-senior-homeowners-forced-out-by-skyrocketing-property-taxes-this-neighborhood-has-broken-my-heart/) - Story on how increases in assessed value are affecting Wicker Park
+- [How Our Property Tax System Robs The Poor to Pay For The Wealthy (2023) - Strong Towns](https://youtu.be/8MjjHKIlKko) - Documentary about the assessment gap e.g. disparities between low-value and high-value home assessments
 - [State of Illinois Property Tax System](https://tax.illinois.gov/content/dam/soi/en/web/tax/research/publications/documents/localgovernment/ptax-1004.pdf) - A long PDF from the Illinois Department of Revenue explaining property taxes in Illinois
+- [Chicago's Pension Challenge: Understanding Why the Pension Funds are Underfunded - Chi Hack Night](https://www.youtube.com/watch?v=wofivGCqBTk) - Excellent overview of the problems with Chicago's pension funds
 
 ## R
 
 ##### Books and Guides
 
 - [:exclamation: R for Data Science](https://r4ds.hadley.nz) - Classic book on data munging and the basics of modeling, highly recommended
-- [:star: Advanced R](http://adv-r.had.co.nz/Introduction.html) - Extremely good overview of the R language, its quirks, and how to use it effectively
+- [:star: Advanced R](https://adv-r.hadley.nz/) - Extremely good overview of the R language, its quirks, and how to use it effectively
 - [:star: Package Development in R](https://r-pkgs.org/) - Book on how to develop, use, and test R packages
 - [:star: Efficient R Programming](https://csgillespie.github.io/efficientR/) - Online book covering how make R code faster to type and run
 - [Debugging with RStudio](https://support.rstudio.com/hc/en-us/articles/200713843?version=1.3.959&mode=server#introduction) - How to use RStudio's built-in debugging features
@@ -67,15 +69,15 @@ Useful materials that give an overview of Cook County's property tax system and 
 ##### Cheatsheets
 
 - [:star: Colorbrewer 2](https://colorbrewer2.org/) - Interactive color picker for cartography
-- [RStudio Official Cheatsheets](https://rstudio.com/resources/cheatsheets/) - The official cheatsheets maintained by RStudio. These are 1-2 page printouts covering the vital functions of individual libraries
+- [RStudio Official Cheatsheets](https://posit.co/resources/cheatsheets/) - The official cheatsheets maintained by RStudio. These are 1-2 page printouts covering the vital functions of individual libraries
 - [R Color Palette Cheatsheet](https://www.nceas.ucsb.edu/sites/default/files/2020-04/colorPaletteCheatsheet.pdf) - Useful printout covering the colors available in base R
 
 ##### Specific Libraries
 
-- [Unit Testing in R](https://github.com/SchlossLab/intro-testing-r) - Brief overview of unit testing in R using the `testthat` library
+- [:exclamation: renv Overview](https://rstudio.github.io/renv/articles/renv.html) - A short vignette on how to use `renv`, R's local dependency management system
+- [Unit Testing in R](https://stirlingcodingclub.github.io/code_testing/testing_notes.html) - Brief overview of unit testing in R using the `testthat` library
 - [Programming with dplyr](https://cran.r-project.org/web/packages/dplyr/vignettes/programming.html) - A quick rundown on how to write functions using the `dplyr` library
 - [Using LightGBM in R](https://lightgbm.readthedocs.io/en/latest/R/index.html) - How to use the LightGBM boosted tree framework in R
-- [:exclamation: renv Overview](https://rstudio.github.io/renv/articles/renv.html) - A short vignette on how to use `renv`, R's local dependency management system
 - [Parallel Parameter Tuning in Tidymodels](https://tune.tidymodels.org/articles/extras/optimizations.html#parallel-processing)
 
 ##### Shiny
@@ -154,7 +156,7 @@ Useful materials that give an overview of Cook County's property tax system and 
 
 ## Spatial Data
 
-- [:star: R-Spatial Spatial Data Science Book](https://www.r-spatial.org/book) - Extremely thorough, brand-new book on spatial data in R. Also covers general GIS concepts like reference systems, geometry types, etc.
+- [:exclamation: R-Spatial Spatial Data Science Book](https://www.r-spatial.org/book) - Extremely thorough, brand-new book on spatial data in R. Also covers general GIS concepts like reference systems, geometry types, etc.
 - [:star: CSDS Spatial Data Tutorials](https://spatialanalysis.github.io/tutorials/) - List of tutorials for manipulating spatial data in R, created by UChicago's Center for Spatial Data Science
 - [Simple Features for R](https://r-spatial.github.io/sf/articles/sf1.html) - Long vignette on R's `sf` library, its design, and how to use it
 - [Geofabrik](https://download.geofabrik.de/) - Data extracts from the entire OpenStreetMap (OSM) database. Useful for calculating distances
