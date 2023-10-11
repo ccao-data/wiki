@@ -122,7 +122,7 @@ The Data Department creates and maintains the following open data sets.
 
 **Use cases:** Can be used for geocoding or joining address-level data to other datasets.
 
-**Code:** [default-vw_pin_appeal.sql](https://github.com/ccao-data/data-architecture/blob/master/aws-athena/views/default-vw_pin_address.sql)
+**Code:** [default-vw_pin_address.sql](https://github.com/ccao-data/data-architecture/blob/master/aws-athena/views/default-vw_pin_address.sql)
 
 ### [Parcel Proximity](https://datacatalog.cookcountyil.gov/dataset/Assessor-Parcel-Proximity/ydue-e5u3)
 
