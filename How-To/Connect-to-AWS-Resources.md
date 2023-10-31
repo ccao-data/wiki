@@ -125,6 +125,44 @@ Athena queries that pull a large amount of data are best handled by Amazon's JDB
       "SELECT year, geoid FROM census.acs5 LIMIT 10"
     )
     ```
+    
+### Python
+
+Using python, the `pyathena` package is an excellent option for ingesting data from AWS Athena.
+
+1. Install and setup the [AWS CLI and aws-mfa](/How-To/Setup-the-AWS-Command-Line-Interface-and-Multi‐factor-Authentication.md)
+2. Authenticate with `aws-mfa` via the command line
+3. Install the `pyathena` package into your python environment using `pip install PyAthena`
+4. Add the following environment variables to your environment
+    - Every time we ingest data from athena, the data has to be created as a file and stored somewhere before it arrives in our coding environment. The `$ATHENA_RESULTS_BUCKET` is our designated bucket for these intermediate files, which in this example is meant to be replaced with our actual bucket name.
+    ```
+    AWS_ATHENA_S3_STAGING_DIR=$ATHENA_RESULTS_BUCKET
+    AWS_REGION=us-east-1
+    ```
+5. Run the following code to instantiate your connection and run test query
+    
+    ```python
+    # Load necessary libraries
+    import os
+    import pandas
+    from pyathena import connect
+    from pyathena.pandas.util import as_pandas
+    
+    # Connect to Athena
+    conn = connect(
+        s3_staging_dir=os.getenv("AWS_ATHENA_S3_STAGING_DIR"),
+        region_name=os.getenv("AWS_REGION"),
+    )
+
+    # Define test query
+    SQL_QUERY = "SELECT * from default.vw_pin_sale LIMIT 10;"
+
+    # Execute query and return as pandas df
+    cursor = conn.cursor()
+    cursor.execute(SQL_QUERY)
+    
+    df = as_pandas(cursor)
+    ```
 
 ### Tableau
 
