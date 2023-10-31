@@ -138,7 +138,7 @@ Using python, the `pyathena` package is an excellent option for ingesting data f
     AWS_ATHENA_S3_STAGING_DIR=$ATHENA_RESULTS_BUCKET
     AWS_REGION=us-east-1
     ```
-5. Run the following code ot instantiate your connection and run test query
+5. Run the following code to instantiate your connection and run test query
     
     ```python
     # Load necessary libraries
