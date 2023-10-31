@@ -163,7 +163,6 @@ Using python, the `pyathena` package is an excellent option for ingesting data f
     df = as_pandas(cursor)
     ```
 
-
 ### Tableau
 
 1. Install the [JDBC Driver with AWS SDK](https://docs.aws.amazon.com/athena/latest/ug/connect-with-jdbc.html) - move the downloaded .jar file to `C:\Program Files\Tableau\Drivers` on Windows or `~/Library/Tableau/Drivers` on Mac.
