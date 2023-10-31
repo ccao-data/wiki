@@ -129,7 +129,7 @@ Athena queries that pull a large amount of data are best handled by Amazon's JDB
 ### Python
 Using python, the `pyathena` package is an excellent option for ingesting data from AWS Athena.
 
-1. Install and setup the [AWS CLI and aws-mfa](How-To/Setup-the-AWS-Command-Line-Interface-and-Multi‐factor-Authentication)
+1. Install and setup the [AWS CLI and aws-mfa](/How-To/Setup-the-AWS-Command-Line-Interface-and-Multi‐factor-Authentication.md)
 2. Authenticate with `aws-mfa` via the command line
 3. Install the pyathena package into your python environment using `pip install PyAthena`
 4. Add the following environment variables to your environment
