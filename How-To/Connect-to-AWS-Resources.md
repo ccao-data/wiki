@@ -142,9 +142,10 @@ Using python, the `pyathena` package is an excellent option for ingesting data f
     
     ```python
     # Load necessary libraries
+    import os
+    import pandas
     from pyathena import connect
     from pyathena.pandas.util import as_pandas
-    import pandas
     
     # Connect to Athena
     conn = connect(
