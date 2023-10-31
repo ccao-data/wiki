@@ -131,7 +131,7 @@ Using python, the `pyathena` package is an excellent option for ingesting data f
 
 1. Install and setup the [AWS CLI and aws-mfa](/How-To/Setup-the-AWS-Command-Line-Interface-and-Multi‐factor-Authentication.md)
 2. Authenticate with `aws-mfa` via the command line
-3. Install the pyathena package into your python environment using `pip install PyAthena`
+3. Install the `pyathena` package into your python environment using `pip install PyAthena`
 4. Add the following environment variables to your environment
     - Every time we ingest data from athena, the data has to be created as a file and stored somewhere before it arrives in our coding environment. The `$ATHENA_RESULTS_BUCKET` is our designated bucket for these intermediate files, which in this example is meant to be replaced with our actual bucket name.
     ```
