@@ -43,6 +43,8 @@
 
 ### Data Documentation
 
+- [See main data catalog/dbt documentation](https://ccao-data.github.io/data-architecture)
+
 ##### Office Terminology
 
 * [Property Class Definitions](Data/Class-Definitions.pdf) - *Available via the [CCAO R package](https://github.com/ccao-data/ccao)*
@@ -52,7 +54,7 @@
 ##### Data Guides
 
 * [RPIE SQL Database Data Dictionary](RPIE/rpie-data-dictionary.xlsx)
-* [Data Catalog](Data/Data-Catalog.xlsx)
 * [iasWorld Tables](Data/iasWorld-Tables.xlsx)
 * [iasWorld Keys](Data/iasWorld-PK-FK-2021-06-14.xlsx) - *As of June 14, 2021*
-* [iasWorld ERD (Preliminary Draft)](Data/iasWorld-ERD.pdf)
+* [iasWorld Entity Relationship Diagram (ERD)](Data/iasWorld-ERD.pdf)
+* [Data Catalog](Data/Data-Catalog.xlsx) - *Deprecated, see [dbt documentation](https://ccao-data.github.io/data-architecture)*
