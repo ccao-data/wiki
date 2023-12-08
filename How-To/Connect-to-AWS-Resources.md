@@ -175,3 +175,14 @@ Using python, the `pyathena` package is an excellent option for ingesting data f
     ```
 3. Open Tableau and on the `Connect` sidebar under `To a Server`, navigate to `Amazon Athena`.
 4. Message a [core team](https://github.com/orgs/ccao-data/teams/core-team) member for the necessary server info and credentials. Tableau will not save the `Secret Access Key` field.
+
+### Troubleshooting
+
+As documented [here](https://github.com/DyfanJones/noctua/issues/96), when making an AWS query, noctua tries to keep the directory "tidy". The way it does this, is by trying to delete the AWS Athena Query output. If the user doesn't have permission to do this, it returns the following warning.  
+`Info: (Data scanned: 625.16 GB)  additional arguments ignored in warning()  Warning: AccessDenied (HTTP 403). Access Denied`
+
+For the most part, this error message does not affect the query. However, it can cause operations such as knitting to fail.
+To remedy this, you can make sure that the query is stored via caching with the following (Rstudio) code:
+ ``` 
+ noctua_options(cache_size = 10)
+ ``` 
