@@ -178,11 +178,12 @@ Using python, the `pyathena` package is an excellent option for ingesting data f
 
 ### Troubleshooting
 
-As documented [here](https://github.com/DyfanJones/noctua/issues/96), when making an AWS query, noctua tries to keep the directory "tidy". The way it does this, is by trying to delete the AWS Athena Query output. If the user doesn't have permission to do this, it returns the following warning:
+As documented [here](https://github.com/DyfanJones/noctua/issues/96), when making an Athena query, `noctua` tries to keep the S3 results bucket tidy. It does this by trying to delete the Athena query output from S3. If the query initiator doesn't have permission to do this, it returns the following warning:
 
 `Info: (Data scanned: 625.16 GB)  additional arguments ignored in warning()  Warning: AccessDenied (HTTP 403). Access Denied`
 
-For the most part, this error message does not affect the query. However, it can cause operations such as knitting to fail. To remedy this, you can make sure that the query is stored via caching with the following (Rstudio) code:
+For the most part, this error message does not affect the query. However, it can cause operations such as knitting to fail. To remedy this, you disable the deletion behavior using `noctua` caching. Inside of R, use:
+
  ``` 
  noctua_options(cache_size = 10)
  ``` 
