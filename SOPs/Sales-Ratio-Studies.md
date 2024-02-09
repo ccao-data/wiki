@@ -84,7 +84,7 @@ Each statistic's point estimate is evaluated to see whether it falls within the 
 |Coefficient of Dispersion (COD)   | 5 - 15   |The COD measures Uniformity: how often properties with the same sale price receive the same predicted market value. Lower CODs indicate more fairness between similarly priced properties.   |
 |Price-related Differential (PRD)   | .98 - 1.03  |The PRD measures Vertical Equity: how often properties with lower vs. higher sale prices receive proportionately similar assessments.   |
 |Price-related Bias (PRB)   | -.05 - .05  |PRB is a different approach to measuring Vertical Equity, by measuring the slope of ratios of homes with lower vs. higher sale prices.   |
-|Median Sales Ratio   |  .90 - 1.00 |The median ratio measures Accuracy: whether most estimates accurately reflect sale prices.   |
+|Median Sales Ratio   |  .90 - 1.10 |The median ratio measures Accuracy: whether most estimates accurately reflect sale prices.   |
 |Sales Chasing (E.4)   | $`\le`$ 5%  |Measures the degree to which the statistics above are true reflections of the quality of assessments for sold and unsold properties.   |
 
 **Standard Met.** Below are the criteria to measure whether standards for Uniformity, Vertical Equity, and Accuracy have been met.
@@ -123,19 +123,20 @@ The Data Department shall produce additional sales ratio studies as requested by
 \text{Sales Ratio}_t = \frac{\text{Assessor's Estimated Fair Cash Value}_t}{\text{Sale Price}_{t \pm z}}
 ```
 
-**Assessment ratio:** The ratio of a certified assessment to the assessor's estimated Fair Cash Value in period t:
+**Assessment ratio:**  The ratio of a property's Assessed Value in year t to its sale price in period $`t \pm z`$:
 
 ```math
-\text{Assessment Ratio}_t = \frac{\text{Assessment}_t}{\text{Sale Price}_{t \pm z}}
+\text{Assessment Ratio}_t = \frac{\text{Assessed Value}_t}{\text{Sale Price}_{t \pm z}}
 ```
 
 **Sales Ratio Study:** A statistical analysis to evaluate the quality of assessments with respect to accuracy, uniformity, and vertical equity.
 
-**Residential Property:** A property valued solely on the market valuation standard that is used, or intended to be used, for a residential purposes, and includes:
+**Residential Property:** A property valued solely on the market valuation standard that is used, or intended to be used, for residential purposes, and includes:
 
-* a) Residential condominiums;
-* b) Property with six or fewer self-contained dwelling units;
-* c) Vacant and marginally improved land used, or intended to be used in in conjunction with a residential property.
+* a) Single-family homes;
+* b) Residential condominiums;
+* c) Property with six or fewer self-contained dwelling units;
+* d) Vacant and marginally improved land used, or intended to be used in in conjunction with a residential property.
 
 **Arm's-Length:** Of or relating to dealings between two parties who are not related or not on close terms and who are presumed to have roughly equal bargaining power; not involving a confidential relationship.
 
