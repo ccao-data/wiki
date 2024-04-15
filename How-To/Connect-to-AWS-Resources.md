@@ -50,7 +50,7 @@ s3 = boto3.client(
 
 ### R
 
-You can use the `noctua` R package to pull small amounts of data from Athena. `noctua` has two useful options for speeding up queries: [caching](https://dyfanjones.github.io/noctua/articles/aws_athena_query_caching.html) and [unload](https://dyfanjones.github.io/noctua/articles/aws_athena_unload.html).
+You can use the `noctua` R package to pull data from Athena. `noctua` has two useful options for speeding up queries: [caching](https://dyfanjones.github.io/noctua/articles/aws_athena_query_caching.html) and [unload](https://dyfanjones.github.io/noctua/articles/aws_athena_unload.html).
 
 - Caching allows you to re-use locally-stored query results rather than constantly re-pulling from AWS. It is useful for situations like rendering a Quarto document, where you need to re-run the whole file but may not want to re-pull data.
 - The `unload = TRUE` option uses a different method of storing and transferring query results. It tends to be a bit faster on our hardware, and thus we recommend using it by default. NOTE: The `unload` option only works correctly on `noctua>=2.6.3`.
