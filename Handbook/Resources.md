@@ -7,6 +7,8 @@ Resources, notes, and helpful links used by the Data Department. Organized by se
 
 ## Useful Bookmarks
 
+***See the [member org README](https://github.com/ccao-data?view_as=member) for a list of useful internal links and bookmarks.***
+
 - [:exclamation: CCAO GitHub](https://github.com/ccao-data) - Main source for all Data Department code
 - [CCAO GitLab](https://gitlab.com/ccao-data-science---modeling) - Archived. Previous source of all CCAO code
 - [Cook County Assessor's PIN Search](https://www.cookcountyassessor.com/address-search) - Our office's application to find information about a PIN
