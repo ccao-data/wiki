@@ -45,7 +45,7 @@ Now that the certificate is created, we need to export it for NGINX. To do so:
 **All Tasks > Export**. Click **Next**.
 2. Select `Yes, export the private key` option, then click **Next**.
 3. Select `Export all extended properties` then click **Next**.
-4. Select the `Password` option, enter an arbirary strong password you'll
+4. Select the `Password` option, enter an arbitrary strong password you'll
 remember, then click **Next**.
 5. Select an export location and filename (the extension should be `.pfx`),
 then click **Next**, then **Finish** to save the file.
