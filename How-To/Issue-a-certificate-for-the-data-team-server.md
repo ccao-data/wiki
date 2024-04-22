@@ -16,7 +16,7 @@ click **Next** again.
 5. Under `Active Directory Enrollment Policy`, select `CCAO EFS` or
 `CCAO WEB2`, click the **Details** down arrow to the right of the policy,
 then click **Properties**.
-5. On the **General** tab of the popup, make the friendly name of the server
+5. On the **General** tab of the popup, make the friendly name the name of the server
 `datascience.cookcountyassessor.com`.
 6. Switch to the **Subject** tab, under the `Subject name` field, select
 `Common name` and add a value of `datascience.cookcountyassessor.com`, then
@@ -39,7 +39,7 @@ your new certificate in the list.
 
 ## Export the certificate
 
-Now that the certificate is created, we need to export it for nginx. To do so:
+Now that the certificate is created, we need to export it for NGINX. To do so:
 
 1. Right-click the newly created certificate, then click
 **All Tasks > Export**. Click **Next**.
@@ -52,7 +52,7 @@ then click **Next**, then **Finish** to save the file.
 
 ## Disaggregate the certificate
 
-nginx expects separate certificate and key files, so we need to break up the
+NGINX expects separate certificate and key files, so we need to break up the
 `.pfx` file we just made using some `openssl` options.
 
 1. Move the exported `.pfx` file to the target/host server (use `scp` or
@@ -77,7 +77,7 @@ a similar method). Be sure the directory you move it to is writeable.
 
 ## Install the new certificate
 
-You now have a signed certificate and private key file for use with nginx.
+You now have a signed certificate and private key file for use with NGINX.
 All that's left to do is to install them in the appropriate directory and set
 the correct permissions.
 
@@ -93,7 +93,7 @@ command:
     ```
     sudo chmod -r 600 $NGINX_DIRECTORY/secrets/*
     ```
-4. Restart nginx using `docker compose`. In `$NGINX_DIRECTORY`:
+4. Restart NGINX using `docker compose`. In `$NGINX_DIRECTORY`:
     ```
     docker compose down
     docker compose up -d
