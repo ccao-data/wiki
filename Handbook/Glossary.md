@@ -287,7 +287,7 @@ An Illinois statute that limits annual property tax increases by non-home rule g
 
 #### RPIE
 
-The Real Property Income and Expense form. See the [RPIE pages](/RPIE/RPIE-Overview.md) on the wiki for more information.
+The Real Property Income and Expense form. Now deprecated and replaced with a dedicated Smartfile filing.
 
 #### Second Installment
 
