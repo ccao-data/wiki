@@ -43,7 +43,7 @@
 ##### Office Terminology
 
 * [Property Class Definitions](Data/Class-Definitions.pdf) - *Available via the [CCAO R package](https://github.com/ccao-data/ccao)*
-* [Township Definitions](Data/Townships.md) - *Available via the [CCAO R package](https://github.com/ccao-data/ccao)*
+* [Township Codes and Maps](Data/Townships.md) - *Available via the [CCAO R package](https://github.com/ccao-data/ccao)*
 * [CDU Codes](Data/CDU-Codes.md) - *Available via the [CCAO R package](https://github.com/ccao-data/ccao)*
 
 ##### Data Guides
