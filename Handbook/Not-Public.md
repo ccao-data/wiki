@@ -9,5 +9,6 @@ The Data Department makes things [public by default](Mission-Vision-Values.md#pu
 
 The following items are currently internal-only:
 
+* **Internal README:** Primarily contains links to services that only work within the Cook County network
 * **WIP repositories:** Certain experimental repositories that may or may not be used are considered deliberative and are not made public.
 

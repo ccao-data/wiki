@@ -9,6 +9,7 @@
 ### People and Onboarding
 
 * [See People repository](https://github.com/ccao-data/people)
+* [See internal README](https://github.com/ccao-data?view_as=member) - *Must be logged into GitHub*
 
 ### How-To
 
