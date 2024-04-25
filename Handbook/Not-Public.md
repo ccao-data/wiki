@@ -9,6 +9,5 @@ The Data Department makes things [public by default](Mission-Vision-Values.md#pu
 
 The following items are currently internal-only:
 
-* **RPIE data:** Some RPIE data individually identifies and reveals the income and profits of commercial properties. These fields have been withheld from public data due to privacy concerns.
 * **WIP repositories:** Certain experimental repositories that may or may not be used are considered deliberative and are not made public.
 

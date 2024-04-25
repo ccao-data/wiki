@@ -34,14 +34,6 @@
 * [Home Improvement Exemptions (288s)](Residential/Home-Improvement-Exemptions.md)
 * [Cook County Property Tax Ordinance](https://library.municode.com/il/cook_county/codes/code_of_ordinances?nodeId=PTIGEOR_CH74TA_ARTIIREPRTA)
 
-### RPIE
-
-* [RPIE Overview](RPIE/Overview.md)
-* [RPIE FAQs](RPIE/FAQs.md)
-* [RPIE Privacy Policy](RPIE/Privacy-Policy.md)
-* [RPIE Details](RPIE/What-To-Expect.md)
-* [RPIE 2023 Form](RPIE/RPIE2023.pdf)
-
 ### Data Documentation
 
 - [See main data catalog/dbt documentation](https://ccao-data.github.io/data-architecture)
@@ -54,8 +46,7 @@
 
 ##### Data Guides
 
-* [RPIE SQL Database Data Dictionary](RPIE/rpie-data-dictionary.xlsx)
+* [Data Catalog](Data/Data-Catalog.xlsx) - *Deprecated, see [dbt documentation](https://ccao-data.github.io/data-architecture)*
 * [iasWorld Tables](Data/iasWorld-Tables.xlsx)
 * [iasWorld Keys](Data/iasWorld-PK-FK-2021-06-14.xlsx) - *As of June 14, 2021*
 * [iasWorld Entity Relationship Diagram (ERD)](Data/iasWorld-ERD.pdf)
-* [Data Catalog](Data/Data-Catalog.xlsx) - *Deprecated, see [dbt documentation](https://ccao-data.github.io/data-architecture)*
