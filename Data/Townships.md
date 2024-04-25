@@ -1,17 +1,12 @@
-Cook County is divided into three parts, called "triads" or "tris". Triads are reassessed on a triennial assessment cycle (i.e. they are assessed every three years). Triads are made up of smaller units known as townships. Townships act as a sort of "unit of work" within the Assessor's Office, as they are assessed, mailed, appealed, and closed on a predetermined schedule. Townships are also important for modeling, as they're often used as fixed effects (in conjunction with neighborhoods) to absorb geographic variation in assessed value. Below is an example map showing townships and their respective triads and reassessment years:
+Cook County is divided into three parts, called "triads" or "tris". Triads are reassessed on a triennial assessment cycle (i.e. they are assessed every three years). Triads are made up of smaller units known as townships. Townships act as a sort of "unit of work" within the Assessor's Office, as they are assessed, mailed, appealed, and closed on a predetermined schedule.
+
+Townships are also important for modeling, as they're often used as fixed effects (in conjunction with neighborhoods) to absorb geographic variation in assessed value. Below is an example map showing townships and their respective triads and reassessment years:
 
 ![](townships-map.png)
 
-# Township Codes
+# Township Codes and Maps
 
-The table below represents township and triad definitions as of 2020. This data is also accessible via the [CCAO R package](https://github.com/ccao-data/ccao). You can retrieve this data with the following code:
-
-```r
-# After installing the package using the instruction in the package README, load the ccao library
-library(ccao)
-
-ccao::town_dict
-```
+The table below represents township and triad definitions as of 2024. A full map of townships and neighborhoods can be found [on the Open Data Portal](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Neighborhood-Map/8m2y-nirh).
 
 |Township Name|Township Code|Triad Code|Triad Name|Township Map                                  |
 |-------------|-------------|----------|----------|----------------------------------------------|
@@ -53,3 +48,14 @@ ccao::town_dict
 |Rogers Park  |75           |1         |City      | [2018](./townships/Rogers-Park-2018.pdf)     |
 |South Chicago|76           |1         |City      | [2016](./townships/South-Chicago-2016.pdf)   |
 |West Chicago |77           |1         |City      | [2016](./townships/West-Chicago-2016.pdf)    |
+
+### Accessing township definitions via R
+
+Township and triad codes are also accessible via the [CCAO R package](https://github.com/ccao-data/ccao). You can retrieve this data with the following code:
+
+```r
+# After installing the package using the instruction in the package README, load the ccao library
+library(ccao)
+
+ccao::town_dict
+```
