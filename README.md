@@ -4,6 +4,7 @@
 * [Mission, Vision, and Values](Handbook/Mission-Vision-Values.md)
 * [Resources](Handbook/Resources.md)
 * [Glossary](Handbook/Glossary.md)
+* [Accounts](Handbook/Accounts.md)
 * [Not Public](Handbook/Not-Public.md)
 
 ### People and Onboarding
