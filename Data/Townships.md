@@ -14,7 +14,7 @@ The table below represents township and triad definitions as of 2024. A full map
 |Berwyn       |11           |3         |South     | [2017](./townships/Berwyn-2017.pdf)          |
 |Bloom        |12           |3         |South     | [2017](./townships/Bloom-2017.pdf)           |
 |Bremen       |13           |3         |South     | [2017](./townships/Bremen-2017.pdf)          |
-|Calumet      |14           |3         |South     |                                              |
+|Calumet      |14           |3         |South     | [2018](./townships/Calumet-2018.pdf)         |
 |Cicero       |15           |3         |South     | [2017](./townships/Cicero-2017.pdf)          |
 |Elk Grove    |16           |2         |North     | [2016](./townships/Elk-Grove-2016.pdf)       |
 |Evanston     |17           |2         |North     | [2016](./townships/Evanston-2016.pdf)        |
@@ -32,14 +32,14 @@ The table below represents township and triad definitions as of 2024. A full map
 |Palatine     |29           |2         |North     | [2017](./townships/Palatine-2016.pdf)        |
 |Palos        |30           |3         |South     | [2017](./townships/Palos-2017.pdf)           |
 |Proviso      |31           |3         |South     | [2017](./townships/Proviso-2017.pdf)         |
-|Rich         |32           |3         |South     |                                              |
+|Rich         |32           |3         |South     | [2018](./townships/Rich-2018.pdf)            |
 |River Forest |33           |3         |South     | [2017](./townships/River-Forest-2017.pdf)    |
 |Riverside    |34           |3         |South     | [2017](./townships/Riverside-2017.pdf)       |
 |Schaumburg   |35           |2         |North     | [2016](./townships/Schaumburg-2016.pdf)      |
-|Stickney     |36           |3         |South     |                                              |
+|Stickney     |36           |3         |South     | [2018](./townships/Stickney-2018.pdf)        |
 |Thornton     |37           |3         |South     | [2017](./townships/Thornton-2017.pdf)        |
 |Wheeling     |38           |2         |North     | [2016](./townships/Wheeling-2016.pdf)        |
-|Worth        |39           |3         |South     |                                              |
+|Worth        |39           |3         |South     | [2018](./townships/Worth-2018.pdf)           |
 |Hyde Park    |70           |1         |City      | [2018](./townships/Hyde-Park-2018.pdf)       |
 |Jefferson    |71           |1         |City      | [2018](./townships/Jefferson-2018.pdf)       |
 |Lake         |72           |1         |City      | [2018](./townships/Lake-2018.pdf)            |
@@ -49,7 +49,7 @@ The table below represents township and triad definitions as of 2024. A full map
 |South Chicago|76           |1         |City      | [2016](./townships/South-Chicago-2016.pdf)   |
 |West Chicago |77           |1         |City      | [2016](./townships/West-Chicago-2016.pdf)    |
 
-### Accessing township definitions via R
+### Accessing township codes via R
 
 Township and triad codes are also accessible via the [CCAO R package](https://github.com/ccao-data/ccao). You can retrieve this data with the following code:
 
