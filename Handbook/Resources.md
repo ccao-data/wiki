@@ -52,7 +52,7 @@ Useful materials that give an overview of Cook County's property tax system and 
 - [:star: Advanced R](https://adv-r.hadley.nz/) - Extremely good overview of the R language, its quirks, and how to use it effectively
 - [:star: Package Development in R](https://r-pkgs.org/) - Book on how to develop, use, and test R packages
 - [:star: Efficient R Programming](https://csgillespie.github.io/efficientR/) - Online book covering how make R code faster to type and run
-- [Debugging with RStudio](https://support.rstudio.com/hc/en-us/articles/200713843?version=1.3.959&mode=server#introduction) - How to use RStudio's built-in debugging features
+- [Debugging with RStudio](https://support.posit.co/hc/en-us/articles/200713843-Debugging-R-code-with-the-RStudio-IDE#introduction) - How to use RStudio's built-in debugging features
 - [Sharing Data](https://github.com/jtleek/datasharing) - A nice guide on how to share data with others
 - [Stat 545](https://stat545.com/) - A very thorough walkthrough of data wrangling and exploration in R, does not cover stats
 - [Tidy Data](http://vita.had.co.nz/papers/tidy-data.pdf) - Paper describing the structure and utility of 'tidy' data
@@ -83,11 +83,11 @@ Useful materials that give an overview of Cook County's property tax system and 
 
 - [:exclamation: The Missing Semester of Your CS Education](https://missing.csail.mit.edu) - Start here if you're unfamiliar with the command line, build tooling, scripting, etc.
 
-##### Git
+##### Git and GitHub
 
-- [:exclamation: commit.style](https://commit.style/) - Super brief guide on how to style a commit message. Follow these guidelines
+- [:exclamation: commit.style](https://commit.style/) - Super brief guide on how to style a commit message. Please follow these guidelines
+- [:exclamation: Conventional Comments](https://conventionalcomments.org/) - Standard for code review comments. Used to add important context. Please use these when reviewing
 - [Git - The Simple Guide](https://rogerdudler.github.io/git-guide/) - A simple guide on what git does and how to use it (via the command line)
-- [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/) - A longer explanation on how to write git commit messages
 - [Sourcetree Guides](https://confluence.atlassian.com/get-started-with-sourcetree) - Documentation for Sourcetree (if you prefer a GUI git client)
 
 ##### Docker
