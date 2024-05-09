@@ -37,7 +37,11 @@ To add new users to the Data server (and these applications), complete the follo
     ```
 3. Follow the prompts for user creation. Ask the user to create a password (if they are present) or generate a random one and share it with them securely.
 4. Test the new account. Visit the [RStudio](https://datascience.cookcountyassessor.com/rstudio/) login page and test the new account credentials. The account should work immediately.
-5. (Optional) [Use systemd and cgroups](https://unix.stackexchange.com/a/732460) to limit the resources available to a user (to prevent them from using 100% of the server's memory or CPU). To do so:
+5. Add the new user to the `data` Linux group to give them access to the [renv global cache](./Use-the-renv-global-cache.md).
+    ```bash
+    sudo usermod -aG data $THEIR_USER
+    ```
+6. (Optional) [Use systemd and cgroups](https://unix.stackexchange.com/a/732460) to limit the resources available to a user (to prevent them from using 100% of the server's memory or CPU). To do so:
     1. Create a slice configuration file for each user:
        ```
        sudo mkdir /etc/systemd/system/user-<uid>.slice.d
@@ -70,6 +74,7 @@ To delete users on the Data server, complete the following steps:
     ```bash
     sudo rmdir /home/$THEIR_USER
     ```
+
 ## AWS
 
 The Data Department stores most of its active data on AWS. Reading this data requires an authenticated AWS user account. Most users, such as interns and analysts, only require read access. To add a read-only user, complete the following steps:
