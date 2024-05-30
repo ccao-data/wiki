@@ -21,6 +21,7 @@
 * [Use the renv global cache](How-To/Use-the-renv-global-cache.md)
 * [Use the Data team server](How-To/Use-the-Data-team-server.md)
 * [Issue a certificate for the Data team server](How-To/Issue-a-certificate-for-the-data-team-server.md)
+* [Add Columns to Open Data Assets](How-To/Add-columns-to-open-data-assets.md)
 
 ### Standard Operating Procedures (SOPs)
 
