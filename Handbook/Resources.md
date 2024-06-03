@@ -81,7 +81,7 @@ Useful materials that give an overview of Cook County's property tax system and 
 
 ## Git, Linux, and DevOps
 
-- [:exclamation: The Missing Semester of Your CS Education](https://missing.csail.mit.edu) - Start here if you're unfamiliar with the CLI, build tooling, scripting, etc.
+- [:exclamation: The Missing Semester of Your CS Education](https://missing.csail.mit.edu) - Start here if you're unfamiliar with the command line interface, build tooling, scripting, etc.
 
 ##### Git
 
