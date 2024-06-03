@@ -1,56 +1,44 @@
 # Feature Overview
 
-For the model, features coloquially refer to the independent variables which are used to predict fair market values. 
-These come from multiple sources, but are compiled through a relatively standardized process 
+For the model, features coloquially refer to the independent variables that predict fair market values. These are compiled through a relatively standardized process in two ways, either through R / Python queries or SQL queries which utilize DBT macros. Below are instructions for either of these two processes.
 
-# Structure 1 - Creating a feature using R / Python in the ETL bucket
+# Structure A - Creating a feature using R / Python via the [ETL folder](https://github.com/ccao-data/data-architecture/tree/master/etl)
 
-## Step 1 Ingest into etl/scripts-ccao-data-raw-us-east-1
+## Step 1 - Ingest into etl/scripts-ccao-data-raw-us-east-1
 
-Data can be come from multiple sources. Some of them will be updated annually from trusted
-sources, others will be downloaded a single time, and some of them are created by CCAO employees. 
+Data comes from multiple sources, annually from trusted sources (census data), downloaded a single time (Great Schools), and some are created by CCAO employees (ccao-condominium-pin_condo_char). Complete this task in R or Python, keeping data "raw", i.e. close to it's original structure. This file can be uploaded to the correct [S3 bucket](https://us-east-1.console.aws.amazon.com/s3/home?region=us-east-1#) in parquet or excel format.
 
-## Step 2 Transformation in etl/scripts-ccao-data-warehouse-us-east-1
+## Step 2 - Transformation into etl/scripts-ccao-data-warehouse-us-east-1
 
-Raw data includes unwanted variables, column names that don't align with our coding
-techniques, or data outside of Cook County / IL. implement this cleaning in Python so that it can be
-run through DBT / Github actions. Upon completion of data cleaning, make sure that data is uploaded in 
-Parquet format to the correct S3 bucket.
+Raw data often includes unwanted variables, column names that don't align with our coding techniques, or data outside of Cook County / IL. Clean the data in Python so that it can be run through DBT / Github actions. Upon completion of data cleaning, make sure that data is uploaded in Parquet format to the correct S3 Bucket.
 
-## Step 3 - Run Crawler for ingest into AWS Athena.
-Once final data has been uploaded to the correct S3 bucket, it needs to be manually transfered
-to AWS Athena via the crawler. Simply follow the link to the correct bucket, and click Run crawler in the upper right. 
+# Structure B - Creating a feature using SQL and existing DBT macros
 
-## Step 4 - Documentation
+Over time, CCAO has developed a series of [macro functions](https://github.com/ccao-data/data-architecture/tree/master/dbt/macros) which implement standardized transformations. These use existing resources (i.e. vw_pin_parcel) in AWS to create new features, often utilizing spatial joins.
 
-Because data is mantained through DBT, there are definitions / references which need to be updated with the 
-new feature. These can be found in dbt/models/.../schema.yml, dbt/models/shared_columns.md, dbt/models/.../docs.md.
+## Step 1 - Create a sql query in [data_architecture/dbt/models](https://github.com/ccao-data/data-architecture/tree/master/dbt/models)
 
-## Step 5 - Include in Model Pipeline
+Take existing data from one of the CCAO's AWS buckets, create a SQL query that utilizes one of the macro functions, and create a configured parquet table. This will be uploaded to S3.
 
-The final step is to include the feature in the model pipeline. To do this, include the new feature in the files vw_pin_condo_input.sql, vw_res_card_input.sql, and vw_shared_input.sql files in the dbt/models/model/ folder. 
-
-
-# Structure 2 - Creating a feature using SQL and existing DBT macros
-
-Over time, CCAO has developed a series of macro functions which implement standardized standardized
-transformations. These use existing resources in AWS to create new features, often involving spatial
-joins.
-
-## Step 1 - Create a sql query in dbt/models
-Taking existing data from one of the CCAO's AWS buckets, create a SQL query that utilizes one of the
-
-
-## Step 2 - Update documentation
+## Step 2 - Update documentation for the sql query
 
 In the same dbt/models/... folder, there are column.md and docs.md files which need to be updated with
+proper documentation. 
 
+# Collective Steps
 
-## Step 3 - Include in the model pipeline
+## Step 1 - Run Crawler for ingest into AWS Athena.
+Once final data has been uploaded to the S3, it needs to be manually transfered to AWS Athena via the [crawler](https://us-east-1.console.aws.amazon.com/glue/home?region=us-east-1#/v2/data-catalog/crawlers). Follow the link to the correct bucket, and click Run crawler in the upper right. 
 
-The final step is to include the feature in the model pipeline. To do this, include the new feature in the files vw_pin_condo_input.sql, vw_res_card_input.sql, and vw_shared_input.sql files in the dbt/models/model/ folder. 
+## Step 2 - Include in the Model Pipeline
 
-# Final Step - An optional horray
+The final step is to include the feature in the model pipeline. To do this, include the new feature in the files vw_pin_condo_input.sql, vw_res_card_input.sql, and vw_shared_input.sql files located in the [data_architecture/dbt/models/model/](https://github.com/ccao-data/data-architecture/tree/master/dbt/models/model) folder. 
 
-Test the impact of the feature by running the model via the following instructions. 
+## Step 3 - Update Model Documentation
+
+CCAO data is largely mantained through DBT. To mantain data integrity, documentation needs to be updated alongside the new feature. These can be found in data_architecture/dbt/models/.../schema.yml, dbt/models/shared_columns.md, dbt/models/.../docs.md, and dbt/models/.../schema.yml.
+
+# Final Step - An optional horrah
+
+Test the impact of the feature by running the model via the following [guide](https://github.com/ccao-data/model-res-avm). 
 
