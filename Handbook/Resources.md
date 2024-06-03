@@ -2,7 +2,7 @@
 
 Resources, notes, and helpful links used by the Data Department. Organized by section and ordered by importance.
 
-- :exclamation: denotes required reading for interns and new hires
+- :exclamation: denotes ***required*** reading for interns and new hires. However, feel free to skip the reading if you're already very familiar with the topic
 - :star: denotes a recommended resource
 
 ## Useful Bookmarks
@@ -31,7 +31,7 @@ Useful materials that give an overview of Cook County's property tax system and 
 
 - [:exclamation: Cook County Property Taxes 101](https://maps.cookcountyil.gov/propertytax101/index.html) - Brief intro to property taxes, created by the Clerk's office
 - [:exclamation: The Tax Divide - Chicago Tribune](https://www.chicagotribune.com/investigations/ct-tax-divide-investigation-20180425-storygallery.html) - An excellent outline of the historical problems with the CCAO
-- [:exclamation: The Cook County Property Tax Extension Process: A Primer](https://www.civicfed.org/civic-federation/publications/cook-county-property-tax-extension-process-primer-levies-tax-caps-and-) - Incredibly useful guide to the intricacies of the entire Cook County tax system
+- [:star: The Cook County Property Tax Extension Process: A Primer](https://www.civicfed.org/civic-federation/publications/cook-county-property-tax-extension-process-primer-levies-tax-caps-and-) - Incredibly useful guide to the intricacies of the entire Cook County tax system
 - [:star: How Lower-Income Americans Get Cheated on Property Taxes - NYTimes](https://www.nytimes.com/2021/04/03/opinion/sunday/property-taxes-housing-assessment-inequality.html) - Concise and accessible overview of the nation-wide issue of inequitable assessments
 - [:star: Why Are Property Taxes in Chicago so High?](https://youtu.be/zp5dHWnk2NE) - Chi Hack Night presentation by @dfsnow that introduces the Cook County property tax system and describes some of the root causes of high bills
 - [How the Illinois Property Tax System Works](https://cookcountytreasurer.com/pdfs/understandingyourtaxbill/propertytaxprimer.pdf) - The Cook County Treasurer's property tax primer, explains the extension process and some additional things like the scavenger sale and tax liens
@@ -81,14 +81,14 @@ Useful materials that give an overview of Cook County's property tax system and 
 
 ## Git, Linux, and DevOps
 
-- [:exclamation: The Missing Semester of Your CS Education](https://missing.csail.mit.edu) - Start here if you're unfamiliar with the command line, build tooling, scripting, etc.
+- [:exclamation: The Missing Semester of Your CS Education](https://missing.csail.mit.edu) - Start here if you're unfamiliar with the CLI, build tooling, scripting, etc.
 
 ##### Git
 
 - [:exclamation: commit.style](https://commit.style/) - Super brief guide on how to style a commit message. Follow these guidelines
-- [Git - The Simple Guide](https://rogerdudler.github.io/git-guide/) - A simple guide on what git does and how to use it (via the command line)
-- [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/) - A longer explanation on how to write git commit messages
-- [Sourcetree Guides](https://confluence.atlassian.com/get-started-with-sourcetree) - Documentation for Sourcetree (if you prefer a GUI git client)
+- [:exclamation: Git - The Simple Guide](https://rogerdudler.github.io/git-guide/) - A simple guide on what git does and how to use it (via the command line)
+- [:exclamation: pre-commit introduction](https://pre-commit.com/#intro) - How to install and use pre-commit, our local automatic code review system
+- [:star: How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/) - A longer explanation on how to write git commit messages
 
 ##### Docker
 
