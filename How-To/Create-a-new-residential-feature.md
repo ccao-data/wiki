@@ -27,11 +27,11 @@ Once final data has been uploaded to the AWS S3, it needs to be transfered to [A
 
 ### Step 2 - Include in the Model Pipeline
 
-To include the feature in the model pipeline, the sql queries vw_pin_condo_input, vw_res_card_input, and vw_shared_input located in the [data_architecture/dbt/models/model/](https://github.com/ccao-data/data-architecture/tree/master/dbt/models/model) folder need to be modified.
+To include the feature in the model pipeline, the sql queries vw_pin_condo_input, vw_res_card_input, and vw_shared_input located in [data_architecture/dbt/models/model/](https://github.com/ccao-data/data-architecture/tree/master/dbt/models/model) need to be modified.
 
 ### Step 3 - Update Documentation
 
-CCAO data is largely mantained through DBT. To ensure data integrity, documentation needs to be updated alongside the new feature. These can be found in data_architecture/dbt/models/.../schema.yml, dbt/models/shared_columns.md, dbt/models/.../docs.md, and dbt/models/.../schema.yml.
+CCAO data is largely mantained through DBT. To ensure data integrity, documentation needs to be updated alongside the new feature. These can be found in data_architecture/dbt/models/model/schema.yml, dbt/models/shared_columns.md, dbt/models/.../docs.md, and dbt/models/.../schema.yml.
 
 ## Final Step - An Optional Horrah
 
