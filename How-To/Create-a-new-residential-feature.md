@@ -4,11 +4,11 @@ For the model, features coloquially refer to the independent variables that pred
 
 ## Structure A - Use R / Python in the [ETL folder](https://github.com/ccao-data/data-architecture/tree/master/etl)
 
-### Step 1 - Ingest into etl/scripts-ccao-data-raw-us-east-1
+### Step 1 - Ingest into [etl/scripts-ccao-data-raw-us-east-1](https://github.com/ccao-data/data-architecture/tree/master/etl/scripts-ccao-data-raw-us-east-1)
 
 Data comes from multiple sources and is ingested at different intervals; annually from trusted sources (census data), a single time (Great Schools), or created by CCAO employees (ccao-condominium-pin_condo_char). Complete this task in R or Python, keeping data "raw", i.e. close to it's original structure. This file can be uploaded to the correct [S3 bucket](https://us-east-1.console.aws.amazon.com/s3/home?region=us-east-1#) in either parquet or excel format.
 
-### Step 2 - Transformation into etl/scripts-ccao-data-warehouse-us-east-1
+### Step 2 - Transformation into [etl/scripts-ccao-data-warehouse-us-east-1](https://github.com/ccao-data/data-architecture/tree/master/etl/scripts-ccao-data-warehouse-us-east-1)
 
 Raw data often includes unwanted variables, column names that don't align with CCAO coding practices, or data outside of Cook County / IL. Clean the data in Python so that it can be run through DBT / Github actions. Upon completion of data cleaning, make sure that data is uploaded in Parquet format to the correct S3 Bucket.
 
@@ -35,4 +35,4 @@ CCAO data is largely mantained through DBT. To ensure data integrity, documentat
 
 ## Final Step - An Optional Horrah
 
-Test the impact of the feature by running the model via the following [guide](https://github.com/ccao-data/model-res-avm). 
+Test the impact of the feature by running the model via the following [guide](https://github.com/ccao-data/model-res-avm/blob/master/README.md). 
