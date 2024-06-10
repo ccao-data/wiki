@@ -23,7 +23,6 @@
 * [Issue a certificate for the Data team server](How-To/Issue-a-certificate-for-the-data-team-server.md)
 * [Create a New Residential Feature](How-To/Create-a-New-Residential-Feature.md)
 
-
 ### Standard Operating Procedures (SOPs)
 
 * [Sales Ratio Studies](SOPs/Sales-Ratio-Studies.md)
