@@ -1,7 +1,7 @@
 1. Extract and load raw data
     * Do this by adding a raw data extraction script to `etl/scripts-ccao-data-raw-us-east-1/` using Python or R
     * Choose the output location based on the transformation strategy in step 2: The script should push data to `ccao-data-warehouse-us-east-1` if transforming the data using a dbt model, or `ccao-data-raw-us-east-1` if transforming the data using a Python/R script
-    * Some features use existing CCAO data; in which case, you do not need to write a new extraction script
+    * Some features use existing CCAO data, in which case, you do not need to write a new extraction script
 2. Transform the raw data
     * Option 1: [Add a model to the dbt DAG](https://github.com/ccao-data/data-architecture/blob/master/dbt/README.md#-how-to-add-a-new-model) to transform the data
         * This requires that the raw data you pushed in step 1 live in the `ccao-data-warehouse-us-east-1`, be crawled by Glue, and be configured as a [source](https://docs.getdbt.com/docs/build/sources) in a dbt `schema.yml` file
