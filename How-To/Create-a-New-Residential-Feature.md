@@ -1,6 +1,6 @@
 # Context:
 
-The Cook County Assessor's Office uses a series of features to predict assessed values for Cook County Properties. Many of these features are created by staff members, either by modifying data that the Assessor's office already posesses (i.e. location to different types of parcels) or data which has to be queried from other sources (i.e. distance to OpenStreetMap roads). This guide provides a template for each step of this process, from upload to running the model with new features. Model creation will happen in the `data_architecture` repository, and any changes to the model pipeline will occur in the `model_res_avm` repository.
+The Cook County Assessor's Office uses a series of features to predict assessed values for Cook County Properties. Many of these features are created by staff members, either by modifying data that the Assessor's office already posesses (i.e. location to different types of parcels) or data which has to be queried from other sources (i.e. distance to OpenStreetMap roads). This guide provides a template for each step of this process; downloading the raw data, transforming it to a usable structure, incorporating it in the model, and running an updated model version. Feature creation will happen in the `data_architecture` repository, and any changes to the model pipeline will occur in the `model_res_avm` repository.
 
 ------------------------------------------------------------------------
 
@@ -60,17 +60,18 @@ Moving forward, the data department will try to use Python scripts for this step
 If you choose this option, you'll need to upload your file as a parquet, configure your output table as a [source](https://docs.getdbt.com/docs/build/sources) in a dbt `schema.yml` file, and set up a Glue crawler for it.
 
 Overarching guidelines: 
-    * Make sure that the parquet outputs are partitioned by year.
-    * Be aware of how often data will be downloaded. If you expect that data will be downloaded multiple times, make sure that the . A good example of this is the [Institute for Housing Studies](https://github.com/ccao-data/data-architecture/blob/master/etl/scripts-ccao-data-raw-us-east-1/housing/housing-ihs_index.R) script, which scrapes the page for the single xlsx document.
-    ```
-    most_recent_ihs_data_url <- rvest::read_html(
-    "https://price-index.housingstudies.org/"
-    ) %>%
-    rvest::html_nodes(xpath = ".//a[contains(@href, '.xlsx')]") %>%
-    rvest::html_attr("href") %>%
-    sprintf("https://price-index.housingstudies.org%s", .)
-    ```
-    * For smaller datasets which we expect to stay consistent over time, you can create a .csv file as a [seed](https://github.com/ccao-data/data-architecture/tree/master/dbt/seeds). An example of this would be a list of stadiums, which we do not expect would change arbitrarily.
+
+* Make sure that the parquet outputs are partitioned by year.
+* Be aware of how often data will be downloaded. If you expect that data will be downloaded multiple times, make sure that the . A good example of this is the [Institute for Housing Studies](https://github.com/ccao-data/data-architecture/blob/master/etl/scripts-ccao-data-raw-us-east-1/housing/housing-ihs_index.R) script, which scrapes the page for the single xlsx document.
+```
+most_recent_ihs_data_url <- rvest::read_html(
+"https://price-index.housingstudies.org/"
+) %>%
+rvest::html_nodes(xpath = ".//a[contains(@href, '.xlsx')]") %>%
+rvest::html_attr("href") %>%
+sprintf("https://price-index.housingstudies.org%s", .)
+```
+* For smaller datasets which we expect to stay consistent over time, you can create a .csv file as a [seed](https://github.com/ccao-data/data-architecture/tree/master/dbt/seeds). An example of this would be a list of stadiums, which we do not expect would change arbitrarily.
 ------------------------------------------------------------------------
 
 ## Step 3:  Incorporate the transformed data into the model input views
