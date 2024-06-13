@@ -150,7 +150,7 @@ complete the process for you.
     * Change the appointment type to `Free` to not block other Execs' calendars if they accept the event.
     * Add the `CCAO Executives` group to the `Optional` attendees.
     * Outlook may try to create a Teams meeting because you've invited others. If it does this, click `❌ Don't Host Online` to remove the Teams meeting, or uncheck the Teams meeting slider in the web version of Outlook.
-    * Under the `Response Options` menu, deselect `Request Responses`. Deselecting this will mean that the recipients of this event can choose whether to show it on their calendar, but you won't get an email response from every single one.
+    * Under the `Response Options` menu, deselect `Request Responses`. Deselecting this means recipients of this event can choose whether to show it on their calendar, but you won't get an email response from every single one.
 
 # Version Control and Workflow
 
