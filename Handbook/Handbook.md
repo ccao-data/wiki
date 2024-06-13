@@ -147,7 +147,7 @@ complete the process for you.
     * Invite the Data calendar using the `Assessor.Data@cookcountyil.gov` email address. This will share the out-of-office event with others in the Department.
 3. ***(For Directors and Deputies only)*** If you are taking a full workday or more off, please use an additional calendar invitation to notify other CCAO Executives (outside the Data Department). The steps are:
     * Create a duplicate of your time off event with the title `$NAME OOO`.
-    * Change the appointment type to `Free` to not block other Execs' calendars if they except the event.
+    * Change the appointment type to `Free` to not block other Execs' calendars if they accept the event.
     * Add the `CCAO Executives` group to the `Optional` attendees.
     * Outlook may try to create a Teams meeting because you've invited others. If it does this, click `❌ Don't Host Online` to remove the Teams meeting, or uncheck the Teams meeting slider in the web version of Outlook.
     * Under the `Response Options` menu, deselect `Request Responses`. Deselecting this will mean that the recipients of this event can choose whether to show it on their calendar, but you won't get an email response from every single one.
