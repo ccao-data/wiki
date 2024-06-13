@@ -142,9 +142,15 @@ complete the process for you.
 
 1. Use [CCT](https://www.cookcountyil.gov/cct) to request your time off, as outlined in Section IV of the [CCAO Employee Handbook](http://intranet/filedownloads/EmployeeHandbook.pdf).
 2. Once your CCT request is approved, add the time off to the `Assessor.Data` shared calendar using the following steps:
-    * Create a calendar appointment with the title `$NAME OOO - $REASON`, where `$NAME` is your own first name and `$REASON` is the reason you're out-of-office. It doesn't have to be specific, i.e. just "Appointment" or "Vacation" is sufficient.
+    * On your Outlook calendar, create a calendar appointment with the title `$NAME OOO - $REASON`, where `$NAME` is your own first name and `$REASON` is the reason you're out-of-office. It doesn't have to be specific, i.e. just "Appointment" or "Vacation" is sufficient.
     * Change the appointment type (the dropdown next to `Busy`) to `Out of office`. This changes the coloring/behavior of event. If you're out the entire day, use the `All day` event time.
     * Invite the Data calendar using the `Assessor.Data@cookcountyil.gov` email address. This will share the out-of-office event with others in the Department.
+3. ***(For Directors and Deputies only)*** If you are taking a full workday or more off, please use an additional calendar invitation to notify other CCAO Executives (outside the Data Department). The steps are:
+    * Create a duplicate of your time off event with the title `$NAME OOO`.
+    * Change the appointment type to `Free` to not block other Execs' calendars if they except the event.
+    * Add the `CCAO Executives` group to the `Optional` attendees.
+    * Outlook may try to create a Teams meeting because you've invited others. If it does this, click `❌ Don't Host Online` to remove the Teams meeting, or uncheck the Teams meeting slider in the web version of Outlook.
+    * Under the `Response Options` menu, deselect `Request Responses`. Deselecting this will mean that the recipients of this event can choose whether to show it on their calendar, but you won't get an email response from every single one.
 
 # Version Control and Workflow
 
