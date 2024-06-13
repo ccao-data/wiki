@@ -6,7 +6,7 @@ When working in RStudio on the Data Department's server, new users will have a `
 
 * For new users, there should no additional work needed for `renv` to function as desired
 * For previously added users:
-  * Delete the directory `$USERNAME/.cache/R/renv`
+  * Delete the directory `/home/$USERNAME/.cache/R/renv`
   * Add `RENV_PATHS_CACHE=/shared/renv/cache` to `/home/$USERNAME/.Renviron`
 
 > [!NOTE]
