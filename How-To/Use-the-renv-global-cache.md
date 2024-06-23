@@ -8,6 +8,7 @@ When working in RStudio on the Data Department's server, new users will have a `
 * For previously added users:
   * Delete the directory `/home/$USERNAME/.cache/R/renv`
   * Add `RENV_PATHS_CACHE=/shared/renv/cache` to `/home/$USERNAME/.Renviron`
+  * Remove any other [renv-related environmental variables](https://rstudio.github.io/renv/reference/paths.html#customising-individual-paths) from `/home/$USERNAME/.Renviron`, such as `RENV_PATHS_ROOT`
 
 > [!NOTE]
 > The renv cache needs the correct permissions in order to function as a global cache for all users. See [this Server Fault post](https://serverfault.com/questions/444867/linux-setfacl-set-all-current-future-files-directories-in-parent-directory-to) about setting up inherited ACLs.
