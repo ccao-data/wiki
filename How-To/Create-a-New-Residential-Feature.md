@@ -10,7 +10,7 @@ The Cook County Assessor's Office creates new features which are used predict as
 
 Data extraction scripts can be created in R or Python in the `etl/scripts-ccao-data-raw-us-east-1/` folder.
 
--   Identify which bucket the script should go in. While these are often self-explanatory, the location may switch throughout the feature creation process. For example, `~spatial/spatial-environment-secondary_road.R` is originally created as `spatial` feature, but during the transformation step (`~proximity.dist_pin_to_secondary_roads.sql)`, it becomes a `proximity` feature since the metric (distance) is in relation to pins.
+-   Identify which bucket the script should go in. While these are often self-explanatory, the location may switch throughout the feature creation process. For example, `~spatial/spatial-environment-secondary_road.R` is originally created as `spatial` feature, but during the transformation step (`~proximity.dist_pin_to_secondary_roads.sql)`, it shifts to the `proximity` folder since the metric (distance) is in relation to pins.
 
 -   Activate the AWS environment. For this, you will need the following python packages:
 
@@ -54,7 +54,9 @@ def upload_to_s3(file_content, bucket, key_prefix, file_name):
         upload_df_to_s3(df, AWS_S3_RAW_BUCKET, file_name)
 ```
 
-If you export the data to `ccao-data-warehouse-us-east-1` for direct use in an SQL / DBT model, make sure that the data is written as a parquet file. If it is written to `ccao-data-raw-us-east-1`, it can be either parquet or csv. Now that the file has been built, crawl the output with [Glue](https://us-east-1.console.aws.amazon.com/glue/home?region=us-east-1#/v2/data-catalog/crawlers) by navigating to the correct bucket, and then selecting `Run Crawler` in the upper right.
+If you export the data to `ccao-data-warehouse-us-east-1` for direct use in an SQL / DBT model, make sure that the data is written as a parquet file. If it is written to `ccao-data-raw-us-east-1`, it can be either parquet or csv.
+
+-   Now that the file has been built, crawl the output with [Glue](https://us-east-1.console.aws.amazon.com/glue/home?region=us-east-1#/v2/data-catalog/crawlers) by navigating to the correct bucket, and then selecting `Run Crawler` in the upper right.
 
 ## Option B: Using a Seed to Create the Data
 
@@ -86,9 +88,7 @@ FROM {{ source('spatial', 'parcel') }} AS parcel
 
 ## Step 2: Clean any Raw Data and Store it in `ccao-data-warehouse-us-east-1`
 
-Data sources may have information which is relevant for institutional knowledge, but are not useful for modeling. Keeping data in it's raw form provides redundancy in case there are complications from the data transformation or the data source changes over time. -
-
--   Access the raw data you built in step 1, currently in the `ccao-data-raw-us-east-1` bucket.
+Data sources often contain information which is relevant for institutional knowledge, but are not useful for modeling. Keeping data in it's raw form provides redundancy in case there are complications from the data transformation or the data source changes over time.
 
 -   Just as with the the `raw` script, you need to activate the AWS environment, but this time, set one environment to `ccao-data-raw-us-east-1` and another to `ccao-data-warehouse-us-east-1`. This will ensure that you can download from the raw bucket, and export to the warehouse bucket.
 
@@ -96,11 +96,11 @@ Data sources may have information which is relevant for institutional knowledge,
 
 -   Moving forward, the data department is veering towards the use of Python scripts for data transformation so that they can be configured with DBT actions. This means that although there are scripts in R, new scripts should be produced in Python.
 
--   Upload the cleaned version as a parquet file.
+-   Upload the cleaned version to `ccao-data-warehouse-us-east-1` as a parquet file, grouping the file by year.
 
 ## Step 3: [Add a Model to the dbt DAG](https://github.com/ccao-data/data-architecture/blob/master/dbt/README.md#-how-to-add-a-new-model) to Transform the Data into a View.
 
--   Once data has been cleaned and is ready for processing, it can be can be written using a SQL query, or as a Python script using Athena PySpark's [built-in third-party packages](https://docs.aws.amazon.com/athena/latest/ug/notebooks-spark-preinstalled-python-libraries.html) A list of commonly used queries exist in [dbt-macros](https://github.com/ccao-data/data-architecture/tree/master/dbt/macros). The most commonly used macros involve spatial transformations, such as identifying the distance to nearest geography of a particular type (i.e. stadiums).
+-   Once data has been cleaned and is ready for processing, it can be can be written using a SQL query, or as a Python script using Athena PySpark's [built-in third-party packages](https://docs.aws.amazon.com/athena/latest/ug/notebooks-spark-preinstalled-python-libraries.html). A list of commonly used queries exist in [dbt-macros](https://github.com/ccao-data/data-architecture/tree/master/dbt/macros). The most commonly used macros involve spatial transformations, such as identifying the distance to nearest geography of a particular type (i.e. stadiums).
 
 -   At the top of your script, make sure that the parquet outputs are partitioned by year. For SQL queries these are done with the following structure:
 
@@ -136,7 +136,7 @@ ST_ASBINARY(ST_POINT(stadium.lon, stadium.lat)) AS geometry
 dbt build --select proximity.dist_pin_to_stadium
 ```
 
--   Complete the documentation by configuring it as a [source](https://docs.getdbt.com/docs/build/sources) in a dbt `schema.yml` file, and update the relevant `docs.md` and `columns.md` files.
+-   Complete the documentation by configuring it as a [source](https://docs.getdbt.com/docs/build/sources) in the folder's dbt `schema.yml` file, and update the relevant `docs.md` and `columns.md` files.
 
 ## Step 4: Incorporate the Transformed Data into the Model Input Views.
 
@@ -150,9 +150,13 @@ dbt build --select proximity.dist_pin_to_stadium
 
 ## Step 5: Update each Model to use the New Versions of the Model Input Views
 
+-   Create a new issue / pull request in the `model-res-avm` repository.
+
 -   Add the new feature to the `predictor` section of `model/models/params.yaml`.
 
--   Rerun the [model ingest steps](https://github.com/ccao-data/model-res-avm?tab=readme-ov-file#usage) to retrieve the data from the new versions `model.vw_card_res_input`. Make sure that you unfreeze the desired `stage(s)` with `dvc unfreeze {stage}`. To test the impact, you can run the full model with the following:
+-   If you want to test the impact, you can run the [model ingest steps](https://github.com/ccao-data/model-res-avm?tab=readme-ov-file#usage) with an updated versin of `model.vw_card_res_input`. Make sure that you unfreeze the desired `stage(s)` with `dvc unfreeze {stage}`.
+
+-   To test the impact, you can run the full model with the command
 
 ```         
 dvc repro -f
@@ -169,7 +173,7 @@ dvc push
 
 ## Troubleshooting
 
--   Some staff types do not have permission to write to AWS Buckets. If your export of data to `aws` returns `Access Denied`, ask senior staff to run the query for you. This is most likely to occur during `step 1`.
+-   Some staff types do not have permission to write to AWS Buckets. If your export of data to `aws` returns `Access Denied`, ask senior staff to run the query for you. This is most likely to occur during step 1.
 -   Make sure that you are connected to aws by running `aws-mfa` in the terminal and typing in the correct credentials.
 -   Whenever an active pull request is open, committing your file build all modified views. If a file is not constructed, you will receive an error message. In the following, the sql query is identifying that cyf, a reference to `crosswalk_year_fill.sql` not being properly built, a prerequisite for building `vw_pin10_proximity_fill.sql`.
 
@@ -177,7 +181,7 @@ dvc push
 line 176:9: Column 'cyf.nearest_stadium_data_year' cannot be resolved
 ```
 
--   Relevant docs also need to be properly constructed. If a file cannot be properly identified, you will receive an error like this:
+-   Relevant docs also need to be properly constructed. If a file cannot be properly identified, you will receive an error like this.
 
 ```         
 Documentation for 'model.ccao_data_athena.proximity.vw_pin10_proximity_fill' depends on doc 'column_nearest_new_construction_char_yrblt'  which was not found
