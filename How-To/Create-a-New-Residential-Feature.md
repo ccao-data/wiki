@@ -1,6 +1,6 @@
 # Context:
 
-The Cook County Assessor's Office creates new features which are used predict assessed values for Cook County properties. Many of these are created by staff members, either by modifying data that the Assessor's office already possesses (i.e. location to different types of parcels) or data which has to be queried from other sources (i.e. distance to OpenStreetMap roads). This guide provides a template for each step of this process; downloading the raw data, transforming it into a usable structure, creating the view which will be referenced by the model, incorporating it in the model, and running an updated model. It is important to note that for many features, not all of these steps will be needed. For example, some data will come in a clean format, and thus will not need to be stored in the `etl/scripts-ccao-data-raw-us-east-1/`, or data may come from internal sources, requiring no extraction at all. All feature creation occurs in the `data_architecture` repository, and any changes to the model pipeline occurs in the `model_res_avm` repository.
+The Cook County Assessor's Office creates new features which are used predict assessed values for Cook County properties. Many of these are created by staff members, either by modifying data that the Assessor's office already possesses (i.e. location to different types of parcels) or data which has to be queried from other sources (i.e. distance to OpenStreetMap roads). This guide provides a template for each step of this process; downloading the raw data, transforming it into a usable structure, creating the view which will be referenced by the model, incorporating it in the model view, and running an updated model. It is important to note that for many features, not all of these steps will be needed. For example, some data will come in a clean format, and thus will not need a raw file stored in `etl/scripts-ccao-data-raw-us-east-1/`, or data may come from internal sources, requiring no extraction at all. All feature creation occurs in the `data_architecture` repository, and any changes to the model pipeline occurs in the `model_res_avm` repository.
 
 ------------------------------------------------------------------------
 
@@ -8,9 +8,11 @@ The Cook County Assessor's Office creates new features which are used predict as
 
 ### Option A: Use a Python or R Script in the `etl` Directory
 
-Data extraction scripts can be created in R or Python in the `etl/scripts-ccao-data-raw-us-east-1/` folder. The first step is identifying which bucket the script should go in. While these are often self-explanatory, the location may switch throughout the feature creation process. For example, `~spatial/spatial-environment-secondary_road.R` is originally created as `spatial` feature, but during the transformation step (`~proximity.dist_pin_to_secondary_roads.sql)`, it becomes a `proximity` feature since it is in relation to pins.
+Data extraction scripts can be created in R or Python in the `etl/scripts-ccao-data-raw-us-east-1/` folder.
 
-Within the script, activate the AWS environment. For this, you will need the following python packages:
+-   Identify which bucket the script should go in. While these are often self-explanatory, the location may switch throughout the feature creation process. For example, `~spatial/spatial-environment-secondary_road.R` is originally created as `spatial` feature, but during the transformation step (`~proximity.dist_pin_to_secondary_roads.sql)`, it becomes a `proximity` feature since the metric (distance) is in relation to pins.
+
+-   Activate the AWS environment. For this, you will need the following python packages:
 
 ```         
 import os
@@ -37,9 +39,9 @@ If you are using R, you can use the following structure.
 AWS_S3_RAW_BUCKET <- Sys.getenv("AWS_S3_RAW_BUCKET")
 ```
 
-Once the AWS environment has been activated, you can extract the necessary data. This can be done through a few methods, such as scraping a webpage, utilizing an API, or downloading a file. Be aware that data CCAO may need to update data at different rates. For data such as the [Central Business District](https://github.com/ccao-data/data-architecture/blob/master/etl/scripts-ccao-data-raw-us-east-1/spatial/spatial-economy.R), where the geographies are set in stone, the script can reference a geography in a single year. On the other hand, [Secondary Streets](https://github.com/ccao-data/data-architecture/blob/master/etl/scripts-ccao-data-raw-us-east-1/spatial/spatial-environment-secondary_road.R) is structured to download new data every year using a looped function. When downloading data at this stage, you should not significantly modify the file unless the output is very large.
+-   Extract the necessary data. This can be done through a few methods, such as scraping a webpage, utilizing an API, or downloading a file. Be aware that data CCAO may need to update data at different rates. For data such as the [Central Business District](https://github.com/ccao-data/data-architecture/blob/master/etl/scripts-ccao-data-raw-us-east-1/spatial/spatial-economy.R), where the geographies are set in stone, the script can reference a geography in a single year. On the other hand, [Secondary Streets](https://github.com/ccao-data/data-architecture/blob/master/etl/scripts-ccao-data-raw-us-east-1/spatial/spatial-environment-secondary_road.R) is structured to download new data every year using a looped function. When downloading data at this stage, you should not significantly modify the file unless the output is very large.
 
-Choose the output location based on your transformation strategy. If the file is already clean, and a SQL query can be easily implemented on it, the script should be stored in `ccao-data-warehouse-us-east-1` . If the file needs additional cleaning, place it in `ccao-data-raw-us-east-1`. You can use a modification of the following script to upload the data to S3 in python. Note how it joins the aforementioned AWS_S3_RAW_BUCKET, as well as identifying the correct sub-bucket, in this case `housing`, before creating the unique folder `dci`.
+-   Choose the output location based on your transformation strategy. If the file is already clean, and a SQL query can be easily implemented on it, the script should be stored in `ccao-data-warehouse-us-east-1` . If the file needs additional cleaning, place it in `ccao-data-raw-us-east-1`. You can use a modification of the following script to upload the data to S3 in python. Note how it joins the aforementioned AWS_S3_RAW_BUCKET, as well as identifying the correct sub-bucket, in this case `housing`, before creating the unique folder `dci`.
 
 ```         
 def upload_to_s3(file_content, bucket, key_prefix, file_name):
@@ -56,9 +58,21 @@ If you export the data to `ccao-data-warehouse-us-east-1` for direct use in an S
 
 ## Option B: Using a Seed to Create the Data
 
-For data that is **very** consistent over time, we can upload the file as a [seed](https://github.com/ccao-data/data-architecture/tree/master/dbt/seeds). These are manually created as a .csv file. Once your file is within your local directory, construct it in the DBT architecture with the terminal command `dbt seed`. Some directories do not have seeds yet, so DBT will not recognize that a new file has been created. If this is the case, modify `dbt/dbt_project.yml` to add the correct schema. You will also need to update the `schema.yml` and `docs.md` files in the `seeds` directory.
+-   For data that is **very** consistent over time, we can upload the file as a [seed](https://github.com/ccao-data/data-architecture/tree/master/dbt/seeds).
 
-Since a seed is an existing component of the DBT project, references to it will be different than when querying a table outside of the DBT structure (AWS tables). For example, use
+```{=html}
+<!-- -->
+```
+-   Construct this manually as a .csv file and upload it to the local `dbt/seeds/xxx` folder.
+
+```{=html}
+<!-- -->
+```
+-   Once your file is within your local directory, construct it in the DBT architecture with the terminal command `dbt seed`.
+
+-   Some directories do not have seeds yet, so DBT will not recognize that a new file has been created. If this is the case, modify `dbt/dbt_project.yml` to add the correct schema. You will also need to update the `schema.yml` and `docs.md` files in the `seeds` directory.
+
+-   Since a seed is an existing component of the DBT project, references to it will be different than when querying a table outside of the DBT structure (AWS tables). For example, use
 
 ```         
 FROM {{ ref('spatial.stadium_raw') }} AS stadium
@@ -72,15 +86,23 @@ FROM {{ source('spatial', 'parcel') }} AS parcel
 
 ## Step 2: Clean any Raw Data and Store it in `ccao-data-warehouse-us-east-1`
 
-Data sources may have information which is relevant for institutional knowledge, but not useful for modeling. Keeping data in it's raw form provides redundancy in case their are complications from the data transformation or the data source changes over time. To clean the data, access the raw data you pushed in step 1, currently in the `ccao-data-raw-us-east-1` bucket. Just as with the the `raw` script, you need to activate the AWS environment, but this time, set one environment to `ccao-data-raw-us-east-1` and another to `ccao-data-warehouse-us-east-1`. This will ensure that you can download from the raw bucket, and export to the warehouse bucket. Clean the data, reducing the number of variables, constraining the geography to Cook County, abiding by snake_formatting, or sub-setting the data.
+Data sources may have information which is relevant for institutional knowledge, but are not useful for modeling. Keeping data in it's raw form provides redundancy in case there are complications from the data transformation or the data source changes over time. -
 
-Moving forward, the data department is veering towards the use of Python scripts for data transformation so that they can be configured with DBT actions. This means that although there are scripts in R, new scripts should be produced in Python. All files uploaded to `` ccao-data-warehouse-us-east-1` `` must be a parquet file.
+-   Access the raw data you built in step 1, currently in the `ccao-data-raw-us-east-1` bucket.
+
+-   Just as with the the `raw` script, you need to activate the AWS environment, but this time, set one environment to `ccao-data-raw-us-east-1` and another to `ccao-data-warehouse-us-east-1`. This will ensure that you can download from the raw bucket, and export to the warehouse bucket.
+
+-   Clean the data, reducing the number of variables, constraining the geography to Cook County, abiding by snake_formatting, or sub-setting the data.
+
+-   Moving forward, the data department is veering towards the use of Python scripts for data transformation so that they can be configured with DBT actions. This means that although there are scripts in R, new scripts should be produced in Python.
+
+-   Upload the cleaned version as a parquet file.
 
 ## Step 3: [Add a Model to the dbt DAG](https://github.com/ccao-data/data-architecture/blob/master/dbt/README.md#-how-to-add-a-new-model) to Transform the Data into a View.
 
-Once data has been cleaned and is ready for processing, it can be can be written using a SQL query, or as a Python script using Athena PySpark's [built-in third-party packages](https://docs.aws.amazon.com/athena/latest/ug/notebooks-spark-preinstalled-python-libraries.html) A list of commonly used queries exist in [dbt-macros](https://github.com/ccao-data/data-architecture/tree/master/dbt/macros). The most commonly used macros involve spatial transformations, such as identifying the distance to nearest geography of a particular type (i.e. stadiums).
+-   Once data has been cleaned and is ready for processing, it can be can be written using a SQL query, or as a Python script using Athena PySpark's [built-in third-party packages](https://docs.aws.amazon.com/athena/latest/ug/notebooks-spark-preinstalled-python-libraries.html) A list of commonly used queries exist in [dbt-macros](https://github.com/ccao-data/data-architecture/tree/master/dbt/macros). The most commonly used macros involve spatial transformations, such as identifying the distance to nearest geography of a particular type (i.e. stadiums).
 
-When beginning the script, the first step is to make sure that the parquet outputs are partitioned by year. For SQL queries these are done with the following structure:
+-   At the top of your script, make sure that the parquet outputs are partitioned by year. For SQL queries these are done with the following structure:
 
 ```         
 {{config(          
@@ -96,7 +118,7 @@ If the output does not have the partition column as the final column, you will r
 HIVE_COLUMN_ORDER_MISMATCH: Partition keys must be the last columns in the table and in the same order as the table properties: 
 ```
 
-From here, you can build out the transformation. To ensure consistency, use one of the macros when possible, each of which utilizes a specific coding structure. For example, the `dist_to_nearest_geometry.sql` requires a value for `pin`, `year`, `x_3435`, and `y_3435`. These also need to be structured in accordance with specific data types. In this case, if geographies are classified as a string, you will run into the following error.
+-   Build out the transformation. To ensure consistency, use one of the macros whenever possible, each of which utilizes a specific coding structure. For example, the `dist_to_nearest_geometry.sql` requires a value for `pin`, `year`, `x_3435`, and `y_3435`. These also need to be structured in accordance with specific data types. In this case, if geographies are classified as a string, you will run into the following error.
 
 ```         
 Runtime Error in model spatial.spatial_stadium (models/spatial/spatial.spatial_stadium.sql) line 9:5: Unknown type: STRING
@@ -108,31 +130,35 @@ To remedy this, you can recast the geometry value as a binary points.
 ST_ASBINARY(ST_POINT(stadium.lon, stadium.lat)) AS geometry
 ```
 
-Once the macro / sql query can run utilize your terminal to construct the output in your development database of `AWS Athena`. The output view is the file which will be referenced during `Step 4`. A sample build is presented below.
+-   Once the macro / sql query is correct, run it in your terminal to construct the output in your development database of `AWS Athena`. The output view is the file which will be referenced during `Step 4`. A sample build is presented below.
 
 ```         
 dbt build --select proximity.dist_pin_to_stadium
 ```
 
-Finally, complete the documentation by configuring it as a [source](https://docs.getdbt.com/docs/build/sources) in a dbt `schema.yml` file, and update the relevant `docs.md` and `columns.md` files.
+-   Complete the documentation by configuring it as a [source](https://docs.getdbt.com/docs/build/sources) in a dbt `schema.yml` file, and update the relevant `docs.md` and `columns.md` files.
 
 ## Step 4: Incorporate the Transformed Data into the Model Input Views.
 
-Now that the relevant view(s) have been created, they need to be incorporated in the views which are referenced by the model. To do this, identify if the new feature is relevant in the condo and/or the residential model. Then, in `dbt/models/model`, update the relevant `vw_pin_condo_input`, `vw_res_card_input`, and `vw_shared_input` view. Within the `model` directory, update the definitions in the appropriate dbt model.
+-   Now that the relevant view(s) have been created, they need to be incorporated in the model view.
 
-If the attribute is spatial, you should also update `crosswalk_year_fill.sql`, `proximity.vw_pin10_proximity_fill.sql`, and `location.vw_pin10_location_fill.sql`. Processes for forward and backward filling are largely conceptual. If we think that the data is time invariant, we can forward fill the data. If we believe that the data has historically been the same, we can backwards fill the data.
+-   Identify if the new feature is relevant in the condo and/or the residential model. Then, in `dbt/models/model`, update the relevant `vw_pin_condo_input`, `vw_res_card_input`, and `vw_shared_input` view. Within the `model` directory, update the definitions in the appropriate dbt model.
+
+-   If the attribute is spatial, you should also update `crosswalk_year_fill.sql`, `proximity.vw_pin10_proximity_fill.sql`, and `location.vw_pin10_location_fill.sql`. Processes for forward and backward filling are largely conceptual. If we think that the data is time invariant, we can forward fill the data. If we believe that the data has historically been the same, we can backwards fill the data.
 
 ------------------------------------------------------------------------
 
 ## Step 5: Update each Model to use the New Versions of the Model Input Views
 
-Now, the model has to know to reference the newly created features that you created. To do this, add the new feature to the `predictor` section of [params.yaml](https://github.com/ccao-data/model-res-avm/blob/master/params.yaml). Rerun the [model ingest steps](https://github.com/ccao-data/model-res-avm?tab=readme-ov-file#usage) to retrieve the data from the new versions `model.vw_card_res_input`. Make sure that you unfreeze the desired `stage(s)` with `dvc unfreeze {stage}`. To test the impact, you can run the full model with the following:
+-   Add the new feature to the `predictor` section of `model/models/params.yaml`.
+
+-   Rerun the [model ingest steps](https://github.com/ccao-data/model-res-avm?tab=readme-ov-file#usage) to retrieve the data from the new versions `model.vw_card_res_input`. Make sure that you unfreeze the desired `stage(s)` with `dvc unfreeze {stage}`. To test the impact, you can run the full model with the following:
 
 ```         
 dvc repro -f
 ```
 
-If you want this information to be shared, you can push the updated model data to DVC using the following code. If you do this, make sure that the param for run_type is `test`.
+-   If you want this information to be shared, you can push the updated model data to DVC using the following code. If you do this, make sure that the param for run_type is `test`.
 
 ```         
 dvc commit
