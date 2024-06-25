@@ -12,7 +12,7 @@ Data extraction scripts are typically created in R or Python in the `etl/scripts
 
 -   Identify which folder the script should go in. Although folders are often self-explanatory, the location may switch throughout the feature creation process. For example, `spatial/spatial-environment-secondary_road.R` is created as `spatial` feature, but during the transformation step (`proximity.dist_pin_to_secondary_roads.sql)`, it shifts to the `proximity` folder since the metric (distance) is in relation to pins.
 
--   Activate the AWS environment. For this, you will need the following python packages:
+-   Activate the AWS environment. For this, you will need the following python or R packages:
 
 ```         
 import os
@@ -20,20 +20,16 @@ import boto3
 from dotenv import load_dotenv
 ```
 
-or the following R packages:
-
 ```         
 library(arrow)
 library(aws.s3)
 ```
 
--   Activate the AWS environment through the following Python code, in this case, setting the output bucket to RAW, the eventual file location:
+-   Activate the AWS environment through the following Python or R code, in this case, setting the output bucket to RAW, the eventual file location:
 
 ```         
 AWS_S3_RAW_BUCKET = os.environ.get("AWS_S3_RAW_BUCKET")
 ```
-
-If you are using R, you can use the following structure:
 
 ```         
 AWS_S3_RAW_BUCKET <- Sys.getenv("AWS_S3_RAW_BUCKET")
@@ -67,13 +63,12 @@ def upload_to_s3(file_content, bucket, key_prefix, file_name):
 
 ```         
 FROM {{ ref('spatial.stadium_raw') }} AS stadium
-```
 
-rather than
+## rather than
 
-```         
 FROM {{ source('spatial', 'parcel') }} AS parcel
 ```
+
 ------------------------------------------------------------------------
 
 ## Step 2: Clean any Raw Data and Store it in `ccao-data-warehouse-us-east-1`
