@@ -6,7 +6,7 @@ The Cook County Assessor's Office creates new features which are used predict as
 
 ## Step 1: Extract and Load the Raw Data
 
-### Option A: Use a Python or R Script in the `etl` Directory
+### Option A: Use a Python or R Script in the [etl Directory](https://github.com/ccao-data/data-architecture/tree/master/etl)
 
 Data extraction scripts are typically created in R or Python in the `etl/scripts-ccao-data-raw-us-east-1/` folder. In the circumstance that the file requires no cleaning afterwards, they can be placed directly in the `scripts-ccao-data-warehouse-us-east-1` folder.
 
@@ -35,9 +35,9 @@ AWS_S3_RAW_BUCKET = os.environ.get("AWS_S3_RAW_BUCKET")
 AWS_S3_RAW_BUCKET <- Sys.getenv("AWS_S3_RAW_BUCKET")
 ```
 
--   Extract the necessary data. This can be done through a few methods; scraping a webpage, utilizing an API, or downloading a file. Be aware that data CCAO may need to update data at different rates. For data such as the [Central Business District](https://github.com/ccao-data/data-architecture/blob/master/etl/scripts-ccao-data-raw-us-east-1/spatial/spatial-economy.R), where the geographies are set in stone, the script can reference a geography in a single year. On the other hand, [Secondary Streets](https://github.com/ccao-data/data-architecture/blob/master/etl/scripts-ccao-data-raw-us-east-1/spatial/spatial-environment-secondary_road.R) is structured to download new data every year using a looped function. When downloading data at this stage, you should not significantly modify the file unless the output is very large.
+-   Extract the necessary data. This can be done through a few methods; scraping a webpage, utilizing an API, or downloading a file. Be aware that data CCAO may need to update data at different rates. For data such as the [Central Business District](https://github.com/ccao-data/data-architecture/blob/master/etl/scripts-ccao-data-raw-us-east-1/spatial/spatial-economy.R), where the geographies are set in stone, the script can reference a geography in a single year. On the other hand, [Secondary Streets](https://github.com/ccao-data/data-architecture/blob/master/etl/scripts-ccao-data-raw-us-east-1/spatial/spatial-environment-secondary_road.R) is structured to download new data every year using a looped function.
 
--   Choose the output location based on your transformation strategy. If the file is already clean, and a SQL query can be easily implemented on it, the script should be stored in `ccao-data-warehouse-us-east-1` . If the file needs additional cleaning, place it in `ccao-data-raw-us-east-1`. You can use a modification of the following script to upload the data to S3 in python. Note how it joins the aforementioned AWS_S3_RAW_BUCKET, as well as identifying the correct sub-bucket, in this case `housing`, before creating the unique folder `dci`.
+-   Choose the output location based on your transformation strategy. If the file is already clean, and a SQL query can be easily implemented on it, the script should be stored in `ccao-data-warehouse-us-east-1` . If the file needs additional cleaning, place it in `ccao-data-raw-us-east-1`. Use a modification of the following script to upload the data to S3 in python. Note how it joins the aforementioned AWS_S3_RAW_BUCKET, as well as identifying the correct sub-bucket, in this case `housing`, before creating the unique folder `dci`.
 
 ```         
 def upload_to_s3(file_content, bucket, key_prefix, file_name):
@@ -53,7 +53,7 @@ def upload_to_s3(file_content, bucket, key_prefix, file_name):
 -   If you export the data to `ccao-data-warehouse-us-east-1` for direct use in an SQL / DBT model, make sure that the data is written as a parquet file. If it is written to `ccao-data-raw-us-east-1`, it can be either parquet or csv.
 -   Now that the file has been built, crawl the output with [Glue](https://us-east-1.console.aws.amazon.com/glue/home?region=us-east-1#/v2/data-catalog/crawlers) by navigating to the correct bucket, and then selecting `Run Crawler` in the upper right.
 
-## Option B: Using a Seed to Create the Data
+## Option B: Use a Seed to Create the Data in [DBT/Seeds](https://github.com/ccao-data/data-architecture/tree/master/dbt/seeds)
 
 -   For data that is **very** consistent over time, we can upload the file as a [seed](https://docs.getdbt.com/docs/build/seeds).
 -   Construct this manually as a .csv file and upload it to the local `dbt/seeds/xxx` folder.
@@ -71,7 +71,7 @@ FROM {{ source('spatial', 'parcel') }} AS parcel
 
 ------------------------------------------------------------------------
 
-## Step 2: Clean any Raw Data and Store it in `ccao-data-warehouse-us-east-1`
+## Step 2: Clean any Raw Data and Store it in [ccao-data-warehouse-us-east-1](https://github.com/ccao-data/data-architecture/tree/master/etl/scripts-ccao-data-warehouse-us-east-1)
 
 Data sources often contain information which is relevant for institutional knowledge, but are not useful for modeling. Keeping data in it's raw form provides redundancy in case there are complications from the data transformation or the data source changes over time.
 
@@ -85,7 +85,7 @@ Data sources often contain information which is relevant for institutional knowl
 
 ------------------------------------------------------------------------
 
-## Step 3: [Add a Model to the dbt DAG](https://github.com/ccao-data/data-architecture/blob/master/dbt/README.md#-how-to-add-a-new-model) to Transform the Data into a View.
+## Step 3: [Add a Model to the dbt DAG](https://github.com/ccao-data/data-architecture/blob/master/dbt/README.md#-how-to-add-a-new-model) to Transform the Data into a [Model View](https://github.com/ccao-data/data-architecture/tree/master/dbt/models).
 
 -   Once data has been cleaned and is ready for processing, it can be can be written using a SQL query, or as a Python script using Athena PySpark's [built-in third-party packages](https://docs.aws.amazon.com/athena/latest/ug/notebooks-spark-preinstalled-python-libraries.html). A list of commonly used queries exist in [dbt-macros](https://github.com/ccao-data/data-architecture/tree/master/dbt/macros). The most commonly used macros involve spatial transformations, such as identifying the distance to nearest geography of a particular type (i.e. stadiums).
 
@@ -127,7 +127,7 @@ dbt build --select proximity.dist_pin_to_stadium
 
 ------------------------------------------------------------------------
 
-## Step 4: Incorporate the Transformed Data into the Model Input Views.
+## Step 4: Incorporate the Transformed Data into the [Final Model View](https://github.com/ccao-data/data-architecture/tree/master/dbt/models/model).
 
 -   Now that the relevant view(s) have been created, they need to be incorporated in the model view.
 
@@ -137,7 +137,7 @@ dbt build --select proximity.dist_pin_to_stadium
 
 ------------------------------------------------------------------------
 
-## Step 5: Update each Model to use the New Versions of the Model Input Views
+## Step 5: Update the [Model Pipeline](https://github.com/ccao-data/model-res-avm/tree/master) to use the New Versions of the Model Input Views
 
 -   Create a new issue / pull request in the `model-res-avm` repository.
 
