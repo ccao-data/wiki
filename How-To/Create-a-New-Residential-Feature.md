@@ -59,7 +59,7 @@ def upload_to_s3(file_content, bucket, key_prefix, file_name):
 
 ## Option B: Using a Seed to Create the Data
 
--   For data that is **very** consistent over time, we can upload the file as a [seed](https://github.com/ccao-data/data-architecture/tree/master/dbt/seeds).
+-   For data that is **very** consistent over time, we can upload the file as a [seed](https://docs.getdbt.com/docs/build/seeds).
 -   Construct this manually as a .csv file and upload it to the local `dbt/seeds/xxx` folder.
 -   Once your file is within your local directory, construct it in the DBT architecture with the terminal command `dbt seed`.
 -   Some directories do not have seeds yet, so DBT will not recognize that a new file has been created. If this is the case, modify `dbt/dbt_project.yml` to add the correct schema. You will also need to update the `schema.yml` and `docs.md` files in the `seeds` directory.
@@ -125,7 +125,7 @@ ST_ASBINARY(ST_POINT(stadium.lon, stadium.lat)) AS geometry
 dbt build --select proximity.dist_pin_to_stadium
 ```
 
--   Complete the documentation by configuring it as a [source](https://docs.getdbt.com/docs/build/sources) in the folder's dbt `schema.yml` file, and update the relevant `docs.md` and `columns.md` files.
+-   Complete the documentation by configuring it as a [source](https://docs.getdbt.com/docs/build/sources) in the folder's dbt `schema.yml` file, and update the folder's `docs.md` and `columns.md` files.
 
 ## Step 4: Incorporate the Transformed Data into the Model Input Views.
 
