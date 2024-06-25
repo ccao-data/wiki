@@ -41,13 +41,12 @@ AWS_S3_RAW_BUCKET <- Sys.getenv("AWS_S3_RAW_BUCKET")
 
 ```         
 def upload_to_s3(file_content, bucket, key_prefix, file_name):
-    try:
-        s3 = boto3.resource("s3")
-        object_key = f"{key_prefix}/{file_name}"
-        s3.Bucket(bucket).put_object(Key=object_key, Body=file_content)
-        return f"File uploaded to {bucket}/{object_key}"
-        file_name = os.path.join("housing", "dci", "dci.csv") 
-        upload_df_to_s3(df, AWS_S3_RAW_BUCKET, file_name)
+    s3 = boto3.resource("s3")
+    object_key = f"{key_prefix}/{file_name}"
+    s3.Bucket(bucket).put_object(Key=object_key, Body=file_content)
+    return f"File uploaded to {bucket}/{object_key}"
+
+upload_to_s3(df, AWS_S3_RAW_BUCKET, "housing/dci", "dci.csv")
 ```
 
 6.  If you export the data to `ccao-data-warehouse-us-east-1` for direct use in an SQL / DBT model, make sure that the data is written as a parquet file. If it is written to `ccao-data-raw-us-east-1`, it can be either parquet or csv.
