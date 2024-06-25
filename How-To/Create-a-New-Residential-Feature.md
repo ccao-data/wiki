@@ -1,4 +1,4 @@
-# Context:
+# How to add a new feature to the residential model
 
 The Cook County Assessor's Office creates new features which are used predict assessed values for Cook County properties. Many of these are created by staff members, either by modifying data that the Assessor's office already possesses (i.e. location to different types of parcels) or data which has to be queried from other sources (i.e. distance to OpenStreetMap roads). This guide provides a template for each step of this process; downloading the raw data, transforming it into a usable structure, creating the view which will be referenced by the model, incorporating it in the model view, and running an updated model. It is important to note that for many features, not all of these steps will be needed. For example, some data will come in a clean format, and thus will not need a raw file stored in `etl/scripts-ccao-data-raw-us-east-1/`, or data may come from internal sources, requiring no extraction at all. All feature creation occurs in the `data_architecture` repository, and any changes to the model pipeline occurs in the `model_res_avm` repository.
 
