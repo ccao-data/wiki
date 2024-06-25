@@ -91,11 +91,14 @@ Data sources often contain information which is relevant for institutional knowl
 2.  At the top of your script, make sure that the parquet outputs are partitioned by year. For SQL queries these are done with the following structure:
 
 ```         
-{{config(          
-materialized='table',         
-partitioned_by=['year'],          
-bucketed_by=['pin10'],          
-bucket_count=1)}
+{{
+  config(          
+    materialized='table',         
+    partitioned_by=['year'],          
+    bucketed_by=['pin10'],          
+    bucket_count=1
+  )
+}}
 ```
 
 If the output does not have the partition column as the final column, you will receive the following error:
