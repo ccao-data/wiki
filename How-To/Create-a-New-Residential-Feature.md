@@ -8,9 +8,9 @@ The Cook County Assessor's Office creates new features which are used predict as
 
 ### Option A: Use a Python or R Script in the `etl` Directory
 
-Data extraction scripts can be created in R or Python in the `etl/scripts-ccao-data-raw-us-east-1/` folder.
+Data extraction scripts are typically created in R or Python in the `etl/scripts-ccao-data-raw-us-east-1/` folder. In the circumstance that the file requires no cleaning afterwards, they can be placed directly in the `scripts-ccao-data-warehouse-us-east-1` folder.
 
--   Identify which bucket the script should go in. While these are often self-explanatory, the location may switch throughout the feature creation process. For example, `~spatial/spatial-environment-secondary_road.R` is originally created as `spatial` feature, but during the transformation step (`~proximity.dist_pin_to_secondary_roads.sql)`, it shifts to the `proximity` folder since the metric (distance) is in relation to pins.
+-   Identify which folder the script should go in. Although folders are often self-explanatory, the location may switch throughout the feature creation process. For example, `spatial/spatial-environment-secondary_road.R` is created as `spatial` feature, but during the transformation step (`proximity.dist_pin_to_secondary_roads.sql)`, it shifts to the `proximity` folder since the metric (distance) is in relation to pins.
 
 -   Activate the AWS environment. For this, you will need the following python packages:
 
@@ -27,19 +27,19 @@ library(arrow)
 library(aws.s3)
 ```
 
-These will allow you to connect with AWS and upload the file at the end of the script. Once activated, you set up the AWS environment through the following Python code, in this case, setting the output bucket to RAW, the eventual file location.
+-   Activate the AWS environment through the following Python code, in this case, setting the output bucket to RAW, the eventual file location:
 
 ```         
 AWS_S3_RAW_BUCKET = os.environ.get("AWS_S3_RAW_BUCKET")
 ```
 
-If you are using R, you can use the following structure.
+If you are using R, you can use the following structure:
 
 ```         
 AWS_S3_RAW_BUCKET <- Sys.getenv("AWS_S3_RAW_BUCKET")
 ```
 
--   Extract the necessary data. This can be done through a few methods, such as scraping a webpage, utilizing an API, or downloading a file. Be aware that data CCAO may need to update data at different rates. For data such as the [Central Business District](https://github.com/ccao-data/data-architecture/blob/master/etl/scripts-ccao-data-raw-us-east-1/spatial/spatial-economy.R), where the geographies are set in stone, the script can reference a geography in a single year. On the other hand, [Secondary Streets](https://github.com/ccao-data/data-architecture/blob/master/etl/scripts-ccao-data-raw-us-east-1/spatial/spatial-environment-secondary_road.R) is structured to download new data every year using a looped function. When downloading data at this stage, you should not significantly modify the file unless the output is very large.
+-   Extract the necessary data. This can be done through a few methods; scraping a webpage, utilizing an API, or downloading a file. Be aware that data CCAO may need to update data at different rates. For data such as the [Central Business District](https://github.com/ccao-data/data-architecture/blob/master/etl/scripts-ccao-data-raw-us-east-1/spatial/spatial-economy.R), where the geographies are set in stone, the script can reference a geography in a single year. On the other hand, [Secondary Streets](https://github.com/ccao-data/data-architecture/blob/master/etl/scripts-ccao-data-raw-us-east-1/spatial/spatial-environment-secondary_road.R) is structured to download new data every year using a looped function. When downloading data at this stage, you should not significantly modify the file unless the output is very large.
 
 -   Choose the output location based on your transformation strategy. If the file is already clean, and a SQL query can be easily implemented on it, the script should be stored in `ccao-data-warehouse-us-east-1` . If the file needs additional cleaning, place it in `ccao-data-raw-us-east-1`. You can use a modification of the following script to upload the data to S3 in python. Note how it joins the aforementioned AWS_S3_RAW_BUCKET, as well as identifying the correct sub-bucket, in this case `housing`, before creating the unique folder `dci`.
 
@@ -54,26 +54,15 @@ def upload_to_s3(file_content, bucket, key_prefix, file_name):
         upload_df_to_s3(df, AWS_S3_RAW_BUCKET, file_name)
 ```
 
-If you export the data to `ccao-data-warehouse-us-east-1` for direct use in an SQL / DBT model, make sure that the data is written as a parquet file. If it is written to `ccao-data-raw-us-east-1`, it can be either parquet or csv.
-
+-   If you export the data to `ccao-data-warehouse-us-east-1` for direct use in an SQL / DBT model, make sure that the data is written as a parquet file. If it is written to `ccao-data-raw-us-east-1`, it can be either parquet or csv.
 -   Now that the file has been built, crawl the output with [Glue](https://us-east-1.console.aws.amazon.com/glue/home?region=us-east-1#/v2/data-catalog/crawlers) by navigating to the correct bucket, and then selecting `Run Crawler` in the upper right.
 
 ## Option B: Using a Seed to Create the Data
 
 -   For data that is **very** consistent over time, we can upload the file as a [seed](https://github.com/ccao-data/data-architecture/tree/master/dbt/seeds).
-
-```{=html}
-<!-- -->
-```
 -   Construct this manually as a .csv file and upload it to the local `dbt/seeds/xxx` folder.
-
-```{=html}
-<!-- -->
-```
 -   Once your file is within your local directory, construct it in the DBT architecture with the terminal command `dbt seed`.
-
 -   Some directories do not have seeds yet, so DBT will not recognize that a new file has been created. If this is the case, modify `dbt/dbt_project.yml` to add the correct schema. You will also need to update the `schema.yml` and `docs.md` files in the `seeds` directory.
-
 -   Since a seed is an existing component of the DBT project, references to it will be different than when querying a table outside of the DBT structure (AWS tables). For example, use
 
 ```         
