@@ -74,6 +74,7 @@ rather than
 ```         
 FROM {{ source('spatial', 'parcel') }} AS parcel
 ```
+------------------------------------------------------------------------
 
 ## Step 2: Clean any Raw Data and Store it in `ccao-data-warehouse-us-east-1`
 
@@ -86,6 +87,8 @@ Data sources often contain information which is relevant for institutional knowl
 -   Moving forward, the data department is veering towards the use of Python scripts for data transformation so that they can be configured with DBT actions. This means that although there are scripts in R, new scripts should be produced in Python.
 
 -   Upload the cleaned version to `ccao-data-warehouse-us-east-1` as a parquet file, grouping the file by year.
+
+------------------------------------------------------------------------
 
 ## Step 3: [Add a Model to the dbt DAG](https://github.com/ccao-data/data-architecture/blob/master/dbt/README.md#-how-to-add-a-new-model) to Transform the Data into a View.
 
@@ -126,6 +129,8 @@ dbt build --select proximity.dist_pin_to_stadium
 ```
 
 -   Complete the documentation by configuring it as a [source](https://docs.getdbt.com/docs/build/sources) in the folder's dbt `schema.yml` file, and update the folder's `docs.md` and `columns.md` files.
+
+------------------------------------------------------------------------
 
 ## Step 4: Incorporate the Transformed Data into the Model Input Views.
 
