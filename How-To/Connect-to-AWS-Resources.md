@@ -105,12 +105,14 @@ Using python, the `pyathena` package is an excellent option for ingesting data f
     import pandas
     from pyathena import connect
     from pyathena.pandas.util import as_pandas
+    from pyathena.pandas.cursor import PandasCursor
 
     # Connect to Athena
     conn = connect(
-        s3_staging_dir=os.getenv("AWS_ATHENA_S3_STAGING_DIR"),
+        s3_staging_dir=os.getenv("AWS_ATHENA_S3_STAGING_DIR") + "/",
         region_name=os.getenv("AWS_REGION"),
-    )
+        cursor_class=PandasCursor,
+    ).cursor(unload=True)
 
     # Define test query
     SQL_QUERY = "SELECT * from default.vw_pin_sale LIMIT 10;"
