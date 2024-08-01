@@ -118,7 +118,6 @@ Using python, the `pyathena` package is an excellent option for ingesting data f
     SQL_QUERY = "SELECT * from default.vw_pin_sale LIMIT 10;"
 
     # Execute query and return as pandas df
-    cursor = conn.cursor()
     cursor.execute(SQL_QUERY)
 
     df = as_pandas(cursor)
