@@ -3,7 +3,7 @@
 The data team maintains a motley collection of [open data assets](https://datacatalog.cookcountyil.gov/browse?tags=cook+county+assessor). The [Athena views](https://ccao-data.github.io/data-architecture/#!/overview/ccao_data_athena) that feed these assets are updated regularly with new features, and it's important to maintain parity.
 
 1. [Log in to](https://datacatalog.cookcountyil.gov/login) the Open Data Portal using the Data Department's credentials.
-2. Click "My Assets" on the left.
+2. Click `My Assets` on the left.
 3. Click the asset you'd like to update.
 4. Click "Edit" in the top right of the asset's landing page.
 5. Click the "Add Data" drop down menu, then select "Replace".
