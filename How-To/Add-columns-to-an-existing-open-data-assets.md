@@ -1,4 +1,4 @@
-# Add Columns to Open Data Assets
+# Add Columns to an Existing Open Data Asset
 
 The data team maintains a motley collection of [open data assets](https://datacatalog.cookcountyil.gov/browse?tags=cook+county+assessor). The [Athena views](https://ccao-data.github.io/data-architecture/#!/overview/ccao_data_athena) that feed these assets are updated regularly with new features, and it's important to maintain parity.
 
