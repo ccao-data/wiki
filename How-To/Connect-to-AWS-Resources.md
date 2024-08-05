@@ -88,6 +88,8 @@ To setup and use `noctua` in an R project:
 
 Using python, the `pyathena` package is an excellent option for ingesting data from AWS Athena.
 
+As with R, enabling [unload](https://laughingman7743.github.io/PyAthena/pandas.html#pandascursor) via `cursor(unload=TRUE)` uses a different method of storing and transferring query results. It tends to be a bit faster on our hardware, and thus we recommend using it by default.
+
 1. Install and setup the [AWS CLI and aws-mfa](/How-To/Setup-the-AWS-Command-Line-Interface-and-Multi‐factor-Authentication.md)
 2. Authenticate with `aws-mfa` via the command line
 3. Install the `pyathena` package into your python environment using `pip install PyAthena`
@@ -105,18 +107,22 @@ Using python, the `pyathena` package is an excellent option for ingesting data f
     import pandas
     from pyathena import connect
     from pyathena.pandas.util import as_pandas
+    from pyathena.pandas.cursor import PandasCursor
 
     # Connect to Athena
     conn = connect(
-        s3_staging_dir=os.getenv("AWS_ATHENA_S3_STAGING_DIR"),
+        # We add '+ "/"' to the end of the line below because enabling unload
+        # introduces a concatenation error in the pyathena package not present
+        # when the option is disabled.
+        s3_staging_dir=os.getenv("AWS_ATHENA_S3_STAGING_DIR") + "/",
         region_name=os.getenv("AWS_REGION"),
-    )
+        cursor_class=PandasCursor,
+    ).cursor(unload=True)
 
     # Define test query
     SQL_QUERY = "SELECT * from default.vw_pin_sale LIMIT 10;"
 
     # Execute query and return as pandas df
-    cursor = conn.cursor()
     cursor.execute(SQL_QUERY)
 
     df = as_pandas(cursor)
