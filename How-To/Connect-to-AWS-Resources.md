@@ -109,6 +109,9 @@ Using python, the `pyathena` package is an excellent option for ingesting data f
 
     # Connect to Athena
     conn = connect(
+        # We add '+ "/"' to the end of the line below because enabling unload
+        # introduces a concatenation error in the pyathena package not present
+        # when the option is disabled.
         s3_staging_dir=os.getenv("AWS_ATHENA_S3_STAGING_DIR") + "/",
         region_name=os.getenv("AWS_REGION"),
         cursor_class=PandasCursor,
