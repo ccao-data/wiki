@@ -88,6 +88,8 @@ To setup and use `noctua` in an R project:
 
 Using python, the `pyathena` package is an excellent option for ingesting data from AWS Athena.
 
+As with R, setting enabling [unload](https://laughingman7743.github.io/PyAthena/pandas.html#pandascursor) via `cursor(unload=TRUE)` uses a different method of storing and transferring query results. It tends to be a bit faster on our hardware, and thus we recommend using it by default.
+
 1. Install and setup the [AWS CLI and aws-mfa](/How-To/Setup-the-AWS-Command-Line-Interface-and-Multi‐factor-Authentication.md)
 2. Authenticate with `aws-mfa` via the command line
 3. Install the `pyathena` package into your python environment using `pip install PyAthena`
