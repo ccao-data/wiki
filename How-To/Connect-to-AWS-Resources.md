@@ -105,35 +105,35 @@ As with R, enabling [unload](https://laughingman7743.github.io/PyAthena/pandas.h
     # Load necessary libraries
     import os
     import pandas
+    import pyarrow
     from pyathena import connect
     from pyathena.pandas.util import as_pandas
     from pyathena.pandas.cursor import PandasCursor
 
     # Connect to Athena
-    conn = connect(
+    cursor = connect(
         # We add '+ "/"' to the end of the line below because enabling unload
-        # introduces a concatenation error in the pyathena package not present
-        # when the option is disabled.
+        # requires that the staging directory end with a slash
         s3_staging_dir=os.getenv("AWS_ATHENA_S3_STAGING_DIR") + "/",
         region_name=os.getenv("AWS_REGION"),
         cursor_class=PandasCursor,
     ).cursor(unload=True)
 
-    # Define test query
-    SQL_QUERY = "SELECT * from default.vw_pin_sale LIMIT 10;"
+    # Define test query. Note that the query CANNOT end with a semi-colon
+    SQL_QUERY = "SELECT * from default.vw_pin_sale LIMIT 10"
 
     # Execute query and return as pandas df
     cursor.execute(SQL_QUERY)
 
-    df = as_pandas(cursor)
+    df = cursor.as_pandas()
     ```
 
 ### Tableau
 
-You will likely need to work with IT admins for permissions to do the following. 
+You will likely need to work with IT admins for permissions to do the following.
 
 1. Install [Tableau Desktop version 2022.1](https://www.tableau.com/support/releases/desktop/2022.1.23) if you plan to publish a file to the CCAO's Tableau Server. The version of Tableau Desktop [cannot be more recent](https://help.tableau.com/current/desktopdeploy/en-us/desktop_deploy_version_compat_top.htm) than the version of Tableau Server.
-2. Install the [JDBC 2.x Driver with AWS SDK](https://docs.aws.amazon.com/athena/latest/ug/jdbc-v2.html). Then move the downloaded .jar file to `C:\Program Files\Tableau\Drivers` on Windows or `~/Library/Tableau/Drivers` on Mac. 
+2. Install the [JDBC 2.x Driver with AWS SDK](https://docs.aws.amazon.com/athena/latest/ug/jdbc-v2.html). Then move the downloaded .jar file to `C:\Program Files\Tableau\Drivers` on Windows or `~/Library/Tableau/Drivers` on Mac.
 3. Make sure [Java SE Development Kit](https://www.oracle.com/java/technologies/downloads/) is installed.
 4. Create a file called `athena.properties` in `C:\Users\$USER\Documents\My Tableau Repository\Datasources` on Windows or `~/Users/$USER/Documents/My Tableau Repository/Datasources` on Mac with the following lines:
     ```
