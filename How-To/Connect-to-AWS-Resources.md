@@ -125,7 +125,7 @@ As with R, enabling [unload](https://laughingman7743.github.io/PyAthena/pandas.h
     # Execute query and return as pandas df
     cursor.execute(SQL_QUERY)
 
-    df = as_pandas(cursor)
+    df = cursor.as_pandas()
     ```
 
 ### Tableau
