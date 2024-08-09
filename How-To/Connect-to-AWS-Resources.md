@@ -105,12 +105,13 @@ As with R, enabling [unload](https://laughingman7743.github.io/PyAthena/pandas.h
     # Load necessary libraries
     import os
     import pandas
+    import pyarrow
     from pyathena import connect
     from pyathena.pandas.util import as_pandas
     from pyathena.pandas.cursor import PandasCursor
 
     # Connect to Athena
-    conn = connect(
+    cursor = connect(
         # We add '+ "/"' to the end of the line below because enabling unload
         # requires that the staging directory end with a slash
         s3_staging_dir=os.getenv("AWS_ATHENA_S3_STAGING_DIR") + "/",
@@ -122,7 +123,7 @@ As with R, enabling [unload](https://laughingman7743.github.io/PyAthena/pandas.h
     SQL_QUERY = "SELECT * from default.vw_pin_sale LIMIT 10"
 
     # Execute query and return as pandas df
-    conn.execute(SQL_QUERY)
+    cursor.execute(SQL_QUERY)
 
     df = as_pandas(cursor)
     ```
