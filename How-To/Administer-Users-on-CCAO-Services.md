@@ -64,7 +64,7 @@ To delete users on the Data server, complete the following steps:
 1. SSH to the Data server, same as above.
 2. If the user has significant/valuable work in their home directory, first backup the directory. Backups can be stored in the `CCAODATA` directory on the `O:` shared drive.
     ```bash
-    sudo tar -cfz $THEIR_USER.tar.gz /home/$THEIR_USER
+    sudo tar -czvf $THEIR_USER.tar.gz /home/$THEIR_USER
     ```
 3. Delete the user account. This will remove their user and group but *not* their home directory.
     ```bash
