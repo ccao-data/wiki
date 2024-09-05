@@ -75,7 +75,13 @@ To setup and use `noctua` in an R project:
     noctua_options(cache_size = 10, unload = TRUE)
 
     # Establish connection
-    AWS_ATHENA_CONN_NOCTUA <- dbConnect(noctua::athena())
+    AWS_ATHENA_CONN_NOCTUA <- dbConnect(
+      noctua::athena(),
+      # Disable the Connections tab entry for this database. Always use this if
+      # you don't want to browser the tables in the Connections tab, since it
+      # speeds up instantiating the connection significantly
+      rstudio_conn_tab = FALSE
+    )
 
     # Test the connection
     dbGetQuery(
