@@ -74,7 +74,7 @@ FROM {{ source('spatial', 'parcel') }} AS parcel
 
 ## Clean any Raw Data and Store it in [ccao-data-warehouse-us-east-1](https://github.com/ccao-data/data-architecture/tree/master/etl/scripts-ccao-data-warehouse-us-east-1)
 
-Data sources often contain information which is relevant for institutional knowledge, but are not useful for modeling. Keeping data in its raw form provides redundancy in case there are complications from the data transformation or the data source changes over time.
+Data sources often contain information which is relevant for institutional knowledge, but are not useful for modeling. Keeping data in itss raw form provides redundancy in case there are complications from the data transformation or the data source changes over time.
 
 -   Just as with the the `raw` script, you need to define S3 bucket locations, but this time, set one bucket location variable to `ccao-data-raw-us-east-1` and another to `ccao-data-warehouse-us-east-1`. This will ensure that you can download from the raw bucket, and export to the warehouse bucket.
 
@@ -141,9 +141,7 @@ dbt build --select proximity.dist_pin_to_stadium
 
 -   Identify if the new feature is relevant in the condo and/or the residential model. Then, in `dbt/models/model`, update the relevant `vw_pin_condo_input`, `vw_res_card_input`, or `vw_shared_input` view.
 
--   
-
-    ## If the attribute is spatial, you should also update `crosswalk_year_fill.sql`, `proximity.vw_pin10_proximity_fill.sql`, and `location.vw_pin10_location_fill.sql`. Make sure to fill in missing years of data: If certain years are missing from the data but we think that it did not change during that period, we can forward- or backward-fill it.
+-   If the attribute is spatial, you should also update `crosswalk_year_fill.sql`, `proximity.vw_pin10_proximity_fill.sql`, and `location.vw_pin10_location_fill.sql`. Make sure to fill in missing years of data: If certain years are missing from the data but we think that it did not change during that period, we can forward- or backward-fill it.
 
 ## Update the [Model Pipeline](https://github.com/ccao-data/model-res-avm/tree/master) to use the New Versions of the Model Input Views
 
@@ -170,7 +168,8 @@ dvc push
 
 ## Troubleshooting
 
--   Some staff members do not have permission to write to AWS buckets. If you run into an `Access Denied` error at any point, ask senior staff to run your code for you. This is most likely to occur during step 1. - Make sure that you have authenticated to AWS using MFA by running `aws-mfa` in the terminal and typing in the correct credentials.
+-   Some staff members do not have permission to write to AWS buckets. If you run into an `Access Denied` error at any point, ask senior staff to run your code for you. This is most likely to occur during step 1.
+-   Make sure that you have authenticated to AWS using MFA by running `aws-mfa` in the terminal and typing in the correct credentials.
 -   Whenever you commit to an open pull request against `data-architecture`, the `build-and-test-dbt` workflow will build all tables and views you have modified. If a table or view that the modified model depends on has not been built yet, you will receive an error message. In the following, the SQL query is identifying that `cyf`, a reference to the `proximity.crosswalk_year_fill` model, has not been built but is a prerequisite for building `vw_pin10_proximity_fill.sql`.
 
 ```         
