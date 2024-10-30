@@ -52,13 +52,13 @@ upload_to_s3(df, AWS_S3_RAW_BUCKET, "housing/dci", "dci.csv")
 ```
 
 -   If you export the data to `ccao-data-warehouse-us-east-1` for direct use in a dbt model, make sure that the data is written as a parquet file. If it is written to `ccao-data-raw-us-east-1`, it can be either parquet or csv.
--   -Now that the file has been built, crawl the output with [Glue](https://us-east-1.console.aws.amazon.com/glue/home?region=us-east-1#/v2/data-catalog/crawlers) by navigating to the crawler that is configured to crawl your bucket and then selecting `Run Crawler` in the upper right.
+-   Now that the file has been built, crawl the output with [Glue](https://us-east-1.console.aws.amazon.com/glue/home?region=us-east-1#/v2/data-catalog/crawlers) by navigating to the crawler that is configured to crawl your bucket and then selecting `Run Crawler` in the upper right.
 
 ### Option B: Use a Seed to Create the Data in \`[dbtseeds](https://github.com/ccao-data/data-architecture/tree/master/dbt/seeds)\`
 
 -   For data that is rarely changing and small enough to store in a CSV file, we can upload the file as a [seed](https://docs.getdbt.com/docs/build/seeds).
 -   Construct this manually as a .csv file and upload it to the local `dbt/seeds/xxx` folder.
--   Once your file is within your local directory, test building it in your dev environment by running the command \`dbt seed\`.
+-   Once your file is within your local directory, test building it in your dev environment by running the command `dbt seed`.
     -   Add an entry for your seed in the `schema.yml` file that lives in its sub directory, so that the dbt DAG knows about it. Some directories do not have seeds yet, in which case you should modify the `seeds` attribute in `dbt/dbt_project.yml` to add the correct schema for your seed and also add a `schema.yml` file to the new subdirectory under `dbt/seeds/`.
     -   Since a seed is a part of the dbt DAG, refer to it with [`ref()`](https://docs.getdbt.com/reference/dbt-jinja-functions/ref) instead of [`source()`](https://docs.getdbt.com/reference/dbt-jinja-functions/source) in downstream models.
 
@@ -74,7 +74,7 @@ FROM {{ source('spatial', 'parcel') }} AS parcel
 
 ## Clean any Raw Data and Store it in [ccao-data-warehouse-us-east-1](https://github.com/ccao-data/data-architecture/tree/master/etl/scripts-ccao-data-warehouse-us-east-1)
 
-Data sources often contain information which is relevant for institutional knowledge, but are not useful for modeling. Keeping data in itss raw form provides redundancy in case there are complications from the data transformation or the data source changes over time.
+Data sources often contain information which is relevant for institutional knowledge, but are not useful for modeling. Keeping data in its raw form provides redundancy in case there are complications from the data transformation or the data source changes over time.
 
 -   Just as with the the `raw` script, you need to define S3 bucket locations, but this time, set one bucket location variable to `ccao-data-raw-us-east-1` and another to `ccao-data-warehouse-us-east-1`. This will ensure that you can download from the raw bucket, and export to the warehouse bucket.
 
@@ -89,12 +89,7 @@ Data sources often contain information which is relevant for institutional knowl
 ## [Add a Model to the dbt DAG](https://github.com/ccao-data/data-architecture/blob/master/dbt/README.md#-how-to-add-a-new-model) to Transform the Data into a [Model View](https://github.com/ccao-data/data-architecture/tree/master/dbt/models).
 
 -   Once data has been cleaned and is ready for processing, it can be can be turned into a dbt model using either a SQL query or a Python script that makes use of Athena PySpark's [built-in third-party packages](https://docs.aws.amazon.com/athena/latest/ug/notebooks-spark-preinstalled-python-libraries.html). Some commonly used SQL operations are defined for reuse as [macros](https://docs.getdbt.com/docs/build/jinja-macros) and are stored in [`dbt/macros`](https://github.com/ccao-data/data-architecture/tree/master/dbt/macros). The most commonly used macros involve spatial transformations, such as identifying the distance to nearest geography of a particular type (i.e. stadiums).
-
--   At the top of your script, make sure that the parquet outp[s are partia](https://github.com/ccao-data/data-architecture/tree/master/dbt/macros). The most commonly used macros involve spatial transformations, such as identifying the distance to nearest geography of a particular type (i.e. stadiums).
-
--   At the top of your script, make sure that the parquet outp[s are partiarti](https://github.com/ccao-data/data-architecture/tree/master/dbt/macros). The most commonly used macros involve spatial transformations, such as identifying the distance to nearest geography of a particular type (i.e. stadiums).
-
--   At the top of your script, make sure that the parquet outp[ts are parti](https://github.com/ccao-data/data-architecture/tree/master/dbt/macros)tioned by year. For SQL queries these are done with the following structure:
+-   At the top of your script, make sure that the parquet outputs are partitioned by year. For SQL queries these are done with the following structure:
 
 ```         
 {{
