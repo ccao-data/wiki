@@ -22,6 +22,7 @@
 * [Use the Data team server](How-To/Use-the-Data-team-server.md)
 * [Issue a certificate for the Data team server](How-To/Issue-a-certificate-for-the-data-team-server.md)
 * [Create a New Residential Feature](How-To/Create-a-New-Residential-Feature.md)
+* [Add Columns to Open Data Assets](How-To/Add-columns-to-open-data-assets.md)
 
 ### Standard Operating Procedures (SOPs)
 
