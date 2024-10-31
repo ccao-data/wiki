@@ -27,7 +27,7 @@ library(arrow)
 library(aws.s3)
 ```
 
--   Set the \`AWS_S3_RAW_BUCKET\` environment variable to an S3 bucket where output files will be stored:
+-   Set the `AWS_S3_RAW_BUCKET` environment variable to an S3 bucket where output files will be stored:
 
 ```         
 AWS_S3_RAW_BUCKET = os.environ.get("AWS_S3_RAW_BUCKET")
@@ -156,7 +156,7 @@ dbt build --select proximity.dist_pin_to_stadium
 dvc repro -f
 ```
 
--   If you want others to be able to reproduce your work, you can push the updated model data to DVC using the following commands. If you do this, make sure to set the `run_type to `test` in `params.yaml`.
+-   If you want others to be able to reproduce your work, you can push the updated model data to DVC using the following commands. If you do this, make sure to set the `run_type` to `test` in `params.yaml`.
 
 ```         
 dvc commit
