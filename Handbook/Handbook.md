@@ -133,6 +133,25 @@ Data Department staff are often working on multiple projects simultaneously. Thi
 * **Low-Context Communication:** Assume that the person you are communicating with does not know the context of your work and/or question. A simple question like 'What's the difference between `AS_HEADT` and `AS_HEADBR`?' actually has a very lengthy response, depending on the context of the question. In order to make communication efficient, try signaling the context of the question. E.g. "I am trying to report 'final' assessed values for 2019 to compare to 'initial' assessed values. Which HEAD file should I use for each set?" Take the extra time to contextualize your question.
 * **Asynchronous Communication:** In general, each team member should not expect other team members to respond quickly to questions. This is due to the variety and timing of the work we do. When you hit a stumbling block and need to ask a clarifying question, do so, and then work on a different task while you wait for a response. Similarly, unless otherwise indicated, do not interpret questions from other team members as requiring an immediate response.
 
+## Scheduling time off
+
+When scheduling expected time off (appointments, vacations, etc.), please use
+the process below to block your time from scheduling and let others know when
+you're out. For unexpected time off (sick, emergencies), your supervisor will
+complete the process for you.
+
+1. Use [CCT](https://www.cookcountyil.gov/cct) to request your time off, as outlined in Section IV of the [CCAO Employee Handbook](http://intranet/filedownloads/EmployeeHandbook.pdf).
+2. Once your CCT request is approved, add the time off to the `Assessor.Data` shared calendar using the following steps:
+    * On your Outlook calendar, create a calendar appointment with the title `$NAME OOO - $REASON`, where `$NAME` is your own first name and `$REASON` is the reason you're out-of-office. It doesn't have to be specific, i.e. just "Appointment" or "Vacation" is sufficient.
+    * Change the appointment type (the dropdown next to `Busy`) to `Out of office`. This changes the coloring/behavior of event. If you're out the entire day, use the `All day` event time.
+    * Invite the Data calendar using the `Assessor.Data@cookcountyil.gov` email address. This will share the out-of-office event with others in the Department.
+3. ***(For Directors and Deputies only)*** If you are taking a full workday or more off, please use an additional calendar invitation to notify other CCAO Executives (outside the Data Department). The steps are:
+    * Create a duplicate of your time off event with the title `$NAME OOO`.
+    * Change the appointment type to `Free` to not block other Execs' calendars if they accept the event.
+    * Add the `CCAO Executives` group to the `Optional` attendees.
+    * Outlook may try to create a Teams meeting because you've invited others. If it does this, click `❌ Don't Host Online` to remove the Teams meeting, or uncheck the Teams meeting slider in the web version of Outlook.
+    * Under the `Response Options` menu, deselect `Request Responses`. Deselecting this means recipients of this event can choose whether to show it on their calendar, but you won't get an email response from every single one.
+
 # Version Control and Workflow
 
 ## Repositories

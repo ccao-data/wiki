@@ -75,7 +75,13 @@ To setup and use `noctua` in an R project:
     noctua_options(cache_size = 10, unload = TRUE)
 
     # Establish connection
-    AWS_ATHENA_CONN_NOCTUA <- dbConnect(noctua::athena())
+    AWS_ATHENA_CONN_NOCTUA <- dbConnect(
+      noctua::athena(),
+      # Disable the Connections tab entry for this database. Always use this if
+      # you don't want to browser the tables in the Connections tab, since it
+      # speeds up instantiating the connection significantly
+      rstudio_conn_tab = FALSE
+    )
 
     # Test the connection
     dbGetQuery(
@@ -87,6 +93,8 @@ To setup and use `noctua` in an R project:
 ### Python
 
 Using python, the `pyathena` package is an excellent option for ingesting data from AWS Athena.
+
+As with R, enabling [unload](https://laughingman7743.github.io/PyAthena/pandas.html#pandascursor) via `cursor(unload=TRUE)` uses a different method of storing and transferring query results. It tends to be a bit faster on our hardware, and thus we recommend using it by default.
 
 1. Install and setup the [AWS CLI and aws-mfa](/How-To/Setup-the-AWS-Command-Line-Interface-and-Multi‐factor-Authentication.md)
 2. Authenticate with `aws-mfa` via the command line
@@ -103,30 +111,37 @@ Using python, the `pyathena` package is an excellent option for ingesting data f
     # Load necessary libraries
     import os
     import pandas
+    import pyarrow
     from pyathena import connect
     from pyathena.pandas.util import as_pandas
+    from pyathena.pandas.cursor import PandasCursor
 
     # Connect to Athena
-    conn = connect(
-        s3_staging_dir=os.getenv("AWS_ATHENA_S3_STAGING_DIR"),
+    cursor = connect(
+        # We add '+ "/"' to the end of the line below because enabling unload
+        # requires that the staging directory end with a slash
+        s3_staging_dir=os.getenv("AWS_ATHENA_S3_STAGING_DIR") + "/",
         region_name=os.getenv("AWS_REGION"),
-    )
+        cursor_class=PandasCursor,
+    ).cursor(unload=True)
 
-    # Define test query
-    SQL_QUERY = "SELECT * from default.vw_pin_sale LIMIT 10;"
+    # Define test query. Note that the query CANNOT end with a semi-colon
+    SQL_QUERY = "SELECT * from default.vw_pin_sale LIMIT 10"
 
     # Execute query and return as pandas df
-    cursor = conn.cursor()
     cursor.execute(SQL_QUERY)
 
-    df = as_pandas(cursor)
+    df = cursor.as_pandas()
     ```
 
 ### Tableau
 
-1. Install the [JDBC Driver with AWS SDK](https://docs.aws.amazon.com/athena/latest/ug/connect-with-jdbc.html) - move the downloaded .jar file to `C:\Program Files\Tableau\Drivers` on Windows or `~/Library/Tableau/Drivers` on Mac.
-2. Make sure [Java SE Development Kit](https://www.oracle.com/java/technologies/downloads/) is installed.
-3. Create a file called `athena.properties` in `C:\Users\$USER\Documents\My Tableau Repository\Datasources` on Windows or `~/Users/$USER/Documents/My Tableau Repository/Datasources` on Mac with the following lines:
+You will likely need to work with IT admins for permissions to do the following.
+
+1. Install [Tableau Desktop version 2022.1](https://www.tableau.com/support/releases/desktop/2022.1.23) if you plan to publish a file to the CCAO's Tableau Server. The version of Tableau Desktop [cannot be more recent](https://help.tableau.com/current/desktopdeploy/en-us/desktop_deploy_version_compat_top.htm) than the version of Tableau Server.
+2. Install the [JDBC 2.x Driver with AWS SDK](https://docs.aws.amazon.com/athena/latest/ug/jdbc-v2.html). Then move the downloaded .jar file to `C:\Program Files\Tableau\Drivers` on Windows or `~/Library/Tableau/Drivers` on Mac.
+3. Make sure [Java SE Development Kit](https://www.oracle.com/java/technologies/downloads/) is installed.
+4. Create a file called `athena.properties` in `C:\Users\$USER\Documents\My Tableau Repository\Datasources` on Windows or `~/Users/$USER/Documents/My Tableau Repository/Datasources` on Mac with the following lines:
     ```
     workgroup=read-only-with-scan-limit
     MetadataRetrievalMethod=ProxyAPI
