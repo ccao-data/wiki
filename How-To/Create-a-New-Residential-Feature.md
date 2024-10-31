@@ -167,7 +167,7 @@ dvc push
 
 ## Troubleshooting
 
--   Some staff members do not have permission to write to AWS buckets or run dvc push. If you run into an `Access Denied` error at any point, ask senior staff to run your code for you. This is most likely to occur during step 1 or step 5.
+-   Some staff members do not have permission to write to AWS buckets or run `dvc push`. If you run into an `Access Denied` error at any point, ask senior staff to run your code for you. This is most likely to occur during step 1 or step 5.
 -   Make sure that you have authenticated to AWS using MFA by running `aws-mfa` in the terminal and typing in the correct credentials.
 -   Whenever you commit to an open pull request against `data-architecture`, the `build-and-test-dbt` workflow will build all tables and views you have modified. If a table or view that the modified model depends on has not been built yet, you will receive an error message. In the following, the SQL query is identifying that `cyf`, a reference to the `proximity.crosswalk_year_fill` model, has not been built but is a prerequisite for building `vw_pin10_proximity_fill.sql`.
 
