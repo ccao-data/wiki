@@ -128,7 +128,7 @@ ST_ASBINARY(ST_POINT(stadium.lon, stadium.lat)) AS geometry
 dbt build --select proximity.dist_pin_to_stadium
 ```
 
--   Complete the documentation by configuring it as a [model]https://docs.getdbt.com/docs/build/models) in the folder's dbt `schema.yml` file, and update the folder's `docs.md` and `columns.md` files.
+-   Complete the documentation by configuring it as a [model](https://docs.getdbt.com/docs/build/models) in the folder's dbt `schema.yml` file, and update the folder's `docs.md` and `columns.md` files.
 
 ------------------------------------------------------------------------
 
@@ -156,7 +156,7 @@ dbt build --select proximity.dist_pin_to_stadium
 dvc repro -f
 ```
 
--   If you want others to be able to reproduce your work, you can push the updated model data to DVC using the following commands. If you do this, make sure to set the `run_type to`test`in`params.yaml`.
+-   If you want others to be able to reproduce your work, you can push the updated model data to DVC using the following commands. If you do this, make sure to set the `run_type to `test` in `params.yaml`.
 
 ```         
 dvc commit
