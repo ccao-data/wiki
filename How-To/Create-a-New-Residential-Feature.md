@@ -154,7 +154,7 @@ dbt build --select proximity.dist_pin_to_stadium
 dvc repro -f
 ```
 
--   If you want this information to be shared, you can push the updated model data to DVC using the following code. If you do this, make sure that the param for run_type is `test`.
+-   If you want others to be able to reproduce your work, you can push the updated model data to DVC using the following commands. If you do this, make sure to set the `run_type to `test` in `params.yaml`.
 
 ```         
 dvc commit
