@@ -54,7 +54,7 @@ upload_to_s3(df, AWS_S3_RAW_BUCKET, "housing/dci", "dci.csv")
 -   If you export the data to `ccao-data-warehouse-us-east-1` for direct use in a dbt model, make sure that the data is written as a parquet file. If it is written to `ccao-data-raw-us-east-1`, it can be either parquet or csv.
 -   Now that the file has been built, crawl the output with [Glue](https://us-east-1.console.aws.amazon.com/glue/home?region=us-east-1#/v2/data-catalog/crawlers) by navigating to the crawler that is configured to crawl your bucket and then selecting `Run Crawler` in the upper right.
 
-## Option B: Use a Seed to Create the Data in \`[dbtseeds](https://github.com/ccao-data/data-architecture/tree/master/dbt/seeds)\`
+### Option B: Use a Seed to Create the Data in \`[dbt/seeds](https://github.com/ccao-data/data-architecture/tree/master/dbt/seeds)\`
 
 -   For data that is rarely changing and small enough to store in a CSV file, we can upload the file as a [seed](https://docs.getdbt.com/docs/build/seeds).
 -   Construct this manually as a .csv file and upload it to the local `dbt/seeds/xxx` folder.
