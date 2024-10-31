@@ -14,7 +14,7 @@ Data extraction scripts are typically created in R or Python in the `etl/scripts
 
 -   Identify which folder the script should go in. Although folders are often self-explanatory, the location may switch throughout the feature creation process. For example, `spatial/spatial-environment-secondary_road.R` is created as a `spatial` feature, but during the transformation step (`proximity.dist_pin_to_secondary_roads.sql)`, it shifts to the `proximity` folder since the metric (distance) is in relation to PINs.
 
--   Load the required imports for python and libraries for R.
+-   Load the required imports for Python and libraries for R.
 
 ``` python
 import os
