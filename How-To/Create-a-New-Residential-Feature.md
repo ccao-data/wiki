@@ -14,15 +14,15 @@ Data extraction scripts are typically created in R or Python in the `etl/scripts
 
 -   Identify which folder the script should go in. Although folders are often self-explanatory, the location may switch throughout the feature creation process. For example, `spatial/spatial-environment-secondary_road.R` is created as a `spatial` feature, but during the transformation step (`proximity.dist_pin_to_secondary_roads.sql)`, it shifts to the `proximity` folder since the metric (distance) is in relation to PINs.
 
--   Set the `AWS_S3_RAW_BUCKET` environment variable to an S3 bucket where output files will be stored:
+-   Load the required imports for python and libraries for R.
 
-```         
+``` python
 import os
 import boto3
 from dotenv import load_dotenv
 ```
 
-```         
+``` r
 library(arrow)
 library(aws.s3)
 ```
@@ -128,7 +128,7 @@ ST_ASBINARY(ST_POINT(stadium.lon, stadium.lat)) AS geometry
 dbt build --select proximity.dist_pin_to_stadium
 ```
 
--   Complete the documentation by configuring it as a [source](https://docs.getdbt.com/docs/build/sources) in the folder's dbt `schema.yml` file, and update the folder's `docs.md` and `columns.md` files.
+-   Complete the documentation by configuring it as a [model]https://docs.getdbt.com/docs/build/models) in the folder's dbt `schema.yml` file, and update the folder's `docs.md` and `columns.md` files.
 
 ------------------------------------------------------------------------
 
@@ -156,7 +156,7 @@ dbt build --select proximity.dist_pin_to_stadium
 dvc repro -f
 ```
 
--   If you want others to be able to reproduce your work, you can push the updated model data to DVC using the following commands. If you do this, make sure to set the `run_type to `test` in `params.yaml`.
+-   If you want others to be able to reproduce your work, you can push the updated model data to DVC using the following commands. If you do this, make sure to set the `run_type to`test`in`params.yaml`.
 
 ```         
 dvc commit
@@ -167,7 +167,7 @@ dvc push
 
 ## Troubleshooting
 
--   Some staff members do not have permission to write to AWS buckets. If you run into an `Access Denied` error at any point, ask senior staff to run your code for you. This is most likely to occur during step 1.
+-   Some staff members do not have permission to write to AWS buckets or run dvc push. If you run into an `Access Denied` error at any point, ask senior staff to run your code for you. This is most likely to occur during step 1 or step 5.
 -   Make sure that you have authenticated to AWS using MFA by running `aws-mfa` in the terminal and typing in the correct credentials.
 -   Whenever you commit to an open pull request against `data-architecture`, the `build-and-test-dbt` workflow will build all tables and views you have modified. If a table or view that the modified model depends on has not been built yet, you will receive an error message. In the following, the SQL query is identifying that `cyf`, a reference to the `proximity.crosswalk_year_fill` model, has not been built but is a prerequisite for building `vw_pin10_proximity_fill.sql`.
 
