@@ -39,7 +39,7 @@ AWS_S3_RAW_BUCKET <- Sys.getenv("AWS_S3_RAW_BUCKET")
 
 -   Extract the necessary data. This can be done through a few methods: scraping a webpage, utilizing an API, or downloading a file. Be aware that we may need to extract data at different time intervals. For data such as the [Central Business District](https://github.com/ccao-data/data-architecture/blob/master/etl/scripts-ccao-data-raw-us-east-1/spatial/spatial-economy.R), where the geographies are set in stone, the script can reference a geography in a single year. On the other hand, [Secondary Streets](https://github.com/ccao-data/data-architecture/blob/master/etl/scripts-ccao-data-raw-us-east-1/spatial/spatial-environment-secondary_road.R) is structured to download a different set of geographies for every year.
 
--   \- Choose the output location based on your transformation strategy. If the file is already clean, and a SQL query can be easily implemented on it, the script should be stored in `ccao-data-warehouse-us-east-1`. If the file needs additional cleaning, place it in `ccao-data-raw-us-east-1.` Use a modification of the following script to upload the data to S3 in python. Note how it joins the aforementioned `AWS_S3_RAW_BUCKET`, as well as identifying the correct prefix, in this case `/housing`, before creating the unique folder `dci`.
+-   Choose the output location based on your transformation strategy. If the file is already clean, and a SQL query can be easily implemented on it, the script should be stored in `ccao-data-warehouse-us-east-1`. If the file needs additional cleaning, place it in `ccao-data-raw-us-east-1`. Use a modification of the following script to upload the data to S3 in python. Note how it joins the aforementioned `AWS_S3_RAW_BUCKET`, as well as identifying the correct prefix, in this case `/housing`, before creating the unique folder `dci`.
 
 ```         
 def upload_to_s3(file_content, bucket, key_prefix, file_name):
@@ -54,13 +54,13 @@ upload_to_s3(df, AWS_S3_RAW_BUCKET, "housing/dci", "dci.csv")
 -   If you export the data to `ccao-data-warehouse-us-east-1` for direct use in a dbt model, make sure that the data is written as a parquet file. If it is written to `ccao-data-raw-us-east-1`, it can be either parquet or csv.
 -   Now that the file has been built, crawl the output with [Glue](https://us-east-1.console.aws.amazon.com/glue/home?region=us-east-1#/v2/data-catalog/crawlers) by navigating to the crawler that is configured to crawl your bucket and then selecting `Run Crawler` in the upper right.
 
-### Option B: Use a Seed to Create the Data in \`[dbtseeds](https://github.com/ccao-data/data-architecture/tree/master/dbt/seeds)\`
+## Option B: Use a Seed to Create the Data in \`[dbtseeds](https://github.com/ccao-data/data-architecture/tree/master/dbt/seeds)\`
 
 -   For data that is rarely changing and small enough to store in a CSV file, we can upload the file as a [seed](https://docs.getdbt.com/docs/build/seeds).
 -   Construct this manually as a .csv file and upload it to the local `dbt/seeds/xxx` folder.
 -   Once your file is within your local directory, test building it in your dev environment by running the command `dbt seed`.
-    -   Add an entry for your seed in the `schema.yml` file that lives in its sub directory, so that the dbt DAG knows about it. Some directories do not have seeds yet, in which case you should modify the `seeds` attribute in `dbt/dbt_project.yml` to add the correct schema for your seed and also add a `schema.yml` file to the new subdirectory under `dbt/seeds/`.
-    -   Since a seed is a part of the dbt DAG, refer to it with [`ref()`](https://docs.getdbt.com/reference/dbt-jinja-functions/ref) instead of [`source()`](https://docs.getdbt.com/reference/dbt-jinja-functions/source) in downstream models.
+-   Add an entry for your seed in the `schema.yml` file that lives in its sub directory, so that the dbt DAG knows about it. Some directories do not have seeds yet, in which case you should modify the `seeds` attribute in `dbt/dbt_project.yml` to add the correct schema for your seed and also add a `schema.yml` file to the new subdirectory under `dbt/seeds/`.
+-   Since a seed is a part of the dbt DAG, refer to it with [`ref()`](https://docs.getdbt.com/reference/dbt-jinja-functions/ref) instead of [`source()`](https://docs.getdbt.com/reference/dbt-jinja-functions/source) in downstream models.
 
 ```         
 FROM {{ ref('spatial.stadium_raw') }} AS stadium
@@ -139,6 +139,8 @@ dbt build --select proximity.dist_pin_to_stadium
 -   Identify if the new feature is relevant in the condo and/or the residential model. Then, in `dbt/models/model`, update the relevant `vw_pin_condo_input`, `vw_res_card_input`, or `vw_shared_input` view.
 
 -   If the attribute is spatial, you should also update `crosswalk_year_fill.sql`, `proximity.vw_pin10_proximity_fill.sql`, and `location.vw_pin10_location_fill.sql`. Make sure to fill in missing years of data: If certain years are missing from the data but we think that it did not change during that period, we can forward- or backward-fill it.
+
+------------------------------------------------------------------------
 
 ## Step 5: Update the [Model Pipeline](https://github.com/ccao-data/model-res-avm/tree/master) to Use the New Versions of the Model Input Views
 
