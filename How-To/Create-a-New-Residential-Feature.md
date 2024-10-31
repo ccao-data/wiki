@@ -146,7 +146,7 @@ dbt build --select proximity.dist_pin_to_stadium
 
 -   Create a new branch in the `model-res-avm` repository.
 
--   Add the new feature to the `predictor` section of `model/models/params.yaml`.
+-   Add the new feature to the `predictor` section of `params.yaml`.
 
 -   If you want others to be able to reproduce your work, you can push the updated model data to DVC using the following commands. If you do this, make sure to set the `run_type` to `test` in `params.yaml`.
 
