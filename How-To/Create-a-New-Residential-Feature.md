@@ -29,11 +29,11 @@ library(aws.s3)
 
 -   Set the `AWS_S3_RAW_BUCKET` environment variable to an S3 bucket where output files will be stored:
 
-```         
+``` python
 AWS_S3_RAW_BUCKET = os.environ.get("AWS_S3_RAW_BUCKET")
 ```
 
-```         
+``` r
 AWS_S3_RAW_BUCKET <- Sys.getenv("AWS_S3_RAW_BUCKET")
 ```
 
@@ -41,7 +41,7 @@ AWS_S3_RAW_BUCKET <- Sys.getenv("AWS_S3_RAW_BUCKET")
 
 -   Choose the output location based on your transformation strategy. If the file is already clean, and a SQL query can be easily implemented on it, the script should be stored in `ccao-data-warehouse-us-east-1`. If the file needs additional cleaning, place it in `ccao-data-raw-us-east-1`. Use a modification of the following script to upload the data to S3 in python. Note how it joins the aforementioned `AWS_S3_RAW_BUCKET`, as well as identifying the correct prefix, in this case `/housing`, before creating the unique folder `dci`.
 
-```         
+``` python
 def upload_to_s3(file_content, bucket, key_prefix, file_name):
     s3 = boto3.resource("s3")
     object_key = f"{key_prefix}/{file_name}"
