@@ -79,7 +79,7 @@ To delete users on the Data server, complete the following steps:
 
 The Data Department stores most of its active data on AWS. Reading this data requires an authenticated AWS user account. Most users, such as interns and analysts, only require read access. To add a read-only user, complete the following steps:
 
-1. Login to the [CCAO's AWS Console](https://ccao-ds.signin.aws.amazon.com/console) using an account with an administrator role.
+1. Login to the [CCAO's AWS Console](https://ccao-data.signin.aws.amazon.com/console) using an account with an administrator role.
 2. Visit the **IAM** service, click **Users** in the sidebar, then click **Add users** in the top-right corner.
 3. Create a user following the prompts:
     * The user name should be a Cook County email address.
