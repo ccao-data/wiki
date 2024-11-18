@@ -7,17 +7,8 @@ Resources, notes, and helpful links used by the Data Department. Organized by se
 
 ## Useful Bookmarks
 
-##### For Employees Only
-
-- [:exclamation: CCAO O365](https://outlook.office365.com/cookcountyil.gov) - Web-based version of Office 365
-- [:exclamation: CCT](https://www.cookcountyil.gov/cct) - Cook County Time and Attendance, the web-based portal for tracking hours, time-off, etc.
-- [:exclamation: Data Department Teams Channel](https://teams.microsoft.com/l/channel/19%3aa574fd1291b74be298d074c134226689%40thread.tacv2/General?groupId=c8f82972-b5a7-44c0-a00c-ba395f96c6e2&tenantId=d8c4abe1-1869-4ec9-ad1d-19767c494954) - Private teams channel for the Data department. Ask or [email](mailto:william.ridgeway@cookcountyil.gov) @sweatyhandshake for an invite
-- [:exclamation: RStudio Server](https://datascience.cookcountyassessor.com/rstudio) - Internal instance of [RStudio](https://www.rstudio.com/products/rstudio/download-server/) accessible via a webpage. Useful for compute-heavy jobs and interns. If needed, ask @dfsnow to make you an account.
-- [:exclamation: JupyterLab](https://datascience.cookcountyassessor.com/jupyter) - Internal instance of [JupyterLab](https://jupyter.org/) accessible via a webpage. Useful for Python and other non-R workloads. Same account as RStudio Server.
-- [:star: Employee Self-Service (ESS)](https://ccgprod.cookcountyil.gov/) - Benefits enrollment and tracking
-- [Data Department Application Server](https://datascience.cookcountyassessor.com/shiny) - Shiny server that launches CCAO Shiny applications. **Must be connected to the VPN to access**. May throw a security warning when you first visit. This warning can safely be ignored. Click **Advanced --> Accept the risk** to bypass the warning.
-
-##### External Links
+> [!IMPORTANT]
+> See the [member org README](https://github.com/ccao-data?view_as=member) for a list of useful internal links and bookmarks.
 
 - [:exclamation: CCAO GitHub](https://github.com/ccao-data) - Main source for all Data Department code
 - [CCAO GitLab](https://gitlab.com/ccao-data-science---modeling) - Archived. Previous source of all CCAO code
