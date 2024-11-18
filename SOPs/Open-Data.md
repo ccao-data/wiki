@@ -144,7 +144,7 @@ The Data Department creates and maintains the following open data sets.
 
 **Notes:** Refreshed monthly, data is updated when necessary as PINs are re-classified.
 
-**Use cases:** Investigating which properties and property owners in Cook County have been granted tax-exempt status.
+**Use cases:** Determine which properties and property owners in Cook County have been granted tax-exempt status.
 
 **Code:** [default-vw_pin_exempt.sql](https://github.com/ccao-data/data-architecture/blob/master/aws-athena/views/default-vw_pin_exempt.sql)
 
