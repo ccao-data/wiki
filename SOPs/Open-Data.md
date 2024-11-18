@@ -56,6 +56,18 @@ The Data Department creates and maintains the following open data sets.
 
 **Code:** [default.vw_pin_history.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_history.sql)
 
+### [Commercial Valuation Data](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Commercial-Valuation-Data/csik-bsws)
+
+| Time Frame   | Property Classes | Unique By | Row               | Updated |
+| :---:        | :---:            | :---:     | :---:             | :---:   |
+| 2021-Present | All              | `NA`      | Commercial Parcel | Annually |
+
+**Notes:** Refreshed annually, data is updated once first-pass is completed.
+
+**Use cases:** Contains all data commercial valuation team uses to assess commercial parcels.
+
+**Code:** [ccao-commercial_valuation.R](https://github.com/ccao-data/data-architecture/blob/master/etl/scripts-ccao-data-warehouse-us-east-1/ccao/ccao-commercial_valuation.R)
+
 ### [Neighborhood Boundaries](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Neighborhood-Boundaries/pcdw-pxtg)
 
 | Time Frame | Property Classes | Unique By         | Row                  | Updated  |
