@@ -58,9 +58,9 @@ The Data Department creates and maintains the following open data sets.
 
 ### [Commercial Valuation Data](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Commercial-Valuation-Data/csik-bsws)
 
-| Time Frame   | Property Classes | Unique By | Row               | Updated |
-| :---:        | :---:            | :---:     | :---:             | :---:   |
-| 2021-Present | All              | `NA`      | Commercial Parcel | Annually |
+| Time Frame   | Property Classes | Unique By | Row                        | Updated |
+| :---:        | :---:            | :---:     | :---:                      | :---:   |
+| 2021-Present | All              | `NA`      | Commercial Assessment Unit | Annually |
 
 **Notes:** Refreshed annually, data is updated once first-pass is completed.
 
