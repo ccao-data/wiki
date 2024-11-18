@@ -7,17 +7,8 @@ Resources, notes, and helpful links used by the Data Department. Organized by se
 
 ## Useful Bookmarks
 
-##### For Employees Only
-
-- [:exclamation: CCAO O365](https://outlook.office365.com/cookcountyil.gov) - Web-based version of Office 365
-- [:exclamation: CCT](https://www.cookcountyil.gov/cct) - Cook County Time and Attendance, the web-based portal for tracking hours, time-off, etc.
-- [:exclamation: Data Department Teams Channel](https://teams.microsoft.com/l/channel/19%3aa574fd1291b74be298d074c134226689%40thread.tacv2/General?groupId=c8f82972-b5a7-44c0-a00c-ba395f96c6e2&tenantId=d8c4abe1-1869-4ec9-ad1d-19767c494954) - Private teams channel for the Data department. Ask or [email](mailto:william.ridgeway@cookcountyil.gov) @sweatyhandshake for an invite
-- [:exclamation: RStudio Server](https://datascience.cookcountyassessor.com/rstudio) - Internal instance of [RStudio](https://www.rstudio.com/products/rstudio/download-server/) accessible via a webpage. Useful for compute-heavy jobs and interns. If needed, ask @dfsnow to make you an account.
-- [:exclamation: JupyterLab](https://datascience.cookcountyassessor.com/jupyter) - Internal instance of [JupyterLab](https://jupyter.org/) accessible via a webpage. Useful for Python and other non-R workloads. Same account as RStudio Server.
-- [:star: Employee Self-Service (ESS)](https://ccgprod.cookcountyil.gov/) - Benefits enrollment and tracking
-- [Data Department Application Server](https://datascience.cookcountyassessor.com/shiny) - Shiny server that launches CCAO Shiny applications. **Must be connected to the VPN to access**. May throw a security warning when you first visit. This warning can safely be ignored. Click **Advanced --> Accept the risk** to bypass the warning.
-
-##### External Links
+> [!IMPORTANT]
+> See the [member org README](https://github.com/ccao-data?view_as=member) for a list of useful internal links and bookmarks.
 
 - [:exclamation: CCAO GitHub](https://github.com/ccao-data) - Main source for all Data Department code
 - [CCAO GitLab](https://gitlab.com/ccao-data-science---modeling) - Archived. Previous source of all CCAO code
@@ -41,20 +32,24 @@ Useful materials that give an overview of Cook County's property tax system and 
 - [:exclamation: Cook County Property Taxes 101](https://maps.cookcountyil.gov/propertytax101/index.html) - Brief intro to property taxes, created by the Clerk's office
 - [:exclamation: The Tax Divide - Chicago Tribune](https://www.chicagotribune.com/investigations/ct-tax-divide-investigation-20180425-storygallery.html) - An excellent outline of the historical problems with the CCAO
 - [:exclamation: The Cook County Property Tax Extension Process: A Primer](https://www.civicfed.org/civic-federation/publications/cook-county-property-tax-extension-process-primer-levies-tax-caps-and-) - Incredibly useful guide to the intricacies of the entire Cook County tax system
-- [:star: Why Are My Property Taxes So High?](https://www.chicagobusiness.com/crains-forum-taxes/forum-why-are-my-property-taxes-so-high) - Neat interactive from Crain's that compares two very different homes that pay roughly the same amount of property tax
 - [:star: How Lower-Income Americans Get Cheated on Property Taxes - NYTimes](https://www.nytimes.com/2021/04/03/opinion/sunday/property-taxes-housing-assessment-inequality.html) - Concise and accessible overview of the nation-wide issue of inequitable assessments
-- [Learn About Illinois' Property Tax System](https://www.youtube.com/watch?v=l9YVudOQuZ4) - Illinois Realtors’ video about property tax system and bills
+- [:star: Why Are Property Taxes in Chicago so High?](https://youtu.be/zp5dHWnk2NE) - Chi Hack Night presentation by @dfsnow that introduces the Cook County property tax system and describes some of the root causes of high bills
+- [How the Illinois Property Tax System Works](https://cookcountytreasurer.com/pdfs/understandingyourtaxbill/propertytaxprimer.pdf) - The Cook County Treasurer's property tax primer, explains the extension process and some additional things like the scavenger sale and tax liens
+- [Chicago Inside Out (2018) - Places Journal](https://placesjournal.org/article/chicago-inside-out) - Deep dive into the roles and recent histories of the offices that comprise Cook County government, with a particular focus on the impact of property taxes on county services
 - [Chicago Triad Assessment Report (2018) - Civic Consulting Alliance](https://prodassets.cookcountyassessor.com/s3fs-public/reports/2018ChicagoTriadSRSvf.pdf) - Study of 2018 assessment quality in the Chicago triad
-- [2020 Cook County Tax Rate Report](https://www.cookcountyclerkil.gov/sites/default/files/publications/2020_Tax_Rate_Report_Web.pdf) - Clerk’s annual tax rate report, for tax year 2020
+- [Learn About Illinois' Property Tax System](https://www.youtube.com/watch?v=l9YVudOQuZ4) - Illinois Realtors’ video about property tax system and bills
+- [Why Are My Property Taxes so High?](https://www.chicagobusiness.com/crains-forum-taxes/forum-why-are-my-property-taxes-so-high) - Neat interactive from Crain's that compares two very different homes that pay roughly the same amount of property tax
 - [Report on Property Taxes in Wicker Park - Block Club Chicago](https://blockclubchicago.org/2021/03/23/after-decades-in-wicker-park-senior-homeowners-forced-out-by-skyrocketing-property-taxes-this-neighborhood-has-broken-my-heart/) - Story on how increases in assessed value are affecting Wicker Park
+- [How Our Property Tax System Robs The Poor to Pay For The Wealthy (2023) - Strong Towns](https://youtu.be/8MjjHKIlKko) - Documentary about the assessment gap e.g. disparities between low-value and high-value home assessments
 - [State of Illinois Property Tax System](https://tax.illinois.gov/content/dam/soi/en/web/tax/research/publications/documents/localgovernment/ptax-1004.pdf) - A long PDF from the Illinois Department of Revenue explaining property taxes in Illinois
+- [Chicago's Pension Challenge: Understanding Why the Pension Funds are Underfunded - Chi Hack Night](https://www.youtube.com/watch?v=wofivGCqBTk) - Excellent overview of the problems with Chicago's pension funds
 
 ## R
 
 ##### Books and Guides
 
 - [:exclamation: R for Data Science](https://r4ds.hadley.nz) - Classic book on data munging and the basics of modeling, highly recommended
-- [:star: Advanced R](http://adv-r.had.co.nz/Introduction.html) - Extremely good overview of the R language, its quirks, and how to use it effectively
+- [:star: Advanced R](https://adv-r.hadley.nz/) - Extremely good overview of the R language, its quirks, and how to use it effectively
 - [:star: Package Development in R](https://r-pkgs.org/) - Book on how to develop, use, and test R packages
 - [:star: Efficient R Programming](https://csgillespie.github.io/efficientR/) - Online book covering how make R code faster to type and run
 - [Debugging with RStudio](https://support.rstudio.com/hc/en-us/articles/200713843?version=1.3.959&mode=server#introduction) - How to use RStudio's built-in debugging features
@@ -65,15 +60,15 @@ Useful materials that give an overview of Cook County's property tax system and 
 ##### Cheatsheets
 
 - [:star: Colorbrewer 2](https://colorbrewer2.org/) - Interactive color picker for cartography
-- [RStudio Official Cheatsheets](https://rstudio.com/resources/cheatsheets/) - The official cheatsheets maintained by RStudio. These are 1-2 page printouts covering the vital functions of individual libraries
+- [RStudio Official Cheatsheets](https://posit.co/resources/cheatsheets/) - The official cheatsheets maintained by RStudio. These are 1-2 page printouts covering the vital functions of individual libraries
 - [R Color Palette Cheatsheet](https://www.nceas.ucsb.edu/sites/default/files/2020-04/colorPaletteCheatsheet.pdf) - Useful printout covering the colors available in base R
 
 ##### Specific Libraries
 
-- [Unit Testing in R](https://github.com/SchlossLab/intro-testing-r) - Brief overview of unit testing in R using the `testthat` library
+- [:exclamation: renv Overview](https://rstudio.github.io/renv/articles/renv.html) - A short vignette on how to use `renv`, R's local dependency management system
+- [Unit Testing in R](https://stirlingcodingclub.github.io/code_testing/testing_notes.html) - Brief overview of unit testing in R using the `testthat` library
 - [Programming with dplyr](https://cran.r-project.org/web/packages/dplyr/vignettes/programming.html) - A quick rundown on how to write functions using the `dplyr` library
 - [Using LightGBM in R](https://lightgbm.readthedocs.io/en/latest/R/index.html) - How to use the LightGBM boosted tree framework in R
-- [:exclamation: renv Overview](https://rstudio.github.io/renv/articles/renv.html) - A short vignette on how to use `renv`, R's local dependency management system
 - [Parallel Parameter Tuning in Tidymodels](https://tune.tidymodels.org/articles/extras/optimizations.html#parallel-processing)
 
 ##### Shiny
@@ -152,7 +147,7 @@ Useful materials that give an overview of Cook County's property tax system and 
 
 ## Spatial Data
 
-- [:star: R-Spatial Spatial Data Science Book](https://www.r-spatial.org/book) - Extremely thorough, brand-new book on spatial data in R. Also covers general GIS concepts like reference systems, geometry types, etc.
+- [:exclamation: R-Spatial Spatial Data Science Book](https://www.r-spatial.org/book) - Extremely thorough, brand-new book on spatial data in R. Also covers general GIS concepts like reference systems, geometry types, etc.
 - [:star: CSDS Spatial Data Tutorials](https://spatialanalysis.github.io/tutorials/) - List of tutorials for manipulating spatial data in R, created by UChicago's Center for Spatial Data Science
 - [Simple Features for R](https://r-spatial.github.io/sf/articles/sf1.html) - Long vignette on R's `sf` library, its design, and how to use it
 - [Geofabrik](https://download.geofabrik.de/) - Data extracts from the entire OpenStreetMap (OSM) database. Useful for calculating distances

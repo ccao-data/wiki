@@ -4,7 +4,7 @@ The Data Department utilizes AWS for data storage (S3), data cleaning (Glue), an
 
 ## S3
 
-1. Install and setup the [AWS CLI and aws-mfa](How-To/Setup-the-AWS-Command-Line-Interface-and-Multi-factor-Authentication)
+1. Install and setup the [AWS CLI and aws-mfa](/How-To/Setup-the-AWS-Command-Line-Interface-and-Multi-factor-Authentication.md)
 2. Authenticate with `aws-mfa` via the command line
 3. That's it, calls to S3 should work automatically
     - You can use the `aws.s3` library in R or `boto3` in Python to upload, download, and manipulate S3 objects
@@ -48,11 +48,16 @@ s3 = boto3.client(
 
 ## Athena
 
-### R (Small Queries)
+### R
 
-You can use the `noctua` R package to pull small amounts of data from Athena. This package uses the `paws` R package to directly grab query results, but it can be significantly slower and more memory-intensive than the JDBC connector. The benefit of `noctua` is that is can cache query results for faster reload of the same data. See [here](https://dyfanjones.github.io/noctua/articles/aws_athena_query_caching.html) for more details.
+You can use the `noctua` R package to pull data from Athena. `noctua` has two useful options for speeding up queries: [caching](https://dyfanjones.github.io/noctua/articles/aws_athena_query_caching.html) and [unload](https://dyfanjones.github.io/noctua/articles/aws_athena_unload.html).
 
-1. Install and setup the [AWS CLI and aws-mfa](How-To/Setup-the-AWS-Command-Line-Interface-and-Multi‐factor-Authentication)
+- Caching allows you to re-use locally-stored query results rather than constantly re-pulling from AWS. It is useful for situations like rendering a Quarto document, where you need to re-run the whole file but may not want to re-pull data.
+- The `unload = TRUE` option uses a different method of storing and transferring query results. It tends to be a bit faster on our hardware, and thus we recommend using it by default. NOTE: The `unload` option only works correctly on `noctua>=2.6.3`.
+
+To setup and use `noctua` in an R project:
+
+1. Install and setup the [AWS CLI and aws-mfa](/How-To/Setup-the-AWS-Command-Line-Interface-and-Multi‐factor-Authentication.md)
 2. Authenticate with `aws-mfa` via the command line
 3. In your root-level `.Renviron` file, add the environmental variables below. Message @SweatyHandshake or @dfsnow for the name of the Athena results bucket. Save the file and restart your R session
     ```
@@ -66,8 +71,8 @@ You can use the `noctua` R package to pull small amounts of data from Athena. Th
     library(DBI)
     library(noctua)
 
-    # Optionally enable query caching
-    noctua_options(cache_size = 10)
+    # Optionally enable query caching and unload
+    noctua_options(cache_size = 10, unload = TRUE)
 
     # Establish connection
     AWS_ATHENA_CONN_NOCTUA <- dbConnect(noctua::athena())
@@ -79,51 +84,42 @@ You can use the `noctua` R package to pull small amounts of data from Athena. Th
     )
     ```
 
-### R (Large Queries)
+### Python
 
-Athena queries that pull a large amount of data are best handled by Amazon's JDBC driver.
+Using python, the `pyathena` package is an excellent option for ingesting data from AWS Athena.
 
-1. Install and setup the [AWS CLI and aws-mfa](How-To/Setup-the-AWS-Command-Line-Interface-and-Multi‐factor-Authentication)
+1. Install and setup the [AWS CLI and aws-mfa](/How-To/Setup-the-AWS-Command-Line-Interface-and-Multi‐factor-Authentication.md)
 2. Authenticate with `aws-mfa` via the command line
-3. Install the [JDBC Driver with AWS SDK](https://docs.aws.amazon.com/athena/latest/ug/connect-with-jdbc.html) - move the downloaded `.jar` file to `C:\Users\$USER\Documents\drivers` on Windows and `~/drivers` on Linux or macOS
-4. In your root-level `.Renviron` file, add the environmental variables below. Message @SweatyHandshake or @dfsnow for the name of the Athena results bucket. Save the file and restart your R session
+3. Install the `pyathena` package into your python environment using `pip install PyAthena`
+4. Add the following environment variables to your environment
+    - Every time we ingest data from Athena, the data has to be created as a file and stored somewhere before it arrives in our coding environment. The `$ATHENA_RESULTS_BUCKET` is our designated bucket for these intermediate files, which in this example is meant to be replaced with our actual bucket name.
     ```
+    AWS_ATHENA_S3_STAGING_DIR=$ATHENA_RESULTS_BUCKET
     AWS_REGION=us-east-1
-    AWS_ATHENA_S3_STAGING_DIR=$RESULTS_BUCKET
-    AWS_CREDENTIALS_PROVIDER_CLASS=com.simba.athena.amazonaws.auth.DefaultAWSCredentialsProviderChain
-    AWS_ATHENA_JDBC_URL=jdbc:awsathena://athena.us-east-1.amazonaws.com:443
     ```
-5. Run the following code to instantiate your connection and run a test query
+5. Run the following code to instantiate your connection and run test query
 
-    ```r
-    # Preallocate java memory (necessary for large queries)
-    options(java.parameters = "-Xmx10g")
-    gc()
-
+    ```python
     # Load necessary libraries
-    library(DBI)
-    library(RJDBC)
+    import os
+    import pandas
+    from pyathena import connect
+    from pyathena.pandas.util import as_pandas
 
-    # Connect to the JDBC driver
-    aws_athena_jdbc_driver <- RJDBC::JDBC(
-      driverClass = "com.simba.athena.jdbc.Driver",
-      classPath = list.files("~/drivers", "^Athena.*jar$", full.names = TRUE),
-      identifier.quote = "'"
+    # Connect to Athena
+    conn = connect(
+        s3_staging_dir=os.getenv("AWS_ATHENA_S3_STAGING_DIR"),
+        region_name=os.getenv("AWS_REGION"),
     )
 
-    # Establish connection
-    AWS_ATHENA_CONN_JDBC <- dbConnect(
-      aws_athena_jdbc_driver,
-      url = Sys.getenv("AWS_ATHENA_JDBC_URL"),
-      aws_credentials_provider_class = Sys.getenv("AWS_CREDENTIALS_PROVIDER_CLASS"),
-      Schema = "Default"
-    )
+    # Define test query
+    SQL_QUERY = "SELECT * from default.vw_pin_sale LIMIT 10;"
 
-    # Test connection
-    dbGetQuery(
-      conn = AWS_ATHENA_CONN_JDBC,
-      "SELECT year, geoid FROM census.acs5 LIMIT 10"
-    )
+    # Execute query and return as pandas df
+    cursor = conn.cursor()
+    cursor.execute(SQL_QUERY)
+
+    df = as_pandas(cursor)
     ```
 
 ### Tableau
@@ -137,3 +133,15 @@ Athena queries that pull a large amount of data are best handled by Amazon's JDB
     ```
 3. Open Tableau and on the `Connect` sidebar under `To a Server`, navigate to `Amazon Athena`.
 4. Message a [core team](https://github.com/orgs/ccao-data/teams/core-team) member for the necessary server info and credentials. Tableau will not save the `Secret Access Key` field.
+
+### Troubleshooting
+
+As documented [here](https://github.com/DyfanJones/noctua/issues/96), when making an Athena query, `noctua` tries to keep the S3 results bucket tidy. It does this by trying to delete the Athena query output from S3. If the query initiator doesn't have permission to do this, it returns the following warning:
+
+`Info: (Data scanned: 625.16 GB)  additional arguments ignored in warning()  Warning: AccessDenied (HTTP 403). Access Denied`
+
+For the most part, this error message does not affect the query. However, it can cause operations such as knitting to fail. To remedy this, you disable the deletion behavior using `noctua` caching. Inside of R, use:
+
+ ```
+ noctua_options(cache_size = 10)
+ ```
