@@ -30,8 +30,6 @@ Nearly every decision made at all levels of the organization creates winners and
 
 > Every art and every inquiry, and similarly every action and pursuit, is thought to aim at some good; and for this reason the good has rightly been declared to be that at which all things aim.
 
-We are all trying to do something good, and we need to [assume positive intent](https://en.wikipedia.org/wiki/Wikipedia:Assume_good_faith) when working together. In our work, like in other aspects of our life, we should strive to be [Three Gs](https://www.psychologytoday.com/us/blog/the-passion-paradox/201208/are-you-ggg): Good, Giving, and Game. We are good at what we do, we are generous with our time and attention, and we are open to new ideas, even when they seem strange or uncomfortable.
-
 We are cognizant of power differentials in the workplace, and seek to be fair to those we have authority over. Transforming a public institution involves a significant amount of turmoil for staff. We should seek to minimize the negative impacts of our transformational work on staff. That includes, but is not limited to, ensuring that staff are included in discussions about institutional change, performance expectations are clearly conveyed to staff, staff are given the tools they need in order to execute their duties in a changing environment, and staff are encouraged and rewarded for high performance.
 
 ### Kindness
