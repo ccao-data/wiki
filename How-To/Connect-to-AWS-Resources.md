@@ -89,6 +89,14 @@ To setup and use `noctua` in an R project:
       "SELECT year, geoid FROM census.acs5 LIMIT 10"
     )
     ```
+If the connection to Athena is successful but [your test query returns zero rows](https://github.com/DyfanJones/noctua/pull/215), you may need to install the development version of `noctua`:
+
+```r
+remotes::install_github("dyfanjones/noctua")
+
+# Or via renv:
+renv::install("dyfanjones/noctua")
+```
 
 ### Python
 
