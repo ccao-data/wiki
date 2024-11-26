@@ -91,7 +91,7 @@ To setup and use `noctua` in an R project:
     ```
 If the connection to Athena is successful but [your test query returns zero rows](https://github.com/DyfanJones/noctua/pull/215), you may need to install the development version of `noctua`:
 
-```
+```r
 remotes::install_github("dyfanjones/noctua")
 
 # Or via renv:
