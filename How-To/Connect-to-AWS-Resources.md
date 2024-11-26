@@ -93,6 +93,9 @@ If the connection to Athena is successful but [your test query returns zero rows
 
 ```
 remotes::install_github("dyfanjones/noctua")
+
+# Or via renv:
+renv::install("dyfanjones/noctua")
 ```
 
 ### Python
