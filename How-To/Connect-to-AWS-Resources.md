@@ -64,6 +64,7 @@ To setup and use `noctua` in an R project:
     AWS_REGION=us-east-1
     AWS_ATHENA_S3_STAGING_DIR=$RESULTS_BUCKET
     ```
+    Make sure that `$RESULTS_BUCKET` begins with "s3://"
 4. Run the following code to instantiate your connection and run a test query
 
     ```r
