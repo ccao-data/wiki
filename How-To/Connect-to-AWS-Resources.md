@@ -142,11 +142,11 @@ As with R, enabling [unload](https://laughingman7743.github.io/PyAthena/pandas.h
     df = cursor.as_pandas()
     ```
 
-### Tableau
+### Tableau and Tableau Prep
 
 You will likely need to work with IT admins for permissions to do the following.
 
-1. Install [Tableau Desktop version 2022.1](https://www.tableau.com/support/releases/desktop/2022.1.23) if you plan to publish a file to the CCAO's Tableau Server. The version of Tableau Desktop [cannot be more recent](https://help.tableau.com/current/desktopdeploy/en-us/desktop_deploy_version_compat_top.htm) than the version of Tableau Server.
+1. Install [Tableau Desktop](https://www.tableau.com/support/releases) and [Tableau Prep](https://www.tableau.com/support/releases/prep). Verify with Kyra or Nicole which versions to install. If you plan to publish a file to the CCAO's Tableau Server, the versions of Tableau Desktop and Tableau Prep [cannot be more recent](https://help.tableau.com/current/desktopdeploy/en-us/desktop_deploy_version_compat_top.htm) than the version of Tableau Server.
 2. Install the [JDBC 2.x Driver with AWS SDK](https://docs.aws.amazon.com/athena/latest/ug/jdbc-v2.html). Then move the downloaded .jar file to `C:\Program Files\Tableau\Drivers` on Windows or `~/Library/Tableau/Drivers` on Mac.
 3. Make sure [Java SE Development Kit](https://www.oracle.com/java/technologies/downloads/) is installed.
 4. Create a file called `athena.properties` in `C:\Users\$USER\Documents\My Tableau Repository\Datasources` on Windows or `~/Users/$USER/Documents/My Tableau Repository/Datasources` on Mac with the following lines:
@@ -154,7 +154,8 @@ You will likely need to work with IT admins for permissions to do the following.
     workgroup=read-only-with-scan-limit
     MetadataRetrievalMethod=ProxyAPI
     ```
-3. Open Tableau and on the `Connect` sidebar under `To a Server`, navigate to `Amazon Athena`.
+    Add the same file to `C:\Users\$USER\Documents\My Tableau Prep Repository\Datasources` on Windows or `~/Users/$USER/Documents/My Tableau Prep Repository/Datasources` on Mac.
+3. Open Tableau and on the `Connect` sidebar under `To a Server`, navigate to `Amazon Athena`. On Tableau Prep, select the `+` next to `Connections` and navigate to `Amazon Athena`.
 4. Message a [core team](https://github.com/orgs/ccao-data/teams/core-team) member for the necessary server info and credentials. Tableau will not save the `Secret Access Key` field.
 
 ### Troubleshooting
