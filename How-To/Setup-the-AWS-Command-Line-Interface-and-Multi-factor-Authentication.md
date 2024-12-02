@@ -4,7 +4,7 @@ Our account setup requires multi-factor authentication (MFA) to use most service
 
 ---
   
-1. Install the AWS command line interface using [the provided executable](https://aws.amazon.com/cli/) or `pip install awscli`, which allows users to store credentials, query Athena, move S3 objects, etc. The CLI on Windows can be accessed via PowerShell. On Linux or macOS it can be accessed via a standard terminal.
+1. Install the AWS command line interface using [the provided executable](https://aws.amazon.com/cli/) or `pip install awscli`, which allows users to store credentials, query Athena, move S3 objects, etc. The CLI on Windows can be accessed via PowerShell. On Linux or macOS it can be accessed via a standard terminal. If your intention is to connect to AWS via the Data team server, ensure that you are connected and logged in to the server first. 
 2. Log into the [AWS Console](https://ccao-data.signin.aws.amazon.com/console) and under your account select "My Security Credentials". Enable MFA, then create an access key. You'll need both the `Access Key ID`, the `Secret Access Key`, and the name of the `Assigned MFA Device`. Do not include `(Virtual)` when copying the name of the MFA device.
 3. In the command line run:
    - `aws configure` and enter your `Access Key ID`, `Secret Access Key`, region (`us-east-1`), and `json` for output.
