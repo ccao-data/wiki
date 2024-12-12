@@ -34,13 +34,13 @@ The Data Department creates and maintains the following open data sets.
 
 ### [Appeals](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Appeals/y282-6ig3)
 
-| Time Frame   | Property Classes | Unique By | Row    | Updated |
-| :---:        | :---:            | :---:     | :---:  | :---:   |
-| 1999-Present | All              | PIN, Year | Parcel | Monthly |
+| Time Frame   | Property Classes | Unique By          | Row    | Updated |
+| :---:        | :---:            | :---:              | :---:  | :---:   |
+| 1999-Present | All              | PIN, Year, Case No | Parcel | Monthly |
 
 **Notes:** Refreshed monthly, data is updated as towns are mailed/certified by Valuations.
 
-**Use cases:** Alone, can be used to investigate appeal trends. Can be combined with geographies to see how AV shifts around the county between mailing and assessor certified stages.
+**Use cases:** Alone, can be used to investigate appeal trends. Can be combined with geographies to see how AV shifts around the county and between classes between mailing and assessor certified stages.
 
 **Code:** [default.vw_pin_appeal.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_appeal.sql)
 
@@ -130,9 +130,9 @@ The Data Department creates and maintains the following open data sets.
 
 ### [Permits](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Permits/buqh-tauj/)
 
-| Time Frame   | Property Classes | Unique By | Row    | Updated |
-| :---:        | :---:            | :---:     | :---:  | :---:   |
-| 2018-Present | All              | PIN, Date Issued | Permit | Monthly |
+| Time Frame   | Property Classes | Unique By          | Row    | Updated |
+| :---:        | :---:            | :---:              | :---:  | :---:   |
+| 2018-Present | All              | PIN, Permit Number | Permit | Monthly |
 
 **Notes**: Refreshed monthly, data is permit rather than PIN-level.
 
