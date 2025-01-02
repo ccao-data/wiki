@@ -116,11 +116,23 @@ The Data Department creates and maintains the following open data sets.
 
 **Code:** [default.vw_pin_sale.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_sale.sql)
 
-### [Parcel Universe](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Universe/nj4t-kc8j)
+### [Parcel Universe (Current Year)](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Universe-Current-Year-/pabr-t5kh)
 
 | Time Frame   | Property Classes | Unique By | Row    | Updated |
 | :---:        | :---:            | :---:     | :---:  | :---:   |
-| 1999-Present | All              | PIN, Year | Parcel | Monthly |
+| Current Year | All              | PIN, Year | Parcel | Monthly |
+
+**Notes**: Contains a cornucopia of locational and spatial data for all parcels in Cook County.
+
+**Use cases:** Joining parcel-level data to this dataset allows analysis and reporting across a number of different political, tax, Census, and other boundaries.
+
+**Code:** [open_data.vw_parcel_universe.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/open_data.vw_parcel_universe.sql)
+
+### [Parcel Universe (Historic)](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Universe/nj4t-kc8j)
+
+| Time Frame   | Property Classes | Unique By | Row    | Updated  |
+| :---:        | :---:            | :---:     | :---:  | :---:    |
+| 1999-Present | All              | PIN, Year | Parcel | Annually |
 
 **Notes**: Contains a cornucopia of locational and spatial data for all parcels in Cook County.
 
