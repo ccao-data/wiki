@@ -165,10 +165,6 @@ as being exempt, mixed use, or CDU codes. Primarily of interest to those investi
 
 **Code:** [default.vw_pin_permit.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_permit.sql)
 
-https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_permit.sql
-https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_universe.sql
-https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_universe.sql
-
 ### [Property Tax-Exempt Parcels](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Property-Tax-Exempt-Parcels/vgzx-68gb)
 
 | Time Frame   | Property Classes | Unique By   | Row    | Updated |
