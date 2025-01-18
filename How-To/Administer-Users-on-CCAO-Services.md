@@ -51,8 +51,9 @@ To add new users to the Data server (and these applications), complete the follo
        ```
        [Slice]
        Slice=user.slice
-       MemoryHigh=24G
-       CPUWeight=20
+       MemoryHigh=48G
+       MemoryMax=64G
+       CPUQuota=1000%
        ```
     3. Apply changes:
        ```
