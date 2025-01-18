@@ -50,7 +50,6 @@ To add new users to the Data server (and these applications), complete the follo
     2. Use vim to configure resource controls, for example:
        ```
        [Slice]
-       Slice=user.slice
        MemoryHigh=48G
        MemoryMax=64G
        CPUQuota=1000%
@@ -59,6 +58,8 @@ To add new users to the Data server (and these applications), complete the follo
        ```
        systemctl daemon-reload
        ```
+    4. (Optional) Alternatively, you can set a default limit per user using [drop-in search truncation](https://serverfault.com/a/1036361)
+   
 
 To delete users on the Data server, complete the following steps:
 
