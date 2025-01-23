@@ -42,13 +42,13 @@ The Data Department creates and maintains the following open data sets.
 
 **Use cases:** Joining parcel-level data to this dataset allows analysis and reporting across a number of different political, tax, Census, and other boundaries.
 
-**Code:** [default-vw_pin_universe.sql](https://github.com/ccao-data/data-architecture/blob/master/aws-athena/views/default-vw_pin_universe.sql)
+**Code:** [default.vw_pin_universe.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_universe.sql)
 
 ### [Single and Multi-Family Improvement Characteristics](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Single-and-Multi-Family-Improvement-Chara/x54s-btds)
 
 | Time Frame   | Property Classes | Unique By | Row                         | Updated   |
 | :---:        | :---:            | :---:     | :---:                       | :---:     |
-| 1999-Present | [Regression-class](https://github.com/ccao-data/ccao_res_avm#data-used)         | PIN, Card, Year | Residential Improvement | Bi-Weekly |
+| 1999-Present | [Regression-class](https://github.com/ccao-data/model-res-avm#data-used) | PIN, Card, Year | Residential Improvement | Bi-Weekly |
 
 **Notes**: Residential PINs with multiple improvements (living structures) will have one card for _each_ improvement.
 
@@ -58,7 +58,7 @@ The Data Department creates and maintains the following open data sets.
 - Joined to assessments for analysis of assessments across geographies and housing types
 - Joined to sales for the construction of hedonic home value estimates
 
-**Code:** [default-vw_card_res_char.sql](https://github.com/ccao-data/data-architecture/blob/master/aws-athena/views/default-vw_card_res_char.sql)
+**Code:** [default.vw_card_res_char.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_card_res_char.sql)
 
 ### [Residential Condominium Unit Characteristics](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Residential-Condominium-Unit-Characteri/3r7i-mrz4)
 
@@ -74,7 +74,7 @@ The Data Department creates and maintains the following open data sets.
 - Joined to assessments for analysis of assessments across geographies and housing types
 - Joined to sales for the construction of hedonic home value estimates
 
-**Code:** [default-vw_pin_condo_char.sql](https://github.com/ccao-data/data-architecture/blob/master/aws-athena/views/default-vw_pin_condo_char.sql)
+**Code:** [default.vw_pin_condo_char.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_condo_char.sql)
 
 ### [Parcel Sales](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Sales/wvhk-k5uv)
 
@@ -86,7 +86,7 @@ The Data Department creates and maintains the following open data sets.
 
 **Use cases:** Alone, sales data can be used to characterize real estate markets. Sales paired with characteristics can be used to find comparable properties or as an input to an automated modeling application. Sales paired with assessments can be used to calculate sales ratio statistics. Outliers can be easily removed using filters constructed from class, township, and year variables.
 
-**Code:** [default-vw_pin_sale.sql](https://github.com/ccao-data/data-architecture/blob/master/aws-athena/views/default-vw_pin_sale.sql)
+**Code:** [default.vw_pin_sale.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_sale.sql)
 
 ### [Assessed Values](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Assessed-Values/uzyt-m557)
 
@@ -98,7 +98,7 @@ The Data Department creates and maintains the following open data sets.
 
 **Use cases:** Alone, can characterize assessments in a given area. Can be combined with characteristic data to make more nuanced generalizations about assessments. Can be combined with sales data to conduct ratio studies.
 
-**Code:** [default-vw_pin_history.sql](https://github.com/ccao-data/data-architecture/blob/master/aws-athena/views/default-vw_pin_history.sql)
+**Code:** [default.vw_pin_history.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_history.sql)
 
 ### [Appeals](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Appeals/y282-6ig3)
 
@@ -110,7 +110,7 @@ The Data Department creates and maintains the following open data sets.
 
 **Use cases:** Alone, can be used to investigate appeal trends. Can be combined with geographies to see how AV shifts around the county between mailing and assessor certified stages.
 
-**Code:** [default-vw_pin_appeal.sql](https://github.com/ccao-data/data-architecture/blob/master/aws-athena/views/default-vw_pin_appeal.sql)
+**Code:** [default.vw_pin_appeal.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_appeal.sql)
 
 ### [Parcel Addresses](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Addresses/3723-97qp)
 
@@ -122,7 +122,7 @@ The Data Department creates and maintains the following open data sets.
 
 **Use cases:** Can be used for geocoding or joining address-level data to other datasets.
 
-**Code:** [default-vw_pin_address.sql](https://github.com/ccao-data/data-architecture/blob/master/aws-athena/views/default-vw_pin_address.sql)
+**Code:** [default.vw_pin_address.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_address.sql)
 
 ### [Parcel Proximity](https://datacatalog.cookcountyil.gov/dataset/Assessor-Parcel-Proximity/ydue-e5u3)
 
@@ -134,7 +134,7 @@ The Data Department creates and maintains the following open data sets.
 
 **Use cases:** Can be used to isolate parcels by distance to specific spatial features.
 
-**Code:** [proximity-vw_pin10_proximity.sql](https://github.com/ccao-data/data-architecture/blob/master/aws-athena/views/proximity-vw_pin10_proximity.sql)
+**Code:** [proximity.vw_pin10_proximity.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/proximity/proximity.vw_pin10_proximity.sql)
 
 ### [Property Tax-Exempt Parcels](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Property-Tax-Exempt-Parcels/vgzx-68gb)
 
@@ -146,7 +146,7 @@ The Data Department creates and maintains the following open data sets.
 
 **Use cases:** Can be used to study parcels that are exempted from paying property taxes.
 
-**Code:** [default-vw_pin_exempt.sql](https://github.com/ccao-data/data-architecture/blob/master/aws-athena/views/default-vw_pin_exempt.sql)
+**Code:** [default.vw_pin_exempt.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_exempt.sql)
 
 ### [Neighborhood Boundaries](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Neighborhood-Boundaries/pcdw-pxtg)
 
@@ -158,4 +158,4 @@ The Data Department creates and maintains the following open data sets.
 
 **Use cases:** Thematic mapping and location references.
 
-**Code:** [spatial-ccao-neighborhood.R](https://github.com/ccao-data/data-architecture/blob/master/aws-s3/scripts-ccao-data-warehouse-us-east-1/spatial-ccao-neighborhood.R)
+**Code:** [spatial-ccao-neighborhood.R](https://github.com/ccao-data/data-architecture/blob/master/etl/scripts-ccao-data-warehouse-us-east-1/spatial/spatial-ccao-neighborhood.R)
