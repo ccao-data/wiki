@@ -23,7 +23,7 @@ You can connect to the mirror database through R using the RJDBC package. To do 
 1. Install the `RJDBC` package by running `install.packages("RJDBC")` in R.
 2. Download and store a local copy of the [Oracle Database JDBC Driver](https://download.oracle.com/otn-pub/otn_software/jdbc/211/ojdbc8-full.tar.gz). You will need to provide the path to this driver when connecting through R.
 3. You may also need to install the [Java SE Development Kit](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html) (try it without this first).
-4. Create a environmental variable in your global `.Renviron` file with the following syntax: `DB_CONFIG_IASWORLD=jdbc:oracle:thin:<user_name>/<password>@<db_url>:<port>/<service>`, replacing variables where applicable. Ask @sweatyhandshake or @dfsnow for the correct `db_url`, port number, and service.
+4. Create a environmental variable in your global `.Renviron` file with the following syntax: `DB_CONFIG_IASWORLD=jdbc:oracle:thin:<user_name>/<password>@<db_url>:<port>/<service>`, replacing variables where applicable. Ask @sweatyhandshake or @jeancochrane for the correct `db_url`, port number, and service.
 5. Create an additional environmental variable in your global `.Renviron` file with the location of the driver from step 2. The syntax should look something like: `DB_CONFIG_IASWORLD_DRV=C:/path/to/your/driver/ojdbc8.jar`.
 6. Restart R and run the following code:
 
@@ -61,7 +61,7 @@ You can also connect to the mirror database through R using ODBC. To do so, comp
 5. Unzip the ODBC package within the unzipped `instantclient_XX_XX` folder.
 6. Execute `odbc_install.exe`.
 7. Open `ODBC Data Source Administator` in windows and navigate to the `Drivers` tab to encure the `Orace in instantcline_XX_XX` ODBC driver installed.
-8. Create a environmental variable in your global `.Renviron` file with the following syntax: `DB_CONFIG_IASWORLD_ODBC=DRIVER={Oracle in instantclient_19_10};DBQ=<db_url>:<port>/<service>;UID=<user_name>;PWD=<password>;`, replacing variables where applicable. Ask @sweatyhandshake or @dfsnow for the correct `db_url`, port number, and service.
+8. Create a environmental variable in your global `.Renviron` file with the following syntax: `DB_CONFIG_IASWORLD_ODBC=DRIVER={Oracle in instantclient_19_10};DBQ=<db_url>:<port>/<service>;UID=<user_name>;PWD=<password>;`, replacing variables where applicable. Ask @sweatyhandshake or @jeancochrane for the correct `db_url`, port number, and service.
 7. Restart R and run the following code:
 
 ```r
