@@ -31,7 +31,7 @@ To add new users to the Data server (and these applications), complete the follo
     ```bash
     ssh $YOUR_USER@datascience.cookcountyassessor.com
     ```
-2. Create a new user. `$THEIR_USER` should be the same username as their Windows login (e.g. `dfsnow`). NOTE: You must be a super-user to create a new user. If you are not a super-user, ask Mike F. or Dan (@dfsnow) to add you to the sudoers group.
+2. Create a new user. `$THEIR_USER` should be the same username as their Windows login (e.g. `nljardi`). NOTE: You must be a super-user to create a new user. If you are not a super-user, ask Mike F. or Jean (@jeancochrane) to add you to the sudoers group.
     ```bash
     sudo adduser $THEIR_USER
     ```
