@@ -59,7 +59,7 @@ To setup and use `noctua` in an R project:
 
 1. Install and setup the [AWS CLI and aws-mfa](/How-To/Setup-the-AWS-Command-Line-Interface-and-Multi‐factor-Authentication.md)
 2. Authenticate with `aws-mfa` via the command line
-3. In your root-level `.Renviron` file, add the environmental variables below. Message @SweatyHandshake or @jeancochrane for the name of the Athena results bucket. Save the file and restart your R session
+3. In your root-level `.Renviron` file, add the environmental variables below. Message @wrridgeway or @jeancochrane for the name of the Athena results bucket. Save the file and restart your R session
     ```
     AWS_REGION=us-east-1
     AWS_ATHENA_S3_STAGING_DIR=$RESULTS_BUCKET
