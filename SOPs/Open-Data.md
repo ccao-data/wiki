@@ -139,7 +139,7 @@ as being exempt, mixed use, or CDU codes. Primarily of interest to those investi
 
 **Use cases:** Joining parcel-level data to this dataset allows analysis and reporting across a number of different political, tax, Census, and other boundaries.
 
-**Code:** [open_data.vw_parcel_universe.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/open_data.vw_parcel_universe.sql)
+**Code:** [open_data.vw_parcel_universe_current.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/open_data/open_data.vw_parcel_universe_current.sql)
 
 ### [Parcel Universe (Historic)](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Universe/nj4t-kc8j)
 
@@ -151,7 +151,7 @@ as being exempt, mixed use, or CDU codes. Primarily of interest to those investi
 
 **Use cases:** Joining parcel-level data to this dataset allows analysis and reporting across a number of different political, tax, Census, and other boundaries.
 
-**Code:** [default.vw_pin_universe.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_universe.sql)
+**Code:** [default.vw_pin_universe_historic.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/open_data/open_data.vw_parcel_universe_historic.sql)
 
 ### [Permits](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Permits/buqh-tauj/)
 
