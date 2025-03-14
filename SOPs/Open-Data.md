@@ -181,7 +181,7 @@ as being exempt, mixed use, or CDU codes. Primarily of interest to those investi
 
 | Time frame   | Property Classes | Unique By | Row              | Updated   |
 | :---:        | :---:            | :---:     | :---:            | :---:     |
-| 1999-Present | 299, 399         | PIN, Year | Condominium Unit | Bi-Weekly |
+| 1999-Present | 299, 399         | PIN, Year | Condominium Unit | Monthly |
 
 **Notes:**
 
@@ -197,7 +197,7 @@ as being exempt, mixed use, or CDU codes. Primarily of interest to those investi
 
 | Time Frame   | Property Classes | Unique By | Row                         | Updated   |
 | :---:        | :---:            | :---:     | :---:                       | :---:     |
-| 1999-Present | [Regression-class](https://github.com/ccao-data/ccao_res_avm#data-used)         | PIN, Card, Year | Residential Improvement | Bi-Weekly |
+| 1999-Present | [Regression-class](https://github.com/ccao-data/ccao_res_avm#data-used)         | PIN, Card, Year | Residential Improvement | Monthly |
 
 **Notes**: Residential PINs with multiple improvements (living structures) will have one card for _each_ improvement.
 
