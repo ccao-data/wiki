@@ -59,11 +59,12 @@ To setup and use `noctua` in an R project:
 
 1. Install and setup the [AWS CLI and aws-mfa](/How-To/Setup-the-AWS-Command-Line-Interface-and-Multi‐factor-Authentication.md)
 2. Authenticate with `aws-mfa` via the command line
-3. In your root-level `.Renviron` file, add the environmental variables below. Message @SweatyHandshake or @dfsnow for the name of the Athena results bucket. Save the file and restart your R session
+3. In your root-level `.Renviron` file, add the environmental variables below. Message @wrridgeway or @jeancochrane for the name of the Athena results bucket. Save the file and restart your R session
     ```
     AWS_REGION=us-east-1
     AWS_ATHENA_S3_STAGING_DIR=$RESULTS_BUCKET
     ```
+    Make sure that `$RESULTS_BUCKET` begins with `s3://`.
 4. Run the following code to instantiate your connection and run a test query
 
     ```r
@@ -75,7 +76,13 @@ To setup and use `noctua` in an R project:
     noctua_options(cache_size = 10, unload = TRUE)
 
     # Establish connection
-    AWS_ATHENA_CONN_NOCTUA <- dbConnect(noctua::athena())
+    AWS_ATHENA_CONN_NOCTUA <- dbConnect(
+      noctua::athena(),
+      # Disable the Connections tab entry for this database. Always use this if
+      # you don't want to browser the tables in the Connections tab, since it
+      # speeds up instantiating the connection significantly
+      rstudio_conn_tab = FALSE
+    )
 
     # Test the connection
     dbGetQuery(
@@ -83,10 +90,20 @@ To setup and use `noctua` in an R project:
       "SELECT year, geoid FROM census.acs5 LIMIT 10"
     )
     ```
+If the connection to Athena is successful but [your test query returns zero rows](https://github.com/DyfanJones/noctua/pull/215), you may need to install the development version of `noctua`:
+
+```r
+remotes::install_github("dyfanjones/noctua")
+
+# Or via renv:
+renv::install("dyfanjones/noctua")
+```
 
 ### Python
 
 Using python, the `pyathena` package is an excellent option for ingesting data from AWS Athena.
+
+As with R, enabling [unload](https://laughingman7743.github.io/PyAthena/pandas.html#pandascursor) via `cursor(unload=TRUE)` uses a different method of storing and transferring query results. It tends to be a bit faster on our hardware, and thus we recommend using it by default.
 
 1. Install and setup the [AWS CLI and aws-mfa](/How-To/Setup-the-AWS-Command-Line-Interface-and-Multi‐factor-Authentication.md)
 2. Authenticate with `aws-mfa` via the command line
@@ -103,36 +120,44 @@ Using python, the `pyathena` package is an excellent option for ingesting data f
     # Load necessary libraries
     import os
     import pandas
+    import pyarrow
     from pyathena import connect
     from pyathena.pandas.util import as_pandas
+    from pyathena.pandas.cursor import PandasCursor
 
     # Connect to Athena
-    conn = connect(
-        s3_staging_dir=os.getenv("AWS_ATHENA_S3_STAGING_DIR"),
+    cursor = connect(
+        # We add '+ "/"' to the end of the line below because enabling unload
+        # requires that the staging directory end with a slash
+        s3_staging_dir=os.getenv("AWS_ATHENA_S3_STAGING_DIR") + "/",
         region_name=os.getenv("AWS_REGION"),
-    )
+        cursor_class=PandasCursor,
+    ).cursor(unload=True)
 
-    # Define test query
-    SQL_QUERY = "SELECT * from default.vw_pin_sale LIMIT 10;"
+    # Define test query. Note that the query CANNOT end with a semi-colon
+    SQL_QUERY = "SELECT * from default.vw_pin_sale LIMIT 10"
 
     # Execute query and return as pandas df
-    cursor = conn.cursor()
     cursor.execute(SQL_QUERY)
 
-    df = as_pandas(cursor)
+    df = cursor.as_pandas()
     ```
 
-### Tableau
+### Tableau and Tableau Prep
 
-1. Install the [JDBC Driver with AWS SDK](https://docs.aws.amazon.com/athena/latest/ug/connect-with-jdbc.html) - move the downloaded .jar file to `C:\Program Files\Tableau\Drivers` on Windows or `~/Library/Tableau/Drivers` on Mac.
-2. Make sure [Java SE Development Kit](https://www.oracle.com/java/technologies/downloads/) is installed.
-3. Create a file called `athena.properties` in `C:\Users\$USER\Documents\My Tableau Repository\Datasources` on Windows or `~/Users/$USER/Documents/My Tableau Repository/Datasources` on Mac with the following lines:
+You will likely need to work with IT admins for permissions to do the following.
+
+1. Install [Tableau Desktop](https://www.tableau.com/support/releases) and [Tableau Prep](https://www.tableau.com/support/releases/prep). Verify with a [core team](https://github.com/orgs/ccao-data/teams/core-team) member which versions to install. If you plan to publish a file to the CCAO's Tableau Server, the versions of Tableau Desktop and Tableau Prep [cannot be more recent](https://help.tableau.com/current/desktopdeploy/en-us/desktop_deploy_version_compat_top.htm) than the version of Tableau Server.
+2. Install the [JDBC 2.x Driver with AWS SDK](https://docs.aws.amazon.com/athena/latest/ug/jdbc-v2.html). Then move the downloaded .jar file to `C:\Program Files\Tableau\Drivers` on Windows or `~/Library/Tableau/Drivers` on Mac.
+3. Make sure [Java SE Development Kit](https://www.oracle.com/java/technologies/downloads/) is installed.
+4. Create a file called `athena.properties` in `C:\Users\$USER\Documents\My Tableau Repository\Datasources` on Windows or `~/Users/$USER/Documents/My Tableau Repository/Datasources` on Mac with the following lines:
     ```
     workgroup=read-only-with-scan-limit
     MetadataRetrievalMethod=ProxyAPI
     ```
-3. Open Tableau and on the `Connect` sidebar under `To a Server`, navigate to `Amazon Athena`.
-4. Message a [core team](https://github.com/orgs/ccao-data/teams/core-team) member for the necessary server info and credentials. Tableau will not save the `Secret Access Key` field.
+    Add the same file to `C:\Users\$USER\Documents\My Tableau Prep Repository\Datasources` on Windows or `~/Users/$USER/Documents/My Tableau Prep Repository/Datasources` on Mac.
+5. Open Tableau and on the `Connect` sidebar under `To a Server`, navigate to `Amazon Athena`. On Tableau Prep, select the `+` next to `Connections` and navigate to `Amazon Athena`.
+6. Message a [core team](https://github.com/orgs/ccao-data/teams/core-team) member for the necessary server info and credentials. Tableau will not save the `Secret Access Key` field.
 
 ### Troubleshooting
 

@@ -34,7 +34,7 @@ The following is a list of tools and services that live on the server as of summ
 | ---- | ----------- | ---- | ------ |
 | `/home/<username>` | Home directories for each member of the data team | | |
 | `/home/shiny-server/services` | Home directory for various apps that run on the server | | |
-| `/home/shiny-server/services/service-sqoop-iasworld` | Service that extracts data from the iasWorld platform and loads it into AWS S3 | [`service-sqoop-iasworld`](https://github.com/ccao-data/service-sqoop-iasworld) | cron |
+| `/home/shiny-server/services/service-spark-iasworld` | Service that extracts data from the iasWorld platform and loads it into AWS S3 | [`service-spark-iasworld`](https://github.com/ccao-data/service-spark-iasworld) | cron |
 | `/home/shiny-server/services/service-socrata-ingress-agent` | Service that extracts data from AWS Athena and loads it into the Socrata data portal | [`service-socrata-ingress-agent`](https://github.com/ccao-data/service-socrata-ingress-agent) | systemd |
 | `/opt/aws/amazon-cloudwatch-agent/etc` | Service to grab local Socrata logs and move them to AWS CloudWatch | [`service-socrata-ingress-agent`](https://github.com/ccao-data/service-socrata-ingress-agent) | systemd |
 | `/home/shiny-server/services/service-watchtower` | Service that keeps Docker images up to date on the server | [`service-watchtower`](https://github.com/ccao-data/service-watchtower) | docker |

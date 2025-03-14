@@ -31,7 +31,7 @@ To add new users to the Data server (and these applications), complete the follo
     ```bash
     ssh $YOUR_USER@datascience.cookcountyassessor.com
     ```
-2. Create a new user. `$THEIR_USER` should be the same username as their Windows login (e.g. `dfsnow`). NOTE: You must be a super-user to create a new user. If you are not a super-user, ask Mike F. or Dan (@dfsnow) to add you to the sudoers group.
+2. Create a new user. `$THEIR_USER` should be the same username as their Windows login (e.g. `nljardi`). NOTE: You must be a super-user to create a new user. If you are not a super-user, ask Mike F. or Jean (@jeancochrane) to add you to the sudoers group.
     ```bash
     sudo adduser $THEIR_USER
     ```
@@ -50,21 +50,23 @@ To add new users to the Data server (and these applications), complete the follo
     2. Use vim to configure resource controls, for example:
        ```
        [Slice]
-       Slice=user.slice
-       MemoryHigh=24G
-       CPUWeight=20
+       MemoryHigh=48G
+       MemoryMax=64G
+       CPUQuota=1000%
        ```
     3. Apply changes:
        ```
        systemctl daemon-reload
        ```
+    4. (Optional) Alternatively, you can set a default limit per user using [drop-in search truncation](https://serverfault.com/a/1036361)
+   
 
 To delete users on the Data server, complete the following steps:
 
 1. SSH to the Data server, same as above.
 2. If the user has significant/valuable work in their home directory, first backup the directory. Backups can be stored in the `CCAODATA` directory on the `O:` shared drive.
     ```bash
-    sudo tar -cfz $THEIR_USER.tar.gz /home/$THEIR_USER
+    sudo tar -czvf $THEIR_USER.tar.gz /home/$THEIR_USER
     ```
 3. Delete the user account. This will remove their user and group but *not* their home directory.
     ```bash
@@ -79,7 +81,7 @@ To delete users on the Data server, complete the following steps:
 
 The Data Department stores most of its active data on AWS. Reading this data requires an authenticated AWS user account. Most users, such as interns and analysts, only require read access. To add a read-only user, complete the following steps:
 
-1. Login to the [CCAO's AWS Console](https://ccao-ds.signin.aws.amazon.com/console) using an account with an administrator role.
+1. Login to the [CCAO's AWS Console](https://ccao-data.signin.aws.amazon.com/console) using an account with an administrator role.
 2. Visit the **IAM** service, click **Users** in the sidebar, then click **Add users** in the top-right corner.
 3. Create a user following the prompts:
     * The user name should be a Cook County email address.
