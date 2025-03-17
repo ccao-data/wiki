@@ -106,11 +106,11 @@ The Data Department creates and maintains the following open data sets.
 
 ### [Parcel Sales](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Sales/wvhk-k5uv)
 
-| Time Frame   | Property Classes | Unique By        | Row         | Updated |
-| :---:        | :---:            | :---:            | :---:       | :---:   |
-| 1999-Present | All              | Sale Deed Number | Parcel Sale | Monthly |
+| Time Frame   | Property Classes | Unique By            | Row         | Updated |
+| :---:        | :---:            | :---:                | :---:       | :---:   |
+| 1999-Present | All              | Sale Document Number | Parcel Sale | Monthly |
 
-**Notes:** Refreshed monthly, though data may only change roughly quarterly depending on how often new sales are added to iasWorld.
+**Notes:** Refreshed monthly, though data may only change roughly quarterly depending on how often new sales are added to iasWorld. Sales are only unique by Sale Document Number when `is_multisale = FALSE`.
 
 **Use cases:** Alone, sales data can be used to characterize real estate markets. Sales paired with characteristics can be used to find comparable properties or as an input to an automated modeling application. Sales paired with assessments can be used to calculate sales ratio statistics. Outliers can be easily removed using filters constructed from class, township, and year variables.
 
