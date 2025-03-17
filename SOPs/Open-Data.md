@@ -184,7 +184,7 @@ The Data Department creates and maintains the following open data sets.
 
 | Time Frame   | Property Classes | Unique By | Row                         | Updated   |
 | :---:        | :---:            | :---:     | :---:                       | :---:     |
-| 1999-Present | [Regression-class](https://github.com/ccao-data/ccao_res_avm#data-used)         | PIN, Card, Year | Residential Improvement | Monthly |
+| 1999-Present | [Regression-class](https://github.com/ccao-data/model-res-avm?tab=readme-ov-file#data-used)         | PIN, Card, Year | Residential Improvement | Monthly |
 
 **Notes**: Residential PINs with multiple improvements (living structures) will have one card for _each_ improvement.
 
