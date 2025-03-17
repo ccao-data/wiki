@@ -122,7 +122,7 @@ The Data Department creates and maintains the following open data sets.
 | :---:        | :---:            | :---:     | :---:  | :---:   |
 | Current Year | All              | PIN, Year | Parcel | Monthly |
 
-**Notes**: Contains a cornucopia of locational and spatial data for all parcels in Cook County.
+**Notes**: Contains a cornucopia of locational and spatial data for all parcels in Cook County, for the current year only (rather than across multiple years).
 
 **Use cases:** Joining parcel-level data to this dataset allows analysis and reporting across a number of different political, tax, Census, and other boundaries.
 
