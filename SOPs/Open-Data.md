@@ -140,7 +140,7 @@ The Data Department creates and maintains the following open data sets.
 
 **Code:** [default.vw_pin_universe_historic.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/open_data/open_data.vw_parcel_universe_historic.sql)
 
-### [Permits](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Permits/buqh-tauj/)
+### [Permits](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Permits/6yjf-dfxs)
 
 | Time Frame   | Property Classes | Unique By          | Row    | Updated |
 | :---:        | :---:            | :---:              | :---:  | :---:   |
