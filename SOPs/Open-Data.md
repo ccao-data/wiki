@@ -116,19 +116,6 @@ The Data Department creates and maintains the following open data sets.
 
 **Code:** [default.vw_pin_sale.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_sale.sql)
 
-### [Parcel Status](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Status/uuu4-fqy8)
-
-| Time Frame   | Property Classes | Unique By | Row    | Updated |
-| :---:        | :---:            | :---:     | :---:  | :---:   |
-| 1999-Present | All              | PIN, Year | Parcel | Monthly |
-
-**Notes:** Collection of various different PIN-level physical and assessment-related statuses collected and documented across the CCAO and Data Department.
-
-**Use cases:** Allows users to quickly find parcels with specific assessment-related statuses such
-as being exempt, mixed use, or CDU codes. Primarily of interest to those investigating single parcels.
-
-**Code:** [default.vw_pin_status.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_status.sql)
-
 ### [Parcel Universe (Current Year)](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Universe-Current-Year-/pabr-t5kh)
 
 | Time Frame   | Property Classes | Unique By | Row    | Updated |
@@ -141,7 +128,7 @@ as being exempt, mixed use, or CDU codes. Primarily of interest to those investi
 
 **Code:** [open_data.vw_parcel_universe_current.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/open_data/open_data.vw_parcel_universe_current.sql)
 
-### [Parcel Universe (Historic)](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Universe/nj4t-kc8j)
+### [Parcel Universe (Historical)](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Universe/nj4t-kc8j)
 
 | Time Frame   | Property Classes | Unique By | Row    | Updated  |
 | :---:        | :---:            | :---:     | :---:  | :---:    |
