@@ -142,9 +142,9 @@ The Data Department creates and maintains the following open data sets.
 
 ### [Permits](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Permits/6yjf-dfxs)
 
-| Time Frame   | Property Classes | Unique By          | Row    | Updated |
-| :---:        | :---:            | :---:              | :---:  | :---:   |
-| 2018-Present | All              | PIN, Permit Number | Permit | Monthly |
+| Time Frame   | Property Classes | Unique By                       | Row                 | Updated |
+| :---:        | :---:            | :---:                           | :---:               | :---:   |
+| 2018-Present | All              | PIN, Permit Number, Date Issued | Permit for a parcel | Monthly |
 
 **Notes**: Refreshed monthly, data is permit rather than PIN-level.
 
