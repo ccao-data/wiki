@@ -146,7 +146,7 @@ The Data Department creates and maintains the following open data sets.
 | :---:        | :---:            | :---:                           | :---:               | :---:   |
 | 2018-Present | All              | PIN, Permit Number, Date Issued | Permit for a parcel | Monthly |
 
-**Notes**: Refreshed monthly, data is permit rather than PIN-level.
+**Notes**: Refreshed monthly, each row describes one parcel's representation in a given permit.
 
 **Use cases:** Permits contain information on how a property is expected to change physically.
 
