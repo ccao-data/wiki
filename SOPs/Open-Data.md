@@ -126,7 +126,7 @@ The Data Department creates and maintains the following open data sets.
 
 **Use cases:** Joining parcel-level data to this dataset allows analysis and reporting across a number of different political, tax, Census, and other boundaries.
 
-**Code:** [open_data.vw_parcel_universe_current.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/open_data/open_data.vw_parcel_universe_current.sql)
+**Code:** [default.vw_pin_universe.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_universe.sql)
 
 ### [Parcel Universe (Historical)](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Universe/nj4t-kc8j)
 
@@ -138,7 +138,7 @@ The Data Department creates and maintains the following open data sets.
 
 **Use cases:** Joining parcel-level data to this dataset allows analysis and reporting across a number of different political, tax, Census, and other boundaries.
 
-**Code:** [default.vw_pin_universe_historical.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/open_data/open_data.vw_parcel_universe_historical.sql)
+**Code:** [default.vw_pin_universe.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_universe.sql)
 
 ### [Permits](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Permits/6yjf-dfxs)
 
