@@ -32,61 +32,17 @@ BoT may have their own clearance requirements such as adding a 'Story' on Socrat
 
 The Data Department creates and maintains the following open data sets.
 
-### [Parcel Universe](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Universe/nj4t-kc8j)
+### [Appeals](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Appeals/y282-6ig3)
 
-| Time Frame   | Property Classes | Unique By | Row    | Updated |
-| :---:        | :---:            | :---:     | :---:  | :---:   |
-| 1999-Present | All              | PIN, Year | Parcel | Monthly |
+| Time Frame   | Property Classes | Unique By          | Row    | Updated |
+| :---:        | :---:            | :---:              | :---:  | :---:   |
+| 1999-Present | All              | PIN, Year, Case No | Parcel | Monthly |
 
-**Notes**: Contains a cornucopia of locational and spatial data for all parcels in Cook County.
+**Notes:** Refreshed monthly, data is updated as towns are mailed/certified by Valuations.
 
-**Use cases:** Joining parcel-level data to this dataset allows analysis and reporting across a number of different political, tax, Census, and other boundaries.
+**Use cases:** Alone, can be used to investigate appeal trends. Can be combined with geographies to see how AV shifts around the county and between classes between mailing and assessor certified stages.
 
-**Code:** [default.vw_pin_universe.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_universe.sql)
-
-### [Single and Multi-Family Improvement Characteristics](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Single-and-Multi-Family-Improvement-Chara/x54s-btds)
-
-| Time Frame   | Property Classes | Unique By | Row                         | Updated   |
-| :---:        | :---:            | :---:     | :---:                       | :---:     |
-| 1999-Present | [Regression-class](https://github.com/ccao-data/model-res-avm#data-used) | PIN, Card, Year | Residential Improvement | Bi-Weekly |
-
-**Notes**: Residential PINs with multiple improvements (living structures) will have one card for _each_ improvement.
-
-**Use cases:** This data describes the location and physical characteristics of all single and multi-family improvements in the county. It can be:
-
-- Used on its own to characterize the housing stock in a specific location
-- Joined to assessments for analysis of assessments across geographies and housing types
-- Joined to sales for the construction of hedonic home value estimates
-
-**Code:** [default.vw_card_res_char.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_card_res_char.sql)
-
-### [Residential Condominium Unit Characteristics](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Residential-Condominium-Unit-Characteri/3r7i-mrz4)
-
-| Time frame   | Property Classes | Unique By | Row              | Updated   |
-| :---:        | :---:            | :---:     | :---:            | :---:     |
-| 1999-Present | 299, 399         | PIN, Year | Condominium Unit | Bi-Weekly |
-
-**Notes:**
-
-**Use cases:** This data describes the location and physical characteristics of all condominium units in the county. Condominium units are associated with substantially less characteristic data than single and multi-family improvements. It can be:
-
-- Used on its own to characterize the housing stock in a specific location
-- Joined to assessments for analysis of assessments across geographies and housing types
-- Joined to sales for the construction of hedonic home value estimates
-
-**Code:** [default.vw_pin_condo_char.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_condo_char.sql)
-
-### [Parcel Sales](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Sales/wvhk-k5uv)
-
-| Time Frame   | Property Classes | Unique By        | Row         | Updated |
-| :---:        | :---:            | :---:            | :---:       | :---:   |
-| 1999-Present | All              | Sale Deed Number | Parcel Sale | Monthly |
-
-**Notes:** Refreshed monthly, though data may only change roughly quarterly depending on how often new sales are added to iasWorld.
-
-**Use cases:** Alone, sales data can be used to characterize real estate markets. Sales paired with characteristics can be used to find comparable properties or as an input to an automated modeling application. Sales paired with assessments can be used to calculate sales ratio statistics. Outliers can be easily removed using filters constructed from class, township, and year variables.
-
-**Code:** [default.vw_pin_sale.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_sale.sql)
+**Code:** [default.vw_pin_appeal.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_appeal.sql)
 
 ### [Assessed Values](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Assessed-Values/uzyt-m557)
 
@@ -100,17 +56,29 @@ The Data Department creates and maintains the following open data sets.
 
 **Code:** [default.vw_pin_history.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_history.sql)
 
-### [Appeals](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Appeals/y282-6ig3)
+### [Commercial Valuation Data](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Commercial-Valuation-Data/csik-bsws)
 
-| Time Frame   | Property Classes | Unique By | Row    | Updated |
-| :---:        | :---:            | :---:     | :---:  | :---:   |
-| 1999-Present | All              | PIN, Year | Parcel | Monthly |
+| Time Frame   | Property Classes | Unique By | Row                        | Updated |
+| :---:        | :---:            | :---:     | :---:                      | :---:   |
+| 2021-Present | All              | `NA`      | Commercial Assessment Unit | Annually |
 
-**Notes:** Refreshed monthly, data is updated as towns are mailed/certified by Valuations.
+**Notes:** Refreshed annually, data is updated once first-pass is completed.
 
-**Use cases:** Alone, can be used to investigate appeal trends. Can be combined with geographies to see how AV shifts around the county between mailing and assessor certified stages.
+**Use cases:** Contains all data commercial valuation team uses to assess commercial parcels.
 
-**Code:** [default.vw_pin_appeal.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_appeal.sql)
+**Code:** [ccao-commercial_valuation.R](https://github.com/ccao-data/data-architecture/blob/master/etl/scripts-ccao-data-warehouse-us-east-1/ccao/ccao-commercial_valuation.R)
+
+### [Neighborhood Boundaries](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Neighborhood-Boundaries/pcdw-pxtg)
+
+| Time Frame | Property Classes | Unique By         | Row                  | Updated  |
+| :---:      | :---:            | :---:             | :---:                | :---:    |
+| 2021       | —                | Neighborhood Code | Neighborhood Polygon | Annually |
+
+**Notes:** Refreshed yearly, but only changes with new neighborhood definitions. None are pending.
+
+**Use cases:** Thematic mapping and location references.
+
+**Code:** [spatial-ccao-neighborhood.R](https://github.com/ccao-data/data-architecture/blob/master/etl/scripts-ccao-data-warehouse-us-east-1/spatial/spatial-ccao-neighborhood.R)
 
 ### [Parcel Addresses](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Addresses/3723-97qp)
 
@@ -136,6 +104,54 @@ The Data Department creates and maintains the following open data sets.
 
 **Code:** [proximity.vw_pin10_proximity.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/proximity/proximity.vw_pin10_proximity.sql)
 
+### [Parcel Sales](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Sales/wvhk-k5uv)
+
+| Time Frame   | Property Classes | Unique By            | Row         | Updated |
+| :---:        | :---:            | :---:                | :---:       | :---:   |
+| 1999-Present | All              | Sale Document Number | Parcel Sale | Monthly |
+
+**Notes:** Refreshed monthly, though data may only change roughly quarterly depending on how often new sales are added to iasWorld. Sales are only unique by Sale Document Number when `is_multisale = FALSE`.
+
+**Use cases:** Alone, sales data can be used to characterize real estate markets. Sales paired with characteristics can be used to find comparable properties or as an input to an automated modeling application. Sales paired with assessments can be used to calculate sales ratio statistics. Outliers can be easily removed using filters constructed from class, township, and year variables.
+
+**Code:** [default.vw_pin_sale.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_sale.sql)
+
+### [Parcel Universe (Current Year)](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Universe-Current-Year-/pabr-t5kh)
+
+| Time Frame   | Property Classes | Unique By | Row    | Updated |
+| :---:        | :---:            | :---:     | :---:  | :---:   |
+| Current Year | All              | PIN, Year | Parcel | Monthly |
+
+**Notes**: Contains a cornucopia of locational and spatial data for all parcels in Cook County, for the current year only (rather than across multiple years).
+
+**Use cases:** Joining parcel-level data to this dataset allows analysis and reporting across a number of different political, tax, Census, and other boundaries.
+
+**Code:** [open_data.vw_parcel_universe_current.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/open_data/open_data.vw_parcel_universe_current.sql)
+
+### [Parcel Universe (Historical)](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Universe/nj4t-kc8j)
+
+| Time Frame   | Property Classes | Unique By | Row    | Updated  |
+| :---:        | :---:            | :---:     | :---:  | :---:    |
+| 1999-Present | All              | PIN, Year | Parcel | Annually |
+
+**Notes**: Contains a cornucopia of locational and spatial data for all parcels in Cook County.
+
+**Use cases:** Joining parcel-level data to this dataset allows analysis and reporting across a number of different political, tax, Census, and other boundaries.
+
+**Code:** [default.vw_pin_universe_historic.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/open_data/open_data.vw_parcel_universe_historic.sql)
+
+### [Permits](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Permits/6yjf-dfxs)
+
+| Time Frame   | Property Classes | Unique By                       | Row                 | Updated |
+| :---:        | :---:            | :---:                           | :---:               | :---:   |
+| 2018-Present | All              | PIN, Permit Number, Date Issued | Permit for a parcel | Monthly |
+
+**Notes**: Refreshed monthly, each row describes one parcel's representation in a given permit.
+
+**Use cases:** Permits contain information on how a property is expected to change physically.
+
+**Code:** [default.vw_pin_permit.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_permit.sql)
+
 ### [Property Tax-Exempt Parcels](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Property-Tax-Exempt-Parcels/vgzx-68gb)
 
 | Time Frame   | Property Classes | Unique By   | Row    | Updated |
@@ -144,18 +160,38 @@ The Data Department creates and maintains the following open data sets.
 
 **Notes:** Refreshed monthly, data is updated when necessary as PINs are re-classified.
 
-**Use cases:** Can be used to study parcels that are exempted from paying property taxes.
+**Use cases:** Determine which properties and property owners in Cook County have been granted tax-exempt status.
 
 **Code:** [default.vw_pin_exempt.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_exempt.sql)
 
-### [Neighborhood Boundaries](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Neighborhood-Boundaries/pcdw-pxtg)
+### [Residential Condominium Unit Characteristics](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Residential-Condominium-Unit-Characteri/3r7i-mrz4)
 
-| Time Frame | Property Classes | Unique By         | Row                  | Updated  |
-| :---:      | :---:            | :---:             | :---:                | :---:    |
-| 2021       | —                | Neighborhood Code | Neighborhood Polygon | Annually |
+| Time frame   | Property Classes | Unique By | Row              | Updated   |
+| :---:        | :---:            | :---:     | :---:            | :---:     |
+| 1999-Present | 299, 399         | PIN, Year | Condominium Unit | Monthly |
 
-**Notes:** Refreshed yearly, but only changes with new neighborhood definitions. None are pending.
+**Notes:**
 
-**Use cases:** Thematic mapping and location references.
+**Use cases:** This data describes the location and physical characteristics of all condominium units in the county. Condominium units are associated with substantially less characteristic data than single and multi-family improvements. It can be:
 
-**Code:** [spatial-ccao-neighborhood.R](https://github.com/ccao-data/data-architecture/blob/master/etl/scripts-ccao-data-warehouse-us-east-1/spatial/spatial-ccao-neighborhood.R)
+- Used on its own to characterize the housing stock in a specific location
+- Joined to assessments for analysis of assessments across geographies and housing types
+- Joined to sales for the construction of hedonic home value estimates
+
+**Code:** [default.vw_pin_condo_char.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_condo_char.sql)
+
+### [Single and Multi-Family Improvement Characteristics](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Single-and-Multi-Family-Improvement-Chara/x54s-btds)
+
+| Time Frame   | Property Classes | Unique By | Row                         | Updated   |
+| :---:        | :---:            | :---:     | :---:                       | :---:     |
+| 1999-Present | [Regression-class](https://github.com/ccao-data/model-res-avm?tab=readme-ov-file#data-used)         | PIN, Card, Year | Residential Improvement | Monthly |
+
+**Notes**: Residential PINs with multiple improvements (living structures) will have one card for _each_ improvement.
+
+**Use cases:** This data describes the location and physical characteristics of all single and multi-family improvements in the county. It can be:
+
+- Used on its own to characterize the housing stock in a specific location
+- Joined to assessments for analysis of assessments across geographies and housing types
+- Joined to sales for the construction of hedonic home value estimates
+
+**Code:** [default.vw_card_res_char.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_card_res_char.sql)
