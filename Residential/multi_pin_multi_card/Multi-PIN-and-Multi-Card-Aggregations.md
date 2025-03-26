@@ -35,4 +35,4 @@ Some buildings span multiple parcel boundaries. When this happens, each parcel (
 
 This is a toy example illustrating the process:
 
-![](/Residential/multi_pin_multi_card/model_prorated_building.PNG)
+![](/Residential/multi_pin_multi_card/proration_explainer.PNG)
