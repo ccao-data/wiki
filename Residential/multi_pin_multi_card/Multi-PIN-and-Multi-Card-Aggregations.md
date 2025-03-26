@@ -7,7 +7,7 @@ each represented by its own "card". Because our model is trained at the building
 level, these parcels can be challenging to value accurately. Each building has its
 own set of features, including characteristics and location data.
 
-![](/Residential/model_single_card_assumption.PNG)
+![](/Residential/multi_pin_multi_card/model_single_card_assumption.PNG)
 
 Previously, we predicted the value of each card individually and summed the results. This approach essentially predicted on location data twice, once for each card. If we want to predict on the entire parcel, it is sensible to only include the location data once.
 
@@ -15,7 +15,7 @@ We consolidate the building square footage from all cards into a single â€œmainâ
 We then predict once for that combined building, ensuring location data is only
 factored in once while still capturing the total building area.
 
-![](/Residential/model_multi_card_aggregation.PNG)
+![](/Residential/multi_pin_multi_card/model_multi_card_aggregation.PNG)
 
 ## Prorated PINs
 
@@ -35,4 +35,4 @@ Some buildings span multiple parcel boundaries. When this happens, each parcel (
 
 This is a toy example illustrating the process:
 
-![](/Residential/model_prorated_building.PNG)
+![](/Residential/multi_pin_multi_card/model_prorated_building.PNG)
