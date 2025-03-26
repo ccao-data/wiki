@@ -8,13 +8,11 @@ and location data for each structure—accurately valuing multi-card parcels can
 
 ![](/Residential/multi_pin_multi_card/model_single_card_assumption.PNG)
 
-Previously, to value multi-card PINs, we predicted the value of each card individually and summed the results.
-This approach essentially predicted on location data twice, once for each card. If we want to predict a single
-value a parcel with multiple cards, it is sensible to only include the location data once.
-
-We consolidate the building square footage from all cards into a single “main” card.
-We then predict once for that combined building, ensuring location data is only
-factored in once while still capturing the total building area.
+Previously, we valued multi-card PINs by individually predicting the value of each card and summing these
+predictions. However, this solution wasn't ideal, as location data was effectively considered multiple
+times. To resolve this, we consolidate the total building square footage from all cards into a single "main"
+card and perform a single prediction. This approach ensures location data is accounted for just once while
+accurately reflecting the total building area.
 
 ![](/Residential/multi_pin_multi_card/model_multi_card_aggregation.PNG)
 
