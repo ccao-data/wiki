@@ -6,7 +6,7 @@ Multi-card parcels are properties (PINs) containing more than one building, each
 as a separate "card." Since our model is trained at the building level—using specific features, characteristics,
 and location data for each structure—accurately valuing multi-card parcels can be challenging.
 
-![](<Residential/Multi-Card%20PINs/model_single_card_assumption.PNG>)
+![](model_single_card_assumption.PNG)
 
 Previously, we valued multi-card PINs by individually predicting the value of each card and summing these
 predictions. However, this solution wasn't ideal, as location data was effectively considered multiple
