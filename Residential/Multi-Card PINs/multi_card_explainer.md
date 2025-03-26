@@ -14,4 +14,4 @@ times. To resolve this, we consolidate the total building square footage from al
 card and perform a single prediction. This approach ensures location data is accounted for just once while
 accurately reflecting the total building area.
 
-![]("/Residential/Multi-Card PINs/model_multi_card_aggregation.PNG")
+![](model_multi_card_aggregation.PNG)
