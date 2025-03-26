@@ -14,4 +14,4 @@ Some buildings span multiple parcel boundaries. When this happens, each parcel (
 
 This is a toy example illustrating the process:
 
-![](/Residential/proration/proration_explainer.PNG)
+![](/Residential/Proration/proration_explainer.PNG)
