@@ -1,6 +1,6 @@
 # Valuing Multi-Card PINs
 
-## Multi-Card PIN Valuation (2-3 Cards)
+## Introduction
 
 Multi-card parcels are properties (PINs) containing more than one building, each represented individually
 as a separate "card." Our model is trained at the building level, using specific features, characteristics, and
@@ -27,7 +27,7 @@ Previously, we valued multi-card PINs by individually predicting the value of ea
 predictions. However, this solution wasn't ideal, as location data was effectively considered multiple
 times.
 
-## New method: Aggregated Building Area on a Single Card
+## New method: Aggregated Building Area on a Single Card (2-3 card PINs)
 
 To improve these values, we consolidate the total building square footage from all cards into a single "main"
 card and perform a single prediction. This approach ensures location data is accounted for just once while
