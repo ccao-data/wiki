@@ -3,7 +3,13 @@
 ## Introduction
 
 Multi-card parcels are properties (PINs) containing more than one building, each represented individually
-as a separate "card." Our model is trained at the building level, using specific features, characteristics, and
+as a separate "card." We have two different methods for valuing these parcels, depending on the number of cards
+involved. For parcels with 2 or 3 cards, we use a new method that aggregates the total building square footage
+from all cards into a single "main" card and performs a single prediction. For parcels with 4 or more cards,
+we continue to use the legacy method of summing individual card-level predictions. This document explains the
+framework behind these methods and the rationale for our approach.
+
+Our model is trained at the building level, using specific features, characteristics, and
 location data for each individual structure. This makes it difficult to accurately value
 parcels that contain multiple buildings, since the model is designed to assess one building
 at a time. Multi-card PINs are also excluded from the training data, so the model doesn't
