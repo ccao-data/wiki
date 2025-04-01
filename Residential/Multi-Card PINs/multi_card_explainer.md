@@ -1,4 +1,4 @@
-# Valuing Multi-PIN and Multi-Card Aggregations
+# Valuing Multi-Card PINs
 
 ## Multi-Card PIN Valuation (2-3 Cards)
 
