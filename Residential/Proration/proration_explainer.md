@@ -10,7 +10,7 @@ To figure out the building’s contribution to total value, we subtract out the 
 
 ## 2. Prorate the Building
 
-Multiply the building-wide figure by each PIN’s proration rate (e.g., if a PIN has 30% of the building, it gets 30% of that amount).
+Multiply the average building value by each PIN’s proration rate (e.g., if a PIN has 30% of the building, it gets 30% of that amount).
 
 ## 3. Add Back Land
 
