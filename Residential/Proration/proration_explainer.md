@@ -1,8 +1,8 @@
 # Proration
 
-Some buildings span multiple parcel boundaries. When this happens, each parcel (PIN) technically includes only part of the same building. Valuing those parcels must then “prorate” the building value so that each PIN gets its fair share.  
+Some buildings span multiple parcel boundaries. When this happens, each parcel (PIN) technically includes only part of the same building. Valuing those parcels must then “prorate” the building value so that each PIN gets its fair share.
 
-Initially, each PIN gets a value with our model, which is based on the total value of the entire building. However, we need to adjust this value to reflect the fact that each PIN only contains a portion of the building.
+Initially, each PIN gets a value with our model, which is in part based on the total value of the entire building. However, for the prorated PIN case, we need to adjust this value to reflect the fact that each PIN only contains a portion of the building.
 
 ---
 
