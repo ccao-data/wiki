@@ -4,7 +4,7 @@
 
 Multi-card parcels are properties (PINs) containing more than one building, each represented individually
 as a separate "card." We have two different methods for valuing these parcels, depending on the number of cards
-involved. For parcels with 2 or 3 cards, we use a new method that aggregates the total building square footage
+involved. For parcels with 2 or 3 cards, we use a method that aggregates the total building square footage
 from all cards into a single "main" card and performs a single prediction. For parcels with 4 or more cards,
 we continue to use the legacy method of summing individual card-level predictions. This document explains the
 framework behind these methods and the rationale for our approach.
