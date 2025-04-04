@@ -40,8 +40,6 @@ accurate and reliable values for multi-card PINs compared to the the summing app
 
 ![](multi_card_aggregation_2_3.PNG)
 
----
-
 ### Breaking Ties in Building Square Footage
 
 When selecting which card should act as the "main" for aggregation, we apply the following logic:
