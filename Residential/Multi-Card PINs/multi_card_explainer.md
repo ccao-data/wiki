@@ -31,7 +31,7 @@ confirmed this through testing, including multi-card PINs in the training data r
 in a significant drop in performance for single-card PINs, which make up the overwhelming
 majority of residential PINs in cook county.
 
-## 2-3 cards: Aggregated Building Area on a Single Card (2-3 card PINs)
+## Valuing 2-3 card PINs: Aggregated Building Area on a Single Card
 
 To improve these values, we consolidate the total building square footage from all cards into a single "main"
 card and perform a single prediction. This approach allows us to reflect the total building area while keeping
@@ -52,7 +52,7 @@ _If two buildings are both 1,200 sqft and one is Card 1 and the other is Card 2,
 
 ---
 
-## Valuing 4+ Card PINs
+## Valuing 4+ Card PINs: Summing Individual Predictions
 
 For PINs with 4 or more cards, we value multi-card PINs by individually predicting the value of each
 card and summing these predictions. These cases are rare and often unusually complex, sometimes
