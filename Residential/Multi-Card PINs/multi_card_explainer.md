@@ -40,6 +40,20 @@ accurate and reliable values for multi-card PINs compared to the the summing app
 
 ![](multi_card_aggregation_2_3.PNG)
 
+---
+
+### Breaking Ties in Building Square Footage
+
+When selecting which card should act as the "main" for aggregation, we apply the following logic:
+
+1. Choose the card with the **largest building square footage**.
+2. If there's a **tie**, we select the card with the **lowest card number** (e.g., Card 1 before Card 2).
+
+**Example:**  
+_If two buildings are both 1,200 sqft and one is Card 1 and the other is Card 2, we designate Card 1 as the main._
+
+---
+
 ## Valuing 4+ Card PINs
 
 For PINs with 4 or more cards, we value multi-card PINs by individually predicting the value of each
@@ -52,13 +66,3 @@ We don't yet have the confidence or clarity in the data structure to apply the s
 used for 2–3 card PINs.
 
 ![](multi_card_aggregation_4.PNG)
-
-### Breaking Ties in Building Square Footage
-
-When selecting which card should act as the "main" for aggregation, we apply the following logic:
-
-1. Choose the card with the **largest building square footage**.
-2. If there's a **tie**, we select the card with the **lowest card number** (e.g., Card 1 before Card 2).
-
-**Example:**  
-_If two buildings are both 1,200 sqft and one is Card 1 and the other is Card 2, we designate Card 1 as the main._
