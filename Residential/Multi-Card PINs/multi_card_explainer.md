@@ -25,7 +25,7 @@ our approach.
 
 Machine learning models work better when they are trained on data with
 a consistent structure. Ensuring every single row in the training data is a single-card
-PIN helps the model learn the relationship between features and values more effectively.
+sale helps the model learn the relationship between features and values more effectively.
 It doesn't have to account for variation between single-card and multi-card PINs. We've
 confirmed this through testing, including multi-card PINs in the training data results
 in a significant drop in performance for single-card PINs, which make up the overwhelming
