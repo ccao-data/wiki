@@ -21,7 +21,7 @@ Final PIN value = prorated building value + that PIN’s land value.
 
 ### How Land Value is Determined
 
-Land value rates are determined by valuations analysts. They produce a dollar per square foot rate for
+Land value rates are determined by Valuations analysts. They produce a dollar per square foot rate for
 each neighborhood/class combination. This rate is then multiplied by the land square footage of each PIN.
 We place a cap on the land value at 50% of the total value of the PIN. This means that if the land value
 exceeds this cap, we adjust it down to 50% of the total value. This is in place to ensure the land value
