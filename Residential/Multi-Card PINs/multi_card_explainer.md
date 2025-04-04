@@ -31,7 +31,7 @@ majority of residential PINs in cook county.
 ## Valuing 2-3 card PINs: Aggregated Building Area on a Single Card
 
 To improve these values, we consolidate the total building square footage from all cards into a single "main"
-card and perform a single prediction.This approach allows us to reflect the total building area while keeping
+card and perform a single prediction. This approach allows us to reflect the total building area while keeping
 the model’s input structure consistent. Internal testing shows that this method consistently produces more
 accurate and reliable values for multi-card PINs compared to the the summing approach.
 
