@@ -38,6 +38,8 @@ card and perform a single prediction. This approach allows us to reflect the tot
 the model’s input structure consistent. Internal testing shows that this method consistently produces more
 accurate and reliable values for multi-card PINs compared to the the summing approach.
 
+![](model_multi_card_aggregation_2_3.PNG)
+
 ## Valuing 4+ Card PINs
 
 For PINs with 4 or more cards, we value multi-card PINs by individually predicting the value of each
@@ -49,7 +51,7 @@ foundation for aggregation in such cases—these PINs are usually flagged for ad
 We don't yet have the confidence or clarity in the data structure to apply the same aggregation method
 used for 2–3 card PINs.
 
-![](model_multi_card_aggregation.PNG)
+![](model_multi_card_aggregation_4.PNG)
 
 ### Breaking Ties in Building Square Footage
 
