@@ -6,10 +6,7 @@ Multi-card parcels are properties (PINs) containing more than one building, each
 as a separate "card."
 
 Our model is trained at the building level, using specific features, characteristics, and
-location data for each individual structure. This makes it difficult to accurately value
-parcels that contain multiple buildings, since the model is designed to assess one building
-at a time. Multi-card PINs are also excluded from the training data, so the model doesn't
-see examples of them during training.
+location data for each individual structure. This makes it difficult to accurately value parcels that contain multiple buildings, since the model is designed to assess one building at a time—and because multi-card PINs are excluded from the training data, the model has no exposure to these more complex cases
 
 ![](model_single_card_assumption.PNG)
 
@@ -34,7 +31,7 @@ majority of residential PINs in cook county.
 ## Valuing 2-3 card PINs: Aggregated Building Area on a Single Card
 
 To improve these values, we consolidate the total building square footage from all cards into a single "main"
-card and perform a single prediction. This approach allows us to reflect the total building area while keeping
+card and perform a single prediction.This approach allows us to reflect the total building area while keeping
 the model’s input structure consistent. Internal testing shows that this method consistently produces more
 accurate and reliable values for multi-card PINs compared to the the summing approach.
 
