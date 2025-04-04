@@ -31,18 +31,23 @@ confirmed this through testing, including multi-card PINs in the training data r
 in a significant drop in performance for single-card PINs, which make up the overwhelming
 majority of residential PINs in cook county.
 
-## Previous Method: Sum of predictions
-
-Previously, we valued multi-card PINs by individually predicting the value of each card and summing these
-predictions. However, this solution wasn't ideal, as location data was effectively considered multiple
-times.
-
-## New method: Aggregated Building Area on a Single Card (2-3 card PINs)
+## 2-3 cards: Aggregated Building Area on a Single Card (2-3 card PINs)
 
 To improve these values, we consolidate the total building square footage from all cards into a single "main"
-card and perform a single prediction. This approach ensures location data is accounted for just once while
-accurately reflecting the total building area. This method results in both a stronger theoretical foundation
-and improved performance for multi-card PINs.
+card and perform a single prediction. This approach allows us to reflect the total building area while keeping
+the model’s input structure consistent. Internal testing shows that this method consistently produces more
+accurate and reliable values for multi-card PINs compared to the the summing approach.
+
+## Valuing 4+ Card PINs
+
+For PINs with 4 or more cards, we value multi-card PINs by individually predicting the value of each
+card and summing these predictions. These cases are rare and often unusually complex, sometimes
+resulting from administrative anomalies in the underlying data. For example, a recorded sale might
+include several cards when, in reality, one of those buildings has been split off into a new PIN that
+isn’t captured in our data. Because of these inconsistencies—and the lack of a reliable theoretical
+foundation for aggregation in such cases—these PINs are usually flagged for additional manual review.
+We don't yet have the confidence or clarity in the data structure to apply the same aggregation method
+used for 2–3 card PINs.
 
 ![](model_multi_card_aggregation.PNG)
 
@@ -55,15 +60,3 @@ When selecting which card should act as the "main" for aggregation, we apply the
 
 **Example:**  
 _If two buildings are both 1,200 sqft and one is Card 1 and the other is Card 2, we designate Card 1 as the main._
-
----
-
-## Valuing 4+ Card PINs
-
-For PINs with 4 or more cards, we continue using the previous method of summing individual card-level
-predictions. These cases are rare and often unusually complex, sometimes resulting from administrative
-anomalies in the underlying data. For example, a recorded sale might include several cards when, in
-reality, one of those buildings has been split off into a new PIN that isn’t captured in our data.
-Because of these inconsistencies—and the lack of a reliable theoretical foundation for aggregation
-in such cases—these PINs are usually flagged for additional manual review. We don't yet have the
-confidence or clarity in the data structure to apply the same aggregation method used for 2–3 card PINs.
