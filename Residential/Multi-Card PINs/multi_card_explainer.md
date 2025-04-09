@@ -49,7 +49,7 @@ _If two buildings are both 1,200 sqft and one is Card 1 and the other is Card 2,
 
 ---
 
-## Valuing 4+ Card PINs: Summing Individual estimates
+## Valuing 4+ Card PINs: Summing Individual Estimates
 
 For PINs with 4 or more cards, we value multi-card PINs by individually estimating the value of each
 card and summing these estimates. These cases are rare and often unusually complex, sometimes
