@@ -12,10 +12,10 @@ location data for each individual structure. This makes it difficult to accurate
 
 We have two different methods for valuing these parcels, depending on the number of cards
 involved. For parcels with 2 or 3 cards, we use a method that aggregates the total building square footage
-from all cards into a single "main" card and performs a single prediction. Then, to generate a card-level
+from all cards into a single "main" card and performs a single estimate. Then, to generate a card-level
 value, we multiply the PIN-level value by the proportion of square footage that each card contributes to
-the total building area. For parcels with 4 or more cards, we sum individual card-level predictions to get
-the parcel-level prediction. This document explains the framework behind these methods and the rationale for
+the total building area. For parcels with 4 or more cards, we sum individual card-level estimates to get
+the parcel-level estimate. This document explains the framework behind these methods and the rationale for
 our approach.
 
 ### Why We Exclude Multi-Card PINs from Training
@@ -31,7 +31,7 @@ majority of residential PINs in cook county.
 ## Valuing 2-3 card PINs: Aggregated Building Area on a Single Card
 
 To improve these values, we consolidate the total building square footage from all cards into a single "main"
-card and perform a single prediction. This approach allows us to reflect the total building area while keeping
+card and perform a single estimate. This approach allows us to reflect the total building area while keeping
 the model’s input structure consistent. Internal testing shows that this method consistently produces more
 accurate and reliable values for multi-card PINs compared to the the summing approach.
 
@@ -49,10 +49,10 @@ _If two buildings are both 1,200 sqft and one is Card 1 and the other is Card 2,
 
 ---
 
-## Valuing 4+ Card PINs: Summing Individual Predictions
+## Valuing 4+ Card PINs: Summing Individual estimates
 
-For PINs with 4 or more cards, we value multi-card PINs by individually predicting the value of each
-card and summing these predictions. These cases are rare and often unusually complex, sometimes
+For PINs with 4 or more cards, we value multi-card PINs by individually estimating the value of each
+card and summing these estimates. These cases are rare and often unusually complex, sometimes
 resulting from administrative anomalies in the underlying data. For example, a recorded sale might
 include several cards when, in reality, one of those buildings has been split off into a new PIN that
 isn’t captured in our data. Because of these inconsistencies—and the lack of a reliable theoretical

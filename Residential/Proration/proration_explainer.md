@@ -8,7 +8,7 @@ Initially, each PIN gets a value with our model, which is in part based on the t
 
 ## 1. Calculate Building-Only Value
 
-To figure out the building’s contribution to total value, we subtract out the land value from our model’s predicted total for each PIN. For parcels in a prorated building, we average these “building-only” values across all of its PINs. This average becomes the building-wide figure we’ll distribute among the PINs.
+To figure out the building’s contribution to total value, we subtract out the land value from our model’s estimated total for each PIN. For parcels in a prorated building, we average these “building-only” values across all of its PINs. This average becomes the building-wide figure we’ll distribute among the PINs.
 
 ## 2. Prorate the Building
 
