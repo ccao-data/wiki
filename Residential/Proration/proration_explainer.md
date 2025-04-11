@@ -31,4 +31,4 @@ doesn't disproportionately make up the overall value of the PIN.
 
 This is a toy example illustrating the process:
 
-![](/Residential/Proration/proration_explainer.PNG)
+![](/Residential/Proration/proration_explainer.png)
