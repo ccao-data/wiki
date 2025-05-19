@@ -101,7 +101,7 @@ renv::install("dyfanjones/noctua")
 
 ### Python
 
-Using python, the `pyathena` package is an excellent option for ingesting data from AWS Athena.
+Using python, the `pyathena` package is an excellent option for ingesting data from AWS Athena. Pyathena offers two cursors, [ArrowCursor](https://laughingman7743.github.io/PyAthena/arrow.html#arrowcursor) and [PandasCursor](https://laughingman7743.github.io/PyAthena/pandas.html#pandascursor). ArrowCursor is reccomended because it is much, much faster than PandasCursor.
 
 As with R, enabling [unload](https://laughingman7743.github.io/PyAthena/pandas.html#pandascursor) via `cursor(unload=TRUE)` uses a different method of storing and transferring query results. It tends to be a bit faster on our hardware, and thus we recommend using it by default.
 
@@ -122,16 +122,13 @@ As with R, enabling [unload](https://laughingman7743.github.io/PyAthena/pandas.h
     import pandas
     import pyarrow
     from pyathena import connect
-    from pyathena.pandas.util import as_pandas
-    from pyathena.pandas.cursor import PandasCursor
+    from pyathena.arrow.cursor import ArrowCursor
 
     # Connect to Athena
     cursor = connect(
-        # We add '+ "/"' to the end of the line below because enabling unload
-        # requires that the staging directory end with a slash
-        s3_staging_dir=os.getenv("AWS_ATHENA_S3_STAGING_DIR") + "/",
+        s3_staging_dir=os.getenv("AWS_ATHENA_S3_STAGING_DIR"),
         region_name=os.getenv("AWS_REGION"),
-        cursor_class=PandasCursor,
+        cursor_class=ArrowCursor,
     ).cursor(unload=True)
 
     # Define test query. Note that the query CANNOT end with a semi-colon
@@ -140,7 +137,7 @@ As with R, enabling [unload](https://laughingman7743.github.io/PyAthena/pandas.h
     # Execute query and return as pandas df
     cursor.execute(SQL_QUERY)
 
-    df = cursor.as_pandas()
+    df = cursor.as_arrow().to_pandas()
     ```
 
 ### Tableau and Tableau Prep
