@@ -101,7 +101,7 @@ renv::install("dyfanjones/noctua")
 
 ### Python
 
-Using python, the `pyathena` package is an excellent option for ingesting data from AWS Athena. Pyathena offers two cursors, [ArrowCursor](https://laughingman7743.github.io/PyAthena/arrow.html#arrowcursor) and [PandasCursor](https://laughingman7743.github.io/PyAthena/pandas.html#pandascursor). ArrowCursor is reccomended because it is much, much faster than PandasCursor.
+Using python, the `pyathena` package is an excellent option for ingesting data from AWS Athena. Pyathena offers two cursors, [`ArrowCursor`](https://laughingman7743.github.io/PyAthena/arrow.html#arrowcursor) and [`PandasCursor`](https://laughingman7743.github.io/PyAthena/pandas.html#pandascursor). ArrowCursor is recomended because it is much, much faster than PandasCursor.
 
 As with R, enabling [unload](https://laughingman7743.github.io/PyAthena/pandas.html#pandascursor) via `cursor(unload=TRUE)` uses a different method of storing and transferring query results. It tends to be a bit faster on our hardware, and thus we recommend using it by default.
 
