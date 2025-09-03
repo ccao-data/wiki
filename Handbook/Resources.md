@@ -31,7 +31,7 @@ Useful materials that give an overview of Cook County's property tax system and 
 
 - [:exclamation: Cook County Property Taxes 101](https://maps.cookcountyil.gov/propertytax101/index.html) - Brief intro to property taxes, created by the Clerk's office
 - [:exclamation: The Tax Divide - Chicago Tribune](https://www.chicagotribune.com/investigations/ct-tax-divide-investigation-20180425-storygallery.html) - An excellent outline of the historical problems with the CCAO
-- [:star: The Cook County Property Tax Extension Process: A Primer](https://www.civicfed.org/civic-federation/publications/cook-county-property-tax-extension-process-primer-levies-tax-caps-and-) - Incredibly useful guide to the intricacies of the entire Cook County tax system
+- [:star: The Cook County Property Tax Extension Process: A Primer](https://civicfed.org/propertytaxextensionprocessprimer) - Incredibly useful guide to the intricacies of the entire Cook County tax system
 - [:star: How Lower-Income Americans Get Cheated on Property Taxes - NYTimes](https://www.nytimes.com/2021/04/03/opinion/sunday/property-taxes-housing-assessment-inequality.html) - Concise and accessible overview of the nation-wide issue of inequitable assessments
 - [:star: Why Are Property Taxes in Chicago so High?](https://youtu.be/zp5dHWnk2NE) - Chi Hack Night presentation by @dfsnow that introduces the Cook County property tax system and describes some of the root causes of high bills
 - [How the Illinois Property Tax System Works](https://cookcountytreasurer.com/pdfs/understandingyourtaxbill/propertytaxprimer.pdf) - The Cook County Treasurer's property tax primer, explains the extension process and some additional things like the scavenger sale and tax liens
