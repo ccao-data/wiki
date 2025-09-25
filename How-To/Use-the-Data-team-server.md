@@ -5,6 +5,7 @@
 * [What is the Data team server?](#what-is-the-data-team-server)
 * [Who controls the server?](#who-controls-the-server)
 * [What lives on the server?](#what-lives-on-the-server)
+    * [Upgrading RStudio](#upgrading-rstudio) 
 * [How do I access the server?](#how-do-i-access-the-server)
 * [How do I add or remove users from the server?](#how-do-i-add-or-remove-users-from-the-server)
 
@@ -28,7 +29,7 @@ The hardware that the server runs on is controlled by the CCAO's internal IT. If
 
 ## What lives on the server?
 
-The following is a list of tools and services that live on the server as of summer 2023:
+The following is a list of tools and services that live on the server as of September 2025:
 
 | Path | Description | Repo | Run By |
 | ---- | ----------- | ---- | ------ |
@@ -41,11 +42,24 @@ The following is a list of tools and services that live on the server as of summ
 | `/home/shiny-server/services/service-nginx` | Service that directs web traffic to other services | [`service-nginx`](https://github.com/ccao-data/service-nginx) | docker |
 | `/home/shiny-server/services/service-shiny-proxy` | Service that runs other services using Docker | [`service-shiny-proxy`](https://github.com/ccao-data/service-shiny-proxy) | docker |
 | `/home/shiny-server/services/service-jupyterhub` | JupyterHub instance for running notebooks | [`service-jupyterhub`](https://github.com/ccao-data/service-jupyterhub) | systemd |
+| `/usr/lib/rstudio-server` | RStudio instance | | systemd |
 | `/home/shiny-server/services/api-res-avm` | REST API for getting predicted values from our residential model | [`api-res-avm`](https://github.com/ccao-data/api-res-avm) | docker |
 | `/var/spool/cron/crontabs/shiny-server` | Cron job configuration | | cron |
 | `/etc/systemd/system/` | systemd service configurations | | systemd |
 
 If you add a new tool or service to the server, add it to this list and bump the date listed above.
+
+### Upgrading RStudio
+
+We manage our RStudio installation using the Debian distributions (A.K.A. `.deb` files) that Posit publishes. All you should need to do to upgrade to the latest version of RStudio is follow [Posit's installation instructions](https://posit.co/download/rstudio-server/) for the version of Ubuntu that the server is running, since the `gdebi` package manager should gracefully handle updating an existing installation. It's also worth taking a look at the [RStudio release notes](https://docs.posit.co/ide/news) for all the releases between the RStudio version on the server and the new version to see if there are any additional upgrade instructions.
+
+As of September 2025, Posit's installation instructions looked something like this:
+
+* Make sure a compatible version of R is installed
+* Download the `.deb` file for the desired version of RStudio
+* Call `sudo gdebi` on the `.deb` file to install it 
+
+If the latest installation instructions look substantially different from that, stop to make sure that the installation method will gracefully handle updating an existing installation.
 
 ## How do I access the server?
 
