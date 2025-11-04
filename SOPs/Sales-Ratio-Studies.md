@@ -8,7 +8,7 @@ A **sales ratio** is the ratio of the assessor's estimate of a property's value 
 
 This policy governs functions contained in the [ccao R package](https://github.com/ccao-data/ccao).
 
-This policy references the [IAAO Standard on Ratio Studies](https://www.iaao.org/media/standards/Standard_on_Ratio_Studies.pdf).
+This policy references the [IAAO Standard on Ratio Studies](https://www.iaao.org/wp-content/uploads/Standard_on_Ratio_Studies.pdf).
 
 # Methods
 
