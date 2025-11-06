@@ -111,6 +111,12 @@ Useful materials that give an overview of Cook County's property tax system and 
 
 ## Modeling and Statistics
 
+##### Sales Ratio Studies
+
+- [:star: Ratio Stats Masterclass](https://cookcounty.sharepoint.com/:p:/r/sites/Data-Assessor/Shared%20Documents/General/Presentations/RatioStats_Masterclass.pptx?d=w1e4b92e43942438aaa18c4364958d37b&csf=1&web=1&e=3HdAJe) - Slides from an internal presentation explaining the metrics we use to evaluate our assessment models
+- [Sales Ratio Studies SOP](../SOPs/Sales-Ratio-Studies.md) - Detailed document explaining our Standard Operating Procedure for running sales ratio studies, which compute metrics to evaluate our assessment models
+- [IAAO Standard on Ratio Studies](https://www.iaao.org/wp-content/uploads/Standard_on_Ratio_Studies.pdf) - Official document from the International Association of Assessing Officers describing the industry standard for sales ratio studies, on which our SOP is based 
+
 ##### OLS
 
 - [:star: A Deep Dive Into How R Fits a Linear Model](http://madrury.github.io/jekyll/update/statistics/2016/07/20/lm-in-R.html) - Excellent blog post on how R's `lm()` function works under the hood
