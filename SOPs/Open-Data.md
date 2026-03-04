@@ -28,6 +28,10 @@ Clearance must be received from the following parties before private assets on t
 
 BoT may have their own clearance requirements such as adding a 'Story' on Socrata or formatting common county-related columns in a particular way. Defer to their schemas.
 
+## Yearly Refresh
+
+We keep many of our assets updated on a monthly basis using Socrata's API. Because of how long the API calls take we avoid updating assets that don't change between annual updates, and only keep the most recent year of data up-to-date for others. This means years prior to the most recent on open data will drift out of sync with their sources over the course of a year. We address this with a complete refresh of all the appropriate assets once a year, typically in February. Since the API is relatively slow and can time out, we use Socrata's [Data & Insights Gateway](https://support.socrata.com/hc/en-us/articles/360033395434-Gateway-Overview) to trigger full refreshes.
+
 ## Currently Curated Data
 
 The Data Department creates and maintains the following open data sets.
@@ -98,7 +102,7 @@ The Data Department creates and maintains the following open data sets.
 | :---:        | :---:            | :---:       | :---:  | :---:    |
 | 2000-Present | All              | PIN10, Year | Parcel | Annually |
 
-**Notes:** Refreshed monthly, data is updated yearly as spatial files are made available.
+**Notes:** Data is updated yearly as spatial files are made available.
 
 **Use cases:** Can be used to isolate parcels by distance to specific spatial features.
 
