@@ -8,7 +8,6 @@ On the open data portal, choose the asset you'd like to update. For this example
 
 1. In the top right, click the "Edit" button.
 
-
 ![edit](images/edit.png)
 
 2. Next click "Add Data" and select "Replace". Do NOT select "Upsert" - this will not delete rows that have been removed from the asset's source.
