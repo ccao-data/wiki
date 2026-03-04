@@ -28,6 +28,10 @@ Clearance must be received from the following parties before private assets on t
 
 BoT may have their own clearance requirements such as adding a 'Story' on Socrata or formatting common county-related columns in a particular way. Defer to their schemas.
 
+## Yearly refresh
+
+We update our open data catalog annually to ensure that all assets are current and accurate. This process typically occurs in February and involves a complete refresh of all assets actively being maintained. See [Refresh an open data asset](/How-To/Refresh-an-open-data-asset.md) for detailed instructions. Currently we exclude the Commercial Valuation Data and Neighborhood Boundaries from this annual refresh since they are manually updated whenever new source data is provided.
+
 ## Currently Curated Data
 
 The Data Department creates and maintains the following open data sets.
@@ -72,7 +76,7 @@ The Data Department creates and maintains the following open data sets.
 
 | Time Frame | Property Classes | Unique By         | Row                  | Updated  |
 | :---:      | :---:            | :---:             | :---:                | :---:    |
-| 2021       | —                | Neighborhood Code | Neighborhood Polygon | Annually |
+| 2021       | —                | Neighborhood Code | Neighborhood Polygon | NA       |
 
 **Notes:** Refreshed yearly, but only changes with new neighborhood definitions. None are pending.
 
@@ -98,7 +102,7 @@ The Data Department creates and maintains the following open data sets.
 | :---:        | :---:            | :---:       | :---:  | :---:    |
 | 2000-Present | All              | PIN10, Year | Parcel | Annually |
 
-**Notes:** Refreshed monthly, data is updated yearly as spatial files are made available.
+**Notes:** Data is updated yearly as spatial files are made available.
 
 **Use cases:** Can be used to isolate parcels by distance to specific spatial features.
 
