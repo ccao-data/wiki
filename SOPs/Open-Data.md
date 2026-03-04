@@ -49,6 +49,20 @@ On the open data portal, choose the asset you'd like to update. For this example
 
 ![](docs/images/choose_source.png)
 
+4. Expand the "CCAO Data Dept Server" agent, and choose the plugin with ends with "open_data". This part of the name can be hidden, but it's usually the third from the left. You can open each one to check, if necessary.
+
+![](docs/images/agent_name.png)
+
+5. Expand "Tables and Views" and select the appropriate data source. In our case, "vw_parcel_universe_current".
+
+![](docs/images/use_source.png)
+
+6. A notification will pop up in the top right notifying you the data is being fetched.
+
+![](docs/images/fetching.png)
+
+7. After a while, the open data portal will open a data preview window. The open data portal will need to ingest all of the data for the asset and check it before it will allow the asset to be updated. For now you can click "Done" in the bottom right and wait for the asset to finish ingesting. Once it's done the "Update" button on the asset's main page will turn blue and can be clicked. The asset will notify you that it's updating the asset and let you request an email confirmation once the asset has successfully or unsuccessfully completed updating.
+
 ## Currently Curated Data
 
 The Data Department creates and maintains the following open data sets.
