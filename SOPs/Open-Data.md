@@ -76,7 +76,7 @@ The Data Department creates and maintains the following open data sets.
 
 | Time Frame | Property Classes | Unique By         | Row                  | Updated  |
 | :---:      | :---:            | :---:             | :---:                | :---:    |
-| 2021       | —                | Neighborhood Code | Neighborhood Polygon | Annually |
+| 2021       | —                | Neighborhood Code | Neighborhood Polygon | NA       |
 
 **Notes:** Refreshed yearly, but only changes with new neighborhood definitions. None are pending.
 
