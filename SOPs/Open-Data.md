@@ -30,7 +30,7 @@ BoT may have their own clearance requirements such as adding a 'Story' on Socrat
 
 ## Yearly refresh
 
-We update our open data catalog annually to ensure that all assets are current and accurate. This process typically occurs in February and involves a complete refresh of all assets actively being maintained. See [Refresh an open data asset](/How-To/Refresh-an-open-data-asset.md) for detailed instructions.
+We update our open data catalog annually to ensure that all assets are current and accurate. This process typically occurs in February and involves a complete refresh of all assets actively being maintained. See [Refresh an open data asset](/How-To/Refresh-an-open-data-asset.md) for detailed instructions. Currently we exclude the Commercial Valuation Data and Neighborhood Boundaries from this annual refresh since they are manually updated whenever their source data is updated.
 
 ## Currently Curated Data
 
