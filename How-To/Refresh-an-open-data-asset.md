@@ -4,6 +4,8 @@ We keep many of our assets updated on a monthly basis using Socrata's API. Becau
 
 ### How to refresh an asset
 
+You need to be logged into the open data portal as the Assessor Data user in order to make edits to open data. If you need login credentials, reach out to a senior staff member.
+
 On the open data portal, choose the asset you'd like to update. For this example we'll work with [Assessor - Parcel Universe (Current Year Only)](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Universe-Current-Year-Only-/pabr-t5kh/about_data).
 
 1. In the top right, click the "Edit" button.
