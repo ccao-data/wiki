@@ -12,9 +12,8 @@ programs that encapsulate logic for different kinds of linting and
 formatting checks. There is a robust ecosystem of third-party hooks that
 encapsulate common linters and formatters like
 [ruff](https://docs.astral.sh/ruff/) and [lintr](https://lintr.r-lib.org/).
-You can think of pre-commit as an abstraction layer that sits on top of your
-linters and formatters, grouping them all into one convenient command that you
-can run to ensure all of your repo's automated checks run at the same time.
+You can think of pre-commit as a wrapper that runs all your linters and
+formatters with one command.
 
 There are two main ways to run pre-commit:
 
@@ -29,7 +28,7 @@ There are two main ways to run pre-commit:
 
 ## How we use pre-commit
 
-We run precommit in two ways: **locally** (i.e. directly on our personal computers)
+We run pre-commit in two ways: **locally** (i.e. directly on our personal computers)
 and on **automated GitHub workflows** (i.e. on "continuous integration", or "CI").
 
 - We run pre-commit **locally** whenever we are actively writing or editing code.
@@ -39,15 +38,13 @@ and on **automated GitHub workflows** (i.e. on "continuous integration", or "CI"
   formatting problems.
 - Pre-commit runs automatically **on CI** whenever we push code to any of our
   repos, to make sure that all code is linted and formatted correctly before
-  it gets merged into the main branch of a repo. We use a [composite
-  action](https://github.com/ccao-data/actions/blob/main/pre-commit/action.yaml)
-  to install and run the `pre-commit` executable, which reads a
-  `.pre-commit-config.yaml` file in the repo that is calling the action in
-  order to determine which hooks pre-commit needs to run. This action typically
-  runs in a workflow that we configure to run on every commit to the main
-  branch or to an open pull request. If any of the hooks fail, the composite
-  action will fail the workflow, thereby alerting the code author to a problem
-  with their code.
+  it gets merged into the main branch of a repo. Here's how it works:
+  - We use a [composite action](https://github.com/ccao-data/actions/blob/main/pre-commit/action.yaml)
+    to install and run the `pre-commit` executable
+  - The action reads a `.pre-commit-config.yaml` file in the repo to determine
+    which hooks to run
+  - The workflow runs on every commit to the main branch or to an open pull request
+  - If any hooks fail, the workflow fails, alerting the code author to the problem
 
 ## Troubleshooting
 
@@ -73,13 +70,10 @@ installation of renv failed
 ERROR: failed to lock directory ‘/home/your-user/.cache/pre-commit/repoabcdefg/renv-default/renv/library/linux-ubuntu-jammy/R-4.5/x86_64-pc-linux-gnu’ for modifying
 ```
 
-The root causes of these errors are not entirely clear to us. The maintainer of
-the pre-commit R hooks that we use [has mentioned in the
-past](https://github.com/lorenzwalthert/precommit/issues/602#issuecomment-2564812342)
-that RStudio sets some environment variables that collide with variables that
-the R pre-commit hooks use, but [others have since
-claimed](https://github.com/lorenzwalthert/precommit/issues/602#issuecomment-3536599363)
-that recent releases have fixed this problem.
+RStudio may set environment variables that conflict with the R pre-commit
+hooks. The exact cause is unclear (see [this GitHub
+issue](https://github.com/lorenzwalthert/precommit/issues/602) for discussion),
+but avoiding RStudio's terminal pane resolves the issue.
 
 Regardless of the root cause, we have found that it is best to avoid running
 the `pre-commit` command in an RStudio terminal pane. If you need to run the
