@@ -1,5 +1,12 @@
 # Use pre-commit to lint and format your code
 
+## Table of contents
+
+- [How pre-commit works](#how-pre-commit-works)
+- [How we use pre-commit](#how-we-use-pre-commit)
+- [Installing pre-commit](#installing-pre-commit)
+- [Troubleshooting](#troubleshooting)
+
 The CCAO Data Team uses [pre-commit](https://pre-commit.com/) to enforce
 common linting and formatting rules across our repos. This doc explains
 how we use pre-commit, and provides some troubleshooting advice for
@@ -17,14 +24,17 @@ formatters with one command.
 
 There are two main ways to run pre-commit:
 
-- Using its command line interface, i.e. calling the command `pre-commit` in a
+- Use the command line interface, i.e. call the command `pre-commit` in a
   terminal. This calls the Python executable directly, and allows you to
   customize pre-commit's behavior using a number of
-  [command line options](https://pre-commit.com/#cli)
-- Installing the checks as git hooks, so that they run every time you run
-  `git commit` in the repo. This method does not allow the same flexibility as
-  the command line interface, but it means that pre-commit will run
-  automatically whenever you need it.
+  [command line options](https://pre-commit.com/#cli).
+- Install the checks as [git
+  hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks), so that
+  they run every time you run `git commit` in the repo. You can install these
+  hooks by running the command `pre-commit install` in a repo that contains a
+  `.pre-commit-config.yaml` file. This method does not offer as much
+  flexibility as the command line interface, but it means that pre-commit will
+  run automatically whenever you need it.
 
 ## How we use pre-commit
 
@@ -45,6 +55,34 @@ and on **automated GitHub workflows** (i.e. on "continuous integration", or "CI"
     which hooks to run
   - The workflow runs on every commit to the main branch or to an open pull request
   - If any hooks fail, the workflow fails, alerting the code author to the problem
+
+## Installing pre-commit
+
+Confusingly, pre-commit uses the term "install" to describe the process of
+configuring a local repo to run pre-commit hooks automatically on each commit.
+This means that when we say "install pre-commit", there are two different
+operations we might be referring to:
+
+1. Installing the `pre-commit` Python package itself, which does not cause
+   pre-commit hooks to run automatically.
+    - For this type of installation, run `uv tool install pre-commit` in
+      a terminal. You can run this command in any working directory, because
+      it installs the package globally.
+    - You only need to run this command once, and then the `pre-commit`
+      command will always be available to you whenever you open a terminal
+      session.
+2. Installing git hooks in a repo using `pre-commit install`, which you can
+   only do if you have already installed the `pre-commit` Python package, and
+   which will cause git to run pre-commit hooks every time you commit code to
+   the repo.
+    - For this type of installation, run `pre-commit install` in a repo
+      containing a `.pre-commit-config.yaml` file.
+    - You need to run this command every time you clone a new repo.
+
+New Data Team members should make sure to install the `pre-commit` package
+by running `uv tool install pre-commit` during your onboarding. Then,
+install git hooks whenever you clone a new repo by running `pre-commit install`
+with your working directory set to that repo.
 
 ## Troubleshooting
 
