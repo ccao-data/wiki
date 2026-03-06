@@ -23,6 +23,7 @@
 * [Issue a certificate for the Data team server](How-To/Issue-a-certificate-for-the-data-team-server.md)
 * [Create a New Residential Feature](How-To/Create-a-New-Residential-Feature.md)
 * [Add Columns to Open Data Assets](How-To/Add-columns-to-an-existing-open-data-asset.md)
+* [Use pre-commit to Lint and Format Your Code](How-To/Use-pre-commit-to-lint-and-format-your-code.md)
 
 ### Standard Operating Procedures (SOPs)
 
