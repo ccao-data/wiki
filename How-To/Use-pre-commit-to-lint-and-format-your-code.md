@@ -113,10 +113,9 @@ hooks. The exact cause is unclear (see [this GitHub
 issue](https://github.com/lorenzwalthert/precommit/issues/602) for discussion),
 but avoiding RStudio's terminal pane resolves the issue.
 
-Regardless of the root cause, we have found that it is best to avoid running
-the `pre-commit` command in an RStudio terminal pane. If you need to run the
-`pre-commit` command directly, use a terminal session in a dedicated terminal
-app, or open a terminal pane in a different editor like Positron or VSCode.
+If you need to run the `pre-commit` command directly, use a terminal session
+in a dedicated terminal app, or open a terminal pane in a different editor
+like Positron or VSCode.
 
 > [!NOTE]
 > This problem should only affect users running the `pre-commit` command
