@@ -16,7 +16,7 @@ Per Illinois statute, 288s expire after 4 years or until the next assessment cyc
 
 #### Pre-iasWorld
 
-Prior to the switch over to iasWorld, 288s worked by storing any updated property characteristics in a separate file/row from the main set of characteristics. When a 288 expired, these updated characteristics were automatically rolled into the main set of characteristics. A sample 288 might have looked something like:
+Prior to the switchover to iasWorld, 288s worked by storing any updated property characteristics in a separate file/row from the main set of characteristics. When a 288 expired, these updated characteristics were automatically rolled into the main set of characteristics. A sample 288 might have looked something like:
 
 | PIN        | TAX_YEAR | TOWN    | UPLOAD_DATE    | SQFT_BLD    | ROOMS    | EXT_WALL    |
 |------------|----------|---------|----------------|-------------|----------|-------------|
