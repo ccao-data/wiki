@@ -45,7 +45,7 @@ HIEs are no longer "rolled" into DWELDAT after they expire. Now, characteristics
 
 288 data is currently used in three different contexts.
 
-1. Expiring 288s permanently update property characteristics data at the end of each year. This happens (mostly) automatically and is handled by the Valuations department. In certain cases, such as modeling future years or displaying public characteristic information, it can be beneficial to manually update property characteristics as if certain 288s are expired. This process will be sunset once all legacy HIEs have expired in ***2026***.
+1. Expiring 288s permanently update property characteristics data at the end of each year. This happens (mostly) automatically and is handled by the Valuations department. In certain cases, such as modeling future years or displaying public characteristic information, it can be beneficial to manually update property characteristics as if certain 288s are expired. ***This process will be sunset once all legacy HIEs have expired in 2026***.
 
 2. 288 data is used to update characteristics for sales of parcels with legacy HIEs that have not yet expired for modeling or performing sales ratio studies. This is because a property's sale price during this timeframe will reflect the value of its *actual* characteristics (i.e. those stored by the 288), not the value of the frozen characteristics used for assessment. When training [the model](https://github.com/ccao-data/model-res-avm) and evaluating its performance, training data is updated to include 288 characteristic updates for legacy HIEs.
 
