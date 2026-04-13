@@ -32,7 +32,7 @@ A list of which characteristics were additive and which were replacements is ava
 
 #### iasWorld
 
-After the switchover to iasWorld handling of HIEs, HIEs are handled differently. HIEs now live in two tables, ADDN and OBY. In order to isolate HIEs in either table, invoke the conditions below:
+HIEs are handled differently after the switchover to iasWorld. HIEs now live in two tables, ADDN and OBY. In order to isolate HIEs in either table, invoke the conditions below:
 
 | table | conditions  | can be joined to DWELDAT by card | HIE start date | HIE end date |
 |-------|-------------|----------------------------------|----------------|--------------|
