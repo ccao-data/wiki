@@ -37,7 +37,7 @@ After the switchover to iasWorld handling of HIEs, HIEs are handled differently.
 | table | conditions  | can be joined to DWELDAT by card | HIE start date | HIE end date |
 |-------|-------------|----------------------------------|----------------|--------------|
 | ADDN  | lline > 0   | Yes                              | userval1       | userval2     |
-| OBY   | class = 288 | Not currently                    | user10         | user14       |
+| OBY   | class = 288 | Not yet                          | user10         | user14       |
 
 HIEs are no longer "rolled" into DWELDAT after they expire. Now, characteristics in DWELDAT are automatically updated when the HIE is created in iasWorld according to whether the characteristic is replaced or added as outlined above. HIE start and end dates are *inclusive* - a parcel's AV will still be decreased by the amount of the HIE during its end year.
 
