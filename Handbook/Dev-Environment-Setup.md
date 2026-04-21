@@ -35,12 +35,14 @@ laptop:
 
 Some of the following tools require [`sudo`](https://en.wikipedia.org/wiki/Sudo)
 to install. If `sudo` is required, the tool command listed below will
-include it. Using `sudo` will prompt you to input your WSL user password, which
+include it.
+
+Using `sudo` will prompt you to input your WSL user password, which
 should be the same as your Active Directory user password if you just received
 your laptop. If you are using an old laptop on which you have already changed
 your Active Directory password at least once, however, your WSL user password
 will be the same as the Active Directory password you had set whenever WSL was
-first installed on your machine. If you're having trouble remembering your
+first installed on your laptop. If you're having trouble remembering your
 password, reach out to a senior staff member on the Data Team.
 
 Many of these tools require WSL to install, so make sure IT has installed the
@@ -51,7 +53,17 @@ correct version of WSL for you before you start installing these tools.
 These tools are common across Data Team projects, so all Data Team members
 should install them.
 
-These tools must be installed in a WSL shell. The easiest way to open a
+These tools must be installed in a WSL shell. We recommend you do this in one
+of two ways:
+
+- Open the `WSL` app on your laptop to launch a WSL shell
+  - If you are comfortable working in a terminal separate from your code
+    editor, you can also configure the built-in Terminal app to launch WSL
+    shells by default
+- By connecting Positron to WSL in the Remote menu and opening the terminal
+  pane
+
+Once you have a WSL shell open, install the following tools:
 
 - [Python](https://www.python.org/) and [pip](https://pip.pypa.io/en/stable/):
 
@@ -104,22 +116,22 @@ rm quarto.deb
 
 ```bash
 sudo apt install \
-  # Required for R `curl` package
-  libcurl4-openssl-dev \
-  # Required for R `openssl` package
-  libssl-dev \
-  # Required for R `xml2` package
-  libxml2-dev \
-  # Required for R `git2r` package
-  libgit2-dev \
-  # Required for R `pdftools` package
-  libpoppler-cpp-dev \
-  # Required for R `protolite` package
-  libprotobuf-dev protobuf-compiler \
-  # Geospatial packages required for R `sf` package
-  gdal-bin libudunits2-dev libgdal-dev libgeos-dev libproj-dev libsqlite3-dev \
-  # Graphic devices required for tidyverse
-  libpng-dev libfontconfig1-dev libfreetype6-dev \
+    # Required for R `curl` package
+    libcurl4-openssl-dev \
+    # Required for R `openssl` package
+    libssl-dev \
+    # Required for R `xml2` package
+    libxml2-dev \
+    # Required for R `git2r` package
+    libgit2-dev \
+    # Required for R `pdftools` package
+    libpoppler-cpp-dev \
+    # Required for R `protolite` package
+    libprotobuf-dev protobuf-compiler \
+    # Geospatial packages required for R `sf` package
+    gdal-bin libudunits2-dev libgdal-dev libgeos-dev libproj-dev libsqlite3-dev \
+    # Graphic devices required for tidyverse
+    libpng-dev libfontconfig1-dev libfreetype6-dev \
 ```
 
 - Install the AWS CLI and set it up per [our
@@ -139,9 +151,8 @@ uv tool install pre-commit
 
 ### Optional tools
 
-These tools are only used in specific Data Team projects, so Data Team members
-do not need to install them unless they are responsible for maintaining that
-project:
+These tools are only used in specific Data Team projects, so you do not need
+to install them unless they are responsible for maintaining that project.
 
 - [Terraform](https://developer.hashicorp.com/terraform) (only used in
   [`aws-infrastructure`](https://github.com/ccao-data/aws-infrastructure/)):
@@ -176,7 +187,7 @@ sudo apt install default-jdk
 - [`jq`](https://jqlang.org/) (only used in a handful of GitHub workflows for
   projects like
   [`data-architecture`](https://github.com/ccao-data/data-architecture/), so
-  you only need it if you need to debug something it's doing in those
+  you only need it if you need to debug a `jq` command in one of those
   workflows):
 
 ```bash
