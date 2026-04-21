@@ -9,15 +9,19 @@ Make sure IT has installed the latest version of the following tools on your
 laptop:
 
 - Whichever major web browser you prefer
-- [Positron](https://positron.posit.co/)
 - [WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
   - WSL may come pre-installed on your laptop, but it's possible that
     the pre-installed version is not the correct one. To check whether you
     have the correct version installed, see if you can search for `WSL` in the
-    Windows Search bar. If an app shows up in the search results and you can
+    Windows Search bar. If a WSL app shows up in the search results and you can
     open that app to load a terminal, then you have the correct version. If you
-    don't see the app, or if the app does not load a terminal, then you will
-    need to contact IT to install the latest version of WSL.
+    don't see the WSL app, or if the app does not load a terminal when you open
+    it, then you will need to contact IT to install the latest version of WSL.
+- [Positron](https://positron.posit.co/)
+  - We recommend you connect Positron to WSL so that you can take advantage of
+    all of the Linux packages that we will help you install below. To do this,
+    open [the Positron Remote menu](https://positron.posit.co/remote-ssh) and
+    select the dropdown option "Connect to WSL".
 
 ## Tools that you can install yourself
 
