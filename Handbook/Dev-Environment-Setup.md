@@ -1,7 +1,15 @@
 # Dev environment setup
 
-These are the tools we expect every Data Team member to have set up on their
-laptop, i.e. their dev environment.
+This doc provides installation instructions for all of the tools you will need
+if you want to write code on your CCAO-issued laptop. We call this set of tools
+your "dev environment", and we sometimes refer to your laptop as your "local"
+environment.
+
+Your local dev environment is separate from [the Data Team
+server](/How-To/Use-the-Data-team-server.md), though we also often use the
+server to write code. None of the steps below are necessary in order to set up
+your dev environment on the server, since we have already prepared the server
+for programming tasks.
 
 ## Tools that IT needs to install
 
