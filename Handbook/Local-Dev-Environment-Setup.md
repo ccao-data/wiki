@@ -1,9 +1,9 @@
-# Dev environment setup
+# Local dev environment setup
 
 This doc provides installation instructions for all of the tools you will need
 if you want to write code on your CCAO-issued laptop. We call this set of tools
-your "dev environment", and we sometimes refer to your laptop as your "local"
-environment.
+your "dev environment", and we refer to it as a "local" environment since it
+exists on your laptop instead of a remote server.
 
 Your local dev environment is separate from [the Data Team
 server](/How-To/Use-the-Data-team-server.md), though we also often use the
