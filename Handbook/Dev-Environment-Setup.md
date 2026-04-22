@@ -33,17 +33,23 @@ laptop:
 
 ## Tools that you can install yourself
 
-Some of the following tools require [`sudo`](https://en.wikipedia.org/wiki/Sudo)
-to install. If `sudo` is required, the tool command listed below will
-include it.
+The instructions below will help you install tools that _don't_ require
+intervention from IT.
+
+### A few notes before you begin
+
+Some of the following tools require using the command
+[`sudo`](https://en.wikipedia.org/wiki/Sudo) in order to authorize your OS
+to perform the installation. If `sudo` is required to install a tool, then the
+tool command listed below will include it.
 
 Using `sudo` will prompt you to input your WSL user password, which
 should be the same as your Active Directory user password if you just received
-your laptop. If you are using an old laptop on which you have already changed
-your Active Directory password at least once, however, your WSL user password
-will be the same as the Active Directory password you had set whenever WSL was
-first installed on your laptop. If you're having trouble remembering your
-password, reach out to a senior staff member on the Data Team.
+your laptop. If you are using an old laptop, and you've already changed your
+Active Directory password at least once on that laptop, then your WSL user
+password will be the same as the Active Directory password that was active
+whenever IT first installed WSL on your laptop. If you're having trouble
+remembering your password, reach out to a senior staff member on the Data Team.
 
 Many of these tools require WSL to install, so make sure IT has installed the
 correct version of WSL for you before you start installing these tools.
@@ -56,28 +62,39 @@ should install them.
 These tools must be installed in a WSL shell. We recommend you do this in one
 of two ways:
 
-- Open the `WSL` app on your laptop to launch a WSL shell
-  - If you are comfortable working in a terminal separate from your code
-    editor, you can also configure the built-in Terminal app to launch WSL
-    shells by default
-- By connecting Positron to WSL in the Remote menu and opening the terminal
-  pane
+- **If you prefer using the terminal pane in your code editor of choice**:
+  Connect your code editor to WSL and open a terminal pane. In Positron, you
+  can do this by opening [the Remote
+  menu](https://positron.posit.co/remote-ssh), selecting the WSL option, and
+  then opening the terminal pane (`View > Terminal`).
+- **If you prefer using a dedicated terminal app**: Open the `WSL` app on
+  your laptop to launch a WSL shell.
+  - If you prefer working in a terminal separate from your code editor, you can
+    also take this opportunity to configure the built-in Windows Terminal app to
+    launch WSL shells by default. See [the docs for configuring Windows
+    Terminal](https://learn.microsoft.com/en-us/windows/terminal/install).
+    Ignore any instructions related to installing Windows Terminal,
+    since it should already be pre-installed on your laptop. (Feel free to skip
+    this configuration step if you prefer to work in the terminal pane in your
+    code editor.)
 
-Once you have a WSL shell open, install the following tools:
+Once you have a WSL shell open, run the following commands to install mandatory
+tools:
 
-- [Python](https://www.python.org/) and [pip](https://pip.pypa.io/en/stable/):
+- Install [Python](https://www.python.org/) and
+  [pip](https://pip.pypa.io/en/stable/):
 
 ```bash
 sudo apt install python3-pip
 ```
 
-- [uv](https://docs.astral.sh/uv/):
+- Install [uv](https://docs.astral.sh/uv/) for Python package management:
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-- [R](https://cran.r-project.org/bin/linux/ubuntu/fullREADME.html):
+- Install [R](https://cran.r-project.org/bin/linux/ubuntu/fullREADME.html):
 
 ```bash
 # 1. Download the CRAN signing key and output it to a file on your keyring
@@ -90,10 +107,19 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/cran-
 sudo apt update && sudo apt install r-base r-base-dev
 ```
 
-- [Quarto](https://quarto.org/):
+- Install [Quarto](https://quarto.org/) for authoring documents that run R or
+  Python code
+  - Note that there are two preliminary steps here:
+    1. Find the link to the latest version of the `.deb` package file for
+       Ubuntu on [the Quarto Downloads
+       page](https://quarto.org/docs/download/index.html), then substitute that
+       URL into command #1 below
+    2. Copy the SHA-256 hash file hash for the `.deb` package that you
+       downloaded, which should be displayed in the table on the Downloads
+       page, and note it for comparison to the output of command #2 below
 
 ```bash
-# 1. Download `.deb` file from the official Quarto site:
+# 1. Download the `.deb` package file from the official Quarto site:
 #    https://quarto.org/docs/download/index.html
 #    The exact link will change depending on the latest Quarto version, so you
 #    will need to update the variable definition below to set it to the correct
@@ -104,15 +130,17 @@ wget -qO quarto.deb "https://<insert-deb-file-url-here>"
 #    Quarto site (linked above)
 sha256sum quarto.deb
 
-# 3. If the hashes match, install the package
+# 3. If the hashes match, install the package; if hashes don't match, contact
+#    a senior Data Team member for assistance, since the mismatch might indicate
+#    a malicious package
 sudo dpkg -i quarto.deb
 
 # 4. Remove the file you downloaded, now that `dpkg` has installed it
 rm quarto.deb
 ```
 
-- A number of system packages required for R development (copy and paste
-  this whole block):
+- Install a number of system packages that are necessary for R development
+  (you can copy and paste this whole block to preserve the line breaks):
 
 ```bash
 sudo apt install \
@@ -131,13 +159,15 @@ sudo apt install \
     # Geospatial packages required for R `sf` package
     gdal-bin libudunits2-dev libgdal-dev libgeos-dev libproj-dev libsqlite3-dev \
     # Graphic devices required for tidyverse
-    libpng-dev libfontconfig1-dev libfreetype6-dev \
+    libpng-dev libfontconfig1-dev libfreetype6-dev
 ```
 
 - Install the AWS CLI and set it up per [our
   instructions](How-To/Setup-the-AWS-Command-Line-Interface-and-Multi-factor-Authentication.md):
 
 ```bash
+# Install the tools using these commands, then refer to the docs link above for
+# the necessary configuration steps
 uv tool install awscli
 uv tool install aws-mfa
 ```
@@ -146,15 +176,63 @@ uv tool install aws-mfa
   instructions](How-To/Use-pre-commit-to-lint-and-format-your-code.md#installing-pre-commit):
 
 ```bash
+# Install the tools using these commands, then refer to the docs link above for
+# the necessary configuration steps
 uv tool install pre-commit
+```
+
+### Mandatory R configurations
+
+The following configs will help you work with our R projects.
+
+- Create an `~/.Renviron` file with the following contents to use the correct
+  AWS settings when [querying data from our AWS Athena data
+  warehouse](https://github.com/ccao-data/wiki/blob/master/How-To/Connect-to-AWS-Resources.md#r):
+
+```env
+AWS_REGION=us-east-1
+AWS_ATHENA_S3_STAGING_DIR=s3://ccao-athena-results-us-east-1/
+```
+
+- Create a [GitHub personal access token
+  (PAT)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
+  and add it to `~/.Renviron` to use when installing R packages from GitHub
+  - **⚠️ GitHub PATs are sensitive and should be treated like passwords.** The
+    instructions below will give your token as few permissions as possible in
+    order to reduce the attack surface of the token, but you should still aim
+    to keep it private, and you should definitely avoid including it in code
+    that you push to GitHub.
+  - Start by [generating a classic personal access
+    token](https://github.com/settings/tokens/new). Select **only** the
+    `repo.public_repo` scope, hit "Generate token", and copy the PAT that
+    GitHub displays to you.
+  - Paste your PAT onto a new line in your `~/.Renviron` file:
+
+```env
+GITHUB_PAT="<paste-your-PAT-inside-these-quotes>"
+```
+
+- Create an `~/.Rprofile` file with the following `local()` call to instruct
+  renv to use the `cloud.r-project.org` CRAN mirror and the legacy lockfile
+  syntax:
+
+```R
+local({
+    # Set the CRAN repo
+    r <- getOption("repos")
+    r["CRAN"] <- "https://cloud.r-project.org"
+    options(repos = r)
+    # Enforce the less verbose (legacy) version of the renv lockfile syntax
+    options(renv.lockfile.version = 1)
+})
 ```
 
 ### Optional tools
 
 These tools are only used in specific Data Team projects, so you do not need
-to install them unless they are responsible for maintaining that project.
+to install them unless you are responsible for maintaining that project.
 
-- [Terraform](https://developer.hashicorp.com/terraform) (only used in
+- Install [Terraform](https://developer.hashicorp.com/terraform) (only used in
   [`aws-infrastructure`](https://github.com/ccao-data/aws-infrastructure/)):
 
 ```bash
@@ -164,28 +242,26 @@ wget -O - https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/sh
 # 2. Make a new apt source and configure it to use the signing key
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(grep -oP '(?<=UBUNTU_CODENAME=).*' /etc/os-release || lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
 
-# 3. Refresh the package registry and install R
+# 3. Refresh the package registry and install Terraform
 sudo apt update && sudo apt install terraform
 ```
 
-- [Git LFS](https://github.com/git-lfs/git-lfs/blob/main/INSTALLING.md) (only
-  used in [`ptaxsim`](https://github.com/ccao-data/ptaxsim/)):
+- Install [Git LFS](https://github.com/git-lfs/git-lfs/blob/main/INSTALLING.md)
+  (only used in [`ptaxsim`](https://github.com/ccao-data/ptaxsim/)):
 
 ```bash
-(. /etc/lsb-release &&
-curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh |
-sudo env os=ubuntu dist="${DISTRIB_CODENAME}" bash)
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo env os=ubuntu dist="$(grep -oP '(?<=UBUNTU_CODENAME=).*' /etc/os-release || lsb_release -cs)" bash
 ```
 
-- Java Development Kit, required for R `tabulapdf` package (only used in
-  [`ptaxsim`](https://github.com/ccao-data/ptaxsim/)):
+- Install the Java Development Kit, required for R `tabulapdf` package (only
+  used in [`ptaxsim`](https://github.com/ccao-data/ptaxsim/)):
 
 ```bash
 sudo apt install default-jdk
 ```
 
-- [`jq`](https://jqlang.org/) (only used in a handful of GitHub workflows for
-  projects like
+- Install [`jq`](https://jqlang.org/) (only used in a handful of GitHub
+  workflows for projects like
   [`data-architecture`](https://github.com/ccao-data/data-architecture/), so
   you only need it if you need to debug a `jq` command in one of those
   workflows):
@@ -194,51 +270,9 @@ sudo apt install default-jdk
 sudo apt install jq libjq-dev
 ```
 
-- [Hugo](https://gohugo.io/) (only used in
+- Install [Hugo](https://gohugo.io/) (only used in
   [`homeval`](https://github.com/ccao-data/homeval/)):
 
 ```bash
 sudo snap install hugo
-```
-
-### Configurations
-
-The following configs will help you work more productively:
-
-- Create an `~/.Renviron` file with the following contents to use our default
-  AWS settings:
-
-```env
-AWS_REGION=us-east-1
-AWS_ATHENA_S3_STAGING_DIR=s3://ccao-athena-results-us-east-1/
-```
-
-- Create a [GitHub personal access token
-  (PAT)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
-  and add it to `~/.Renviron` to use when installing R packages from GitHub:
-  - **⚠️ GitHub PATs are sensitive and should be treated like passwords.** We
-    will give your token as few permissions as possible to reduce the attack
-    surface, but you should still aim to keep it private and never publish it
-    in source code.
-  - Start by [generating a new classic personal access
-    token](https://github.com/settings/tokens/new). Select **only** the
-    `repo.public_repo` scope, hit "Generate token", and copy the PAT that
-    GitHub displays to you.  /p
-  - Paste your PAT onto a new line in your `~/.Renviron` file:
-
-```env
-GITHUB_PAT="<paste-your-PAT-here>"
-```
-
-- Create an `~/.Rprofile` file with the following contents:
-
-```R
-local({
-    # Set the CRAN repo
-    r <- getOption("repos")
-    r["CRAN"] <- "https://cloud.r-project.org"
-    options(repos = r)
-    # Enforce the less verbose version of the renv lockfile syntax
-    options(renv.lockfile.version = 1)
-})
 ```
