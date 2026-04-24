@@ -27,25 +27,25 @@ click **Next** again.
       request certificates at all. In either of these cases, reach out to IT
       to ask them to give you permissions to request certificates using the
       `CCAO WEB2` certificate template.
-7. On the **General** tab of the popup, make the friendly name the name of the server
+6. On the **General** tab of the popup, make the friendly name the name of the server
 `datascience.cookcountyassessor.com`.
-8. Switch to the **Subject** tab, under the `Subject name` field, select
+7. Switch to the **Subject** tab, under the `Subject name` field, select
 `Common name` and add a value of `datascience.cookcountyassessor.com`, then
 click the **Add >** button.
-9. Repeat the process of adding `Subject name` values for the following:
+8. Repeat the process of adding `Subject name` values for the following:
     - `Country`: US
     - `State`: Illinois
     - `Locality`: Chicago
     - `Email`: Email of whoever is making the cert
     - `Organization`: Cook County Assessor's Office
     - `Organization unit`: Data Department
-10. Under the `Alternative name` field, select `DNS` and add a value of
+9. Under the `Alternative name` field, select `DNS` and add a value of
 `datascience.cookcountyassessor.com`, then click the **Add >** button.
-11. Switch to the **Private Key** tab. Under **Key options**, check the box
+10. Switch to the **Private Key** tab. Under **Key options**, check the box
 for `Make private key exportable`.
-12. Hit **Apply** in the bottom right of the popup. Then click **Enroll** to
+11. Hit **Apply** in the bottom right of the popup. Then click **Enroll** to
 create the new certificate.
-13. Click **Finish** to return to the Certificate Manager. You should see
+12. Click **Finish** to return to the Certificate Manager. You should see
 your new certificate in the list.
 
 ## Export the certificate
