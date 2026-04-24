@@ -57,9 +57,9 @@ Now that the certificate is created, we need to export it for NGINX. To do so:
 2. Select `Yes, export the private key` option, then click **Next**.
 3. Select `Export all extended properties`. Leave all of the
 other options set to their defaults. Then, click **Next**.
-5. Select the `Password` option, enter an arbitrary strong password you'll
+4. Select the `Password` option, enter an arbitrary strong password you'll
 remember, then click **Next**.
-6. Select an export location using the filename `datascience.cookcountyassessor.com.pfx`,
+5. Select an export location using the filename `datascience.cookcountyassessor.com.pfx`,
 then click **Next**, then **Finish** to save the file.
 
 ## Disaggregate the certificate
@@ -93,22 +93,31 @@ You now have a signed certificate and private key file for use with NGINX.
 All that's left to do is to install them in the appropriate directory and set
 the correct permissions.
 
-1. Move the `.key`, `.pfx`, and `.crt` files you just created to
-`$NGINX_DIRECTORY/secrets`. Where `$NGINX_DIRECTORY` is wherever the CCAO's
-[nginx service](https://github.com/ccao-data/service-nginx) is running.
-2. Set the owner of the key and certificate files to root:
+1. Back up the existing `.key`, `.pfx`, and `.crt` files that are in
+`$NGINX_DIRECTORY/secrets`, where `$NGINX_DIRECTORY` is wherever the CCAO's
+[NGINX service](https://github.com/ccao-data/service-nginx) is running.
+    ```
+    export CURRENT_DATE=$(date '+%Y-%m-%d')
+    sudo mkdir $NGINX_DIRECTORY/secrets/old-$CURRENT_DATE/
+    sudo cp $NGINX_DIRECTORY/secrets/datascience.cookcountyassessor.com.pfx $NGINX_DIRECTORY/secrets/old-$CURRENT_DATE/
+    sudo cp $NGINX_DIRECTORY/secrets/datascience.cookcountyassessor.com.crt $NGINX_DIRECTORY/secrets/old-$CURRENT_DATE/
+    sudo cp $NGINX_DIRECTORY/secrets/datascience.cookcountyassessor.com.key $NGINX_DIRECTORY/secrets/old-$CURRENT_DATE/
+    ```
+2. Move the `.key`, `.pfx`, and `.crt` files you just created to
+`$NGINX_DIRECTORY/secrets/`, overwriting the old cert files you just backed up.
+3. Set the owner of the key and certificate files to root:
     ```
     sudo chown root:root $NGINX_DIRECTORY/secrets/datascience.cookcountyassessor.com.pfx
     sudo chown root:root $NGINX_DIRECTORY/secrets/datascience.cookcountyassessor.com.crt
     sudo chown root:root $NGINX_DIRECTORY/secrets/datascience.cookcountyassessor.com.key
     ```
-3. Set the permissions of the key and cert files to read-only for user:
+4. Set the permissions of the key and cert files to read-only for user:
     ```
     sudo chmod 600 $NGINX_DIRECTORY/secrets/datascience.cookcountyassessor.com.pfx
     sudo chmod 600 $NGINX_DIRECTORY/secrets/datascience.cookcountyassessor.com.crt
     sudo chmod 600 $NGINX_DIRECTORY/secrets/datascience.cookcountyassessor.com.key
     ```
-4. Restart NGINX using `docker compose`. In `$NGINX_DIRECTORY`:
+5. Restart NGINX using `docker compose`. In `$NGINX_DIRECTORY`:
     ```
     docker compose down
     docker compose up -d
