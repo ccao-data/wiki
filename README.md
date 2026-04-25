@@ -5,6 +5,7 @@
 * [Resources](Handbook/Resources.md)
 * [Glossary](Handbook/Glossary.md)
 * [Accounts](Handbook/Accounts.md)
+* [Local Dev Environment Setup](Handbook/Local-Dev-Environment-Setup.md)
 * [Not Public](Handbook/Not-Public.md)
 
 ### People and Onboarding

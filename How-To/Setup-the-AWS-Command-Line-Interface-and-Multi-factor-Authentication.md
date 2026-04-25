@@ -2,14 +2,16 @@ The AWS CLI allows users to interact directly with AWS services such S3, Athena,
 
 Our account setup requires multi-factor authentication (MFA) to use most services. The easiest way to setup MFA is using the third-party `aws-mfa` tool.
 
+The following instructions assume you are running commands in a Linux terminal, either on the server or in a WSL session on your laptop.
+
 ---
   
-1. Install the AWS command line interface using [the provided executable](https://aws.amazon.com/cli/) or `pip install awscli`, which allows users to store credentials, query Athena, move S3 objects, etc. The CLI on Windows can be accessed via PowerShell. On Linux or macOS it can be accessed via a standard terminal. If your intention is to connect to AWS via the Data team server, ensure that you are connected and logged in to the server first. 
+1. Install the AWS command line interface, which allows users to store credentials, query Athena, move S3 objects, etc: `uv tool install awscli`
 2. Log into the [AWS Console](https://ccao-data.signin.aws.amazon.com/console) and under your account select "My Security Credentials". Enable MFA, then create an access key. You'll need both the `Access Key ID`, the `Secret Access Key`, and the name of the `Assigned MFA Device`. Do not include `(Virtual)` when copying the name of the MFA device.
 3. In the command line run:
    - `aws configure` and enter your `Access Key ID`, `Secret Access Key`, region (`us-east-1`), and `json` for output.
-   - `pip install aws-mfa`
-4. Open your credentials file located at `~/.aws/credentials` on Linux or macOS, or at `C:\Users\$USERNAME\.aws\credentials` on Windows and rename `[default]` to `[default-long-term]`.
+   - `uv tool install aws-mfa`
+4. Open your credentials file located at `~/.aws/credentials` and rename `[default]` to `[default-long-term]`.
 5. Underneath `aws_secret_access_key` type `aws_mfa_device = $MFA_DEVICE` where `$MFA_DEVICE` is the previously copied `Assigned MFA Device` from the AWS Console. Save the file.
 6. In the command line, run `aws-mfa` and enter the current MFA token provided by your `Assigned MFA Device`.
 7. Note, this command will only store MFA credentials for 12 hours (unless the duration is explicitly changed when running `aws-mfa`).
