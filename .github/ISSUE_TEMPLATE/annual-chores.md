@@ -29,7 +29,7 @@ These chores must be completed once a year following the iasWorld rollover:
   [`appeal-worksheets/.Renviron`](https://github.com/ccao-data/process-appeal-worksheets/blob/main/appeal-worksheets/.Renviron)
     - Example PR: https://github.com/ccao-data/process-appeal-worksheets/pull/45
 - [ ] Update the scheduled task on the VM that runs daily IC reference file
-  export so that the command arguments
+  export so that the Python script filters for the current year of data
     - Full list of tasks:
       - Open a connection to the VM using the **Remote Desktop Connection**
         app
