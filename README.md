@@ -31,6 +31,7 @@
 * [Sales Ratio Studies](SOPs/Sales-Ratio-Studies.md)
 * [Desk Review](SOPs/Desk-Review.md)
 * [Open Data](SOPs/Open-Data.md)
+* [Create a New Annual Chores Checklist Issue](https://github.com/ccao-data/wiki/issues/new?template=annual-chores.md)
 
 ### Residential
 
