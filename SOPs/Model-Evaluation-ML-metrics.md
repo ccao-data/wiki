@@ -87,7 +87,7 @@ Note that RMSE works best on normally distributed data, and our data is generall
 
 **RMSE interpretability:**  An additional reason to use RMSE is its interpretability.  RMSE is on the same scale as your outcome value, and can be interpreted with reference to the mean, median, and standard deviation of your sample data (either train or test set).  Since RMSE is structurally similar to measures of variability, such as standard deviation (the average distance of sample or population values from the mean), you can often interpret RMSE in relation to SD.  (E.g. If one thinks of the mean as the simplest "model" of a distribution, then one can interpret the standard deviation in a manner similar to RMSE- the average deviation of your observations from your mean.  More complex+accurate models should have an RMSE lower than the standard deviation of your test data).  This insight is also useful for model comparison, as the standard deviation can be used as a baseline, or scale, with which to benchmark RMSE values from candidate models.  (E.g. if two candidate models differ by some magnitude of RMSE  how "large" or "trivial" is that difference, relative to the underlying standard deviation of your sample, or test data?)
 
-See here for further discussion: https://stats.stackexchange.com/questions/242787/how-to-interpret-root-mean-squared-error-rmse-vs-standard-deviation  - more formally, here: Shmueli, G., Bruce, P. C., Stephens, M., & Patel, N. R. (2016). Data Mining for Business Analytics: Concepts, Techniques, and Applications with JMP Pro (3rd Edition). Wiley.
+See [here for further discussion](https://stats.stackexchange.com/questions/242787/how-to-interpret-root-mean-squared-error-rmse-vs-standard-deviation)  - more formally, here: Shmueli, G., Bruce, P. C., Stephens, M., & Patel, N. R. (2016). Data Mining for Business Analytics: Concepts, Techniques, and Applications with JMP Pro (3rd Edition). Wiley.
 
 ---
 
@@ -139,12 +139,9 @@ Finally:  If your sample is not a good match for your population, good train-tes
 
 ### Assessment Metrics
 
-Interpretations and acceptable ranges for assessment metrics can be found here:
+Interpretations and acceptable ranges for assessment metrics can be found in our [companion sale-ratio-studies wiki](https://github.com/ccao-data/wiki/blob/master/SOPs/Sales-Ratio-Studies.md)
 
-https://github.com/ccao-data/wiki/blob/master/SOPs/Sales-Ratio-Studies.md
-
-longer descriptions here: Mass Appraisal For The Masses: The Basics - by Lars Doucet
-https://progressandpoverty.substack.com/p/mass-appraisal-for-the-masses-the
+longer descriptions here: [Mass Appraisal For The Masses: The Basics - by Lars Doucet](https://progressandpoverty.substack.com/p/mass-appraisal-for-the-masses-the)
 
 ---
 
