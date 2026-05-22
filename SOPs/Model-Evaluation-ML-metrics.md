@@ -1,6 +1,6 @@
 # Model Validation, Interpretation, and Testing Guidelines
 
-After running your model (either with a given set of historic parameters (e.g. those from past years) or with parameters found via cross-validation), You will need to interpret the results.  To do so, you will need to first assess how well the sample data (sales) matches the population (buildings to be assessed) training data, then note any mix of data, practical, or real-world factors that may be impacting your model performance (novel market or time trends?), and finally interpret the formal model performance statistics to select the best model (where best means the most accurate + generalizable model, that conforms to IAAO standards).
+After running your model (either with a given set of historic parameters (e.g. those from past years) or with parameters found via cross-validation), You will need to interpret the results.  To do so, you will need to first assess how well the sample data (sales) matches the population (buildings to be assessed), then note any mix of data, practical, or real-world factors that may be impacting your model performance (novel market or time trends?), and finally interpret the formal model performance statistics to select the best model (where best means the most accurate + generalizable model, that conforms to IAAO standards).
 
 ---
 
