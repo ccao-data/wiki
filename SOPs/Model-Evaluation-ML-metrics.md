@@ -28,7 +28,7 @@ Ways that we test for differences between the sample and the population (and som
 
 ### A. Balance Tests
 
-*(See the "Statistical Tests" section of the model performance report.)*  In a perfectly matched sample, no feature would predict inclusion/exclusion of a property in the sales-sample. Any feature that predicts inclusion in the sales set at a level greater than chance (statistical significance) suggests that this feature is over-or under-represented in the sample and will likely bias your results.  (This is especially the case for features that also turn out to have high shap values in your results).  The p value (for each feature in the report) tells you that a feature predicts inclusion in the sample at a level greater than expected-due-to-chance, while the Beta value gives you a relative sense of the weight (importance) and direction (include vs exclude) of that feature.  (In our report, asterisks, represent statistically significant predictors).
+*(See the "Statistical Tests" section of the model performance report.)*  In a perfectly matched sample, no feature would predict inclusion/exclusion of a property in the sales-sample. Any feature that predicts inclusion in the sales set at a level greater than chance (statistical significance) suggests that this feature is over-or under-represented in the sample and will likely bias your results.  (This is especially the case for features that also turn out to have high shap values in your results).  To check this, we run a simple logistic regression predicting the likelihood-of-a-sale, given a property's features. The resulting p values (for each feature in the report) tells you that a feature predicts inclusion in the sample at a level greater than expected-due-to-chance, while the Beta value gives you a relative sense of the weight (importance) and direction (include vs exclude) of that feature.  (In our report, asterisks, represent statistically significant predictors).  (Low p-values suggest statistical significance, high magnitudes for the Betas suggest a large impact).  When a feature is predictive of inclusion in the sample, this means that your sample is likely biased towards properties with this feature, and may thus value these, or other properties inaccurately.
 
 - **a. Caveats/Real world observations:**  Our 2026 reports indicate that there may be some imbalance in our sample (see, for example, # of bedrooms, baths, various ACS5 values).  We currently don't correct for this.
 
@@ -38,7 +38,7 @@ Ways that we test for differences between the sample and the population (and som
 
 ### B. Visual Inspection
 
-See empirical distributions on the performance report.  The distribution of a feature in the sales-set should visually match those in the population set.  (Note:  We only calculate this at the full sample level, it may differ at the township or neighborhood level).  If needed can apply a KS test to see that the feature distributions (between sample and population) are the same.
+See empirical distributions on the performance report.  The distribution of a feature in the sales-set should visually match those in the population set.  (Note:  We only calculate this at the full sample level, it may differ at the township or neighborhood level, and perhaps ought to be investigated further).  If needed can apply a KS test to see that the feature distributions (between sample and population) are the same.
 
 ### C. Non-Missing at Random
 
