@@ -12,7 +12,7 @@ novel market or time trends), and finally interpret the formal model performance
    - d. Domain specific approach
 
 2. Noting any real-world changes that may impact your model, and/or interactions between data and model that may effect your results.  (Model drift, data drift).
-3. Interpreting Model performance (evaluating machine learning and assessment metrics).
+3. Interpreting Model performance (using machine learning and assessment metrics).
 
 ---
 
