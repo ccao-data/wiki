@@ -93,7 +93,7 @@ See [here for further discussion](https://stats.stackexchange.com/questions/2427
 
 #### mDape (Median Absolute Percentage Error)
 
-*(used in [Zillow model](https://www.zillow.com/zestimate/), discussion [here](https://stats.stackexchange.com/questions/596324/is-median-absolute-percentage-error-useless#:~:text=Percentage%20Error%20Asymmetry:%20A%20significant%20drawback%20of,same%20factor%20yields%20only%20a%2050%25%20error)*
+*(used in [Zillow model](https://www.zillow.com/zestimate/), discussion [here](https://stats.stackexchange.com/questions/596324/is-median-absolute-percentage-error-useless#:~:text=Percentage%20Error%20Asymmetry:%20A%20significant%20drawback%20of,same%20factor%20yields%20only%20a%2050%25%20error) )*
 
 
 mDape is a useful sanity check for our models.  Since mDape is a median (of the absolute percentage error of each observation in the test set, (abs((actual-forecast)/actual)*100) ), it is more robust to outliers than other measures, and thus complements RMSE.  Note, we shouldn't use this as an optimization metric (as it is not a proper scoring rule, and treats over-forecasts and underforecasts assymetrically)**, but it is useful for comparing model performance in manner that is more robust to outliers (since it is a median).  For example, in a case where two models differ slightly in their RMSE, we may accept a model with a slightly higher RMSE if it has a lower mDape than its competitor model (This arrangement would likely signal that the other "low RMSE" model might simply be fitting toward some high value outliers, at the expense of the median property).
