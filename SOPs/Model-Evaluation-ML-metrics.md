@@ -44,7 +44,7 @@ See empirical distributions on the performance report.  The distribution of a fe
 
 "Non-missing at random" means that some feature (or a particular value of a feature) is missing in a way that's correlated with your outcome variable, or some other variable in the dataset.  This can sometimes indicate systemic under-sampling.  In our case, it is somewhat controlled for by the fact that lgbm actually incorporates Nulls as a predictor*, because of this, we currently don't track correlations of nulls as rigorously as we otherwise might, though you can get a sense of the percentage of nulls-by-feature by looking at the "Missingness" heading in the Feature report.
 
-\* [lgbm handling missing values](https://medium.com/@andrywmarques/how-lgbm-deals-with-missing-values-bd361636357f. https://coder-wang-uspsa.medium.com/how-do-xgboost-lightgbm-and-catboost-handle-missing-features-e541da94d528)
+\* ( [lgbm handling missing values](https://medium.com/@andrywmarques/how-lgbm-deals-with-missing-values-bd361636357f). see [also](https://coder-wang-uspsa.medium.com/how-do-xgboost-lightgbm-and-catboost-handle-missing-features-e541da94d528) )
 
 ### D. A Quick Domain Specific Sanity Check
 
