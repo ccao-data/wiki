@@ -156,6 +156,10 @@ sudo apt install \
     libpoppler-cpp-dev \
     # Required for R `protolite` package
     libprotobuf-dev protobuf-compiler \
+    # Required for R `fs` package
+    libuv1-dev \
+    # Required for R `textshaping` package
+    libharfbuzz-dev libfribidi-dev \
     # Geospatial packages required for R `sf` package
     gdal-bin libudunits2-dev libgdal-dev libgeos-dev libproj-dev libsqlite3-dev \
     # Graphic devices required for tidyverse
