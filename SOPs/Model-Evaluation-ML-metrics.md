@@ -4,7 +4,7 @@ After running your model (either with a given set of historic parameters (e.g. t
 novel market or time trends), and finally interpret the formal model performance statistics to select the best model (where best means the most accurate + generalizable model, that conforms to IAAO standards).
 
 ---
-
+## This Guide Covers
 1. Assessing how representative your sales (sample) are, relative to the population (all buildings-to-be-assessed).
    - a. Balance tests
    - b. Visual inspection
