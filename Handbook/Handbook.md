@@ -10,6 +10,18 @@ The Data Department's primary responsibilities are to:
 
 The rationale for having a separate data department is similar to that of the private sector: data, apart from the IT systems that store it, is a valuable enterprise asset and must be managed accordingly. This is particularly true for the CCAO, where data is absolutely critical to the mission of the agency.
 
+# CCAO Mission Support
+
+The [mission](https://www.cookcountyassessoril.gov/cook-county-assessors-office-mission-and-values) of the Cook County Assessor’s Office is to deliver accurate and transparent assessments of all residential and commercial properties. We serve every community in the County through ethical stewardship within the property tax system. 
+
+In service of that mission, the Data team has worked with the Valuations department to create and maintain numerous tools and processes. The below table shows how our tools enable mission-critical work for the Valuations department at multiple stages of the assessment cycle.
+
+| Assessment stage | Before Tax Year begins | CCAO “1st Pass” Mailing during Tax Year | CCAO “2nd Pass” Appeal Results during Tax Year | BOR “Final” Appeal Results during Tax Year | CCAO Certificates of Error (for prior tax years) |
+| --- | --- | --- | --- | --- | --- |
+| **Description** | CCAO Valuations analysts review permits and sales. | CCAO Valuations analysts review the model’s outputs and finalize initial assessments. | CCAO Valuations analysts make appeal decisions. | Board Of Review (BOR) analysts make appeal decisions. | CCAO staff make Certificate of Error decisions for prior tax years. |
+| **Data’s Outputs** | On demand, we provide cleaned excel workbooks of [permits](https://github.com/ccao-data/extract-permits) and residential [sales](https://github.com/ccao-data/model-sales-val) for staff to review and upload. Sale review helps refine the data used to train the model. | Annually when the model is finalized, we provide outputs from the [residential](https://github.com/ccao-data/model-res-avm/) and [condo](https://github.com/ccao-data/model-condo-avm/) models, [Home Value Reports](https://www.cookcountyassessoril.gov/home-value-report) (see [repo](https://github.com/ccao-data/homeval/)), and an updated [Housing Market Tracker](https://www.cookcountyassessoril.gov/cook-county-housing-market-tracker). On demand as Valuations reviews townships before they are mailed, we produce [assessment equity analyses](https://github.com/ccao-data/recurring-data-requests/tree/main/provisional-ratio-curves) and [QC reports](https://github.com/ccao-data/data-architecture/blob/master/dbt/README.md#qc-reports). | On an automated schedule, our [appeal worksheets](https://github.com/ccao-data/process-appeal-worksheets) aggregate data into single-docket worksheets to support Valuations appeal decisions. On demand, we also produce [QC reports](https://github.com/ccao-data/data-architecture/blob/master/dbt/README.md#qc-reports). | On demand, we supply Board of Review [appeal packets](https://github.com/ccao-data/process-appeal-worksheets) that compile CCAO valuations data in the BOR’s requested format. | On an automated schedule, our [Certificate of Error workbooks](https://github.com/ccao-data/process-appeal-worksheets) support CCAO valuations Certificate of Error decisions. Certificates of Error are processed during the calendar year, and affect prior Tax Years. |
+
+
 # Mission, Vision, and Values
 
 See [Mission, Vision, and Values](Mission-Vision-Values.md)
