@@ -123,8 +123,7 @@ Further reading — Bias Variance Trade-off:
 
 ### Assessment Metrics
 
-Interpretations and acceptable ranges for assessment metrics can be found here:
-https://github.com/ccao-data/wiki/blob/master/SOPs/Sales-Ratio-Studies.md
+Interpretations and acceptable ranges for assessment metrics can be found [here.](https://github.com/ccao-data/wiki/blob/master/SOPs/Sales-Ratio-Studies.md)
 
 Longer descriptions here: [Mass Appraisal For The Masses: The Basics — by Lars Doucet](https://www.google.com/search?q=Mass+Appraisal+For+The+Masses+The+Basics+Lars+Doucet)
 
