@@ -91,7 +91,7 @@ As an example of the interplay between RMSE and assessment metrics, suppose we t
 
 Further discussion [here](https://stats.stackexchange.com/questions/242787/how-to-interpret-root-mean-squared-error-rmse-vs-standard-deviation) — more formally, here: [Shmueli, G., Bruce, P. C., Stephens, M., & Patel, N. R. (2016). *Data Mining for Business Analytics: Concepts, Techniques, and Applications with JMP Pro* (3rd Edition). Wiley.](https://www.amazon.fr/Data-Mining-Business-Analytics-Applications/dp/1118877438/)
 
-#### mDape (Median Absolute Percentage Error)
+MdAPE
 
 [Zillow's performance metric of choice](https://stats.stackexchange.com/questions/596324/is-median-absolute-percentage-error-useless#:~:text=Percentage%20Error%20Asymmetry:%20A%20significant%20drawback%20of,same%20factor%20yields%20only%20a%2050%25%20error). Since mDape is a [median-based metric](https://en.wikipedia.org/wiki/Mean_absolute_percentage_error), it is more robust to outliers than other measures and complements RMSE. We shouldn't use mDape as an optimization metric as it is not a proper scoring rule, and treats over-forecasts and underforecasts asymmetrically, but it is useful for comparing model performance in a manner that is more robust to outliers. For example, in a case where two models differ slightly in their RMSE, we may accept a model with a slightly higher RMSE if it has a lower mDape than its competitor. This arrangement would likely signal that the other "low RMSE" model might simply be fitting toward some high value outliers at the expense of the median property.
 
