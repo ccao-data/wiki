@@ -42,7 +42,7 @@ See empirical distributions on the performance report. The distribution of a fea
 
 #### III. Non-Missing at Random
 
-"Non-missing at random" means that some feature or a particular value of a feature is missing in a way that's correlated with the outcome variable or another variable in the dataset. This can indicate systemic undersampling. In our case, it is somewhat controlled for by the fact that lgbm actually incorporates missing values as a predictor\*. Because of this we currently don't track correlations of nulls as rigorously as we otherwise might, though you can get a sense of the percentage of missingness for each feature by looking at the "Missingness" heading in the Feature report.
+"Missing not at random" means that some feature or a particular value of a feature is missing in a way that's correlated with the outcome variable or another variable in the dataset. This can indicate systemic undersampling. In our case, it is somewhat controlled for by the fact that lgbm actually incorporates missing values as a predictor\*. Because of this we currently don't track correlations of nulls as rigorously as we otherwise might, though you can get a sense of the percentage of missingness for each feature by looking at the "Missingness" heading in the Feature report.
 
 > \* See: [How does LGBM deal with missing values?](https://www.google.com/search?q=how+does+lgbm+deal+with+missing+values) | [How do XGBoost, LightGBM, and CatBoost Handle Missing Features?](https://www.google.com/search?q=how+do+xgboost+lightgbm+catboost+handle+missing+features)
 
