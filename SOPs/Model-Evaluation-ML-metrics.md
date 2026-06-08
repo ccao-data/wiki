@@ -48,7 +48,9 @@ See empirical distributions on the performance report. The distribution of a fea
 
 #### IV. Domain Specific Sanity Check
 
-Compare year-over-year changes in assessed values for sold-and-unsold houses. This is documented in the performance report under "Change In and Out of Sample". The sold and unsold properties should have roughly similar changes in assessed values.
+Compare year-over-year changes in assessed values for sold and unsold houses. This is documented in the performance report under "Change In and Out of Sample". 
+
+The sold and unsold properties should have roughly similar changes in assessed values, on the assumption that sold and unsold properties have similar characteristics and assessment histories.
 
 ---
 
