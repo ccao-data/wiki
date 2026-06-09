@@ -32,6 +32,7 @@
 * [Desk Review](SOPs/Desk-Review.md)
 * [Open Data](SOPs/Open-Data.md)
 * [Model Evaluation and Machine Learning Metrics](SOPs/Model-Evaluation-ML-metrics.md)
+* [Annual Chores Checklist](https://github.com/ccao-data/wiki/issues/new?template=annual-chores.md)
 
 ### Residential
 
