@@ -40,7 +40,7 @@ In a perfectly matched sample, no feature would predict whether a parcel is more
 
 See empirical distributions on the performance report. The distribution of a feature in the sales sample should visually match those in the assessment set. We only calculate this for the full sales sample, but it may differ at the township or neighborhood-level. We could apply a KS test to check if the feature distributions between the sales sample and assessment set are the same.
 
-#### III. Non-Missing at Random
+#### III. Missing Not at Random
 
 "Missing not at random" means that some feature or a particular value of a feature is missing in a way that's correlated with the outcome variable or another variable in the dataset. This can indicate systemic undersampling. In our case, it is somewhat controlled for by the fact that lgbm actually incorporates missing values as a predictor\*. Because of this we currently don't track correlations of nulls as rigorously as we otherwise might, though you can get a sense of the percentage of missingness for each feature by looking at the "Missingness" heading in the Feature report.
 
