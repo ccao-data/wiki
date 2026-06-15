@@ -17,7 +17,8 @@ Make sure IT has installed the latest version of the following tools on your
 laptop:
 
 - Whichever major web browser you prefer
-- [WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
+- [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) with Ubuntu
+  24.04 or 26.04
   - WSL may come pre-installed on your laptop, but it's possible that
     the pre-installed version is not the correct one. To check whether you
     have the correct version installed, see if you can search for `WSL` in the
@@ -85,10 +86,12 @@ tools:
   [pip](https://pip.pypa.io/en/stable/):
 
 ```bash
-sudo apt install python3-pip
+sudo apt update && sudo apt install python3-pip
 ```
 
-- Install [uv](https://docs.astral.sh/uv/) for Python package management:
+- Install [uv](https://docs.astral.sh/uv/) for Python package management. After
+  this command finishes executing, you will need to restart your shell (i.e.
+  open a new terminal pane) in order to be able to run `uv` commands:
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -143,26 +146,31 @@ rm quarto.deb
   (you can copy and paste this whole block to preserve the line breaks):
 
 ```bash
-sudo apt install \
-    # Required for R `curl` package
+# The core dependencies that rely on these packages are:
+#
+#   - Required for R `curl` package: libcurl4-openssl-dev
+#   - Required for R `openssl` package: libssl-dev
+#   - Required for R `xml2` package: libxml2-dev
+#   - Required for R `git2r` package: libgit2-dev
+#   - Required for R `pdftools` package: libpoppler-cpp-dev
+#   - Required for R `protolite` package: libprotobuf-dev, protobuf-compiler
+#   - Required for R `fs` package: libuv1-dev
+#   - Required for R `textshaping` package: libharfbuzz-dev, libfribidi-dev
+#   - Geospatial packages required for R `sf` package:
+#     gdal-bin, libudunits2-dev, libgdal-dev, libgeos-dev, libproj-dev,
+#     libsqlite3-dev
+#   - Graphic devices required for tidyverse: libpng-dev, libfontconfig1-dev,
+#     libfreetype6-dev
+sudo apt update && sudo apt install \
     libcurl4-openssl-dev \
-    # Required for R `openssl` package
     libssl-dev \
-    # Required for R `xml2` package
     libxml2-dev \
-    # Required for R `git2r` package
     libgit2-dev \
-    # Required for R `pdftools` package
     libpoppler-cpp-dev \
-    # Required for R `protolite` package
     libprotobuf-dev protobuf-compiler \
-    # Required for R `fs` package
     libuv1-dev \
-    # Required for R `textshaping` package
     libharfbuzz-dev libfribidi-dev \
-    # Geospatial packages required for R `sf` package
     gdal-bin libudunits2-dev libgdal-dev libgeos-dev libproj-dev libsqlite3-dev \
-    # Graphic devices required for tidyverse
     libpng-dev libfontconfig1-dev libfreetype6-dev
 ```
 
@@ -280,3 +288,29 @@ sudo apt install jq libjq-dev
 ```bash
 sudo snap install hugo
 ```
+
+## Editing local files using Positron
+
+Once you've completed all of the above steps to setup your local dev
+environment, you're ready to start writing and editing code. Though we don't
+require Data Team members to use a specific editor, most of us use Positron
+for running and editing local R and Python code.
+
+When editing local files using Positron, **always make sure you're connected to
+the WSL remote**. You can do this using [the Positron Remote
+menu](https://positron.posit.co/remote-ssh). While connected to the WSL remote,
+Positron will edit files in the WSL filesystem rather than on your Windows
+filesystem.
+
+This distinction is important to keep in mind: **WSL uses a totally separate
+filesystem from Windows**. WSL is a Linux operating system running in a
+lightweight virtual machine on your Windows host, so files that you create
+and edit in WSL are not visible in Windows apps like File Explorer. To access
+these files from your Windows operating system, you need to open them from
+within WSL, which is what the Positron WSL remote does. (You can also go the
+other direction by mounting Windows drives into WSL; in fact, your `C:\` drive
+should already be mounted into WSL by default at `/mnt/c`.)
+
+Once you're connected to the WSL remote in Positron, Positron will open files
+and folders in WSL any time you run the command `File > New File` or
+`File > Open File[/Folder]`.
