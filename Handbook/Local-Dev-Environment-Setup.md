@@ -114,20 +114,23 @@ sudo apt update && sudo apt install r-base r-base-dev
   Python code
   - Note that there are two preliminary steps here:
     1. Find the link to the latest version of the `.deb` package file for
-       Ubuntu on [the Quarto Downloads
-       page](https://quarto.org/docs/download/index.html), then substitute that
-       URL into command #1 below
-    2. Copy the SHA-256 hash file hash for the `.deb` package that you
+       Ubuntu 18+/Debian 10+ on [the Quarto Downloads
+       page](https://quarto.org/docs/download/index.html), copy that link, and
+       substitute the URL into command #1 below
+    2. Copy the SHA-256 file hash for the `.deb` package that you
        downloaded, which should be displayed in the table on the Downloads
        page, and note it for comparison to the output of command #2 below
 
 ```bash
-# 1. Download the `.deb` package file from the official Quarto site:
+# 1. This step downloads the `.deb` package file from the official Quarto
+#    distribution into WSL. The exact link to the correct `.deb` package file
+#    changes depending on the latest Quarto version, so we can't hardcode the
+#    download link in the `wget` command below. In order for `wget` to retrieve
+#    the correct file, you must visit the following URL, copy the link address
+#    for the `.deb` file labeled with the platform "Ubuntu 18+/Debian 10+", and
+#    then paste it into the `wget` command below before running that command:
 #    https://quarto.org/docs/download/index.html
-#    The exact link will change depending on the latest Quarto version, so you
-#    will need to update the variable definition below to set it to the correct
-#    link
-wget -qO quarto.deb "https://<insert-deb-file-url-here>"
+wget -qO quarto.deb "https://<deb-file-url-here>"
 
 # 2. Verify that the hash of the `.deb` file matches the hash listed on the
 #    Quarto site (linked above)
