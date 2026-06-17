@@ -32,6 +32,13 @@ laptop:
     open [the Positron Remote menu](https://positron.posit.co/remote-ssh) and
     select the dropdown option "Connect to WSL".
 
+You can request that IT install these tools for you by opening an [IT helpdesk
+ticket](https://cookcountyassessor.freshservice.com) for a "Software
+Installation Request". To do this, select "Request a service" from the helpdesk
+homepage, and then select "Software Installation" in the sidebar. If you bundle
+together all of the software you need in one request, IT can install it all for
+you at once.
+
 ## Tools that you can install yourself
 
 The instructions below will help you install tools that _don't_ require
