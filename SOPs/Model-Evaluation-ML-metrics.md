@@ -18,7 +18,7 @@ After running the model you will need to interpret the results. First, assess ho
 
 ## 1. Assessing How Representative Your Sales Sample Is of the Assessment Set
 
-To ensure that a model can generalize from a sample to the population, we need to check that our sales sample contains buildings that are similar to those in the entire population. We should generally see parcels with the same composition of features, in the same proportions, in the sales (sample) and assessment set (population). We check for this with statistical tests and visual inspections of distributions.
+To ensure that a model is generalizable, we need to check that our sales sample is similar to the population. We should see parcels with the same composition of features, in the same proportions, in the sales (sample) and assessment set (population). We check for this with statistical tests and visual inspections of distributions.
 
 > **Note:** If there are factors that cause some parcels to be over-represented in the sales sample, the model will over-index to these types of properties, likely leading to over- or undervaluation.
 
