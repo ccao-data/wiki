@@ -46,3 +46,5 @@ These chores must be completed once a year following the iasWorld rollover:
       - Click **OK** twice to save the update to the action and close the
         Properties dialog
       - Test the change by right-clicking the task and selecting **Run**
+- [ ] Update Tableau dashboards that filter for the current assessment year
+    - [ ] Town Close QC Reports
