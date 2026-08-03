@@ -203,6 +203,27 @@ uv tool install aws-mfa
 uv tool install pre-commit
 ```
 
+- Install [Node](https://nodejs.org/en/download) using
+  [nvm](https://github.com/nvm-sh/nvm):
+
+```bash
+# Download and install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.6/install.sh | bash
+
+# nvm will initialize on shell startup, but force it to initialize now so that
+# we don't have to open a new shell
+\. "$HOME/.nvm/nvm.sh"
+
+# Download and install Node
+nvm install 24
+
+# Verify Node version (should print "v24.19.0")
+node -v
+
+# Verify npm version (should print "11.17.0")
+npm -v
+```
+
 ### Mandatory R configurations
 
 The following configs will help you work with our R projects.
