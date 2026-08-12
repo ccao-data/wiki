@@ -1,44 +1,41 @@
 # Model Validation, Interpretation, and Testing Guidelines
 
-After running the model you will need to interpret the results. First, assess how well the sample data (sales sample, training data) matches the population (assessment set, all parcels to be assessed), then note any factors that may be impacting your model performance such as data issues or novel market trends. Finally, interpret the formal model performance statistics to select the most accurate and generalizable model, that conforms to IAAO standards.
+After running the model you will need to interpret the results. First, assess how well the sample data (training set, training data) matches the assessment set (assessment set, all parcels to be assessed), then note any factors that may be impacting your model performance such as data issues or novel market trends. Finally, interpret the formal model performance statistics to select the most accurate and generalizable model, that conforms to IAAO standards.
 
-**Overview:**
+### Useful Terms
 
-1. Assessing how representative your sales sample is of the assessment set.
-   - a. Balance tests
-   - b. Visual inspection
-   - c. Not missing at random
-   - d. Domain specific approach
+| Term           | Definition                                                                                                                                                                                    |
+|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Training Set   | The sample of parcels that have sold recently. A parcel will be included in the sample however many times it has sold.                                                                        |
+| Assessment Set | The assessment set of all parcels that the model has to value, whether they've sold or not.                                                                                                       |
+| Feature        | Characteristic of a given parcel, whether it's physical (number of bedrooms), spatial (nearest L stop), or demographic (percentage of adults with a college degree in parcel's census tract). |
 
-2. Noting any real-world housing market changes that may impact your model, and/or interactions between data and model that may affect your results (model drift, data drift).
 
-3. Interpreting model performance (evaluating machine learning and assessment metrics).
 
----
+## 1. Assessing Representative the training set Is of the Assessment Set
 
-## 1. Assessing How Representative Your Sales Sample Is of the Assessment Set
+To ensure that a model is generalizable, we need to check that our training set is similar to the assesment set. We should see parcels with the same composition of features, in the same proportions, in the training and assessment sets. We check for this with statistical tests and visual inspections of distributions.
 
-To ensure that a model is generalizable, we need to check that our sales sample is similar to the population. We should see parcels with the same composition of features, in the same proportions, in the sales (sample) and assessment set (population). We check for this with statistical tests and visual inspections of distributions.
+> [!NOTE]
+> If parcels with certain features are over-represented in the training set the model will over-index to these types of properties, likely leading to over- or undervaluation.
 
-> **Note:** If there are factors that cause some parcels to be over-represented in the sales sample, the model will over-index to these types of properties, likely leading to over- or undervaluation.
+### Testing for and Correcting Differences Between the Training and Assessment Sets
 
-### Testing for and Correcting Differences Between Sales (Sample) and the Assessment Set (Population)
-
-In a perfectly matched sample, no feature would predict whether a parcel is more or less likely to be part of the sales sample — all properties of all types would have an equal chance of being sold in a given year. These tests allow us to test that assumption and to develop possible corrections:
+In a perfectly matched sample, no feature would predict whether a parcel is more or less likely to be part of the training set — all properties of all types would have an equal chance of being sold in a given year. These tests allow us to test that assumption and to develop possible corrections:
 
 #### I. Balance Tests
 
-(See the "Statistical Tests" section of the model performance report.) Any feature that significantly predicts inclusion in the sales sample is likely over- or under-represented in the sample and will likely bias results. This is especially the case for features that also turn out to have high SHAP values. The p-value for each feature in the report tells you whether that feature predicts inclusion in the sales sample at a level greater than expected, while the Beta value gives you a relative sense of the weight (importance) and direction (include vs exclude) of that feature. In our report, asterisks represent statistically significant predictors.
+(See the "Statistical Tests" section of the model performance report.) Any feature that significantly predicts inclusion in the training set is probably over- or under-represented in the sample and will likely bias results. This is especially the case for features that also turn out to have high SHAP values. The p-value for each feature in the report tells you whether that feature predicts inclusion in the training set at a level greater than expected, while the Beta value gives you a sense of the magnitude and in which direction that feature predicts inclusion.
 
-- **a.** Our 2026 reports indicate that there may be some imbalance in our sample (see, for example, # of bedrooms, baths, various ACS5 values). We currently don't correct for this.
+To validate possible issues surfaced by the balance tests, look at the standardized mean differences between the training set and assessment set for each feature. Larger differences indicate a more likely deviation between the two. You can use the following rule of thumb:
 
-- **b.** Many of our features may be correlated (baths and bedrooms) or interact with one another (geography, ACS5, characteristics), and some of those predict inclusion in the sales sample. We may be underestimating the divergence between the sales sample and assessment set, and certain types of buildings in certain neighborhoods may be over-represented in the sales sample. We don't currently analyze balance at a neighborhood level. We may want to attempt some sort of dimensionality/feature reduction and then re-run the balance tests on the reduced feature space. One potential option is to apply a correction with inverse propensity weighting (IPW), which upweights the value of errors on under-sampled properties. Note that this may not drastically improve overall accuracy metrics, but might improve neighborhood or township level performance, in particular vertical equity.
-
-- **c.** To validate your investigations from the balance tests, look at the standardized mean differences between the sales sample and assessment set for each feature. Larger differences indicate a more likely deviation between the sales sample and assessment set.
+- 0.2: Small imbalance
+- 0.5: Medium imbalance
+- 0.8: Large imbalance
 
 #### II. Visual Inspection
 
-See empirical distributions on the performance report. The distribution of a feature in the sales sample should visually match those in the assessment set. We only calculate this for the full sales sample, but it may differ at the township or neighborhood-level. We could apply a KS test to check if the feature distributions between the sales sample and assessment set are the same.
+See empirical distributions on the performance report. The distribution of a feature in the training set should visually match those in the assessment set. We only calculate this for the full training set, but it may differ at the township or neighborhood-level. We could apply a KS test to check if the feature distributions between the training set and assessment set are the same.
 
 #### III. Missing Not at Random
 
@@ -48,7 +45,7 @@ See empirical distributions on the performance report. The distribution of a fea
 
 #### IV. Domain Specific Sanity Check
 
-Compare year-over-year changes in assessed values for sold and unsold houses. This is documented in the performance report under "Change In and Out of Sample". 
+Compare year-over-year changes in assessed values for sold and unsold houses. This is documented in the performance report under "Change In and Out of Sample".
 
 The sold and unsold properties should have roughly similar changes in assessed values, on the assumption that sold and unsold properties have similar characteristics and assessment histories.
 
@@ -56,7 +53,7 @@ The sold and unsold properties should have roughly similar changes in assessed v
 
 ## 2. Note Any Housing Market Trends That May Impact Your Model
 
-Note any housing market trends that may impact your model and/or interactions between data and model that may affect your results (model drift, data drift). Since our model uses temporal features, are there any recent trends that may impact it? While large changes in major sale prices should be obvious in the model results, it's useful to compare changes in the model's assignment of feature importance (SHAP, gain) to trends in the sales sample (example: changing consumer preferences across years should be reflected in changes in SHAPs between models trained on data from separate years). To check for data drift over time, you can compare the feature distributions from a recent year to those of a prior year. Formally, you could do a KS test, though we do not currently. Less formally you could eyeball the "Distributions of Features" in the feature report.
+Note any housing market trends that may impact your model and/or interactions between data and model that may affect your results (model drift, data drift). Since our model uses temporal features, are there any recent trends that may impact it? While large changes in major sale prices should be obvious in the model results, it's useful to compare changes in the model's assignment of feature importance (SHAP, gain) to trends in the training set (example: changing consumer preferences across years should be reflected in changes in SHAPs between models trained on data from separate years). To check for data drift over time, you can compare the feature distributions from a recent year to those of a prior year. Formally, you could do a KS test, though we do not currently. Less formally you could eyeball the "Distributions of Features" in the feature report.
 
 > **Note:** Since we use a boosted model with historic data and retrain each year, we are less subject to major problems with data or model drift. However, this can still pose an issue if we have high temporal volatility and low recent sales volume.
 
@@ -70,7 +67,7 @@ We calculate traditional machine learning metrics and assessment-specific metric
 
 Our approach while fitting candidate models is to follow ML best practices. During model training and fitting, we use standard machine learning (ML) metrics, like RMSE (described below).
 
-To compare and evaluate our candidate models, however, we use both ML metrics and assessment metrics. We rely heavily on median ratio, COD, and vertical equity in our recommendation for what should be the final model. 
+To compare and evaluate our candidate models, however, we use both ML metrics and assessment metrics. We rely heavily on median ratio, COD, and vertical equity in our recommendation for what should be the final model.
 
 > **Note:** This discussion presumes a train-test breakout, where we fit the model on a subset of our data (training set) and calculate the performance measures on data that the model has not seen (the test set). We use this approach to avoid overfitting (see below for specifics) and ensure that our model is generalizable out-of-sample.
 
@@ -89,7 +86,7 @@ RMSE works best on normally distributed data and our data is generally skewed, w
 
 As an example of the interplay between RMSE and assessment metrics, suppose we test a model with an additional feature that leads to more accurate valuations for properties with sale prices below the median. Given the skew in our data (high value properties contribute proportionally more to RMSE) we might find that this feature doesn't move our RMSE calculation very much but does improve vertical equity. We could justify selecting the model with the new feature based on its vertical equity improvements, rather than RMSE alone.
 
-**RMSE interpretability:** An additional reason to use RMSE is its interpretability. RMSE is on the same scale as the outcome value, and can be interpreted with reference to the mean, median, and standard deviation of the sales sample. Since RMSE is structurally similar to measures of variability such as standard deviation, you can interpret RMSE in relation to standard deviation. (If one thinks of the mean as the simplest "model" of a distribution, then one can interpret the standard deviation in a manner similar to RMSE — the average deviation of your observations from your mean.) More accurate models should have an RMSE lower than the standard deviation of your test data. This insight is also useful for model comparison, as the standard deviation can be used as a baseline to benchmark RMSE values from candidate models. (For example, if two candidate models differ by some magnitude of RMSE, how "large" or "trivial" is that difference, relative to the underlying standard deviation of your sample, or test data?)
+**RMSE interpretability:** An additional reason to use RMSE is its interpretability. RMSE is on the same scale as the outcome value, and can be interpreted with reference to the mean, median, and standard deviation of the training set. Since RMSE is structurally similar to measures of variability such as standard deviation, you can interpret RMSE in relation to standard deviation. (If one thinks of the mean as the simplest "model" of a distribution, then one can interpret the standard deviation in a manner similar to RMSE — the average deviation of your observations from your mean.) More accurate models should have an RMSE lower than the standard deviation of your test data. This insight is also useful for model comparison, as the standard deviation can be used as a baseline to benchmark RMSE values from candidate models. (For example, if two candidate models differ by some magnitude of RMSE, how "large" or "trivial" is that difference, relative to the underlying standard deviation of your sample, or test data?)
 
 Further discussion [here](https://stats.stackexchange.com/questions/242787/how-to-interpret-root-mean-squared-error-rmse-vs-standard-deviation) — more formally, here: [Shmueli, G., Bruce, P. C., Stephens, M., & Patel, N. R. (2016). *Data Mining for Business Analytics: Concepts, Techniques, and Applications with JMP Pro* (3rd Edition). Wiley.](https://www.amazon.fr/Data-Mining-Business-Analytics-Applications/dp/1118877438/)
 
@@ -121,7 +118,7 @@ Generally, the larger the difference between these two measures the more likely 
 
 Further reading — [Bias Variance Trade-off](https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff), [IBM's notes](https://www.ibm.com/think/topics/bias-variance-tradeoff)
 
-> **Finally:** If your sample is not a good match for your population, good train-test splits will only take you so far. This is because your sample lacks representative training data. This is why balance tests (see earlier section) are important.
+> **Finally:** If your sample is not a good match for your assessment set, good train-test splits will only take you so far. This is because your sample lacks representative training data. This is why balance tests (see earlier section) are important.
 
 ### Assessment Metrics
 
@@ -135,7 +132,7 @@ Longer descriptions here: [Mass Appraisal For The Masses: The Basics — by Lars
 
 Our [annual model checklist](https://github.com/ccao-data/model-res-avm/blob/master/.github/ISSUE_TEMPLATE/annual-model-checklist.md) details the technical steps necessary to run candidate models each year. Below is an overview of how to reason statistically about model candidates to choose a final one.
 
-1. **Pull all current data** then train and predict with last year's hyperparameters. This model can act as a baseline for any improvements you may intend to make. At this stage, you can use the model reports to check for year-over-year changes in features in the feature report, changes in feature importance (SHAP values, gain, etc.), data that is not-missing-at-random, and parity in feature distributions between the sales sample and the assessment set (balance tests). You can attempt to make corrections like IPW at this stage, but most likely you will just have to note these issues as concerns in your model.
+1. **Pull all current data** then train and predict with last year's hyperparameters. This model can act as a baseline for any improvements you may intend to make. At this stage, you can use the model reports to check for year-over-year changes in features in the feature report, changes in feature importance (SHAP values, gain, etc.), data that is not-missing-at-random, and parity in feature distributions between the training set and the assessment set (balance tests). You can attempt to make corrections like IPW at this stage, but most likely you will just have to note these issues as concerns in your model.
 
 2. **Tune the hyperparameters:** Carry out a "CV run" with GitHub Actions. This will use a Bayesian optimizer to search for the best fitting hyperparameters, using cross-validation. Assess the quality of the model, using the metrics outlined above. Compare the newly tuned model to the old model. In addition to the machine learning and assessment metrics, look at changes in assessments across townships. Are they relatively similar across models? Are there any big swings in one model but not the other?
 
