@@ -65,13 +65,7 @@ Our approach while fitting candidate models is to follow ML best practices. Duri
 > [!NOTE]
 > This discussion presumes a train-test breakout, where we fit the model on a subset of our data (training set) and calculate the performance measures on data that the model has not seen (the test set). We use this approach to [avoid overfitting](#traintest-splits) and ensure that our model is generalizable out-of-sample.
 
-### Model Fitting — Machine Learning Metrics
-
-#### Fitting the Model
-
-We aim to fit the model using proper scoring rules, of which RMSE is our primary measure.
-
-#### RMSE (Root Mean Squared Error)
+### RMSE (Root Mean Squared Error)
 
 This is generally the metric that we use to formally fit the models. It is the mean of the squared errors, rescaled with a square-root. Closer to zero is better. Note that since it squares the error it can penalize larger errors more heavily, which can particularly be an issue for skewed data like housing prices.
 
@@ -87,7 +81,7 @@ MdAPE
 
 Median absolute percentage error (MdAPE) is a [median-based metric](https://support.numxl.com/hc/en-us/articles/115001223503-MdAPE-Median-Absolute-Percentage-Error). It is more robust to outliers than other measures and complements RMSE. We shouldn't use MdAPE as an optimization metric as it is not a proper scoring rule, and treats over-forecasts and under-forecasts asymmetrically, but it is useful for comparing model performance in a manner that is more robust to outliers. For example, in a case where two models differ slightly in RMSE, we may accept a model with a slightly higher RMSE if it has a lower MdAPE. This arrangement would likely signal that the other "low RMSE" model might simply be fitting toward some high value outliers at the expense of the median property.
 
-#### R-Squared
+### R-Squared
 
 We report R-squared because it is a common and somewhat interpretable metric. R-squared varies between 0 and 1, and values of R-squared closer to 1 may suggest better model fits. Given the myriad problems with R-squared (see: [Is R-squared Useless? | UVA Library](https://library.virginia.edu/data/articles/is-r-squared-useless)) we shouldn't base any model decisions off it. At most we can check for consistency with RMSE within reporting geographies. In cases where there is a discrepancy between goodness-of-fit as suggested by R-squared and RMSE, default to the RMSE and investigate reasons for the difference with the R-squared. R-squared is sensitive to scale, variance, and nonlinearities in the underlying data, so these may be causes of discrepancies between R-squared and RMSE.
 
