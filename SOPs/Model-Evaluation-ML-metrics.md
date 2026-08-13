@@ -36,7 +36,7 @@ The distribution of a feature in the training set should visually match those in
 
 ### III. Missing Not at Random
 
-"Missing not at random" means that some feature or a particular value of a feature is missing in a way that's correlated with the outcome variable or another variable in the dataset. This can indicate systemic undersampling. In our case, it is somewhat controlled for by the fact that lgbm actually incorporates missing values as a predictor[^1][^2][^3]. Because of this we currently don't track correlations of nulls as rigorously as we otherwise might, though you can get a sense of the percentage of missingness for each feature by looking at the "Missingness" heading in the Feature report.
+"Missing not at random" means that some feature or a particular value of a feature is missing in a way that's correlated with the outcome variable or another variable in the dataset. This can indicate systemic undersampling. In our case, it is somewhat controlled for by the fact that lgbm actually incorporates missing values as a predictor.[^1][^2][^3] Because of this we currently don't track correlations of nulls as rigorously as we otherwise might, though you can get a sense of the percentage of missingness for each feature by looking at the "Missingness" heading in the Feature report.
 
 [^1]: [How does LGBM deal with missing values?](https://medium.com/@andrywmarques/how-lgbm-deals-with-missing-values-bd361636357f)
 [^2]: [LGBM Docs](https://lightgbm.readthedocs.io/en/latest/Advanced-Topics.html#missing-value-handle)
@@ -50,7 +50,7 @@ Compare year-over-year changes in assessed values for sold and unsold houses. If
 
 ## 2. Model Drift
 
-Compare model performance with previous years, especially for the specific triad that is being mailed. If the model is inexplicablly performing worse we may need to reevalute which features we are using and explore adding new ones that better explain the current housing market[^4].
+Compare model performance with previous years, especially for the specific triad that is being reassessed. If the model is inexplicablly performing worse we may need to reevalute which features we are using and explore adding new ones that better explain the current housing market.[^4]
 
 [^4]: [What is model drift?](https://www.ibm.com/think/topics/model-drift)
 
