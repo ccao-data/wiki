@@ -25,23 +25,29 @@ In a perfectly matched sample, no feature would predict whether a parcel is more
 
 #### I. Balance Tests
 
-(See the "Statistical Tests" section of the model performance report.) Any feature that significantly predicts inclusion in the training set is probably over- or under-represented in the sample and will likely bias results. This is especially the case for features that also turn out to have high SHAP values. The p-value for each feature in the report tells you whether that feature predicts inclusion in the training set at a level greater than expected, while the Beta value gives you a sense of the magnitude and in which direction that feature predicts inclusion.
+*See the "Logistic Regressions" and "Standardized Mean Differences" sections under "Statistical Tests" in the model performance report.*
+
+Any feature that significantly predicts inclusion in the training set is probably over- or under-represented in the sample and will likely bias results. This is especially the case for features that also turn out to have high SHAP values. The p-value for each feature in the report tells you whether that feature predicts inclusion in the training set at a level greater than expected, while the Beta value gives you a sense of the magnitude and in which direction that feature predicts inclusion.
 
 To validate possible issues surfaced by the balance tests, look at the standardized mean differences between the training set and assessment set for each feature. Larger differences indicate a more likely deviation between the two. You can use the following rule of thumb:
 
-- 0.2: Small imbalance
-- 0.5: Medium imbalance
-- 0.8: Large imbalance
+- 0.2 - Small imbalance
+- 0.5 - Medium imbalance
+- 0.8 - Large imbalance
 
 #### II. Visual Inspection
 
-See empirical distributions on the performance report. The distribution of a feature in the training set should visually match those in the assessment set. We only calculate this for the full training set, but it may differ at the township or neighborhood-level. We could apply a KS test to check if the feature distributions between the training set and assessment set are the same.
+*See the "Empirical Cumulative Distributions" section under "Statistical Tests" in the the model performance report.*
+
+The distribution of a feature in the training set should visually match those in the assessment set. We only calculate this for the full training set, but it may differ at the township or neighborhood-level. We could apply a KS test to check if the feature distributions between the training set and assessment set are the same.
 
 #### III. Missing Not at Random
 
-"Missing not at random" means that some feature or a particular value of a feature is missing in a way that's correlated with the outcome variable or another variable in the dataset. This can indicate systemic undersampling. In our case, it is somewhat controlled for by the fact that lgbm actually incorporates missing values as a predictor\*. Because of this we currently don't track correlations of nulls as rigorously as we otherwise might, though you can get a sense of the percentage of missingness for each feature by looking at the "Missingness" heading in the Feature report.
+"Missing not at random" means that some feature or a particular value of a feature is missing in a way that's correlated with the outcome variable or another variable in the dataset. This can indicate systemic undersampling. In our case, it is somewhat controlled for by the fact that lgbm actually incorporates missing values as a predictor[^1][^2][^3]. Because of this we currently don't track correlations of nulls as rigorously as we otherwise might, though you can get a sense of the percentage of missingness for each feature by looking at the "Missingness" heading in the Feature report.
 
-> \* See: [How does LGBM deal with missing values?](https://medium.com/@andrywmarques/how-lgbm-deals-with-missing-values-bd361636357f) (docs)[https://lightgbm.readthedocs.io/en/latest/Advanced-Topics.html#missing-value-handle] | [How do XGBoost, LightGBM, and CatBoost Handle Missing Features?](https://coder-wang-uspsa.medium.com/how-do-xgboost-lightgbm-and-catboost-handle-missing-features-e541da94d528)
+[^1]: [How does LGBM deal with missing values?](https://medium.com/@andrywmarques/how-lgbm-deals-with-missing-values-bd361636357f)
+[^2]: [LGBM Docs](https://lightgbm.readthedocs.io/en/latest/Advanced-Topics.html#missing-value-handle)
+[^3]: [How do XGBoost, LightGBM, and CatBoost Handle Missing Features?](https://coder-wang-uspsa.medium.com/how-do-xgboost-lightgbm-and-catboost-handle-missing-features-e541da94d528)
 
 #### IV. Domain Specific Sanity Check
 
