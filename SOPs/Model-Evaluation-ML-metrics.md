@@ -108,7 +108,7 @@ Generally, the larger the difference between these two measures the more likely 
 > If we only compare model performance in terms of test sets by looking at differences in RMSE between the test sets for two models, without looking at train/test splits, we may accidentally select a model that is overfit even though we are analyzing test set scores. For example, we consider two separate models trained on the same train/test splits, one has an RMSE of $75k and the other has an RMSE of $80k. The standard deviation for both train-test splits is $180k. We might be inclined to select the first ($75k) model, but if there is a larger difference between the train and test sets for the $75k RMSE model (with a hypothetical train-set RMSE is $10k) versus that of the $80k RMSE model (with a hypothetical train-set RMSE is $40k), we should consider the possibility that the $75k model is overfit. While the large gap relative to the 2nd model and the standard deviation of the underlying data may indicate overfitting, we can't tell definitively if the $80k model is more generalizable and we should test additional models to get a better sense of whether the $75k model was anomalous.[^10][^11]
 
 [^10]: [Bias Variance Trade-off](https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff)
-[^11]: [IBM's notes](https://www.ibm.com/think/topics/bias-variance-tradeoff)
+[^11]: [What is bias-variance tradeoff?](https://www.ibm.com/think/topics/bias-variance-tradeoff)
 
 > [!IMPORTANT]
 > If your sample is not a good match for your assessment set, good train-test splits will only take you so far. This is because your sample lacks representative training data and why [balance tests](#i-balance-tests) are important.
