@@ -65,7 +65,7 @@ Our approach while fitting candidate models is to follow ML best practices. Duri
 > [!NOTE]
 > This discussion presumes a train-test breakout, where we fit the model on a subset of our data (training set) and calculate the performance measures on data that the model has not seen (the test set). We use this approach to [avoid overfitting](#traintest-splits) and ensure that our model is generalizable out-of-sample.
 
-### RMSE (Root Mean Squared Error)
+### RMSE (Root mean squared error)
 
 This is generally the metric that we use to formally fit the models. It is the mean of the squared errors, rescaled with a square-root. Closer to zero is better. Since it squares the error it penalizes larger errors more heavily, which can be an issue for skewed data like housing prices.
 
@@ -78,21 +78,21 @@ An additional reason to use RMSE is its interpretability. RMSE is on the same sc
 [^7]: [How to interpret root mean squared error (RMSE) vs standard deviation?](https://stats.stackexchange.com/questions/242787/how-to-interpret-root-mean-squared-error-rmse-vs-standard-deviation)
 [^8]: [Data Mining for Business Analytics](https://www.amazon.fr/Data-Mining-Business-Analytics-Applications/dp/1118877438/)
 
-### MdAPE
+### MdAPE (Median absolute percentage error)
 
-Median absolute percentage error (MdAPE) is a [median-based metric](https://support.numxl.com/hc/en-us/articles/115001223503-MdAPE-Median-Absolute-Percentage-Error). It is more robust to outliers than other measures and complements RMSE. We shouldn't use MdAPE as an optimization metric as it is not a proper scoring rule, and treats over-forecasts and under-forecasts asymmetrically, but it is useful for comparing model performance in a manner that is more robust to outliers. For example, in a case where two models differ slightly in RMSE, we may accept a model with a slightly higher RMSE if it has a lower MdAPE. This arrangement would likely signal that the other "low RMSE" model might simply be fitting toward some high value outliers at the expense of the median property.
+[MdAPE}(https://support.numxl.com/hc/en-us/articles/115001223503-MdAPE-Median-Absolute-Percentage-Error) is a median-based metric. It is more robust to outliers than other measures and complements RMSE. While we shouldn't use MdAPE as an optimization metric as it is not a proper scoring rule and treats over-forecasts and under-forecasts asymmetrically, it is useful for comparing model performance in a manner that is more robust to outliers. For example, in a case where two models differ slightly in RMSE, we may accept a model with a slightly higher RMSE if it has a lower MdAPE. This arrangement would likely signal that the other "low RMSE" model might simply be fitting toward some high value outliers at the expense of the median property.
 
 ### R-Squared
 
-We report R-squared because it is a common and somewhat interpretable metric. R-squared varies between 0 and 1, and values of R-squared closer to 1 may suggest better model fits. Given the myriad problems with R-squared (see: [Is R-squared Useless? | UVA Library](https://library.virginia.edu/data/articles/is-r-squared-useless)) we shouldn't base any model decisions off it. At most we can check for consistency with RMSE within reporting geographies. In cases where there is a discrepancy between goodness-of-fit as suggested by R-squared and RMSE, default to the RMSE and investigate reasons for the difference with the R-squared. R-squared is sensitive to scale, variance, and nonlinearities in the underlying data, so these may be causes of discrepancies between R-squared and RMSE.
+We report R-squared because it is a common and somewhat interpretable metric. R-squared varies between 0 and 1, and values of R-squared closer to 1 may suggest better model fits. Given the [myriad problems with R-squared](https://library.virginia.edu/data/articles/is-r-squared-useless) we shouldn't base any model decisions off it. At most we can check for consistency with RMSE within reporting geographies. In cases where there is a discrepancy between goodness-of-fit as suggested by R-squared and RMSE, default to the RMSE and investigate reasons for the difference with the R-squared. R-squared is sensitive to scale, variance, and nonlinearities in the underlying data, so these may be causes of discrepancies between R-squared and RMSE.[^9] R-squared does NOT:
 
-- R-squared does not necessarily measure goodness-of-fit.
-- R-squared does not necessarily measure predictive error.
-- R-squared does not measure how one variable explains another (it's not causal).
+- necessarily measure goodness-of-fit
+- necessarily measure predictive error
+- measure how one variable explains another (it's not causal)
 
-See [Shalizi notes](https://www.stat.cmu.edu/~cshalizi/mreg/15/lectures/10/lecture-10.pdf)
+[^9]: [Shalizi notes](https://www.stat.cmu.edu/~cshalizi/mreg/15/lectures/10/lecture-10.pdf)
 
-For a more sensible interpretation of goodness-of-fit, simply eyeball the table in the model performance report Estimate vs Actual (Individual Obs.). Look for changes between model estimates and actuals.
+For a more sensible interpretation of goodness-of-fit, simply eyeball the table in "Estimate vs Actual (Individual Obs.)" section of the model performance report. Look for changes between model estimates and actuals.
 
 ### Train/Test Splits
 
