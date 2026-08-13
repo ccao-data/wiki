@@ -84,11 +84,13 @@ An additional reason to use RMSE is its interpretability. RMSE is on the same sc
 
 ### R-Squared
 
-We report R-squared because it is a common and somewhat interpretable metric. R-squared varies between 0 and 1, and values of R-squared closer to 1 may suggest better model fits. Given the [myriad problems with R-squared](https://library.virginia.edu/data/articles/is-r-squared-useless) we shouldn't base any model decisions off it. At most we can check for consistency with RMSE within reporting geographies. In cases where there is a discrepancy between goodness-of-fit as suggested by R-squared and RMSE, default to the RMSE and investigate reasons for the difference with the R-squared. R-squared is sensitive to scale, variance, and nonlinearities in the underlying data, so these may be causes of discrepancies between R-squared and RMSE.[^9] R-squared does NOT:
+We report R-squared because it is a common and somewhat interpretable metric. R-squared varies between 0 and 1, and values of R-squared closer to 1 may suggest better model fits. Given the [myriad problems with R-squared](https://library.virginia.edu/data/articles/is-r-squared-useless) we shouldn't base any model decisions off it. At most we can check for consistency with RMSE within reporting geographies. In cases where there is a discrepancy between goodness-of-fit as suggested by R-squared and RMSE, default to the RMSE and investigate reasons for the difference with the R-squared. R-squared is sensitive to scale, variance, and nonlinearities in the underlying data, so these may be causes of discrepancies between R-squared and RMSE.[^9]
 
-- necessarily measure goodness-of-fit
-- necessarily measure predictive error
-- measure how one variable explains another (it's not causal)
+> [!IMPORTANT]
+> R-squared does NOT:
+> - necessarily measure goodness-of-fit
+> - necessarily measure predictive error
+> - measure how one variable explains another (it's not causal)
 
 [^9]: [Shalizi notes](https://www.stat.cmu.edu/~cshalizi/mreg/15/lectures/10/lecture-10.pdf)
 
