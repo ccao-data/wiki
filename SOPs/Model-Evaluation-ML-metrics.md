@@ -56,14 +56,16 @@ Compare model performance with previous years, especially for the specific triad
 
 ## 3. Interpreting Model Performance Statistics
 
-We calculate traditional machine learning metrics and assessment-specific metrics to assess the model. The machine learning metrics we calculate are RMSE, MdAPE, and R-squared. The assessment metrics that we calculate and attend to are Median Ratio and Coefficient of Dispersion (COD) for accuracy and precision (respectively). We supplement our analysis with measures of vertical equity (how equal are assessments at all price levels). These are PRB, PRD, MKI, and ratio curves. These assessment metrics are explained in detail in [Mass Appraisal For The Masses: The Basics by Lars Doucet](https://progressandpoverty.substack.com/p/mass-appraisal-for-the-masses-the). MKI is outlined in depth in [A Gini measure for vertical equity in property assessments](https://doi.org/10.63642/1357-1419.1225). See also our guide to ratio studies: https://github.com/ccao-data/wiki/blob/master/SOPs/Sales-Ratio-Studies.md
+We calculate traditional machine learning metrics and assessment-specific metrics to assess the model. The machine learning metrics we calculate are RMSE, MdAPE, and R-squared. The assessment metrics that we calculate and attend to are Median Ratio and Coefficient of Dispersion (COD) for accuracy and precision (respectively). We supplement our analysis with measures of vertical equity (how accurate and fair are assessments across price levels). These are PRD, PRB, MKI, and ratio curves.[^5][^6]
 
-Our approach while fitting candidate models is to follow ML best practices. During model training and fitting, we use standard machine learning (ML) metrics, like RMSE (described below).
+[^5]: [Mass Appraisal For The Masses: The Basics by Lars Doucet](https://progressandpoverty.substack.com/p/mass-appraisal-for-the-masses-the)
+[^6]: [CCAO Data - Sales Ratio Studies](https://github.com/ccao-data/wiki/blob/master/SOPs/Sales-Ratio-Studies.md)
+
+Our approach while fitting candidate models is to follow ML best practices. During model training and fitting, we use standard machine learning (ML) metrics, like [RMSE](#rmse-(root-mean-squared-error)).
 
 To compare and evaluate our candidate models, however, we use both ML metrics and assessment metrics. We rely heavily on median ratio, COD, and vertical equity in our recommendation for what should be the final model.
 
 > **Note:** This discussion presumes a train-test breakout, where we fit the model on a subset of our data (training set) and calculate the performance measures on data that the model has not seen (the test set). We use this approach to avoid overfitting (see below for specifics) and ensure that our model is generalizable out-of-sample.
-
 
 ### Model Fitting — Machine Learning Metrics
 
@@ -118,8 +120,6 @@ Further reading — [Bias Variance Trade-off](https://en.wikipedia.org/wiki/Bias
 Interpretations and acceptable ranges for assessment metrics can be found [here.](https://github.com/ccao-data/wiki/blob/master/SOPs/Sales-Ratio-Studies.md)
 
 Longer descriptions here: [Mass Appraisal For The Masses: The Basics — by Lars Doucet](https://progressandpoverty.substack.com/p/mass-appraisal-for-the-masses-the)
-
----
 
 ## Practical Process
 
