@@ -117,8 +117,14 @@ Generally, the larger the difference between these two measures the more likely 
 
 Our [annual model checklist](https://github.com/ccao-data/model-res-avm/blob/master/.github/ISSUE_TEMPLATE/annual-model-checklist.md) details the technical steps necessary to run candidate models each year. Below is an overview of how to reason statistically about model candidates to choose a final one.
 
-1. **Pull all current data** then train and predict with last year's hyperparameters. This model can act as a baseline for any improvements you may intend to make. At this stage, you can use the model reports to check for year-over-year changes in features in the feature report, changes in feature importance (SHAP values, gain, etc.), data that is not-missing-at-random, and parity in feature distributions between the training set and the assessment set (balance tests). You can attempt to make corrections like IPW at this stage, but most likely you will just have to note these issues as concerns in your model.
+### 1. Refresh the input data
 
-2. **Tune the hyperparameters:** Carry out a "CV run" with GitHub Actions. This will use a Bayesian optimizer to search for the best fitting hyperparameters, using cross-validation. Assess the quality of the model, using the metrics outlined above. Compare the newly tuned model to the old model. In addition to the machine learning and assessment metrics, look at changes in assessments across townships. Are they relatively similar across models? Are there any big swings in one model but not the other?
+Pull all current data then train and predict with last year's hyperparameters. This model can act as a baseline for any improvements you may intend to make. At this stage, you can use the model reports to check for year-over-year changes in features in the feature report, changes in feature importance (SHAP values, gain, etc.), data that is not-missing-at-random, and parity in feature distributions between the training set and the assessment set (balance tests). You can attempt to make corrections like IPW at this stage, but most likely you will just have to note these issues as concerns in your model.
 
-3. **If there is no clearly better model**, but there are swings in ML or assessment metrics across differing townships, this may indicate that your models have plateaued and are fitting to local noise. In this case, you likely need to make a judgement call as to which model to select based on the particular swings/changes and outside information and mention any instabilities or deviations (across models) in your desk review email.
+### 2. Tune the hyperparameters
+
+Carry out a "CV run" with GitHub Actions. This will use a Bayesian optimizer to search for the best fitting hyperparameters, using cross-validation. Assess the quality of the model, using the metrics outlined above. Compare the newly tuned model to the old model. In addition to the machine learning and assessment metrics, look at changes in assessments across townships. Are they relatively similar across models? Are there any big swings in one model but not the other?
+
+### 3. Pick a final model
+
+If there is no clearly better model but there are swings in ML or assessment metrics across differing townships, this may indicate that your models have plateaued and are fitting to local noise. In this case, you likely need to make a judgement call as to which model to select based on the particular swings/changes and outside information and mention any instabilities or deviations (across models) in your desk review email.
