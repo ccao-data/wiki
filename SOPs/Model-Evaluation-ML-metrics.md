@@ -42,19 +42,17 @@ The distribution of a feature in the training set should visually match those in
 [^2]: [LGBM Docs](https://lightgbm.readthedocs.io/en/latest/Advanced-Topics.html#missing-value-handle)
 [^3]: [How do XGBoost, LightGBM, and CatBoost Handle Missing Features?](https://coder-wang-uspsa.medium.com/how-do-xgboost-lightgbm-and-catboost-handle-missing-features-e541da94d528)
 
-#### IV. Domain Specific Sanity Check
+### IV. Domain Specific Sanity Check
 
 *See the "Change In and Out of Sample" section under "Statistical Tests" in the the model performance report.*
 
 Compare year-over-year changes in assessed values for sold and unsold houses. If sold and unsold properties have similar characteristics and assessment histories they should also have roughly similar changes in assessed values.
 
-## 2. Note Any Housing Market Trends That May Impact Your Model
+## 2. Model Drift
 
-Note any housing market trends that may impact your model and/or interactions between data and model that may affect your results (model drift, data drift). Since our model uses temporal features, are there any recent trends that may impact it? While large changes in major sale prices should be obvious in the model results, it's useful to compare changes in the model's assignment of feature importance (SHAP, gain) to trends in the training set (example: changing consumer preferences across years should be reflected in changes in SHAPs between models trained on data from separate years). To check for data drift over time, you can compare the feature distributions from a recent year to those of a prior year. Formally, you could do a KS test, though we do not currently. Less formally you could eyeball the "Distributions of Features" in the feature report.
+Compare model performance with previous years, especially for the specific triad that is being mailed. If the model is inexplicablly performing worse we may need to reevalute which features we are using and explore adding new ones that better explain the current housing market[^4].
 
-> **Note:** Since we use a boosted model with historic data and retrain each year, we are less subject to major problems with data or model drift. However, this can still pose an issue if we have high temporal volatility and low recent sales volume.
-
-See: https://www.ibm.com/think/topics/model-drift
+[^4]: [What is model drift?](https://www.ibm.com/think/topics/model-drift)
 
 ## 3. Interpreting Model Performance Statistics
 
