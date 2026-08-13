@@ -12,18 +12,11 @@ After running the model you will need to interpret the results. First, assess ho
 
 
 
-## 1. Assessing Representative the training set Is of the Assessment Set
+## 1. Testing for and Correcting Differences Between the Training and Assessment Sets
 
-To ensure that a model is generalizable, we need to check that our training set is similar to the assesment set. We should see parcels with the same composition of features, in the same proportions, in the training and assessment sets. We check for this with statistical tests and visual inspections of distributions.
+To ensure that a model is generalizable, we need to check that our training set is similar to the assesment set with statistical tests and visual inspections of their distributions. We should see parcels with the same composition of features, in the same proportions, in the training and assessment sets. If parcels with certain features are over-represented in the training set the model will over-index to these types of properties, likely leading to over- or undervaluation. In a perfectly matched sample, no feature would predict whether a parcel is more or less likely to be part of the training set — all properties of all types would have an equal chance of being sold in a given year. These tests allow us to test that assumption and to develop possible corrections:
 
-> [!NOTE]
-> If parcels with certain features are over-represented in the training set the model will over-index to these types of properties, likely leading to over- or undervaluation.
-
-### Testing for and Correcting Differences Between the Training and Assessment Sets
-
-In a perfectly matched sample, no feature would predict whether a parcel is more or less likely to be part of the training set — all properties of all types would have an equal chance of being sold in a given year. These tests allow us to test that assumption and to develop possible corrections:
-
-#### I. Balance Tests
+### I. Balance Tests
 
 *See the "Logistic Regressions" and "Standardized Mean Differences" sections under "Statistical Tests" in the model performance report.*
 
@@ -35,13 +28,13 @@ To validate possible issues surfaced by the balance tests, look at the standardi
 - 0.5 - Medium imbalance
 - 0.8 - Large imbalance
 
-#### II. Visual Inspection
+### II. Visual Inspection
 
 *See the "Empirical Cumulative Distributions" section under "Statistical Tests" in the the model performance report.*
 
 The distribution of a feature in the training set should visually match those in the assessment set. We only calculate this for the full training set, but it may differ at the township or neighborhood-level. We could apply a KS test to check if the feature distributions between the training set and assessment set are the same.
 
-#### III. Missing Not at Random
+### III. Missing Not at Random
 
 "Missing not at random" means that some feature or a particular value of a feature is missing in a way that's correlated with the outcome variable or another variable in the dataset. This can indicate systemic undersampling. In our case, it is somewhat controlled for by the fact that lgbm actually incorporates missing values as a predictor[^1][^2][^3]. Because of this we currently don't track correlations of nulls as rigorously as we otherwise might, though you can get a sense of the percentage of missingness for each feature by looking at the "Missingness" heading in the Feature report.
 
