@@ -61,7 +61,7 @@ We calculate traditional machine learning metrics and assessment-specific metric
 [^5]: [Mass Appraisal For The Masses: The Basics by Lars Doucet](https://progressandpoverty.substack.com/p/mass-appraisal-for-the-masses-the)
 [^6]: [CCAO Data - Sales Ratio Studies](https://github.com/ccao-data/wiki/blob/master/SOPs/Sales-Ratio-Studies.md)
 
-Our approach while fitting candidate models is to follow ML best practices. During model training and fitting, we use standard machine learning (ML) metrics, like [RMSE](#rmse-(root-mean-squared-error)).
+Our approach while fitting candidate models is to follow ML best practices. During model training and fitting, we use standard machine learning (ML) metrics, like [RMSE](#rmse-root-mean-squared-error).
 
 To compare and evaluate our candidate models, however, we use both ML metrics and assessment metrics. We rely heavily on median ratio, COD, and vertical equity in our recommendation for what should be the final model.
 
