@@ -51,11 +51,9 @@ The distribution of a feature in the training set should visually match those in
 
 #### IV. Domain Specific Sanity Check
 
-Compare year-over-year changes in assessed values for sold and unsold houses. This is documented in the performance report under "Change In and Out of Sample".
+*See the "Change In and Out of Sample" section under "Statistical Tests" in the the model performance report.*
 
-The sold and unsold properties should have roughly similar changes in assessed values, on the assumption that sold and unsold properties have similar characteristics and assessment histories.
-
----
+Compare year-over-year changes in assessed values for sold and unsold houses. If sold and unsold properties have similar characteristics and assessment histories they should also have roughly similar changes in assessed values.
 
 ## 2. Note Any Housing Market Trends That May Impact Your Model
 
@@ -64,8 +62,6 @@ Note any housing market trends that may impact your model and/or interactions be
 > **Note:** Since we use a boosted model with historic data and retrain each year, we are less subject to major problems with data or model drift. However, this can still pose an issue if we have high temporal volatility and low recent sales volume.
 
 See: https://www.ibm.com/think/topics/model-drift
-
----
 
 ## 3. Interpreting Model Performance Statistics
 
