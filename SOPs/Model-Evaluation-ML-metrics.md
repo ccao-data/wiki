@@ -4,12 +4,14 @@ After running the model you will need to interpret the results. First, assess ho
 
 ### Useful Terms
 
-| Term           | Definition                                                                                                                                                                                                           |
-|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Training Set   | The sample of parcels that have sold recently. A parcel will be included in the sample however many times it has sold. During model evaluation this set excludes the Test Set. During final training it includes it. |
-| Test Set       | A subsample of sold parcels withheld from the Training Set in order to evaluate the model on sales it has never seen.                                                                                                |
-| Assessment Set | The assessment set of all parcels that the model has to value, whether they've sold or not.                                                                                                                          |
-| Feature        | Characteristic of a given parcel, whether it's physical (number of bedrooms), spatial (nearest L stop), or demographic (percentage of adults with a college degree in parcel's census tract).                        |
+| Term             | Definition                                                                                                                                                                                                           |
+|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Training Set[^1] | The sample of parcels that have sold recently. A parcel will be included in the sample however many times it has sold. During model evaluation this set excludes the Test Set. During final training it includes it. |
+| Test Set         | A subsample of sold parcels withheld from the Training Set in order to evaluate the model on sales it has never seen.                                                                                                |
+| Assessment Set   | The assessment set of all parcels that the model has to value, whether they've sold or not.                                                                                                                          |
+| Feature          | Characteristic of a given parcel, whether it's physical (number of bedrooms), spatial (nearest L stop), or demographic (percentage of adults with a college degree in parcel's census tract).                        |
+
+[^1]: [CCAO Data - Training Data](https://github.com/ccao-data/model-res-avm#using-training_data)
 
 ## 1. Testing for and Correcting Differences Between the Training and Assessment Sets
 
@@ -35,11 +37,11 @@ The distribution of a feature in the training set should visually match those in
 
 ### III. Missing Not at Random
 
-"Missing not at random" means that some feature or a particular value of a feature is missing in a way that's correlated with the outcome variable or another variable in the dataset. This can indicate systemic undersampling. In our case, it is somewhat controlled for by the fact that lgbm actually incorporates missing values as a predictor.[^1][^2][^3] Because of this we currently don't track correlations of nulls as rigorously as we otherwise might, though you can get a sense of the percentage of missingness for each feature by looking at the "Missingness" heading in the Feature report.
+"Missing not at random" means that some feature or a particular value of a feature is missing in a way that's correlated with the outcome variable or another variable in the dataset. This can indicate systemic undersampling. In our case, it is somewhat controlled for by the fact that lgbm actually incorporates missing values as a predictor.[^2][^3][^4] Because of this we currently don't track correlations of nulls as rigorously as we otherwise might, though you can get a sense of the percentage of missingness for each feature by looking at the "Missingness" heading in the Feature report.
 
-[^1]: [How does LGBM deal with missing values?](https://medium.com/@andrywmarques/how-lgbm-deals-with-missing-values-bd361636357f)
-[^2]: [LGBM Docs](https://lightgbm.readthedocs.io/en/latest/Advanced-Topics.html#missing-value-handle)
-[^3]: [How do XGBoost, LightGBM, and CatBoost Handle Missing Features?](https://coder-wang-uspsa.medium.com/how-do-xgboost-lightgbm-and-catboost-handle-missing-features-e541da94d528)
+[^2]: [How does LGBM deal with missing values?](https://medium.com/@andrywmarques/how-lgbm-deals-with-missing-values-bd361636357f)
+[^3]: [LGBM Docs](https://lightgbm.readthedocs.io/en/latest/Advanced-Topics.html#missing-value-handle)
+[^4]: [How do XGBoost, LightGBM, and CatBoost Handle Missing Features?](https://coder-wang-uspsa.medium.com/how-do-xgboost-lightgbm-and-catboost-handle-missing-features-e541da94d528)
 
 ### IV. Domain Specific Sanity Check
 
@@ -49,16 +51,16 @@ Compare year-over-year changes in assessed values for sold and unsold houses. If
 
 ## 2. Model Drift
 
-Compare model performance with previous years, especially for the specific triad that is being reassessed. If the model is inexplicablly performing worse we may need to reevalute which features we are using and explore adding new ones that better explain the current housing market.[^4]
+Compare model performance with previous years, especially for the specific triad that is being reassessed. If the model is inexplicablly performing worse we may need to reevalute which features we are using and explore adding new ones that better explain the current housing market.[^5]
 
-[^4]: [What is model drift?](https://www.ibm.com/think/topics/model-drift)
+[^5]: [What is model drift?](https://www.ibm.com/think/topics/model-drift)
 
 ## 3. Interpreting Model Performance Statistics
 
-We calculate traditional machine learning metrics and assessment-specific metrics to assess the model. The machine learning metrics we calculate are RMSE, MdAPE, and R-squared. The assessment metrics that we calculate and attend to are Median Ratio and Coefficient of Dispersion (COD) for accuracy and precision (respectively). We supplement our analysis with measures of vertical equity (how accurate and fair are assessments across price levels). These are PRD, PRB, MKI, and ratio curves.[^5][^6]
+We calculate traditional machine learning metrics and assessment-specific metrics to assess the model. The machine learning metrics we calculate are RMSE, MdAPE, and R-squared. The assessment metrics that we calculate and attend to are Median Ratio and Coefficient of Dispersion (COD) for accuracy and precision (respectively). We supplement our analysis with measures of vertical equity (how accurate and fair are assessments across price levels). These are PRD, PRB, MKI, and ratio curves.[^6][^7]
 
-[^5]: [Mass Appraisal For The Masses: The Basics by Lars Doucet](https://progressandpoverty.substack.com/p/mass-appraisal-for-the-masses-the)
-[^6]: [CCAO Data - Sales Ratio Studies](https://github.com/ccao-data/wiki/blob/master/SOPs/Sales-Ratio-Studies.md)
+[^6]: [Mass Appraisal For The Masses: The Basics by Lars Doucet](https://progressandpoverty.substack.com/p/mass-appraisal-for-the-masses-the)
+[^7]: [CCAO Data - Sales Ratio Studies](https://github.com/ccao-data/wiki/blob/master/SOPs/Sales-Ratio-Studies.md)
 
 Our approach while fitting candidate models is to follow ML best practices. During model training and fitting, we use standard machine learning (ML) metrics, like [RMSE](#rmse-root-mean-squared-error). To compare and evaluate our candidate models, however, we use both ML metrics and assessment metrics. We rely heavily on median ratio, COD, and vertical equity in our recommendation for which candidate should be the final model.
 
