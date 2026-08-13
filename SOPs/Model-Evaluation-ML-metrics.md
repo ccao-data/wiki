@@ -4,13 +4,12 @@ After running the model you will need to interpret the results. First, assess ho
 
 ### Useful Terms
 
-| Term           | Definition                                                                                                                                                                                    |
-|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Training Set   | The sample of parcels that have sold recently. A parcel will be included in the sample however many times it has sold.                                                                        |
-| Assessment Set | The assessment set of all parcels that the model has to value, whether they've sold or not.                                                                                                       |
-| Feature        | Characteristic of a given parcel, whether it's physical (number of bedrooms), spatial (nearest L stop), or demographic (percentage of adults with a college degree in parcel's census tract). |
-
-
+| Term           | Definition                                                                                                                                                                                                           |
+|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Training Set   | The sample of parcels that have sold recently. A parcel will be included in the sample however many times it has sold. During model evaluation this set excludes the Test Set. During final training it includes it. |
+| Test Set       | A subsample of sold parcels withheld from the Training Set in order to evaluate the model on sales it has never seen.                                                                                                |
+| Assessment Set | The assessment set of all parcels that the model has to value, whether they've sold or not.                                                                                                                          |
+| Feature        | Characteristic of a given parcel, whether it's physical (number of bedrooms), spatial (nearest L stop), or demographic (percentage of adults with a college degree in parcel's census tract).                        |
 
 ## 1. Testing for and Correcting Differences Between the Training and Assessment Sets
 
@@ -61,11 +60,10 @@ We calculate traditional machine learning metrics and assessment-specific metric
 [^5]: [Mass Appraisal For The Masses: The Basics by Lars Doucet](https://progressandpoverty.substack.com/p/mass-appraisal-for-the-masses-the)
 [^6]: [CCAO Data - Sales Ratio Studies](https://github.com/ccao-data/wiki/blob/master/SOPs/Sales-Ratio-Studies.md)
 
-Our approach while fitting candidate models is to follow ML best practices. During model training and fitting, we use standard machine learning (ML) metrics, like [RMSE](#rmse-root-mean-squared-error).
+Our approach while fitting candidate models is to follow ML best practices. During model training and fitting, we use standard machine learning (ML) metrics, like [RMSE](#rmse-root-mean-squared-error). To compare and evaluate our candidate models, however, we use both ML metrics and assessment metrics. We rely heavily on median ratio, COD, and vertical equity in our recommendation for which candidate should be the final model.
 
-To compare and evaluate our candidate models, however, we use both ML metrics and assessment metrics. We rely heavily on median ratio, COD, and vertical equity in our recommendation for what should be the final model.
-
-> **Note:** This discussion presumes a train-test breakout, where we fit the model on a subset of our data (training set) and calculate the performance measures on data that the model has not seen (the test set). We use this approach to avoid overfitting (see below for specifics) and ensure that our model is generalizable out-of-sample.
+> [!NOTE]
+> This discussion presumes a train-test breakout, where we fit the model on a subset of our data (training set) and calculate the performance measures on data that the model has not seen (the test set). We use this approach to [avoid overfitting](#traintest-splits) and ensure that our model is generalizable out-of-sample.
 
 ### Model Fitting — Machine Learning Metrics
 
@@ -114,12 +112,6 @@ Generally, the larger the difference between these two measures the more likely 
 Further reading — [Bias Variance Trade-off](https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff), [IBM's notes](https://www.ibm.com/think/topics/bias-variance-tradeoff)
 
 > **Finally:** If your sample is not a good match for your assessment set, good train-test splits will only take you so far. This is because your sample lacks representative training data. This is why balance tests (see earlier section) are important.
-
-### Assessment Metrics
-
-Interpretations and acceptable ranges for assessment metrics can be found [here.](https://github.com/ccao-data/wiki/blob/master/SOPs/Sales-Ratio-Studies.md)
-
-Longer descriptions here: [Mass Appraisal For The Masses: The Basics — by Lars Doucet](https://progressandpoverty.substack.com/p/mass-appraisal-for-the-masses-the)
 
 ## Practical Process
 
