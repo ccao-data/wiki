@@ -1,0 +1,130 @@
+# Model Validation, Interpretation, and Testing Guidelines
+
+After running the model you will need to interpret the results. First, assess how well the sample data (training set, training data) matches the assessment set (assessment set, all parcels to be assessed), then note any factors that may be impacting your model performance such as data issues or novel market trends. Finally, interpret the formal model performance statistics to select the most accurate and generalizable model, that conforms to IAAO standards.
+
+### Useful Terms
+
+| Term                                                                           | Definition                                                                                                                                                                                                           |
+|--------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Training Set](https://github.com/ccao-data/model-res-avm#using-training_data) | The sample of parcels that have sold recently. A parcel will be included in the sample however many times it has sold. During model evaluation this set excludes the Test Set. During final training it includes it. |
+| Test Set                                                                       | A subsample of sold parcels withheld from the Training Set in order to evaluate the model on sales it has never seen.                                                                                                |
+| Assessment Set                                                                 | The assessment set of all parcels that the model has to value, whether they've sold or not.                                                                                                                          |
+| Feature                                                                        | Characteristic of a given parcel, whether it's physical (number of bedrooms), spatial (nearest L stop), or demographic (percentage of adults with a college degree in parcel's census tract).                        |
+
+## 1. Testing for and Correcting Differences Between the Training and Assessment Sets
+
+To ensure that a model is generalizable, we need to check that our training set is similar to the assesment set with statistical tests and visual inspections of their distributions. We should see parcels with the same composition of features, in the same proportions, in the training and assessment sets. If parcels with certain features are over-represented in the training set the model will over-index to these types of properties, likely leading to over- or undervaluation. In a perfectly matched sample, no feature would predict whether a parcel is more or less likely to be part of the training set — all properties of all types would have an equal chance of being sold in a given year. These tests allow us to test that assumption and to develop possible corrections:
+
+### I. Balance Tests
+
+*See the "Logistic Regressions" and "Standardized Mean Differences" sections under "Statistical Tests" in the model performance report.*
+
+Any feature that significantly predicts inclusion in the training set is probably over- or under-represented in the sample and will likely bias results. This is especially the case for features that also turn out to have high SHAP values. The p-value for each feature in the report tells you whether that feature predicts inclusion in the training set at a level greater than expected, while the Beta value gives you a sense of the magnitude and in which direction that feature predicts inclusion.
+
+To validate possible issues surfaced by the balance tests, look at the standardized mean differences between the training set and assessment set for each feature. Larger differences indicate a more likely deviation between the two. You can use the following rule of thumb:
+
+- 0.2 - Small imbalance
+- 0.5 - Medium imbalance
+- 0.8 - Large imbalance
+
+### II. Visual Inspection
+
+*See the "Empirical Cumulative Distributions" section under "Statistical Tests" in the the model performance report.*
+
+The distribution of a feature in the training set should visually match those in the assessment set. We only calculate this for the full training set, but it may differ at the township or neighborhood-level. We could apply a KS test to check if the feature distributions between the training set and assessment set are the same.
+
+### III. Missing Not at Random
+
+"Missing not at random" means that some feature or a particular value of a feature is missing in a way that's correlated with the outcome variable or another variable in the dataset. This can indicate systemic undersampling. In our case, it is somewhat controlled for by the fact that lgbm actually incorporates missing values as a predictor.[^1][^2][^3] Because of this we currently don't track correlations of nulls as rigorously as we otherwise might, though you can get a sense of the percentage of missingness for each feature by looking at the "Missingness" heading in the Feature report.
+
+[^1]: [How does LGBM deal with missing values?](https://medium.com/@andrywmarques/how-lgbm-deals-with-missing-values-bd361636357f)
+[^2]: [LGBM Docs](https://lightgbm.readthedocs.io/en/latest/Advanced-Topics.html#missing-value-handle)
+[^3]: [How do XGBoost, LightGBM, and CatBoost Handle Missing Features?](https://coder-wang-uspsa.medium.com/how-do-xgboost-lightgbm-and-catboost-handle-missing-features-e541da94d528)
+
+### IV. Domain Specific Sanity Check
+
+*See the "Change In and Out of Sample" section under "Statistical Tests" in the the model performance report.*
+
+Compare year-over-year changes in assessed values for sold and unsold houses. If sold and unsold properties have similar characteristics and assessment histories they should also have roughly similar changes in assessed values.
+
+## 2. Model Drift
+
+Compare model performance with previous years, especially for the specific triad that is being reassessed. If the model is inexplicablly performing worse we may need to reevalute which features we are using and explore adding new ones that better explain the current housing market.[^4]
+
+[^4]: [What is model drift?](https://www.ibm.com/think/topics/model-drift)
+
+## 3. Interpreting Model Performance Statistics
+
+We calculate traditional machine learning metrics and assessment-specific metrics to assess the model. The machine learning metrics we calculate are RMSE, MdAPE, and R-squared. The assessment metrics that we calculate and attend to are Median Ratio and Coefficient of Dispersion (COD) for accuracy and precision (respectively). We supplement our analysis with measures of vertical equity (how accurate and fair are assessments across price levels). These are PRD, PRB, MKI, and ratio curves.[^5][^6]
+
+[^5]: [Mass Appraisal For The Masses: The Basics by Lars Doucet](https://progressandpoverty.substack.com/p/mass-appraisal-for-the-masses-the)
+[^6]: [CCAO Data - Sales Ratio Studies](https://github.com/ccao-data/wiki/blob/master/SOPs/Sales-Ratio-Studies.md)
+
+Our approach while fitting candidate models is to follow ML best practices. During model training and fitting, we use standard machine learning (ML) metrics, like [RMSE](#rmse-root-mean-squared-error). To compare and evaluate our candidate models, however, we use both ML metrics and assessment metrics. We rely heavily on median ratio, COD, and vertical equity in our recommendation for which candidate should be the final model.
+
+> [!NOTE]
+> This discussion presumes a train-test breakout, where we fit the model on a subset of our data (training set) and calculate the performance measures on data that the model has not seen (the test set). We use this approach to [avoid overfitting](#traintest-splits) and ensure that our model is generalizable out-of-sample.
+
+### RMSE (Root mean squared error)
+
+This is generally the metric that we use to formally fit the models. It is the mean of the squared errors, rescaled with a square-root. Closer to zero is better. Since it squares the error it penalizes larger errors more heavily, which can be an issue for skewed data like housing prices.
+
+RMSE works best on normally distributed data and our data is generally skewed, with high-value outliers. Fitting a model with this measure will tend to regress toward the mean, leading to under-valuations of pricey properties, and over-valuations of lower-priced properties. We can adjust for this by using different objective functions (quantile functions, bespoke penalty terms) or by finding several candidate models with low RMSE and making a final model choice based on ratio-curves and vertical equity measures. Despite regression to the mean, RMSE has lead to the most accurate and precise models amongst all the loss functions we've tested and its status as a proper-scoring rule safeguards against other biases.
+
+As an example of the interplay between RMSE and assessment metrics, suppose we test a model with an additional feature that leads to more accurate valuations for properties with sale prices below the median. Given the skew in our data (high value properties contribute proportionally more to RMSE) we might find that this feature doesn't move our RMSE calculation very much but does improve vertical equity. We could justify selecting the model with the new feature based on its vertical equity improvements, rather than RMSE alone.
+
+An additional reason to use RMSE is its interpretability. RMSE is on the same scale as the outcome value, and can be interpreted with reference to the mean, median, and standard deviation of the training set. Since RMSE is structurally similar to measures of variability such as standard deviation, you can interpret RMSE in relation to standard deviation; more accurate models should have an RMSE lower than the standard deviation of your test data. This insight is also useful for model comparison, as the standard deviation can be used as a baseline to benchmark RMSE values from candidate models. For example, if two candidate models differ in RMSE, how "large" or "trivial" is that difference relative to the underlying standard deviation of your test set?[^7][^8]
+
+[^7]: [How to interpret root mean squared error (RMSE) vs standard deviation?](https://stats.stackexchange.com/questions/242787/how-to-interpret-root-mean-squared-error-rmse-vs-standard-deviation)
+[^8]: [Data Mining for Business Analytics](https://www.amazon.fr/Data-Mining-Business-Analytics-Applications/dp/1118877438/)
+
+### MdAPE (Median absolute percentage error)
+
+[MdAPE](https://support.numxl.com/hc/en-us/articles/115001223503-MdAPE-Median-Absolute-Percentage-Error) is a median-based metric. It is more robust to outliers than other measures and complements RMSE. While we shouldn't use MdAPE as an optimization metric as it is not a proper scoring rule and treats over-forecasts and under-forecasts asymmetrically, it is useful for comparing model performance in a manner that is more robust to outliers. For example, in a case where two models differ slightly in RMSE, we may accept a model with a slightly higher RMSE if it has a lower MdAPE. This arrangement would likely signal that the other "low RMSE" model might simply be fitting toward some high value outliers at the expense of the median property.
+
+### R-Squared
+
+We report R-squared because it is a common and somewhat interpretable metric. R-squared varies between 0 and 1, and values of R-squared closer to 1 may suggest better model fits. Given the [myriad problems with R-squared](https://library.virginia.edu/data/articles/is-r-squared-useless) we shouldn't base any model decisions off it. At most we can check for consistency with RMSE within reporting geographies. In cases where there is a discrepancy between goodness-of-fit as suggested by R-squared and RMSE, default to the RMSE and investigate reasons for the difference with the R-squared. R-squared is sensitive to scale, variance, and nonlinearities in the underlying data, so these may be causes of discrepancies between R-squared and RMSE.[^9]
+
+> [!IMPORTANT]
+> R-squared does NOT:
+> - necessarily measure goodness-of-fit
+> - necessarily measure predictive error
+> - measure how one variable explains another (it's not causal)
+
+[^9]: [Shalizi notes](https://www.stat.cmu.edu/~cshalizi/mreg/15/lectures/10/lecture-10.pdf)
+
+For a more sensible interpretation of goodness-of-fit, simply eyeball the table in "Estimate vs Actual (Individual Obs.)" section of the model performance report. Look for changes between model estimates and actuals.
+
+### Train/Test Splits
+
+We follow a standard [train/test split](https://github.com/ccao-data/model-res-avm/#using-training_data) to test our models for overfitting. Overfitting occurs when a model picks up spurious correlations in the training sample and uses those to predict sales. In other words, overfitting occurs when a model studies the training sample so deeply it loses the ability to generalize predictions to properties that are different from the training set. An overfit model will do a good job predicting on the sample it was trained on but will perform worse on observations it has never seen. The ability of a model to handle situations it hasn't seen is called its "generalizability". A good model is one that can generalize its predictions, such that it reasonably accurately predicts the sale prices of properties it has not been trained on.
+
+When we fit the model we hold out a portion of our sample data, the test set. We do not train, or fit, the model on the test set. The training data is the sample data minus the test set. We fit the model on the training data, predict sale prices for both the training data and the test set, then calculate the model's performance metrics (RMSE, mDape, etc.) for both. We use the difference between these two sets (train and test metrics) to gauge whether the model is overfit.
+
+Generally, the larger the difference between these two measures the more likely it is that the model is overfit. An RMSE of $10k on our sales training predictions and an RMSE of $179k on the test predictions with a standard deviation of $180k on both the train and test actual distributions would indicate that the model is overfit to the training data because of the large difference between train and test RMSE, especially relative to the standard deviation.
+
+> [!NOTE]
+> If we only compare model performance in terms of test sets by looking at differences in RMSE between the test sets for two models, without looking at train/test splits, we may accidentally select a model that is overfit even though we are analyzing test set scores. For example, we consider two separate models trained on the same train/test splits, one has an RMSE of $75k and the other has an RMSE of $80k. The standard deviation for both train-test splits is $180k. We might be inclined to select the first ($75k) model, but if there is a larger difference between the train and test sets for the $75k RMSE model (with a hypothetical train-set RMSE is $10k) versus that of the $80k RMSE model (with a hypothetical train-set RMSE is $40k), we should consider the possibility that the $75k model is overfit. While the large gap relative to the 2nd model and the standard deviation of the underlying data may indicate overfitting, we can't tell definitively if the $80k model is more generalizable and we should test additional models to get a better sense of whether the $75k model was anomalous.[^10][^11]
+
+[^10]: [Bias Variance Trade-off](https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff)
+[^11]: [What is bias-variance tradeoff?](https://www.ibm.com/think/topics/bias-variance-tradeoff)
+
+> [!IMPORTANT]
+> If your sample is not a good match for your assessment set, good train-test splits will only take you so far. This is because your sample lacks representative training data and why [balance tests](#i-balance-tests) are important.
+
+## Practical Process
+
+Our [annual model checklist](https://github.com/ccao-data/model-res-avm/blob/master/.github/ISSUE_TEMPLATE/annual-model-checklist.md) details the technical steps necessary to run candidate models each year. Below is an overview of how to reason statistically about model candidates to choose a final one.
+
+### 1. Refresh the input data
+
+Pull all current data then train and predict with last year's hyperparameters. This model can act as a baseline for any improvements you may intend to make. At this stage, you can use the model reports to check for year-over-year changes in features in the feature report, changes in feature importance (SHAP values, gain, etc.), data that is not-missing-at-random, and parity in feature distributions between the training set and the assessment set (balance tests). You can attempt to make corrections like IPW at this stage, but most likely you will just have to note these issues as concerns in your model.
+
+### 2. Tune the hyperparameters
+
+Carry out a "CV run" with GitHub Actions. This will use a Bayesian optimizer to search for the best fitting hyperparameters, using cross-validation. Assess the quality of the model, using the metrics outlined above. Compare the newly tuned model to the old model. In addition to the machine learning and assessment metrics, look at changes in assessments across townships. Are they relatively similar across models? Are there any big swings in one model but not the other?
+
+### 3. Pick a final model
+
+If there is no clearly better model but there are swings in ML or assessment metrics across differing townships, this may indicate that your models have plateaued and are fitting to local noise. In this case, you likely need to make a judgement call as to which model to select based on the particular swings/changes and outside information and mention any instabilities or deviations (across models) in your desk review email.
