@@ -320,6 +320,39 @@ sudo apt install jq libjq-dev
 sudo snap install hugo
 ```
 
+- Install [Docker](https://docs.docker.com/get-started/docker-overview/) (only
+  used in [`api-res-avm`](https://github.com/ccao-data/api-res-avm/) and
+  [`service-spark-iasworld`](https://github.com/ccao-data/service-spark-iasworld/);
+  installation instructions adapted from [the official
+  docs](https://docs.docker.com/engine/install/ubuntu/)):
+
+```bash
+# Add Docker's official GPG key so that Apt can ensure packages are signed
+sudo apt update
+sudo apt install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the Docker repository to Apt sources
+sudo tee /etc/apt/sources.list.d/docker.sources <<EOF
+Types: deb
+URIs: https://download.docker.com/linux/ubuntu
+Suites: $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}")
+Components: stable
+Architectures: $(dpkg --print-architecture)
+Signed-By: /etc/apt/keyrings/docker.asc
+EOF
+
+# Update your package cache and install Docker
+sudo apt update
+sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+# Verify that the installation worked by pulling and running the official
+# Docker hello-world image
+sudo docker run hello-world
+```
+
 ## Editing local files using Positron
 
 Once you've completed all of the above steps to setup your local dev
