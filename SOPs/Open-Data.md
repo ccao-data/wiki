@@ -134,7 +134,7 @@ The Data Department creates and maintains the following open data sets.
 | :---:        | :---:            | :---:     | :---:  | :---:     |
 | Current Year | All              | PIN, Year | Parcel | Bi-weekly |
 
-**Notes**: Current-year version of [Parcel Universe (Historical)](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Universe/nj4t-kc8j). Contains a cornucopia of locational and spatial data for all parcels in Cook County. Source data typically only updated annually.
+**Notes**: Current-year version of [Parcel Universe (Historical)](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Universe/nj4t-kc8j). Contains a cornucopia of locational and spatial data for all parcels in Cook County. Source data is typically only updated annually.
 
 **Use cases:** Joining parcel-level data to this dataset allows analysis and reporting across a number of different political, tax, Census, and other boundaries.
 
