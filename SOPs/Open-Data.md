@@ -13,7 +13,7 @@ Open data should, whenever possible, be automatically updated (views or tables i
 
 ### Adding Data to the Portal
 
-The Data Department releases open data through the Cook County Open Data Portal, a service maintained by Cook County. For data that lives in the Department's warehouse, the preferred method for upload is through a provisioned Athena or S3 Socrata Gateway. When creating a new dataset there will be an opportunity to 'Connect to an External Data Source (Socrata Gateway)' where available data can be viewed. Make sure to add data to the portal using the Department's account (rather than a personal account) in order to properly establish ownership of the asset.
+The Data Department releases open data through the Cook County Open Data Portal, a service maintained by the Cook County Bureau of Technology. For data that lives in the Department's warehouse, the preferred method for upload is through a provisioned Athena or S3 Socrata Gateway. When creating a new dataset there will be an opportunity to 'Connect to an External Data Source (Socrata Gateway)' where available data can be viewed. Make sure to add data to the portal using the Department's account (rather than a personal account) in order to properly establish ownership of the asset.
 
 Review documentation on how to [Add Columns to an Existing Open Data Asset](/How-To/Add-columns-to-an-existing-open-data-asset.md) and [Refresh an open data asset](/How-To/Refresh-an-open-data-asset.md).
 
