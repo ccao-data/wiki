@@ -170,7 +170,7 @@ The Data Department creates and maintains the following open data sets.
 | :---:        | :---:            | :---:       | :---:  | :---:     |
 | 2022-Present | All              | PIN, Year   | Parcel | Bi-weekly |
 
-**Notes:** Source data are updated as necessary when PINs are re-classified as tax-exempt.
+**Notes:** Source data is updated as necessary when PINs are re-classified as tax-exempt.
 
 **Use cases:** Determine which properties and property owners in Cook County have been granted [tax-exempt status](https://www.cookcountyboardofreview.com/what-we-do/property-tax-exemptions).
 
