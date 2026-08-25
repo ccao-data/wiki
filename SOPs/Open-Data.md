@@ -1,6 +1,6 @@
 The Cook County Assessor's Office (CCAO) is committed to transparency. To fulfill that commitment, the Data Department creates and maintains public assessment-related data sets. To view Open Data assets and use them, see the catalog of [Assessor's Office Open Data](https://datacatalog.cookcountyil.gov/stories/s/gzdr-q7c4). 
 
-The document below outlines these data, procedures, uses, and pertinent code. Data is published primarily on the [Cook County Open Data Portal](https://datacatalog.cookcountyil.gov/stories/s/gzdr-q7c4) and through GitHub. The [AssessR](https://ccao-data.github.io/assessr/articles/example-ratio-study.html) package leverages this open data in its documentation.
+The document below outlines these datasets, procedures, uses, and pertinent code. Data is published primarily on the [Cook County Open Data Portal](https://datacatalog.cookcountyil.gov/stories/s/gzdr-q7c4) and through GitHub. The [AssessR](https://ccao-data.github.io/assessr/articles/example-ratio-study.html) package leverages this open data in its documentation.
 
 
 ## Releasing Open Data
