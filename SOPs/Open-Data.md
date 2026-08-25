@@ -62,7 +62,7 @@ The Data Department creates and maintains the following open data sets.
 | :---:        | :---:            | :---:     | :---:  | :---:     |
 | 1999-Present | All              | PIN, Year | Parcel | Bi-weekly |
 
-**Notes:** Source data is updated as towns are mailed, certified, and certified as Board-final.
+**Notes:** Source data is updated as towns are mailed, certified as Assessor-final, and certified as Board-final.
 
 **Use cases:** Alone, can characterize assessments in a given area. Can be combined with characteristic data to make more nuanced generalizations about assessments. Can be combined with sales data to conduct ratio studies.
 
