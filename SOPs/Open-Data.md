@@ -17,7 +17,7 @@ The Data Department releases open data through the Cook County Open Data Portal,
 
 Review documentation on how to [Add Columns to an Existing Open Data Asset](/How-To/Add-columns-to-an-existing-open-data-asset.md) and [Refresh an open data asset](/How-To/Refresh-an-open-data-asset.md).
 
-Adhere to the Department's asset naming convention by prefixing the asset with 'Assessor' and tag it with `property tax` and `cook county assessor`. 
+Adhere to the Department's asset naming convention by prefixing the asset with 'Assessor - ' and tag it with `property tax` and `cook county assessor`. 
 
 During the upload process set a schedule for updates (when applicable), add dataset metadata, and document, code/recode, and format columns. Recoding or 'transforming' columns entails writing SoQL blurbs while formatting columns within the 'Review & Configure Data' view. 
 
