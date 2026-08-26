@@ -1,4 +1,7 @@
-The Cook County Assessor's Office is committed to transparency. To fulfill that commitment, the Data Department creates and maintains public assessment-related data sets. This document outlines these data, their uses, and pertinent source code. Data is published primarily on the [Cook County Open Data Portal](https://datacatalog.cookcountyil.gov/browse?tags=cook+county+assessor) and through GitHub. The [AssessR](https://ccao-data.github.io/assessr/articles/example-ratio-study.html) package leverages this open data in its documentation.
+The Cook County Assessor's Office (CCAO) is committed to transparency. To fulfill that commitment, the Data Department creates and maintains public assessment-related data sets. To view Open Data assets and use them, see the catalog of [Assessor's Office Open Data](https://datacatalog.cookcountyil.gov/stories/s/gzdr-q7c4). 
+
+The document below outlines these datasets, procedures, uses, and pertinent code. Data is published primarily on the [Cook County Open Data Portal](https://datacatalog.cookcountyil.gov/stories/s/gzdr-q7c4) and through GitHub. The [AssessR](https://ccao-data.github.io/assessr/articles/example-ratio-study.html) package leverages this open data in its documentation.
+
 
 ## Releasing Open Data
 
@@ -10,13 +13,18 @@ Open data should, whenever possible, be automatically updated (views or tables i
 
 ### Adding Data to the Portal
 
-The Data Department releases open data through the Cook County Open Data Portal, a service maintained by Socrata. For data that lives in the Department's warehouse, the preferred method for upload is through a provisioned Athena or S3 Socrata Gateway. When creating a new dataset there will be an opportunity to 'Connect to an External Data Source (Socrata Gateway)' where available data can be viewed. Make sure to add data to the portal using the Department's account (rather than a personal account) in order to properly establish ownership of the asset.
+The Data Department releases open data through the Cook County Open Data Portal, a service maintained by the Cook County Bureau of Technology. For data that lives in the Department's warehouse, the preferred method for upload is through a provisioned Athena or S3 Socrata Gateway. When creating a new dataset there will be an opportunity to 'Connect to an External Data Source (Socrata Gateway)' where available data can be viewed. Make sure to add data to the portal using the Department's account (rather than a personal account) in order to properly establish ownership of the asset.
 
-During the upload process set a schedule for updates (when applicable), add dataset metadata, and document, code/recode, and format columns. Recoding or 'transforming' columns entails writing SoQL blurbs while formatting columns is interactive within the 'Review & Configure Data' view. Choose a schedule that ensures the data is current but that doesn't needlessly pull data from AWS and run up monthly operating expenses - Socrata only offers daily to monthly update schedules, so if the data changes less frequently it should likely be updated manually (i.e. shapefiles). Adhere to the Department's asset naming convention by prefixing the asset with 'Assessor' and tag it with `property tax` and `cook county assessor`. Add documentation for the data to this wiki page.
+Review documentation on how to [Add Columns to an Existing Open Data Asset](/How-To/Add-columns-to-an-existing-open-data-asset.md) and [Refresh an open data asset](/How-To/Refresh-an-open-data-asset.md).
 
-It is highly recommended to create a 'Story' on Socrata or add to an existing one in order to describe and vignette the data for its intended audience.
+Adhere to the Department's asset naming convention by prefixing the asset with 'Assessor - ' and tag it with `property tax` and `cook county assessor`. 
 
-Open data upload can also be automated using Socrata's SODA API and the [RSocrata package](https://github.com/Chicago/RSocrata).
+During the upload process set a schedule for updates (when applicable), add dataset metadata, and document, code/recode, and format columns. Recoding or 'transforming' columns entails writing SoQL blurbs while formatting columns within the 'Review & Configure Data' view. 
+
+Open data uploads can be automated using Socrata's SODA API and the [RSocrata package](https://github.com/Chicago/RSocrata), though these days we usually schedule updates through a [Github workflow](https://github.com/ccao-data/data-architecture/blob/master/.github/workflows/socrata_upload.yaml). Choose a schedule that ensures the data is current but that doesn't needlessly pull data from AWS and run up operating expenses. If the data changes less frequently or irregularly it should likely be updated manually (i.e. shapefiles). 
+
+As needed, update the catalog of [Assessor's Office Open Data](https://datacatalog.cookcountyil.gov/stories/s/gzdr-q7c4). Add documentation for the data to this wiki page.
+
 
 ### Clearance
 
@@ -26,7 +34,7 @@ Clearance must be received from the following parties before private assets on t
 - Executive Committee, FOIA, Comms (optionally, TPI)
 - Bureau of Technology
 
-BoT may have their own clearance requirements such as adding a 'Story' on Socrata or formatting common county-related columns in a particular way. Defer to their schemas.
+The Cook County Bureau of Technology may have their own clearance requirements such as adding a 'Story' on Socrata or formatting common county-related columns in a particular way. Defer to their schemas.
 
 ## Yearly refresh
 
@@ -38,23 +46,23 @@ The Data Department creates and maintains the following open data sets.
 
 ### [Appeals](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Appeals/y282-6ig3)
 
-| Time Frame   | Property Classes | Unique By          | Row    | Updated |
-| :---:        | :---:            | :---:              | :---:  | :---:   |
-| 1999-Present | All              | PIN, Year, Case No | Parcel | Monthly |
+| Time Frame   | Property Classes | Unique By          | Row    | Updated   |
+| :---:        | :---:            | :---:              | :---:  | :---:     |
+| 1999-Present | All              | PIN, Year, Case No | Parcel | Bi-weekly |
 
-**Notes:** Refreshed monthly, data is updated as towns are mailed/certified by Valuations.
+**Notes:** Source data is updated as towns are certified by the CCAO.
 
-**Use cases:** Alone, can be used to investigate appeal trends. Can be combined with geographies to see how AV shifts around the county and between classes between mailing and assessor certified stages.
+**Use cases:** Alone, can be used to investigate appeal trends. Can be combined with geographies to see how AV shifts around the county and between classes between Assessor's mailed and certified stages.
 
 **Code:** [default.vw_pin_appeal.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_appeal.sql)
 
 ### [Assessed Values](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Assessed-Values/uzyt-m557)
 
-| Time Frame   | Property Classes | Unique By | Row    | Updated |
-| :---:        | :---:            | :---:     | :---:  | :---:   |
-| 1999-Present | All              | PIN, Year | Parcel | Monthly |
+| Time Frame   | Property Classes | Unique By | Row    | Updated   |
+| :---:        | :---:            | :---:     | :---:  | :---:     |
+| 1999-Present | All              | PIN, Year | Parcel | Bi-weekly |
 
-**Notes:** Refreshed monthly, data is updated as towns are mailed/certified by Valuations and the Board of Review.
+**Notes:** Source data is updated as towns are mailed, certified as Assessor-final, and certified as Board-final.
 
 **Use cases:** Alone, can characterize assessments in a given area. Can be combined with characteristic data to make more nuanced generalizations about assessments. Can be combined with sales data to conduct ratio studies.
 
@@ -62,11 +70,11 @@ The Data Department creates and maintains the following open data sets.
 
 ### [Commercial Valuation Data](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Commercial-Valuation-Data/csik-bsws)
 
-| Time Frame   | Property Classes | Unique By | Row                        | Updated |
-| :---:        | :---:            | :---:     | :---:                      | :---:   |
+| Time Frame   | Property Classes | Unique By | Row                        | Updated  |
+| :---:        | :---:            | :---:     | :---:                      | :---:    |
 | 2021-Present | All              | `NA`      | Commercial Assessment Unit | Annually |
 
-**Notes:** Refreshed annually, data is updated once first-pass is completed.
+**Notes:** Source data is updated once initial mailings are completed.
 
 **Use cases:** Contains all data commercial valuation team uses to assess commercial parcels.
 
@@ -86,11 +94,11 @@ The Data Department creates and maintains the following open data sets.
 
 ### [Parcel Addresses](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Addresses/3723-97qp)
 
-| Time Frame   | Property Classes | Unique By | Row    | Updated |
-| :---:        | :---:            | :---:     | :---:  | :---:   |
-| 1999-Present | All              | PIN, Year | Parcel | Monthly |
+| Time Frame   | Property Classes | Unique By | Row    | Updated   |
+| :---:        | :---:            | :---:     | :---:  | :---:     |
+| 1999-Present | All              | PIN, Year | Parcel | Bi-weekly |
 
-**Notes:** Refreshed monthly, data is updated as towns are mailed/certified by Valuations.
+**Notes:** Source data is updated infrequently.
 
 **Use cases:** Can be used for geocoding or joining address-level data to other datasets.
 
@@ -102,7 +110,7 @@ The Data Department creates and maintains the following open data sets.
 | :---:        | :---:            | :---:       | :---:  | :---:    |
 | 2000-Present | All              | PIN10, Year | Parcel | Annually |
 
-**Notes:** Data is updated yearly as spatial files are made available.
+**Notes:** Source data is updated yearly as spatial files are made available.
 
 **Use cases:** Can be used to isolate parcels by distance to specific spatial features.
 
@@ -110,23 +118,23 @@ The Data Department creates and maintains the following open data sets.
 
 ### [Parcel Sales](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Sales/wvhk-k5uv)
 
-| Time Frame   | Property Classes | Unique By            | Row         | Updated |
-| :---:        | :---:            | :---:                | :---:       | :---:   |
-| 1999-Present | All              | Sale Document Number | Parcel Sale | Monthly |
+| Time Frame   | Property Classes | Unique By            | Row         | Updated   |
+| :---:        | :---:            | :---:                | :---:       | :---:     |
+| 1999-Present | All              | Sale Document Number | Parcel Sale | Bi-weekly |
 
-**Notes:** Refreshed monthly, though data may only change roughly quarterly depending on how often new sales are added to iasWorld. Sales are only unique by Sale Document Number when `is_multisale = FALSE`.
+**Notes:** Source data freshness depends on how often new sales are added to iasWorld. Sales are only unique by Sale Document Number when `is_multisale = FALSE`.
 
-**Use cases:** Alone, sales data can be used to characterize real estate markets. Sales paired with characteristics can be used to find comparable properties or as an input to an automated modeling application. Sales paired with assessments can be used to calculate sales ratio statistics. Outliers can be easily removed using filters constructed from class, township, and year variables.
+**Use cases:** Sales data can be used to characterize real estate markets. Sales paired with characteristics can be used to find comparable properties or as an input to an automated modeling application. Sales paired with assessments can be used to calculate sales ratio statistics. Outliers can be easily removed using filters constructed from class, township, and year variables.
 
 **Code:** [default.vw_pin_sale.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_sale.sql)
 
 ### [Parcel Universe (Current Year)](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Universe-Current-Year-/pabr-t5kh)
 
-| Time Frame   | Property Classes | Unique By | Row    | Updated |
-| :---:        | :---:            | :---:     | :---:  | :---:   |
-| Current Year | All              | PIN, Year | Parcel | Monthly |
+| Time Frame   | Property Classes | Unique By | Row    | Updated   |
+| :---:        | :---:            | :---:     | :---:  | :---:     |
+| Current Year | All              | PIN, Year | Parcel | Bi-weekly |
 
-**Notes**: Contains a cornucopia of locational and spatial data for all parcels in Cook County, for the current year only (rather than across multiple years).
+**Notes**: Current-year version of [Parcel Universe (Historical)](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Universe/nj4t-kc8j). Contains a cornucopia of locational and spatial data for all parcels in Cook County. Source data is typically only updated annually.
 
 **Use cases:** Joining parcel-level data to this dataset allows analysis and reporting across a number of different political, tax, Census, and other boundaries.
 
@@ -134,11 +142,11 @@ The Data Department creates and maintains the following open data sets.
 
 ### [Parcel Universe (Historical)](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Universe/nj4t-kc8j)
 
-| Time Frame   | Property Classes | Unique By | Row    | Updated  |
-| :---:        | :---:            | :---:     | :---:  | :---:    |
-| 1999-Present | All              | PIN, Year | Parcel | Annually |
+| Time Frame   | Property Classes | Unique By | Row    | Updated   |
+| :---:        | :---:            | :---:     | :---:  | :---:     |
+| 1999-Present | All              | PIN, Year | Parcel | Bi-weekly |
 
-**Notes**: Contains a cornucopia of locational and spatial data for all parcels in Cook County.
+**Notes**: Contains a cornucopia of locational and spatial data for all parcels in Cook County, for multiple tax years. Source data is typically only updated annually.
 
 **Use cases:** Joining parcel-level data to this dataset allows analysis and reporting across a number of different political, tax, Census, and other boundaries.
 
@@ -146,11 +154,11 @@ The Data Department creates and maintains the following open data sets.
 
 ### [Permits](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Permits/6yjf-dfxs)
 
-| Time Frame   | Property Classes | Unique By                       | Row                 | Updated |
-| :---:        | :---:            | :---:                           | :---:               | :---:   |
-| 2018-Present | All              | PIN, Permit Number, Date Issued | Permit for a parcel | Monthly |
+| Time Frame   | Property Classes | Unique By                       | Row                 | Updated  |
+| :---:        | :---:            | :---:                           | :---:               | :---:    |
+| 2018-Present | All              | PIN, Permit Number, Date Issued | Permit for a parcel | Bi-weekly |
 
-**Notes**: Refreshed monthly, each row describes one parcel's representation in a given permit.
+**Notes**: Each row describes one parcel's representation in a given permit.
 
 **Use cases:** Permits contain information on how a property is expected to change physically.
 
@@ -158,13 +166,13 @@ The Data Department creates and maintains the following open data sets.
 
 ### [Property Tax-Exempt Parcels](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Property-Tax-Exempt-Parcels/vgzx-68gb)
 
-| Time Frame   | Property Classes | Unique By   | Row    | Updated |
-| :---:        | :---:            | :---:       | :---:  | :---:   |
-| 2022-Present | All              | PIN, Year   | Parcel | Monthly |
+| Time Frame   | Property Classes | Unique By   | Row    | Updated   |
+| :---:        | :---:            | :---:       | :---:  | :---:     |
+| 2022-Present | All              | PIN, Year   | Parcel | Bi-weekly |
 
-**Notes:** Refreshed monthly, data is updated when necessary as PINs are re-classified.
+**Notes:** Source data is updated as necessary when PINs are re-classified as tax-exempt.
 
-**Use cases:** Determine which properties and property owners in Cook County have been granted tax-exempt status.
+**Use cases:** Determine which properties and property owners in Cook County have been granted [tax-exempt status](https://www.cookcountyboardofreview.com/what-we-do/property-tax-exemptions).
 
 **Code:** [default.vw_pin_exempt.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_exempt.sql)
 
@@ -172,7 +180,7 @@ The Data Department creates and maintains the following open data sets.
 
 | Time frame   | Property Classes | Unique By | Row              | Updated   |
 | :---:        | :---:            | :---:     | :---:            | :---:     |
-| 1999-Present | 299, 399         | PIN, Year | Condominium Unit | Monthly |
+| 1999-Present | 299, 399         | PIN, Year | Condominium Unit | Bi-weekly |
 
 **Notes:**
 
@@ -188,7 +196,7 @@ The Data Department creates and maintains the following open data sets.
 
 | Time Frame   | Property Classes | Unique By | Row                         | Updated   |
 | :---:        | :---:            | :---:     | :---:                       | :---:     |
-| 1999-Present | [Regression-class](https://github.com/ccao-data/model-res-avm?tab=readme-ov-file#data-used)         | PIN, Card, Year | Residential Improvement | Monthly |
+| 1999-Present | [Regression-class](https://github.com/ccao-data/model-res-avm?tab=readme-ov-file#data-used)         | PIN, Card, Year | Residential Improvement | Bi-weekly |
 
 **Notes**: Residential PINs with multiple improvements (living structures) will have one card for _each_ improvement.
 
