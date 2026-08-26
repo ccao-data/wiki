@@ -21,7 +21,7 @@ Adhere to the Department's asset naming convention by prefixing the asset with '
 
 During the upload process set a schedule for updates (when applicable), add dataset metadata, and document, code/recode, and format columns. Recoding or 'transforming' columns entails writing SoQL blurbs while formatting columns within the 'Review & Configure Data' view. 
 
-Open data uploads can be automated using Socrata's SODA API and the [RSocrata package](https://github.com/Chicago/RSocrata).Choose a schedule that ensures the data is current but that doesn't needlessly pull data from AWS and run up operating expenses. If the data changes less frequently or irregularly it should likely be updated manually (i.e. shapefiles). 
+Open data uploads can be automated using Socrata's SODA API and the [RSocrata package](https://github.com/Chicago/RSocrata), though these days we usually schedule updates through a [Github workflow](https://github.com/ccao-data/data-architecture/blob/master/.github/workflows/socrata_upload.yaml). Choose a schedule that ensures the data is current but that doesn't needlessly pull data from AWS and run up operating expenses. If the data changes less frequently or irregularly it should likely be updated manually (i.e. shapefiles). 
 
 As needed, update the catalog of [Assessor's Office Open Data](https://datacatalog.cookcountyil.gov/stories/s/gzdr-q7c4). Add documentation for the data to this wiki page.
 
