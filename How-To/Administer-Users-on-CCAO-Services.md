@@ -25,7 +25,9 @@ The Data Department uses an on-premise Linux server for compute, scheduled jobs,
 - [RStudio Server](https://datascience.cookcountyassessor.com/rstudio/)
 - [JupyterLab](https://datascience.cookcountyassessor.com/jupyter/)
 
-To add new users to the Data server (and these applications), complete the following steps:
+### Add a New User to the Data Server (Onboarding)
+
+To add a new user to the Data server (and these applications), complete the following steps:
 
 1. SSH into the Data server. `$YOUR_USER` is your existing username on the server:
     ```bash
@@ -59,9 +61,17 @@ To add new users to the Data server (and these applications), complete the follo
        systemctl daemon-reload
        ```
     4. (Optional) Alternatively, you can set a default limit per user using [drop-in search truncation](https://serverfault.com/a/1036361)
-   
 
-To delete users on the Data server, complete the following steps:
+### Delete a User from the Data Server (Offboarding)
+
+> !NOTE
+> We only delete user accounts from the Data server when permanently offboarding
+employees. If an employee is instead taking a temporary break from the team
+and will return soon (for example, an intern who will be returning after an
+academic break), you should follow the instructions to [Lock a User Account on
+the Data Server (Offboarding)](#lock-a-user-on-the-data-server-offboarding).
+
+To delete a user from the Data server, complete the following steps:
 
 1. SSH to the Data server, same as above.
 2. If the user has significant/valuable work in their home directory, first backup the directory. Backups can be stored in the `CCAODATA` directory on the `O:` shared drive.
@@ -76,6 +86,36 @@ To delete users on the Data server, complete the following steps:
     ```bash
     sudo rmdir /home/$THEIR_USER
     ```
+
+### Lock a User Account on the Data Server (Offboarding)
+
+> !NOTE
+> We only lock user accounts on the Data server when the employee is taking a
+temporary break from the team and will return soon (for example, an intern
+who will be returning after an academic break). If an employee is instead
+leaving permanently, you should follow the instructions to [Delete a User
+from the Data Server
+(Offboarding)](#delete-a-user-from-the-data-server-offboarding).
+
+To lock a user account on the Data server, complete the following steps:
+
+1. SSH to the Data server, same as above.
+2. Lock the user's password to disable login via all apps, and expire the
+   account so that the user cannot authenticate via SSH with a private key:
+    ```bash
+    sudo usermod -L -e 1 $THEIR_USER
+    ```
+
+To restore access when the user returns:
+
+1. SSH to the Data server, same as above.
+2. Unlock the user's password and unexpire the account:
+    ```bash
+    sudo usermod -U -e '' $THEIR_USER
+    ```
+
+See [this StackExchange answer](https://unix.stackexchange.com/a/700837)
+for more details about this account locking flow.
 
 ## AWS
 
