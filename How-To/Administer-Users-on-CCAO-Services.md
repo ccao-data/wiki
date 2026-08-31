@@ -64,12 +64,12 @@ To add a new user to the Data server (and these applications), complete the foll
 
 ### Delete a User from the Data Server (Offboarding)
 
-> !NOTE
+> [!NOTE]
 > We only delete user accounts from the Data server when permanently offboarding
 employees. If an employee is instead taking a temporary break from the team
 and will return soon (for example, an intern who will be returning after an
 academic break), you should follow the instructions to [Lock a User Account on
-the Data Server (Offboarding)](#lock-a-user-on-the-data-server-offboarding).
+the Data Server (Offboarding)](#lock-a-user-account-on-the-data-server-offboarding).
 
 To delete a user from the Data server, complete the following steps:
 
@@ -89,7 +89,7 @@ To delete a user from the Data server, complete the following steps:
 
 ### Lock a User Account on the Data Server (Offboarding)
 
-> !NOTE
+> [!NOTE]
 > We only lock user accounts on the Data server when the employee is taking a
 temporary break from the team and will return soon (for example, an intern
 who will be returning after an academic break). If an employee is instead
