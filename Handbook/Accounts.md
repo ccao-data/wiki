@@ -47,3 +47,15 @@ There are two different types of IAM resources that we use to manage service acc
 | `cookcounty-service-readonly-rpie_weekly`             | 👤 User          | Windows VM                      | `process-appeal-worksheets`                                                                                                           | User that runs the daily job to output appeal worksheets based on data in the data lake                                                                              |
 | `cookcounty-service-readonly-socrata`                 | 👤 User          | Tyler Data & Insights (Socrata) | `service-socrata-ingress-agent`                                                                                                       | User that runs the deprecated Socrata ingress agent on the server, allowing the Tyler Data & Insights platform to pull data from the data lake                       |
 | `cookcounty-service-readonly-tableau`                 | 👤 User          | Tableau Server                  |                                                                                                                                       | User that gives Tableau data sources permission to query data from the data lake                                                                                     |
+
+### Monthly AWS Account Review
+
+Every month, a senior staff member on our team should review our AWS IAM roles and users to ensure proper access.
+
+1. Review our [IAM user list](https://us-east-1.console.aws.amazon.com/iam/home?region=us-east-1#/users).
+  1. Ensure that you recognize every user account. If there are any user accounts you don't recognize, check with the CCAO Data Team, CCAO IT, and our AWS vendor to see if anyone is using that user account. If no one is using the user account, delete it immediately and inform CCAO IT.
+  2. Review any users whose last activity was more than 30 days ago. Check with the owners of those users to see if they still need access, or if instead you can delete the user.
+2. Review our [IAM role list](https://us-east-1.console.aws.amazon.com/iam/home?region=us-east-1#/roles).
+  1. Ignore any roles that start with `AWS` or `Amazon`, since these are managed roles. You can also ignore any roles that our AWS vendor uses.
+  2. Compare our roles against the list of [known service accounts](#aws-service-accounts). If there are any roles that you don't recognize, check with the CCAO Data Team, CCAO IT, and our AWS vendor to see if anyone can account for the role. If no one can account for the role, delete it immediately and inform CCAO IT.
+  3. Review any roles whose last activity was more than 30 days ago. Check with the owner of the service that uses that role to see if it's still necessary, and delete any deprecated roles.
