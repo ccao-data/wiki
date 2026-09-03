@@ -127,6 +127,7 @@ The Data Department stores most of its active data on AWS. Reading this data req
     * The user name should be a Cook County email address.
     * Access type should be both programmatic and console.
     * Add the user to the `cookcounty-readonly` user group.
+        * If the new employee is in a leadership role in the Data Department, you can instead add them to the `cookcounty` user group to grant them write/admin access to our AWS resources.
     * Ignore tags and click **Create user** on the final screen.
 4. The new account will be *unable to access resources until an MFA device is added*. Users must have their device manually added by an administrator. To add a device:
     * Return to the **Users** tab of the **IAM** service. Click the username you just created.
