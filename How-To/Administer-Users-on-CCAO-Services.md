@@ -119,7 +119,11 @@ for more details about this account locking flow.
 
 ## AWS
 
-The Data Department stores most of its active data on AWS. Reading this data requires an authenticated AWS user account. Most users, such as interns and analysts, only require read access. To add a read-only user, complete the following steps:
+The Data Department stores most of its active data on AWS. Reading this data requires an authenticated AWS user account. Most users, such as interns and analysts, only require read access.
+
+### Adding a New User to AWS (Onboarding)
+
+When onboarding a new employee to AWS, complete the following steps:
 
 1. Login to the [CCAO's AWS Console](https://ccao-data.signin.aws.amazon.com/console) using an account with an administrator role.
 2. Visit the **IAM** service, click **Users** in the sidebar, then click **Add users** in the top-right corner.
@@ -133,6 +137,32 @@ The Data Department stores most of its active data on AWS. Reading this data req
     * Return to the **Users** tab of the **IAM** service. Click the username you just created.
     * Click the **Security credentials**, scroll down to **Multi-factor authentication (MFA)**, then click **Assign MFA device** and follow the prompts.
 5. Login to the AWS Console with the new user account. Run a test query in Athena to ensure that MFA and all permissions are correctly configured.
+
+### Disabling or Deleting a User from AWS (Offboarding)
+
+There are two different occasions when we delete or disable AWS users:
+
+1. During the course of **normal separation**: This occurs when an employee is leaving our team, either temporarily or permanently.
+2. During the course of a **high-risk security incident**: This occurs when we have detected suspicious activity for a user account and we need to disable it.
+
+#### Deleting a User During Normal Separation
+
+To delete a user during the course of a normal, permanent separation from the team, delete the user in the [AWS IAM interface](https://us-east-1.console.aws.amazon.com/iam/home?region=us-east-1#/users). According to [the docs](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_control-access_disable-perms.html), any temporary session credentials that the user has requested may continue to be valid for a short time after deletion, but that shouldn't be an issue in the case of normal separation.
+
+If the user will be returning after a temporary separation (for example, an intern returning after an academic break), you can temporarily disable the user by attaching the [`AWSDenyAll`](https://docs.aws.amazon.com/aws-managed-policy/latest/reference/AWSDenyAll.html) AWS-managed policy to the user for the duration of the separation. Remove the policy when the user returns, and they can continue using their existing password, MFA device, and access keys.
+
+#### Disabling a High-Risk User or Role During a Security Incident
+
+If an IAM user or role is exhibiting suspicious activity, we need to ensure that its credentials are immediately disabled while we investigate:
+
+1. Attach the AWS-managed policy [`AWSDenyAll`](https://docs.aws.amazon.com/aws-managed-policy/latest/reference/AWSDenyAll.html) to the user to immediately revoke all access.
+2. Delete all access keys for the user.
+3. If investigation reveals malicious activity in the account, delete the IAM user so as to revoke all access.
+4. If the investigation is inconclusive, and there is _not_ confirmed malicious activity in the account, complete the following steps:
+    1. Change the user's password.
+    2. Remove and re-assign the user's MFA device.
+    3. Wait 36 hours (the [maximum session duration for temporary credentials](https://docs.aws.amazon.com/STS/latest/APIReference/API_GetSessionToken.html)) and then remove the `AWSDenyAll` policy from the user.
+    4. Prompt the user to recreate any necessary access keys.
 
 ## Open Data Portal
 
