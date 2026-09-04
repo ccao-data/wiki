@@ -156,18 +156,18 @@ If the user will be returning after a temporary separation (for example, an inte
 If an IAM user or role is exhibiting suspicious activity, we need to ensure that its credentials are immediately disabled while we investigate:
 
 1. Attach the AWS-managed policy [`AWSDenyAll`](https://docs.aws.amazon.com/aws-managed-policy/latest/reference/AWSDenyAll.html) to the user or role to immediately revoke all access.
-2. Take steps to disable access keys. The exact steps will be different depending on whether you are disabling an IAM user or role:
-    - If the suspicious activity is coming from an **IAM user**, delete all access keys for the user in the IAM console.
-    - If the suspicious activity is coming from an **IAM role**, navigate to the "Revoke sessions" tab on the IAM role detail page and revoke all active sessions for the role.
-3. If investigation reveals malicious activity in the user or role, delete the IAM user or role so as to revoke all access.
+2. Take steps to disable access keys and session tokens. The exact steps will be different depending on whether you are disabling an IAM user or role:
+    - For an **IAM user**, delete all access keys for the user in the IAM console.
+    - For an **IAM role**, navigate to the "Revoke sessions" tab on the IAM role detail page and revoke all active sessions for the role. This will attach a new policy to the role called something like `AWSRevokeOlderSessions`, and that policy will cause AWS to reject requests coming from existing session tokens.
+3. If investigation reveals malicious activity in the user or role, delete and recreate the IAM user or role so as to permanently revoke all access.
 4. If the investigation is inconclusive, and there is _not_ confirmed malicious activity in the account, complete the following steps:
-    - Steps for an IAM user:
+    - Steps for an **IAM user**:
         1. Change the user's password.
         2. Remove and re-assign the user's MFA device.
         3. Wait 36 hours (the [maximum session duration for temporary credentials](https://docs.aws.amazon.com/STS/latest/APIReference/API_GetSessionToken.html)) and then remove the `AWSDenyAll` policy from the user.
         4. Prompt the user to recreate any necessary access keys.
-    - Steps for an IAM role:
-        1. Wait 36 hours before removing the `AWSRevokeOlderSessions` policy that you added in step 2.
+    - Steps for an **IAM role**:
+        1. Wait 36 hours before removing the `AWSDenyAll` policy that you added in step 1, and the `AWSRevokeOlderSessions` policy that you added in step 2.
         2. Review permissions to ensure they are as minimal as possible, and review trust relationships to make sure we are only authorizing trusted GitHub repos to assume the role.
 
 ## Open Data Portal
