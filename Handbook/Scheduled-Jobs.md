@@ -2,6 +2,8 @@
 
 This page documents all of the scheduled jobs that our team maintains.
 
+In general, these jobs send email notifications using AWS SNS when they fail. If you want to receive those notifications, ask a senior staff member to subscribe your email address to the relevant SNS topic.
+
 | Job name                              | Frequency     | Deployment platform                                                                                               | Source repository                                                                      | Description |
 | ------------------------------------- | ------------- | ----------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | ----------- |
 | Service healthchecks                  | Every 3 hours | [GitHub Actions](https://github.com/ccao-data/service-alerts/actions/workflows/check-alerts.yml)                  | [`service-alerts`](https://github.com/ccao-data/service-alerts/)                       | Queries the CloudWatch logs for every job that was scheduled to complete in the past three hours to make sure it ran successfully                                  |
