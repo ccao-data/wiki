@@ -5,6 +5,7 @@
 * [Resources](Handbook/Resources.md)
 * [Glossary](Handbook/Glossary.md)
 * [Accounts](Handbook/Accounts.md)
+* [Scheduled Jobs](Handbook/Automated-Jobs.md)
 * [Local Dev Environment Setup](Handbook/Local-Dev-Environment-Setup.md)
 * [Not Public](Handbook/Not-Public.md)
 
