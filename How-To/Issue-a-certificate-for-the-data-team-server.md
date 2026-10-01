@@ -27,25 +27,25 @@ the **Details** down arrow to the right of the policy, then click **Properties**
       request certificates at all. In either of these cases, reach out to IT
       to ask them to give you permissions to request certificates using the
       `CCAO WEB3 - Tableau` certificate template.
-7. On the **General** tab of the popup, make the friendly name the name of the server
+6. On the **General** tab of the popup, make the friendly name the name of the server
 `datascience.cookcountyassessor.com`.
-8. Switch to the **Subject** tab, under the `Subject name` field, select
+7. Switch to the **Subject** tab, under the `Subject name` field, select
 `Common name` and add a value of `datascience.cookcountyassessor.com`, then
 click the **Add >** button.
-9. Repeat the process of adding `Subject name` values for the following:
+8. Repeat the process of adding `Subject name` values for the following:
     - `Country`: US
     - `State`: Illinois
     - `Locality`: Chicago
     - `Email`: Email of whoever is making the cert
     - `Organization`: Cook County Assessor's Office
     - `Organization unit`: Data Department
-10. Under the `Alternative name` field, select `DNS` and add a value of
+9. Under the `Alternative name` field, select `DNS` and add a value of
 `datascience.cookcountyassessor.com`, then click the **Add >** button.
-11. Switch to the **Private Key** tab. Under **Key options**, check the box
+10. Switch to the **Private Key** tab. Under **Key options**, check the box
 for `Make private key exportable`.
-12. Hit **Apply** in the bottom right of the popup. Then click **Enroll** to
+11. Hit **Apply** in the bottom right of the popup. Then click **Enroll** to
 create the new certificate.
-13. Click **Finish** to return to the Certificate Manager. You should see
+12. Click **Finish** to return to the Certificate Manager. You should see
 your new certificate in the list.
 
 ## Export the certificate
@@ -92,7 +92,10 @@ a similar method). Be sure the directory you move it to is writeable.
     ```
     openssl rsa -in temp.key -out datascience.cookcountyassessor.com.key
     ```
-6. Remove the `temp.key` file.
+6. Remove the `temp.key` file:
+    ```
+    rm temp.key
+    ``` 
 
 ## Install the new certificate
 
@@ -115,24 +118,24 @@ the correct permissions.
     ```
     sudo mv datascience.cookcountyassessor.com.* $NGINX_DIRECTORY/secrets/
     ```
-4. Set the owner of the key and certificate files to root:
+3. Set the owner of the key and certificate files to root:
     ```
     sudo chown root:root $NGINX_DIRECTORY/secrets/datascience.cookcountyassessor.com.pfx
     sudo chown root:root $NGINX_DIRECTORY/secrets/datascience.cookcountyassessor.com.crt
     sudo chown root:root $NGINX_DIRECTORY/secrets/datascience.cookcountyassessor.com.key
     ```
-5. Set the permissions of the key and cert files to read-only for user:
+4. Set the permissions of the key and cert files to read-only for user:
     ```
     sudo chmod 600 $NGINX_DIRECTORY/secrets/datascience.cookcountyassessor.com.pfx
     sudo chmod 600 $NGINX_DIRECTORY/secrets/datascience.cookcountyassessor.com.crt
     sudo chmod 600 $NGINX_DIRECTORY/secrets/datascience.cookcountyassessor.com.key
     ```
-6. Restart NGINX using `docker compose`. In `$NGINX_DIRECTORY`:
+5. Restart NGINX using `docker compose`. In `$NGINX_DIRECTORY`:
     ```
     docker compose down
     docker compose up -d
     ```
-5. Test the certificate by visiting
+6. Test the certificate by visiting
 [RStudio](https://datascience.cookcountyassessor.com). You should be able to
 click the certificate in the address bar and view the details you filled out
 earlier.
