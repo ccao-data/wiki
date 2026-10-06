@@ -4,6 +4,9 @@ We keep many of our assets updated on a monthly basis using Socrata's API. Becau
 
 ### How to refresh an asset
 
+> [!WARNING]
+> The Data & Insights Gateway must be configured with an IAM user that has permission to query our Athena data lake in order to pull data properly. This user should already be configured for you, but it will probably be deactivated in AWS, since we deactivate all AWS users after 30 days of inactivity. Before you run this ingest, make sure the Socrata IAM user is reactivated in AWS by [removing the deactivation policy attached to the user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_remove.html#id_users_deactivating). If you don't have permission to do this, reach out to a senior staff member for help.
+
 You need to be logged into the open data portal as the Assessor Data user in order to make edits to open data. If you need login credentials, reach out to a senior staff member.
 
 On the open data portal, choose the asset you'd like to update. For this example we'll work with [Assessor - Parcel Universe (Current Year Only)](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Universe-Current-Year-Only-/pabr-t5kh/about_data).
