@@ -82,6 +82,7 @@ Useful materials that give an overview of Cook County's property tax system and 
 ## Git, Linux, and DevOps
 
 - [:exclamation: The Missing Semester of Your CS Education](https://missing.csail.mit.edu) - Start here if you're unfamiliar with the command line interface, build tooling, scripting, etc.
+- [:star: How the CCAO Data team manages data infrastructure](https://ccao-data.github.io/blog/posts/data-architecture/) - Blog post with a bird's-eye view of our data architecture, useful for understanding the basic tools and platforms we use for everyday data work
 
 ##### Git
 
