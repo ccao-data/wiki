@@ -4,7 +4,6 @@
 * [Mission, Vision, and Values](Handbook/Mission-Vision-Values.md)
 * [Resources](Handbook/Resources.md)
 * [Glossary](Handbook/Glossary.md)
-* [Accounts](Handbook/Accounts.md)
 * [Scheduled Jobs](Handbook/Scheduled-Jobs.md)
 * [Local Dev Environment Setup](Handbook/Local-Dev-Environment-Setup.md)
 * [Not Public](Handbook/Not-Public.md)
@@ -12,6 +11,7 @@
 ### People and Onboarding
 
 * [See People repository](https://github.com/ccao-data/people)
+  * [Accounts](https://github.com/ccao-data/people/blob/master/Accounts.md)
 * [See internal README](https://github.com/ccao-data?view_as=member) - *Must be logged into GitHub*
 
 ### How-To
