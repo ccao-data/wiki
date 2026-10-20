@@ -128,7 +128,7 @@ The Data Department creates and maintains the following open data sets.
 
 **Code:** [default.vw_pin_sale.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_sale.sql)
 
-### [Parcel Universe (Current)](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Universe-Current-/pabr-t5kh/about_data)
+### [Parcel Universe (Current)](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Universe-Current-/pabr-t5kh)
 
 | Time Frame   | Property Classes | Unique By | Row    | Updated   |
 | :---:        | :---:            | :---:     | :---:  | :---:     |
@@ -140,7 +140,7 @@ The Data Department creates and maintains the following open data sets.
 
 **Code:** [default.vw_pin_universe.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_universe.sql)
 
-### [Parcel Universe (Historical)](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Universe-Historical-/nj4t-kc8j/about_data)
+### [Parcel Universe (Historical)](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Universe-Historical-/nj4t-kc8j)
 
 | Time Frame   | Property Classes | Unique By | Row    | Updated   |
 | :---:        | :---:            | :---:     | :---:  | :---:     |
@@ -192,7 +192,7 @@ The Data Department creates and maintains the following open data sets.
 
 **Code:** [default.vw_pin_condo_char.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_condo_char.sql)
 
-### [Residential Single and Multi-Family Improvement Characteristics](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Residential-Single-and-Multi-Family-Impro/x54s-btds/about_data)
+### [Residential Single and Multi-Family Improvement Characteristics](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Residential-Single-and-Multi-Family-Impro/x54s-btds)
 
 | Time Frame   | Property Classes | Unique By | Row                         | Updated   |
 | :---:        | :---:            | :---:     | :---:                       | :---:     |
