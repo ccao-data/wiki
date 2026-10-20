@@ -128,7 +128,7 @@ The Data Department creates and maintains the following open data sets.
 
 **Code:** [default.vw_pin_sale.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_sale.sql)
 
-### [Parcel Universe (Current Year)](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Universe-Current-Year-/pabr-t5kh)
+### [Parcel Universe (Current)](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Universe-Current-/pabr-t5kh/about_data)
 
 | Time Frame   | Property Classes | Unique By | Row    | Updated   |
 | :---:        | :---:            | :---:     | :---:  | :---:     |
@@ -140,7 +140,7 @@ The Data Department creates and maintains the following open data sets.
 
 **Code:** [default.vw_pin_universe.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_universe.sql)
 
-### [Parcel Universe (Historical)](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Universe/nj4t-kc8j)
+### [Parcel Universe (Historical)](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Universe-Historical-/nj4t-kc8j/about_data)
 
 | Time Frame   | Property Classes | Unique By | Row    | Updated   |
 | :---:        | :---:            | :---:     | :---:  | :---:     |
@@ -192,7 +192,7 @@ The Data Department creates and maintains the following open data sets.
 
 **Code:** [default.vw_pin_condo_char.sql](https://github.com/ccao-data/data-architecture/blob/master/dbt/models/default/default.vw_pin_condo_char.sql)
 
-### [Single and Multi-Family Improvement Characteristics](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Single-and-Multi-Family-Improvement-Chara/x54s-btds)
+### [Residential Single and Multi-Family Improvement Characteristics](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Residential-Single-and-Multi-Family-Impro/x54s-btds/about_data)
 
 | Time Frame   | Property Classes | Unique By | Row                         | Updated   |
 | :---:        | :---:            | :---:     | :---:                       | :---:     |
