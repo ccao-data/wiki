@@ -328,10 +328,28 @@ curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.s
 #### Java
 
 Install the Java Development Kit, required for R `tabulapdf` package (only
-used in [`ptaxsim`](https://github.com/ccao-data/ptaxsim/)):
+used in [`ptaxsim`](https://github.com/ccao-data/ptaxsim/)) and the equivalent
+`tabulizer` package (only used in [the `etl` project in
+`data-architecture`](https://github.com/ccao-data/data-architecture/tree/master/etl)):
 
 ```bash
+# 1. Install the JDK
 sudo apt install default-jdk
+
+# 2. Update R's own config files to tell it which JDK to use. Set `JAVA_HOME`
+#    to the symlinked `default-java` path so that we don't have to rerun this
+#    command every time we update `default-jdk`
+sudo R CMD javareconf JAVA_HOME=/usr/lib/jvm/default-java
+
+# 3. Register the JVM directory with the system's dynamic linker. This ensures
+#    that Positron can properly load `rJava`, since Positron does not read
+#    the R config files managed by the `javareconf` command
+echo /usr/lib/jvm/default-java/lib/server | sudo tee /etc/ld.so.conf.d/java.conf
+sudo ldconfig
+
+# 4. Verify that the JVM library is registered (this command should print a path
+#    to `libjvm.so`)
+ldconfig -p | grep libjvm
 ```
 
 #### jq
