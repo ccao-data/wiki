@@ -89,22 +89,28 @@ of two ways:
 Once you have a WSL shell open, run the following commands to install mandatory
 tools:
 
-- Install [Python](https://www.python.org/) and
-  [pip](https://pip.pypa.io/en/stable/):
+#### Python
+
+Install [Python](https://www.python.org/) and
+[pip](https://pip.pypa.io/en/stable/):
 
 ```bash
 sudo apt update && sudo apt install python3-pip
 ```
 
-- Install [uv](https://docs.astral.sh/uv/) for Python package management. After
-  this command finishes executing, you will need to restart your shell (i.e.
-  open a new terminal pane) in order to be able to run `uv` commands:
+#### uv
+
+Install [uv](https://docs.astral.sh/uv/) for Python package management. After
+this command finishes executing, you will need to restart your shell (i.e.
+open a new terminal pane) in order to be able to run `uv` commands:
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-- Install [R](https://cran.r-project.org/bin/linux/ubuntu/fullREADME.html):
+#### R
+
+Install [R](https://cran.r-project.org/bin/linux/ubuntu/fullREADME.html):
 
 ```bash
 # 1. Download the CRAN signing key and output it to a file on your keyring
@@ -117,16 +123,20 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/cran-
 sudo apt update && sudo apt install r-base r-base-dev
 ```
 
-- Install [Quarto](https://quarto.org/) for authoring documents that run R or
-  Python code
-  - Note that there are two preliminary steps here:
-    1. Find the link to the latest version of the `.deb` package file for
-       Ubuntu 18+/Debian 10+ on [the Quarto Downloads
-       page](https://quarto.org/docs/download/index.html), copy that link, and
-       substitute the URL into command #1 below
-    2. Copy the SHA-256 file hash for the `.deb` package that you
-       downloaded, which should be displayed in the table on the Downloads
-       page, and note it for comparison to the output of command #2 below
+#### Quarto
+
+Install [Quarto](https://quarto.org/) for authoring documents that run R or
+Python code.
+
+Note that there are two preliminary steps here:
+
+1. Find the link to the latest version of the `.deb` package file for
+   Ubuntu 18+/Debian 10+ on [the Quarto Downloads
+   page](https://quarto.org/docs/download/index.html), copy that link, and
+   substitute the URL into command #1 below
+2. Copy the SHA-256 file hash for the `.deb` package that you
+   downloaded, which should be displayed in the table on the Downloads
+   page, and note it for comparison to the output of command #2 below
 
 ```bash
 # 1. This step downloads the `.deb` package file from the official Quarto
@@ -152,8 +162,10 @@ sudo dpkg -i quarto.deb
 rm quarto.deb
 ```
 
-- Install a number of system packages that are necessary for R development
-  (you can copy and paste this whole block to preserve the line breaks):
+#### System packages for R development
+
+Install a number of system packages that are necessary for R development
+(you can copy and paste this whole block to preserve the line breaks):
 
 ```bash
 # The core dependencies that rely on these packages are:
@@ -184,8 +196,10 @@ sudo apt update && sudo apt install \
     libpng-dev libfontconfig1-dev libfreetype6-dev
 ```
 
-- Install the AWS CLI and set it up per [our
-  instructions](How-To/Setup-the-AWS-Command-Line-Interface-and-Multi-factor-Authentication.md):
+#### AWS CLI
+
+Install the AWS CLI and set it up per [our
+instructions](How-To/Setup-the-AWS-Command-Line-Interface-and-Multi-factor-Authentication.md):
 
 ```bash
 # Install the tools using these commands, then refer to the docs link above for
@@ -194,8 +208,10 @@ uv tool install awscli
 uv tool install aws-mfa
 ```
 
-- Install pre-commit and set it up per [our
-  instructions](How-To/Use-pre-commit-to-lint-and-format-your-code.md#installing-pre-commit):
+#### pre-commit
+
+Install pre-commit and set it up per [our
+instructions](How-To/Use-pre-commit-to-lint-and-format-your-code.md#installing-pre-commit):
 
 ```bash
 # Install the tools using these commands, then refer to the docs link above for
@@ -203,8 +219,10 @@ uv tool install aws-mfa
 uv tool install pre-commit
 ```
 
-- Install [Node](https://nodejs.org/en/download) using
-  [nvm](https://github.com/nvm-sh/nvm):
+#### Node
+
+Install [Node](https://nodejs.org/en/download) using
+[nvm](https://github.com/nvm-sh/nvm):
 
 ```bash
 # Download and install nvm
@@ -228,36 +246,43 @@ npm -v
 
 The following configs will help you work with our R projects.
 
-- Create an `~/.Renviron` file with the following contents to use the correct
-  AWS settings when [querying data from our AWS Athena data
-  warehouse](https://github.com/ccao-data/wiki/blob/master/How-To/Connect-to-AWS-Resources.md#r):
+#### AWS Athena settings in `.Renviron`
+
+Create an `~/.Renviron` file with the following contents to use the correct
+AWS settings when [querying data from our AWS Athena data
+warehouse](https://github.com/ccao-data/wiki/blob/master/How-To/Connect-to-AWS-Resources.md#r):
 
 ```env
 AWS_REGION=us-east-1
 AWS_ATHENA_S3_STAGING_DIR=s3://ccao-athena-results-us-east-1/
 ```
 
-- Create a [GitHub personal access token
-  (PAT)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
-  and add it to `~/.Renviron` to use when installing R packages from GitHub
-  - **⚠️ GitHub PATs are sensitive and should be treated like passwords.** The
-    instructions below will give your token as few permissions as possible in
-    order to reduce the attack surface of the token, but you should still aim
-    to keep it private, and you should definitely avoid including it in code
-    that you push to GitHub.
-  - Start by [generating a classic personal access
-    token](https://github.com/settings/tokens/new). Select **only** the
-    `repo.public_repo` scope, hit "Generate token", and copy the PAT that
-    GitHub displays to you.
-  - Paste your PAT onto a new line in your `~/.Renviron` file:
+#### GitHub personal access token
+
+Create a [GitHub personal access token
+(PAT)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
+and add it to `~/.Renviron` to use when installing R packages from GitHub.
+
+- **⚠️ GitHub PATs are sensitive and should be treated like passwords.** The
+  instructions below will give your token as few permissions as possible in
+  order to reduce the attack surface of the token, but you should still aim
+  to keep it private, and you should definitely avoid including it in code
+  that you push to GitHub.
+- Start by [generating a classic personal access
+  token](https://github.com/settings/tokens/new). Select **only** the
+  `repo.public_repo` scope, hit "Generate token", and copy the PAT that
+  GitHub displays to you.
+- Paste your PAT onto a new line in your `~/.Renviron` file:
 
 ```env
 GITHUB_PAT="<paste-your-PAT-inside-these-quotes>"
 ```
 
-- Create an `~/.Rprofile` file with the following `local()` call to instruct
-  renv to use the `cloud.r-project.org` CRAN mirror and the legacy lockfile
-  syntax:
+#### renv settings in `.Rprofile`
+
+Create an `~/.Rprofile` file with the following `local()` call to instruct
+renv to use the `cloud.r-project.org` CRAN mirror and the legacy lockfile
+syntax:
 
 ```R
 local({
@@ -275,8 +300,10 @@ local({
 These tools are only used in specific Data Team projects, so you do not need
 to install them unless you are responsible for maintaining that project.
 
-- Install [Terraform](https://developer.hashicorp.com/terraform) (only used in
-  [`aws-infrastructure`](https://github.com/ccao-data/aws-infrastructure/)):
+#### Terraform
+
+Install [Terraform](https://developer.hashicorp.com/terraform) (only used in
+[`aws-infrastructure`](https://github.com/ccao-data/aws-infrastructure/)):
 
 ```bash
 # 1. Download the package signing key and add it to your keyring
@@ -289,42 +316,52 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashi
 sudo apt update && sudo apt install terraform
 ```
 
-- Install [Git LFS](https://github.com/git-lfs/git-lfs/blob/main/INSTALLING.md)
-  (only used in [`ptaxsim`](https://github.com/ccao-data/ptaxsim/)):
+#### Git LFS
+
+Install [Git LFS](https://github.com/git-lfs/git-lfs/blob/main/INSTALLING.md)
+(only used in [`ptaxsim`](https://github.com/ccao-data/ptaxsim/)):
 
 ```bash
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo env os=ubuntu dist="$(grep -oP '(?<=UBUNTU_CODENAME=).*' /etc/os-release || lsb_release -cs)" bash
 ```
 
-- Install the Java Development Kit, required for R `tabulapdf` package (only
-  used in [`ptaxsim`](https://github.com/ccao-data/ptaxsim/)):
+#### Java
+
+Install the Java Development Kit, required for R `tabulapdf` package (only
+used in [`ptaxsim`](https://github.com/ccao-data/ptaxsim/)):
 
 ```bash
 sudo apt install default-jdk
 ```
 
-- Install [`jq`](https://jqlang.org/) (only used in a handful of GitHub
-  workflows for projects like
-  [`data-architecture`](https://github.com/ccao-data/data-architecture/), so
-  you only need it if you need to debug a `jq` command in one of those
-  workflows):
+#### jq
+
+Install [`jq`](https://jqlang.org/) (only used in a handful of GitHub
+workflows for projects like
+[`data-architecture`](https://github.com/ccao-data/data-architecture/), so
+you only need it if you need to debug a `jq` command in one of those
+workflows):
 
 ```bash
 sudo apt install jq libjq-dev
 ```
 
-- Install [Hugo](https://gohugo.io/) (only used in
-  [`homeval`](https://github.com/ccao-data/homeval/)):
+#### Hugo
+
+Install [Hugo](https://gohugo.io/) (only used in
+[`homeval`](https://github.com/ccao-data/homeval/)):
 
 ```bash
 sudo snap install hugo
 ```
 
-- Install [Docker](https://docs.docker.com/get-started/docker-overview/) (only
-  used in [`api-res-avm`](https://github.com/ccao-data/api-res-avm/) and
-  [`service-spark-iasworld`](https://github.com/ccao-data/service-spark-iasworld/);
-  installation instructions adapted from [the official
-  docs](https://docs.docker.com/engine/install/ubuntu/)):
+#### Docker
+
+Install [Docker](https://docs.docker.com/get-started/docker-overview/) (only
+used in [`api-res-avm`](https://github.com/ccao-data/api-res-avm/) and
+[`service-spark-iasworld`](https://github.com/ccao-data/service-spark-iasworld/);
+installation instructions adapted from [the official
+docs](https://docs.docker.com/engine/install/ubuntu/)):
 
 ```bash
 # Add Docker's official GPG key so that Apt can ensure packages are signed
