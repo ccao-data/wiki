@@ -327,11 +327,40 @@ curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.s
 
 #### Java
 
-Install the Java Development Kit, required for R `tabulapdf` package (only
-used in [`ptaxsim`](https://github.com/ccao-data/ptaxsim/)):
+Install the Java Development Kit (JDK) 11, required for R `tabulapdf` package
+(only used in [`ptaxsim`](https://github.com/ccao-data/ptaxsim/)) and the
+equivalent `tabulizer` package (only used in [the `etl` project in
+`data-architecture`](https://github.com/ccao-data/data-architecture/tree/master/etl)).
+It's important that we install version 11, because `tabulapdf` and `tabulizer`
+currently do not support newer Java versions
+([source](https://github.com/ropensci/tabulapdf/issues/136#issuecomment-2123619194)).
+However, if the maintainers ever update the packages to support newer versions,
+we'll want to update these instructions.
 
 ```bash
-sudo apt install default-jdk
+# 1. Install JDK 11
+sudo apt install openjdk-11-jdk
+
+# 2. Make JDK 11 the system default `java`/`javac`. Choose the java-11 entry
+#    when prompted
+sudo update-alternatives --config java
+sudo update-alternatives --config javac
+
+# 3. Tell R which JDK to use
+sudo R CMD javareconf JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+
+# 4. Register the JVM directory with the system's linker. This ensures that
+#    Positron can load `rJava`, since Positron does not read the R config files
+#    managed by the `javareconf` command
+echo /usr/lib/jvm/java-11-openjdk-amd64/lib/server | sudo tee /etc/ld.so.conf.d/java.conf
+sudo ldconfig
+
+# 4. Verify that the JVM library is registered (this command should print a path
+#    to `libjvm.so`)
+ldconfig -p | grep libjvm
+
+# 5. Verify that JDK 11 is your default version
+java --version
 ```
 
 #### jq
